@@ -6,3 +6,10 @@ export_presets.cfg
 
 # Mono-specific ignores
 .mono/
+
+
+*.sublime-*
+.idea
+*.tmp
+*.keystore
+*export_android.cfg
