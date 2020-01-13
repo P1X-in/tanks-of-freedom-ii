@@ -68,6 +68,7 @@ Voxel art inspiration
 ![Desert tank 1](https://pbs.twimg.com/media/CwIjCwIXYAI84bj.jpg)
 ![Desert tank 2](https://pbs.twimg.com/media/CwIjB4rXEAEZbMO.jpg)
 ![Desert multicannon tank](https://pbs.twimg.com/media/CwRt0G3WcAE_V8m.jpg)
+![Green tank](https://static.turbosquid.com/Preview/2019/12/10__11_19_24/snap20191210033227.pngB0DA8BFD-1050-48E5-82B1-DF8BD54D846DDefaultHQ.jpg)
 ![Modern tank](https://i.pinimg.com/originals/35/2e/97/352e97a6506a2fa9a9f7d73ad5417714.jpg)
 ![Windmill scene](https://pbs.twimg.com/media/EN8aT0gWAAgcvH1.jpg:large)
 
