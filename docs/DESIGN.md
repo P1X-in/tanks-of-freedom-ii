@@ -1,5 +1,42 @@
 # Tanks of Freedom 3-D Design Document
 
+## Project Description
+
+Lorem ipsum
+
+## Characters
+
+Lorem ipsum
+
+## Story
+
+Lorem ipsum
+
+### Theme
+
+Lorem ipsum
+
+## Story Progression
+
+Lorem ipsum
+
+### Missions
+
+Lorem ipsum
+
+## Gameplay
+
+Lorem ipsum
+
+### Goals
+
+### User Skills
+
+### Game Mechanics
+
+### Progression and challange
+
+### Losing
 
 ## Art Style
 
@@ -35,5 +72,42 @@ Voxel art inspiration
 ![Windmill scene](https://pbs.twimg.com/media/EN8aT0gWAAgcvH1.jpg:large)
 
 [Pintokyo Games Twitter](https://twitter.com/PintokyoGames)
+
 [VoxelMade games page](https://www.voxelmade.com/voxel-videogames-2019)
+
+## Music and Sounds
+
+Lorem ipsum
+
+## Technical Description
+
+Lorem ipsum
+
+## Marketing
+
+Lorem ipsum
+
+### Demographics
+
+Lorem ipsum
+
+### Platforms
+
+Lorem ipsum
+
+### Monetization
+
+None
+
+### Localization
+
+Lorem ipsum
+
+### Licensing
+
+Lorem ipsum
+
+## Other Features
+
+Lorem ipsum
 
