@@ -5,6 +5,10 @@
 
 ### Reference images
 
+This section shows some images gathered from the internet, that are meant to serve as an inspiration for the ToF3D art style. These were not created by P1X team and belong to their rightful authors. These assets must not be used in the project without explicit license, and only serve as reference and discussion points.
+
+General inspiration
+
 ![Parrot](https://lh5.googleusercontent.com/6HdTcegCK5mFo7mSTENBD8lK41t71HoYlLkQ1zzLia4J6ssPETR3XZldykuaWhVN1d4SquKCizufWxxw5MLqtmiGBi-h5aCCM6EWpnBYmjou-A2qCx8FG7FxMk7emh85bkqUVqUyJ4g)
 ![Helicopter](https://lh4.googleusercontent.com/zuVIdmcBO3skbear5ge-9kzGLxwBqf-HnsZg_kGlv8UI1RwFYoxJPpk89I59Ow3LLkxxnuF4R4clgMpKH6GbJaf00lO30VgyvVb1potBS3qGz2PQZUJ4h5FaxIb54nHjH5gIUc0rE7Y)
 ![Airplane](http://orig13.deviantart.net/5dc5/f/2011/003/3/0/lowpoly_biplane_by_kennethfejer-d36csr2.png)
@@ -19,3 +23,17 @@
 ![Mini Guns game](https://download.komputerswiat.pl/media/2017/309/4601096/mini-guns-s.jpg)
 ![Kingdoms and Castles game](https://d3pylr1apgoxnh.cloudfront.net/campaign_images/images/0bd804f1d064447f3048ac988d94f8d810ce973b/original.jpg?1480183228)
 ![Some cars](https://i.pinimg.com/originals/d7/b3/d7/d7b3d7651fc9699dd650591a7f80fd82.png)
+
+Voxel art inspiration
+
+![Inception city](https://pbs.twimg.com/media/ENYJGrBWsAMq93z.jpg:large)
+![Blocky Farm city](https://i.pinimg.com/originals/b6/bb/34/b6bb3468c024b394d61ec4409caa987a.png)
+![Desert tank 1](https://pbs.twimg.com/media/CwIjCwIXYAI84bj.jpg)
+![Desert tank 2](https://pbs.twimg.com/media/CwIjB4rXEAEZbMO.jpg)
+![Desert multicannon tank](https://pbs.twimg.com/media/CwRt0G3WcAE_V8m.jpg)
+![Modern tank](https://i.pinimg.com/originals/35/2e/97/352e97a6506a2fa9a9f7d73ad5417714.jpg)
+![Windmill scene](https://pbs.twimg.com/media/EN8aT0gWAAgcvH1.jpg:large)
+
+[Pintokyo Games Twitter](https://twitter.com/PintokyoGames)
+[VoxelMade games page](https://www.voxelmade.com/voxel-videogames-2019)
+
