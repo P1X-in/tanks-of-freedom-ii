@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/blue_tank.obj-d3d9a2fc3edf4cd613680291b6d3c10e.mesh"
+
+[deps]
+
+files=[ "res://.import/blue_tank.obj-d3d9a2fc3edf4cd613680291b6d3c10e.mesh" ]
+
+source_file="res://assets/blue_tank.obj"
+dest_files=[ "res://.import/blue_tank.obj-d3d9a2fc3edf4cd613680291b6d3c10e.mesh", "res://.import/blue_tank.obj-d3d9a2fc3edf4cd613680291b6d3c10e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
