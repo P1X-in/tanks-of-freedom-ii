@@ -2,11 +2,23 @@
 
 ## Project Description
 
-Lorem ipsum
+This document describes the details for a classic, turn-baset strategy game, that is a successor to Tanks of Freedom. It is meant to play very similarly to it's predecessor, while introducing 3D graphics, new story, new characters, and deepening the game mechanics it introduced.
+
+Certain level of backwards compatibility is meant to be preserved. This new game should be to import ToF online shared maps. It is not expected to be able to share maps, that original ToF could use. Online cross-play between ToF and this game is considered, but is not a part of core requirements.
+
+Working title for the game is Tanks of Freedom 3-D, it is a subject to change, most likely based on it's story.
 
 ## Characters
 
-Lorem ipsum
+For ToF3D we intend to have four sides to the conflict, with each having a leader and two heroes.
+
+### Team Blue
+
+### Team Red
+
+### Team Green
+
+### Team Black
 
 ## Story
 
@@ -106,7 +118,7 @@ Lorem ipsum
 
 ### Licensing
 
-Lorem ipsum
+ToF3D is a MIT-licensed software. Separate licenses for other software used in development may apply. Separate licenses for assets may apply. Please see LICENSE file for details.
 
 ## Other Features
 
