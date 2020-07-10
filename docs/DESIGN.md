@@ -2,15 +2,34 @@
 
 ## Project Description
 
-This document describes the details for a classic, turn-baset strategy game, that is a successor to Tanks of Freedom. It is meant to play very similarly to it's predecessor, while introducing 3D graphics, new story, new characters, and deepening the game mechanics it introduced.
+This document describes the details for a classic, turn-baset strategy game, that is a successor to *Tanks of Freedom*. It is meant to play very similarly to it's predecessor, while introducing 3D graphics, new story, new characters, and deepening the game mechanics it introduced.
 
-Certain level of backwards compatibility is meant to be preserved. This new game should be to import ToF online shared maps. It is not expected to be able to share maps, that original ToF could use. Online cross-play between ToF and this game is considered, but is not a part of core requirements.
+Certain level of backwards compatibility is meant to be preserved. This new game should be able to import ToF online shared maps. It is not expected to be able to share maps, that original ToF could use. Online cross-play between ToF and this game is considered, but is not a part of core requirements.
 
 Working title for the game is Tanks of Freedom 3-D, it is a subject to change, most likely based on it's story.
 
+
+## World
+A fictional world of Libre populated by humans. It consists of one, big landmass and an archipelago of islands of varying sizes. Team Yellow is situated in a place suitable for trade routes and with a lot of resources. It borders with Team Blue and Team Red. It also borders with Team Green, which is situated on the archipelago.
+
+It is possible, there are other countries in this world, that are not part of the story, and could be used in the future.
+
+### Sapphire Dawn (Team Blue)
+A police state, that is secretly funding various warring factions of Team Yellow in order to weaken the region and take over their resources. In economic war with Team Red. Led by democratic oligarchy.
+
+### Ruby Dusk (Team Red)
+Industrial nation, that is exploiting it's own population for cheap labour and suppresing freedom. Always looking for opportunities of new conquest. A rebel faction is organizing within, plotting to take over and end the regime.
+
+### Jade Twilight (Team Green)
+A peacful and prosperous nation, consisting of a federation of Islands. An uneasy ally to Team Blue, but also in trade relations with Team Red. Offering aid to Team Yellow on the condition of maintainig internal Peace, but not willing to interfere. Led by democratic government.
+
+### Golden Noon (Team Yellow)
+A feudal nation splintered into warring factions. Internal struggle is secretly fueled by Team Blue. Country is led by royal family, with a prince hoping to unite his people and end the civil war.
+
+
 ## Characters
 
-For ToF3D we intend to have four sides to the conflict, with each having a leader and two heroes.
+For ToF3D we intend to have four sides to the conflict, with each having an npc leader and two playable heroes.
 
 ### Team Blue
 
@@ -18,23 +37,41 @@ For ToF3D we intend to have four sides to the conflict, with each having a leade
 
 ### Team Green
 
-### Team Black
+### Team Yellow
+
 
 ## Story
 
-Lorem ipsum
+Team Yellow factions, fighting a civil war, go beyond their borders and start attacking their neighbours as well. Provoked, Team Red starts an invasion on Team Yellow land. Team blue offers help, also asking their ally, Team Green, to join the fight against Team Red.
 
 ### Theme
 
 Lorem ipsum
 
+
 ## Story Progression
 
-Lorem ipsum
+Team Yellow military is constantly fighting local insurgents and warlords, their country splintered into factions. Some are loyal to the royal family, some willing to create their own kingdoms.
+
+#### Prologue
+Team Red is attacked by a group of terrorists from Team Yellow. They interpret this as an act of war, and use this opportunity to gain more land. An offensive begins.
+
+#### Red Campaign
+Team Red captures several provinces of Team Yellow, preparing for total annexation. As they gain significant presence, commander is being recalled to the country in order to quell an uprising. Rebels willing to align themselves with Team Green try to remove the Regime, and the capital city needs to be defended.
+
+#### Blue Campaign
+Team Blue, afraid of Team Red gaining too much power and resources by absorbing Team Yellow, offers help. Royal family accepts, and in a series of battles between Red and Blue, Team Red offensive is stopped. Not having enough forces, Team Blue asks their allies, Team Green, for help in pushing Team Red back into their territory. After a joint battle, Team Red retreats.
+
+#### Green Campaign
+After investigating terrorist camps, Team Green discovers they were backed by Team Blue in order to destabilise Team Yellow and take their lands. Green, realising they will need allies, decides to aid the Red Rebels. In the meantime Team Blue starts an offensive on weakened Team Yellow, taking advantage of large amount of Blue forces deployed all over Yellow country. Green and newly reformed Red start a counter-offensive aimed at freeing Yellow. They reach royal palace and reinstate royal family.
+
+#### Yellow Campaign
+Yellow Prince has to re-take his country from Team Blue and Blue-backed Yellow warlords. Some Yellow factions support him from the beggining, other need to be brought back into the fold. Once this is done, Team Yellow, together with Team Green and Team Red attack Team Blue, who plan on deploying WMDs in order to force victory.
 
 ### Missions
 
 Lorem ipsum
+
 
 ## Gameplay
 
@@ -49,6 +86,9 @@ Lorem ipsum
 ### Progression and challange
 
 ### Losing
+
+### Units
+
 
 ## Art Style
 
@@ -88,13 +128,16 @@ Voxel art inspiration
 
 [VoxelMade games page](https://www.voxelmade.com/voxel-videogames-2019)
 
+
 ## Music and Sounds
 
 Lorem ipsum
 
+
 ## Technical Description
 
 Lorem ipsum
+
 
 ## Marketing
 
@@ -119,6 +162,7 @@ Lorem ipsum
 ### Licensing
 
 ToF3D is a MIT-licensed software. Separate licenses for other software used in development may apply. Separate licenses for assets may apply. Please see LICENSE file for details.
+
 
 ## Other Features
 
