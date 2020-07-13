@@ -6,7 +6,7 @@ This document describes the details for a classic, turn-baset strategy game, tha
 
 Certain level of backwards compatibility is meant to be preserved. This new game should be able to import ToF online shared maps. It is not expected to be able to share maps, that original ToF could use. Online cross-play between ToF and this game is considered, but is not a part of core requirements.
 
-Working title for the game is Tanks of Freedom 3-D, it is a subject to change, most likely based on it's story.
+Working title for the game is Tanks of Freedom 3-D, it is a subject to change, most likely based on it's story. Proposed title: *Tanks of Freedom - Liberum Gentem*
 
 
 ## World
@@ -15,29 +15,49 @@ A fictional world of Libre populated by humans. It consists of one, big landmass
 It is possible, there are other countries in this world, that are not part of the story, and could be used in the future.
 
 ### Sapphire Dawn (Team Blue)
-A police state, that is secretly funding various warring factions of Team Yellow in order to weaken the region and take over their resources. In economic war with Team Red. Led by democratic oligarchy.
+A corporate, police state, that is secretly funding various warring factions of Team Yellow in order to weaken the region and take over their resources. In economic war with Team Red. Led by democratic oligarchy.
+
+Style: Modern
 
 ### Ruby Dusk (Team Red)
 Industrial nation, that is exploiting it's own population for cheap labour and suppresing freedom. Always looking for opportunities of new conquest. A rebel faction is organizing within, plotting to take over and end the regime.
 
+Style: Steampunk
+
 ### Jade Twilight (Team Green)
 A peacful and prosperous nation, consisting of a federation of Islands. An uneasy ally to Team Blue, but also in trade relations with Team Red. Offering aid to Team Yellow on the condition of maintainig internal Peace, but not willing to interfere. Led by democratic government.
 
+Style: Futuristic
+
 ### Golden Noon (Team Yellow)
-A feudal nation splintered into warring factions. Internal struggle is secretly fueled by Team Blue. Country is led by royal family, with a prince hoping to unite his people and end the civil war.
+A feudal nation splintered into warring factions. Internal struggle is secretly fueled by Team Blue. Country is led by royal family, with a weak king and a prince hoping to unite his people and end the civil war.
+
+Style: Feudal/Knights
 
 
 ## Characters
 
 For ToF3D we intend to have four sides to the conflict, with each having an npc leader and two playable heroes.
 
-### Team Blue
+### Sapphire Dawn (Team Blue)
+- The CEO
+- The General
+- The Commando
 
-### Team Red
+### Ruby Dusk (Team Red)
+- The Bright Leader
+- The Inquisitor
+- The Rebel Leader
 
-### Team Green
+### Jade Twilight (Team Green)
+- The Chancellor
+- The Admiral
+- The Captain
 
-### Team Yellow
+### Golden Noon (Team Yellow)
+- The King
+- The Prince
+- The Warlord
 
 
 ## Story
@@ -46,7 +66,7 @@ Team Yellow factions, fighting a civil war, go beyond their borders and start at
 
 ### Theme
 
-Lorem ipsum
+The game is about deception, political agendas and freedom. None of the factions are purely good or bad. Story has to decieve the player into thinking, that certain factions and characters are definately bad, and then subvert their expectations. Some light-hearthed banter between characters and cartoony approach should be used.
 
 
 ## Story Progression
@@ -70,7 +90,31 @@ Yellow Prince has to re-take his country from Team Blue and Blue-backed Yellow w
 
 ### Missions
 
-Lorem ipsum
+#### Prologue
+1. *Border Patrol* - Local Red forces are dispatched to investigate a terrorist attack in a small town near Yellow border. Player is then tasked with taking it out.
+
+Units:
+- Infantry
+- Tank
+
+2. *The Catalyst* - The Yellow Warlord launches a full-on attack on a Red base. Defend and counter-attack. Note: The Warlord shows up in the story, but is not yet revealed as a hero unit.
+
+Units:
+- Infantry
+- Tanks
+- Heli
+
+#### Red Campaign
+To be designed.
+
+#### Blue Campaign
+To be designed.
+
+#### Green Campaign
+To be designed.
+
+#### Yellow Campaign
+To be designed.
 
 
 ## Gameplay
@@ -88,6 +132,8 @@ Lorem ipsum
 ### Losing
 
 ### Units
+
+### Buildings
 
 
 ## Art Style
