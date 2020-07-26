@@ -54,7 +54,7 @@ For ToF3D we intend to have four sides to the conflict, with each having an npc 
 - The Admiral
 - The Captain
 
-### Golden Noon (Team Yellow)
+### Amber Noon (Team Yellow)
 - The King
 - The Prince
 - The Warlord
@@ -123,13 +123,67 @@ Lorem ipsum
 
 ### Goals
 
+Overall goal of the game is to get through all of the campaign missions, and witness the story of the four warring nations.
+
+In a single mission, goals are determined by the story. A win might be considered by reaching one of the many possible objectives (alternative paths) or require multiple to be achieved within single mission.
+A list of possible win conditions:
+- Capturing enemy HQ
+- Surviving set amount of turns
+- Capturing designated building(s)
+- Destroying designated unit(s)
+- Reaching designated area with (optionally specific) units
+- Building up set amount of resources
+
 ### User Skills
+
+- Click and drag with a mouse
+- Use WSAD keyboard
+- (OR) Use XBox-style gamepad
+- Manage resources
+- Strategize according to objectives
+- Make tactical combat decisions
+- Assess usefulness of different units
+- Assess value of buildings
+- Read on-screen messages
 
 ### Game Mechanics
 
+This game is a turn-based strategy, where one player commands his/her forces fully, and the turn ends when all posible actions are exhausted, or player decides to pass the turn. Up to 4 players can play in a single match.
+
+Game is played on a board consisting of square tiles, populated with terrain, units, buildings and obstacles. Player is awarded a resource at the beggining of the turn, which can be spent on new units or active skills.
+Each unit can be moved, attack enemy units, activate special abilities or defend a position. All actions need to be contextual and easy to execute with two buttons. Unit actions are limited by the amount of it's own action points and other attributes.
+Buildings can be neutral, or belong to one of the players. Player can ocuppy a building, that does not belong to them in order to capture it. Buildings can fulfill one or more of roles: provide resources, enable deployment of new units, repair units, or be a strategic objective.
+
+There will be no Fog of War, that was present in the previous game.
+There will be no dedicated battle screen, with combat taking place direclty on the main board.
+
+Combat may cause collateral damage to the buildings and terrain around them.
+Infantry can move onto a building tile to gain bonuses. Bonuses decrease with building damage.
+Certain terrain tiles can provide bonuses or penalties.
+
+Resources gained from buildings will be taxed according to the amount of units deployed, to prevent unit spam.
+
 ### Progression and challange
 
+Campaign will offer progression in form of gradual unlocking of new buildings and abilities. This will also be true for the AI opponents, to match the challange. In custom games, map creator will be able to decide which units, buildings and abilities are available.
+Story progresses by in-game dialog, in-game on-board cutscenes.
+
+In a match, progression will be possible by capturing more buildings, gathering more resources and recruiting more units.
+Units will be able to gain XP and level up, which will result in them gaining minor stat boosts and unlocking abilities.
+
+Difficulty can be adjusted by the player by choosing one of three possible difficulty levels. These will affect how many resources AI has. Difficulty can be selected on per-AI basis.
+In PvP matches, there is no difficulty setting.
+
 ### Losing
+
+There is no way of loosing a campaign, as each of the missions can be re-played as many times as player wishes (or needs).
+A loss might be considered by failing to fullfill one of the many possible objectives (alternative paths) or require multiple to fail within single mission.
+A list of possible loss conditions:
+- Loosing player HQ
+- Failing to complete objectives within set amount of turns
+- Loosing designated building(s)
+- Loosing designated unit(s)
+- Enemy reaching designated area with (optionally specific) units
 
 ### Units
 
