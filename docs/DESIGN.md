@@ -95,14 +95,14 @@ Yellow Prince has to re-take his country from Team Blue and Blue-backed Yellow w
 
 Units:
 - Infantry
-- Tank
+- Tank (limited)
 
 2. *The Catalyst* - The Yellow Warlord launches a full-on attack on a Red base. Defend and counter-attack. Note: The Warlord shows up in the story, but is not yet revealed as a hero unit.
 
 Units:
 - Infantry
 - Tanks
-- Heli
+- Heli (limited)
 
 #### Red Campaign
 To be designed.
