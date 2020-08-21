@@ -29,7 +29,7 @@ A peacful and prosperous nation, consisting of a federation of Islands. An uneas
 
 Style: Futuristic
 
-### Golden Noon (Team Yellow)
+### Amber Noon (Team Yellow)
 A feudal nation splintered into warring factions. Internal struggle is secretly fueled by Team Blue. Country is led by royal family, with a weak king and a prince hoping to unite his people and end the civil war.
 
 Style: Feudal/Knights
@@ -119,8 +119,6 @@ To be designed.
 
 ## Gameplay
 
-Lorem ipsum
-
 ### Goals
 
 Overall goal of the game is to get through all of the campaign missions, and witness the story of the four warring nations.
@@ -187,8 +185,117 @@ A list of possible loss conditions:
 
 ### Units
 
+Each side will use the same units, with different assets that reflect their own style.
+
+#### Infantry
+
+Most basic unit in ToF, infantry is a cheap and slow unit with low damage, but capable of capturing buildings. Crucial in achieving victory when capturing enemy HQ is your goal.
+
+Strengths:
+- cheap
+- strong against flying units
+- can capture buildings
+- can garisson structures
+
+Weaknesses:
+- low health
+- low damage
+- short range
+
+Special: Bazooka
+
+#### Tank
+
+Frontline units with a lot of bulk and powerful canons. Mainly used to push front lines.
+
+Strengths:
+- high health
+- high damage
+- strong against infantry units
+
+Weaknesses:
+- expensive
+- can't attack flying units
+
+Special: Long-range shell
+
+#### Attack Helicopter
+
+Offensive air unit, often deployed to gain advantage on the battlefield.
+
+Strengths:
+- good mobility
+- strong against armored units
+
+Weaknesses:
+- very expensive
+
+Special: Troop transport
+
+#### Advanced units
+
+Some units are available only when certain conditions are met. These conditions could be:
+- story progression
+- special building captured
+- production building upgraded
+
+#### Mobile infantry
+
+Motorized infantry squad, capable of limited field repairs and medical assistance.
+
+Strengths:
+- cheap
+- can capture buildings
+- moderate mobility
+
+Weaknesses:
+- low health
+- low damage
+- can't attack flying units
+- can't garisson structures
+
+Special: Medkit/Repair Kit
+
+#### Mobile rocket artillery
+
+Specialized vehicle carrying ground-to-ground and ground-to-air missiles.
+
+Strengths:
+- strong against armored units
+- strong against flying units
+
+Weaknesses:
+- low health
+- very expensive
+
+Special: Targeted strike
+
+#### Scout Helicopter
+
+Lightweight, flying machine capable of covering a lot of ground very quickly.
+
+Strengths:
+- very good mobility
+- high visibility
+
+Weaknesses:
+- expensive
+- low damage
+- low health
+
+Special: Rapid response
+
+#### Leveling up
+
+Units can level up when they destroy enemies. Each level grants bonuses:
+1. Baseline level of a unit
+2. Increased mobility and armor
+3. Access to active ability
+
 ### Buildings
 
+Each side will use the same buildings to gain resources and deploy units. Buildings have different styles that reflect the style of nation that built it. Buildings will not change style depending on controlling nation, being fixed for a particular map instead.
+Buildings can heal units that are produced in them.
 
 ## Art Style
 
