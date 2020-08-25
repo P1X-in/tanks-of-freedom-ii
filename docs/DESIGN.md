@@ -202,7 +202,7 @@ Weaknesses:
 - low damage
 - short range
 
-Special: Bazooka
+Special: Bazooka - can deal high damage to a neighbouring unit
 
 #### Tank
 
@@ -217,7 +217,7 @@ Weaknesses:
 - expensive
 - can't attack flying units
 
-Special: Long-range shell
+Special: Long-range shell - can deal damage to a unit one field away in a straight line
 
 #### Attack Helicopter
 
@@ -230,7 +230,7 @@ Strengths:
 Weaknesses:
 - very expensive
 
-Special: Troop transport
+Special: Troop transport - can pick up single Infantry unit and drop it off
 
 #### Advanced units
 
@@ -254,21 +254,21 @@ Weaknesses:
 - can't attack flying units
 - can't garisson structures
 
-Special: Medkit/Repair Kit
+Special: Medkit/Repair Kit - can restore HP to any unit
 
 #### Mobile rocket artillery
 
 Specialized vehicle carrying ground-to-ground and ground-to-air missiles.
 
 Strengths:
-- strong against armored units
 - strong against flying units
+- powerful special
 
 Weaknesses:
 - low health
 - very expensive
 
-Special: Targeted strike
+Special: Targeted strike - can damage a unit within 4 squares, both air and ground
 
 #### Scout Helicopter
 
@@ -283,19 +283,61 @@ Weaknesses:
 - low damage
 - low health
 
-Special: Rapid response
+Special: Rapid response - restores all action points
 
 #### Leveling up
 
 Units can level up when they destroy enemies. Each level grants bonuses:
-1. Baseline level of a unit
-2. Increased mobility and armor
+1. Increased mobility
+2. Increased armor
 3. Access to active ability
 
 ### Buildings
 
 Each side will use the same buildings to gain resources and deploy units. Buildings have different styles that reflect the style of nation that built it. Buildings will not change style depending on controlling nation, being fixed for a particular map instead.
 Buildings can heal units that are produced in them.
+
+#### Headquarter
+
+Main building, that need to be defended. When HQ is captured, the game is over.
+
+Units deployed: Infantry
+AP gain per round: 20
+
+#### Barracks
+
+Army training center, used to train foot soldiers.
+
+Units deployed: Infantry, Mobile Infantry
+AP gain per round: 5
+
+#### Factory
+
+Industrial facility capable of rapid assembly of vehicles
+
+Units deployed: Tank, Mobile Rocket Artillery
+AP gain per round: 5
+
+#### Airfield
+
+Military hangar supporting air units.
+
+Units deployed: Attack Helicopter, Scout Helicopter
+AP gain per round: 5
+
+#### Comms tower
+
+Standard wireless communication tower. Helps support more units in the field.
+
+Units deployed: N/A
+AP gain per round: 15
+
+#### Civilian buildings
+
+Regular buildings, that can be garrisoned with Infantry for additional armor. Can be damaged.
+
+Units deployed: N/A
+AP gain per round: 0
 
 ## Art Style
 
@@ -338,25 +380,43 @@ Voxel art inspiration
 
 ## Music and Sounds
 
-Lorem ipsum
+Music should have chiptune style (though other styles are acceptable) with military march-style regular tempo.
+
+Performing actions, such as unit movement and combat, should be accompanied by simple sound effects.
+
+Initially, sounds from original ToF will be re-used, with possibility of new tracks being added.
+
+Reduz has some interesting tracks on [Soundcloud](https://soundcloud.com/reduz) - he migth be willing to share them under a CC license.
 
 
 ## Technical Description
 
-Lorem ipsum
+Game will be made in an open-source GodotEngine in 3D. It should consider future upgrade to Godot 4.0 and Vulkan renderer.
 
+Godot provides easy export for Windows and Linux platforms. OSX is still available out of the box, but is not initially onsidered due to Apple's anti-consumer policies and possible difficulties in distribution and maintenance. Android is not considered due to potential low performance and not suitable controls.
+
+Switch port could happen in the future, if the project reaches sufficient quality.
+
+Project will be managed using Trello board: [https://trello.com/b/RQOwyCwm/tanks-of-freedom-3-d](https://trello.com/b/RQOwyCwm/tanks-of-freedom-3-d)
+Trello might be swapped for an open-source alternative if it's transition into more commercialized product interferes with the project.
+
+Github repository will be used to store code and assets publicly.
 
 ## Marketing
 
-Lorem ipsum
+Make the project visible in GodotEngine community. Original ToF used to be quite popular, so maybe some of that popularity can be restored.
+
+Game will be officially distributed on itch.io.
+
+Once the project is properly bootstrapped, so there is some more flashy things to show, a development vlog could be a good option.
 
 ### Demographics
 
-Lorem ipsum
+Game is primarly targeted at fans of turn-based strategies, so most likely male players around 30 year old. Colorful and cartoony graphics might attract younger crowd, but there are no simplifications planned to make the game kid-friendly.
 
 ### Platforms
 
-Lorem ipsum
+ToF is targeting Windows and Linux, with posibility of OSX, Android and Switch being added. Being an open source project, game can be picked up and ported to many platforms by third-parties.
 
 ### Monetization
 
@@ -364,7 +424,8 @@ None
 
 ### Localization
 
-Lorem ipsum
+Game will be provided in English and Polish, with possibility of more languages being contributed by community.
+Considering the genre popularity in Japan, a translation might be worthwile.
 
 ### Licensing
 
@@ -373,5 +434,6 @@ ToF3D is a MIT-licensed software. Separate licenses for other software used in d
 
 ## Other Features
 
-Lorem ipsum
+Following original ToF release, a custom level editor, online map sharing and online multiplayer will be added as optional milestones.
+Partial compatibility with original ToF might help, allowing to use the wealth of already existing maps.
 
