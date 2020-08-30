@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/terrain/grasslands/grassland_library.tres" type="MeshLibrary" id=1]
+[ext_resource path="res://assets/blue_tank.tscn" type="PackedScene" id=2]
+[ext_resource path="res://default_env.tres" type="Environment" id=3]
+
+[node name="map" type="Spatial"]
+
+[node name="terrain_top" type="GridMap" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 8, 4, 8 )
+data = {
+"cells": PoolIntArray( 0, 0, 0, 1, 0, -536870912, 1, 65535, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0
+}
+
+[node name="terrain_bottom" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 8, 4, 8 )
+data = {
+"cells": PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 1073741824, 65534, 0, 0, 65535, 0, 1073741824, 0, 1, 0, 1, 1, 0, 2, 1, 1073741824, 65534, 1, 0, 65535, 1, 0, 0, 65533, 0, 1, 65533, 0, 2, 65533, 0, 65534, 65533, 0, 65535, 65533, 0, 0, 65534, 1610612736, 1, 65534, 1073741824, 2, 65534, 0, 65534, 65534, 0, 65535, 65534, 0, 0, 65535, 0, 1, 65535, 0, 2, 65535, 1610612736, 65534, 65535, 0, 65535, 65535, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0
+}
+
+[node name="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.63077, 5.97872, -3.88636 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.746092, -0.345376, 0.569264, 0.256356, 0.640048, 0.724307, -0.614515, 0.686334, -0.388996, 24.8979, 28.6066, 1.54649 )
+light_color = Color( 1, 1, 0.862745, 1 )
+light_energy = 5.0
+shadow_enabled = true
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.866026, 0.353553, -0.353553, 0, 0.707107, 0.707107, 0.5, 0.612373, -0.612372, -8.58378, 14.4849, -18.6808 )
+environment = ExtResource( 3 )

@@ -5,3 +5,5 @@
 [resource]
 background_mode = 2
 background_sky = SubResource( 1 )
+tonemap_mode = 3
+ssao_enabled = true

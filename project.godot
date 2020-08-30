@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="Tanks of Freedom 3D"
 config/icon="res://icon.png"
 
+[debug]
+
+settings/stdout/print_fps=true
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
