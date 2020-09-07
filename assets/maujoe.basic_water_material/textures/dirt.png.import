@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/blue_tank.png-e6e159d75f876ae27c13b860f78fff39.s3tc.stex"
-path.etc2="res://.import/blue_tank.png-e6e159d75f876ae27c13b860f78fff39.etc2.stex"
+path.s3tc="res://.import/dirt.png-2f6f9f55b644c74cdd0f99e41507ea61.s3tc.stex"
+path.etc2="res://.import/dirt.png-2f6f9f55b644c74cdd0f99e41507ea61.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,14 +11,14 @@ metadata={
 
 [deps]
 
-source_file="res://assets/blue_tank.png"
-dest_files=[ "res://.import/blue_tank.png-e6e159d75f876ae27c13b860f78fff39.s3tc.stex", "res://.import/blue_tank.png-e6e159d75f876ae27c13b860f78fff39.etc2.stex" ]
+source_file="res://assets/maujoe.basic_water_material/textures/dirt.png"
+dest_files=[ "res://.import/dirt.png-2f6f9f55b644c74cdd0f99e41507ea61.s3tc.stex", "res://.import/dirt.png-2f6f9f55b644c74cdd0f99e41507ea61.etc2.stex" ]
 
 [params]
 
 compress/mode=2
 compress/lossy_quality=0.7
-compress/hdr_mode=1
+compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true

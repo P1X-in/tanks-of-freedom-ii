@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/pointer.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 1, 1, 1, 0.0392157 )
+
+[node name="pointer" type="Spatial"]
+
+[node name="pointer" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0, -0.05 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="CSGCylinder" type="CSGCylinder" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
+cast_shadow = 0
+radius = 1.1
+height = 20.0
+sides = 50
+material = SubResource( 3 )

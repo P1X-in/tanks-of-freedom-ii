@@ -18,7 +18,7 @@ dest_files=[ "res://.import/chr_knight.png-62b7c18bb257501391233cc8863ac827.s3tc
 
 compress/mode=2
 compress/lossy_quality=0.7
-compress/hdr_mode=0
+compress/hdr_mode=1
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true

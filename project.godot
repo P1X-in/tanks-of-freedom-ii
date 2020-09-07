@@ -24,4 +24,11 @@ settings/stdout/print_fps=true
 
 [rendering]
 
+quality/shadow_atlas/size=8192
+quality/shadow_atlas/size.mobile=4096
+quality/shadow_atlas/quadrant_0_subdiv=3
+quality/shadow_atlas/quadrant_1_subdiv=4
+quality/shadow_atlas/quadrant_2_subdiv=5
+quality/shadow_atlas/quadrant_3_subdiv=6
+quality/shadows/filter_mode=2
 environment/default_environment="res://default_env.tres"

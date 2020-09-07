@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/blue_tank.png-e6e159d75f876ae27c13b860f78fff39.s3tc.stex"
-path.etc2="res://.import/blue_tank.png-e6e159d75f876ae27c13b860f78fff39.etc2.stex"
+path.s3tc="res://.import/pointer.png-7f692ad97453b2b0ac0c72b3dc243149.s3tc.stex"
+path.etc2="res://.import/pointer.png-7f692ad97453b2b0ac0c72b3dc243149.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/blue_tank.png"
-dest_files=[ "res://.import/blue_tank.png-e6e159d75f876ae27c13b860f78fff39.s3tc.stex", "res://.import/blue_tank.png-e6e159d75f876ae27c13b860f78fff39.etc2.stex" ]
+source_file="res://assets/pointer.png"
+dest_files=[ "res://.import/pointer.png-7f692ad97453b2b0ac0c72b3dc243149.s3tc.stex", "res://.import/pointer.png-7f692ad97453b2b0ac0c72b3dc243149.etc2.stex" ]
 
 [params]
 
