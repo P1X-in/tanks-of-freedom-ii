@@ -87,7 +87,6 @@ func process_camera_input(delta):
 
 func process_movement_input(delta):
 	var axis_value = Vector2()
-	var axis_value_normalized
 
 	axis_value.x = -Input.get_joy_axis(self.device_id, MOVEMENT_AXIS_X)
 	axis_value.y = -Input.get_joy_axis(self.device_id, MOVEMENT_AXIS_Y)
