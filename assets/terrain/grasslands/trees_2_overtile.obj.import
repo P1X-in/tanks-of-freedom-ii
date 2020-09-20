@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/trees_2_overtile.obj-fc9df8601355c117269ae911eda86c5f.mesh"
+
+[deps]
+
+files=[ "res://.import/trees_2_overtile.obj-fc9df8601355c117269ae911eda86c5f.mesh" ]
+
+source_file="res://assets/terrain/grasslands/trees_2_overtile.obj"
+dest_files=[ "res://.import/trees_2_overtile.obj-fc9df8601355c117269ae911eda86c5f.mesh", "res://.import/trees_2_overtile.obj-fc9df8601355c117269ae911eda86c5f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -10,9 +10,10 @@ script = ExtResource( 2 )
 [node name="pointer" parent="." instance=ExtResource( 3 )]
 
 [node name="pivot" type="Spatial" parent="."]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0 )
 
 [node name="arm" type="Spatial" parent="pivot"]
-transform = Transform( 1, 0, 0, 0, 0.766045, 0.642788, 0, -0.642788, 0.766045, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 0.819152, 0.573577, 0, -0.573577, 0.819152, 0, 0, 0 )
 
 [node name="lens" type="Camera" parent="pivot/arm"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30 )

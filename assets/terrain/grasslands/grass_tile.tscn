@@ -3,8 +3,6 @@
 [ext_resource path="res://assets/arne32.tres" type="Material" id=1]
 [ext_resource path="res://assets/terrain/grasslands/grass_tile.obj" type="ArrayMesh" id=2]
 
-[node name="tile" type="Spatial"]
-
-[node name="grass_tile" type="MeshInstance" parent="."]
+[node name="grass_tile" type="MeshInstance"]
 mesh = ExtResource( 2 )
 material/0 = ExtResource( 1 )
