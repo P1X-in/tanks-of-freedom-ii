@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/terrain/grasslands/building_small_1_overtile.obj" type="ArrayMesh" id=1]
+
+[node name="building_small_1_overtile" type="MeshInstance"]
+mesh = ExtResource( 1 )
+material/0 = null

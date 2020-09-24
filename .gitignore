@@ -13,3 +13,6 @@ export_presets.cfg
 *.tmp
 *.keystore
 *export_android.cfg
+
+# Files too big for github, need to be re-done in Godot
+assets/terrain/grasslands/grassland_library.tres

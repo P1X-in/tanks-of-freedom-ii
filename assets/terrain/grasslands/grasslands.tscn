@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/terrain/grasslands/grass_tile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/terrain/grasslands/grass_1_overtile.tscn" type="PackedScene" id=2]
@@ -21,69 +21,134 @@
 [ext_resource path="res://assets/terrain/grasslands/trees_4_overtile.tscn" type="PackedScene" id=19]
 [ext_resource path="res://assets/terrain/grasslands/trees_5_overtile.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/terrain/grasslands/trees_6_overtile.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/terrain/grasslands/big_rocks_1_overtile.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/terrain/grasslands/big_rocks_2_overtile.tscn" type="PackedScene" id=23]
+[ext_resource path="res://assets/terrain/grasslands/big_rocks_3_overtile.tscn" type="PackedScene" id=24]
+[ext_resource path="res://assets/terrain/grasslands/building_small_1_overtile.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/terrain/grasslands/building_small_2_overtile.tscn" type="PackedScene" id=26]
+[ext_resource path="res://assets/terrain/grasslands/building_small_3_overtile.tscn" type="PackedScene" id=27]
+[ext_resource path="res://assets/terrain/grasslands/building_small_4_overtile.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets/terrain/grasslands/building_small_5_overtile.tscn" type="PackedScene" id=29]
+[ext_resource path="res://assets/terrain/grasslands/building_small_6_overtile.tscn" type="PackedScene" id=30]
 
 [node name="grasslands" type="Spatial"]
 
 [node name="grass_tile" parent="." instance=ExtResource( 1 )]
+use_in_baked_light = true
 
 [node name="grass_1_overtile" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0 )
+use_in_baked_light = true
 material/0 = null
 
 [node name="grass_2_overtile" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0 )
+use_in_baked_light = true
 
 [node name="grass_3_overtile" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0 )
+use_in_baked_light = true
 
 [node name="grass_4_overtile" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 0 )
+use_in_baked_light = true
 
 [node name="log_1_overtile" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8 )
+use_in_baked_light = true
 
 [node name="rocks_1_overtile" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 8 )
+use_in_baked_light = true
 
 [node name="rocks_2_overtile" parent="." instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 8 )
+use_in_baked_light = true
 
 [node name="flowers_1_overtile" parent="." instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 16 )
+use_in_baked_light = true
 
 [node name="flowers_2_overtile" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 16 )
+use_in_baked_light = true
 
 [node name="flowers_3_overtile" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 16 )
+use_in_baked_light = true
 
 [node name="flowers_4_overtile" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 16 )
+use_in_baked_light = true
 
 [node name="flowers_5_overtile" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 16 )
+use_in_baked_light = true
 
 [node name="flowers_6_overtile" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 16 )
+use_in_baked_light = true
 
 [node name="flowers_7_overtile" parent="." instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 16 )
+use_in_baked_light = true
 
 [node name="trees_1_overtile" parent="." instance=ExtResource( 16 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 24 )
+use_in_baked_light = true
 material/0 = null
 
 [node name="trees_2_overtile" parent="." instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 24 )
+use_in_baked_light = true
+material/0 = null
 
 [node name="trees_3_overtile" parent="." instance=ExtResource( 18 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 24 )
+use_in_baked_light = true
 
 [node name="trees_4_overtile" parent="." instance=ExtResource( 19 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 24 )
+use_in_baked_light = true
 
 [node name="trees_5_overtile" parent="." instance=ExtResource( 20 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 24 )
+use_in_baked_light = true
 
 [node name="trees_6_overtile" parent="." instance=ExtResource( 21 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 24 )
+use_in_baked_light = true
+
+[node name="big_rocks_1_overtile" parent="." instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 32 )
+use_in_baked_light = true
+
+[node name="big_rocks_2_overtile" parent="." instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 32 )
+use_in_baked_light = true
+material/0 = null
+
+[node name="big_rocks_3_overtile" parent="." instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 32 )
+use_in_baked_light = true
+
+[node name="building_small_1_overtile" parent="." instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 40 )
+use_in_baked_light = true
+
+[node name="building_small_2_overtile" parent="." instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 40 )
+material/0 = null
+
+[node name="building_small_3_overtile" parent="." instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 40 )
+material/0 = null
+
+[node name="building_small_4_overtile" parent="." instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 40 )
+
+[node name="building_small_5_overtile" parent="." instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 40 )
+
+[node name="building_small_6_overtile" parent="." instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 40 )

@@ -5,6 +5,8 @@ const MOVEMENT_AXIS_X = JOY_ANALOG_LX
 const MOVEMENT_AXIS_Y = JOY_ANALOG_LY
 const CAMERA_AXIS_X = JOY_ANALOG_RX
 const CAMERA_AXIS_Y = JOY_ANALOG_RY
+const CAMERA_AXIS_ZOOM_IN = JOY_ANALOG_L2
+const CAMERA_AXIS_ZOOM_OUT = JOY_ANALOG_R2
 
 export var device_id = 0
 export var rotate_speed = 100
@@ -74,15 +76,24 @@ func process_camera_input(delta):
 	axis_value.x = Input.get_joy_axis(self.device_id, CAMERA_AXIS_X)
 	axis_value.y = Input.get_joy_axis(self.device_id, CAMERA_AXIS_Y)
 
+	var zoom_value = Vector2()
+	zoom_value.x = Input.get_joy_axis(self.device_id, CAMERA_AXIS_ZOOM_IN)
+	zoom_value.y = Input.get_joy_axis(self.device_id, CAMERA_AXIS_ZOOM_OUT)
+
 	if abs(axis_value.x) > DEADZONE:
 		camera_angle_y -= self.rotate_speed * axis_value.x * delta
 
-	#if abs(axis_value.y) > DEADZONE:
-	#	camera_angle_x += self.rotate_speed * axis_value.y * delta
-	#	camera_angle_x = clamp(camera_angle_x, self.camera_min_deg, self.camera_max_deg)
-
 	if abs(axis_value.y) > DEADZONE:
-		camera_distance += self.zoom_speed * axis_value.y * delta
+	   camera_angle_x += self.rotate_speed * axis_value.y * delta
+	   camera_angle_x = clamp(camera_angle_x, self.camera_min_deg, self.camera_max_deg)
+
+	if abs(zoom_value.x) > DEADZONE:
+		zoom_value.y = 0.0
+		camera_distance += self.zoom_speed * -zoom_value.x * delta
+		camera_distance = clamp(camera_distance, self.camera_distance_min, self.camera_distance_max)
+
+	if abs(zoom_value.y) > DEADZONE:
+		camera_distance += self.zoom_speed * zoom_value.y * delta
 		camera_distance = clamp(camera_distance, self.camera_distance_min, self.camera_distance_max)
 
 func process_movement_input(delta):
