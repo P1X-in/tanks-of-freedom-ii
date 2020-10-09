@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://assets/terrain/grasslands/grass_tile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/terrain/grasslands/grass_1_overtile.tscn" type="PackedScene" id=2]
@@ -30,6 +30,25 @@
 [ext_resource path="res://assets/terrain/grasslands/building_small_4_overtile.tscn" type="PackedScene" id=28]
 [ext_resource path="res://assets/terrain/grasslands/building_small_5_overtile.tscn" type="PackedScene" id=29]
 [ext_resource path="res://assets/terrain/grasslands/building_small_6_overtile.tscn" type="PackedScene" id=30]
+[ext_resource path="res://assets/terrain/grasslands/building_big_2_overtile.tscn" type="PackedScene" id=31]
+[ext_resource path="res://assets/terrain/grasslands/building_big_3_overtile.tscn" type="PackedScene" id=32]
+[ext_resource path="res://assets/terrain/grasslands/building_big_1_overtile.tscn" type="PackedScene" id=33]
+[ext_resource path="res://assets/terrain/grasslands/building_big_4_overtile.tscn" type="PackedScene" id=34]
+[ext_resource path="res://assets/arne32.tres" type="Material" id=35]
+[ext_resource path="res://assets/terrain/grasslands/road_1_tile.tscn" type="PackedScene" id=36]
+[ext_resource path="res://assets/terrain/grasslands/road_1_overtile.tscn" type="PackedScene" id=37]
+[ext_resource path="res://assets/terrain/grasslands/road_2_tile.tscn" type="PackedScene" id=38]
+[ext_resource path="res://assets/terrain/grasslands/road_2_overtile.tscn" type="PackedScene" id=39]
+[ext_resource path="res://assets/terrain/grasslands/road_3_tile.tscn" type="PackedScene" id=40]
+[ext_resource path="res://assets/terrain/grasslands/road_4_tile.tscn" type="PackedScene" id=41]
+[ext_resource path="res://assets/terrain/grasslands/road_4_overtile.tscn" type="PackedScene" id=42]
+[ext_resource path="res://assets/terrain/grasslands/road_3_overtile.tscn" type="PackedScene" id=43]
+[ext_resource path="res://assets/terrain/grasslands/fountain_overtile.tscn" type="PackedScene" id=44]
+[ext_resource path="res://assets/terrain/grasslands/statue_overtile.tscn" type="PackedScene" id=45]
+[ext_resource path="res://assets/terrain/grasslands/concrete_tile.tscn" type="PackedScene" id=46]
+[ext_resource path="res://assets/terrain/grasslands/river_2_tile.tscn" type="PackedScene" id=47]
+[ext_resource path="res://assets/terrain/grasslands/river_1_tile.tscn" type="PackedScene" id=48]
+[ext_resource path="res://assets/terrain/grasslands/river_bridge_overtile.tscn" type="PackedScene" id=49]
 
 [node name="grasslands" type="Spatial"]
 
@@ -39,7 +58,6 @@ use_in_baked_light = true
 [node name="grass_1_overtile" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0 )
 use_in_baked_light = true
-material/0 = null
 
 [node name="grass_2_overtile" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0 )
@@ -96,12 +114,10 @@ use_in_baked_light = true
 [node name="trees_1_overtile" parent="." instance=ExtResource( 16 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 24 )
 use_in_baked_light = true
-material/0 = null
 
 [node name="trees_2_overtile" parent="." instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 24 )
 use_in_baked_light = true
-material/0 = null
 
 [node name="trees_3_overtile" parent="." instance=ExtResource( 18 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 24 )
@@ -126,7 +142,6 @@ use_in_baked_light = true
 [node name="big_rocks_2_overtile" parent="." instance=ExtResource( 23 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 32 )
 use_in_baked_light = true
-material/0 = null
 
 [node name="big_rocks_3_overtile" parent="." instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 32 )
@@ -135,14 +150,13 @@ use_in_baked_light = true
 [node name="building_small_1_overtile" parent="." instance=ExtResource( 25 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 40 )
 use_in_baked_light = true
+material/0 = ExtResource( 35 )
 
 [node name="building_small_2_overtile" parent="." instance=ExtResource( 26 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 40 )
-material/0 = null
 
 [node name="building_small_3_overtile" parent="." instance=ExtResource( 27 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 40 )
-material/0 = null
 
 [node name="building_small_4_overtile" parent="." instance=ExtResource( 28 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 40 )
@@ -152,3 +166,58 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 40 )
 
 [node name="building_small_6_overtile" parent="." instance=ExtResource( 30 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 40 )
+
+[node name="building_big_1_overtile" parent="." instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 48 )
+
+[node name="building_big_2_overtile" parent="." instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 48 )
+
+[node name="building_big_3_overtile" parent="." instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 48 )
+
+[node name="building_big_4_overtile" parent="." instance=ExtResource( 34 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 48 )
+
+[node name="road_1_tile" parent="." instance=ExtResource( 36 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0 )
+
+[node name="road_2_tile" parent="." instance=ExtResource( 38 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 8 )
+
+[node name="road_3_tile" parent="." instance=ExtResource( 40 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 16 )
+
+[node name="road_4_tile" parent="." instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 24 )
+
+[node name="road_1_overtile" parent="." instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8 )
+material/0 = null
+
+[node name="road_2_overtile" parent="." instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -8 )
+
+[node name="road_3_overtile" parent="." instance=ExtResource( 43 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -8 )
+
+[node name="road_4_overtile" parent="." instance=ExtResource( 42 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -8 )
+
+[node name="concrete_tile" parent="." instance=ExtResource( 46 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8 )
+
+[node name="fountain_overtile" parent="." instance=ExtResource( 44 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -16 )
+
+[node name="statue_overtile" parent="." instance=ExtResource( 45 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -16 )
+
+[node name="river_1_tile" parent="." instance=ExtResource( 48 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16 )
+
+[node name="river_2_tile" parent="." instance=ExtResource( 47 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24 )
+
+[node name="river_bridge_overtile" parent="." instance=ExtResource( 49 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -16 )

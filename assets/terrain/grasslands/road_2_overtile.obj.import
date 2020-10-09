@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road_2_overtile.obj-36296ffeb7a7467ce0a5e0d1f7fd123d.mesh"
+
+[deps]
+
+files=[ "res://.import/road_2_overtile.obj-36296ffeb7a7467ce0a5e0d1f7fd123d.mesh" ]
+
+source_file="res://assets/terrain/grasslands/road_2_overtile.obj"
+dest_files=[ "res://.import/road_2_overtile.obj-36296ffeb7a7467ce0a5e0d1f7fd123d.mesh", "res://.import/road_2_overtile.obj-36296ffeb7a7467ce0a5e0d1f7fd123d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

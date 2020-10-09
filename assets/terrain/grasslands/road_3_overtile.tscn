@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/arne32.tres" type="Material" id=1]
+[ext_resource path="res://assets/terrain/grasslands/road_3_overtile.obj" type="ArrayMesh" id=2]
+
+[node name="road_3_overtile" type="MeshInstance"]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 1 )
