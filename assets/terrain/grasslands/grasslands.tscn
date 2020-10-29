@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://assets/terrain/grasslands/grass_tile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/terrain/grasslands/grass_1_overtile.tscn" type="PackedScene" id=2]
@@ -49,6 +49,15 @@
 [ext_resource path="res://assets/terrain/grasslands/river_2_tile.tscn" type="PackedScene" id=47]
 [ext_resource path="res://assets/terrain/grasslands/river_1_tile.tscn" type="PackedScene" id=48]
 [ext_resource path="res://assets/terrain/grasslands/river_bridge_overtile.tscn" type="PackedScene" id=49]
+[ext_resource path="res://assets/terrain/grasslands/river_plants_3_overtile.tscn" type="PackedScene" id=50]
+[ext_resource path="res://assets/terrain/grasslands/river_plants_4_overtile.tscn" type="PackedScene" id=51]
+[ext_resource path="res://assets/terrain/grasslands/river_plants_2_overtile.tscn" type="PackedScene" id=52]
+[ext_resource path="res://assets/terrain/grasslands/river_plants_1_overtile.tscn" type="PackedScene" id=53]
+[ext_resource path="res://assets/buildings/wired_fence_overtile.tscn" type="PackedScene" id=54]
+[ext_resource path="res://assets/terrain/grasslands/dirt_road_1_tile.tscn" type="PackedScene" id=55]
+[ext_resource path="res://assets/terrain/grasslands/dirt_road_4_tile.tscn" type="PackedScene" id=56]
+[ext_resource path="res://assets/terrain/grasslands/dirt_road_3_tile.tscn" type="PackedScene" id=57]
+[ext_resource path="res://assets/terrain/grasslands/dirt_road_2_tile.tscn" type="PackedScene" id=58]
 
 [node name="grasslands" type="Spatial"]
 
@@ -193,7 +202,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 24 )
 
 [node name="road_1_overtile" parent="." instance=ExtResource( 37 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8 )
-material/0 = null
 
 [node name="road_2_overtile" parent="." instance=ExtResource( 39 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -8 )
@@ -221,3 +229,30 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24 )
 
 [node name="river_bridge_overtile" parent="." instance=ExtResource( 49 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -16 )
+
+[node name="river_plants_4_overtile" parent="." instance=ExtResource( 51 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -24 )
+
+[node name="river_plants_3_overtile" parent="." instance=ExtResource( 50 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -24 )
+
+[node name="river_plants_2_overtile" parent="." instance=ExtResource( 52 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -24 )
+
+[node name="river_plants_1_overtile" parent="." instance=ExtResource( 53 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -24 )
+
+[node name="wired_fence_overtile" parent="." instance=ExtResource( 54 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -16 )
+
+[node name="dirt_road_1_tile" parent="." instance=ExtResource( 55 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0 )
+
+[node name="dirt_road_2_tile" parent="." instance=ExtResource( 58 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 8 )
+
+[node name="dirt_road_3_tile" parent="." instance=ExtResource( 57 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 16 )
+
+[node name="dirt_road_4_tile" parent="." instance=ExtResource( 56 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 24 )

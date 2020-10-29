@@ -19,4 +19,5 @@ transform = Transform( 1, 0, 0, 0, 0.819152, 0.573577, 0, -0.573577, 0.819152, 0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30 )
 environment = ExtResource( 1 )
 fov = 50.0
+size = 65.0
 far = 200.0

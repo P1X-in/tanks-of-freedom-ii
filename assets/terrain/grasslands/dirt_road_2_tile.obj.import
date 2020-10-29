@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/dirt_road_2_tile.obj-3c0913dfe497f703e171a54b7a799c12.mesh"
+
+[deps]
+
+files=[ "res://.import/dirt_road_2_tile.obj-3c0913dfe497f703e171a54b7a799c12.mesh" ]
+
+source_file="res://assets/terrain/grasslands/dirt_road_2_tile.obj"
+dest_files=[ "res://.import/dirt_road_2_tile.obj-3c0913dfe497f703e171a54b7a799c12.mesh", "res://.import/dirt_road_2_tile.obj-3c0913dfe497f703e171a54b7a799c12.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

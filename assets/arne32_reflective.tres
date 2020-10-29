@@ -1,0 +1,14 @@
+[gd_resource type="SpatialMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://assets/arne32.png" type="Texture" id=1]
+[ext_resource path="res://assets/units/tank_modern.png" type="Texture" id=2]
+
+[resource]
+flags_albedo_tex_force_srgb = true
+albedo_texture = ExtResource( 1 )
+metallic = 0.5
+metallic_texture = ExtResource( 2 )
+metallic_texture_channel = 2
+roughness = 0.1
+roughness_texture = ExtResource( 2 )
+roughness_texture_channel = 2

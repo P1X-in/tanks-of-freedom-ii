@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/units/blue/mobile_infantry.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/arne32.tres" type="Material" id=2]
+
+[node name="mobile_infantry" type="Spatial"]
+
+[node name="mobile_infantry" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )

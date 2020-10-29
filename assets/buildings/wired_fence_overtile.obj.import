@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wired_fence_overtile.obj-e56911e707906f96e296490e927a399e.mesh"
+
+[deps]
+
+files=[ "res://.import/wired_fence_overtile.obj-e56911e707906f96e296490e927a399e.mesh" ]
+
+source_file="res://assets/buildings/wired_fence_overtile.obj"
+dest_files=[ "res://.import/wired_fence_overtile.obj-e56911e707906f96e296490e927a399e.mesh", "res://.import/wired_fence_overtile.obj-e56911e707906f96e296490e927a399e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

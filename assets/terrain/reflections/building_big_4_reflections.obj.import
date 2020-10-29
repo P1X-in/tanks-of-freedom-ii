@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/building_big_4_reflections.obj-ed363222dacfb82ba640cd25f6bf9f6c.mesh"
+
+[deps]
+
+files=[ "res://.import/building_big_4_reflections.obj-ed363222dacfb82ba640cd25f6bf9f6c.mesh" ]
+
+source_file="res://assets/terrain/reflections/building_big_4_reflections.obj"
+dest_files=[ "res://.import/building_big_4_reflections.obj-ed363222dacfb82ba640cd25f6bf9f6c.mesh", "res://.import/building_big_4_reflections.obj-ed363222dacfb82ba640cd25f6bf9f6c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
