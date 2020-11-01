@@ -2,16 +2,17 @@
 
 [ext_resource path="res://default_env.tres" type="Environment" id=1]
 [ext_resource path="res://assets/buildings/buildings_library.meshlib" type="MeshLibrary" id=2]
-[ext_resource path="res://assets/units/heli_modern.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/units/blue/heli_modern.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/maujoe.basic_water_material/materials/basic_water_material.material" type="Material" id=5]
-[ext_resource path="res://assets/units/tank_modern.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/units/infantry_modern.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/units/blue/tank_modern.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/units/blue/infantry_modern.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/terrain/grasslands_library.tres" type="MeshLibrary" id=8]
 [ext_resource path="res://assets/terrain/reflections_library.tres" type="MeshLibrary" id=9]
 [ext_resource path="res://assets/units/blue/mobile_infantry.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/units/blue/scout_heli.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/units/blue/rocket_artillery.tscn" type="PackedScene" id=12]
+
 
 [sub_resource type="PlaneMesh" id=1]
 material = ExtResource( 5 )

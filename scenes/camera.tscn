@@ -8,6 +8,7 @@
 script = ExtResource( 2 )
 
 [node name="pointer" parent="." instance=ExtResource( 3 )]
+visible = false
 
 [node name="pivot" type="Spatial" parent="."]
 transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0 )
@@ -18,6 +19,31 @@ transform = Transform( 1, 0, 0, 0, 0.819152, 0.573577, 0, -0.573577, 0.819152, 0
 [node name="lens" type="Camera" parent="pivot/arm"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30 )
 environment = ExtResource( 1 )
+current = true
 fov = 50.0
 size = 65.0
+far = 200.0
+
+[node name="tof_pivot" type="Spatial" parent="."]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0 )
+
+[node name="tof_arm" type="Spatial" parent="tof_pivot"]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0 )
+
+[node name="tof_style_camera" type="Camera" parent="tof_pivot/tof_arm"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 50 )
+projection = 1
+current = true
+size = 40.0
+far = 200.0
+
+[node name="aw_pivot" type="Spatial" parent="."]
+
+[node name="aw_arm" type="Spatial" parent="aw_pivot"]
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0 )
+
+[node name="aw_style_camera" type="Camera" parent="aw_pivot/aw_arm"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 50 )
+projection = 1
+size = 40.0
 far = 200.0

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/map_editor/tile_cam.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/map_editor/tile_view.gd" type="Script" id=3]
+
+[node name="screen" type="Sprite"]
+flip_v = true
+script = ExtResource( 3 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 200, 200 )
+own_world = true
+transparent_bg = true
+
+[node name="tile_cam" parent="Viewport" instance=ExtResource( 2 )]

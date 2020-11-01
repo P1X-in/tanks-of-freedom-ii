@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/heli_modern.obj-4e7437610949b77552178a2c2a5fd82a.mesh"
+
+[deps]
+
+files=[ "res://.import/heli_modern.obj-4e7437610949b77552178a2c2a5fd82a.mesh" ]
+
+source_file="res://assets/units/blue/heli_modern.obj"
+dest_files=[ "res://.import/heli_modern.obj-4e7437610949b77552178a2c2a5fd82a.mesh", "res://.import/heli_modern.obj-4e7437610949b77552178a2c2a5fd82a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

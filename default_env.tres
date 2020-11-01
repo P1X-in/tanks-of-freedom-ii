@@ -8,6 +8,7 @@ panorama = ExtResource( 1 )
 [resource]
 background_mode = 2
 background_sky = SubResource( 1 )
+background_sky_custom_fov = 70.0
 tonemap_mode = 3
 ssao_enabled = true
 ssao_quality = 2

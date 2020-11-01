@@ -1,0 +1,122 @@
+
+var rotations = {}
+var types = {}
+
+func build_rotations(templates, builder):
+	self.rotations[builder.CLASS_GROUND] = self.build_from_array([
+		templates.GROUND_GRASS,
+		templates.GROUND_CONCRETE,
+		templates.GROUND_RIVER1,
+		templates.GROUND_RIVER2,
+		templates.GROUND_ROAD1,
+		templates.GROUND_ROAD2,
+		templates.GROUND_ROAD3,
+		templates.GROUND_ROAD4,
+		templates.GROUND_DIRT_ROAD1,
+		templates.GROUND_DIRT_ROAD2,
+		templates.GROUND_DIRT_ROAD3,
+		templates.GROUND_DIRT_ROAD4,
+	])
+
+	self.rotations[builder.CLASS_FRAME] = self.build_from_array([
+		templates.FRAME_GRASS1,
+		templates.FRAME_GRASS2,
+		templates.FRAME_GRASS3,
+		templates.FRAME_GRASS4,
+		templates.FRAME_RIVER1,
+		templates.FRAME_RIVER2,
+		templates.FRAME_RIVER3,
+		templates.FRAME_RIVER4,
+		templates.FRAME_ROAD1,
+		templates.FRAME_ROAD2,
+		templates.FRAME_ROAD3,
+		templates.FRAME_ROAD4,
+		templates.FRAME_FENCE,
+	])
+
+	self.rotations[builder.CLASS_DECORATION] = self.build_from_array([
+		templates.DECO_FLOWERS1,
+		templates.DECO_FLOWERS2,
+		templates.DECO_FLOWERS3,
+		templates.DECO_FLOWERS4,
+		templates.DECO_FLOWERS5,
+		templates.DECO_FLOWERS6,
+		templates.DECO_FLOWERS7,
+		templates.DECO_LOG,
+		templates.DECO_ROCKS1,
+		templates.DECO_ROCKS2,
+	])
+
+	self.rotations[builder.CLASS_TERRAIN] = self.build_from_array([
+		templates.DECO_FOUNTAIN,
+		templates.DECO_STATUE,
+		templates.CITY_BUILDING_BIG1,
+		templates.CITY_BUILDING_BIG2,
+		templates.CITY_BUILDING_BIG3,
+		templates.CITY_BUILDING_BIG4,
+		templates.CITY_BUILDING_SMALL1,
+		templates.CITY_BUILDING_SMALL2,
+		templates.CITY_BUILDING_SMALL3,
+		templates.CITY_BUILDING_SMALL4,
+		templates.CITY_BUILDING_SMALL5,
+		templates.CITY_BUILDING_SMALL6,
+		templates.CITY_BRIDGE,
+		templates.NATURE_BIG_ROCKS1,
+		templates.NATURE_BIG_ROCKS2,
+		templates.NATURE_BIG_ROCKS3,
+		templates.NATURE_TREES1,
+		templates.NATURE_TREES2,
+		templates.NATURE_TREES3,
+		templates.NATURE_TREES4,
+		templates.NATURE_TREES5,
+		templates.NATURE_TREES6,
+	])
+
+	self.rotations[builder.CLASS_BUILDING] = self.build_from_array([
+		templates.MODERN_AIRFIELD,
+		templates.MODERN_BARRACKS,
+		templates.MODERN_FACTORY,
+		templates.MODERN_HQ,
+		templates.MODERN_TOWER,
+	])
+
+	self.types = self.build_from_array([
+		builder.CLASS_GROUND,
+		builder.CLASS_FRAME,
+		builder.CLASS_DECORATION,
+		builder.CLASS_TERRAIN,
+		builder.CLASS_BUILDING,
+		#builder.CLASS_UNIT,
+	])
+
+
+func get_map(name, type):
+	return self.rotations[type][name]
+
+func get_type_map(type):
+	return self.types[type]
+
+func get_first_tile(type):
+	return self.rotations[type].keys()[0]
+
+func build_from_array(names):
+	var rotation_map = {}
+
+	for i in range(names.size()):
+		if i == 0:
+			rotation_map[names[i]] = {
+				"prev" : names[names.size()-1],
+				"next" : names[i+1],
+			}
+		elif i + 1 == names.size():
+			rotation_map[names[i]] = {
+				"prev" : names[i-1],
+				"next" : names[0],
+			}
+		else:
+			rotation_map[names[i]] = {
+				"prev" : names[i-1],
+				"next" : names[i+1],
+			}
+
+	return rotation_map
