@@ -3,9 +3,9 @@
 [ext_resource path="res://assets/units/blue/heli_modern.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://assets/arne32_metallic.tres" type="Material" id=2]
 
-
 [node name="heli_modern" type="Spatial"]
 
 [node name="heli_modern" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )

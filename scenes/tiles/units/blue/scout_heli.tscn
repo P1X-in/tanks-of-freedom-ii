@@ -6,5 +6,6 @@
 [node name="scout_heli" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )

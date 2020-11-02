@@ -3,7 +3,6 @@
 [ext_resource path="res://assets/units/blue/tank_modern.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://assets/arne32_metallic.tres" type="Material" id=2]
 
-
 [node name="tank_modern" type="Spatial"]
 
 [node name="tank_modern" type="MeshInstance" parent="."]

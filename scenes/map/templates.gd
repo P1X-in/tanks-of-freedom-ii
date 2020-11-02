@@ -67,6 +67,13 @@ const MODERN_FACTORY = "modern_factory"
 const MODERN_HQ = "modern_hq"
 const MODERN_TOWER = "modern_tower"
 
+const UNIT_BLUE_INFANTRY = "blue_infantry"
+const UNIT_BLUE_TANK = "blue_tank"
+const UNIT_BLUE_HELI = "blue_heli"
+const UNIT_BLUE_MINF = "blue_m_inf"
+const UNIT_BLUE_ROCKET = "blue_rocket"
+const UNIT_BLUE_SCOUT = "blue_scout"
+
 
 var templates = {
 	self.GROUND_GRASS : preload("res://scenes/tiles/ground/grass.tscn"),
@@ -136,6 +143,13 @@ var templates = {
 	self.MODERN_FACTORY : preload("res://scenes/tiles/buildings/blue/factory.tscn"),
 	self.MODERN_HQ : preload("res://scenes/tiles/buildings/blue/headquarters.tscn"),
 	self.MODERN_TOWER : preload("res://scenes/tiles/buildings/blue/tower.tscn"),
+
+	self.UNIT_BLUE_INFANTRY : preload("res://scenes/tiles/units/blue/infantry.tscn"),
+	self.UNIT_BLUE_TANK : preload("res://scenes/tiles/units/blue/tank.tscn"),
+	self.UNIT_BLUE_HELI : preload("res://scenes/tiles/units/blue/heli.tscn"),
+	self.UNIT_BLUE_MINF : preload("res://scenes/tiles/units/blue/mobile_infantry.tscn"),
+	self.UNIT_BLUE_ROCKET : preload("res://scenes/tiles/units/blue/rocket_artillery.tscn"),
+	self.UNIT_BLUE_SCOUT : preload("res://scenes/tiles/units/blue/scout_heli.tscn"),
 }
 
 func get_template(template):

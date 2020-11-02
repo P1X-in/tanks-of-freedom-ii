@@ -1,5 +1,7 @@
 extends Spatial
 
+const AUTOSAVE_FILE = "__autosave__"
+
 var map
 var ui
 
@@ -65,6 +67,8 @@ func place_tile():
 		self.map.builder.place_terrain(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
 	if self.selected_class == self.map.builder.CLASS_BUILDING:
 		self.map.builder.place_building(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
+	if self.selected_class == self.map.builder.CLASS_UNIT:
+		self.map.builder.place_unit(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
 
 func clear_tile():
 	self.map.builder.clear_tile_layer(self.map.camera_tile_position)

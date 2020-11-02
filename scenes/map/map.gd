@@ -12,11 +12,13 @@ var camera_tile_position = Vector2(0, 0)
 var templates = preload("res://scenes/map/templates.gd").new()
 var model = preload("res://scenes/map/model.gd").new()
 var builder = preload("res://scenes/map/builder.gd").new(self)
+var loader = preload("res://scenes/map/loader.gd").new(self)
 
 var tiles_ground_anchor
 var tiles_frames_anchor
 var tiles_terrain_anchor
 var tiles_buildings_anchor
+var tiles_units_anchor
 
 func _ready():
 	self.tile_box = $"tiles/tile_box"
@@ -26,6 +28,7 @@ func _ready():
 	self.tiles_frames_anchor = $"tiles/frames"
 	self.tiles_terrain_anchor = $"tiles/terrain"
 	self.tiles_buildings_anchor = $"tiles/buildings"
+	self.tiles_units_anchor = $"tiles/units"
 
 	self.tile_box_space_size = self.camera.camera_space_size - self.TILE_SIZE
 

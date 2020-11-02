@@ -45,6 +45,8 @@ func place_terrain(position, name, rotation):
 		return
 	if tile.decoration.is_present():
 		tile.decoration.clear()
+	if tile.unit.is_present():
+		tile.unit.clear()
 	if tile.terrain.is_present():
 		tile.terrain.clear()
 	if tile.building.is_present():
@@ -59,6 +61,8 @@ func place_building(position, name, rotation):
 		return
 	if tile.decoration.is_present():
 		tile.decoration.clear()
+	if tile.unit.is_present():
+		tile.unit.clear()
 	if tile.terrain.is_present():
 		tile.terrain.clear()
 	if tile.building.is_present():
@@ -67,7 +71,18 @@ func place_building(position, name, rotation):
 	self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_buildings_anchor, tile.building)
 
 func place_unit(position, name, rotation):
-	return
+	var tile = self.map.model.get_tile(position)
+
+	if not tile.ground.is_present():
+		return
+	if tile.unit.is_present():
+		tile.unit.clear()
+	if tile.terrain.is_present():
+		tile.terrain.clear()
+	if tile.building.is_present():
+		tile.building.clear()
+
+	self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_units_anchor, tile.unit)
 
 func place_element(position, name, rotation, vertical_offset, anchor, tile_fragment):
 	var new_tile = self.map.templates.get_template(name)

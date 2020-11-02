@@ -11,3 +11,13 @@ var unit = preload("res://scenes/map/tile_fragment.gd").new()
 func _init(x, y):
 	self.position.x = x
 	self.position.y = y
+
+func get_dict():
+	return {
+		"ground" : self.ground.get_dict(),
+		"frame" : self.frame.get_dict(),
+		"decoration" : self.decoration.get_dict(),
+		"terrain" : self.terrain.get_dict(),
+		"building" : self.building.get_dict(),
+		"unit" : self.unit.get_dict(),
+	}

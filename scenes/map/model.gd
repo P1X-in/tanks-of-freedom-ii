@@ -15,3 +15,10 @@ func get_tile(position):
 
 func get_tile2(x, y):
 	return self.tiles[str(x) + "_" + str(y)]
+
+func get_dict():
+	var new_dict = {}
+	for i in self.tiles.keys():
+		new_dict[i] = self.tiles[i].get_dict()
+
+	return new_dict
