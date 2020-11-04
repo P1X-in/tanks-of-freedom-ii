@@ -8,8 +8,8 @@ const CLASS_UNIT = "unit"
 
 var map
 
-func _init(map):
-	self.map = map
+func _init(map_scene):
+	self.map = map_scene
 
 
 func place_ground(position, name, rotation):
@@ -111,5 +111,32 @@ func clear_tile_layer(position):
 	elif tile.ground.is_present():
 		tile.ground.clear()
 		
+
+func fill_map_from_data(data):
+	for tile_id in self.map.model.tiles.keys():
+		if data.has(tile_id):
+			self.place_tile(tile_id, data[tile_id])
+
+
 		
+func place_tile(tile_id, tile_data):
+	var tile = self.map.model.tiles[tile_id]
+
+	if tile_data["ground"]["tile"] != null:
+		self.place_ground(tile.position, tile_data["ground"]["tile"], tile_data["ground"]["rotation"])
+
+	if tile_data["frame"]["tile"] != null:
+		self.place_frame(tile.position, tile_data["frame"]["tile"], tile_data["frame"]["rotation"])
+
+	if tile_data["decoration"]["tile"] != null:
+		self.place_decoration(tile.position, tile_data["decoration"]["tile"], tile_data["decoration"]["rotation"])
+
+	if tile_data["terrain"]["tile"] != null:
+		self.place_terrain(tile.position, tile_data["terrain"]["tile"], tile_data["terrain"]["rotation"])
+
+	if tile_data["building"]["tile"] != null:
+		self.place_building(tile.position, tile_data["building"]["tile"], tile_data["building"]["rotation"])
+
+	if tile_data["unit"]["tile"] != null:
+		self.place_unit(tile.position, tile_data["unit"]["tile"], tile_data["unit"]["rotation"])
 		

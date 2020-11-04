@@ -1,11 +1,11 @@
 
 var tile = null
 
-func set_tile(tile):
+func set_tile(new_tile):
 	if self.tile != null:
 		self.clear()
 
-	self.tile = tile
+	self.tile = new_tile
 
 func clear():
 	if self.tile == null:
@@ -18,15 +18,10 @@ func is_present():
 	return self.tile != null
 
 func get_dict():
-	var new_dict = {}
-
-	if self.tile != null:
-		var rotation = self.tile.get_rotation_degrees()
-
-		new_dict["tile"] = "",
-		new_dict["rotation"] = rotation.y
+	if self.tile == null:
+		return {
+			"tile" : null,
+			"rotation" : 0,
+		}
 	else:
-		new_dict["tile"] = null,
-		new_dict["rotation"] = 0
-
-	return new_dict
+		return self.tile.get_dict()

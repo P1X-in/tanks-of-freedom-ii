@@ -5,9 +5,8 @@ var position_label
 var tile_prev
 var tile_current
 var tile_next
-
-var tile_arrow_l
-var tile_arrow_r
+var type_prev
+var type_next
 
 func _ready():
 	self.position_label = $"position/label"
@@ -15,8 +14,8 @@ func _ready():
 	self.tile_prev = $"tile/tile_view_prev"
 	self.tile_current = $"tile/tile_view_current"
 	self.tile_next = $"tile/tile_view_next"
-	self.tile_arrow_l = $"tile/tile_arrow_l"
-	self.tile_arrow_r = $"tile/tile_arrow_r"
+	self.type_prev = $"tile/tile_type_prev"
+	self.type_next = $"tile/tile_type_next"
 
 func update_position(x, y):
 	self.position_label.set_text("[" + str(x) + ", " + str(y) + "]")
@@ -29,3 +28,9 @@ func set_tile_current(tile, rotation):
 
 func set_tile_next(tile, rotation):
 	self.tile_next.set_tile(tile, rotation)
+
+func set_type_prev(tile, rotation):
+	self.type_prev.set_tile(tile, rotation)
+
+func set_type_next(tile, rotation):
+	self.type_next.set_tile(tile, rotation)

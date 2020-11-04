@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/map_editor/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/map_editor/tile_view.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/gui/editor/arrow.png" type="Texture" id=3]
 
 [node name="ui" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="position" type="MarginContainer" parent="."]
 anchor_top = 1.0
@@ -33,13 +35,14 @@ __meta__ = {
 }
 
 [node name="tile" type="MarginContainer" parent="."]
-anchor_left = 0.5
+anchor_left = 1.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -100.0
-margin_top = -200.0
-margin_right = 100.0
+margin_left = -267.0
+margin_top = -236.0
+margin_right = -67.0
+margin_bottom = -36.0
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 custom_constants/margin_left = 20
@@ -48,33 +51,46 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="arrow_l" type="Sprite" parent="tile"]
-texture = ExtResource( 3 )
-offset = Vector2( -100, 100 )
+[node name="Node2D" type="Node2D" parent="tile"]
+visible = false
+position = Vector2( 100, -90 )
+scale = Vector2( 1.2, 0.6 )
+
+[node name="Node2D2" type="Node2D" parent="tile/Node2D"]
+visible = false
+rotation = 0.785398
+scale = Vector2( 2, 2 )
+
+[node name="rect" type="ColorRect" parent="tile/Node2D/Node2D2"]
+visible = false
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 180.0
+margin_bottom = 180.0
+color = Color( 0, 0, 0, 0.784314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="tile_view_prev" parent="tile" instance=ExtResource( 2 )]
-offset = Vector2( -30, 100 )
-size = 30
+position = Vector2( 0, 70 )
+viewport_size = 40
+is_side_tile = true
 
-[node name="tile_view_current" parent="tile" instance=ExtResource( 2 )]
-offset = Vector2( 100, 100 )
+[node name="tile_type_next" parent="tile" instance=ExtResource( 2 )]
+position = Vector2( 100, -30 )
+viewport_size = 40
+is_side_tile = true
+
+[node name="tile_type_prev" parent="tile" instance=ExtResource( 2 )]
+position = Vector2( 100, 170 )
+viewport_size = 40
+is_side_tile = true
 
 [node name="tile_view_next" parent="tile" instance=ExtResource( 2 )]
-offset = Vector2( 230, 100 )
-size = 30
+position = Vector2( 200, 70 )
+viewport_size = 40
+is_side_tile = true
 
-[node name="arrow_r" type="Sprite" parent="tile"]
-texture = ExtResource( 3 )
-offset = Vector2( 300, 100 )
-flip_h = true
-
-[node name="arrow_u" type="Sprite" parent="tile"]
-position = Vector2( 100, 10 )
-rotation = 4.71239
-texture = ExtResource( 3 )
-flip_h = true
-
-[node name="arrow_d" type="Sprite" parent="tile"]
-position = Vector2( 100, 160 )
-rotation = 4.71239
-texture = ExtResource( 3 )
+[node name="tile_view_current" parent="tile" instance=ExtResource( 2 )]
+position = Vector2( 100, 70 )

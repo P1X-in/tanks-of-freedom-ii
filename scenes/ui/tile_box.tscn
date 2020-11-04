@@ -6,5 +6,6 @@
 [node name="tile_box" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
+cast_shadow = 0
 mesh = ExtResource( 2 )
 material/0 = ExtResource( 1 )

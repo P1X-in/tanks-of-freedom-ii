@@ -19,6 +19,7 @@ func get_tile2(x, y):
 func get_dict():
 	var new_dict = {}
 	for i in self.tiles.keys():
-		new_dict[i] = self.tiles[i].get_dict()
+		if self.tiles[i].has_content():
+		  new_dict[i] = self.tiles[i].get_dict()
 
 	return new_dict

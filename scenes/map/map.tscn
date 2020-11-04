@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/maujoe.basic_water_material/materials/basic_water_material.material" type="Material" id=1]
 [ext_resource path="res://scenes/ui/tile_box.tscn" type="PackedScene" id=3]
@@ -9,6 +9,22 @@
 [sub_resource type="PlaneMesh" id=1]
 material = ExtResource( 1 )
 size = Vector2( 1000, 1000 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "uv_waves"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:mesh:material:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 1, 0, 0 ) ]
+}
 
 [node name="map" type="Spatial"]
 script = ExtResource( 4 )
@@ -43,7 +59,7 @@ camera_space_size = 328
 environment = ExtResource( 12 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.853553, 0.146447, 0.5, -0.5, 0.5, 0.707106, -0.146447, -0.853553, 0.5, 24.8979, 28.6066, 1.54649 )
+transform = Transform( 0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, 24.8979, 28.6066, 1.54649 )
 light_energy = 1.5
 shadow_enabled = true
 shadow_bias = 0.0
@@ -54,3 +70,8 @@ directional_shadow_normal_bias = 0.7
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 mesh = SubResource( 1 )
 material/0 = null
+
+[node name="water_animation" type="AnimationPlayer" parent="water"]
+autoplay = "uv_waves"
+playback_speed = 0.05
+anims/uv_waves = SubResource( 2 )

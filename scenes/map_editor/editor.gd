@@ -18,6 +18,8 @@ func _ready():
 	self.rotations.build_rotations(self.map.templates, self.map.builder)
 
 	self.select_tile(self.map.templates.GROUND_GRASS, self.map.builder.CLASS_GROUND)
+
+	self.map.loader.load_map_file(self.AUTOSAVE_FILE)
 	
 
 func _physics_process(_delta):
@@ -70,8 +72,11 @@ func place_tile():
 	if self.selected_class == self.map.builder.CLASS_UNIT:
 		self.map.builder.place_unit(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
 
+	self.map.loader.save_map_file(self.AUTOSAVE_FILE)
+
 func clear_tile():
 	self.map.builder.clear_tile_layer(self.map.camera_tile_position)
+	self.map.loader.save_map_file(self.AUTOSAVE_FILE)
 
 func refresh_tile():
 	self.select_tile(self.selected_tile, self.selected_class)
@@ -81,9 +86,18 @@ func select_tile(name, type):
 	self.selected_class = type
 
 	var rotation_map = self.rotations.get_map(name, type)
+	var type_map = self.rotations.get_type_map(self.selected_class)
+	var first_tile
+
 	self.ui.set_tile_prev(self.map.templates.get_template(rotation_map["prev"]), self.tile_rotation)
 	self.ui.set_tile_current(self.map.templates.get_template(name), self.tile_rotation)
 	self.ui.set_tile_next(self.map.templates.get_template(rotation_map["next"]), self.tile_rotation)
+
+	first_tile = self.rotations.get_first_tile(type_map["prev"])
+	self.ui.set_type_prev(self.map.templates.get_template(first_tile), self.tile_rotation)
+	first_tile = self.rotations.get_first_tile(type_map["next"])
+	self.ui.set_type_next(self.map.templates.get_template(first_tile), self.tile_rotation)
+	
 
 func switch_to_prev_tile():
 	var rotation_map = self.rotations.get_map(self.selected_tile, self.selected_class)

@@ -4,10 +4,23 @@
 [ext_resource path="res://scenes/map_editor/tile_cam.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/map_editor/tile_view.gd" type="Script" id=3]
 
-[node name="screen" type="Sprite"]
+[node name="tile_view" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="screen" type="Sprite" parent="."]
+position = Vector2( 0, 10 )
 texture = ExtResource( 1 )
 flip_v = true
-script = ExtResource( 3 )
 
 [node name="Viewport" type="Viewport" parent="."]
 size = Vector2( 200, 200 )

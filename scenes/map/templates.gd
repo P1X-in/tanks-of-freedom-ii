@@ -153,4 +153,7 @@ var templates = {
 }
 
 func get_template(template):
-	return self.templates[template].instance()
+	var new_tile = self.templates[template].instance()
+	new_tile.template_name = template
+
+	return new_tile

@@ -48,8 +48,6 @@ func build_rotations(templates, builder):
 	])
 
 	self.rotations[builder.CLASS_TERRAIN] = self.build_from_array([
-		templates.DECO_FOUNTAIN,
-		templates.DECO_STATUE,
 		templates.CITY_BUILDING_BIG1,
 		templates.CITY_BUILDING_BIG2,
 		templates.CITY_BUILDING_BIG3,
@@ -60,6 +58,8 @@ func build_rotations(templates, builder):
 		templates.CITY_BUILDING_SMALL4,
 		templates.CITY_BUILDING_SMALL5,
 		templates.CITY_BUILDING_SMALL6,
+		templates.DECO_FOUNTAIN,
+		templates.DECO_STATUE,
 		templates.CITY_BRIDGE,
 		templates.NATURE_BIG_ROCKS1,
 		templates.NATURE_BIG_ROCKS2,
@@ -73,10 +73,10 @@ func build_rotations(templates, builder):
 	])
 
 	self.rotations[builder.CLASS_BUILDING] = self.build_from_array([
+		templates.MODERN_HQ,
 		templates.MODERN_AIRFIELD,
 		templates.MODERN_BARRACKS,
 		templates.MODERN_FACTORY,
-		templates.MODERN_HQ,
 		templates.MODERN_TOWER,
 	])
 

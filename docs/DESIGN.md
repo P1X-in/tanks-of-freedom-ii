@@ -292,6 +292,26 @@ Units can level up when they destroy enemies. Each level grants bonuses:
 2. Increased armor
 3. Access to active ability
 
+### Heroes
+
+In addition to regular units, each side has access to two hero units. A hero unit is more powerful, and more expensive, than a regular unit. These units can be deployed from HQ for a significant cost. In battle, there can be only one hero on each side, with additional ones available for cutscenes, but not in gameplay.
+
+#### Powers
+
+Each hero has access to two abilities: one passive and one active.
+- Passive ability works as long as the hero is on the field. It could work globally, or be limited to a certain range.
+- Active ability could either have to be loaded, or have a cooldown. It could also cost Action Points to use.
+
+Each hero and their powers are in TBD state for now.
+
+An example of possible powers:
+- Nearby units can retaliate twice
+- Tanks can retaliate on flying units, for greatly reduced damage.
+- Units can retaliate even without AP
+- Units have +X movement
+- Units deal +X damage
+- Units receive -X damage
+
 ### Buildings
 
 Each side will use the same buildings to gain resources and deploy units. Buildings have different styles that reflect the style of nation that built it. Buildings will not change style depending on controlling nation, being fixed for a particular map instead.
