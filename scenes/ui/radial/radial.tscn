@@ -1,0 +1,131 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/ui/radial/field.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/ui/radial/radial.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[node name="radial" type="Node2D"]
+visible = false
+scale = Vector2( 1e-05, 1e-05 )
+script = ExtResource( 2 )
+
+[node name="fields" type="Node2D" parent="."]
+
+[node name="field1" parent="fields" instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 0, -200 )
+
+[node name="field2" parent="fields" instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 140, -140 )
+
+[node name="field3" parent="fields" instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 200, 0 )
+
+[node name="field4" parent="fields" instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 140, 140 )
+
+[node name="field5" parent="fields" instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 0, 200 )
+
+[node name="field6" parent="fields" instance=ExtResource( 1 )]
+visible = false
+position = Vector2( -140, 140 )
+
+[node name="field7" parent="fields" instance=ExtResource( 1 )]
+visible = false
+position = Vector2( -200, 0 )
+
+[node name="field8" parent="fields" instance=ExtResource( 1 )]
+visible = false
+position = Vector2( -140, -140 )
+
+[node name="label" type="Node2D" parent="."]
+visible = false
+
+[node name="background" type="ColorRect" parent="label"]
+margin_left = -100.0
+margin_top = -50.0
+margin_right = 100.0
+margin_bottom = 50.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="label"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -50.0
+margin_right = 100.0
+margin_bottom = 50.0
+text = "Lorem Ipsum"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="animations" type="AnimationPlayer" parent="."]
+playback_speed = 4.0
+anims/hide = SubResource( 1 )
+anims/show = SubResource( 2 )

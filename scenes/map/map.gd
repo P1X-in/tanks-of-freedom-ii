@@ -3,8 +3,8 @@ extends Spatial
 const TILE_SIZE = 8
 const GROUND_HEIGHT = 4
 
-var tile_box
-var camera
+onready var tile_box = $"tiles/tile_box"
+onready var camera = $"camera"
 
 var tile_box_space_size
 var camera_tile_position = Vector2(0, 0)
@@ -14,22 +14,13 @@ var model = preload("res://scenes/map/model.gd").new()
 var builder = preload("res://scenes/map/builder.gd").new(self)
 var loader = preload("res://scenes/map/loader.gd").new(self)
 
-var tiles_ground_anchor
-var tiles_frames_anchor
-var tiles_terrain_anchor
-var tiles_buildings_anchor
-var tiles_units_anchor
+onready var tiles_ground_anchor = $"tiles/ground"
+onready var tiles_frames_anchor = $"tiles/frames"
+onready var tiles_terrain_anchor = $"tiles/terrain"
+onready var tiles_buildings_anchor = $"tiles/buildings"
+onready var tiles_units_anchor = $"tiles/units"
 
 func _ready():
-	self.tile_box = $"tiles/tile_box"
-	self.camera = $"camera"
-
-	self.tiles_ground_anchor = $"tiles/ground"
-	self.tiles_frames_anchor = $"tiles/frames"
-	self.tiles_terrain_anchor = $"tiles/terrain"
-	self.tiles_buildings_anchor = $"tiles/buildings"
-	self.tiles_units_anchor = $"tiles/units"
-
 	self.tile_box_space_size = self.camera.camera_space_size - self.TILE_SIZE
 
 

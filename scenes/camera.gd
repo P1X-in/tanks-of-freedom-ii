@@ -53,6 +53,8 @@ var _tof_camera_distance = 0
 var aw_camera_distance = 0
 var _aw_camera_distance = 0
 
+var paused = false
+
 func _ready():
 	self.camera_pivot = $"pivot"
 	self.camera_arm = $"pivot/arm"
@@ -81,10 +83,16 @@ func _ready():
 	_aw_camera_distance = rotation.z
 
 func _input(event):
+	if self.paused:
+		return
+
 	if event.is_action_pressed("switch_camera"):
 		self.switch_camera()
 
 func _process(_delta):
+	if self.paused:
+		return
+
 	if camera_angle_y != _camera_angle_y:
 		_camera_angle_y = camera_angle_y
 
@@ -114,6 +122,9 @@ func _process(_delta):
 
 
 func _physics_process(delta):
+	if self.paused:
+		return
+		
 	self.process_free_camera_input(delta)
 	self.process_tof_camera_input(delta)
 	self.process_aw_camera_input(delta)

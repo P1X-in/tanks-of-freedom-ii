@@ -1,21 +1,16 @@
 extends Control
 
-var position_label
+onready var radial = $"radial/radial"
+onready var position_label = $"position/label"
 
-var tile_prev
-var tile_current
-var tile_next
-var type_prev
-var type_next
+onready var tile_anchor = $"tile"
+onready var tile_prev = $"tile/tile_view_prev"
+onready var tile_current = $"tile/tile_view_current"
+onready var tile_next = $"tile/tile_view_next"
+onready var type_prev = $"tile/tile_type_prev"
+onready var type_next = $"tile/tile_type_next"
 
-func _ready():
-	self.position_label = $"position/label"
-
-	self.tile_prev = $"tile/tile_view_prev"
-	self.tile_current = $"tile/tile_view_current"
-	self.tile_next = $"tile/tile_view_next"
-	self.type_prev = $"tile/tile_type_prev"
-	self.type_next = $"tile/tile_type_next"
+var icons = preload("res://scenes/ui/icons/icons.gd").new()
 
 func update_position(x, y):
 	self.position_label.set_text("[" + str(x) + ", " + str(y) + "]")
@@ -34,3 +29,23 @@ func set_type_prev(tile, rotation):
 
 func set_type_next(tile, rotation):
 	self.type_next.set_tile(tile, rotation)
+
+func toggle_radial():
+	if self.radial.is_visible():
+		self.hide_radial()
+		self.tile_anchor.show()
+	else:
+		self.show_radial()
+		self.tile_anchor.hide()
+
+func show_radial():
+	self.radial.show_menu()
+
+func hide_radial():
+	self.radial.hide_menu()
+
+func is_panel_open():
+	if self.radial.is_visible():
+		return true
+
+	return false
