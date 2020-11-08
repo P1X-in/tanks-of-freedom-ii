@@ -3,36 +3,25 @@ const PATH = "user://"
 const EXTENSION = ".tofmap.json"
 
 var map
+var filesystem = preload("res://scripts/services/filesystem.gd").new()
 
 func _init(map_scene):
     self.map = map_scene
 
 func save_map_file(filename):
-    var content = JSON.print(self.map.model.get_dict(), "", true)
-    self.save_to_file(filename, content)
+    self.save_to_file(filename, self.map.model.get_dict())
 
 func save_to_file(filename, content):
-    var file = File.new()
-    file.open(self.PATH + filename + self.EXTENSION, File.WRITE)
-    file.store_string(content)
-    file.close()
+    var filepath = self.PATH + filename + self.EXTENSION
+    self.filesystem.write_data_as_json_to_file(filepath, content)
 
 func load_map_file(filename):
     var filepath = self.PATH + filename + self.EXTENSION
-    var file = File.new()
 
-    if not file.file_exists(filepath):
+    if not self.filesystem.file_exists(filepath):
         return
 
-    file.open(filepath, File.READ)
-    var content = file.get_as_text()
-    file.close()
-
-    self.build_map_from_string(content)
-    
-func build_map_from_string(string_data):
-    var json_result = JSON.parse(string_data)
-
-    if json_result.error == OK:
-        self.map.builder.fill_map_from_data(json_result.result)
+    var content = self.filesystem.read_json_from_file(filepath)
+    self.map.builder.wipe_map()
+    self.map.builder.fill_map_from_data(content)
 

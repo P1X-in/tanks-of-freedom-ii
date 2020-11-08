@@ -38,3 +38,11 @@ func get_dict():
 		"building" : self.building.get_dict(),
 		"unit" : self.unit.get_dict(),
 	}
+
+func wipe():
+    self.unit.clear()
+    self.building.clear()
+    self.terrain.clear()
+    self.decoration.clear()
+    self.frame.clear()
+    self.ground.clear()

@@ -59,5 +59,3 @@ func execute_bound_method():
             self.bound_object.call_deferred(self.bound_method, self.bound_args)
         else:
             self.bound_object.call_deferred(self.bound_method)
-
-    print("executing")

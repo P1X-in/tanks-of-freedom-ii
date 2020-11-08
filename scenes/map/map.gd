@@ -21,42 +21,42 @@ onready var tiles_buildings_anchor = $"tiles/buildings"
 onready var tiles_units_anchor = $"tiles/units"
 
 func _ready():
-	self.tile_box_space_size = self.camera.camera_space_size - self.TILE_SIZE
+    self.tile_box_space_size = self.camera.camera_space_size - self.TILE_SIZE
 
 
 func _physics_process(_delta):
-	self.update_camera_tile_position()
-	self.snap_tile_box()
+    self.update_camera_tile_position()
+    self.snap_tile_box()
 
 
 func update_camera_tile_position():
-	self.camera_tile_position = self.world_to_map(self.camera.get_translation())
+    self.camera_tile_position = self.world_to_map(self.camera.get_translation())
 
 
 func snap_tile_box():
-	var position = self.tile_box.get_translation()
-	var placement = self.map_to_world(self.camera_tile_position)
+    var position = self.tile_box.get_translation()
+    var placement = self.map_to_world(self.camera_tile_position)
 
-	placement.y = position.y
+    placement.y = position.y
 
-	self.tile_box.set_translation(placement)
+    self.tile_box.set_translation(placement)
 
 func map_to_world(position):
-	return Vector3(position.x * self.TILE_SIZE, 0, position.y * self.TILE_SIZE)
+    return Vector3(position.x * self.TILE_SIZE, 0, position.y * self.TILE_SIZE)
 
 func world_to_map(position):
-	var tile_position = Vector2(0, 0)
+    var tile_position = Vector2(0, 0)
 
-	if position.x == self.camera.camera_space_size:
-		position.x = self.tile_box_space_size
-	if position.z == self.camera.camera_space_size:
-		position.z = self.tile_box_space_size
+    if position.x == self.camera.camera_space_size:
+        position.x = self.tile_box_space_size
+    if position.z == self.camera.camera_space_size:
+        position.z = self.tile_box_space_size
 
-	var camera_position_x = int(position.x)
-	var camera_position_z = int(position.z)
+    var camera_position_x = int(position.x)
+    var camera_position_z = int(position.z)
 
-	tile_position.x = (camera_position_x - (camera_position_x % self.TILE_SIZE)) / self.TILE_SIZE
-	tile_position.y = (camera_position_z - (camera_position_z % self.TILE_SIZE)) / self.TILE_SIZE
+    tile_position.x = (camera_position_x - (camera_position_x % self.TILE_SIZE)) / self.TILE_SIZE
+    tile_position.y = (camera_position_z - (camera_position_z % self.TILE_SIZE)) / self.TILE_SIZE
 
-	return tile_position
+    return tile_position
 

@@ -1,8 +1,65 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/map_editor/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/map_editor/tile_view.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/ui/radial/radial.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/ui/map_picker/picker.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("wrapper:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("wrapper:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("wrapper:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("wrapper:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
 
 [node name="ui" type="Control"]
 anchor_right = 1.0
@@ -13,6 +70,7 @@ __meta__ = {
 }
 
 [node name="position" type="MarginContainer" parent="."]
+visible = false
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -54.0
@@ -35,6 +93,44 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="map_name" type="MarginContainer" parent="."]
+visible = false
+margin_right = 72.0
+margin_bottom = 54.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="map_name"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 62.0
+margin_bottom = 44.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+
+[node name="inner" type="MarginContainer" parent="map_name"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 62.0
+margin_bottom = 44.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 0
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 0
+
+[node name="label" type="Label" parent="map_name/inner"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 47.0
+margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="tile" type="MarginContainer" parent="."]
 anchor_left = 1.0
 anchor_top = 1.0
@@ -52,28 +148,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="tile_view_prev" parent="tile" instance=ExtResource( 2 )]
+[node name="wrapper" type="Node2D" parent="tile"]
+position = Vector2( 100, 100 )
+
+[node name="tile_view_prev" parent="tile/wrapper" instance=ExtResource( 2 )]
+position = Vector2( -100, -30 )
+viewport_size = 40
+is_side_tile = true
+
+[node name="tile_type_next" parent="tile/wrapper" instance=ExtResource( 2 )]
+position = Vector2( 0, -130 )
+viewport_size = 40
+is_side_tile = true
+
+[node name="tile_type_prev" parent="tile/wrapper" instance=ExtResource( 2 )]
 position = Vector2( 0, 70 )
 viewport_size = 40
 is_side_tile = true
 
-[node name="tile_type_next" parent="tile" instance=ExtResource( 2 )]
+[node name="tile_view_next" parent="tile/wrapper" instance=ExtResource( 2 )]
 position = Vector2( 100, -30 )
 viewport_size = 40
 is_side_tile = true
 
-[node name="tile_type_prev" parent="tile" instance=ExtResource( 2 )]
-position = Vector2( 100, 170 )
-viewport_size = 40
-is_side_tile = true
+[node name="tile_view_current" parent="tile/wrapper" instance=ExtResource( 2 )]
+position = Vector2( 0, -30 )
 
-[node name="tile_view_next" parent="tile" instance=ExtResource( 2 )]
-position = Vector2( 200, 70 )
-viewport_size = 40
-is_side_tile = true
-
-[node name="tile_view_current" parent="tile" instance=ExtResource( 2 )]
-position = Vector2( 100, 70 )
+[node name="animations" type="AnimationPlayer" parent="tile"]
+playback_speed = 4.0
+anims/hide = SubResource( 1 )
+anims/show = SubResource( 2 )
 
 [node name="radial" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -86,3 +190,18 @@ margin_right = 20.0
 margin_bottom = 20.0
 
 [node name="radial" parent="radial" instance=ExtResource( 3 )]
+
+[node name="picker" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="picker" parent="picker" instance=ExtResource( 4 )]

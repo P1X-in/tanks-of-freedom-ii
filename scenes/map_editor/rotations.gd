@@ -1,6 +1,7 @@
 
 var rotations = {}
 var types = {}
+var players = {}
 var stored_state = {}
 
 func build_rotations(templates, builder):
@@ -99,6 +100,14 @@ func build_rotations(templates, builder):
 		builder.CLASS_UNIT,
 	])
 
+	self.players = self.build_from_array([
+		templates.PLAYER_NEUTRAL,
+		templates.PLAYER_BLUE,
+		templates.PLAYER_RED,
+		templates.PLAYER_GREEN,
+		templates.PLAYER_YELLOW,
+	])
+
 
 func get_map(name, type):
 	return self.rotations[type][name]
@@ -109,7 +118,7 @@ func get_type_map(type):
 func get_first_tile(type):
 	if self.stored_state.has(type):
 		return self.stored_state[type]
-		
+
 	return self.rotations[type].keys()[0]
 
 func build_from_array(names):

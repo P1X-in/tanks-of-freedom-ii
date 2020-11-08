@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/ui/radial/field.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ui/radial/radial.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hide"
@@ -118,6 +119,7 @@ margin_left = -100.0
 margin_top = -50.0
 margin_right = 100.0
 margin_bottom = 50.0
+custom_fonts/font = ExtResource( 3 )
 text = "Lorem Ipsum"
 align = 1
 valign = 1

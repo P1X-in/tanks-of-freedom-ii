@@ -75,6 +75,13 @@ const UNIT_BLUE_ROCKET = "blue_rocket"
 const UNIT_BLUE_SCOUT = "blue_scout"
 
 
+const PLAYER_NEUTRAL = "neutral"
+const PLAYER_BLUE = "blue"
+const PLAYER_RED = "red"
+const PLAYER_GREEN = "green"
+const PLAYER_YELLOW = "yellow"
+
+
 var templates = {
 	self.GROUND_GRASS : preload("res://scenes/tiles/ground/grass.tscn"),
 	self.GROUND_CONCRETE : preload("res://scenes/tiles/ground/concrete.tscn"),

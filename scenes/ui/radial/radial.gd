@@ -56,8 +56,8 @@ func hide_menu():
     self.set_process_input(false)
     self.unfocus_field()
 
-func set_field(icon, new_label, index):
-    self.fields[index].set_field(icon, new_label)
+func set_field(icon, new_label, index, new_bound_object=null, new_bound_method=null, new_bound_args=[]):
+    self.fields[index].set_field(icon, new_label, new_bound_object, new_bound_method, new_bound_args)
 
 func focus_field(index):
     if index >= self.fields.size():

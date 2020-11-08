@@ -4,12 +4,15 @@ const AUTOSAVE_FILE = "__autosave__"
 
 onready var map = $"map"
 onready var ui = $"ui"
+onready var map_list_service = $"/root/MapList"
 
 var rotations = preload("res://scenes/map_editor/rotations.gd").new()
 
 var tile_rotation = 0
 var selected_tile = "ground_grass"
 var selected_class = "ground"
+
+var current_map_name = ""
 
 func _ready():
     self.rotations.build_rotations(self.map.templates, self.map.builder)
@@ -31,7 +34,7 @@ func _input(event):
         if event.is_action_pressed("ui_accept"):
             self.place_tile()
 
-        if event.is_action_pressed("ui_cancel"):
+        if event.is_action_pressed("editor_clear"):
             self.clear_tile()
 
         if event.is_action_pressed("ui_left"):
@@ -53,13 +56,16 @@ func _input(event):
         if event.is_action_pressed("rotate_ccw"):
             self.rotate_ccw()
             self.refresh_tile()
+
+        if event.is_action_pressed("editor_menu"):
+            self.toggle_radial_menu()
     else:
-        if self.ui.radial.is_visible():
+        if self.ui.radial.is_visible() and not self.ui.is_popup_open():
             if event.is_action_pressed("ui_cancel"):
                 self.toggle_radial_menu()
 
-    if event.is_action_pressed("editor_menu"):
-        self.toggle_radial_menu()
+            if event.is_action_pressed("editor_menu"):
+                self.toggle_radial_menu()
         
 
 func place_tile():
@@ -142,7 +148,39 @@ func toggle_radial_menu():
     self.map.tile_box.set_visible(not self.map.tile_box.is_visible())
 
 func setup_radial_menu():
-    self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save map", 6)
-    self.ui.radial.set_field(self.ui.icons.disk.instance(), "Load map", 2)
-    self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 4)
-    
+    self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load map", 2, self, "open_picker")
+    self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6)
+
+
+func handle_picker_output(args):
+    var map_name = args[0]
+    var context = args[1]
+
+    if context == "save":
+        self.map.loader.save_map_file(map_name)
+        self.map_list_service.add_map_to_list(map_name)
+    elif context == "load":
+        self.map.loader.load_map_file(map_name)
+        
+    self.close_picker()
+    self.set_map_name(map_name)
+
+
+func set_map_name(map_name):
+    self.current_map_name = map_name
+    self.ui.set_map_name(map_name)
+
+func open_picker():
+    self.ui.hide_radial()
+    self.ui.show_picker()
+
+    self.ui.picker.bind_cancel(self, "close_picker")
+    self.ui.picker.bind_success(self, "handle_picker_output")
+    self.ui.picker.set_name_mode()
+    self.ui.set_map_name(self.current_map_name)
+
+func close_picker():
+    self.ui.hide_picker()
+    self.map.camera.paused = false
+    self.map.tile_box.set_visible(true)
+    self.ui.show_tiles()
