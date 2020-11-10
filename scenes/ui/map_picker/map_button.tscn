@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/ui/map_picker/map_button.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/gui/picker/picker_position_focused.png" type="Texture" id=3]
+[ext_resource path="res://assets/gui/picker/picker_position_pressed.png" type="Texture" id=4]
+
+[node name="map0" type="TextureButton"]
+visible = false
+margin_right = 650.0
+margin_bottom = 50.0
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+texture_focused = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 2 )
+text = "some map name"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]

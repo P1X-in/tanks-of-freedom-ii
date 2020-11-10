@@ -11,10 +11,25 @@ onready var name_group = $"widgets/name"
 onready var map_name_field = $"widgets/name/map_name"
 onready var save_button = $"widgets/name/save_button"
 onready var load_button = $"widgets/name/load_button"
-
 onready var cancel_button = $"widgets/cancel_button"
+onready var next_button = $"widgets/list_next"
+onready var prev_button = $"widgets/list_prev"
 
 onready var map_list_service = $"/root/MapList"
+
+onready var map_selection_buttons = [
+    $"widgets/map_list/map0",
+    $"widgets/map_list/map1",
+    $"widgets/map_list/map2",
+    $"widgets/map_list/map3",
+    $"widgets/map_list/map4",
+    $"widgets/map_list/map5",
+    $"widgets/map_list/map6",
+    $"widgets/map_list/map7",
+    $"widgets/map_list/map8",
+    $"widgets/map_list/map9",
+]
+onready var minimap = $"widgets/minimap"
 
 
 var bound_success_object = null
@@ -100,7 +115,15 @@ func execute_cancel():
 func show_picker():
     self.animations.play("show")
     self.set_process_input(true)
-    self.save_button.grab_focus()
+
+    self.refresh_current_maps_page()
+    if self.map_selection_buttons[0].is_visible():
+        self.map_selection_buttons[0].grab_focus()
+    elif self.name_group.is_visible():
+        self.save_button.grab_focus()
+    else:
+        self.cancel_button.grab_focus()
+
 
 func hide_picker():
     self.animations.play("hide")
@@ -109,9 +132,74 @@ func hide_picker():
 func set_map_name(name):
     self.map_name_field.set_text(name)
 
+func refresh_current_maps_page():
+    var pages_count = self.map_list_service.get_pages_count(self.PAGE_SIZE)
+
+    if self.current_page == 0 || pages_count < 2:
+        self.prev_button.hide()
+    elif self.current_page > 0:
+        self.prev_button.show()
+        
+
+    if self.current_page == pages_count - 1 || pages_count < 2:
+        self.next_button.hide()
+    elif self.current_page < pages_count - 1:
+        self.next_button.show()
+
+    for map_button in self.map_selection_buttons:
+        map_button.hide()
+
+    var maps_page = self.map_list_service.get_maps_page(self.current_page, self.PAGE_SIZE)
+    var map_details
+        
+    for index in range(maps_page.size()):
+        map_details = self.map_list_service.get_map_details(maps_page[index])
+        self.map_selection_buttons[index].fill_data(map_details["name"], map_details["online_id"])
+        self.map_selection_buttons[index].show()
+
+func switch_to_prev_page():
+    if self.current_page > 0:
+        self.current_page -= 1
+
+    self.refresh_current_maps_page()
+
+    if self.current_page == 0:
+        if self.next_button.is_visible():
+            self.next_button.grab_focus()
+
+
+func switch_to_next_page():
+    var pages_count = self.map_list_service.get_pages_count(self.PAGE_SIZE)
+
+    if self.current_page < pages_count - 1:
+        self.current_page += 1
+
+    self.refresh_current_maps_page()
+
+    if self.current_page == pages_count - 1:
+        if self.prev_button.is_visible():
+            self.prev_button.grab_focus()
+
+
+func map_button_pressed(name):
+    if self.operation_mode == self.MODE_NAME:
+        self.set_map_name(name)
+        self.load_button.grab_focus()
+    elif self.operation_mode == self.MODE_SELECT:
+        self.execute_success(name, "select")
+
+func map_button_focused(name):
+    minimap.fill_minimap(name)
 
 func connect_buttons():
     self.cancel_button.connect("pressed", self, "execute_cancel")
 
     self.save_button.connect("pressed", self, "execute_save")
     self.load_button.connect("pressed", self, "execute_load")
+
+    self.next_button.connect("pressed", self, "switch_to_next_page")
+    self.prev_button.connect("pressed", self, "switch_to_prev_page")
+
+    for button in self.map_selection_buttons:
+        button.bind_method(self, "map_button_pressed")
+        button.bind_focus(self, "map_button_focused")

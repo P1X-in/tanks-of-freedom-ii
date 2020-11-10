@@ -149,7 +149,8 @@ func toggle_radial_menu():
 
 func setup_radial_menu():
     self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load map", 2, self, "open_picker")
-    self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6)
+    self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, get_tree(), "quit")
+    self.ui.radial.set_field(self.ui.icons.trash.instance(), "Clear editor", 4, self, "wipe_editor")
 
 
 func handle_picker_output(args):
@@ -184,3 +185,8 @@ func close_picker():
     self.map.camera.paused = false
     self.map.tile_box.set_visible(true)
     self.ui.show_tiles()
+
+func wipe_editor():
+    self.toggle_radial_menu()
+    self.ui.set_map_name("")
+    self.map.builder.wipe_map()
