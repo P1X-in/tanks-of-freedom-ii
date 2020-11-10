@@ -68,6 +68,8 @@ Team Yellow factions, fighting a civil war, go beyond their borders and start at
 
 The game is about deception, political agendas and freedom. None of the factions are purely good or bad. Story has to decieve the player into thinking, that certain factions and characters are definately bad, and then subvert their expectations. Some light-hearthed banter between characters and cartoony approach should be used.
 
+On the other hand, ff game is to be targeted at AW audience, story should be more humorus and light-hearted.
+
 
 ## Story Progression
 
@@ -311,6 +313,9 @@ An example of possible powers:
 - Units have +X movement
 - Units deal +X damage
 - Units receive -X damage
+- Call an airstrike within X tiles
+- Drop a paratrooper (Infantry unit) nearby
+- Replenish movement points of a unit
 
 ### Buildings
 
