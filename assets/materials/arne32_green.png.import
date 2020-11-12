@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/tile_box.png-958961646041e785694d0618fd8afeb0.s3tc.stex"
-path.etc2="res://.import/tile_box.png-958961646041e785694d0618fd8afeb0.etc2.stex"
+path.s3tc="res://.import/arne32_green.png-c35a6023c364bfe62ba5b4d3db611ece.s3tc.stex"
+path.etc2="res://.import/arne32_green.png-c35a6023c364bfe62ba5b4d3db611ece.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,14 +11,14 @@ metadata={
 
 [deps]
 
-source_file="res://assets/tile_box.png"
-dest_files=[ "res://.import/tile_box.png-958961646041e785694d0618fd8afeb0.s3tc.stex", "res://.import/tile_box.png-958961646041e785694d0618fd8afeb0.etc2.stex" ]
+source_file="res://assets/materials/arne32_green.png"
+dest_files=[ "res://.import/arne32_green.png-c35a6023c364bfe62ba5b4d3db611ece.s3tc.stex", "res://.import/arne32_green.png-c35a6023c364bfe62ba5b4d3db611ece.etc2.stex" ]
 
 [params]
 
 compress/mode=2
 compress/lossy_quality=0.7
-compress/hdr_mode=0
+compress/hdr_mode=1
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true

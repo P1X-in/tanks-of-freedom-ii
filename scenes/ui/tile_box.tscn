@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/arne32.tres" type="Material" id=1]
-[ext_resource path="res://assets/tile_box.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://assets/materials/arne32_neutral.tres" type="Material" id=1]
+[ext_resource path="res://assets/gui/tile_box.obj" type="ArrayMesh" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "bob"

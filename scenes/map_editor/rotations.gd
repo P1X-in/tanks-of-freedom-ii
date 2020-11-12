@@ -89,6 +89,8 @@ func build_rotations(templates, builder):
 		templates.UNIT_BLUE_MINF,
 		templates.UNIT_BLUE_ROCKET,
 		templates.UNIT_BLUE_SCOUT,
+		templates.UNIT_RED_INFANTRY,
+		templates.UNIT_RED_TANK,
 	])
 
 	self.types = self.build_from_array([
@@ -114,6 +116,9 @@ func get_map(name, type):
 
 func get_type_map(type):
 	return self.types[type]
+
+func get_player_map(player):
+	return self.players[player]
 
 func get_first_tile(type):
 	if self.stored_state.has(type):

@@ -85,6 +85,10 @@ func get_map_data(map_name):
 
     return map_data
 
+func remove_from_cache(map_name):
+    if self.cache.has(map_name):
+        self.cache.erase(map_name)
+
 func set_cell_from_data(x, y, data):
     if data == null:
         self.set_cell(x, y, self.TILE_WATER)

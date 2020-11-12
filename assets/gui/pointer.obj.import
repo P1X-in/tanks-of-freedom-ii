@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pointer.obj-6fbf078ab9ba3d94c10d3a9cc50e095f.mesh"
+
+[deps]
+
+files=[ "res://.import/pointer.obj-6fbf078ab9ba3d94c10d3a9cc50e095f.mesh" ]
+
+source_file="res://assets/gui/pointer.obj"
+dest_files=[ "res://.import/pointer.obj-6fbf078ab9ba3d94c10d3a9cc50e095f.mesh", "res://.import/pointer.obj-6fbf078ab9ba3d94c10d3a9cc50e095f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -74,6 +74,9 @@ const UNIT_BLUE_MINF = "blue_m_inf"
 const UNIT_BLUE_ROCKET = "blue_rocket"
 const UNIT_BLUE_SCOUT = "blue_scout"
 
+const UNIT_RED_INFANTRY = "red_infantry"
+const UNIT_RED_TANK = "red_tank"
+
 
 const PLAYER_NEUTRAL = "neutral"
 const PLAYER_BLUE = "blue"
@@ -83,84 +86,98 @@ const PLAYER_YELLOW = "yellow"
 
 
 var templates = {
-	self.GROUND_GRASS : preload("res://scenes/tiles/ground/grass.tscn"),
-	self.GROUND_CONCRETE : preload("res://scenes/tiles/ground/concrete.tscn"),
-	self.GROUND_RIVER1 : preload("res://scenes/tiles/ground/river1.tscn"),
-	self.GROUND_RIVER2 : preload("res://scenes/tiles/ground/river2.tscn"),
-	self.GROUND_ROAD1 : preload("res://scenes/tiles/ground/road1.tscn"),
-	self.GROUND_ROAD2 : preload("res://scenes/tiles/ground/road2.tscn"),
-	self.GROUND_ROAD3 : preload("res://scenes/tiles/ground/road3.tscn"),
-	self.GROUND_ROAD4 : preload("res://scenes/tiles/ground/road4.tscn"),
-	self.GROUND_DIRT_ROAD1 : preload("res://scenes/tiles/ground/dirt_road1.tscn"),
-	self.GROUND_DIRT_ROAD2 : preload("res://scenes/tiles/ground/dirt_road2.tscn"),
-	self.GROUND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/dirt_road3.tscn"),
-	self.GROUND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/dirt_road4.tscn"),
+    self.GROUND_GRASS : preload("res://scenes/tiles/ground/grass.tscn"),
+    self.GROUND_CONCRETE : preload("res://scenes/tiles/ground/concrete.tscn"),
+    self.GROUND_RIVER1 : preload("res://scenes/tiles/ground/river1.tscn"),
+    self.GROUND_RIVER2 : preload("res://scenes/tiles/ground/river2.tscn"),
+    self.GROUND_ROAD1 : preload("res://scenes/tiles/ground/road1.tscn"),
+    self.GROUND_ROAD2 : preload("res://scenes/tiles/ground/road2.tscn"),
+    self.GROUND_ROAD3 : preload("res://scenes/tiles/ground/road3.tscn"),
+    self.GROUND_ROAD4 : preload("res://scenes/tiles/ground/road4.tscn"),
+    self.GROUND_DIRT_ROAD1 : preload("res://scenes/tiles/ground/dirt_road1.tscn"),
+    self.GROUND_DIRT_ROAD2 : preload("res://scenes/tiles/ground/dirt_road2.tscn"),
+    self.GROUND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/dirt_road3.tscn"),
+    self.GROUND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/dirt_road4.tscn"),
 
-	self.FRAME_GRASS1 : preload("res://scenes/tiles/frames/grass_1_overtile.tscn"),
-	self.FRAME_GRASS2 : preload("res://scenes/tiles/frames/grass_2_overtile.tscn"),
-	self.FRAME_GRASS3 : preload("res://scenes/tiles/frames/grass_3_overtile.tscn"),
-	self.FRAME_GRASS4 : preload("res://scenes/tiles/frames/grass_4_overtile.tscn"),
-	self.FRAME_RIVER1 : preload("res://scenes/tiles/frames/river_plants_1_overtile.tscn"),
-	self.FRAME_RIVER2 : preload("res://scenes/tiles/frames/river_plants_2_overtile.tscn"),
-	self.FRAME_RIVER3 : preload("res://scenes/tiles/frames/river_plants_3_overtile.tscn"),
-	self.FRAME_RIVER4 : preload("res://scenes/tiles/frames/river_plants_4_overtile.tscn"),
-	self.FRAME_ROAD1 : preload("res://scenes/tiles/frames/road_1_overtile.tscn"),
-	self.FRAME_ROAD2 : preload("res://scenes/tiles/frames/road_2_overtile.tscn"),
-	self.FRAME_ROAD3 : preload("res://scenes/tiles/frames/road_3_overtile.tscn"),
-	self.FRAME_ROAD4 : preload("res://scenes/tiles/frames/road_4_overtile.tscn"),
-	self.FRAME_FENCE : preload("res://scenes/tiles/frames/wired_fence_overtile.tscn"),
+    self.FRAME_GRASS1 : preload("res://scenes/tiles/frames/grass_1_overtile.tscn"),
+    self.FRAME_GRASS2 : preload("res://scenes/tiles/frames/grass_2_overtile.tscn"),
+    self.FRAME_GRASS3 : preload("res://scenes/tiles/frames/grass_3_overtile.tscn"),
+    self.FRAME_GRASS4 : preload("res://scenes/tiles/frames/grass_4_overtile.tscn"),
+    self.FRAME_RIVER1 : preload("res://scenes/tiles/frames/river_plants_1_overtile.tscn"),
+    self.FRAME_RIVER2 : preload("res://scenes/tiles/frames/river_plants_2_overtile.tscn"),
+    self.FRAME_RIVER3 : preload("res://scenes/tiles/frames/river_plants_3_overtile.tscn"),
+    self.FRAME_RIVER4 : preload("res://scenes/tiles/frames/river_plants_4_overtile.tscn"),
+    self.FRAME_ROAD1 : preload("res://scenes/tiles/frames/road_1_overtile.tscn"),
+    self.FRAME_ROAD2 : preload("res://scenes/tiles/frames/road_2_overtile.tscn"),
+    self.FRAME_ROAD3 : preload("res://scenes/tiles/frames/road_3_overtile.tscn"),
+    self.FRAME_ROAD4 : preload("res://scenes/tiles/frames/road_4_overtile.tscn"),
+    self.FRAME_FENCE : preload("res://scenes/tiles/frames/wired_fence_overtile.tscn"),
 
-	self.DECO_FLOWERS1 : preload("res://scenes/tiles/decorations/flowers_1_overtile.tscn"),
-	self.DECO_FLOWERS2 : preload("res://scenes/tiles/decorations/flowers_2_overtile.tscn"),
-	self.DECO_FLOWERS3 : preload("res://scenes/tiles/decorations/flowers_3_overtile.tscn"),
-	self.DECO_FLOWERS4 : preload("res://scenes/tiles/decorations/flowers_4_overtile.tscn"),
-	self.DECO_FLOWERS5 : preload("res://scenes/tiles/decorations/flowers_5_overtile.tscn"),
-	self.DECO_FLOWERS6 : preload("res://scenes/tiles/decorations/flowers_6_overtile.tscn"),
-	self.DECO_FLOWERS7 : preload("res://scenes/tiles/decorations/flowers_7_overtile.tscn"),
-	self.DECO_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_overtile.tscn"),
-	self.DECO_LOG : preload("res://scenes/tiles/decorations/log_1_overtile.tscn"),
-	self.DECO_ROCKS1 : preload("res://scenes/tiles/decorations/rocks_1_overtile.tscn"),
-	self.DECO_ROCKS2 : preload("res://scenes/tiles/decorations/rocks_2_overtile.tscn"),
-	self.DECO_STATUE : preload("res://scenes/tiles/decorations/statue_overtile.tscn"),
+    self.DECO_FLOWERS1 : preload("res://scenes/tiles/decorations/flowers_1_overtile.tscn"),
+    self.DECO_FLOWERS2 : preload("res://scenes/tiles/decorations/flowers_2_overtile.tscn"),
+    self.DECO_FLOWERS3 : preload("res://scenes/tiles/decorations/flowers_3_overtile.tscn"),
+    self.DECO_FLOWERS4 : preload("res://scenes/tiles/decorations/flowers_4_overtile.tscn"),
+    self.DECO_FLOWERS5 : preload("res://scenes/tiles/decorations/flowers_5_overtile.tscn"),
+    self.DECO_FLOWERS6 : preload("res://scenes/tiles/decorations/flowers_6_overtile.tscn"),
+    self.DECO_FLOWERS7 : preload("res://scenes/tiles/decorations/flowers_7_overtile.tscn"),
+    self.DECO_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_overtile.tscn"),
+    self.DECO_LOG : preload("res://scenes/tiles/decorations/log_1_overtile.tscn"),
+    self.DECO_ROCKS1 : preload("res://scenes/tiles/decorations/rocks_1_overtile.tscn"),
+    self.DECO_ROCKS2 : preload("res://scenes/tiles/decorations/rocks_2_overtile.tscn"),
+    self.DECO_STATUE : preload("res://scenes/tiles/decorations/statue_overtile.tscn"),
 
-	self.CITY_BUILDING_BIG1 : preload("res://scenes/tiles/city/building_big_1_overtile.tscn"),
-	self.CITY_BUILDING_BIG2 : preload("res://scenes/tiles/city/building_big_2_overtile.tscn"),
-	self.CITY_BUILDING_BIG3 : preload("res://scenes/tiles/city/building_big_3_overtile.tscn"),
-	self.CITY_BUILDING_BIG4 : preload("res://scenes/tiles/city/building_big_4_overtile.tscn"),
-	self.CITY_BUILDING_SMALL1 : preload("res://scenes/tiles/city/building_small_1_overtile.tscn"),
-	self.CITY_BUILDING_SMALL2 : preload("res://scenes/tiles/city/building_small_2_overtile.tscn"),
-	self.CITY_BUILDING_SMALL3 : preload("res://scenes/tiles/city/building_small_3_overtile.tscn"),
-	self.CITY_BUILDING_SMALL4 : preload("res://scenes/tiles/city/building_small_4_overtile.tscn"),
-	self.CITY_BUILDING_SMALL5 : preload("res://scenes/tiles/city/building_small_5_overtile.tscn"),
-	self.CITY_BUILDING_SMALL6 : preload("res://scenes/tiles/city/building_small_6_overtile.tscn"),
-	self.CITY_BRIDGE : preload("res://scenes/tiles/city/river_bridge_overtile.tscn"),
+    self.CITY_BUILDING_BIG1 : preload("res://scenes/tiles/city/building_big_1_overtile.tscn"),
+    self.CITY_BUILDING_BIG2 : preload("res://scenes/tiles/city/building_big_2_overtile.tscn"),
+    self.CITY_BUILDING_BIG3 : preload("res://scenes/tiles/city/building_big_3_overtile.tscn"),
+    self.CITY_BUILDING_BIG4 : preload("res://scenes/tiles/city/building_big_4_overtile.tscn"),
+    self.CITY_BUILDING_SMALL1 : preload("res://scenes/tiles/city/building_small_1_overtile.tscn"),
+    self.CITY_BUILDING_SMALL2 : preload("res://scenes/tiles/city/building_small_2_overtile.tscn"),
+    self.CITY_BUILDING_SMALL3 : preload("res://scenes/tiles/city/building_small_3_overtile.tscn"),
+    self.CITY_BUILDING_SMALL4 : preload("res://scenes/tiles/city/building_small_4_overtile.tscn"),
+    self.CITY_BUILDING_SMALL5 : preload("res://scenes/tiles/city/building_small_5_overtile.tscn"),
+    self.CITY_BUILDING_SMALL6 : preload("res://scenes/tiles/city/building_small_6_overtile.tscn"),
+    self.CITY_BRIDGE : preload("res://scenes/tiles/city/river_bridge_overtile.tscn"),
 
-	self.NATURE_BIG_ROCKS1 : preload("res://scenes/tiles/nature/big_rocks_1_overtile.tscn"),
-	self.NATURE_BIG_ROCKS2 : preload("res://scenes/tiles/nature/big_rocks_2_overtile.tscn"),
-	self.NATURE_BIG_ROCKS3 : preload("res://scenes/tiles/nature/big_rocks_3_overtile.tscn"),
-	self.NATURE_TREES1 : preload("res://scenes/tiles/nature/trees_1_overtile.tscn"),
-	self.NATURE_TREES2 : preload("res://scenes/tiles/nature/trees_2_overtile.tscn"),
-	self.NATURE_TREES3 : preload("res://scenes/tiles/nature/trees_3_overtile.tscn"),
-	self.NATURE_TREES4 : preload("res://scenes/tiles/nature/trees_4_overtile.tscn"),
-	self.NATURE_TREES5 : preload("res://scenes/tiles/nature/trees_5_overtile.tscn"),
-	self.NATURE_TREES6 : preload("res://scenes/tiles/nature/trees_6_overtile.tscn"),
+    self.NATURE_BIG_ROCKS1 : preload("res://scenes/tiles/nature/big_rocks_1_overtile.tscn"),
+    self.NATURE_BIG_ROCKS2 : preload("res://scenes/tiles/nature/big_rocks_2_overtile.tscn"),
+    self.NATURE_BIG_ROCKS3 : preload("res://scenes/tiles/nature/big_rocks_3_overtile.tscn"),
+    self.NATURE_TREES1 : preload("res://scenes/tiles/nature/trees_1_overtile.tscn"),
+    self.NATURE_TREES2 : preload("res://scenes/tiles/nature/trees_2_overtile.tscn"),
+    self.NATURE_TREES3 : preload("res://scenes/tiles/nature/trees_3_overtile.tscn"),
+    self.NATURE_TREES4 : preload("res://scenes/tiles/nature/trees_4_overtile.tscn"),
+    self.NATURE_TREES5 : preload("res://scenes/tiles/nature/trees_5_overtile.tscn"),
+    self.NATURE_TREES6 : preload("res://scenes/tiles/nature/trees_6_overtile.tscn"),
 
-	self.MODERN_AIRFIELD : preload("res://scenes/tiles/buildings/blue/airfield.tscn"),
-	self.MODERN_BARRACKS : preload("res://scenes/tiles/buildings/blue/barracks.tscn"),
-	self.MODERN_FACTORY : preload("res://scenes/tiles/buildings/blue/factory.tscn"),
-	self.MODERN_HQ : preload("res://scenes/tiles/buildings/blue/headquarters.tscn"),
-	self.MODERN_TOWER : preload("res://scenes/tiles/buildings/blue/tower.tscn"),
+    self.MODERN_AIRFIELD : preload("res://scenes/tiles/buildings/blue/airfield.tscn"),
+    self.MODERN_BARRACKS : preload("res://scenes/tiles/buildings/blue/barracks.tscn"),
+    self.MODERN_FACTORY : preload("res://scenes/tiles/buildings/blue/factory.tscn"),
+    self.MODERN_HQ : preload("res://scenes/tiles/buildings/blue/headquarters.tscn"),
+    self.MODERN_TOWER : preload("res://scenes/tiles/buildings/blue/tower.tscn"),
 
-	self.UNIT_BLUE_INFANTRY : preload("res://scenes/tiles/units/blue/infantry.tscn"),
-	self.UNIT_BLUE_TANK : preload("res://scenes/tiles/units/blue/tank.tscn"),
-	self.UNIT_BLUE_HELI : preload("res://scenes/tiles/units/blue/heli.tscn"),
-	self.UNIT_BLUE_MINF : preload("res://scenes/tiles/units/blue/mobile_infantry.tscn"),
-	self.UNIT_BLUE_ROCKET : preload("res://scenes/tiles/units/blue/rocket_artillery.tscn"),
-	self.UNIT_BLUE_SCOUT : preload("res://scenes/tiles/units/blue/scout_heli.tscn"),
+    self.UNIT_BLUE_INFANTRY : preload("res://scenes/tiles/units/blue/infantry.tscn"),
+    self.UNIT_BLUE_TANK : preload("res://scenes/tiles/units/blue/tank.tscn"),
+    self.UNIT_BLUE_HELI : preload("res://scenes/tiles/units/blue/heli.tscn"),
+    self.UNIT_BLUE_MINF : preload("res://scenes/tiles/units/blue/mobile_infantry.tscn"),
+    self.UNIT_BLUE_ROCKET : preload("res://scenes/tiles/units/blue/rocket_artillery.tscn"),
+    self.UNIT_BLUE_SCOUT : preload("res://scenes/tiles/units/blue/scout_heli.tscn"),
+
+    self.UNIT_RED_INFANTRY : preload("res://scenes/tiles/units/red/infantry.tscn"),
+    self.UNIT_RED_TANK : preload("res://scenes/tiles/units/red/tank.tscn"),
+}
+
+var side_materials = {
+    self.PLAYER_NEUTRAL : ResourceLoader.load("res://assets/materials/arne32_neutral.tres"),
+    self.PLAYER_BLUE : ResourceLoader.load("res://assets/materials/arne32_blue.tres"),
+    self.PLAYER_RED : ResourceLoader.load("res://assets/materials/arne32_red.tres"),
+    self.PLAYER_GREEN : ResourceLoader.load("res://assets/materials/arne32_green.tres"),
+    self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_yellow.tres"),
 }
 
 func get_template(template):
-	var new_tile = self.templates[template].instance()
-	new_tile.template_name = template
+    var new_tile = self.templates[template].instance()
+    new_tile.template_name = template
 
-	return new_tile
+    return new_tile
+
+func get_side_material(side):
+    return self.side_materials[side]

@@ -12,10 +12,10 @@ var focus_object = null
 var focus_method = null
 
 func _ready():
-    self.connect("pressed", self, "_on_button_pressed")
+    var _error = self.connect("pressed", self, "_on_button_pressed")
 
-func fill_data(map_name, map_online_id):
-    self.map_name = map_name
+func fill_data(name, map_online_id):
+    self.map_name = name
     self.online_id = map_online_id
 
     self.refresh_label()

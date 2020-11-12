@@ -1,9 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/pointer.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/arne32.tres" type="Material" id=2]
+[ext_resource path="res://assets/gui/pointer.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=2]
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=1]
 flags_transparent = true
 flags_unshaded = true
 albedo_color = Color( 1, 1, 1, 0.0392157 )
@@ -22,4 +22,4 @@ cast_shadow = 0
 radius = 1.1
 height = 20.0
 sides = 50
-material = SubResource( 2 )
+material = SubResource( 1 )

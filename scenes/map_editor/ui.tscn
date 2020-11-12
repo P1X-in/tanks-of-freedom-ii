@@ -95,7 +95,7 @@ __meta__ = {
 
 [node name="map_name" type="MarginContainer" parent="."]
 visible = false
-margin_right = 72.0
+margin_right = 30.0
 margin_bottom = 54.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
@@ -108,14 +108,14 @@ __meta__ = {
 [node name="background" type="ColorRect" parent="map_name"]
 margin_left = 10.0
 margin_top = 10.0
-margin_right = 62.0
+margin_right = 20.0
 margin_bottom = 44.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 
 [node name="inner" type="MarginContainer" parent="map_name"]
 margin_left = 10.0
 margin_top = 10.0
-margin_right = 62.0
+margin_right = 20.0
 margin_bottom = 44.0
 custom_constants/margin_right = 5
 custom_constants/margin_top = 0
@@ -125,8 +125,10 @@ custom_constants/margin_bottom = 0
 [node name="label" type="Label" parent="map_name/inner"]
 margin_left = 5.0
 margin_top = 10.0
-margin_right = 47.0
+margin_right = 5.0
 margin_bottom = 24.0
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -42,11 +42,15 @@ func toggle_radial():
         self.show_radial()
         self.hide_tiles()
 
+
 func show_tiles():
     self.tile_animations.play("show")
+    if self.map_name_label.get_text() != "":
+        self.map_name_wrapper.show()
 
 func hide_tiles():
     self.tile_animations.play("hide")
+    self.map_name_wrapper.hide()
 
 func show_radial():
     self.radial.show_menu()
@@ -78,11 +82,11 @@ func is_panel_open():
 
     return false
 
-func set_map_name(name):
+func set_map_name(name, skip_show=false):
     self.map_name_label.set_text(name)
     self.picker.set_map_name(name)
 
-    if name != "":
+    if name != "" and not skip_show:
         self.map_name_wrapper.show()
     else:
         self.map_name_wrapper.hide()

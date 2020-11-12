@@ -37,6 +37,9 @@ func _input(event):
         if event.is_action_pressed("editor_clear"):
             self.clear_tile()
 
+        if event.is_action_pressed("editor_next_alternative"):
+            self.next_alternative()
+
         if event.is_action_pressed("ui_left"):
             self.switch_to_prev_tile()
 
@@ -66,7 +69,11 @@ func _input(event):
 
             if event.is_action_pressed("editor_menu"):
                 self.toggle_radial_menu()
-        
+    
+
+func autosave():
+    self.map.loader.save_map_file(self.AUTOSAVE_FILE)
+
 
 func place_tile():
     if self.selected_class == self.map.builder.CLASS_GROUND:
@@ -82,11 +89,11 @@ func place_tile():
     if self.selected_class == self.map.builder.CLASS_UNIT:
         self.map.builder.place_unit(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
 
-    self.map.loader.save_map_file(self.AUTOSAVE_FILE)
+    self.autosave()
 
 func clear_tile():
     self.map.builder.clear_tile_layer(self.map.camera_tile_position)
-    self.map.loader.save_map_file(self.AUTOSAVE_FILE)
+    self.autosave()
 
 func refresh_tile():
     self.select_tile(self.selected_tile, self.selected_class)
@@ -160,6 +167,7 @@ func handle_picker_output(args):
     if context == "save":
         self.map.loader.save_map_file(map_name)
         self.map_list_service.add_map_to_list(map_name)
+        self.ui.picker.minimap.remove_from_cache(map_name)
     elif context == "load":
         self.map.loader.load_map_file(map_name)
         
@@ -178,7 +186,7 @@ func open_picker():
     self.ui.picker.bind_cancel(self, "close_picker")
     self.ui.picker.bind_success(self, "handle_picker_output")
     self.ui.picker.set_name_mode()
-    self.ui.set_map_name(self.current_map_name)
+    self.ui.set_map_name(self.current_map_name, true)
 
 func close_picker():
     self.ui.hide_picker()
@@ -188,5 +196,17 @@ func close_picker():
 
 func wipe_editor():
     self.toggle_radial_menu()
-    self.ui.set_map_name("")
+    self.set_map_name("")
     self.map.builder.wipe_map()
+
+func next_alternative():
+    var tile = self.map.model.get_tile(self.map.camera_tile_position)
+
+    if tile.building.is_present():
+        self.next_building_side(tile.building.tile)
+        
+    self.autosave()
+
+func next_building_side(building_object):
+    var side_map = self.rotations.get_player_map(building_object.side)
+    self.map.builder.set_building_side(self.map.camera_tile_position, side_map["next"])

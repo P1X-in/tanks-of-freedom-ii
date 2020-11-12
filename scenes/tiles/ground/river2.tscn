@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/arne32.tres" type="Material" id=1]
+[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=1]
 [ext_resource path="res://assets/terrain/grasslands/river_2_tile.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://assets/arne32_reflective.tres" type="Material" id=3]
+[ext_resource path="res://assets/materials/arne32_reflective.tres" type="Material" id=3]
 [ext_resource path="res://assets/terrain/reflections/river_2_reflection.obj" type="ArrayMesh" id=4]
 [ext_resource path="res://scenes/tiles/reflective_tile.tscn" type="PackedScene" id=5]
+
 
 [node name="tile" instance=ExtResource( 5 )]
 

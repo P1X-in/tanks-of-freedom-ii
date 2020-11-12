@@ -29,7 +29,7 @@ tracks/0/keys = {
 
 [sub_resource type="PlaneMesh" id=4]
 material = ExtResource( 2 )
-size = Vector2( 700, 700 )
+size = Vector2( 1000, 1000 )
 subdivide_width = 70
 subdivide_depth = 70
 
@@ -85,6 +85,6 @@ playback_speed = 0.05
 anims/uv_waves = SubResource( 2 )
 
 [node name="new_water" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 2, 50 )
 mesh = SubResource( 4 )
 material/0 = null
