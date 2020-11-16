@@ -80,6 +80,9 @@ func build_rotations(templates, builder):
 		templates.MODERN_BARRACKS,
 		templates.MODERN_FACTORY,
 		templates.MODERN_TOWER,
+
+		templates.STEAMPUNK_HQ,
+		templates.STEAMPUNK_BARRACKS,
 	])
 
 	self.rotations[builder.CLASS_UNIT] = self.build_from_array([
@@ -89,8 +92,13 @@ func build_rotations(templates, builder):
 		templates.UNIT_BLUE_MINF,
 		templates.UNIT_BLUE_ROCKET,
 		templates.UNIT_BLUE_SCOUT,
+
 		templates.UNIT_RED_INFANTRY,
 		templates.UNIT_RED_TANK,
+		templates.UNIT_RED_HELI,
+		templates.UNIT_RED_MINF,
+		templates.UNIT_RED_ROCKET,
+		templates.UNIT_RED_SCOUT,
 	])
 
 	self.types = self.build_from_array([

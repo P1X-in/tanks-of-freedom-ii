@@ -67,6 +67,9 @@ const MODERN_FACTORY = "modern_factory"
 const MODERN_HQ = "modern_hq"
 const MODERN_TOWER = "modern_tower"
 
+const STEAMPUNK_BARRACKS = "steampunk_barracks"
+const STEAMPUNK_HQ = "steampunk_hq"
+
 const UNIT_BLUE_INFANTRY = "blue_infantry"
 const UNIT_BLUE_TANK = "blue_tank"
 const UNIT_BLUE_HELI = "blue_heli"
@@ -76,6 +79,10 @@ const UNIT_BLUE_SCOUT = "blue_scout"
 
 const UNIT_RED_INFANTRY = "red_infantry"
 const UNIT_RED_TANK = "red_tank"
+const UNIT_RED_HELI = "red_heli"
+const UNIT_RED_MINF = "red_m_inf"
+const UNIT_RED_ROCKET = "red_rocket"
+const UNIT_RED_SCOUT = "red_scout"
 
 
 const PLAYER_NEUTRAL = "neutral"
@@ -154,6 +161,9 @@ var templates = {
     self.MODERN_HQ : preload("res://scenes/tiles/buildings/blue/headquarters.tscn"),
     self.MODERN_TOWER : preload("res://scenes/tiles/buildings/blue/tower.tscn"),
 
+    self.STEAMPUNK_BARRACKS : preload("res://scenes/tiles/buildings/red/barracks.tscn"),
+    self.STEAMPUNK_HQ : preload("res://scenes/tiles/buildings/red/headquarters.tscn"),
+
     self.UNIT_BLUE_INFANTRY : preload("res://scenes/tiles/units/blue/infantry.tscn"),
     self.UNIT_BLUE_TANK : preload("res://scenes/tiles/units/blue/tank.tscn"),
     self.UNIT_BLUE_HELI : preload("res://scenes/tiles/units/blue/heli.tscn"),
@@ -163,6 +173,10 @@ var templates = {
 
     self.UNIT_RED_INFANTRY : preload("res://scenes/tiles/units/red/infantry.tscn"),
     self.UNIT_RED_TANK : preload("res://scenes/tiles/units/red/tank.tscn"),
+    self.UNIT_RED_HELI : preload("res://scenes/tiles/units/red/heli.tscn"),
+    self.UNIT_RED_MINF : preload("res://scenes/tiles/units/red/mobile_infantry.tscn"),
+    self.UNIT_RED_ROCKET : preload("res://scenes/tiles/units/red/rocket_artillery.tscn"),
+    self.UNIT_RED_SCOUT : preload("res://scenes/tiles/units/red/scout_heli.tscn"),
 }
 
 var side_materials = {
