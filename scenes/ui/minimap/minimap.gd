@@ -1,8 +1,9 @@
-extends TileMap
+extends Control
 
 const MAX_MAP_SIZE = 40
 
 onready var map_list_service = $"/root/MapList"
+onready var minimap = $"minimap"
 
 var grass_tiles = ["ground_grass"]
 var concrete_tiles = ["ground_concrete"]
@@ -129,3 +130,11 @@ func set_cell_from_data(x, y, data):
     if data["ground"]["tile"] in self.grass_tiles:
         self.set_cell(x, y, self.TILE_GRASS)
         return
+
+func set_cell(x, y, id):
+    self.minimap.set_cell(x, y, id)
+
+func wipe():
+    for y in range(self.MAX_MAP_SIZE):
+        for x in range(self.MAX_MAP_SIZE):
+            self.set_cell_from_data(x, y, null)

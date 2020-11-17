@@ -1,0 +1,13 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://assets/materials/arne32_yellow.png" type="Texture" id=1]
+
+[resource]
+flags_albedo_tex_force_srgb = true
+albedo_texture = ExtResource( 1 )
+metallic = 0.8
+metallic_texture = ExtResource( 1 )
+metallic_texture_channel = 2
+roughness = 0.5
+roughness_texture = ExtResource( 1 )
+roughness_texture_channel = 2

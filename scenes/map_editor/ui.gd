@@ -2,6 +2,8 @@ extends Control
 
 onready var radial = $"radial/radial"
 onready var picker = $"picker/picker"
+onready var minimap = $"minimap"
+onready var minimap_animations = $"minimap/animations"
 
 onready var position_label = $"position/label"
 onready var map_name_wrapper = $"map_name"
@@ -45,11 +47,13 @@ func toggle_radial():
 
 func show_tiles():
     self.tile_animations.play("show")
+    self.minimap_animations.play("show")
     if self.map_name_label.get_text() != "":
         self.map_name_wrapper.show()
 
 func hide_tiles():
     self.tile_animations.play("hide")
+    self.minimap_animations.play("hide")
     self.map_name_wrapper.hide()
 
 func show_radial():
@@ -90,3 +94,11 @@ func set_map_name(name, skip_show=false):
         self.map_name_wrapper.show()
     else:
         self.map_name_wrapper.hide()
+
+func load_minimap(map_name):
+    self.minimap.remove_from_cache(map_name)
+    self.minimap.fill_minimap(map_name)
+
+func wipe_minimap():
+    self.minimap.wipe()
+    

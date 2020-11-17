@@ -73,7 +73,7 @@ func place_building(position, name, rotation, side=null):
     if side != null:
         self.set_building_side(position, side)
 
-func place_unit(position, name, rotation):
+func place_unit(position, name, rotation, side=null):
     var tile = self.map.model.get_tile(position)
 
     if not tile.ground.is_present():
@@ -86,6 +86,9 @@ func place_unit(position, name, rotation):
         tile.building.clear()
 
     self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_units_anchor, tile.unit)
+
+    if side != null:
+        self.set_unit_side(position, side)
 
 func place_element(position, name, rotation, vertical_offset, anchor, tile_fragment):
     var new_tile = self.map.templates.get_template(name)
@@ -151,7 +154,7 @@ func place_tile(tile_id, tile_data):
         self.place_building(tile.position, tile_data["building"]["tile"], tile_data["building"]["rotation"], tile_data["building"]["side"])
 
     if tile_data["unit"]["tile"] != null:
-        self.place_unit(tile.position, tile_data["unit"]["tile"], tile_data["unit"]["rotation"])
+        self.place_unit(tile.position, tile_data["unit"]["tile"], tile_data["unit"]["rotation"], tile_data["unit"]["side"])
         
 
 func set_building_side(position, new_side):
@@ -160,3 +163,10 @@ func set_building_side(position, new_side):
     if tile.building.is_present():
         tile.building.tile.set_side(new_side)
         tile.building.tile.set_side_material(self.map.templates.get_side_material(new_side))
+
+func set_unit_side(position, new_side):
+    var tile = self.map.model.get_tile(position)
+
+    if tile.unit.is_present():
+        tile.unit.tile.set_side(new_side)
+        tile.unit.tile.set_side_material(self.map.templates.get_side_material(new_side))

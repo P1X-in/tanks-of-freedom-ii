@@ -18,6 +18,7 @@ func _ready():
     self.rotations.build_rotations(self.map.templates, self.map.builder)
     self.select_tile(self.map.templates.GROUND_GRASS, self.map.builder.CLASS_GROUND)
     self.map.loader.load_map_file(self.AUTOSAVE_FILE)
+    self.ui.load_minimap(self.AUTOSAVE_FILE)
     self.setup_radial_menu()
     
 
@@ -73,6 +74,7 @@ func _input(event):
 
 func autosave():
     self.map.loader.save_map_file(self.AUTOSAVE_FILE)
+    self.ui.load_minimap(self.AUTOSAVE_FILE)
 
 
 func place_tile():
@@ -170,6 +172,7 @@ func handle_picker_output(args):
         self.ui.picker.minimap.remove_from_cache(map_name)
     elif context == "load":
         self.map.loader.load_map_file(map_name)
+        self.ui.load_minimap(map_name)
         
     self.close_picker()
     self.set_map_name(map_name)
@@ -198,15 +201,28 @@ func wipe_editor():
     self.toggle_radial_menu()
     self.set_map_name("")
     self.map.builder.wipe_map()
+    self.ui.wipe_minimap()
 
 func next_alternative():
     var tile = self.map.model.get_tile(self.map.camera_tile_position)
 
     if tile.building.is_present():
         self.next_building_side(tile.building.tile)
+
+    if tile.unit.is_present():
+        self.next_unit_side(tile.unit.tile)
         
     self.autosave()
 
 func next_building_side(building_object):
     var side_map = self.rotations.get_player_map(building_object.side)
     self.map.builder.set_building_side(self.map.camera_tile_position, side_map["next"])
+
+func next_unit_side(unit_object):
+    var side_map = self.rotations.get_player_map(unit_object.side)
+
+    if side_map["next"] == "neutral":
+        side_map = self.rotations.get_player_map(side_map["next"])
+
+    self.map.builder.set_unit_side(self.map.camera_tile_position, side_map["next"])
+    

@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/ui/map_picker/picker.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scenes/ui/map_picker/map_button.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/gui/picker/minimap.tres" type="TileSet" id=4]
-[ext_resource path="res://scenes/ui/map_picker/minimap.gd" type="Script" id=5]
+[ext_resource path="res://scenes/ui/minimap/minimap.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hide"
@@ -222,12 +221,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="minimap" type="TileMap" parent="widgets"]
-position = Vector2( 690, 40 )
-tile_set = ExtResource( 4 )
-cell_size = Vector2( 12, 12 )
-format = 1
-script = ExtResource( 5 )
+[node name="minimap" parent="widgets" instance=ExtResource( 4 )]
+margin_left = 930.0
+margin_top = 280.0
+margin_right = 970.0
+margin_bottom = 320.0
 
 [node name="animations" type="AnimationPlayer" parent="."]
 playback_speed = 4.0

@@ -67,8 +67,11 @@ const MODERN_FACTORY = "modern_factory"
 const MODERN_HQ = "modern_hq"
 const MODERN_TOWER = "modern_tower"
 
+const STEAMPUNK_AIRFIELD = "steampunk_airfield"
 const STEAMPUNK_BARRACKS = "steampunk_barracks"
+const STEAMPUNK_FACTORY = "steampunk_factory"
 const STEAMPUNK_HQ = "steampunk_hq"
+const STEAMPUNK_TOWER = "steampunk_tower"
 
 const UNIT_BLUE_INFANTRY = "blue_infantry"
 const UNIT_BLUE_TANK = "blue_tank"
@@ -161,8 +164,11 @@ var templates = {
     self.MODERN_HQ : preload("res://scenes/tiles/buildings/blue/headquarters.tscn"),
     self.MODERN_TOWER : preload("res://scenes/tiles/buildings/blue/tower.tscn"),
 
+    self.STEAMPUNK_AIRFIELD : preload("res://scenes/tiles/buildings/red/airfield.tscn"),
     self.STEAMPUNK_BARRACKS : preload("res://scenes/tiles/buildings/red/barracks.tscn"),
+    self.STEAMPUNK_FACTORY : preload("res://scenes/tiles/buildings/red/factory.tscn"),
     self.STEAMPUNK_HQ : preload("res://scenes/tiles/buildings/red/headquarters.tscn"),
+    self.STEAMPUNK_TOWER : preload("res://scenes/tiles/buildings/red/tower.tscn"),
 
     self.UNIT_BLUE_INFANTRY : preload("res://scenes/tiles/units/blue/infantry.tscn"),
     self.UNIT_BLUE_TANK : preload("res://scenes/tiles/units/blue/tank.tscn"),
@@ -187,11 +193,22 @@ var side_materials = {
     self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_yellow.tres"),
 }
 
+var side_materials_metallic = {
+    self.PLAYER_NEUTRAL : ResourceLoader.load("res://assets/materials/arne32_metallic_neutral.tres"),
+    self.PLAYER_BLUE : ResourceLoader.load("res://assets/materials/arne32_metallic_blue.tres"),
+    self.PLAYER_RED : ResourceLoader.load("res://assets/materials/arne32_metallic_red.tres"),
+    self.PLAYER_GREEN : ResourceLoader.load("res://assets/materials/arne32_metallic_green.tres"),
+    self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_metallic_yellow.tres"),
+}
+
 func get_template(template):
     var new_tile = self.templates[template].instance()
     new_tile.template_name = template
 
     return new_tile
 
-func get_side_material(side):
+func get_side_material(side, type="normal"):
+    if type == "metallic":
+        return self.side_materials_metallic[side]
+
     return self.side_materials[side]

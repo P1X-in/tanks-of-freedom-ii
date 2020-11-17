@@ -62,6 +62,10 @@ For ToF3D we intend to have four sides to the conflict, with each having an npc 
 
 ## Story
 
+Yellow warlord has secretly imprisoned the King, and tricked the Prince into following his orders. He starts war on other nations. Eventually, Yellow is defeated and King returned as ruler.
+
+===========================================================================================
+
 Team Yellow factions, fighting a civil war, go beyond their borders and start attacking their neighbours as well. Provoked, Team Red starts an invasion on Team Yellow land. Team blue offers help, also asking their ally, Team Green, to join the fight against Team Red.
 
 ### Theme
