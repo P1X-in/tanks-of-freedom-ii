@@ -14,6 +14,10 @@ func clear():
     self.tile.queue_free()
     self.tile = null
 
+func release():
+    if self.tile != null:
+        self.tile = null
+
 func is_present():
     return self.tile != null
 

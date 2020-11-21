@@ -268,10 +268,10 @@ __meta__ = {
 [node name="minimap" parent="." instance=ExtResource( 5 )]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 135.0
-margin_top = -135.0
-margin_right = 175.0
-margin_bottom = -95.0
+margin_left = 140.0
+margin_top = -140.0
+margin_right = 180.0
+margin_bottom = -100.0
 rect_scale = Vector2( 0.5, 0.5 )
 
 [node name="animations" type="AnimationPlayer" parent="minimap"]

@@ -16,11 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Tanks of Freedom 3D"
-config/icon="res://icon.png"
+config/icon="res://assets/icons/icon1024.png"
 
 [autoload]
 
 MapList="*res://scripts/services/map_list.gd"
+GamepadAdapter="*res://scripts/services/gamepad_adapter.gd"
 
 [debug]
 

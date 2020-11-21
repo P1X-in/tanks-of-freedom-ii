@@ -60,3 +60,7 @@ func world_to_map(position):
 
     return tile_position
 
+
+func set_tile_box_side(side):
+    self.tile_box.set_mesh_material(self.templates.get_side_material(side))
+

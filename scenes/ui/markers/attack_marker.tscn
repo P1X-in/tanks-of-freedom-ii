@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/gui/markers/attack_marker.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "rotation"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ) ]
+}
+
+[node name="attack_marker" type="Spatial"]
+
+[node name="mesh" type="MeshInstance" parent="."]
+transform = Transform( 0.794206, 0, 0.607649, 0, 1, 0, -0.607649, 0, 0.794206, 0, 0.5, 0 )
+cast_shadow = 0
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="animations" type="AnimationPlayer" parent="."]
+autoplay = "rotation"
+playback_speed = 0.5
+anims/rotation = SubResource( 1 )

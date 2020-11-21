@@ -16,6 +16,7 @@ onready var next_button = $"widgets/list_next"
 onready var prev_button = $"widgets/list_prev"
 
 onready var map_list_service = $"/root/MapList"
+onready var gamepad_adapter = $"/root/GamepadAdapter"
 
 onready var map_selection_buttons = [
     $"widgets/map_list/map0",
@@ -124,10 +125,13 @@ func show_picker():
     else:
         self.cancel_button.grab_focus()
 
+    self.gamepad_adapter.enable()
+
 
 func hide_picker():
     self.animations.play("hide")
     self.set_process_input(false)
+    self.gamepad_adapter.disable()
 
 func set_map_name(name):
     self.map_name_field.set_text(name)

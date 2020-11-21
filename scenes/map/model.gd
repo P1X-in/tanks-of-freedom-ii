@@ -9,6 +9,7 @@ func _init():
     for x in range(self.SIZE):
         for y in range(self.SIZE):
             self.tiles[str(x) + "_" + str(y)] = self.tile_template.new(x, y)
+    self.connect_neightbours()
 
 func get_tile(position):
     return self.tiles[str(position.x) + "_" + str(position.y)]
@@ -26,3 +27,23 @@ func get_dict():
         "metadata" : {},
         "tiles" : tiles_dict,
     }
+
+func connect_neightbours():
+    var tile
+
+    for x in range(self.SIZE):
+        for y in range(self.SIZE):
+
+            tile = self.get_tile2(x, y)
+
+            if x > 0:
+                tile.add_neighbour(tile.WEST, self.get_tile2(x-1, y))
+
+            if x < self.SIZE - 1:
+                tile.add_neighbour(tile.EAST, self.get_tile2(x+1, y))
+
+            if y > 0:
+                tile.add_neighbour(tile.NORTH, self.get_tile2(x, y-1))
+
+            if y < self.SIZE - 1:
+                tile.add_neighbour(tile.SOUTH, self.get_tile2(x, y+1))

@@ -89,6 +89,8 @@ func place_unit(position, name, rotation, side=null):
 
     if side != null:
         self.set_unit_side(position, side)
+    tile.unit.tile.reset()
+
 
 func place_element(position, name, rotation, vertical_offset, anchor, tile_fragment):
     var new_tile = self.map.templates.get_template(name)

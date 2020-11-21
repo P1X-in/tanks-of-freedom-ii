@@ -8,13 +8,14 @@
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
 side = "blue"
+can_capture = true
 
-[node name="mesh" parent="." index="0"]
+[node name="mesh" parent="mesh_anchor" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
 
-[node name="mesh2" type="MeshInstance" parent="." index="1"]
+[node name="mesh2" type="MeshInstance" parent="mesh_anchor" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
@@ -22,7 +23,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="mesh3" type="MeshInstance" parent="." index="2"]
+[node name="mesh3" type="MeshInstance" parent="mesh_anchor" index="2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )

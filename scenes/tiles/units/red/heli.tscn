@@ -9,8 +9,9 @@ main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
 side = "red"
 material_type = "metallic"
+max_move = 8
 
-[node name="mesh" parent="." index="0"]
+[node name="mesh" parent="mesh_anchor" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 2 )
