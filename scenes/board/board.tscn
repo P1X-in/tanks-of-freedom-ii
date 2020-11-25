@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/map/map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/board/board.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/board/movement_markers.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/board/interaction_markers.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/board/path_markers.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/fx/explosion.tscn" type="PackedScene" id=8]
 
 [node name="board" type="Spatial"]
 script = ExtResource( 2 )
@@ -25,6 +26,9 @@ map = NodePath("../../map")
 
 [node name="path_markers" parent="marker_anchor" instance=ExtResource( 7 )]
 map = NodePath("../../map")
+
+[node name="explosion" parent="marker_anchor" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0 )
 
 [node name="map" parent="." instance=ExtResource( 1 )]
 

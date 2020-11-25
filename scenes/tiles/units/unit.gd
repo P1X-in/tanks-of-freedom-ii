@@ -1,6 +1,8 @@
 extends "res://scenes/tiles/tile.gd"
 
 onready var animations = $"animations"
+onready var spotlight = $"mesh_anchor/activity_light"
+onready var explosion = $"explosion"
 
 export var side = "neutral"
 export var material_type = "normal"
@@ -71,8 +73,17 @@ func get_move():
     var stats = self.get_stats_with_modifiers()
     return stats["move"]
 
+func has_moves():
+    return self.move > 0
+
 func use_move(value):
     self.move -= value
+    if self.move < 1:
+        self.spotlight.hide()
+
+func reset_move():
+    self.move = self.max_move
+    self.spotlight.show()
 
 func can_attack(_unit):
     return true
@@ -112,3 +123,27 @@ func move_in_direction(direction):
 func stop_animations():
     self.animations.stop()
 
+func reset_position_for_tile_view():
+    var translation = $"mesh_anchor/mesh".get_translation()
+    translation.y = 0
+
+    $"mesh_anchor/mesh".set_translation(translation)
+
+func show_explosion():
+    self.explosion.explode()
+
+func receive_damage(value):
+    var final_damage = value - self.armor
+    if final_damage < 0:
+        final_damage = 0
+
+    self.hp -= final_damage
+    if self.hp < 0:
+        self.hp = 0
+
+func is_alive():
+    return self.hp > 0
+
+func get_attack():
+    return self.attack
+    

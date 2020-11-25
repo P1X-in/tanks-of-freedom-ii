@@ -91,7 +91,7 @@ func colour_marker(tile, unit):
         marker.set_material(self.colour_materials["neutral"])
         return
 
-    if tile.neighbours_enemy_unit(unit.side):
+    if tile.neighbours_enemy_unit(unit.side) && unit.can_attack(tile.unit.tile) && unit.has_attacks():
         marker.set_material(self.colour_materials["red"])
         return
 

@@ -71,6 +71,12 @@ func get_neighbour(direction):
 
     return null
 
+func is_neighbour(tile):
+    for direction in self.neighbours.keys():
+        if self.neighbours[direction] == tile:
+            return true
+    return false
+
 
 func can_acommodate_unit():
     if not self.ground.is_present():
@@ -123,3 +129,15 @@ func get_direction_to_neighbour(tile):
         if self.neighbours[direction] == tile:
             return direction
     return null
+
+func can_unit_interact(unit):
+    if not unit.has_moves():
+        return false
+
+    if self.has_enemy_unit(unit.side) && unit.can_attack(self.unit.tile) && unit.has_attacks():
+        return true
+
+    if self.has_enemy_building(unit.side) && unit.can_capture:
+        return true
+
+    return false

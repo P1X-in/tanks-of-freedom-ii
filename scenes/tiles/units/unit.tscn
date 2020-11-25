@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/tiles/units/unit.gd" type="Script" id=2]
+[ext_resource path="res://scenes/fx/explosion.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "move"
@@ -40,6 +41,14 @@ script = ExtResource( 2 )
 
 [node name="mesh" type="MeshInstance" parent="mesh_anchor" index="0"]
 
+[node name="activity_light" type="SpotLight" parent="mesh_anchor" index="1"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 1, 0 )
+light_energy = 80.0
+spot_range = 4.0
+spot_angle = 80.0
+
 [node name="animations" type="AnimationPlayer" parent="." index="1"]
 playback_speed = 6.0
 anims/move = SubResource( 1 )
+
+[node name="explosion" parent="." index="3" instance=ExtResource( 3 )]

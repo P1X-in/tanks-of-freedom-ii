@@ -1,5 +1,7 @@
 extends Spatial
 
+const RETALIATION_DELAY = 0.1
+
 onready var map = $"map"
 onready var ui = $"ui"
 
@@ -12,8 +14,10 @@ onready var movement_markers = $"marker_anchor/movement_markers"
 onready var interaction_markers = $"marker_anchor/interaction_markers"
 onready var path_markers = $"marker_anchor/path_markers"
 
+onready var explosion = $"marker_anchor/explosion"
+
 func _ready():
-    self.load_map("crossroad")
+    self.load_map("devmap")
     self.set_up_board()
     self.setup_radial_menu()
 
@@ -82,6 +86,9 @@ func select_tile(position):
                 self.move_unit(self.selected_tile, tile)
                 self.selected_tile = tile
                 self.show_contextual_select()
+                return
+            elif self.selected_tile.is_neighbour(tile) && tile.can_unit_interact(self.selected_tile.unit.tile):
+                self.handle_interaction(tile)
                 return
 
         self.unselect_tile()
@@ -172,3 +179,44 @@ func should_draw_move_path(tile):
             if self.can_move_to_tile(tile):
                 return true
     return false
+
+func handle_interaction(tile):
+    if self.selected_tile != null:
+        if self.selected_tile.unit.is_present():
+            if tile.unit.is_present():
+                self.battle(self.selected_tile, tile)
+                if self.selected_tile != null && self.selected_tile.unit.is_present():
+                    self.show_contextual_select()
+
+
+
+func battle(attacker_tile, defender_tile):
+    var attacker = attacker_tile.unit.tile
+    var defender = defender_tile.unit.tile
+
+    attacker.use_move(1)
+    attacker.use_attack()
+
+    defender.receive_damage(attacker.get_attack())
+
+    if defender.is_alive():
+        defender.show_explosion()
+
+        if defender.can_attack(attacker) && defender.has_moves() && defender.has_attacks():
+            defender.use_attack()
+            attacker.receive_damage(defender.get_attack())
+
+            if attacker.is_alive():
+                yield(self.get_tree().create_timer(self.RETALIATION_DELAY), "timeout")
+                attacker.show_explosion()
+            else:
+                self.unselect_tile()
+                self.destroy_unit_on_tile(attacker_tile)
+    else:
+        self.destroy_unit_on_tile(defender_tile)
+
+func destroy_unit_on_tile(tile):
+    var position = tile.unit.tile.get_translation()
+    self.explosion.set_translation(Vector3(position.x, 0, position.z))
+    self.explosion.explode()
+    tile.unit.clear()

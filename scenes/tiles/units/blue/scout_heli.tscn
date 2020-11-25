@@ -1,8 +1,26 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/materials/arne32_metallic_blue.tres" type="Material" id=2]
 [ext_resource path="res://assets/units/blue/scout_heli.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://assets/units/blue/scout_heli_rotor.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://assets/materials/arne32_metallic.tres" type="Material" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "rotation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 180, 0 ) ]
+}
 
 [node name="tile" instance=ExtResource( 1 )]
 main_tile_view_cam_modifier = -10
@@ -15,3 +33,16 @@ max_move = 9
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 2 )
+
+[node name="rotor" type="MeshInstance" parent="mesh_anchor/mesh" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0.6 )
+mesh = ExtResource( 4 )
+material/0 = ExtResource( 5 )
+
+[node name="animations" type="AnimationPlayer" parent="mesh_anchor/mesh/rotor" index="0"]
+autoplay = "rotation"
+playback_speed = 5.0
+anims/rotation = SubResource( 1 )
+
+[node name="explosion" parent="." index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
