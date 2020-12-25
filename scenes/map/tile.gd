@@ -130,14 +130,14 @@ func get_direction_to_neighbour(tile):
             return direction
     return null
 
-func can_unit_interact(unit):
-    if not unit.has_moves():
+func can_unit_interact(interacting_unit):
+    if not interacting_unit.has_moves():
         return false
 
-    if self.has_enemy_unit(unit.side) && unit.can_attack(self.unit.tile) && unit.has_attacks():
+    if self.has_enemy_unit(interacting_unit.side) && interacting_unit.can_attack(self.unit.tile) && interacting_unit.has_attacks():
         return true
 
-    if self.has_enemy_building(unit.side) && unit.can_capture:
+    if self.has_enemy_building(interacting_unit.side) && interacting_unit.can_capture:
         return true
 
     return false

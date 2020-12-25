@@ -6,13 +6,17 @@ onready var map = $"map"
 onready var ui = $"ui"
 
 var state = preload("res://scenes/board/state.gd").new()
+var radial_abilities = preload("res://scenes/board/radial_abilities.gd").new()
+var abilities = preload("res://scenes/abilities/abilities.gd").new(self)
 
 var selected_tile = null
+var active_ability = null
 var last_hover_tile = null
 onready var selected_tile_marker = $"marker_anchor/tile_marker"
 onready var movement_markers = $"marker_anchor/movement_markers"
 onready var interaction_markers = $"marker_anchor/interaction_markers"
 onready var path_markers = $"marker_anchor/path_markers"
+onready var ability_markers = $"marker_anchor/ability_markers"
 
 onready var explosion = $"marker_anchor/explosion"
 
@@ -23,7 +27,7 @@ func _ready():
 
     self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_BLUE)
     self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_RED)
-    self.state.add_player_ap(0, 50)
+    self.state.add_player_ap(0, 100)
     self.state.add_player_ap(1, 50)
 
     self.update_for_current_player()
@@ -35,7 +39,7 @@ func _input(event):
             self.select_tile(self.map.camera_tile_position)
 
         if event.is_action_pressed("ui_cancel"):
-            self.unselect_tile()
+            self.unselect_action()
 
         if event.is_action_pressed("editor_menu"):
             self.toggle_radial_menu()
@@ -91,16 +95,33 @@ func select_tile(position):
                 self.handle_interaction(tile)
                 return
 
+        if self.selected_tile.building.is_present():
+            if self.active_ability != null && self.ability_markers.marker_exists(position):
+                self.execute_active_ability(tile)
+                return
+                
+
         self.unselect_tile()
 
+
+func unselect_action():
+    if self.active_ability != null:
+        self.cancel_ability()
+    else:
+        self.unselect_tile()
     
 
 func unselect_tile():
     self.movement_markers.reset()
     self.interaction_markers.reset()
     self.path_markers.reset()
+    self.cancel_ability()
     self.selected_tile = null
     self.selected_tile_marker.hide()
+
+func cancel_ability():
+    self.active_ability = null
+    self.ability_markers.reset()
 
 
 func load_map(map_name):
@@ -112,14 +133,24 @@ func update_for_current_player():
 
     self.map.set_tile_box_side(current_player["side"])
 
-func toggle_radial_menu():
+func toggle_radial_menu(context_object=null):
+    if not self.ui.is_radial_open():
+        self.setup_radial_menu(context_object)
+    else:
+        self.map.camera.force_stick_reset()
+
     self.ui.toggle_radial()
     self.map.camera.paused = not self.map.camera.paused
     self.map.tile_box.set_visible(not self.map.tile_box.is_visible())
 
-func setup_radial_menu():
-    self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load game", 2)
-    self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, get_tree(), "quit")
+func setup_radial_menu(context_object=null):
+    self.ui.radial.clear_fields()
+    if context_object == null:
+        self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load game", 2)
+        self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, get_tree(), "quit")
+    else:
+        self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
+        
 
 func place_selection_marker():
     self.selected_tile_marker.show()
@@ -142,6 +173,8 @@ func show_contextual_select():
     if self.selected_tile.unit.is_present():
         self.show_unit_movement_markers()
         self.show_unit_interaction_markers()
+    if self.selected_tile.building.is_present():
+        self.toggle_radial_menu(self.selected_tile.building.tile)
 
 func move_unit(source_tile, destination_tile):
     var move_cost = self.movement_markers.get_tile_cost(destination_tile)
@@ -187,6 +220,10 @@ func handle_interaction(tile):
                 self.battle(self.selected_tile, tile)
                 if self.selected_tile != null && self.selected_tile.unit.is_present():
                     self.show_contextual_select()
+            if tile.building.is_present():
+                self.capture(self.selected_tile, tile)
+                if self.selected_tile != null && self.selected_tile.unit.is_present():
+                    self.show_contextual_select()
 
 
 
@@ -220,3 +257,37 @@ func destroy_unit_on_tile(tile):
     self.explosion.set_translation(Vector3(position.x, 0, position.z))
     self.explosion.explode()
     tile.unit.clear()
+
+func smoke_a_tile(tile):
+    var position = self.map.map_to_world(tile.position)
+    self.explosion.set_translation(Vector3(position.x, 0, position.z))
+    self.explosion.puff_some_smoke()
+
+
+func capture(attacker_tile, building_tile):
+    var attacker = attacker_tile.unit.tile
+    var building = building_tile.building.tile
+
+    attacker.use_all_moves()
+    self.map.builder.set_building_side(building_tile.position, attacker.side)
+    self.smoke_a_tile(building_tile)
+
+    if building.require_crew:
+        yield(self.get_tree().create_timer(self.RETALIATION_DELAY), "timeout")
+        self.smoke_a_tile(attacker_tile)
+        attacker_tile.unit.clear()
+        self.unselect_tile()
+
+func activate_production_ability(args):
+    self.toggle_radial_menu()
+
+    var ability = args[0]
+
+    if self.state.can_current_player_afford(ability.ap_cost):
+        self.active_ability = ability
+        self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
+
+
+func execute_active_ability(tile):
+    self.abilities.execute_ability(self.active_ability, tile)
+    self.cancel_ability()

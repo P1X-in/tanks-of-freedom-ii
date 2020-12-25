@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/board/ability_markers.gd" type="Script" id=1]
+
+[node name="ability_markers" type="Spatial"]
+script = ExtResource( 1 )

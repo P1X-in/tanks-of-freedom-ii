@@ -6,7 +6,7 @@
 [node name="tile_view" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="background" type="ColorRect" parent="."]
 margin_left = -50.0
 margin_top = -50.0
 margin_right = 50.0

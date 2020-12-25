@@ -38,3 +38,6 @@ func clear():
 
     self.tile.queue_free()
     self.tile = null
+
+func hide_background():
+    $"background".hide()

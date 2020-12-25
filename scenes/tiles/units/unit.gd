@@ -33,6 +33,11 @@ var unit_translations = {
 var current_path = []
 var current_path_index = 0
 
+var move_finished_object = null
+var move_finished_method = ""
+var move_finished_args = []
+
+
 func reset():
     self.hp = self.max_hp
     self.move = self.max_move
@@ -81,6 +86,9 @@ func use_move(value):
     if self.move < 1:
         self.spotlight.hide()
 
+func use_all_moves():
+    self.use_move(self.move)
+
 func reset_move():
     self.move = self.max_move
     self.spotlight.show()
@@ -119,9 +127,27 @@ func move_in_direction(direction):
     self.rotate_unit_to_direction(direction)
     if self.current_path_index < self.current_path.size() - 1:
         self.animations.play("move")
+    else:
+        self.execute_move_callback()
 
 func stop_animations():
     self.animations.stop()
+
+func execute_move_callback():
+    if self.move_finished_object != null:
+        if self.move_finished_args.size() > 0:
+            self.move_finished_object.call_deferred(self.move_finished_method, self.move_finished_args)
+        else:
+            self.move_finished_object.call_deferred(self.move_finished_method)
+        self.clear_move_callback()
+
+func bind_move_callback(bound_object, bound_method, bound_args=[]):
+    self.move_finished_object = bound_object
+    self.move_finished_method = bound_method
+    self.move_finished_args = bound_args
+
+func clear_move_callback():
+    self.bind_move_callback(null, "", [])
 
 func reset_position_for_tile_view():
     var translation = $"mesh_anchor/mesh".get_translation()
@@ -130,7 +156,7 @@ func reset_position_for_tile_view():
     $"mesh_anchor/mesh".set_translation(translation)
 
 func show_explosion():
-    self.explosion.explode()
+    self.explosion.explode_a_bit()
 
 func receive_damage(value):
     var final_damage = value - self.armor

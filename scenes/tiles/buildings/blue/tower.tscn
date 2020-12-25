@@ -6,6 +6,7 @@
 
 [node name="tile" instance=ExtResource( 3 )]
 side = "blue"
+require_crew = false
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource( 1 )

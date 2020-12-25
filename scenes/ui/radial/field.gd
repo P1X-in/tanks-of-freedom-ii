@@ -40,7 +40,7 @@ func clear():
 
     self.bound_object = null
     self.bound_method = null
-    self.args = []
+    self.bound_args = []
 
 func focus():
     self.background.set_modulate(self.full_background)

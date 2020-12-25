@@ -27,8 +27,14 @@ func get_current_player():
     return self.players[self.current_player]
 
 func get_current_ap():
+    return self.get_current_param("ap")
+
+func get_current_side():
+    return self.get_current_param("side")
+
+func get_current_param(param_name):
     var player_data = self.get_current_player()
-    return player_data["ap"]
+    return player_data[param_name]
 
 func add_player_ap(id, value):
     self.players[id]["ap"] += value
@@ -41,3 +47,6 @@ func use_current_player_ap(value):
 
 func add_current_player_ap(value):
     self.add_player_ap(self.current_player, value)
+
+func can_current_player_afford(amount):
+    return self.get_current_ap() >= amount

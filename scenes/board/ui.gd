@@ -15,6 +15,9 @@ func is_panel_open():
 
     return false
 
+func is_radial_open():
+    return self.radial.is_visible()
+
 func show_radial():
     self.radial.show_menu()
 

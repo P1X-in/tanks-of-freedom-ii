@@ -201,6 +201,8 @@ var side_materials_metallic = {
     self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_metallic_yellow.tres"),
 }
 
+var generic_building = preload("res://scenes/tiles/buildings/building.gd")
+
 func get_template(template):
     var new_tile = self.templates[template].instance()
     new_tile.template_name = template

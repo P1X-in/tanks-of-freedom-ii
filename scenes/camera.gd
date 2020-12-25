@@ -55,6 +55,8 @@ var _aw_camera_distance = 0
 
 var paused = false
 
+var reset_stick = false
+
 func _ready():
     self.camera_pivot = $"pivot"
     self.camera_arm = $"pivot/arm"
@@ -206,7 +208,7 @@ func process_movement_input(delta):
     if self.camera_mode == self.MODE_AW:
         axis_value = axis_value.rotated(deg2rad(0))
 
-    if axis_value.length() > self.DEADZONE:
+    if axis_value.length() > self.DEADZONE && not self.reset_stick:
         var position = self.get_translation()
         position.x -= axis_value.x * self.move_speed * delta
         position.z -= axis_value.y * self.move_speed * delta
@@ -215,6 +217,9 @@ func process_movement_input(delta):
         position.z = clamp(position.z, 0, self.camera_space_size)
 
         self.set_translation(position)
+    elif axis_value.length() < self.DEADZONE && self.reset_stick:
+        self.reset_stick = false
+        
 
 func switch_camera():
     if self.camera_mode == self.MODE_TOF:
@@ -229,3 +234,6 @@ func switch_camera():
         self.camera_mode = self.MODE_TOF
         self.camera_tof.make_current()
         return
+
+func force_stick_reset():
+    self.reset_stick = true
