@@ -56,7 +56,7 @@ func expand_from_tile(tile, depth, reach_cost, unit, ap_limit):
         self.place_movement_marker(tile.position)
 
     if self.marker_exists(tile.position):
-        self.colour_marker(tile, unit)
+        self.colour_marker(tile, unit, ap_limit)
 
     if depth < 1 || not tile.can_pass_through(unit.side) || reach_cost + 1 > ap_limit:
         return
@@ -81,7 +81,7 @@ func place_movement_marker(position):
 
     self.created_markers[str(position.x) + "_" + str(position.y)] = new_marker
 
-func colour_marker(tile, unit):
+func colour_marker(tile, unit, ap_limit):
     var marker
     var key = self._get_key(tile)
 
@@ -89,6 +89,10 @@ func colour_marker(tile, unit):
 
     if self.get_tile_cost(tile) == unit.move:
         marker.set_material(self.colour_materials["neutral"])
+        return
+
+    if self.get_tile_cost(tile) == ap_limit:
+        marker.set_material(self.colour_materials["green"])
         return
 
     if tile.neighbours_enemy_unit(unit.side) && unit.can_attack(tile.unit.tile) && unit.has_attacks():

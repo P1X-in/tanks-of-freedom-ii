@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trash.png-4ce08babee0b9ae1fbf7c2d319e0b38b.stex"
+path="res://.import/arrow.png-9cb65582e8aaa6d7f50fc794b128b1ca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gui/editor/trash.png"
-dest_files=[ "res://.import/trash.png-4ce08babee0b9ae1fbf7c2d319e0b38b.stex" ]
+source_file="res://assets/gui/icons/arrow.png"
+dest_files=[ "res://.import/arrow.png-9cb65582e8aaa6d7f50fc794b128b1ca.stex" ]
 
 [params]
 

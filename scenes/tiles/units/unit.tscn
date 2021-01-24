@@ -43,6 +43,7 @@ script = ExtResource( 2 )
 
 [node name="activity_light" type="SpotLight" parent="mesh_anchor" index="1"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 1, 0 )
+visible = false
 light_energy = 80.0
 spot_range = 4.0
 spot_angle = 80.0

@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/map_editor/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/map_editor/tile_view.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/ui/radial/radial.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/ui/map_picker/picker.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ui/minimap/minimap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/gui/ui_theme.tres" type="Theme" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hide"
@@ -121,6 +122,7 @@ tracks/1/keys = {
 [node name="ui" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 6 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -142,9 +144,9 @@ __meta__ = {
 
 [node name="label" type="Label" parent="position"]
 margin_left = 20.0
-margin_top = 20.0
-margin_right = 52.0
-margin_bottom = 34.0
+margin_top = 18.0
+margin_right = 80.0
+margin_bottom = 36.0
 text = "[0, 0]"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -181,9 +183,9 @@ custom_constants/margin_bottom = 0
 
 [node name="label" type="Label" parent="map_name/inner"]
 margin_left = 5.0
-margin_top = 10.0
+margin_top = 8.0
 margin_right = 5.0
-margin_bottom = 24.0
+margin_bottom = 26.0
 align = 1
 valign = 1
 __meta__ = {

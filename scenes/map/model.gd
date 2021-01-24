@@ -47,3 +47,20 @@ func connect_neightbours():
 
             if y < self.SIZE - 1:
                 tile.add_neighbour(tile.SOUTH, self.get_tile2(x, y+1))
+
+
+func get_player_units(side):
+    var units = []
+    for i in self.tiles.keys():
+        if self.tiles[i].has_friendly_unit(side):
+            units.append(self.tiles[i].unit.tile)
+
+    return units
+
+func get_player_buildings(side):
+    var buildings = []
+    for i in self.tiles.keys():
+        if self.tiles[i].has_friendly_building(side):
+            buildings.append(self.tiles[i].building.tile)
+
+    return buildings

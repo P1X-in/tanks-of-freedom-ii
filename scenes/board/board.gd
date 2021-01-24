@@ -30,8 +30,7 @@ func _ready():
     self.state.add_player_ap(0, 100)
     self.state.add_player_ap(1, 50)
 
-    self.update_for_current_player()
-
+    self.start_turn()
 
 func _input(event):
     if not self.ui.is_panel_open():
@@ -72,7 +71,17 @@ func set_up_board():
 
 
 func end_turn():
-    return
+    self.toggle_radial_menu()
+    self.unselect_tile()
+    self.remove_unit_hightlights()
+    self.state.switch_to_next_player()
+    self.start_turn()
+
+func start_turn():
+    self.update_for_current_player()
+    self.replenish_unit_actions()
+    self.gain_building_ap()
+    self.ui.update_resource_value(self.state.get_current_ap())
 
 
 func select_tile(position):
@@ -91,7 +100,7 @@ func select_tile(position):
                 self.selected_tile = tile
                 self.show_contextual_select()
                 return
-            elif self.selected_tile.is_neighbour(tile) && tile.can_unit_interact(self.selected_tile.unit.tile):
+            elif self.selected_tile.is_neighbour(tile) && tile.can_unit_interact(self.selected_tile.unit.tile) && self.state.can_current_player_afford(1):
                 self.handle_interaction(tile)
                 return
 
@@ -148,6 +157,7 @@ func setup_radial_menu(context_object=null):
     if context_object == null:
         self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load game", 2)
         self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, get_tree(), "quit")
+        self.ui.radial.set_field(self.ui.icons.tick.instance(), "End Turn", 0, self, "end_turn")
     else:
         self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
         
@@ -180,7 +190,7 @@ func move_unit(source_tile, destination_tile):
     var move_cost = self.movement_markers.get_tile_cost(destination_tile)
     destination_tile.unit.set_tile(source_tile.unit.tile)
     source_tile.unit.release()
-    self.state.use_current_player_ap(move_cost)
+    self.use_current_player_ap(move_cost)
     destination_tile.unit.tile.use_move(move_cost)
 
     self.reset_unit_position(source_tile, destination_tile.unit.tile)
@@ -218,10 +228,12 @@ func handle_interaction(tile):
         if self.selected_tile.unit.is_present():
             if tile.unit.is_present():
                 self.battle(self.selected_tile, tile)
+                self.use_current_player_ap(1)
                 if self.selected_tile != null && self.selected_tile.unit.is_present():
                     self.show_contextual_select()
             if tile.building.is_present():
                 self.capture(self.selected_tile, tile)
+                self.use_current_player_ap(1)
                 if self.selected_tile != null && self.selected_tile.unit.is_present():
                     self.show_contextual_select()
 
@@ -291,3 +303,38 @@ func activate_production_ability(args):
 func execute_active_ability(tile):
     self.abilities.execute_ability(self.active_ability, tile)
     self.cancel_ability()
+
+
+func remove_unit_hightlights():
+    var current_player = self.state.get_current_player()
+    var units = self.map.model.get_player_units(current_player["side"])
+
+    for unit in units:
+        unit.remove_highlight()
+
+func replenish_unit_actions():
+    var current_player = self.state.get_current_player()
+    var units = self.map.model.get_player_units(current_player["side"])
+
+    for unit in units:
+        unit.replenish_moves()
+
+func gain_building_ap():
+    var ap_sum = 0
+    var current_player = self.state.get_current_player()
+    var buildings = self.map.model.get_player_buildings(current_player["side"])
+
+    for building in buildings:
+        ap_sum += building.ap_gain
+        if building.ap_gain > 0:
+            building.animate_coin()
+    
+    self.add_current_player_ap(ap_sum)
+
+func add_current_player_ap(ap_sum):
+    self.state.add_current_player_ap(ap_sum)
+    self.ui.update_resource_value(self.state.get_current_ap())
+
+func use_current_player_ap(value):
+    self.state.use_current_player_ap(value)
+    self.ui.update_resource_value(self.state.get_current_ap())

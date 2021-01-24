@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/board/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ui/radial/radial.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/ui/board/coin_view.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/gui/ui_theme.tres" type="Theme" id=4]
 
 [node name="ui" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -26,3 +29,27 @@ __meta__ = {
 }
 
 [node name="radial" parent="radial" instance=ExtResource( 2 )]
+
+[node name="resources" type="MarginContainer" parent="."]
+margin_left = 60.0
+margin_top = 70.0
+margin_right = 60.0
+margin_bottom = 70.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin_view" parent="resources" instance=ExtResource( 3 )]
+zoom_value = 5
+
+[node name="label" type="Label" parent="resources/coin_view"]
+margin_left = -30.0
+margin_top = -27.0
+margin_right = 30.0
+margin_bottom = -7.0
+text = "0000"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

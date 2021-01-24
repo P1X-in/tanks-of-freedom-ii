@@ -85,11 +85,13 @@ func place_unit(position, name, rotation, side=null):
     if tile.building.is_present():
         tile.building.clear()
 
-    self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_units_anchor, tile.unit)
+    var new_unit = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_units_anchor, tile.unit)
 
     if side != null:
         self.set_unit_side(position, side)
     tile.unit.tile.reset()
+
+    return new_unit
 
 
 func place_element(position, name, rotation, vertical_offset, anchor, tile_fragment):
@@ -102,6 +104,8 @@ func place_element(position, name, rotation, vertical_offset, anchor, tile_fragm
     new_tile.set_rotation(Vector3(0, deg2rad(rotation), 0))
 
     tile_fragment.set_tile(new_tile)
+
+    return new_tile
 
 func clear_tile_layer(position):
     var tile = self.map.model.get_tile(position)

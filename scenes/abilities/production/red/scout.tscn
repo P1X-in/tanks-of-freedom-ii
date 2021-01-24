@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/abilities/production/unit.tscn" type="PackedScene" id=1]
 
-[node name="tank" instance=ExtResource( 1 )]
-label = "Tank"
+[node name="scout" instance=ExtResource( 1 )]
+label = "Scout Helicopter"
 ap_cost = 50
-template_name = "blue_tank"
+template_name = "red_scout"

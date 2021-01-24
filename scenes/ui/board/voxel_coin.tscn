@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/gui/board/coin.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/materials/arne32_metallic.tres" type="Material" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "rotate"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("coin:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
+}
+
+[node name="voxel_coin" type="Spatial"]
+
+[node name="coin" type="MeshInstance" parent="."]
+cast_shadow = 0
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="animations" type="AnimationPlayer" parent="."]
+autoplay = "rotate"
+anims/rotate = SubResource( 1 )

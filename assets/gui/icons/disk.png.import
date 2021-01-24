@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/disk.png-fb69bcd2638bef27bea83da31ba8d29b.stex"
+path="res://.import/disk.png-e91aed04a866f530ce120576a91761e3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gui/editor/disk.png"
-dest_files=[ "res://.import/disk.png-fb69bcd2638bef27bea83da31ba8d29b.stex" ]
+source_file="res://assets/gui/icons/disk.png"
+dest_files=[ "res://.import/disk.png-e91aed04a866f530ce120576a91761e3.stex" ]
 
 [params]
 

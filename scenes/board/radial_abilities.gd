@@ -14,11 +14,13 @@ func fill_radial_with_building_abilities(board, radial, building):
 
     for ability in building.abilities:
         if ability.TYPE == "production":
+            var icon_model = board.map.templates.get_template(ability.template_name)
+            icon_model.set_side_material(board.map.templates.get_side_material(building.side))
             icon = tile_view_template.instance()
             icon.hide_background()
             icon.is_side_tile = false
             icon.viewport_size = 11
-            icon.set_tile(board.map.templates.get_template(ability.template_name), 0)
+            icon.set_tile(icon_model, 0)
             label = ability.label
             label += "\n" + str(ability.ap_cost) + " AP"
             radial.set_field(icon, label, ability.index, board, "activate_production_ability", [ability])

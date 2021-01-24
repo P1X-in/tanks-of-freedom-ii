@@ -14,6 +14,7 @@ var move = 0
 export var attack = 7
 export var armor = 2
 export var can_capture = false
+export var max_attacks = 1
 var attacks = 1
 
 var modifiers = []
@@ -57,11 +58,11 @@ func set_side_material(material):
 
     var additional_mesh
 
-    additional_mesh = self.get_node_or_null("mesh_anchor/mesh/mesh2")
+    additional_mesh = self.get_node_or_null("mesh_anchor/mesh2")
     if additional_mesh != null:
         additional_mesh.set_surface_material(0, material)
 
-    additional_mesh = self.get_node_or_null("mesh_anchor/mesh/mesh3")
+    additional_mesh = self.get_node_or_null("mesh_anchor/mesh3")
     if additional_mesh != null:
         additional_mesh.set_surface_material(0, material)
 
@@ -92,6 +93,10 @@ func use_all_moves():
 func reset_move():
     self.move = self.max_move
     self.spotlight.show()
+
+func replenish_moves():
+    self.reset_move()
+    self.attacks = self.max_attacks
 
 func can_attack(_unit):
     return true
@@ -154,6 +159,7 @@ func reset_position_for_tile_view():
     translation.y = 0
 
     $"mesh_anchor/mesh".set_translation(translation)
+    self.remove_highlight()
 
 func show_explosion():
     self.explosion.explode_a_bit()
@@ -172,4 +178,7 @@ func is_alive():
 
 func get_attack():
     return self.attack
-    
+
+func remove_highlight():
+    $"mesh_anchor/activity_light".hide()
+

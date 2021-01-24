@@ -1,6 +1,7 @@
 extends Control
 
 onready var radial = $"radial/radial"
+onready var resource_label = $"resources/coin_view/label"
 
 var icons = preload("res://scenes/ui/icons/icons.gd").new()
 
@@ -29,3 +30,6 @@ func toggle_radial():
         self.hide_radial()
     else:
         self.show_radial()
+
+func update_resource_value(value):
+    self.resource_label.set_text(str(value))

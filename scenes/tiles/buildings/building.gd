@@ -1,8 +1,12 @@
 extends "res://scenes/tiles/tile.gd"
 
+onready var animations = $"animations"
+
 export var side = "neutral"
 
 export var require_crew = true
+
+export var ap_gain = 0
 
 var abilities = []
 
@@ -20,3 +24,7 @@ func set_side_material(material):
 
 func register_ability(ability):
     self.abilities.append(ability)
+
+func animate_coin():
+    self.animations.play("ap_gain")
+    

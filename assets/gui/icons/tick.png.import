@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arrow.png-e553e0c32d5c2dccf1f46f02da67456b.stex"
+path="res://.import/tick.png-d18bfc7f89d445dc3317563574fa0962.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gui/editor/arrow.png"
-dest_files=[ "res://.import/arrow.png-e553e0c32d5c2dccf1f46f02da67456b.stex" ]
+source_file="res://assets/gui/icons/tick.png"
+dest_files=[ "res://.import/tick.png-d18bfc7f89d445dc3317563574fa0962.stex" ]
 
 [params]
 

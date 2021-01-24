@@ -1,0 +1,33 @@
+extends Node2D
+
+export var zoom_value = 10
+
+var model = null
+
+func _ready():
+    var lens_distance = Vector3(0, 0, self.zoom_value)
+    $"Viewport/tile_cam/pivot/arm/lens".set_translation(lens_distance)
+    self.refresh()
+
+func refresh():
+    var texture = $"Viewport".get_texture()
+    $"screen".texture = texture
+
+func set_model(new_model):
+    if self.model != null:
+        self.clear()
+
+    self.model = new_model
+    $"Viewport/tile_cam".add_child(new_model)
+
+    self.refresh()
+
+func clear():
+    if self.model == null:
+        return
+
+    self.model.queue_free()
+    self.model = null
+
+func hide_background():
+    $"background".hide()

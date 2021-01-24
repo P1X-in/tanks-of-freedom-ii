@@ -1,7 +1,44 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/tiles/buildings/building.gd" type="Script" id=2]
+[ext_resource path="res://scenes/ui/board/voxel_coin.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "ap_gain"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("voxel_coin:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("voxel_coin:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 0.0717939, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 8, 0 ) ]
+}
 
 [node name="tile" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+
+[node name="voxel_coin" parent="." index="1" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0 )
+visible = false
+
+[node name="animations" type="AnimationPlayer" parent="." index="2"]
+playback_speed = 2.0
+anims/ap_gain = SubResource( 1 )

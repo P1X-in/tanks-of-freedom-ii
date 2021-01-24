@@ -5,4 +5,4 @@
 [node name="tank" instance=ExtResource( 1 )]
 label = "Tank"
 ap_cost = 50
-template_name = "blue_tank"
+template_name = "red_tank"

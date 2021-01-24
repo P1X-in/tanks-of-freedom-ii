@@ -1,6 +1,7 @@
 extends Spatial
 
 export var template_name = ""
+export var unit_can_stand = false
 
 export var main_tile_view_cam_modifier = 0
 export var side_tile_view_cam_modifier = 0

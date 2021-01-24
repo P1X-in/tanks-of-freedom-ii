@@ -18,10 +18,11 @@ func add_player(type, side):
     })
 
 
-func next_player():
+func switch_to_next_player():
     self.current_player += 1
     if self.current_player >= self.players.size():
         self.current_player = 0
+        self.turn += 1
 
 func get_current_player():
     return self.players[self.current_player]
