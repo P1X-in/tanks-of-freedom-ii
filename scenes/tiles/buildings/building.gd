@@ -6,7 +6,7 @@ export var side = "neutral"
 
 export var require_crew = true
 
-export var ap_gain = 0
+export var ap_gain = 5
 
 var abilities = []
 
@@ -27,4 +27,9 @@ func register_ability(ability):
 
 func animate_coin():
     self.animations.play("ap_gain")
-    
+
+func sfx_effect(name):
+    var audio_player = self.get_node_or_null("audio/" + name)
+    if audio_player != null:
+        audio_player.play()
+   

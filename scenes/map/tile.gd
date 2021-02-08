@@ -81,24 +81,24 @@ func is_neighbour(tile):
 func can_acommodate_unit():
     if not self.ground.is_present():
         return false
-    if self.terrain.is_present():
-        return self.terrain.tile.unit_can_stand
-    if self.building.is_present():
-        return false
     if self.unit.is_present():
         return false
+    if self.building.is_present():
+        return false
+    if self.terrain.is_present():
+        return self.terrain.tile.unit_can_stand
 
     return true
 
 func can_pass_through(side):
     if not self.ground.is_present():
         return false
-    if self.terrain.is_present():
-        return self.terrain.tile.unit_can_stand
     if self.building.is_present():
         return false
     if self.has_enemy_unit(side):
         return false
+    if self.terrain.is_present():
+        return self.terrain.tile.unit_can_stand
 
     return true
 

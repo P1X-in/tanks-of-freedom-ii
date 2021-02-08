@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/units/blue/heli_modern.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://assets/materials/arne32_metallic_blue.tres" type="Material" id=2]
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/units/blue/heli_rotor.obj" type="ArrayMesh" id=4]
 [ext_resource path="res://assets/materials/arne32_metallic.tres" type="Material" id=5]
+[ext_resource path="res://assets/units/audio/helicopter_move.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/units/audio/helicopter_spawn.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/units/audio/helicopter_attack.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/units/audio/helicopter_damage.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/units/audio/helicopter_die.wav" type="AudioStream" id=10]
 
 [sub_resource type="Animation" id=1]
 resource_name = "rotate"
@@ -40,6 +45,7 @@ side_tile_view_cam_modifier = -25
 side = "blue"
 material_type = "metallic"
 max_move = 8
+uses_metallic_material = true
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
@@ -57,3 +63,18 @@ anims/rotate = SubResource( 1 )
 
 [node name="explosion" parent="." index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="spawn" parent="audio" index="0"]
+stream = ExtResource( 7 )
+
+[node name="move" parent="audio" index="1"]
+stream = ExtResource( 6 )
+
+[node name="attack" parent="audio" index="2"]
+stream = ExtResource( 8 )
+
+[node name="damage" parent="audio" index="3"]
+stream = ExtResource( 9 )
+
+[node name="die" parent="audio" index="4"]
+stream = ExtResource( 10 )

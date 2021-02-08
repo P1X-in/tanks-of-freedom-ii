@@ -53,3 +53,25 @@ playback_speed = 6.0
 anims/move = SubResource( 1 )
 
 [node name="explosion" parent="." index="3" instance=ExtResource( 3 )]
+
+[node name="audio" type="Node" parent="." index="4"]
+
+[node name="spawn" type="AudioStreamPlayer3D" parent="audio" index="0"]
+unit_db = 45.0
+bus = "Units"
+
+[node name="move" type="AudioStreamPlayer3D" parent="audio" index="1"]
+unit_db = 45.0
+bus = "Units"
+
+[node name="attack" type="AudioStreamPlayer3D" parent="audio" index="2"]
+unit_db = 45.0
+bus = "Attack"
+
+[node name="damage" type="AudioStreamPlayer3D" parent="audio" index="3"]
+unit_db = 45.0
+bus = "Damage"
+
+[node name="die" type="AudioStreamPlayer3D" parent="audio" index="4"]
+unit_db = 45.0
+bus = "Explosion"

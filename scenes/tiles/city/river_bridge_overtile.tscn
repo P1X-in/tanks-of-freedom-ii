@@ -6,6 +6,7 @@
 
 [node name="tile" instance=ExtResource( 3 )]
 unit_can_stand = true
+unit_vertical_offset = 1
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource( 1 )

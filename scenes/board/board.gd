@@ -5,6 +5,8 @@ const RETALIATION_DELAY = 0.1
 onready var map = $"map"
 onready var ui = $"ui"
 
+onready var audio = $"/root/SimpleAudioLibrary"
+
 var state = preload("res://scenes/board/state.gd").new()
 var radial_abilities = preload("res://scenes/board/radial_abilities.gd").new()
 var abilities = preload("res://scenes/abilities/abilities.gd").new(self)
@@ -59,6 +61,8 @@ func hover_tile():
     if tile != self.last_hover_tile:
         self.last_hover_tile = tile
 
+        self.update_tile_highlight(tile)
+
         self.path_markers.reset()
         if self.should_draw_move_path(tile):
             var path = self.movement_markers.get_path_to_tile(tile)
@@ -91,26 +95,36 @@ func select_tile(position):
     if tile.is_selectable(current_player["side"]):
         self.selected_tile = tile
         self.show_contextual_select()
-        return
 
-    if self.selected_tile != null:
+    elif self.selected_tile != null:
         if self.selected_tile.unit.is_present():
             if self.can_move_to_tile(tile):
                 self.move_unit(self.selected_tile, tile)
                 self.selected_tile = tile
                 self.show_contextual_select()
-                return
+                
             elif self.selected_tile.is_neighbour(tile) && tile.can_unit_interact(self.selected_tile.unit.tile) && self.state.can_current_player_afford(1):
                 self.handle_interaction(tile)
-                return
 
-        if self.selected_tile.building.is_present():
-            if self.active_ability != null && self.ability_markers.marker_exists(position):
-                self.execute_active_ability(tile)
-                return
+            else:
+                self.unselect_tile()
                 
 
-        self.unselect_tile()
+        elif self.selected_tile.building.is_present():
+            if self.active_ability != null && self.ability_markers.marker_exists(position):
+                self.execute_active_ability(tile)
+
+            else:
+                self.unselect_tile()
+                
+                
+        else:
+            self.unselect_tile()
+
+    self.update_tile_highlight(tile)
+
+    if self.selected_tile != null:
+        self.audio.play("menu_click")
 
 
 func unselect_action():
@@ -143,6 +157,9 @@ func update_for_current_player():
     self.map.set_tile_box_side(current_player["side"])
 
 func toggle_radial_menu(context_object=null):
+    if self.radial_abilities.is_object_without_abilities(self, context_object):
+        return
+
     if not self.ui.is_radial_open():
         self.setup_radial_menu(context_object)
     else:
@@ -246,10 +263,14 @@ func battle(attacker_tile, defender_tile):
     attacker.use_move(1)
     attacker.use_attack()
 
+    attacker.rotate_unit_to_direction(attacker_tile.get_direction_to_neighbour(defender_tile))
+
     defender.receive_damage(attacker.get_attack())
+    attacker.sfx_effect("attack")
 
     if defender.is_alive():
         defender.show_explosion()
+        defender.sfx_effect("damage")
 
         if defender.can_attack(attacker) && defender.has_moves() && defender.has_attacks():
             defender.use_attack()
@@ -257,7 +278,10 @@ func battle(attacker_tile, defender_tile):
 
             if attacker.is_alive():
                 yield(self.get_tree().create_timer(self.RETALIATION_DELAY), "timeout")
+                defender.rotate_unit_to_direction(defender_tile.get_direction_to_neighbour(attacker_tile))
+                defender.sfx_effect("attack")
                 attacker.show_explosion()
+                attacker.sfx_effect("damage")
             else:
                 self.unselect_tile()
                 self.destroy_unit_on_tile(attacker_tile)
@@ -268,6 +292,7 @@ func destroy_unit_on_tile(tile):
     var position = tile.unit.tile.get_translation()
     self.explosion.set_translation(Vector3(position.x, 0, position.z))
     self.explosion.explode()
+    self.explosion.grab_sfx_effect(tile.unit.tile)
     tile.unit.clear()
 
 func smoke_a_tile(tile):
@@ -283,6 +308,7 @@ func capture(attacker_tile, building_tile):
     attacker.use_all_moves()
     self.map.builder.set_building_side(building_tile.position, attacker.side)
     self.smoke_a_tile(building_tile)
+    building.sfx_effect("capture")
 
     if building.require_crew:
         yield(self.get_tree().create_timer(self.RETALIATION_DELAY), "timeout")
@@ -338,3 +364,32 @@ func add_current_player_ap(ap_sum):
 func use_current_player_ap(value):
     self.state.use_current_player_ap(value)
     self.ui.update_resource_value(self.state.get_current_ap())
+
+
+func update_tile_highlight(tile):
+    if not tile.building.is_present() and not tile.unit.is_present():
+        self.ui.clear_tile_highlight()
+        return
+
+    var template_name
+    var new_side
+    var material_type = self.map.templates.MATERIAL_NORMAL
+
+    if tile.building.is_present():
+        template_name = tile.building.tile.template_name
+        new_side = tile.building.tile.side
+    if tile.unit.is_present():
+        if tile.unit.tile.uses_metallic_material:
+            material_type = self.map.templates.MATERIAL_METALLIC
+        template_name = tile.unit.tile.template_name
+        new_side = tile.unit.tile.side
+
+    var new_tile = self.map.templates.get_template(template_name)
+    new_tile.set_side_material(self.map.templates.get_side_material(new_side, material_type))
+
+    self.ui.update_tile_highlight(new_tile)
+
+    if tile.building.is_present():
+        self.ui.update_tile_highlight_building_panel(tile.building.tile)
+    if tile.unit.is_present():
+        self.ui.update_tile_highlight_unit_panel(tile.unit.tile)

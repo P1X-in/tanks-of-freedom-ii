@@ -24,6 +24,7 @@ func destroy_markers():
     self.created_markers = {}
 
 func show_ability_markers_for_tile(ability, tile):
+    self.destroy_markers()
     if ability.TYPE == "production":
         self.show_production_markers_for_tile(tile)
     

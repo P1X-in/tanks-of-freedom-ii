@@ -1,6 +1,7 @@
 extends Node2D
 
 onready var background = $"background"
+onready var white_outline = $"white"
 
 var default_background
 var full_background
@@ -44,10 +45,12 @@ func clear():
 
 func focus():
     self.background.set_modulate(self.full_background)
+    self.white_outline.show()
     self.focused = true
 
 func unfocus():
     self.background.set_modulate(self.default_background)
+    self.white_outline.hide()
     self.focused = false
 
 func is_assigned():

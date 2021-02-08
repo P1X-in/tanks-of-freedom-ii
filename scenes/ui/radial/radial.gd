@@ -1,5 +1,6 @@
 extends Node2D
 
+onready var audio = $"/root/SimpleAudioLibrary"
 onready var animations = $"animations"
 onready var label_node = $"label"
 onready var label_text = $"label/label"
@@ -96,4 +97,5 @@ func execute_focused_field():
     if self.focused_field == null:
         return
 
+    self.audio.play("menu_click")
     self.focused_field.execute_bound_method()

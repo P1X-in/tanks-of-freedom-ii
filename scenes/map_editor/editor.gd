@@ -6,6 +6,8 @@ onready var map = $"map"
 onready var ui = $"ui"
 onready var map_list_service = $"/root/MapList"
 
+onready var audio = $"/root/SimpleAudioLibrary"
+
 var rotations = preload("res://scenes/map_editor/rotations.gd").new()
 
 var tile_rotation = 0
@@ -34,42 +36,54 @@ func _input(event):
     if not self.ui.is_panel_open():
         if event.is_action_pressed("ui_accept"):
             self.place_tile()
+            self.audio.play("menu_click")
 
         if event.is_action_pressed("editor_clear"):
             self.clear_tile()
+            self.audio.play("menu_click")
 
         if event.is_action_pressed("editor_next_alternative"):
             self.next_alternative()
+            self.audio.play("menu_click")
 
         if event.is_action_pressed("ui_left"):
             self.switch_to_prev_tile()
+            self.audio.play("menu_click")
 
         if event.is_action_pressed("ui_right"):
             self.switch_to_next_tile()
+            self.audio.play("menu_click")
 
         if event.is_action_pressed("ui_up"):
             self.switch_to_next_type()
+            self.audio.play("menu_click")
 
         if event.is_action_pressed("ui_down"):
             self.switch_to_prev_type()
+            self.audio.play("menu_click")
 
         if event.is_action_pressed("rotate_cw"):
             self.rotate_cw()
             self.refresh_tile()
+            self.audio.play("menu_click")
 
         if event.is_action_pressed("rotate_ccw"):
             self.rotate_ccw()
             self.refresh_tile()
+            self.audio.play("menu_click")
 
         if event.is_action_pressed("editor_menu"):
             self.toggle_radial_menu()
+            self.audio.play("menu_click")
     else:
         if self.ui.radial.is_visible() and not self.ui.is_popup_open():
             if event.is_action_pressed("ui_cancel"):
                 self.toggle_radial_menu()
+                self.audio.play("menu_click")
 
             if event.is_action_pressed("editor_menu"):
                 self.toggle_radial_menu()
+                self.audio.play("menu_click")
     
 
 func autosave():

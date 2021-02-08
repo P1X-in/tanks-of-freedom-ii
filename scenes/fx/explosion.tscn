@@ -126,3 +126,5 @@ explosiveness = 1.0
 randomness = 1.0
 process_material = SubResource( 17 )
 draw_pass_1 = SubResource( 9 )
+
+[node name="audio" type="Node" parent="."]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/grand_beats_soundtrack_1_metal.ogg-a716a7a00ea4c52691282a7f88ec2b4f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/grand_beats_soundtrack_1_metal.ogg"
+dest_files=[ "res://.import/grand_beats_soundtrack_1_metal.ogg-a716a7a00ea4c52691282a7f88ec2b4f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

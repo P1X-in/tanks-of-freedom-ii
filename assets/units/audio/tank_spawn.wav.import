@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tank_spawn.wav-3bf60e05b856e19c2de9a1440e6e703c.sample"
+
+[deps]
+
+source_file="res://assets/units/audio/tank_spawn.wav"
+dest_files=[ "res://.import/tank_spawn.wav-3bf60e05b856e19c2de9a1440e6e703c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

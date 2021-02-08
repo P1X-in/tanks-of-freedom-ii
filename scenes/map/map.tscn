@@ -6,7 +6,6 @@
 [ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=11]
 [ext_resource path="res://default_env.tres" type="Environment" id=12]
 
-
 [sub_resource type="PlaneMesh" id=1]
 material = ExtResource( 2 )
 size = Vector2( 1000, 1000 )
@@ -34,8 +33,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
 
 [node name="camera" parent="." instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164, 4.05, 164 )
-zoom_speed = 40
-move_speed = 25
+zoom_speed = 60
+move_speed = 40
 camera_max_deg = -35
 camera_distance_max = 60
 tof_camera_distance_max = 110

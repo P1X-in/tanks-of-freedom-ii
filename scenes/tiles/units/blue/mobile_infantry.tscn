@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/units/blue/mobile_infantry.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://assets/materials/arne32_blue.tres" type="Material" id=2]
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/units/audio/tank_move.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/units/audio/soldier_attack.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/units/audio/soldier_damage.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/units/audio/tank_spawn.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/units/audio/soldier_die.wav" type="AudioStream" id=8]
 
 [node name="tile" instance=ExtResource( 3 )]
 main_tile_view_cam_modifier = -10
@@ -23,3 +28,18 @@ material/0 = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="spawn" parent="audio" index="0"]
+stream = ExtResource( 7 )
+
+[node name="move" parent="audio" index="1"]
+stream = ExtResource( 4 )
+
+[node name="attack" parent="audio" index="2"]
+stream = ExtResource( 5 )
+
+[node name="damage" parent="audio" index="3"]
+stream = ExtResource( 6 )
+
+[node name="die" parent="audio" index="4"]
+stream = ExtResource( 8 )

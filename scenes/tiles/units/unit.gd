@@ -15,6 +15,7 @@ export var attack = 7
 export var armor = 2
 export var can_capture = false
 export var max_attacks = 1
+export var uses_metallic_material = false
 var attacks = 1
 
 var modifiers = []
@@ -108,6 +109,9 @@ func use_attack():
     self.attacks -= 1
 
 func rotate_unit_to_direction(direction):
+    if not self.unit_rotations.has(direction):
+        return
+
     var rotation = self.unit_rotations[direction]
     self.set_rotation(Vector3(0, deg2rad(rotation), 0))
 
@@ -132,6 +136,7 @@ func move_in_direction(direction):
     self.rotate_unit_to_direction(direction)
     if self.current_path_index < self.current_path.size() - 1:
         self.animations.play("move")
+        self.sfx_effect("move")
     else:
         self.execute_move_callback()
 
@@ -182,3 +187,15 @@ func get_attack():
 func remove_highlight():
     $"mesh_anchor/activity_light".hide()
 
+
+func sfx_effect(name):
+    var audio_player = self.get_node_or_null("audio/" + name)
+    if audio_player != null:
+        audio_player.play()
+
+func give_sfx_effect(name):
+    var audio_player = self.get_node_or_null("audio/" + name)
+    if audio_player != null:
+        $"audio".remove_child(audio_player)
+        return audio_player
+    return null

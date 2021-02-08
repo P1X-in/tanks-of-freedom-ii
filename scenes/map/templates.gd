@@ -94,6 +94,8 @@ const PLAYER_RED = "red"
 const PLAYER_GREEN = "green"
 const PLAYER_YELLOW = "yellow"
 
+const MATERIAL_NORMAL = "normal"
+const MATERIAL_METALLIC = "metallic"
 
 var templates = {
     self.GROUND_GRASS : preload("res://scenes/tiles/ground/grass.tscn"),
@@ -210,7 +212,7 @@ func get_template(template):
     return new_tile
 
 func get_side_material(side, type="normal"):
-    if type == "metallic":
+    if type == self.MATERIAL_METALLIC:
         return self.side_materials_metallic[side]
 
     return self.side_materials[side]

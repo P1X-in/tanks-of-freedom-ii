@@ -22,6 +22,7 @@ config/icon="res://assets/icons/icon1024.png"
 
 MapList="*res://scripts/services/map_list.gd"
 GamepadAdapter="*res://scripts/services/gamepad_adapter.gd"
+SimpleAudioLibrary="*res://scripts/services/audio.gd"
 
 [debug]
 

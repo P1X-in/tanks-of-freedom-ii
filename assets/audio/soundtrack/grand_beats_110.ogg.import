@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/grand_beats_110.ogg-b7ac88f41b40576dd6f2a972ae87f37c.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/grand_beats_110.ogg"
+dest_files=[ "res://.import/grand_beats_110.ogg-b7ac88f41b40576dd6f2a972ae87f37c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

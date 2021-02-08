@@ -5,6 +5,7 @@ const MODE_SELECT = "select"
 
 const PAGE_SIZE = 10
 
+onready var audio = $"/root/SimpleAudioLibrary"
 onready var animations = $"animations"
 
 onready var name_group = $"widgets/name"
@@ -79,6 +80,7 @@ func bind_cancel(cancel_object, cancel_method, cancel_args=[]):
 
 
 func execute_success(map_name, context=null):
+    self.audio.play("menu_click")
     if self.bound_success_object != null:
         var args = [] + self.bound_success_args
 
@@ -87,6 +89,7 @@ func execute_success(map_name, context=null):
         self.bound_success_object.call_deferred(self.bound_success_method, args)
 
 func execute_load():
+    self.audio.play("menu_click")
     var map_name = self.map_name_field.get_text()
 
     if map_name == "" || map_name == null:
@@ -99,6 +102,7 @@ func execute_load():
     
 
 func execute_save():
+    self.audio.play("menu_click")
     var map_name = self.map_name_field.get_text()
 
     if map_name == "" || map_name == null:
@@ -107,6 +111,7 @@ func execute_save():
     self.execute_success(map_name, "save")
 
 func execute_cancel():
+    self.audio.play("menu_click")
     if self.bound_cancel_object != null:
         if self.bound_cancel_args.size() > 0:
             self.bound_cancel_object.call_deferred(self.bound_cancel_method, self.bound_cancel_args)
@@ -162,6 +167,7 @@ func refresh_current_maps_page():
         self.map_selection_buttons[index].show()
 
 func switch_to_prev_page():
+    self.audio.play("menu_click")
     if self.current_page > 0:
         self.current_page -= 1
 
@@ -173,6 +179,7 @@ func switch_to_prev_page():
 
 
 func switch_to_next_page():
+    self.audio.play("menu_click")
     var pages_count = self.map_list_service.get_pages_count(self.PAGE_SIZE)
 
     if self.current_page < pages_count - 1:
@@ -186,6 +193,7 @@ func switch_to_next_page():
 
 
 func map_button_pressed(name):
+    self.audio.play("menu_click")
     if self.operation_mode == self.MODE_NAME:
         self.set_map_name(name)
         self.load_button.grab_focus()

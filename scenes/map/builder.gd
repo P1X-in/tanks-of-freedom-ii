@@ -172,7 +172,10 @@ func set_building_side(position, new_side):
 
 func set_unit_side(position, new_side):
     var tile = self.map.model.get_tile(position)
+    var material_type = self.map.templates.MATERIAL_NORMAL
 
     if tile.unit.is_present():
+        if tile.unit.tile.uses_metallic_material:
+            material_type = self.map.templates.MATERIAL_METALLIC
         tile.unit.tile.set_side(new_side)
-        tile.unit.tile.set_side_material(self.map.templates.get_side_material(new_side))
+        tile.unit.tile.set_side_material(self.map.templates.get_side_material(new_side, material_type))

@@ -11,3 +11,4 @@ func execute(board, position):
     board.select_tile(position)
 
     new_unit.replenish_moves()
+    new_unit.sfx_effect("spawn")
