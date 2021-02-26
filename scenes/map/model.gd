@@ -4,6 +4,7 @@ const SIZE = 40
 var tile_template = preload("res://scenes/map/tile.gd")
 
 var tiles = {}
+var scripts = {}
 
 func _init():
     for x in range(self.SIZE):
@@ -26,6 +27,7 @@ func get_dict():
     return {
         "metadata" : {},
         "tiles" : tiles_dict,
+        "scripts" : self.scripts
     }
 
 func connect_neightbours():
@@ -64,3 +66,9 @@ func get_player_buildings(side):
             buildings.append(self.tiles[i].building.tile)
 
     return buildings
+
+func ingest_scripts(incoming_scripts):
+    if incoming_scripts == null:
+        return
+
+    self.scripts = incoming_scripts

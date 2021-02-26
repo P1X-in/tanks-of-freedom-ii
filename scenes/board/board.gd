@@ -7,9 +7,12 @@ onready var ui = $"ui"
 
 onready var audio = $"/root/SimpleAudioLibrary"
 
-var state = preload("res://scenes/board/state.gd").new()
-var radial_abilities = preload("res://scenes/board/radial_abilities.gd").new()
+var state = preload("res://scenes/board/logic/state.gd").new()
+var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").new()
 var abilities = preload("res://scenes/abilities/abilities.gd").new(self)
+var events = preload("res://scenes/board/logic/events.gd").new()
+var scripting = preload("res://scenes/board/logic/scripting.gd").new()
+
 
 var selected_tile = null
 var active_ability = null
@@ -71,7 +74,8 @@ func hover_tile():
 
 
 func set_up_board():
-    return
+    self.audio.track("soundtrack_1")
+    self.scripting.ingest_scripts(self, self.map.model.scripts)
 
 
 func end_turn():
@@ -305,6 +309,11 @@ func capture(attacker_tile, building_tile):
     var attacker = attacker_tile.unit.tile
     var building = building_tile.building.tile
 
+    var event = self.events.get_new_event(self.events.types.BUILDING_CAPTURED)
+    event.building = building
+    event.old_side = building.side
+    event.new_side = attacker.side
+
     attacker.use_all_moves()
     self.map.builder.set_building_side(building_tile.position, attacker.side)
     self.smoke_a_tile(building_tile)
@@ -315,6 +324,8 @@ func capture(attacker_tile, building_tile):
         self.smoke_a_tile(attacker_tile)
         attacker_tile.unit.clear()
         self.unselect_tile()
+
+    self.events.emit_event(event)
 
 func activate_production_ability(args):
     self.toggle_radial_menu()
@@ -393,3 +404,6 @@ func update_tile_highlight(tile):
         self.ui.update_tile_highlight_building_panel(tile.building.tile)
     if tile.unit.is_present():
         self.ui.update_tile_highlight_unit_panel(tile.unit.tile)
+
+func end_game(winner):
+    print("game ended, winner: " + winner)
