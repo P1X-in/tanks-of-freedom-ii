@@ -1,0 +1,92 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/ui/board/summary_view.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=2]
+
+[node name="summary_view" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="background" type="ColorRect" parent="."]
+margin_left = -300.0
+margin_top = -50.0
+margin_right = 300.0
+margin_bottom = 50.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="blue_wins" type="Label" parent="background"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 7.0
+custom_fonts/font = ExtResource( 2 )
+text = "Sapphire Dawn Wins!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="red_wins" type="Label" parent="background"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 7.0
+custom_fonts/font = ExtResource( 2 )
+text = "Ruby Dusk Wins!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="yellow_wins" type="Label" parent="background"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 7.0
+custom_fonts/font = ExtResource( 2 )
+text = "Amber Noon Wins!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="green_wins" type="Label" parent="background"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 7.0
+custom_fonts/font = ExtResource( 2 )
+text = "Jade Twilight Wins!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_button" type="Button" parent="."]
+margin_left = -300.0
+margin_top = 60.0
+margin_right = -200.0
+margin_bottom = 90.0
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="restart_button" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 60.0
+margin_right = 300.0
+margin_bottom = 90.0
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="menu_button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]

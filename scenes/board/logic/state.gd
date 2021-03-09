@@ -51,3 +51,6 @@ func add_current_player_ap(value):
 
 func can_current_player_afford(amount):
     return self.get_current_ap() >= amount
+
+func is_current_player_ai():
+    return self.get_current_param("type") == self.PLAYER_AI

@@ -1,0 +1,125 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/ui/board/start_turn.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "show"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("background:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+
+[node name="start_turn" type="Node2D"]
+scale = Vector2( 1e-05, 1e-05 )
+script = ExtResource( 2 )
+
+[node name="background" type="ColorRect" parent="."]
+visible = false
+margin_left = -200.0
+margin_top = -50.0
+margin_right = 200.0
+margin_bottom = 50.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="blue_player" type="Label" parent="background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = -36.0
+custom_fonts/font = ExtResource( 1 )
+text = "Sapphire Dawn"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="red_player" type="Label" parent="background"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = -36.0
+custom_fonts/font = ExtResource( 1 )
+text = "Ruby Dusk"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="yellow_player" type="Label" parent="background"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = -36.0
+custom_fonts/font = ExtResource( 1 )
+text = "Amber Noon"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="green_player" type="Label" parent="background"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = -36.0
+custom_fonts/font = ExtResource( 1 )
+text = "Jade Twilight"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="turn" type="Label" parent="background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 44.0
+margin_bottom = 7.0
+custom_fonts/font = ExtResource( 1 )
+text = "Turn 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="animations" type="AnimationPlayer" parent="."]
+playback_speed = 4.0
+anims/show = SubResource( 1 )

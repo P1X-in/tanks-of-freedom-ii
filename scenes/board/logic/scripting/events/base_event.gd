@@ -1,5 +1,5 @@
 
 var outcome
 
-func observe(event):
+func observe(_event):
     return

@@ -72,3 +72,10 @@ func ingest_scripts(incoming_scripts):
         return
 
     self.scripts = incoming_scripts
+
+func get_player_bunker_position(side):
+    for i in self.tiles.keys():
+        if self.tiles[i].has_friendly_hq(side):
+            return self.tiles[i].position
+
+    return null

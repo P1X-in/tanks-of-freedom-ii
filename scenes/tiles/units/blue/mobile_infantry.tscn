@@ -14,6 +14,8 @@ main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
 side = "blue"
 max_move = 6
+attack = 5
+armor = 0
 can_capture = true
 
 [node name="mesh" parent="mesh_anchor" index="0"]

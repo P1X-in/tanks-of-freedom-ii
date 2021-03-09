@@ -15,6 +15,8 @@ side_tile_view_cam_modifier = -25
 side = "red"
 material_type = "metallic"
 max_move = 5
+attack = 11
+armor = 0
 uses_metallic_material = true
 
 [node name="mesh" parent="mesh_anchor" index="0"]

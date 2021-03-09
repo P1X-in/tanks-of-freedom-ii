@@ -6,12 +6,14 @@ onready var map = $"map"
 onready var ui = $"ui"
 
 onready var audio = $"/root/SimpleAudioLibrary"
+onready var switcher = $"/root/SceneSwitcher"
 
 var state = preload("res://scenes/board/logic/state.gd").new()
 var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").new()
 var abilities = preload("res://scenes/abilities/abilities.gd").new(self)
 var events = preload("res://scenes/board/logic/events.gd").new()
 var scripting = preload("res://scenes/board/logic/scripting.gd").new()
+var ai = preload("res://scenes/board/logic/ai/ai.gd").new(self)
 
 
 var selected_tile = null
@@ -22,8 +24,9 @@ onready var movement_markers = $"marker_anchor/movement_markers"
 onready var interaction_markers = $"marker_anchor/interaction_markers"
 onready var path_markers = $"marker_anchor/path_markers"
 onready var ability_markers = $"marker_anchor/ability_markers"
-
 onready var explosion = $"marker_anchor/explosion"
+
+var ending_turn_in_progress = false
 
 func _ready():
     self.load_map("devmap")
@@ -31,19 +34,29 @@ func _ready():
     self.setup_radial_menu()
 
     self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_BLUE)
-    self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_RED)
+    self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_RED)
+    self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_GREEN)
+    self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_YELLOW)
     self.state.add_player_ap(0, 100)
-    self.state.add_player_ap(1, 50)
+    self.state.add_player_ap(1, 100)
+    self.state.add_player_ap(2, 100)
+    self.state.add_player_ap(3, 100)
 
     self.start_turn()
 
 func _input(event):
     if not self.ui.is_panel_open():
-        if event.is_action_pressed("ui_accept"):
-            self.select_tile(self.map.camera_tile_position)
+        if not self.state.is_current_player_ai():
+            if event.is_action_pressed("ui_accept"):
+                self.select_tile(self.map.camera_tile_position)
 
-        if event.is_action_pressed("ui_cancel"):
-            self.unselect_action()
+            if event.is_action_pressed("ui_cancel"):
+                self.unselect_action()
+
+            if event.is_action_pressed("end_turn"):
+                self.start_ending_turn()
+            elif event.is_action_released("end_turn"):
+                self.abort_ending_turn()
 
         if event.is_action_pressed("editor_menu"):
             self.toggle_radial_menu()
@@ -79,7 +92,8 @@ func set_up_board():
 
 
 func end_turn():
-    self.toggle_radial_menu()
+    if self.ui.radial.is_visible():
+        self.toggle_radial_menu()
     self.unselect_tile()
     self.remove_unit_hightlights()
     self.state.switch_to_next_player()
@@ -90,6 +104,14 @@ func start_turn():
     self.replenish_unit_actions()
     self.gain_building_ap()
     self.ui.update_resource_value(self.state.get_current_ap())
+    self.ui.flash_start_end_card(self.state.get_current_side(), self.state.turn)
+
+    if self.state.is_current_player_ai():
+        self.map.camera.ai_operated = true
+        self.ai.run()
+    else:
+        self.map.camera.ai_operated = false
+        self.map.move_camera_to_position(self.map.model.get_player_bunker_position(self.state.get_current_side()))
 
 
 func select_tile(position):
@@ -169,16 +191,21 @@ func toggle_radial_menu(context_object=null):
     else:
         self.map.camera.force_stick_reset()
 
+    # this might look odd, but is_visible does not change until the next frame after show/hide
+    if self.ui.radial.is_visible() and not self.state.is_current_player_ai():
+        self.map.camera.paused = false
+    elif not self.ui.radial.is_visible():
+        self.map.camera.paused = true
     self.ui.toggle_radial()
-    self.map.camera.paused = not self.map.camera.paused
+        
     self.map.tile_box.set_visible(not self.map.tile_box.is_visible())
 
 func setup_radial_menu(context_object=null):
     self.ui.radial.clear_fields()
     if context_object == null:
         self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load game", 2)
-        self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, get_tree(), "quit")
-        self.ui.radial.set_field(self.ui.icons.tick.instance(), "End Turn", 0, self, "end_turn")
+        self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, self.switcher, "main_menu")
+        #self.ui.radial.set_field(self.ui.icons.tick.instance(), "End Turn", 0, self, "end_turn")
     else:
         self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
         
@@ -406,4 +433,30 @@ func update_tile_highlight(tile):
         self.ui.update_tile_highlight_unit_panel(tile.unit.tile)
 
 func end_game(winner):
-    print("game ended, winner: " + winner)
+    self.map.camera.paused = true
+    self.ui.hide_resource()
+    self.ui.clear_tile_highlight()
+    self.ui.show_summary(winner)
+
+func start_ending_turn():
+    var step_delay = 0.1
+    var step_value = 2
+    var step_max = 30
+    self.ending_turn_in_progress = true
+    self.ui.show_end_turn()
+
+    var index = 0
+
+    while index * step_value <= step_max and self.ending_turn_in_progress:
+        self.ui.update_end_turn_progress(index * step_value)
+        yield(self.get_tree().create_timer(step_delay), "timeout")
+        index += 1
+
+    if self.ending_turn_in_progress:
+        self.abort_ending_turn()
+        self.end_turn()
+
+func abort_ending_turn():
+    self.ending_turn_in_progress = false
+    self.ui.hide_end_turn()
+

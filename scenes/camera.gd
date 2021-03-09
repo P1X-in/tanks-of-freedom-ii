@@ -17,6 +17,8 @@ export var device_id = 0
 export var rotate_speed = 100
 export var zoom_speed = 20
 export var move_speed = 50
+export var camera_auto_pan_follow_speed = 9.0
+export var camera_auto_pan_speed_modifier = 1.5
 export var camera_min_deg = -70
 export var camera_max_deg = -15
 export var camera_distance_min = 5
@@ -54,8 +56,14 @@ var aw_camera_distance = 0
 var _aw_camera_distance = 0
 
 var paused = false
+var ai_operated = false
 
 var reset_stick = false
+
+var camera_start = null
+var camera_destination = null
+var camera_transit_time = 0.0
+var camera_in_transit = false
 
 func _ready():
     self.camera_pivot = $"pivot"
@@ -91,9 +99,12 @@ func _input(event):
     if event.is_action_pressed("switch_camera"):
         self.switch_camera()
 
-func _process(_delta):
+func _process(delta):
     if self.paused:
         return
+
+    if self.camera_destination != null:
+        self.pan_camera(delta)
 
     if camera_angle_y != _camera_angle_y:
         _camera_angle_y = camera_angle_y
@@ -126,10 +137,14 @@ func _process(_delta):
 func _physics_process(delta):
     if self.paused:
         return
-        
+
     self.process_free_camera_input(delta)
     self.process_tof_camera_input(delta)
     self.process_aw_camera_input(delta)
+
+    if self.camera_in_transit or self.ai_operated:
+        return
+
     self.process_movement_input(delta)
 
 func process_free_camera_input(delta):
@@ -237,3 +252,35 @@ func switch_camera():
 
 func force_stick_reset():
     self.reset_stick = true
+
+func move_camera_to_position(destination):
+    var camera_position = self.get_translation()
+
+    self.camera_start = Vector2(camera_position.x, camera_position.z)
+    self.camera_destination = destination
+    self.camera_transit_time = 0.0
+    self.camera_in_transit = true
+
+func pan_camera(delta):
+    self.camera_transit_time += delta * self.camera_auto_pan_speed_modifier
+
+    var transit_time = self.camera_transit_time
+    if transit_time > 1.0:
+        transit_time = 1.0
+
+    var interpolated_position = self.camera_start.linear_interpolate(self.camera_destination, transit_time)
+
+    var camera_position = self.get_translation()
+    var camera_position_2d = Vector2(camera_position.x, camera_position.z)
+    var smooth_position = camera_position_2d.linear_interpolate(interpolated_position, delta * self.camera_auto_pan_follow_speed)
+
+    camera_position.x = smooth_position.x
+    camera_position.z = smooth_position.y
+
+    self.set_translation(camera_position)
+
+    if self.camera_transit_time >= 1.5:
+        self.camera_start = null
+        self.camera_destination = null
+        self.camera_transit_time = 0.0
+        self.camera_in_transit = false
