@@ -8,7 +8,9 @@ func _init():
 func execute(board, position):
     var new_unit = board.map.builder.place_unit(position, self.template_name, 0, board.state.get_current_side())
     board.use_current_player_ap(self.ap_cost)
-    board.select_tile(position)
+
+    if not board.state.is_current_player_ai():
+        board.select_tile(position)
 
     new_unit.replenish_moves()
     new_unit.sfx_effect("spawn")

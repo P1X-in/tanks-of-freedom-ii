@@ -283,4 +283,4 @@ func pan_camera(delta):
         self.camera_start = null
         self.camera_destination = null
         self.camera_transit_time = 0.0
-        self.camera_in_transit = false
+        self.camera_in_transit = false 

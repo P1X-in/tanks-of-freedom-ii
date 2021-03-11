@@ -434,6 +434,7 @@ func update_tile_highlight(tile):
 
 func end_game(winner):
     self.map.camera.paused = true
+    self.ai.abort()
     self.ui.hide_resource()
     self.ui.clear_tile_highlight()
     self.ui.show_summary(winner)
@@ -454,7 +455,7 @@ func start_ending_turn():
 
     if self.ending_turn_in_progress:
         self.abort_ending_turn()
-        self.end_turn()
+        self.call_deferred("end_turn")
 
 func abort_ending_turn():
     self.ending_turn_in_progress = false

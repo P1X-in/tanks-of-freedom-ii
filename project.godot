@@ -90,6 +90,7 @@ common/physics_fps=144
 
 [rendering]
 
+threads/thread_model=2
 quality/filters/anisotropic_filter_level=16
 quality/shadow_atlas/size=8192
 quality/shadow_atlas/size.mobile=4096

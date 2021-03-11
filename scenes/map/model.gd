@@ -67,6 +67,38 @@ func get_player_buildings(side):
 
     return buildings
 
+func get_player_units_tiles(side):
+    var units = []
+    for i in self.tiles.keys():
+        if self.tiles[i].has_friendly_unit(side):
+            units.append(self.tiles[i])
+
+    return units
+
+func get_player_buildings_tiles(side):
+    var buildings = []
+    for i in self.tiles.keys():
+        if self.tiles[i].has_friendly_building(side):
+            buildings.append(self.tiles[i])
+
+    return buildings
+
+func get_enemy_units_tiles(side):
+    var units = []
+    for i in self.tiles.keys():
+        if self.tiles[i].has_enemy_unit(side):
+            units.append(self.tiles[i])
+
+    return units
+
+func get_enemy_buildings_tiles(side):
+    var buildings = []
+    for i in self.tiles.keys():
+        if self.tiles[i].has_enemy_building(side):
+            buildings.append(self.tiles[i])
+
+    return buildings
+
 func ingest_scripts(incoming_scripts):
     if incoming_scripts == null:
         return
