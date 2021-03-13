@@ -111,3 +111,12 @@ func get_player_bunker_position(side):
             return self.tiles[i].position
 
     return null
+
+func get_player_bunkers(side):
+    var bunkers = []
+
+    for i in self.tiles.keys():
+        if self.tiles[i].has_friendly_hq(side):
+            bunkers.append(self.tiles[i])
+
+    return bunkers

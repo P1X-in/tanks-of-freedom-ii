@@ -9,3 +9,4 @@ func _init(abilit_object, target_object):
 
 func perform(board):
      self.ability.execute(board, self.target.position)
+     board.unselect_tile()

@@ -8,6 +8,8 @@ export var require_crew = true
 
 export var ap_gain = 5
 
+export var capture_value = 70
+
 var abilities = []
 
 func get_dict():

@@ -46,7 +46,9 @@ side = "blue"
 material_type = "metallic"
 max_move = 8
 armor = 1
+can_fly = true
 uses_metallic_material = true
+unit_value = 70
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )

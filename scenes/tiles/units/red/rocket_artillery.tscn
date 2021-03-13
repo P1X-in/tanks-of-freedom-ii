@@ -18,6 +18,7 @@ max_move = 5
 attack = 11
 armor = 0
 uses_metallic_material = true
+unit_value = 70
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 mesh = ExtResource( 3 )

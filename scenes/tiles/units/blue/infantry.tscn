@@ -16,6 +16,7 @@ side = "blue"
 attack = 6
 armor = 0
 can_capture = true
+unit_value = 25
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5 )

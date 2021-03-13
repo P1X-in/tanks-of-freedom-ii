@@ -29,14 +29,15 @@ onready var explosion = $"marker_anchor/explosion"
 var ending_turn_in_progress = false
 
 func _ready():
-    self.load_map("devmap")
+    self.load_map("crossroad2")
     self.set_up_board()
     self.setup_radial_menu()
 
-    self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_BLUE)
+    #self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_BLUE)
+    self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_BLUE)
     self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_RED)
-    self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_GREEN)
-    self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_YELLOW)
+    self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_GREEN)
+    self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_YELLOW)
     self.state.add_player_ap(0, 100)
     self.state.add_player_ap(1, 100)
     self.state.add_player_ap(2, 100)
@@ -97,10 +98,15 @@ func end_turn():
     self.unselect_tile()
     self.remove_unit_hightlights()
     self.state.switch_to_next_player()
-    self.start_turn()
+    self.call_deferred("start_turn")
 
 func start_turn():
     self.update_for_current_player()
+
+    if not self.state.is_current_player_ai():
+        self.map.move_camera_to_position(self.map.model.get_player_bunker_position(self.state.get_current_side()))
+        yield(self.get_tree().create_timer(1), "timeout")
+
     self.replenish_unit_actions()
     self.gain_building_ap()
     self.ui.update_resource_value(self.state.get_current_ap())
@@ -108,10 +114,12 @@ func start_turn():
 
     if self.state.is_current_player_ai():
         self.map.camera.ai_operated = true
+        self.map.hide_tile_box()
         self.ai.run()
     else:
         self.map.camera.ai_operated = false
-        self.map.move_camera_to_position(self.map.model.get_player_bunker_position(self.state.get_current_side()))
+        self.map.show_tile_box()
+
 
 
 func select_tile(position):
@@ -192,10 +200,17 @@ func toggle_radial_menu(context_object=null):
         self.map.camera.force_stick_reset()
 
     # this might look odd, but is_visible does not change until the next frame after show/hide
-    if self.ui.radial.is_visible() and not self.state.is_current_player_ai():
-        self.map.camera.paused = false
+    if not self.map.camera.ai_operated:
+        if self.ui.radial.is_visible() and not self.state.is_current_player_ai():
+            self.map.camera.paused = false
+        elif not self.ui.radial.is_visible():
+            self.map.camera.paused = true
+
+    if self.ui.radial.is_visible():
+        self.ai._ai_paused = false
     elif not self.ui.radial.is_visible():
-        self.map.camera.paused = true
+        self.ai._ai_paused = true
+
     self.ui.toggle_radial()
         
     self.map.tile_box.set_visible(not self.map.tile_box.is_visible())

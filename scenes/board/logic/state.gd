@@ -14,7 +14,8 @@ func add_player(type, side):
     self.players.append({
         "type": type,
         "side": side,
-        "ap" : 0
+        "ap" : 0,
+        "alive" : true
     })
 
 
@@ -23,6 +24,9 @@ func switch_to_next_player():
     if self.current_player >= self.players.size():
         self.current_player = 0
         self.turn += 1
+
+    if not self.is_current_player_alive():
+        self.switch_to_next_player()
 
 func get_current_player():
     return self.players[self.current_player]
@@ -54,3 +58,24 @@ func can_current_player_afford(amount):
 
 func is_current_player_ai():
     return self.get_current_param("type") == self.PLAYER_AI
+
+func is_current_player_alive():
+    return self.get_current_param("alive")
+
+func eliminate_player(side):
+    var index = 0
+
+    while index < self.players.size():
+        if self.players[index]['side'] == side:
+            self.players[index]['alive'] = false
+            return
+        index += 1
+
+func count_alive_players():
+    var amount = 0
+
+    for player in self.players:
+        if player["alive"]:
+            amount += 1
+
+    return amount

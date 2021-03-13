@@ -2,6 +2,7 @@
 var board
 var collector
 
+var _ai_paused = false
 var _ai_abort = false
 
 func _init(board_object):
@@ -16,6 +17,12 @@ func _finish_run():
     self.board.end_turn()
 
 func _ai_tick():
+    if self._ai_abort:
+        return
+
+    while self._ai_paused:
+        yield(self.board.get_tree().create_timer(0.5), "timeout")
+
     var selected_action = self.collector.select_best_action()
 
     if selected_action != null:

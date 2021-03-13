@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/units/blue/tank_modern.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://assets/materials/arne32_metallic_blue.tres" type="Material" id=2]
@@ -8,15 +8,14 @@
 [ext_resource path="res://assets/units/audio/tank_spawn.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/units/audio/tank_die.wav" type="AudioStream" id=7]
 [ext_resource path="res://assets/units/audio/tank_damage.wav" type="AudioStream" id=8]
+[ext_resource path="res://scenes/tiles/units/tank.gd" type="Script" id=9]
 
 [node name="tile" instance=ExtResource( 3 )]
-main_tile_view_cam_modifier = -10
-side_tile_view_cam_modifier = -25
-side = "blue"
-material_type = "metallic"
+script = ExtResource( 9 )
 max_move = 6
 attack = 10
 uses_metallic_material = true
+unit_value = 50
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 mesh = ExtResource( 1 )

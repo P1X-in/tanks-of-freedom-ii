@@ -64,6 +64,12 @@ func world_to_map(position):
 func set_tile_box_side(side):
     self.tile_box.set_mesh_material(self.templates.get_side_material(side))
 
+func show_tile_box():
+    self.tile_box.show()
+
+func hide_tile_box():
+    self.tile_box.hide()
+
 func move_camera_to_position(destination):
     if destination == null:
         return

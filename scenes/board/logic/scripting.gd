@@ -7,7 +7,8 @@ var event_templates = {
 }
 
 var outcome_templates = {
-    'end_game' : preload("res://scenes/board/logic/scripting/outcomes/end_game.gd")
+    'end_game' : preload("res://scenes/board/logic/scripting/outcomes/end_game.gd"),
+    'eliminate_player' : preload("res://scenes/board/logic/scripting/outcomes/eliminate_player.gd")
 }
 
 func ingest_scripts(board_object, incoming_scripts):
@@ -22,7 +23,7 @@ func setup_basic_win_condition():
 
 func build_hq_lost_event(hq_type):
     var event = self.event_templates['building_lost'].new()
-    var outcome = self.outcome_templates['end_game'].new()
+    var outcome = self.outcome_templates['eliminate_player'].new()
 
     event.outcome = outcome
     event.building_type = hq_type

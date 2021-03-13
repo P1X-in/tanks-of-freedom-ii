@@ -8,6 +8,7 @@
 [node name="tile" instance=ExtResource( 1 )]
 side = "red"
 ap_gain = 20
+capture_value = 1000
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource( 2 )
