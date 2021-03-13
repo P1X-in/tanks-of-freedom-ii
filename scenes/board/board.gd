@@ -33,8 +33,8 @@ func _ready():
     self.set_up_board()
     self.setup_radial_menu()
 
-    #self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_BLUE)
-    self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_BLUE)
+    self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_BLUE)
+    #self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_BLUE)
     self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_RED)
     self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_GREEN)
     self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_YELLOW)

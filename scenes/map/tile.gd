@@ -128,6 +128,13 @@ func neighbours_enemy_unit(side):
             return true
     return false
 
+func can_attack_neightbour_enemy_unit(unit):
+    for direction in self.neighbours.keys():
+        if self.neighbours[direction].has_enemy_unit(unit.side):
+            if unit.can_attack(self.neighbours[direction].unit.tile):
+                return true
+    return false
+
 func neighbours_enemy_building(side):
     for direction in self.neighbours.keys():
         if self.neighbours[direction].has_enemy_building(side):

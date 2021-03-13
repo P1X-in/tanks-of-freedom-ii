@@ -44,7 +44,7 @@ func _gather_attack_actions(entity_tile, ap):
             continue
 
         if entity_tile.is_neighbour(target_tile):
-            action = self._attack_action(entity_tile, entity_tile, target_tile)
+            action = self._attack_action(entity_tile, null, target_tile, [])
             action.value += unit_range
             actions.append(action)
             continue
@@ -68,8 +68,7 @@ func _gather_attack_actions(entity_tile, ap):
                         action.value = target_tile.unit.tile.unit_value - 20
                         actions.append(action)
                 else:
-                    action = self._attack_action(entity_tile, interaction_tile, target_tile)
-                    #action.value += (unit_range - (path.size() - 1))
+                    action = self._attack_action(entity_tile, interaction_tile, target_tile, path)
                     action.value -= path.size()
                     actions.append(action)
 
@@ -95,7 +94,7 @@ func _gather_capture_actions(entity_tile, ap):
         target_tile = self.pathfinder.enemy_buildings[enemy_building_tile]
 
         if entity_tile.is_neighbour(target_tile):
-            action = self._capture_action(entity_tile, entity_tile, target_tile)
+            action = self._capture_action(entity_tile, null, target_tile, [])
             action.value = target_tile.building.tile.capture_value - (unit.unit_value - 20)
             actions.append(action)
             continue
@@ -119,14 +118,15 @@ func _gather_capture_actions(entity_tile, ap):
                         action.value = 10
                         actions.append(action)
                 else:
-                    action = self._capture_action(entity_tile, interaction_tile, target_tile)
+                    action = self._capture_action(entity_tile, interaction_tile, target_tile, path)
                     action.value = target_tile.building.tile.capture_value - (unit.unit_value - 20)
+                    action.value -= path.size()
                     actions.append(action)
 
     return actions
 
-func _attack_action(entity_tile, interaction_tile, target_tile):
-    var action = self.actions_templates['attack'].new(entity_tile, interaction_tile, target_tile)
+func _attack_action(entity_tile, interaction_tile, target_tile, path):
+    var action = self.actions_templates['attack'].new(entity_tile, interaction_tile, target_tile, path.size())
     
     var value = target_tile.unit.tile.unit_value
 
@@ -139,8 +139,8 @@ func _attack_action(entity_tile, interaction_tile, target_tile):
 
     return action
 
-func _capture_action(entity_tile, interaction_tile, target_tile):
-    return self.actions_templates['capture'].new(entity_tile, interaction_tile, target_tile)
+func _capture_action(entity_tile, interaction_tile, target_tile, path):
+    return self.actions_templates['capture'].new(entity_tile, interaction_tile, target_tile, path.size())
 
 func _approach_action(entity_tile, path, unit_range):
     if unit_range < 1:
@@ -149,7 +149,7 @@ func _approach_action(entity_tile, path, unit_range):
     var target_tile = self.pathfinder.visited_tiles[path[path.size() - unit_range - 1]]
 
     if target_tile.can_acommodate_unit():
-        return self.actions_templates['move'].new(entity_tile, target_tile)
+        return self.actions_templates['move'].new(entity_tile, target_tile, unit_range)
     else:
         var nearby_path
         var nearby_tiles = self._get_interaction_tiles(target_tile)
@@ -159,7 +159,7 @@ func _approach_action(entity_tile, path, unit_range):
             if nearby_path.size() - 1 > unit_range:
                 continue
             if nearby_tile.can_acommodate_unit():
-                return self.actions_templates['move'].new(entity_tile, nearby_tile)
+                return self.actions_templates['move'].new(entity_tile, nearby_tile, nearby_path.size())
 
     return null
 

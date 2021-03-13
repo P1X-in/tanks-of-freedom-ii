@@ -13,7 +13,6 @@ func run():
     self.call_deferred("_ai_tick")
 
 func _finish_run():
-    yield(self.board.get_tree().create_timer(1), "timeout")
     self.board.end_turn()
 
 func _ai_tick():

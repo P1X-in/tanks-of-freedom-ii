@@ -80,7 +80,7 @@ func move_camera_to_position_if_far_away(destination):
     if destination == null:
         return false
 
-    if self.camera_tile_position.distance_squared_to(destination) > 16:
+    if self.camera_tile_position.distance_squared_to(destination) > 9:
         self.move_camera_to_position(destination)
 
     return true
