@@ -1,0 +1,156 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/ui/minimap/minimap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/ui/menu/skirmish.gd" type="Script" id=3]
+[ext_resource path="res://scenes/ui/menu/skirmish_player.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[node name="skirmish" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+margin_left = -600.0
+margin_top = -350.0
+margin_right = 600.0
+margin_bottom = 350.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="widgets" type="Control" parent="."]
+margin_left = -600.0
+margin_top = -350.0
+margin_right = 600.0
+margin_bottom = 350.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="skirmish_player_0" parent="widgets" instance=ExtResource( 4 )]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = -520.0
+margin_bottom = -545.0
+
+[node name="skirmish_player_1" parent="widgets" instance=ExtResource( 4 )]
+margin_left = 30.0
+margin_top = 155.0
+margin_right = -520.0
+margin_bottom = -420.0
+
+[node name="skirmish_player_2" parent="widgets" instance=ExtResource( 4 )]
+margin_left = 30.0
+margin_top = 280.0
+margin_right = -520.0
+margin_bottom = -295.0
+
+[node name="skirmish_player_3" parent="widgets" instance=ExtResource( 4 )]
+margin_left = 30.0
+margin_top = 405.0
+margin_right = -520.0
+margin_bottom = -170.0
+
+[node name="minimap" parent="widgets" instance=ExtResource( 1 )]
+margin_left = 930.0
+margin_top = 280.0
+margin_right = 970.0
+margin_bottom = 320.0
+
+[node name="start_button" type="Button" parent="widgets"]
+margin_left = 1070.0
+margin_top = 640.0
+margin_right = 1170.0
+margin_bottom = 670.0
+custom_fonts/font = ExtResource( 2 )
+text = "Start"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="back_button" type="Button" parent="widgets"]
+margin_left = 30.0
+margin_top = 640.0
+margin_right = 130.0
+margin_bottom = 670.0
+custom_fonts/font = ExtResource( 2 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="animations" type="AnimationPlayer" parent="."]
+playback_speed = 4.0
+anims/hide = SubResource( 1 )
+anims/show = SubResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+[connection signal="pressed" from="widgets/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

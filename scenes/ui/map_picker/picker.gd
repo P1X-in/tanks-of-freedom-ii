@@ -123,6 +123,7 @@ func show_picker():
     self.set_process_input(true)
 
     self.refresh_current_maps_page()
+    yield(self.get_tree().create_timer(0.1), "timeout")
     if self.map_selection_buttons[0].is_visible():
         self.map_selection_buttons[0].grab_focus()
     elif self.name_group.is_visible():

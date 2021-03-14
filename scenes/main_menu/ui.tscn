@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/main_menu/ui.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ui/menu/logo_view.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/ui/menu/menu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/gui/ui_theme.tres" type="Theme" id=4]
+[ext_resource path="res://scenes/ui/map_picker/picker.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/ui/menu/skirmish.tscn" type="PackedScene" id=6]
+
+[node name="ui" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 4 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="logo" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_top = -160.0
+margin_bottom = -120.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="logo_view" parent="logo" instance=ExtResource( 2 )]
+
+[node name="options" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 6.10352e-05
+margin_top = 20.0
+margin_right = 6.10352e-05
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" parent="options" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_bottom = 40.0
+
+[node name="map_picker" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="picker" parent="map_picker" instance=ExtResource( 5 )]
+
+[node name="skirmish" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_top = -20.0
+margin_bottom = 20.0
+
+[node name="skirmish" parent="skirmish" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_bottom = 40.0
+rect_scale = Vector2( 1, 1 )

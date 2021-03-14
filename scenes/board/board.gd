@@ -7,6 +7,7 @@ onready var ui = $"ui"
 
 onready var audio = $"/root/SimpleAudioLibrary"
 onready var switcher = $"/root/SceneSwitcher"
+onready var match_setup = $"/root/MatchSetup"
 
 var state = preload("res://scenes/board/logic/state.gd").new()
 var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").new()
@@ -29,19 +30,18 @@ onready var explosion = $"marker_anchor/explosion"
 var ending_turn_in_progress = false
 
 func _ready():
-    self.load_map("crossroad2")
+    print(self.match_setup.setup)
+
+    self.load_map(self.match_setup.map_name)
     self.set_up_board()
     self.setup_radial_menu()
 
-    self.state.add_player(self.state.PLAYER_HUMAN, self.map.templates.PLAYER_BLUE)
-    #self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_BLUE)
-    self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_RED)
-    self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_GREEN)
-    self.state.add_player(self.state.PLAYER_AI, self.map.templates.PLAYER_YELLOW)
-    self.state.add_player_ap(0, 100)
-    self.state.add_player_ap(1, 100)
-    self.state.add_player_ap(2, 100)
-    self.state.add_player_ap(3, 100)
+    var index = 0
+    for player_setup in self.match_setup.setup:
+        if player_setup["side"] != self.map.templates.PLAYER_NEUTRAL:
+            self.state.add_player(player_setup["type"], player_setup["side"])
+            self.state.add_player_ap(index, player_setup["ap"])
+            index += 1
 
     self.start_turn()
 
@@ -219,7 +219,7 @@ func setup_radial_menu(context_object=null):
     self.ui.radial.clear_fields()
     if context_object == null:
         self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load game", 2)
-        self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, self.switcher, "main_menu")
+        self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, self, "main_menu")
         #self.ui.radial.set_field(self.ui.icons.tick.instance(), "End Turn", 0, self, "end_turn")
     else:
         self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
@@ -475,4 +475,8 @@ func start_ending_turn():
 func abort_ending_turn():
     self.ending_turn_in_progress = false
     self.ui.hide_end_turn()
+
+func main_menu():
+    self.ai.abort()
+    self.switcher.main_menu()
 

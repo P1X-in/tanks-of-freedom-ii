@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/ui/menu/skirmish_player.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=2]
+
+[node name="skirmish_player" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1270.0
+margin_bottom = -955.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="blue_player" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_right = -250.0
+margin_bottom = 1.00001
+custom_fonts/font = ExtResource( 2 )
+text = "Sapphire Dawn"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="red_player" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_right = -250.0
+margin_bottom = 1.00001
+custom_fonts/font = ExtResource( 2 )
+text = "Ruby Dusk"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="yellow_player" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_right = -250.0
+margin_bottom = 1.00001
+custom_fonts/font = ExtResource( 2 )
+text = "Amber Noon"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="green_player" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_right = -250.0
+margin_bottom = 1.00001
+custom_fonts/font = ExtResource( 2 )
+text = "Jade Twilight"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="player_type" type="Button" parent="."]
+margin_left = 400.0
+margin_top = 15.0
+margin_right = 500.0
+margin_bottom = 110.0
+text = "HUMAN"
+
+[node name="starting_ap" type="Button" parent="."]
+margin_left = 515.0
+margin_top = 15.0
+margin_right = 615.0
+margin_bottom = 110.0
+text = "50 AP"
+[connection signal="pressed" from="player_type" to="." method="_on_player_type_pressed"]
+[connection signal="pressed" from="starting_ap" to="." method="_on_starting_ap_pressed"]

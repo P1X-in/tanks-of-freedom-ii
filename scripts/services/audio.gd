@@ -26,6 +26,7 @@ func track(name):
     if not self.soundtracks.has(name):
         return
 
+    self.stop()
     self.soundtracks[name].play()
     self.current_track = self.soundtracks[name]
 

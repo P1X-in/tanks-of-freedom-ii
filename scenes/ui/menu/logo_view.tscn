@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/ui/menu/logo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/ui/board/3d_element_view.tscn" type="PackedScene" id=2]
+
+[node name="logo_view" instance=ExtResource( 2 )]
+
+[node name="Viewport" parent="." index="2"]
+size = Vector2( 600, 600 )
+
+[node name="logo" parent="Viewport" index="1" instance=ExtResource( 1 )]
+
+[editable path="Viewport/tile_cam"]

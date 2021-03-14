@@ -1,5 +1,6 @@
 extends Node
 
+const MAX_MAP_SIZE = 40
 const LIST_FILE_PATH = "user://known_maps_list.json"
 const MAP_PATH = "user://"
 const MAP_EXTENSION = ".tofmap.json"

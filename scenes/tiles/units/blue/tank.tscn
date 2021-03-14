@@ -12,6 +12,10 @@
 
 [node name="tile" instance=ExtResource( 3 )]
 script = ExtResource( 9 )
+main_tile_view_cam_modifier = -10
+side_tile_view_cam_modifier = -25
+side = "blue"
+material_type = "metallic"
 max_move = 6
 attack = 10
 uses_metallic_material = true

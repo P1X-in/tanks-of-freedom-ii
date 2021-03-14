@@ -1,7 +1,5 @@
 extends Control
 
-const MAX_MAP_SIZE = 40
-
 onready var map_list_service = $"/root/MapList"
 onready var minimap = $"minimap"
 
@@ -67,8 +65,8 @@ func fill_minimap(map_name):
     
     var key
 
-    for y in range(self.MAX_MAP_SIZE):
-        for x in range(self.MAX_MAP_SIZE):
+    for y in range(self.map_list_service.MAX_MAP_SIZE):
+        for x in range(self.map_list_service.MAX_MAP_SIZE):
             key = str(x) + "_" + str(y)
             if map_data["tiles"].has(key):
                 self.set_cell_from_data(x, y, map_data["tiles"][key])
@@ -135,6 +133,6 @@ func set_cell(x, y, id):
     self.minimap.set_cell(x, y, id)
 
 func wipe():
-    for y in range(self.MAX_MAP_SIZE):
-        for x in range(self.MAX_MAP_SIZE):
+    for y in range(self.map_list_service.MAX_MAP_SIZE):
+        for x in range(self.map_list_service.MAX_MAP_SIZE):
             self.set_cell_from_data(x, y, null)

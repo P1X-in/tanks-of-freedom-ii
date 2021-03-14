@@ -7,6 +7,7 @@ onready var ui = $"ui"
 onready var map_list_service = $"/root/MapList"
 
 onready var audio = $"/root/SimpleAudioLibrary"
+onready var switcher = $"/root/SceneSwitcher"
 
 var rotations = preload("res://scenes/map_editor/rotations.gd").new()
 
@@ -172,7 +173,7 @@ func toggle_radial_menu():
 
 func setup_radial_menu():
     self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load map", 2, self, "open_picker")
-    self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, get_tree(), "quit")
+    self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, self.switcher, "main_menu")
     self.ui.radial.set_field(self.ui.icons.trash.instance(), "Clear editor", 4, self, "wipe_editor")
 
 
