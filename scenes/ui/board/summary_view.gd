@@ -32,4 +32,5 @@ func _on_menu_button_pressed():
 
 
 func _on_restart_button_pressed():
-    return
+    self.gamepad_adapter.disable()
+    self.switcher.board()

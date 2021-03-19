@@ -13,14 +13,26 @@ onready var red_player = $"red_player"
 onready var yellow_player = $"yellow_player"
 onready var green_player = $"green_player"
 
+onready var blue_border = $"border_blue"
+onready var red_border = $"border_red"
+onready var yellow_border = $"border_yellow"
+onready var green_border = $"border_green"
+
 onready var type_button = $"player_type"
 onready var ap_button = $"starting_ap"
+onready var swap_button = $"swap"
 
 var side
 var ap
 var type
+export var index = 0
+export(NodePath) var swap_target = null
 
 onready var audio = $"/root/SimpleAudioLibrary"
+
+
+func _ready():
+    self.swap_target = self.get_node(self.swap_target)
 
 func fill_panel(player_side):
     self._reset_labels()
@@ -30,12 +42,16 @@ func fill_panel(player_side):
     match player_side:
         "blue":
             self.blue_player.show()
+            self.blue_border.show()
         "red":
             self.red_player.show()
+            self.red_border.show()
         "yellow":
             self.yellow_player.show()
+            self.yellow_border.show()
         "green":
             self.green_player.show()
+            self.green_border.show()
 
 func _reset_labels():
     self.blue_player.hide()
@@ -43,12 +59,20 @@ func _reset_labels():
     self.yellow_player.hide()
     self.green_player.hide()
 
+    self.blue_border.hide()
+    self.red_border.hide()
+    self.yellow_border.hide()
+    self.green_border.hide()
+
     self.ap = self.AP_STEP
     self.type = self.PLAYER_HUMAN
     self.side = null
 
     self._update_type_label()
     self._update_ap_label()
+
+    if self.index == 0:
+        self.swap_button.hide()
 
 func _update_type_label():
     if self.type == self.PLAYER_HUMAN:
@@ -75,3 +99,22 @@ func _on_starting_ap_pressed():
     if self.ap > self.AP_MAX:
         self.ap = 0
     self._update_ap_label()
+
+
+func _on_swap_pressed():
+    self.audio.play("menu_click")
+    var own_side = self.side
+    var own_ap = self.ap
+    var own_type = self.type
+
+    self.fill_panel(self.swap_target.side)
+    self.ap = self.swap_target.ap
+    self.type = self.swap_target.type
+    self._update_type_label()
+    self._update_ap_label()
+
+    self.swap_target.fill_panel(own_side)
+    self.swap_target.ap = own_ap
+    self.swap_target.type = own_type
+    self.swap_target._update_type_label()
+    self.swap_target._update_ap_label()

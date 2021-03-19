@@ -56,10 +56,10 @@ func _hide_player_panels():
         panel.hide()
         panel._reset_labels()
 
-func _fill_player_panels(map_name):
+func _fill_player_panels(name):
     self._hide_player_panels()
 
-    var sides = self._gather_player_sides(self._get_map_data(map_name))
+    var sides = self._gather_player_sides(self._get_map_data(name))
 
     var index = 0
 
@@ -109,12 +109,12 @@ func _on_back_button_pressed():
     self.audio.play("menu_click")
     self.main_menu.close_skirmish()
 
-func _get_map_data(map_name):
-    if self.cache.has(map_name):
-        return self.cache[map_name]
+func _get_map_data(name):
+    if self.cache.has(name):
+        return self.cache[name]
 
-    var map_data = self.map_list_service.get_map_data(map_name)
+    var map_data = self.map_list_service.get_map_data(name)
 
-    self.cache[map_name] = map_data
+    self.cache[name] = map_data
 
     return map_data

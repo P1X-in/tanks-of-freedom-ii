@@ -31,6 +31,10 @@ func _ai_tick():
             yield(self.board.get_tree().create_timer(1), "timeout")
             if self._ai_abort:
                 return
+            if self._ai_paused:
+                self.call_deferred("_ai_tick")
+                return
+
         var result = selected_action.perform(self.board)
         if result is GDScriptFunctionState: # Still working.
             result = yield(result, "completed")

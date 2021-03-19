@@ -97,24 +97,31 @@ margin_left = 30.0
 margin_top = 30.0
 margin_right = -520.0
 margin_bottom = -545.0
+swap_target = NodePath(".")
 
 [node name="skirmish_player_1" parent="widgets" instance=ExtResource( 4 )]
 margin_left = 30.0
 margin_top = 155.0
 margin_right = -520.0
 margin_bottom = -420.0
+index = 1
+swap_target = NodePath("../skirmish_player_0")
 
 [node name="skirmish_player_2" parent="widgets" instance=ExtResource( 4 )]
 margin_left = 30.0
 margin_top = 280.0
 margin_right = -520.0
 margin_bottom = -295.0
+index = 2
+swap_target = NodePath("../skirmish_player_1")
 
 [node name="skirmish_player_3" parent="widgets" instance=ExtResource( 4 )]
 margin_left = 30.0
 margin_top = 405.0
 margin_right = -520.0
 margin_bottom = -170.0
+index = 3
+swap_target = NodePath("../skirmish_player_2")
 
 [node name="minimap" parent="widgets" instance=ExtResource( 1 )]
 margin_left = 930.0
