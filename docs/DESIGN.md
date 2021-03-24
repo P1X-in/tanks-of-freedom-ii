@@ -465,7 +465,7 @@ Storyteller is a module, that allows for in-game scripting of missions. It consi
 - trigger is enabled/disabled
 
 #### ToF 1 scripting examples
-
+```
 var stories = {
     'tower_tip' : [
         {'action' : 'lock', 'details' : {}, 'delay' : 2},
@@ -536,6 +536,7 @@ var triggers = {
     'assasin' : {'type' : 'assasination', 'story' : 'moved', 'details' : { 'vip' : Vector2(9, 8) }, 'one_off' : true},
     'reinforce_enemy' : {'type' : 'deploy', 'story' : 'moved', 'details' : { 'amount' : 1, 'player' : 1 }, 'one_off' : true},
 }
+```
 
 ## Marketing
 
