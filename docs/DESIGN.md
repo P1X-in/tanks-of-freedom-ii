@@ -431,6 +431,112 @@ Trello might be swapped for an open-source alternative if it's transition into m
 
 Github repository will be used to store code and assets publicly.
 
+### Storyteller
+
+Storyteller is a module, that allows for in-game scripting of missions. It consists of _triggers_ and _actions_.
+
+#### Triggers
+- start of turn X
+- end of turn X
+- unit (player X) enters one of listed tiles
+- unit X enters one of listed tiles
+- player X has Y units (of type Z) (exactly)
+- player X controls Y of listed buildings
+- all units for player X are destroyed
+- unit X is destroyed
+- one-off triggers are properly saved/loaded
+- make stories play in cpu turn without breaking stuff
+
+#### Actions
+- message is displayed
+- lock/unlock hud
+- move/zoom camera
+- move unit
+- sleep
+- player X wins
+- terrain element is added
+- terrain element is removed
+- unit is spawned
+- unit is attacked
+- building is claimed
+- unit X is destroyed
+- unit X is despawned
+- building is damaged
+- trigger is enabled/disabled
+
+#### ToF 1 scripting examples
+
+var stories = {
+    'tower_tip' : [
+        {'action' : 'lock', 'details' : {}, 'delay' : 2},
+        {'action' : 'camera', 'details' : {'where' : Vector2(6, 11), 'zoom' : 1}, 'delay' : 2},
+        {'action' : 'message', 'details': {'text' : 'CAMPAIGN_MISSION_1_TOWER_TIP', 'portrait' : 'soldier_blue', 'name' : 'NAME_FREEDOM_FIGHTER', 'side' : 'left'}},
+
+        {'action' : 'camera', 'details' : {'where' : Vector2(6, 4), 'zoom' : 1}, 'delay' : 1},
+        {'action' : 'claim', 'details' : {'what' : Vector2(6, 4), 'side' : 1}, 'delay' : 2},
+
+
+        {'action' : 'camera', 'details' : {'where' : Vector2(9, 4), 'zoom' : 2}, 'delay' : 2},
+        {'action' : 'message', 'details': {'text' : 'CAMPAIGN_MISSION_1_ENEMY_HQ', 'portrait' : 'soldier_blue', 'name' : 'NAME_FREEDOM_FIGHTER', 'side' : 'right'}},
+
+        {'action' : 'spawn', 'details' : {'where' : Vector2(8, 3), 'unit' : 'soldier', 'side' : 'red'}, 'delay' : 1},
+
+        {'action' : 'move', 'details' : {'who' : Vector2(9, 7), 'where' : Vector2(9, 6)}, 'delay' : 1},
+
+        {'action' : 'move', 'details' : {'who' : Vector2(8, 4), 'where' : Vector2(8, 5)}},
+        {'action' : 'move', 'details' : {'who' : Vector2(9, 4), 'where' : Vector2(9, 5)}, 'delay' : 1},
+
+        {'action' : 'attack', 'details' : {'who' : Vector2(9, 5), 'whom' : Vector2(9, 6)}, 'delay' : 1},
+
+        {'action' : 'die', 'details' : {'who' : Vector2(9, 6)}, 'delay' : 2},
+
+        {'action' : 'camera', 'details' : {'where' : Vector2(8, 12), 'zoom' : 3}, 'delay' : 2},
+
+
+        {'action' : 'camera', 'details' : {'where' : Vector2(7, 6), 'zoom' : 1}, 'delay' : 1},
+        {'action' : 'terrain_add', 'details' : {'where' : Vector2(7, 6), 'type' : 'city_small'}},
+        {'action' : 'terrain_add', 'details' : {'where' : Vector2(7, 7), 'type' : 'city_big'}},
+        {'action' : 'terrain_add', 'details' : {'where' : Vector2(7, 8), 'type' : 'forest'}},
+        {'action' : 'terrain_add', 'details' : {'where' : Vector2(6, 6), 'type' : 'mountain'}},
+        {'action' : 'terrain_add', 'details' : {'where' : Vector2(6, 7), 'type' : 'wall', 'frame' : 1}},
+
+        {'action' : 'terrain_remove', 'details' : {'where'  : Vector2(6, 7), 'explosion' : true}, 'delay' : 0.5},
+        {'action' : 'terrain_remove', 'details' : {'where'  : Vector2(6, 6), 'explosion' : false}},
+
+        {'action' : 'terrain_damage', 'details' : {'where' : Vector2(8, 7)}, 'delay' : 1},
+
+        {'action' : 'camera', 'details' : {'where' : Vector2(9, 4), 'zoom' : 2}, 'delay' : 2},
+        {'action' : 'despawn', 'details' : {'who' : Vector2(8, 3)}, 'delay' : 1},
+
+        {'action' : 'unlock', 'details' : {}},
+        #{'action' : 'win', 'details' : {'player' : 0}}
+
+    ],
+
+    'turn_end' : [
+        {'action' : 'lock', 'details' : {}, 'delay' : 2},
+        {'action' : 'message', 'details': {'text' : 'CAMPAIGN_MISSION_1_ENEMY_HQ', 'portrait' : 'soldier_blue', 'name' : 'NAME_FREEDOM_FIGHTER', 'side' : 'right'}},
+        {'action' : 'unlock', 'details' : {}},
+    ],
+
+    'moved' : [
+        {'action' : 'lock', 'details' : {}, 'delay' : 2},
+        {'action' : 'message', 'details': {'text' : 'CAMPAIGN_MISSION_1_ENEMY_HQ', 'portrait' : 'soldier_blue', 'name' : 'NAME_FREEDOM_FIGHTER', 'side' : 'right'}},
+        {'action' : 'unlock', 'details' : {}},
+    ]
+}
+
+var triggers = {
+    'first_turn' : {'type' : 'turn', 'story' : 'tower_tip', 'details' : { 'turn' : 1 }},
+    'first_turn_end' : {'type' : 'turn_end', 'story' : 'turn_end', 'details' : { 'turn' : 1 }},
+    'moved' : {'type' : 'move', 'story' : 'moved', 'details' : { 'fields' : [Vector2(9, 6)], 'player' : 0 }, 'one_off' : true},
+    'moved_vip' : {'type' : 'move', 'story' : 'moved', 'details' : { 'fields' : [Vector2(9, 9)], 'vip' : Vector2(9, 8) }, 'one_off' : true},
+    'reinforce' : {'type' : 'deploy', 'story' : 'moved', 'details' : { 'amount' : 2, 'player' : 0 }, 'one_off' : true},
+    'claim' : {'type' : 'domination', 'story' : 'moved', 'details' : { 'amount' : 2, 'list' : [Vector2(6, 4), Vector2(6, 11)], 'player' : 0 }, 'one_off' : true},
+    'assasin' : {'type' : 'assasination', 'story' : 'moved', 'details' : { 'vip' : Vector2(9, 8) }, 'one_off' : true},
+    'reinforce_enemy' : {'type' : 'deploy', 'story' : 'moved', 'details' : { 'amount' : 1, 'player' : 1 }, 'one_off' : true},
+}
+
 ## Marketing
 
 Make the project visible in GodotEngine community. Original ToF used to be quite popular, so maybe some of that popularity can be restored.
