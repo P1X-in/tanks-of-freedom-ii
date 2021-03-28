@@ -2,8 +2,8 @@
 var board
 var scripts
 
-var event_templates = {
-    'building_lost' : preload("res://scenes/board/logic/scripting/events/building_lost.gd")
+var trigger_templates = {
+    'building_lost' : preload("res://scenes/board/logic/scripting/triggers/building_lost.gd")
 }
 
 var outcome_templates = {
@@ -15,20 +15,21 @@ func ingest_scripts(board_object, incoming_scripts):
     self.board = board_object
     self.scripts = incoming_scripts
 
-    self.setup_basic_win_condition()
+    if self.scripts == null or self.scripts.empty():
+        self._setup_basic_win_condition()
 
-func setup_basic_win_condition():
-    self.build_hq_lost_event(self.board.map.templates.MODERN_HQ)
-    self.build_hq_lost_event(self.board.map.templates.STEAMPUNK_HQ)
+func _setup_basic_win_condition():
+    self._build_hq_lost_event(self.board.map.templates.MODERN_HQ)
+    self._build_hq_lost_event(self.board.map.templates.STEAMPUNK_HQ)
 
-func build_hq_lost_event(hq_type):
-    var event = self.event_templates['building_lost'].new()
+func _build_hq_lost_event(hq_type):
+    var trigger = self.trigger_templates['building_lost'].new()
     var outcome = self.outcome_templates['eliminate_player'].new()
 
-    event.outcome = outcome
-    event.building_type = hq_type
+    trigger.outcome = outcome
+    trigger.building_type = hq_type
 
     outcome.board = self.board
 
-    self.board.events.register_observer(self.board.events.types.BUILDING_CAPTURED, event, 'observe')
+    self.board.events.register_observer(self.board.events.types.BUILDING_CAPTURED, trigger, 'observe')
     

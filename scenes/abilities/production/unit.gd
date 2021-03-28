@@ -14,3 +14,8 @@ func execute(board, position):
 
     new_unit.replenish_moves()
     new_unit.sfx_effect("spawn")
+
+    var event = board.events.get_new_event(board.events.types.UNIT_SPAWNED)
+    event.source = self.source
+    event.unit = new_unit
+    board.events.emit_event(event)

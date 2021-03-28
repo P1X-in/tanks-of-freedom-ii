@@ -1,4 +1,4 @@
-extends "res://scenes/board/logic/scripting/events/base_event.gd"
+extends "res://scenes/board/logic/scripting/triggers/base_trigger.gd"
 
 var building = null
 var building_type = null

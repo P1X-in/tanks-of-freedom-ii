@@ -30,8 +30,6 @@ onready var explosion = $"marker_anchor/explosion"
 var ending_turn_in_progress = false
 
 func _ready():
-    print(self.match_setup.setup)
-
     self.load_map(self.match_setup.map_name)
     self.set_up_board()
     self.setup_radial_menu()
@@ -259,6 +257,12 @@ func move_unit(source_tile, destination_tile):
     self.reset_unit_position(source_tile, destination_tile.unit.tile)
     self.update_unit_position(destination_tile)
 
+    var event = self.events.get_new_event(self.events.types.UNIT_MOVED)
+    event.unit = destination_tile.unit.tile
+    event.start = source_tile
+    event.finish = destination_tile
+    self.events.emit_event(event)
+
 func update_unit_position(tile):
     var path = self.movement_markers.get_path_to_tile(tile)
     var movement_path = self.path_markers.convert_path_to_directions(path)
@@ -305,6 +309,7 @@ func handle_interaction(tile):
 func battle(attacker_tile, defender_tile):
     var attacker = attacker_tile.unit.tile
     var defender = defender_tile.unit.tile
+    var event
 
     attacker.use_move(1)
     attacker.use_attack()
@@ -328,10 +333,29 @@ func battle(attacker_tile, defender_tile):
                 defender.sfx_effect("attack")
                 attacker.show_explosion()
                 attacker.sfx_effect("damage")
+
+                event = self.events.get_new_event(self.events.types.UNIT_ATTACKED)
+                event.unit = attacker
+                event.attacker = defender
+                self.events.emit_event(event)
             else:
+                event = self.events.get_new_event(self.events.types.UNIT_DESTROYED)
+                event.unit_id = attacker.get_instance_ID()
+                event.attacker = defender
+                self.events.emit_event(event)
+
                 self.unselect_tile()
                 self.destroy_unit_on_tile(attacker_tile)
+
+        event = self.events.get_new_event(self.events.types.UNIT_ATTACKED)
+        event.unit = defender
+        event.attacker = attacker
+        self.events.emit_event(event)
     else:
+        event = self.events.get_new_event(self.events.types.UNIT_DESTROYED)
+        event.unit_id = defender.get_instance_ID()
+        event.attacker = attacker
+        self.events.emit_event(event)
         self.destroy_unit_on_tile(defender_tile)
 
 func destroy_unit_on_tile(tile):

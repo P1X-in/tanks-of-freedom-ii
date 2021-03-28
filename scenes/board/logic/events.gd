@@ -2,7 +2,13 @@
 var types = preload("res://scenes/board/logic/events/types.gd").new()
 
 var event_templates = {
-    self.types.BUILDING_CAPTURED : preload("res://scenes/board/logic/events/building_captured.gd")
+    self.types.BUILDING_CAPTURED : preload("res://scenes/board/logic/events/building_captured.gd"),
+    self.types.UNIT_SPAWNED : preload("res://scenes/board/logic/events/unit_spawned.gd"),
+    self.types.UNIT_MOVED : preload("res://scenes/board/logic/events/unit_moved.gd"),
+    self.types.UNIT_ATTACKED : preload("res://scenes/board/logic/events/unit_attacked.gd"),
+    self.types.UNIT_DESTROYED : preload("res://scenes/board/logic/events/unit_destroyed.gd"),
+    self.types.TURN_STARTED : preload("res://scenes/board/logic/events/turn_started.gd"),
+    self.types.ABILITY_USED : preload("res://scenes/board/logic/events/ability_used.gd")
 }
 
 var observers = {}
@@ -26,4 +32,6 @@ func register_observer(event_type, observer_object, observer_method):
 func emit_event(event_object):
     if self.observers.has(event_object.type):
         for observer in self.observers[event_object.type]:
+            if observer['observer_object'].suspended:
+                continue
             observer['observer_object'].call(observer['observer_method'], event_object)
