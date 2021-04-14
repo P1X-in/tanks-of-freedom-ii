@@ -35,3 +35,48 @@ func emit_event(event_object):
             if observer['observer_object'].suspended:
                 continue
             observer['observer_object'].call(observer['observer_method'], event_object)
+
+
+func emit_building_captured(building, old_side, new_side):
+    var event = self.get_new_event(self.types.BUILDING_CAPTURED)
+    event.building = building
+    event.old_side = old_side
+    event.new_side = new_side
+    self.emit_event(event)
+
+func emit_unit_attacked(attacker, defender):
+    var event = self.get_new_event(self.types.UNIT_ATTACKED)
+    event.unit = defender
+    event.attacker = attacker
+    self.emit_event(event)
+
+func emit_unit_destroyed(attacker, defender_id):
+    var event = self.get_new_event(self.types.UNIT_DESTROYED)
+    event.unit_id = defender_id
+    event.attacker = attacker
+    self.emit_event(event)
+
+func emit_unit_spawned(source, unit):
+    var event = self.get_new_event(self.types.UNIT_SPAWNED)
+    event.source = source
+    event.unit = unit
+    self.emit_event(event)
+
+func emit_ability_used(ability, target):
+    var event = self.get_new_event(self.types.ABILITY_USED)
+    event.ability = ability
+    event.target = target
+    self.emit_event(event)
+
+func emit_turn_started(turn_no, player_id):
+    var event = self.get_new_event(self.types.TURN_STARTED)
+    event.turn_no = turn_no
+    event.player_id = player_id
+    self.emit_event(event)
+
+func emit_unit_moved(unit, start, finish):
+    var event = self.get_new_event(self.types.UNIT_MOVED)
+    event.unit = unit
+    event.start = start
+    event.finish = finish
+    self.emit_event(event)

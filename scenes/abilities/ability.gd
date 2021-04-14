@@ -13,8 +13,14 @@ func _ready():
 func signal_to_parent():
     self.signal(self.get_parent())
 
-
 func signal(receiver):
     receiver.register_ability(self)
     self.source = receiver
 
+func execute(board, position):
+    self._execute(board, position)
+    board.events.emit_ability_used(self, position)
+
+func _execute(_board, _position):
+    return
+    
