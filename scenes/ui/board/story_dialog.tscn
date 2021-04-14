@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/ui/board/story_dialog.gd" type="Script" id=1]
+
+[node name="story_dialog" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="background" type="ColorRect" parent="."]
+margin_left = -400.0
+margin_top = -100.0
+margin_right = 400.0
+margin_bottom = 100.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.901961 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="text" type="Label" parent="background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_right = -25.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="continue" type="Button" parent="background"]
+margin_left = 650.0
+margin_top = 210.0
+margin_right = 800.0
+margin_bottom = 240.0
+text = "Continue..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="background/continue" to="." method="_on_continue_pressed"]

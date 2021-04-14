@@ -6,6 +6,7 @@ onready var resource_label = $"resources/coin_view/label"
 onready var summary = $"summary/summary_view"
 onready var end_turn = $"end_turn/end_turn"
 onready var start_turn = $"start_turn/start_turn"
+onready var story_dialog = $"story_dialog/story_dialog"
 
 onready var tile_highlight = $"tile_highlight/tile_view"
 onready var tile_highlight_unit_panel_hp = $"tile_highlight/tile_view/hp"
@@ -16,10 +17,13 @@ func is_popup_open():
     if self.summary.is_visible():
         return true
 
+    if self.story_dialog.is_visible():
+        return true
+
     return false
 
 func is_panel_open():
-    if self.radial.is_visible():
+    if self.is_radial_open():
         return true
     if self.is_popup_open():
         return true
@@ -80,3 +84,10 @@ func update_end_turn_progress(value):
 
 func flash_start_end_card(player, turn):
     self.start_turn.flash(player, turn)
+
+func show_story_dialog(text, _actor=null):
+    self.story_dialog.set_text(text)
+    self.story_dialog.show_panel()
+
+func hide_story_dialog():
+    self.story_dialog.hide()
