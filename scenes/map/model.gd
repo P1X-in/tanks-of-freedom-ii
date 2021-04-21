@@ -4,7 +4,10 @@ const SIZE = 40
 var tile_template = preload("res://scenes/map/tile.gd")
 
 var tiles = {}
-var scripts = {}
+var scripts = {
+    "stories" : {},
+    "triggers" : {}
+}
 
 func _init():
     for x in range(self.SIZE):
@@ -100,7 +103,7 @@ func get_enemy_buildings_tiles(side):
     return buildings
 
 func ingest_scripts(incoming_scripts):
-    if incoming_scripts == null:
+    if incoming_scripts == null or incoming_scripts.empty():
         return
 
     self.scripts = incoming_scripts

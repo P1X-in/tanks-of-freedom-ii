@@ -2,29 +2,28 @@
 var board
 var scripts
 
-var trigger_templates = {
-    'building_lost' : preload("res://scenes/board/logic/scripting/triggers/building_lost.gd")
-}
+var triggers = {}
 
-var outcome_templates = {
-    'end_game' : preload("res://scenes/board/logic/scripting/outcomes/end_game.gd"),
-    'eliminate_player' : preload("res://scenes/board/logic/scripting/outcomes/eliminate_player.gd")
-}
+var trigger_templates = preload("res://scenes/board/logic/scripting/triggers/templates.gd").new()
+var outcome_templates = preload("res://scenes/board/logic/scripting/outcomes/templates.gd").new()
 
 func ingest_scripts(board_object, incoming_scripts):
     self.board = board_object
     self.scripts = incoming_scripts
 
-    if self.scripts == null or self.scripts.empty():
+    if self.scripts == null or self.scripts.empty() or self.scripts['triggers'].empty():
         self._setup_basic_win_condition()
+    else:
+        for trigger_name in self.scripts['triggers']:
+            self.triggers[trigger_name] = self._setup_trigger(self.scripts['triggers'][trigger_name])
 
 func _setup_basic_win_condition():
     self._build_hq_lost_event(self.board.map.templates.MODERN_HQ)
     self._build_hq_lost_event(self.board.map.templates.STEAMPUNK_HQ)
 
 func _build_hq_lost_event(hq_type):
-    var trigger = self.trigger_templates['building_lost'].new()
-    var outcome = self.outcome_templates['eliminate_player'].new()
+    var trigger = self.trigger_templates.get_trigger('building_lost')
+    var outcome = self.outcome_templates.get_outcome('eliminate_player')
 
     trigger.outcome = outcome
     trigger.building_type = hq_type
@@ -33,3 +32,33 @@ func _build_hq_lost_event(hq_type):
 
     self.board.events.register_observer(self.board.events.types.BUILDING_CAPTURED, trigger, 'observe')
     
+func _setup_trigger(trigger_definition):
+    var new_trigger = self.trigger_templates.get_trigger(trigger_definition['type'])
+    new_trigger.outcome = self._build_outcome_story(trigger_definition['story'])
+
+    new_trigger.board = self.board
+    new_trigger.ingest_details(trigger_definition['details'])
+
+    if trigger_definition.has('one_off'):
+        new_trigger.one_off = trigger_definition['one_off']
+    
+    self.board.events.register_observer(new_trigger.observed_event_type, new_trigger, 'observe')
+
+    return new_trigger
+
+func _build_outcome_story(story_name):
+    var story_definition = self.scripts['stories'][story_name]
+    var new_story = self.outcome_templates.get_outcome('story')
+    new_story.board = self.board
+
+    for step in story_definition:
+        new_story.add_step(self._build_outcome_story_step(step))
+
+    return new_story
+
+func _build_outcome_story_step(step_definition):
+    var new_step = self.outcome_templates.get_outcome(step_definition['action'])
+    new_step.ingest_details(step_definition['details'])
+    new_step.board = self.board
+
+    return new_step
