@@ -9,4 +9,3 @@ func _execute(_metadata):
 
 func ingest_details(_details):
     return
-    

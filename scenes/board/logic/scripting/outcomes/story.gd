@@ -6,7 +6,7 @@ func _execute(metadata):
     for step in steps:
         while self.board.ui.is_panel_open():
             yield(self.board.get_tree().create_timer(0.1), "timeout")
-        step.execute(metadata)   
+        step.execute(metadata)
 
 func add_step(step):
     self.steps.append(step)
