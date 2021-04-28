@@ -14,7 +14,7 @@ func _execute(_metadata):
 
     self.board.ui.show_story_dialog(text, actor)
 
-func ingest_details(details):
+func _ingest_details(details):
     self.text = details['text']
     self.portrait = details['portrait']
     self.name = details['name']

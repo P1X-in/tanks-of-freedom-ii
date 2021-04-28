@@ -129,24 +129,24 @@ __meta__ = {
 }
 
 [node name="position" type="MarginContainer" parent="."]
-visible = false
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -54.0
-margin_right = 72.0
-custom_constants/margin_right = 20
-custom_constants/margin_top = 20
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
+margin_left = 15.0
+margin_top = -290.0
+margin_right = 150.0
+margin_bottom = -265.162
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="label" type="Label" parent="position"]
-margin_left = 20.0
-margin_top = 18.0
-margin_right = 80.0
-margin_bottom = 36.0
+margin_top = 2.0
+margin_right = 135.0
+margin_bottom = 21.0
 text = "[0, 0]"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -183,7 +183,7 @@ custom_constants/margin_bottom = 0
 
 [node name="label" type="Label" parent="map_name/inner"]
 margin_left = 5.0
-margin_top = 8.0
+margin_top = 7.0
 margin_right = 5.0
 margin_bottom = 26.0
 align = 1

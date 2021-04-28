@@ -57,6 +57,7 @@ var _aw_camera_distance = 0
 
 var paused = false
 var ai_operated = false
+var script_operated = false
 
 var reset_stick = false
 
@@ -142,7 +143,7 @@ func _physics_process(delta):
     self.process_tof_camera_input(delta)
     self.process_aw_camera_input(delta)
 
-    if self.camera_in_transit or self.ai_operated:
+    if self.camera_in_transit or self.ai_operated or self.script_operated:
         return
 
     self.process_movement_input(delta)

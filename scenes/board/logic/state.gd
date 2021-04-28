@@ -37,6 +37,17 @@ func get_current_ap():
 func get_current_side():
     return self.get_current_param("side")
 
+func get_player_id_by_side(side):
+    var index = 0
+
+    while index < self.players.size():
+        if self.players[index]['side'] == side:
+            return index
+        index += 1
+
+func get_player_side_by_id(id):
+    return self.players[id]['side']
+
 func get_current_param(param_name):
     var player_data = self.get_current_player()
     return player_data[param_name]

@@ -437,9 +437,9 @@ Storyteller is a module, that allows for in-game scripting of missions. It consi
 
 #### Triggers
 - start of turn X
-- unit (player X) enters one of listed tiles
-- unit X enters one of listed tiles
-- player X has Y units (of type Z) (exactly)
+- unit (player X) enters one of listed regions
+- unit X enters one of listed regions
+- player X has Y units (of type Z)
 - player X controls Y of listed buildings
 - all units for player X are destroyed
 - unit X is destroyed

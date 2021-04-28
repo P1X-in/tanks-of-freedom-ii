@@ -21,3 +21,5 @@ func ingest_details(details):
     self.turn_no = details['turn']
     if details.has('player'):
         self.player_id = details['player']
+    if details.has('player_side'):
+        self.player_id = self.board.state.get_player_id_by_side(details['player_side'])

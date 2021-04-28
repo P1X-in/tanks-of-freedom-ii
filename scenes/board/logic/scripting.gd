@@ -58,7 +58,10 @@ func _build_outcome_story(story_name):
 
 func _build_outcome_story_step(step_definition):
     var new_step = self.outcome_templates.get_outcome(step_definition['action'])
-    new_step.ingest_details(step_definition['details'])
     new_step.board = self.board
-
+    if step_definition.has('details'):
+        new_step.ingest_details(step_definition['details'])
+    if step_definition.has('delay'):
+        new_step.delay = step_definition['delay']
+        
     return new_step
