@@ -6,7 +6,7 @@ var player_side = null
 var unit_tag = null
 
 func _init():
-    self.observed_event_type = 'unit_moved'
+    self.observed_event_type = ['unit_moved']
 
 func _observe(event):
     if self._is_watched_tile(event.finish):

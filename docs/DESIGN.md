@@ -444,6 +444,7 @@ Storyteller is a module, that allows for in-game scripting of missions. It consi
 - all units for player X are destroyed
 - unit X is destroyed
 - unit X is being attacked
+- player X has Y AP points
 
 Considerations:
 - one-off triggers are properly saved/loaded
@@ -464,6 +465,8 @@ Considerations:
 - unit X is despawned
 - building is damaged
 - trigger is enabled/disabled
+- give X AP
+- take X AP
 
 #### ToF 1 scripting examples
 ```

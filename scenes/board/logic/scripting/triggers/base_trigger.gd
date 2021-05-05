@@ -2,7 +2,7 @@
 var board = null
 var outcome = null
 var suspended = false
-var observed_event_type = null
+var observed_event_type = [null]
 var one_off = false
 
 func observe(event):

@@ -58,6 +58,9 @@ func add_player_ap(id, value):
 func use_player_ap(id, value):
     self.players[id]["ap"] -= value
 
+func get_player_ap(id):
+    return self.players[id]["ap"]
+
 func use_current_player_ap(value):
     self.use_player_ap(self.current_player, value)
 

@@ -6,7 +6,7 @@ var player_side = null
 var unit_type = null
 
 func _init():
-    self.observed_event_type = 'unit_spawned'
+    self.observed_event_type = ['unit_spawned']
 
 func _observe(event):
     var units

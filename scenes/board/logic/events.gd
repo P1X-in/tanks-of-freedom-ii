@@ -50,9 +50,10 @@ func emit_unit_attacked(attacker, defender):
     event.attacker = attacker
     self.emit_event(event)
 
-func emit_unit_destroyed(attacker, defender_id):
+func emit_unit_destroyed(attacker, defender_id, defender_side):
     var event = self.get_new_event(self.types.UNIT_DESTROYED)
     event.unit_id = defender_id
+    event.unit_side = defender_side
     event.attacker = attacker
     self.emit_event(event)
 

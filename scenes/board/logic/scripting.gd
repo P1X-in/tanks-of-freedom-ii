@@ -42,7 +42,8 @@ func _setup_trigger(trigger_definition):
     if trigger_definition.has('one_off'):
         new_trigger.one_off = trigger_definition['one_off']
     
-    self.board.events.register_observer(new_trigger.observed_event_type, new_trigger, 'observe')
+    for event_type in new_trigger.observed_event_type:
+        self.board.events.register_observer(event_type, new_trigger, 'observe')
 
     return new_trigger
 

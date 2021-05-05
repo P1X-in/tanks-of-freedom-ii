@@ -332,15 +332,20 @@ func battle(attacker_tile, defender_tile):
 
                 self.events.emit_unit_attacked(defender, attacker)
             else:
-                self.events.emit_unit_destroyed(defender, attacker.get_instance_id())
+                var attacker_id = attacker.get_instance_id()
+                var attacker_side = attacker.side
 
                 self.unselect_tile()
                 self.destroy_unit_on_tile(attacker_tile)
+                self.events.emit_unit_destroyed(defender, attacker_id, attacker_side)
 
         self.events.emit_unit_attacked(attacker, defender)
     else:
-        self.events.emit_unit_destroyed(attacker, defender.get_instance_id())
+        var defender_id = defender.get_instance_id()
+        var defender_side = defender.side
+
         self.destroy_unit_on_tile(defender_tile)
+        self.events.emit_unit_destroyed(attacker, defender_id, defender_side)
 
 func destroy_unit_on_tile(tile):
     var position = tile.unit.tile.get_translation()
