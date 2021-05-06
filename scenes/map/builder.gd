@@ -134,7 +134,13 @@ func wipe_map():
 
 func fill_map_from_data(data):
     var tiles_data = data["tiles"]
-    var scripts = data["scripts"]
+    var scripts = {
+        "stories" : {},
+        "triggers" : {}
+    }
+
+    if data.has("scripts"):
+        scripts = data["scripts"]
 
     for tile_id in self.map.model.tiles.keys():
         if tiles_data.has(tile_id):
@@ -142,7 +148,7 @@ func fill_map_from_data(data):
 
     self.map.model.ingest_scripts(scripts)
 
-        
+
 func place_tile(tile_id, tile_data):
     var tile = self.map.model.tiles[tile_id]
 
@@ -163,7 +169,7 @@ func place_tile(tile_id, tile_data):
 
     if tile_data["unit"]["tile"] != null:
         self.place_unit(tile.position, tile_data["unit"]["tile"], tile_data["unit"]["rotation"], tile_data["unit"]["side"])
-        
+
 
 func set_building_side(position, new_side):
     var tile = self.map.model.get_tile(position)
