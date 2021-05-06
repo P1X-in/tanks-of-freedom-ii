@@ -7,6 +7,7 @@ onready var summary = $"summary/summary_view"
 onready var end_turn = $"end_turn/end_turn"
 onready var start_turn = $"start_turn/start_turn"
 onready var story_dialog = $"story_dialog/story_dialog"
+onready var cinematic_bars = $"cinematic_bars/cinematic_bars"
 
 onready var tile_highlight = $"tile_highlight/tile_view"
 onready var tile_highlight_unit_panel_hp = $"tile_highlight/tile_view/hp"
@@ -48,8 +49,10 @@ func toggle_radial():
 func update_resource_value(value):
     self.resource_label.set_text(str(value))
 
-
 func update_tile_highlight(tile_preview):
+    if self.cinematic_bars.is_extended:
+        return
+
     self.clear_tile_highlight()
     self.tile_highlight.show()
     self.tile_highlight.set_tile(tile_preview, 0)
@@ -91,3 +94,10 @@ func show_story_dialog(text, _actor=null):
 
 func hide_story_dialog():
     self.story_dialog.hide()
+
+func show_cinematic_bars():
+    self.clear_tile_highlight()
+    self.cinematic_bars.show_bars()
+
+func hide_cinematic_bars():
+    self.cinematic_bars.hide_bars()

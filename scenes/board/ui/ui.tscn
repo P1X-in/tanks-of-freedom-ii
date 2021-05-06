@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/board/ui/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ui/radial/radial.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/ui/board/end_turn.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/ui/board/start_turn.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/ui/board/story_dialog.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/ui/board/cinematic_bars.tscn" type="PackedScene" id=10]
 
 [node name="ui" type="Control"]
 anchor_right = 1.0
@@ -128,15 +129,28 @@ __meta__ = {
 
 [node name="start_turn" parent="start_turn" instance=ExtResource( 8 )]
 
+[node name="cinematic_bars" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cinematic_bars" parent="cinematic_bars" instance=ExtResource( 10 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1919.0
+margin_bottom = 1080.0
+
 [node name="story_dialog" type="MarginContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 0.00012207
-margin_top = -280.0
-margin_right = 0.00012207
-margin_bottom = -280.0
+margin_left = 6.10352e-05
+margin_top = -180.0
+margin_right = 6.10352e-05
+margin_bottom = -180.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
