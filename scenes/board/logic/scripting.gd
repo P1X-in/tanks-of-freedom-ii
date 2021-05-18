@@ -66,3 +66,7 @@ func _build_outcome_story_step(step_definition):
         new_step.delay = step_definition['delay']
         
     return new_step
+
+func suspend_trigger(name, state):
+    if self.triggers.has(name):
+        self.triggers[name].suspended = state

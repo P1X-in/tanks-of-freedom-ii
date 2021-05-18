@@ -6,6 +6,7 @@
 
 [node name="camera" type="Spatial"]
 script = ExtResource( 2 )
+camera_distance_min = 15
 tof_camera_distance_min = 15
 aw_camera_distance_min = 15
 

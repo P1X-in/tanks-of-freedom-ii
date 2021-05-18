@@ -542,6 +542,89 @@ var triggers = {
 }
 ```
 
+#### ToF 3D scripting examples
+```
+    "scripts":{
+        "stories":{
+            "tower_tip" : [
+                {"action" : "lock"},
+                {"action" : "message", "details": {"text" : "Sample text", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+                {"action" : "message", "details": {"text" : "Sample text 2", "portrait" : "soldier_blue", "name" : "Andrew", "side" : "left"}},
+                {"action" : "camera", "details": {"where" : [20, 23], "zoom" : 0.5}},
+                {"action" : "spawn", "details" : {"where" : [20, 23], "template" : "blue_infantry", "side" : "red", "rotation" : 90}},
+                {"action" : "spawn", "details" : {"where" : [20, 22], "template" : "red_infantry", "side" : "red", "rotation" : 90}, "delay" : 1},
+                {"action" : "move", "details" : {"who" : [20, 23], "where" : [22, 23], "path" : ["e", "e", "n"]}},
+                {"action" : "move", "details" : {"who" : [20, 22], "where" : [22, 21], "path" : ["e", "n", "e", "s"]}, "delay" : 1},
+                {"action" : "camera", "details": {"where" : [24, 22], "zoom" : 0.1}},
+                {"action" : "terrain_add", "details" : {"where" : [24, 22], "type" : "decoration", "template" : "deco_flower1"}, "delay" : 1},
+                {"action" : "terrain_add", "details" : {"where" : [24, 22], "type" : "frame", "template" : "frame_fence"}, "delay" : 1},
+                {"action" : "terrain_add", "details" : {"where" : [24, 22], "type" : "terrain", "template" : "city_building_big1"}, "delay" : 1},
+                {"action" : "terrain_remove", "details" : {"where" : [24, 22], "type" : "terrain", "explosion" : true}, "delay" : 1},
+
+                {"action" : "camera", "details": {"where" : [22, 22], "zoom" : 0.1}},
+                {"action" : "attack", "details" : {"who" : [22, 23], "whom" : [22, 21], "damage" : 1}, "delay" : 1},
+                {"action" : "claim", "details" : {"what" : [22, 22], "side" : "red"}, "delay" : 1},
+                {"action" : "die", "details" : {"who" : [22, 23]}, "delay" : 1},
+                {"action" : "despawn", "details" : {"who" : [22, 21]}, "delay" : 1},
+                {"action" : "trigger", "details" : {"name" : "other_player", "suspended" : true}},
+                {"action" : "ap", "details" : {"amount" : -100, "side" : "red"}, "delay" : 1},
+                {"action" : "ap", "details" : {"amount" : 500, "side" : "blue"}, "delay" : 1},
+                {"action" : "unlock"},
+            ],
+            "capture" : [
+                {"action" : "lock"},
+                {"action" : "message", "details": {"text" : "Sir! We've got a report about potential targets.", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+                {"action" : "camera", "details": {"where" : [20, 29], "zoom" : 0.0}},
+                {"action" : "message", "details": {"text" : "This tower provides comms for our base, and is crucial for more AP", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+                {"action" : "camera", "details": {"where" : [20, 25], "zoom" : 0.0}},
+                {"action" : "message", "details": {"text" : "This vehicle factory can provide us with more powerful units", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+                {"action" : "camera", "details": {"where" : [23, 27], "zoom" : 0.0}},
+                {"action" : "message", "details": {"text" : "Don't forget about infantry barracks, soldiers are crucial for any mission.", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+                {"action" : "unlock"},
+            ],
+            "moved" : [
+                {"action" : "lock"},
+                {"action" : "message", "details": {"text" : "Unit moved", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+                {"action" : "unlock"},
+            ],
+            "reinforced" : [
+                {"action" : "message", "details": {"text" : "Units produced", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+            ],
+            "claimed" : [
+                {"action" : "message", "details": {"text" : "Buildings claimed", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+            ],
+            "decimated" : [
+                {"action" : "message", "details": {"text" : "Units decimated", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+            ],
+            "assasination" : [
+                {"action" : "message", "details": {"text" : "Unit killed", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+            ],
+            "attacked" : [
+                {"action" : "message", "details": {"text" : "Unit attacked", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+            ],
+            "resources" : [
+                {"action" : "message", "details": {"text" : "Got AP", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
+            ],
+        },
+        "triggers":{
+            "first_turn" : {"type" : "turn", "story" : "tower_tip", "details" : {"turn" : 1, "player" : 0}, "one_off" : true},
+            "other_player" : {"type" : "turn", "story" : "capture", "details" : {"turn" : 1, "player" : 1}, "one_off" : true},
+            "moved" : {"type" : "move", "story" : "moved", "details" : { "fields" : [
+                    {"x1": 25, "x2": 26, "y1": 21, "y2": 22},
+                ], "player_side" : "blue" }, "one_off" : true},
+            "moved2" : {"type" : "move", "story" : "moved", "details" : { "fields" : [
+                    {"x1": 25, "x2": 26, "y1": 21, "y2": 22},
+                ], "unit": [27,22] }, "one_off" : true},
+            "reinforce" : {"type" : "deploy", "story" : "reinforced", "details" : { "amount" : 3, "player_side" : "red", "type": "red_infantry" }, "one_off" : true},
+            "domination" : {"type" : "claim", "story" : "claimed", "details" : { "amount" : 2, "list" : [[23, 27], [20, 29], [20, 25]], "player_side" : "blue" }, "one_off" : true},
+            "decimated" : {"type" : "decimate", "story" : "decimated", "details" : { "player_side" : "red" }, "one_off" : true},
+            "assasination" : {"type" : "assasination", "story" : "assasination", "details" : { "vip" : [27, 22] }, "one_off" : true},
+            "attacked" : {"type" : "attacked", "story" : "attacked", "details" : { "vip" : [27, 22] }, "one_off" : true},
+            "resources" : {"type" : "resources", "story" : "resources", "details" : { "amount" : 100, "player_side" : "blue" }, "one_off" : true}
+        }
+    },
+```
+
 ## Marketing
 
 Make the project visible in GodotEngine community. Original ToF used to be quite popular, so maybe some of that popularity can be restored.

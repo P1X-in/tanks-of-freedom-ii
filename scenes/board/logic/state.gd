@@ -55,8 +55,14 @@ func get_current_param(param_name):
 func add_player_ap(id, value):
     self.players[id]["ap"] += value
 
+    if self.players[id]["ap"] < 0:
+        self.players[id]["ap"] = 0
+
 func use_player_ap(id, value):
     self.players[id]["ap"] -= value
+
+    if self.players[id]["ap"] < 0:
+        self.players[id]["ap"] = 0
 
 func get_player_ap(id):
     return self.players[id]["ap"]

@@ -9,6 +9,7 @@ var current_track = null
 
 func _ready():
     self.register_sample("menu_click", preload("res://assets/audio/menu.wav"))
+    self.register_sample("explosion", preload("res://assets/audio/explosion.wav"))
 
 
     self.register_track("menu", preload("res://assets/audio/soundtrack/grand_beats_menu_soundtrack.ogg"))
