@@ -227,7 +227,6 @@ func setup_radial_menu(context_object=null):
     if context_object == null:
         self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load game", 2)
         self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, self, "main_menu")
-        #self.ui.radial.set_field(self.ui.icons.tick.instance(), "End Turn", 0, self, "end_turn")
     else:
         self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
         

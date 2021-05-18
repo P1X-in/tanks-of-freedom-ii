@@ -285,3 +285,8 @@ func pan_camera(delta):
         self.camera_destination = null
         self.camera_transit_time = 0.0
         self.camera_in_transit = false 
+
+func set_camera_zoom(fraction):
+    self.camera_distance = self.camera_distance_min + (self.camera_distance_max - self.camera_distance_min) * fraction
+    self.tof_camera_distance = self.tof_camera_distance_min + (self.tof_camera_distance_max - self.tof_camera_distance_min) * fraction
+    self.aw_camera_distance = self.aw_camera_distance_min + (self.aw_camera_distance_max - self.aw_camera_distance_min) * fraction

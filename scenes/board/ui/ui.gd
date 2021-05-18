@@ -101,3 +101,6 @@ func show_cinematic_bars():
 
 func hide_cinematic_bars():
     self.cinematic_bars.hide_bars()
+
+func are_cinematic_bars_visible():
+    return self.cinematic_bars.is_extended

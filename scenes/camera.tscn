@@ -6,8 +6,8 @@
 
 [node name="camera" type="Spatial"]
 script = ExtResource( 2 )
-tof_camera_distance_min = 7
-aw_camera_distance_min = 7
+tof_camera_distance_min = 15
+aw_camera_distance_min = 15
 
 [node name="pointer" parent="." instance=ExtResource( 3 )]
 visible = false
