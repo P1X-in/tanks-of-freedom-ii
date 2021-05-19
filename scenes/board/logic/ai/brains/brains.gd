@@ -34,7 +34,8 @@ var assigned_brains = {
     "red_heli" : self.brains['heli'],
     "red_m_inf" : self.brains['mobile_infantry'],
     "red_rocket" : self.brains['rocket_artillery'],
-    "red_scout" : self.brains['scout']
+    "red_scout" : self.brains['scout'],
+    "green_infantry" : self.brains['infantry']
 }
 
 func get_brain_for_template(template_name):
@@ -42,4 +43,4 @@ func get_brain_for_template(template_name):
         return self.assigned_brains[template_name]
 
     return null
-    
+

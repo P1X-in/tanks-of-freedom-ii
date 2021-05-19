@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/infantry.obj-f5c0cb6c0af0e0beb2de7140713ec70e.mesh"
+
+[deps]
+
+files=[ "res://.import/infantry.obj-f5c0cb6c0af0e0beb2de7140713ec70e.mesh" ]
+
+source_file="res://assets/units/green/infantry.obj"
+dest_files=[ "res://.import/infantry.obj-f5c0cb6c0af0e0beb2de7140713ec70e.mesh", "res://.import/infantry.obj-f5c0cb6c0af0e0beb2de7140713ec70e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

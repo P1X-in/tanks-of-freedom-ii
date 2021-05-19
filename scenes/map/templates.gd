@@ -87,6 +87,8 @@ const UNIT_RED_MINF = "red_m_inf"
 const UNIT_RED_ROCKET = "red_rocket"
 const UNIT_RED_SCOUT = "red_scout"
 
+const UNIT_GREEN_INFANTRY = "green_infantry"
+
 
 const PLAYER_NEUTRAL = "neutral"
 const PLAYER_BLUE = "blue"
@@ -185,6 +187,8 @@ var templates = {
     self.UNIT_RED_MINF : preload("res://scenes/tiles/units/red/mobile_infantry.tscn"),
     self.UNIT_RED_ROCKET : preload("res://scenes/tiles/units/red/rocket_artillery.tscn"),
     self.UNIT_RED_SCOUT : preload("res://scenes/tiles/units/red/scout_heli.tscn"),
+
+    self.UNIT_GREEN_INFANTRY : preload("res://scenes/tiles/units/green/infantry.tscn"),
 }
 
 var side_materials = {
