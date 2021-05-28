@@ -104,6 +104,8 @@ func build_rotations(templates, builder):
 		templates.UNIT_RED_SCOUT,
 
 		templates.UNIT_GREEN_INFANTRY,
+		templates.UNIT_GREEN_TANK,
+		templates.UNIT_GREEN_HELI,
 	])
 
 	self.types = self.build_from_array([

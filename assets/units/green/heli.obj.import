@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/heli.obj-86a038b9d1bccd0a5e275f2f752db4bc.mesh"
+
+[deps]
+
+files=[ "res://.import/heli.obj-86a038b9d1bccd0a5e275f2f752db4bc.mesh" ]
+
+source_file="res://assets/units/green/heli.obj"
+dest_files=[ "res://.import/heli.obj-86a038b9d1bccd0a5e275f2f752db4bc.mesh", "res://.import/heli.obj-86a038b9d1bccd0a5e275f2f752db4bc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

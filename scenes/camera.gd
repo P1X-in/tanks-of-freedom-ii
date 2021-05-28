@@ -65,6 +65,10 @@ var camera_start = null
 var camera_destination = null
 var camera_transit_time = 0.0
 var camera_in_transit = false
+var camera_zoom_start = null
+var camera_tof_zoom_start = null
+var camera_aw_zoom_start = null
+var camera_zoom_fraction = null
 
 func _ready():
     self.camera_pivot = $"pivot"
@@ -280,13 +284,25 @@ func pan_camera(delta):
 
     self.set_translation(camera_position)
 
+    if self.camera_zoom_fraction != null:
+        self.camera_distance = self.camera_zoom_start + (self.camera_distance_min + (self.camera_distance_max - self.camera_distance_min) * self.camera_zoom_fraction - self.camera_zoom_start) * transit_time
+        self.tof_camera_distance = self.camera_tof_zoom_start + (self.tof_camera_distance_min + (self.tof_camera_distance_max - self.tof_camera_distance_min) * self.camera_zoom_fraction - self.camera_tof_zoom_start) * transit_time
+        self.aw_camera_distance = self.camera_aw_zoom_start + (self.aw_camera_distance_min + (self.aw_camera_distance_max - self.aw_camera_distance_min) * self.camera_zoom_fraction - self.camera_aw_zoom_start) * transit_time
+
     if self.camera_transit_time >= 1.5:
         self.camera_start = null
         self.camera_destination = null
         self.camera_transit_time = 0.0
-        self.camera_in_transit = false 
+        self.camera_in_transit = false
+        self.camera_zoom_start = null
+        self.camera_tof_zoom_start = null
+        self.camera_aw_zoom_start = null
+        self.camera_zoom_fraction = null
 
 func set_camera_zoom(fraction):
-    self.camera_distance = self.camera_distance_min + (self.camera_distance_max - self.camera_distance_min) * fraction
-    self.tof_camera_distance = self.tof_camera_distance_min + (self.tof_camera_distance_max - self.tof_camera_distance_min) * fraction
-    self.aw_camera_distance = self.aw_camera_distance_min + (self.aw_camera_distance_max - self.aw_camera_distance_min) * fraction
+    self.camera_zoom_start = _camera_distance
+    self.camera_tof_zoom_start = _tof_camera_distance
+    self.camera_aw_zoom_start = _aw_camera_distance
+    self.camera_zoom_fraction = fraction
+
+    return

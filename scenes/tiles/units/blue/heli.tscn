@@ -57,6 +57,7 @@ mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
 
 [node name="rotor" type="MeshInstance" parent="mesh_anchor/mesh" index="0"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.1, 0, 0.1 )
 mesh = ExtResource( 4 )
 material/0 = ExtResource( 5 )
 
