@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/rocket_artillery.obj-ded76ec23e5d576a290fbc7491e2fb90.mesh"
+
+[deps]
+
+files=[ "res://.import/rocket_artillery.obj-ded76ec23e5d576a290fbc7491e2fb90.mesh" ]
+
+source_file="res://assets/units/green/rocket_artillery.obj"
+dest_files=[ "res://.import/rocket_artillery.obj-ded76ec23e5d576a290fbc7491e2fb90.mesh", "res://.import/rocket_artillery.obj-ded76ec23e5d576a290fbc7491e2fb90.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
