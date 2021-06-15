@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/buildings/green/headquarters.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://scenes/tiles/buildings/building.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/abilities/production/green/infantry.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/materials/arne32_green.tres" type="Material" id=4]
+
+[node name="tile" instance=ExtResource( 2 )]
+side = "green"
+ap_gain = 20
+capture_value = 1000
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 4 )
+
+[node name="infantry" parent="." index="1" instance=ExtResource( 3 )]
+index = 2
+ap_cost = 40

@@ -326,8 +326,8 @@ func battle(attacker_tile, defender_tile):
         defender.show_explosion()
         defender.sfx_effect("damage")
 
-        if defender.can_attack(attacker) && defender.has_moves() && defender.has_attacks():
-            defender.use_attack()
+        if defender.can_attack(attacker) && defender.has_moves():
+            defender.use_all_moves()
             attacker.receive_damage(defender.get_attack())
 
             if attacker.is_alive():

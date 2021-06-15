@@ -73,6 +73,18 @@ const STEAMPUNK_FACTORY = "steampunk_factory"
 const STEAMPUNK_HQ = "steampunk_hq"
 const STEAMPUNK_TOWER = "steampunk_tower"
 
+const FUTURISTIC_AIRFIELD = "futuristic_airfield"
+const FUTURISTIC_BARRACKS = "futuristic_barracks"
+const FUTURISTIC_FACTORY = "futuristic_factory"
+const FUTURISTIC_HQ = "futuristic_hq"
+const FUTURISTIC_TOWER = "futuristic_tower"
+
+const FEUDAL_AIRFIELD = "feudal_airfield"
+const FEUDAL_BARRACKS = "feudal_barracks"
+const FEUDAL_FACTORY = "feudal_factory"
+const FEUDAL_HQ = "feudal_hq"
+const FEUDAL_TOWER = "feudal_tower"
+
 const UNIT_BLUE_INFANTRY = "blue_infantry"
 const UNIT_BLUE_TANK = "blue_tank"
 const UNIT_BLUE_HELI = "blue_heli"
@@ -93,6 +105,13 @@ const UNIT_GREEN_HELI = "green_heli"
 const UNIT_GREEN_MINF = "green_m_inf"
 const UNIT_GREEN_ROCKET = "green_rocket"
 const UNIT_GREEN_SCOUT = "green_scout"
+
+const UNIT_YELLOW_INFANTRY = "yellow_infantry"
+const UNIT_YELLOW_TANK = "yellow_tank"
+const UNIT_YELLOW_HELI = "yellow_heli"
+const UNIT_YELLOW_MINF = "yellow_m_inf"
+const UNIT_YELLOW_ROCKET = "yellow_rocket"
+const UNIT_YELLOW_SCOUT = "yellow_scout"
 
 
 const PLAYER_NEUTRAL = "neutral"
@@ -178,6 +197,9 @@ var templates = {
     self.STEAMPUNK_FACTORY : preload("res://scenes/tiles/buildings/red/factory.tscn"),
     self.STEAMPUNK_HQ : preload("res://scenes/tiles/buildings/red/headquarters.tscn"),
     self.STEAMPUNK_TOWER : preload("res://scenes/tiles/buildings/red/tower.tscn"),
+
+    self.FUTURISTIC_BARRACKS : preload("res://scenes/tiles/buildings/green/barracks.tscn"),
+    self.FUTURISTIC_HQ : preload("res://scenes/tiles/buildings/green/headquarters.tscn"),
 
     self.UNIT_BLUE_INFANTRY : preload("res://scenes/tiles/units/blue/infantry.tscn"),
     self.UNIT_BLUE_TANK : preload("res://scenes/tiles/units/blue/tank.tscn"),

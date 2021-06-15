@@ -22,6 +22,14 @@ var assigned_brains = {
     "steampunk_barracks" : self.brains['barracks'],
     "steampunk_factory" : self.brains['factory'],
     "steampunk_hq" : self.brains['hq'],
+    "futuristic_airfield" : self.brains['airfield'],
+    "futuristic_barracks" : self.brains['barracks'],
+    "futuristic_factory" : self.brains['factory'],
+    "futuristic_hq" : self.brains['hq'],
+    "feudal_airfield" : self.brains['airfield'],
+    "feudal_barracks" : self.brains['barracks'],
+    "feudal_factory" : self.brains['factory'],
+    "feudal_hq" : self.brains['hq'],
 
     "blue_infantry" : self.brains['infantry'],
     "blue_tank" : self.brains['tank'],
@@ -40,7 +48,13 @@ var assigned_brains = {
     "green_heli" : self.brains['heli'],
     "green_m_inf" : self.brains['mobile_infantry'],
     "green_rocket" : self.brains['rocket_artillery'],
-    "green_scout" : self.brains['scout']
+    "green_scout" : self.brains['scout'],
+    "yellow_infantry" : self.brains['infantry'],
+    "yellow_tank" : self.brains['tank'],
+    "yellow_heli" : self.brains['heli'],
+    "yellow_m_inf" : self.brains['mobile_infantry'],
+    "yellow_rocket" : self.brains['rocket_artillery'],
+    "yellow_scout" : self.brains['scout']
 }
 
 func get_brain_for_template(template_name):

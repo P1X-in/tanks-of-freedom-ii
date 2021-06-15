@@ -160,6 +160,6 @@ func can_unit_interact(interacting_unit):
     return false
 
 func has_friendly_hq(side):
-    if self.building.is_present() && self.building.tile.side == side && self.building.tile.template_name in ["modern_hq", "steampunk_hq"]:
+    if self.building.is_present() && self.building.tile.side == side && self.building.tile.template_name in ["modern_hq", "steampunk_hq", "futuristic_hq", "feudal_hq"]:
         return true
     return false

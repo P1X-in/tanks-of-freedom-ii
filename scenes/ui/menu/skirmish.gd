@@ -18,6 +18,8 @@ onready var animations = $"animations"
 var hq_templates = [
     "modern_hq",
     "steampunk_hq",
+    "futuristic_hq",
+    "feudal_hq",
 ]
 
 var main_menu
