@@ -120,7 +120,8 @@ func _map_template_name(template_name):
         "green_tank" : "tank",
         "green_heli" : "heli",
         "green_m_inf" : "m_inf",
-        "green_rocket" : "rocket"
+        "green_rocket" : "rocket",
+        "green_scout" : "scout"
     }
 
     return map[template_name]

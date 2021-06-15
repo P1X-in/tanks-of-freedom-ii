@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/scout_heli.obj-7ebc40a68d512099aa996ff2e1673728.mesh"
+
+[deps]
+
+files=[ "res://.import/scout_heli.obj-7ebc40a68d512099aa996ff2e1673728.mesh" ]
+
+source_file="res://assets/units/green/scout_heli.obj"
+dest_files=[ "res://.import/scout_heli.obj-7ebc40a68d512099aa996ff2e1673728.mesh", "res://.import/scout_heli.obj-7ebc40a68d512099aa996ff2e1673728.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

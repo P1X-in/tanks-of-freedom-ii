@@ -92,6 +92,7 @@ const UNIT_GREEN_TANK = "green_tank"
 const UNIT_GREEN_HELI = "green_heli"
 const UNIT_GREEN_MINF = "green_m_inf"
 const UNIT_GREEN_ROCKET = "green_rocket"
+const UNIT_GREEN_SCOUT = "green_scout"
 
 
 const PLAYER_NEUTRAL = "neutral"
@@ -197,6 +198,7 @@ var templates = {
     self.UNIT_GREEN_HELI : preload("res://scenes/tiles/units/green/heli.tscn"),
     self.UNIT_GREEN_MINF : preload("res://scenes/tiles/units/green/mobile_infantry.tscn"),
     self.UNIT_GREEN_ROCKET : preload("res://scenes/tiles/units/green/rocket_artillery.tscn"),
+    self.UNIT_GREEN_SCOUT : preload("res://scenes/tiles/units/green/scout_heli.tscn"),
 }
 
 var side_materials = {
