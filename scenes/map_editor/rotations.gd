@@ -88,6 +88,7 @@ func build_rotations(templates, builder):
 		templates.STEAMPUNK_TOWER,
 
 		templates.FUTURISTIC_HQ,
+		templates.FUTURISTIC_AIRFIELD,
 		templates.FUTURISTIC_BARRACKS,
 		templates.FUTURISTIC_FACTORY,
 	])
