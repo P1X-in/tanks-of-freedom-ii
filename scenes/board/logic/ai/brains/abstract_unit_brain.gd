@@ -132,8 +132,11 @@ func _attack_action(entity_tile, interaction_tile, target_tile, path):
 
     if entity_tile.unit.tile.can_kill(target_tile.unit.tile):
         value += 100
-    elif target_tile.unit.tile.can_kill(entity_tile.unit.tile):
-        value -= 20
+    else:
+        if target_tile.unit.tile.can_retaliate(entity_tile.unit.tile):
+            value -= 10
+        if target_tile.unit.tile.can_retaliate(entity_tile.unit.tile) and target_tile.unit.tile.has_enough_power_to_kill(entity_tile.unit.tile):
+            value -= 20
 
     action.value = value
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tower.obj-eaa1238dae32fa659c941081c5c9720f.mesh"
+
+[deps]
+
+files=[ "res://.import/tower.obj-eaa1238dae32fa659c941081c5c9720f.mesh" ]
+
+source_file="res://assets/buildings/green/tower.obj"
+dest_files=[ "res://.import/tower.obj-eaa1238dae32fa659c941081c5c9720f.mesh", "res://.import/tower.obj-eaa1238dae32fa659c941081c5c9720f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

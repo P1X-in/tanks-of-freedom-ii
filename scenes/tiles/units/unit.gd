@@ -105,11 +105,19 @@ func can_attack(_unit):
     return true
 
 func can_kill(unit):
-    if not self.has_attacks() or not self.has_moves():
+    if not self.has_attacks() or not self.has_moves() or not self.can_attack(unit):
         return false
 
-    return self.attack >= unit.hp + unit.armor
+    return self.has_enough_power_to_kill(unit)
 
+func can_retaliate(unit):
+    if not self.has_moves() or not self.can_attack(unit):
+        return false
+
+    return true
+
+func has_enough_power_to_kill(unit):
+    return self.attack >= unit.hp + unit.armor
 
 func has_attacks():
     return self.attacks > 0
