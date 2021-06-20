@@ -40,9 +40,11 @@ func toggle_radial():
     if self.radial.is_visible():
         self.hide_radial()
         self.show_tiles()
+        self.show_position()
     else:
         self.show_radial()
         self.hide_tiles()
+        self.hide_position()
 
 
 func show_tiles():
@@ -67,6 +69,12 @@ func show_picker():
 
 func hide_picker():
     self.picker.hide_picker()
+
+func show_position():
+    self.position_label.show()
+
+func hide_position():
+    self.position_label.hide()
 
 func close_all_popups():
     if self.picker.is_visible():

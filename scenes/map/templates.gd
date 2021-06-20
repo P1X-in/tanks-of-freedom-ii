@@ -229,6 +229,7 @@ var templates = {
     self.UNIT_YELLOW_TANK : preload("res://scenes/tiles/units/yellow/tank.tscn"),
     self.UNIT_YELLOW_HELI : preload("res://scenes/tiles/units/yellow/heli.tscn"),
     self.UNIT_YELLOW_MINF : preload("res://scenes/tiles/units/yellow/mobile_infantry.tscn"),
+    self.UNIT_YELLOW_ROCKET : preload("res://scenes/tiles/units/yellow/rocket_artillery.tscn"),
 }
 
 var side_materials = {
