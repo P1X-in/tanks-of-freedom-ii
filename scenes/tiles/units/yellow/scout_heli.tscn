@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/units/audio/helicopter_move.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/units/audio/helicopter_spawn.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/units/audio/helicopter_attack.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/units/audio/helicopter_damage.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/units/audio/helicopter_die.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/materials/arne32_metallic_yellow.tres" type="Material" id=6]
+[ext_resource path="res://assets/units/yellow/scout_heli_rotor.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://assets/units/yellow/scout_heli.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=9]
+[ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=10]
+
+[sub_resource type="Animation" id=1]
+resource_name = "rotation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
+}
+
+[node name="tile" instance=ExtResource( 10 )]
+main_tile_view_cam_modifier = -10
+side_tile_view_cam_modifier = -25
+side = "yellow"
+material_type = "metallic"
+max_move = 9
+attack = 5
+armor = 1
+can_fly = true
+uses_metallic_material = true
+unit_value = 50
+
+[node name="mesh" parent="mesh_anchor" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="rotor" type="MeshInstance" parent="mesh_anchor/mesh" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0 )
+mesh = ExtResource( 7 )
+material/0 = ExtResource( 9 )
+
+[node name="animations" type="AnimationPlayer" parent="mesh_anchor/mesh/rotor" index="0"]
+autoplay = "rotation"
+playback_speed = 2.0
+anims/rotation = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="explosion" parent="." index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="spawn" parent="audio" index="0"]
+stream = ExtResource( 2 )
+
+[node name="move" parent="audio" index="1"]
+stream = ExtResource( 1 )
+
+[node name="attack" parent="audio" index="2"]
+stream = ExtResource( 3 )
+
+[node name="damage" parent="audio" index="3"]
+stream = ExtResource( 4 )
+
+[node name="die" parent="audio" index="4"]
+stream = ExtResource( 5 )
