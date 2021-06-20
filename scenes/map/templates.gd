@@ -208,6 +208,7 @@ var templates = {
     self.FEUDAL_BARRACKS : preload("res://scenes/tiles/buildings/yellow/barracks.tscn"),
     self.FEUDAL_FACTORY : preload("res://scenes/tiles/buildings/yellow/factory.tscn"),
     self.FEUDAL_HQ : preload("res://scenes/tiles/buildings/yellow/headquarters.tscn"),
+    self.FEUDAL_TOWER : preload("res://scenes/tiles/buildings/yellow/tower.tscn"),
 
     self.UNIT_BLUE_INFANTRY : preload("res://scenes/tiles/units/blue/infantry.tscn"),
     self.UNIT_BLUE_TANK : preload("res://scenes/tiles/units/blue/tank.tscn"),
