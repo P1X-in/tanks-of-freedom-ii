@@ -45,9 +45,9 @@ For ToF3D we intend to have four sides to the conflict, with each having an npc 
 - The Commando
 
 ### Ruby Dusk (Team Red)
-- The Bright Leader
-- The Inquisitor
-- The Rebel Leader
+- The Bright Leader / The Baron
+- The Inquisitor / The Gentleman
+- The Rebel Leader / The Governor
 
 ### Jade Twilight (Team Green)
 - The Chancellor

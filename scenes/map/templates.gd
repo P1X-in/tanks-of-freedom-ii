@@ -204,6 +204,8 @@ var templates = {
     self.FUTURISTIC_HQ : preload("res://scenes/tiles/buildings/green/headquarters.tscn"),
     self.FUTURISTIC_TOWER : preload("res://scenes/tiles/buildings/green/tower.tscn"),
 
+    self.FEUDAL_HQ : preload("res://scenes/tiles/buildings/yellow/headquarters.tscn"),
+
     self.UNIT_BLUE_INFANTRY : preload("res://scenes/tiles/units/blue/infantry.tscn"),
     self.UNIT_BLUE_TANK : preload("res://scenes/tiles/units/blue/tank.tscn"),
     self.UNIT_BLUE_HELI : preload("res://scenes/tiles/units/blue/heli.tscn"),

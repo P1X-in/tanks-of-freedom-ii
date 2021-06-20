@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/headquarters.obj-14ed2dba185bc22cd69eb1ce1af670c7.mesh"
+
+[deps]
+
+files=[ "res://.import/headquarters.obj-14ed2dba185bc22cd69eb1ce1af670c7.mesh" ]
+
+source_file="res://assets/buildings/yellow/headquarters.obj"
+dest_files=[ "res://.import/headquarters.obj-14ed2dba185bc22cd69eb1ce1af670c7.mesh", "res://.import/headquarters.obj-14ed2dba185bc22cd69eb1ce1af670c7.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
