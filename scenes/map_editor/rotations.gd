@@ -94,6 +94,7 @@ func build_rotations(templates, builder):
 		templates.FUTURISTIC_TOWER,
 
 		templates.FEUDAL_HQ,
+		templates.FEUDAL_BARRACKS,
 	])
 
 	self.rotations[builder.CLASS_UNIT] = self.build_from_array([
