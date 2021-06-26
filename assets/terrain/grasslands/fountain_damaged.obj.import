@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/fountain_damaged.obj-5feb6900fcd7607f6d3a3fff08c1b694.mesh"
+
+[deps]
+
+files=[ "res://.import/fountain_damaged.obj-5feb6900fcd7607f6d3a3fff08c1b694.mesh" ]
+
+source_file="res://assets/terrain/grasslands/fountain_damaged.obj"
+dest_files=[ "res://.import/fountain_damaged.obj-5feb6900fcd7607f6d3a3fff08c1b694.mesh", "res://.import/fountain_damaged.obj-5feb6900fcd7607f6d3a3fff08c1b694.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

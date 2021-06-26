@@ -59,8 +59,10 @@ const CITY_BUILDING_SMALL6 = "city_building_small6"
 const CITY_BRIDGE = "city_bridge"
 
 const DAMAGED_STATUE = "damaged_statue"
+const DAMAGED_FOUNTAIN = "damaged_fountain"
 
 const DESTROYED_STATUE = "destroyed_statue"
+const DESTROYED_FOUNTAIN = "destroyed_fountain"
 
 const NATURE_BIG_ROCKS1 = "nature_big_rocks1"
 const NATURE_BIG_ROCKS2 = "nature_big_rocks2"
@@ -195,8 +197,10 @@ var templates = {
     self.CITY_BRIDGE : preload("res://scenes/tiles/city/river_bridge_overtile.tscn"),
 
     self.DAMAGED_STATUE : preload("res://scenes/tiles/decorations/statue_damaged.tscn"),
+    self.DAMAGED_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_damaged.tscn"),
 
     self.DESTROYED_STATUE : preload("res://scenes/tiles/decorations/statue_destroyed.tscn"),
+    self.DESTROYED_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_destroyed.tscn"),
 
     self.NATURE_BIG_ROCKS1 : preload("res://scenes/tiles/nature/big_rocks_1_overtile.tscn"),
     self.NATURE_BIG_ROCKS2 : preload("res://scenes/tiles/nature/big_rocks_2_overtile.tscn"),
