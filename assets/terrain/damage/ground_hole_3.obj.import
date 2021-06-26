@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ground_hole_3.obj-1a9b1d6e5de445cbb44cb473238e963d.mesh"
+
+[deps]
+
+files=[ "res://.import/ground_hole_3.obj-1a9b1d6e5de445cbb44cb473238e963d.mesh" ]
+
+source_file="res://assets/terrain/damage/ground_hole_3.obj"
+dest_files=[ "res://.import/ground_hole_3.obj-1a9b1d6e5de445cbb44cb473238e963d.mesh", "res://.import/ground_hole_3.obj-1a9b1d6e5de445cbb44cb473238e963d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

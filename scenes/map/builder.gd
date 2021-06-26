@@ -5,6 +5,7 @@ const CLASS_DECORATION = "decoration"
 const CLASS_TERRAIN = "terrain"
 const CLASS_BUILDING = "building"
 const CLASS_UNIT = "unit"
+const CLASS_DAMAGE = "damage"
 
 var map
 
@@ -35,8 +36,26 @@ func place_decoration(position, name, rotation):
         tile.terrain.clear()
     if tile.building.is_present():
         tile.building.clear()
+    if tile.damage.is_present():
+        tile.damage.clear()
 
     self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_terrain_anchor, tile.decoration)
+
+func place_damage(position, name, rotation):
+    var tile = self.map.model.get_tile(position)
+
+    if not tile.ground.is_present():
+        return
+    if tile.decoration.is_present():
+        tile.decoration.clear()
+    if tile.terrain.is_present():
+        tile.terrain.clear()
+    if tile.building.is_present():
+        tile.building.clear()
+    if tile.damage.is_present():
+        tile.damage.clear()
+
+    self.place_element(position, name, rotation, self.map.GROUND_HEIGHT - 0.05, self.map.tiles_terrain_anchor, tile.damage)
 
 func place_terrain(position, name, rotation):
     var tile = self.map.model.get_tile(position)
@@ -51,6 +70,8 @@ func place_terrain(position, name, rotation):
         tile.terrain.clear()
     if tile.building.is_present():
         tile.building.clear()
+    if tile.damage.is_present():
+        tile.damage.clear()
 
     self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_terrain_anchor, tile.terrain)
 
@@ -67,6 +88,8 @@ func place_building(position, name, rotation, side=null):
         tile.terrain.clear()
     if tile.building.is_present():
         tile.building.clear()
+    if tile.damage.is_present():
+        tile.damage.clear()
 
     self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_buildings_anchor, tile.building)
 
@@ -118,6 +141,8 @@ func clear_tile_layer(position):
         tile.terrain.clear()
     elif tile.decoration.is_present():
         tile.decoration.clear()
+    elif tile.damage.is_present():
+        tile.damage.clear()
     elif tile.frame.is_present():
         tile.frame.clear()
     elif tile.ground.is_present():
@@ -160,6 +185,9 @@ func place_tile(tile_id, tile_data):
 
     if tile_data["decoration"]["tile"] != null:
         self.place_decoration(tile.position, tile_data["decoration"]["tile"], tile_data["decoration"]["rotation"])
+
+    if tile_data.has("damage") and tile_data["damage"]["tile"] != null:
+        self.place_damage(tile.position, tile_data["damage"]["tile"], tile_data["damage"]["rotation"])
 
     if tile_data["terrain"]["tile"] != null:
         self.place_terrain(tile.position, tile_data["terrain"]["tile"], tile_data["terrain"]["rotation"])

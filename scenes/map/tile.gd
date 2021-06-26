@@ -12,6 +12,7 @@ var decoration = preload("res://scenes/map/tile_fragment.gd").new()
 var terrain = preload("res://scenes/map/tile_fragment.gd").new()
 var building = preload("res://scenes/map/tile_fragment.gd").new()
 var unit = preload("res://scenes/map/tile_fragment.gd").new()
+var damage = preload("res://scenes/map/tile_fragment.gd").new()
 
 var fragments = []
 
@@ -28,6 +29,7 @@ func _init(x, y):
         self.terrain,
         self.building,
         self.unit,
+        self.damage,
     ]
 
 func has_content():
@@ -44,6 +46,7 @@ func get_dict():
         "terrain" : self.terrain.get_dict(),
         "building" : self.building.get_dict(),
         "unit" : self.unit.get_dict(),
+        "damage" : self.damage.get_dict(),
     }
 
 func wipe():
@@ -53,6 +56,7 @@ func wipe():
     self.decoration.clear()
     self.frame.clear()
     self.ground.clear()
+    self.damage.clear()
 
 func is_selectable(side):
     if self.unit.is_present():
@@ -163,3 +167,23 @@ func has_friendly_hq(side):
     if self.building.is_present() && self.building.tile.side == side && self.building.tile.template_name in ["modern_hq", "steampunk_hq", "futuristic_hq", "feudal_hq"]:
         return true
     return false
+
+func is_ground_damage_possible():
+    if not self.ground.is_present():
+        return false
+    if self.unit.is_present():
+        return false
+    if self.building.is_present():
+        return false
+    if self.terrain.is_present():
+        return false
+    if self.damage.is_present():
+        return false
+
+    return true
+
+func is_object_damage_possible():
+    return self.terrain.is_present() and self.terrain.tile.is_damageable()
+
+func is_damageable():
+   return self.is_ground_damage_possible() or self.is_object_damage_possible()

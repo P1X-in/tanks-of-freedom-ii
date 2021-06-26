@@ -8,6 +8,9 @@ export var side_tile_view_cam_modifier = 0
 
 export var unit_vertical_offset = 0
 
+export var next_damage_stage_template = ""
+export var base_stage_template = ""
+
 var scripting_tags = {}
 
 func get_dict():
@@ -29,3 +32,9 @@ func add_script_tag(tag):
 
 func has_script_tag(tag):
     return self.scripting_tags.has(tag)
+
+func is_damageable():
+    return not self.next_damage_stage_template == ""
+
+func is_restoreable():
+    return not self.base_stage_template == ""

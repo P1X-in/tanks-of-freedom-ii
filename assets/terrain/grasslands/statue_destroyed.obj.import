@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/statue_destroyed.obj-82989a2f19caa6e781da25dca25681ea.mesh"
+
+[deps]
+
+files=[ "res://.import/statue_destroyed.obj-82989a2f19caa6e781da25dca25681ea.mesh" ]
+
+source_file="res://assets/terrain/grasslands/statue_destroyed.obj"
+dest_files=[ "res://.import/statue_destroyed.obj-82989a2f19caa6e781da25dca25681ea.mesh", "res://.import/statue_destroyed.obj-82989a2f19caa6e781da25dca25681ea.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

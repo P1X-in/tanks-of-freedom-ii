@@ -99,6 +99,8 @@ func place_tile():
         self.map.builder.place_frame(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
     if self.selected_class == self.map.builder.CLASS_DECORATION:
         self.map.builder.place_decoration(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
+    if self.selected_class == self.map.builder.CLASS_DAMAGE:
+        self.map.builder.place_damage(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
     if self.selected_class == self.map.builder.CLASS_TERRAIN:
         self.map.builder.place_terrain(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
     if self.selected_class == self.map.builder.CLASS_BUILDING:
@@ -226,6 +228,11 @@ func next_alternative():
 
     if tile.unit.is_present():
         self.next_unit_side(tile.unit.tile)
+
+    if tile.terrain.is_present() and tile.terrain.tile.is_damageable():
+        self.next_damage_stage(tile)
+    elif tile.terrain.is_present() and tile.terrain.tile.is_restoreable():
+        self.restore_damage_stage(tile)
         
     self.autosave()
 
@@ -241,3 +248,14 @@ func next_unit_side(unit_object):
 
     self.map.builder.set_unit_side(self.map.camera_tile_position, side_map["next"])
     
+func next_damage_stage(tile):
+    self.replace_terrain(tile, tile.terrain.tile.next_damage_stage_template)
+
+func restore_damage_stage(tile):
+    self.replace_terrain(tile, tile.terrain.tile.base_stage_template)
+
+func replace_terrain(tile, template_name):
+    var rotation = tile.terrain.tile.get_rotation_degrees()
+
+    tile.terrain.clear()
+    self.map.builder.place_terrain(tile.position, template_name, rotation.y)

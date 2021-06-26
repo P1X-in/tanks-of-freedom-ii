@@ -15,6 +15,7 @@ var abilities = preload("res://scenes/abilities/abilities.gd").new(self)
 var events = preload("res://scenes/board/logic/events.gd").new()
 var scripting = preload("res://scenes/board/logic/scripting.gd").new()
 var ai = preload("res://scenes/board/logic/ai/ai.gd").new(self)
+var collateral = preload("res://scenes/board/logic/collateral.gd").new(self)
 
 
 var selected_tile = null
@@ -360,6 +361,8 @@ func destroy_unit_on_tile(tile):
     self.explosion.explode()
     self.explosion.grab_sfx_effect(tile.unit.tile)
     tile.unit.clear()
+    self.collateral.generate_collateral(tile)
+    self.collateral.damage_tile(tile)
 
 func smoke_a_tile(tile):
     var position = self.map.map_to_world(tile.position)

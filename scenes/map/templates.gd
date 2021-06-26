@@ -39,6 +39,13 @@ const DECO_ROCKS1 = "deco_rocks1"
 const DECO_ROCKS2 = "deco_rocks2"
 const DECO_STATUE = "deco_statue"
 
+const DECO_GROUND_DMG_1 = "deco_ground_dmg1"
+const DECO_GROUND_DMG_2 = "deco_ground_dmg2"
+const DECO_GROUND_DMG_3 = "deco_ground_dmg3"
+const DECO_GROUND_DMG_4 = "deco_ground_dmg4"
+const DECO_GROUND_DMG_5 = "deco_ground_dmg5"
+const DECO_GROUND_DMG_6 = "deco_ground_dmg6"
+
 const CITY_BUILDING_BIG1 = "city_building_big1"
 const CITY_BUILDING_BIG2 = "city_building_big2"
 const CITY_BUILDING_BIG3 = "city_building_big3"
@@ -50,6 +57,10 @@ const CITY_BUILDING_SMALL4 = "city_building_small4"
 const CITY_BUILDING_SMALL5 = "city_building_small5"
 const CITY_BUILDING_SMALL6 = "city_building_small6"
 const CITY_BRIDGE = "city_bridge"
+
+const DAMAGED_STATUE = "damaged_statue"
+
+const DESTROYED_STATUE = "destroyed_statue"
 
 const NATURE_BIG_ROCKS1 = "nature_big_rocks1"
 const NATURE_BIG_ROCKS2 = "nature_big_rocks2"
@@ -164,6 +175,13 @@ var templates = {
     self.DECO_ROCKS2 : preload("res://scenes/tiles/decorations/rocks_2_overtile.tscn"),
     self.DECO_STATUE : preload("res://scenes/tiles/decorations/statue_overtile.tscn"),
 
+    self.DECO_GROUND_DMG_1 : preload("res://scenes/tiles/decorations/ground_damage_1.tscn"),
+    self.DECO_GROUND_DMG_2 : preload("res://scenes/tiles/decorations/ground_damage_2.tscn"),
+    self.DECO_GROUND_DMG_3 : preload("res://scenes/tiles/decorations/ground_damage_3.tscn"),
+    self.DECO_GROUND_DMG_4 : preload("res://scenes/tiles/decorations/ground_damage_4.tscn"),
+    self.DECO_GROUND_DMG_5 : preload("res://scenes/tiles/decorations/ground_damage_5.tscn"),
+    self.DECO_GROUND_DMG_6 : preload("res://scenes/tiles/decorations/ground_damage_6.tscn"),
+
     self.CITY_BUILDING_BIG1 : preload("res://scenes/tiles/city/building_big_1_overtile.tscn"),
     self.CITY_BUILDING_BIG2 : preload("res://scenes/tiles/city/building_big_2_overtile.tscn"),
     self.CITY_BUILDING_BIG3 : preload("res://scenes/tiles/city/building_big_3_overtile.tscn"),
@@ -175,6 +193,10 @@ var templates = {
     self.CITY_BUILDING_SMALL5 : preload("res://scenes/tiles/city/building_small_5_overtile.tscn"),
     self.CITY_BUILDING_SMALL6 : preload("res://scenes/tiles/city/building_small_6_overtile.tscn"),
     self.CITY_BRIDGE : preload("res://scenes/tiles/city/river_bridge_overtile.tscn"),
+
+    self.DAMAGED_STATUE : preload("res://scenes/tiles/decorations/statue_damaged.tscn"),
+
+    self.DESTROYED_STATUE : preload("res://scenes/tiles/decorations/statue_destroyed.tscn"),
 
     self.NATURE_BIG_ROCKS1 : preload("res://scenes/tiles/nature/big_rocks_1_overtile.tscn"),
     self.NATURE_BIG_ROCKS2 : preload("res://scenes/tiles/nature/big_rocks_2_overtile.tscn"),
