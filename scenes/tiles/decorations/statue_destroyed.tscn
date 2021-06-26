@@ -8,6 +8,7 @@
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
 base_stage_template = "deco_statue"
+is_smoking = true
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource( 3 )
