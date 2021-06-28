@@ -4,8 +4,8 @@
 [ext_resource path="res://assets/terrain/grasslands/building_small_5_overtile.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=3]
 
-
 [node name="tile" instance=ExtResource( 3 )]
+base_stage_template = "damaged_building_small5"
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource( 2 )
