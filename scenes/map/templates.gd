@@ -60,9 +60,29 @@ const CITY_BRIDGE = "city_bridge"
 
 const DAMAGED_STATUE = "damaged_statue"
 const DAMAGED_FOUNTAIN = "damaged_fountain"
+const DAMAGED_BUILDING_SMALL1 = "damaged_building_small1"
+const DAMAGED_BUILDING_SMALL2 = "damaged_building_small2"
+const DAMAGED_BUILDING_SMALL3 = "damaged_building_small3"
+const DAMAGED_BUILDING_SMALL4 = "damaged_building_small4"
+const DAMAGED_BUILDING_SMALL5 = "damaged_building_small5"
+const DAMAGED_BUILDING_SMALL6 = "damaged_building_small6"
+const DAMAGED_BUILDING_BIG1 = "damaged_building_big1"
+const DAMAGED_BUILDING_BIG2 = "damaged_building_big2"
+const DAMAGED_BUILDING_BIG3 = "damaged_building_big3"
+const DAMAGED_BUILDING_BIG4 = "damaged_building_big4"
 
 const DESTROYED_STATUE = "destroyed_statue"
 const DESTROYED_FOUNTAIN = "destroyed_fountain"
+const DESTROYED_BUILDING_SMALL1 = "destroyed_building_small1"
+const DESTROYED_BUILDING_SMALL2 = "destroyed_building_small2"
+const DESTROYED_BUILDING_SMALL3 = "destroyed_building_small3"
+const DESTROYED_BUILDING_SMALL4 = "destroyed_building_small4"
+const DESTROYED_BUILDING_SMALL5 = "destroyed_building_small5"
+const DESTROYED_BUILDING_SMALL6 = "destroyed_building_small6"
+const DESTROYED_BUILDING_BIG1 = "destroyed_building_big1"
+const DESTROYED_BUILDING_BIG2 = "destroyed_building_big2"
+const DESTROYED_BUILDING_BIG3 = "destroyed_building_big3"
+const DESTROYED_BUILDING_BIG4 = "destroyed_building_big4"
 
 const NATURE_BIG_ROCKS1 = "nature_big_rocks1"
 const NATURE_BIG_ROCKS2 = "nature_big_rocks2"
@@ -198,9 +218,15 @@ var templates = {
 
     self.DAMAGED_STATUE : preload("res://scenes/tiles/decorations/statue_damaged.tscn"),
     self.DAMAGED_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_damaged.tscn"),
+    self.DAMAGED_BUILDING_SMALL1 : preload("res://scenes/tiles/city/building_small_1_damaged.tscn"),
+    self.DAMAGED_BUILDING_SMALL2 : preload("res://scenes/tiles/city/building_small_2_damaged.tscn"),
+    self.DAMAGED_BUILDING_SMALL3 : preload("res://scenes/tiles/city/building_small_3_damaged.tscn"),
 
     self.DESTROYED_STATUE : preload("res://scenes/tiles/decorations/statue_destroyed.tscn"),
     self.DESTROYED_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_destroyed.tscn"),
+    self.DESTROYED_BUILDING_SMALL1 : preload("res://scenes/tiles/city/building_small_1_destroyed.tscn"),
+    self.DESTROYED_BUILDING_SMALL2 : preload("res://scenes/tiles/city/building_small_2_destroyed.tscn"),
+    self.DESTROYED_BUILDING_SMALL3 : preload("res://scenes/tiles/city/building_small_3_destroyed.tscn"),
 
     self.NATURE_BIG_ROCKS1 : preload("res://scenes/tiles/nature/big_rocks_1_overtile.tscn"),
     self.NATURE_BIG_ROCKS2 : preload("res://scenes/tiles/nature/big_rocks_2_overtile.tscn"),

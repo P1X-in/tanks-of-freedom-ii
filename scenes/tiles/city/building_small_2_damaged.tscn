@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=1]
+[ext_resource path="res://scenes/tiles/damaged_tile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/terrain/grasslands/building_small_2_damaged.obj" type="ArrayMesh" id=3]
+
+[node name="damaged_tile" instance=ExtResource( 2 )]
+main_tile_view_cam_modifier = -10
+side_tile_view_cam_modifier = -25
+next_damage_stage_template = "destroyed_building_small2"
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 1 )
