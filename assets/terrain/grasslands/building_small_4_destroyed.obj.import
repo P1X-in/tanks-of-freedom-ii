@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/building_small_4_destroyed.obj-fbcc6b577c243893d1bdcd504de6d6cb.mesh"
+
+[deps]
+
+files=[ "res://.import/building_small_4_destroyed.obj-fbcc6b577c243893d1bdcd504de6d6cb.mesh" ]
+
+source_file="res://assets/terrain/grasslands/building_small_4_destroyed.obj"
+dest_files=[ "res://.import/building_small_4_destroyed.obj-fbcc6b577c243893d1bdcd504de6d6cb.mesh", "res://.import/building_small_4_destroyed.obj-fbcc6b577c243893d1bdcd504de6d6cb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
