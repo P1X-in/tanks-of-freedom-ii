@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/tiles/damaged_tile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/terrain/grasslands/building_big_3_destroyed.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=3]
+
+[node name="damaged_tile" instance=ExtResource( 1 )]
+base_stage_template = "city_building_big3"
+is_smoking = true
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 3 )
