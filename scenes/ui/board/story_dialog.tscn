@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/ui/board/story_dialog.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ui/board/actor_view.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=3]
 
 [node name="story_dialog" type="Node2D"]
 script = ExtResource( 1 )
@@ -38,4 +40,62 @@ text = "Continue..."
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="actor_left" type="Node2D" parent="background"]
+
+[node name="background" type="ColorRect" parent="background/actor_left"]
+margin_top = -50.0
+margin_right = 400.0
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="name" type="Label" parent="background/actor_left"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -50.0
+margin_right = 400.0
+custom_fonts/font = ExtResource( 3 )
+text = "Actor Name"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="actor_view" parent="background/actor_left" instance=ExtResource( 2 )]
+position = Vector2( -100, 50 )
+
+[node name="actor_right" type="Node2D" parent="background"]
+position = Vector2( 800, 0 )
+
+[node name="background" type="ColorRect" parent="background/actor_right"]
+margin_left = -400.0
+margin_top = -50.0
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="name" type="Label" parent="background/actor_right"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -400.0
+margin_top = -50.0
+custom_fonts/font = ExtResource( 3 )
+text = "Actor Name"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="actor_view" parent="background/actor_right" instance=ExtResource( 2 )]
+position = Vector2( 100, 50 )
+
 [connection signal="pressed" from="background/continue" to="." method="_on_continue_pressed"]

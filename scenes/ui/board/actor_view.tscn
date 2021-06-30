@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/map_editor/tile_cam.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/map_editor/tile_view.gd" type="Script" id=2]
+
+[node name="actor_view" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="background" type="ColorRect" parent="."]
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="screen" type="Sprite" parent="."]
+position = Vector2( 0, 30 )
+flip_v = true
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 400, 400 )
+own_world = true
+transparent_bg = true
+
+[node name="tile_cam" parent="Viewport" instance=ExtResource( 1 )]

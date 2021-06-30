@@ -8,6 +8,7 @@ var side
 func _execute(_metadata):
     var actor = {
         'portrait' : self.portrait,
+        'portrait_tile' : self.board.map.templates.get_template(self.portrait),
         'name' : self.name,
         'side' : self.side
     }
