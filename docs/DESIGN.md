@@ -40,24 +40,24 @@ Style: Feudal/Knights
 For ToF3D we intend to have four sides to the conflict, with each having an npc leader and two playable heroes.
 
 ### Sapphire Dawn (Team Blue)
-- The CEO
-- The General
-- The Commando
+- The CEO - Gideon
+- The General - Cyrus
+- The Commando - Blake
 
 ### Ruby Dusk (Team Red)
-- The Bright Leader / The Baron
-- The Inquisitor / The Gentleman
-- The Rebel Leader / The Governor
+- The Bright Leader / The Lord - Dawson
+- The Inquisitor / The Gentleman - Archibald
+- The Rebel Leader / The Governor - Sidney
 
 ### Jade Twilight (Team Green)
-- The Chancellor
-- The Admiral
-- The Captain
+- The Chancellor - Irene
+- The Admiral - Torsten
+- The Captain - Claude
 
 ### Amber Noon (Team Yellow)
-- The King
-- The Prince
-- The Warlord
+- The King - Ludwig
+- The Prince - Tybalt
+- The Warlord - Grim
 
 
 ## Story
