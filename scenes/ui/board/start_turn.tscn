@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scenes/ui/board/start_turn.gd" type="Script" id=2]
+[ext_resource path="res://scenes/ui/icons/nations/blue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/ui/icons/nations/yellow.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/ui/icons/nations/green.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/ui/icons/nations/red.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "show"
@@ -36,11 +40,10 @@ scale = Vector2( 1e-05, 1e-05 )
 script = ExtResource( 2 )
 
 [node name="background" type="ColorRect" parent="."]
-visible = false
 margin_left = -200.0
-margin_top = -50.0
+margin_top = -90.0
 margin_right = 200.0
-margin_bottom = 50.0
+margin_bottom = 90.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -50,8 +53,8 @@ __meta__ = {
 [node name="blue_player" type="Label" parent="background"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 1.0
-margin_bottom = -36.0
+margin_top = 85.0
+margin_bottom = -45.0
 custom_fonts/font = ExtResource( 1 )
 text = "Sapphire Dawn"
 align = 1
@@ -61,12 +64,15 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="blue" parent="background/blue_player" instance=ExtResource( 3 )]
+position = Vector2( 200, -40 )
+
 [node name="red_player" type="Label" parent="background"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 1.0
-margin_bottom = -36.0
+margin_top = 85.0
+margin_bottom = -45.0
 custom_fonts/font = ExtResource( 1 )
 text = "Ruby Dusk"
 align = 1
@@ -76,12 +82,15 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="red" parent="background/red_player" instance=ExtResource( 6 )]
+position = Vector2( 200, -40 )
+
 [node name="yellow_player" type="Label" parent="background"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 1.0
-margin_bottom = -36.0
+margin_top = 85.0
+margin_bottom = -45.0
 custom_fonts/font = ExtResource( 1 )
 text = "Amber Noon"
 align = 1
@@ -91,12 +100,15 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="yellow" parent="background/yellow_player" instance=ExtResource( 4 )]
+position = Vector2( 200, -40 )
+
 [node name="green_player" type="Label" parent="background"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 1.0
-margin_bottom = -36.0
+margin_top = 85.0
+margin_bottom = -45.0
 custom_fonts/font = ExtResource( 1 )
 text = "Jade Twilight"
 align = 1
@@ -106,11 +118,13 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="green" parent="background/green_player" instance=ExtResource( 5 )]
+position = Vector2( 200, -40 )
+
 [node name="turn" type="Label" parent="background"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 44.0
-margin_bottom = 7.0
+margin_top = 130.0
 custom_fonts/font = ExtResource( 1 )
 text = "Turn 1"
 align = 1
