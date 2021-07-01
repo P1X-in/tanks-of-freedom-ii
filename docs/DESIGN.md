@@ -15,22 +15,22 @@ A fictional world of Libre populated by humans. It consists of one, big landmass
 It is possible, there are other countries in this world, that are not part of the story, and could be used in the future.
 
 ### Sapphire Dawn (Team Blue)
-A corporate, police state, that is secretly funding various warring factions of Team Yellow in order to weaken the region and take over their resources. In economic war with Team Red. Led by democratic oligarchy.
+A democratic, capitalist nation that values business, ambition and freedom. In rivalry with Ruby Dusk.
 
 Style: Modern
 
 ### Ruby Dusk (Team Red)
-Industrial nation, that is exploiting it's own population for cheap labour and suppresing freedom. Always looking for opportunities of new conquest. A rebel faction is organizing within, plotting to take over and end the regime.
+An industrial nation, that values hard work and ingeniuity. In rivalry with Sapphire Dawn.
 
 Style: Steampunk
 
 ### Jade Twilight (Team Green)
-A peacful and prosperous nation, consisting of a federation of Islands. An uneasy ally to Team Blue, but also in trade relations with Team Red. Offering aid to Team Yellow on the condition of maintainig internal Peace, but not willing to interfere. Led by democratic government.
+A peacful and prosperous nation, consisting of a federation of Islands. Values science and diplomacy. In good relations with everyone.
 
 Style: Futuristic
 
 ### Amber Noon (Team Yellow)
-A feudal nation splintered into warring factions. Internal struggle is secretly fueled by Team Blue. Country is led by royal family, with a weak king and a prince hoping to unite his people and end the civil war.
+A feudal nation, that values honor and courage. Led by a royal family. In reserved relations with other nations.
 
 Style: Feudal/Knights
 
@@ -41,74 +41,89 @@ For ToF3D we intend to have four sides to the conflict, with each having an npc 
 
 ### Sapphire Dawn (Team Blue)
 - The CEO - Gideon
+    - opportunistic
+    - businessman
 - The General - Cyrus
+    - good leader
+    - old fashioned
 - The Commando - Blake
+    - patriotic
+    - hot headed
 
 ### Ruby Dusk (Team Red)
-- The Bright Leader / The Lord - Dawson
-- The Inquisitor / The Gentleman - Archibald
-- The Rebel Leader / The Governor - Sidney
+- The Lord - Dawson
+    - stylish
+    - an inventor
+- The Gentleman - Archibald
+    - classy
+    - trustworthy
+- The Governor - Sidney
+    - independent
+    - petty
 
 ### Jade Twilight (Team Green)
 - The Chancellor - Irene
+    - compassionate
+    - diplomatic
 - The Admiral - Torsten
+    - wise
+    - inspiring
 - The Captain - Claude
+    - competetive
+    - cocky
 
 ### Amber Noon (Team Yellow)
 - The King - Ludwig
+    - caring
+    - naive
 - The Prince - Tybalt
+    - honourable
+    - devoted
 - The Warlord - Grim
+    - ambitous
+    - mischievous
 
 
 ## Story
 
-Yellow warlord has secretly imprisoned the King, and tricked the Prince into following his orders. He starts war on other nations. Eventually, Yellow is defeated and King returned as ruler.
-
-===========================================================================================
-
-Team Yellow factions, fighting a civil war, go beyond their borders and start attacking their neighbours as well. Provoked, Team Red starts an invasion on Team Yellow land. Team blue offers help, also asking their ally, Team Green, to join the fight against Team Red.
+Yellow warlord has secretly imprisoned the King, and tricked the Prince into following his orders. He starts war on other nations. Eventually, Yellow is defeated and King returned as a ruler.
 
 ### Theme
 
-The game is about deception, political agendas and freedom. None of the factions are purely good or bad. Story has to decieve the player into thinking, that certain factions and characters are definately bad, and then subvert their expectations. Some light-hearthed banter between characters and cartoony approach should be used.
+The game is about rivalry and silly political plots. None of the factions are purely good or bad. It focuses on interactions between characters from all nations.
 
-On the other hand, ff game is to be targeted at AW audience, story should be more humorus and light-hearted.
+Story has to decieve the player into thinking, that certain factions and characters are bad, and then subvert their expectations.
 
 
 ## Story Progression
 
-Team Yellow military is constantly fighting local insurgents and warlords, their country splintered into factions. Some are loyal to the royal family, some willing to create their own kingdoms.
+Amber Noon Warlord Grim has imprisoned the King and started a war with Ruby Dusk. Betting on their rivalry, he asks Sapphire Dawn for help, telling them, that Ruby Dusk attacked first.
 
-#### Prologue
-Team Red is attacked by a group of terrorists from Team Yellow. They interpret this as an act of war, and use this opportunity to gain more land. An offensive begins.
+Ruby Dusk responds to provocation, and invades Amber Noon. Sapphire Dawn comes to help and attacks Ruby Dusk.
+
+#### Prologue / Tutorial
+During a border inspection by Prince Tybalt, Ruby Dusk starts an offensive. Warlord Grim contacts Prince Tybalt and tells him, that Ruby Dusk started a war, and King Ludwig ordered him to repel the invaders.
 
 #### Red Campaign
-Team Red captures several provinces of Team Yellow, preparing for total annexation. As they gain significant presence, commander is being recalled to the country in order to quell an uprising. Rebels willing to align themselves with Team Green try to remove the Regime, and the capital city needs to be defended.
+Ruby Dusk captures several provinces of Team Yellow. They approach Amber Noon capital and prepare to occupy it, but their offensive is halted when they get news of Sapphire Dawn joining the fight. Ruby Dusk goes to defend their own lands, encountering both Sapphire Dawn, as well as Jade Twilight forces.
 
 #### Blue Campaign
-Team Blue, afraid of Team Red gaining too much power and resources by absorbing Team Yellow, offers help. Royal family accepts, and in a series of battles between Red and Blue, Team Red offensive is stopped. Not having enough forces, Team Blue asks their allies, Team Green, for help in pushing Team Red back into their territory. After a joint battle, Team Red retreats.
+Driven by their rivalry agains Ruby Dusk, Sapphire Dawn agrees to help Amber Noon in their war. They attack Ruby Dusk lands, and fight to help free the Amber Noon capital, but then encounter Jade Twilight and Amber Noon forces led by Prince Tybalt in their way. Warlord Grim declares Prince Tybalt a traitor, who wants to overthrow King Ludwig, and asks Sapphire Dawn to deal with them as well.
 
 #### Green Campaign
-After investigating terrorist camps, Team Green discovers they were backed by Team Blue in order to destabilise Team Yellow and take their lands. Green, realising they will need allies, decides to aid the Red Rebels. In the meantime Team Blue starts an offensive on weakened Team Yellow, taking advantage of large amount of Blue forces deployed all over Yellow country. Green and newly reformed Red start a counter-offensive aimed at freeing Yellow. They reach royal palace and reinstate royal family.
+Amber Noon Prince Tybalt visits Jade Twilight Chancelor Irene to ask for help, as his country is being attacked. Jade Twilight sends a diplomatic envoy to Amber Noon capital, but they get get attacked by Amber Noon forces instead, as Warlord Grim fears they would discover the truth. They fight Amber Noon troops, as well as Ruby Dusk forces ocuppying the country. Near the capital, they encounter Sapphire Dawn forces allied with Warlord Grim, and fight them to gain a foothold.
 
 #### Yellow Campaign
-Yellow Prince has to re-take his country from Team Blue and Blue-backed Yellow warlords. Some Yellow factions support him from the beggining, other need to be brought back into the fold. Once this is done, Team Yellow, together with Team Green and Team Red attack Team Blue, who plan on deploying WMDs in order to force victory.
+Amber Noon Prince Tybalt with a handful of loyal forces trains against Jade Twilight Captain Claude, until he is ready to help his own country.
+
+Prince Tybalt leads his forces against Sapphire Dawn, who allied themselves with Warlord Grim, as well as against Ruby Dusk standing in their way. He arrives with both his and allied Jade Twilight Forces at the outskirts of Amber Noon capital. It is being defended by Sapphire Dawn forces and Amber Noon troops loyal to Warlord Grim, as they defend it from Ruby Dusk. Both opponents are defeated and Prince Tybalt frees King Ludwig, ending the war.
+
+Warlord Grim is imprisoned in the Amber Castle.
 
 ### Missions
 
 #### Prologue
-1. *Border Patrol* - Local Red forces are dispatched to investigate a terrorist attack in a small town near Yellow border. Player is then tasked with taking it out.
-
-Units:
-- Infantry
-- Tank (limited)
-
-2. *The Catalyst* - The Yellow Warlord launches a full-on attack on a Red base. Defend and counter-attack. Note: The Warlord shows up in the story, but is not yet revealed as a hero unit.
-
-Units:
-- Infantry
-- Tanks
-- Heli (limited)
+To be designed.
 
 #### Red Campaign
 To be designed.
@@ -156,14 +171,12 @@ This game is a turn-based strategy, where one player commands his/her forces ful
 
 Game is played on a board consisting of square tiles, populated with terrain, units, buildings and obstacles. Player is awarded a resource at the beggining of the turn, which can be spent on new units or active skills.
 Each unit can be moved, attack enemy units, activate special abilities or defend a position. All actions need to be contextual and easy to execute with two buttons. Unit actions are limited by the amount of it's own action points and other attributes.
-Buildings can be neutral, or belong to one of the players. Player can ocuppy a building, that does not belong to them in order to capture it. Buildings can fulfill one or more of roles: provide resources, enable deployment of new units, repair units, or be a strategic objective.
+Buildings can be neutral, or belong to one of the players. Player can ocuppy a building, that does not belong to them in order to capture it. Buildings can fulfill one or more of roles: provide resources, enable deployment of new units, or be a strategic objective.
 
 There will be no Fog of War, that was present in the previous game.
 There will be no dedicated battle screen, with combat taking place direclty on the main board.
 
 Combat may cause collateral damage to the buildings and terrain around them.
-Infantry can move onto a building tile to gain bonuses. Bonuses decrease with building damage.
-Certain terrain tiles can provide bonuses or penalties.
 
 Resources gained from buildings will be taxed according to the amount of units deployed, to prevent unit spam.
 
@@ -199,9 +212,8 @@ Most basic unit in ToF, infantry is a cheap and slow unit with low damage, but c
 
 Strengths:
 - cheap
-- strong against flying units
+- can attack flying units
 - can capture buildings
-- can garisson structures
 
 Weaknesses:
 - low health
@@ -223,7 +235,7 @@ Weaknesses:
 - expensive
 - can't attack flying units
 
-Special: Long-range shell - can deal damage to a unit one field away in a straight line
+Special: Long-range shell - can deal damage to a unit up to two fields away in a straight line
 
 #### Attack Helicopter
 
@@ -231,7 +243,7 @@ Offensive air unit, often deployed to gain advantage on the battlefield.
 
 Strengths:
 - good mobility
-- strong against armored units
+- strong against tank units
 
 Weaknesses:
 - very expensive
@@ -252,15 +264,14 @@ Motorized infantry squad, capable of limited field repairs and medical assistanc
 Strengths:
 - cheap
 - can capture buildings
-- moderate mobility
+- better mobility
 
 Weaknesses:
 - low health
 - low damage
 - can't attack flying units
-- can't garisson structures
 
-Special: Medkit/Repair Kit - can restore HP to any unit
+Special: Medkit/Repair Kit - can restore up to 5 HP to any unit
 
 #### Mobile rocket artillery
 
@@ -289,18 +300,29 @@ Weaknesses:
 - low damage
 - low health
 
-Special: Rapid response - restores all action points
+Special: Rapid response - restores all action points and attacks
 
 #### Leveling up
 
 Units can level up when they destroy enemies. Each level grants bonuses:
-1. Increased mobility
-2. Increased armor
+1. Increased armor
+2. Increased mobility
 3. Access to active ability
 
 ### Heroes
 
 In addition to regular units, each side has access to two hero units. A hero unit is more powerful, and more expensive, than a regular unit. These units can be deployed from HQ for a significant cost. In battle, there can be only one hero on each side, with additional ones available for cutscenes, but not in gameplay.
+
+#### Hero units and powers
+
+- The General
+- The Commando
+- The Gentleman
+- The Governor
+- The Admiral
+- The Captain
+- The Prince
+- The Warlord
 
 #### Powers
 
