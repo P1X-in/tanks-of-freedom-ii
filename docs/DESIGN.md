@@ -57,7 +57,7 @@ For ToF3D we intend to have four sides to the conflict, with each having an npc 
 - The Gentleman - Archibald
     - classy
     - trustworthy
-- The Governor - Sidney
+- The Noble - Sidney
     - independent
     - petty
 
@@ -105,20 +105,20 @@ Ruby Dusk responds to provocation, and invades Amber Noon. Sapphire Dawn comes t
 During a border inspection by Prince Tybalt, Ruby Dusk starts an offensive. Warlord Grim contacts Prince Tybalt and tells him, that Ruby Dusk started a war, and King Ludwig ordered him to repel the invaders.
 
 #### Red Campaign
-Ruby Dusk captures several provinces of Team Yellow. They approach Amber Noon capital and prepare to occupy it, but their offensive is halted when they get news of Sapphire Dawn joining the fight. Ruby Dusk goes to defend their own lands, encountering both Sapphire Dawn, as well as Jade Twilight forces.
+Ruby Dusk Noble Sidney disregards Lord Dawson orders and captures several provinces of Team Yellow. They approach Amber Noon capital and prepare to occupy it, but their offensive is halted when they get news of Sapphire Dawn joining the fight. Ruby Dusk Gentleman Archibald goes to defend their own lands, encountering both Sapphire Dawn, as well as Jade Twilight forces.
 
 #### Blue Campaign
-Driven by their rivalry agains Ruby Dusk, Sapphire Dawn agrees to help Amber Noon in their war. They attack Ruby Dusk lands, and fight to help free the Amber Noon capital, but then encounter Jade Twilight and Amber Noon forces led by Prince Tybalt in their way. Warlord Grim declares Prince Tybalt a traitor, who wants to overthrow King Ludwig, and asks Sapphire Dawn to deal with them as well.
+Driven by their rivalry agains Ruby Dusk and potential gains, Sapphire Dawn CEO Gideon agrees to help Amber Noon in their war. General Cyrus is sent to attack Ruby Dusk lands, and fight to help free the Amber Noon capital, but then encounter Jade Twilight and Amber Noon forces led by Prince Tybalt in their way. Warlord Grim declares Prince Tybalt a traitor, who wants to overthrow King Ludwig, and asks Sapphire Dawn Commando Blake to deal with them.
 
 #### Green Campaign
-Amber Noon Prince Tybalt visits Jade Twilight Chancelor Irene to ask for help, as his country is being attacked. Jade Twilight sends a diplomatic envoy to Amber Noon capital, but they get get attacked by Amber Noon forces instead, as Warlord Grim fears they would discover the truth. They fight Amber Noon troops, as well as Ruby Dusk forces ocuppying the country. Near the capital, they encounter Sapphire Dawn forces allied with Warlord Grim, and fight them to gain a foothold.
+Amber Noon Prince Tybalt visits Jade Twilight Chancelor Irene to ask for help, as his country is being attacked. Jade Twilight sends Admiral Torsten as a diplomatic envoy to Amber Noon capital, but he gets attacked by Amber Noon forces instead, as Warlord Grim fears he would discover the truth. He fights Amber Noon troops, as well as Ruby Dusk forces ocuppying the country. Near the capital, He encounters Sapphire Dawn forces allied with Warlord Grim, and fights them to gain a foothold, while Captain Claude is dispatched to return to Chancelor Irene with the news.
 
 #### Yellow Campaign
-Amber Noon Prince Tybalt with a handful of loyal forces trains against Jade Twilight Captain Claude, until he is ready to help his own country.
+Amber Noon Prince Tybalt with a handful of loyal forces trains against Jade Twilight Captain Claude, until he is strong enough.
 
 Prince Tybalt leads his forces against Sapphire Dawn, who allied themselves with Warlord Grim, as well as against Ruby Dusk standing in their way. He arrives with both his and allied Jade Twilight Forces at the outskirts of Amber Noon capital. It is being defended by Sapphire Dawn forces and Amber Noon troops loyal to Warlord Grim, as they defend it from Ruby Dusk. Both opponents are defeated and Prince Tybalt frees King Ludwig, ending the war.
 
-Warlord Grim is imprisoned in the Amber Castle.
+Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights frees him from his cell. He gathers his forces and fights through Jade Twilight forces stationed nearby to escape. He dissapears into the mountains to plot his revenge.
 
 ### Missions
 
@@ -318,7 +318,7 @@ In addition to regular units, each side has access to two hero units. A hero uni
 - The General
 - The Commando
 - The Gentleman
-- The Governor
+- The Noble
 - The Admiral
 - The Captain
 - The Prince
