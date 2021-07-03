@@ -40,7 +40,7 @@ Style: Feudal/Knights
 For ToF3D we intend to have four sides to the conflict, with each having an npc leader and two playable heroes.
 
 ### Sapphire Dawn (Team Blue)
-- The CEO - Gideon
+- The President - Gideon
     - opportunistic
     - businessman
 - The General - Cyrus
@@ -66,8 +66,8 @@ For ToF3D we intend to have four sides to the conflict, with each having an npc 
     - compassionate
     - diplomatic
 - The Admiral - Torsten
-    - wise
-    - inspiring
+    - experienced
+    - tactical genius
 - The Captain - Claude
     - competetive
     - cocky
@@ -78,10 +78,10 @@ For ToF3D we intend to have four sides to the conflict, with each having an npc 
     - naive
 - The Prince - Tybalt
     - honourable
-    - devoted
+    - inspiring
 - The Warlord - Grim
     - ambitous
-    - mischievous
+    - intimidating
 
 
 ## Story
@@ -108,7 +108,7 @@ During a border inspection by Prince Tybalt, Ruby Dusk starts an offensive. Warl
 Ruby Dusk Noble Sidney disregards Lord Dawson orders and captures several provinces of Team Yellow. They approach Amber Noon capital and prepare to occupy it, but their offensive is halted when they get news of Sapphire Dawn joining the fight. Ruby Dusk Gentleman Archibald goes to defend their own lands, encountering both Sapphire Dawn, as well as Jade Twilight forces.
 
 #### Blue Campaign
-Driven by their rivalry agains Ruby Dusk and potential gains, Sapphire Dawn CEO Gideon agrees to help Amber Noon in their war. General Cyrus is sent to attack Ruby Dusk lands, and fight to help free the Amber Noon capital, but then encounter Jade Twilight and Amber Noon forces led by Prince Tybalt in their way. Warlord Grim declares Prince Tybalt a traitor, who wants to overthrow King Ludwig, and asks Sapphire Dawn Commando Blake to deal with them.
+Driven by their rivalry agains Ruby Dusk and potential gains, Sapphire Dawn President Gideon agrees to help Amber Noon in their war. General Cyrus is sent to attack Ruby Dusk lands, and fight to help free the Amber Noon capital, but then encounter Jade Twilight and Amber Noon forces led by Prince Tybalt in their way. Warlord Grim declares Prince Tybalt a traitor, who wants to overthrow King Ludwig, and asks Sapphire Dawn Commando Blake to deal with them.
 
 #### Green Campaign
 Amber Noon Prince Tybalt visits Jade Twilight Chancelor Irene to ask for help, as his country is being attacked. Jade Twilight sends Admiral Torsten as a diplomatic envoy to Amber Noon capital, but he gets attacked by Amber Noon forces instead, as Warlord Grim fears he would discover the truth. He fights Amber Noon troops, as well as Ruby Dusk forces ocuppying the country. Near the capital, He encounters Sapphire Dawn forces allied with Warlord Grim, and fights them to gain a foothold, while Captain Claude is dispatched to return to Chancelor Irene with the news.
@@ -313,16 +313,32 @@ Units can level up when they destroy enemies. Each level grants bonuses:
 
 In addition to regular units, each side has access to two hero units. A hero unit is more powerful, and more expensive, than a regular unit. These units can be deployed from HQ for a significant cost. In battle, there can be only one hero on each side, with additional ones available for cutscenes, but not in gameplay.
 
-#### Hero units and powers
+#### Hero units
 
 - The General
+    - Passive: Recruitment: Barracks units cost 10 AP less to deploy.
+    - Active: Deep Strike: Drop an Infantry unit with no MP within 2 tiles. Costs 50 AP
 - The Commando
+    - Passive: Trained Specialist: All unit skill CDs are reduced by 1
+    - Active: Infiltration: Hero teleports in range up to 2 tiles with 1 MP left
 - The Gentleman
+    - Passive: Optimise: Each Tower gives additional 5AP per turn
+    - Active: Targeting Automaton: up to 4 neighbouring Tanks can now attack air units until next turn. Non-Tank units get +1 Damage instead.
 - The Noble
+    - Passive: Efficient: Factory units cost 10 AP less to deploy
+    - Active: Hardened Armour: Units within 2 tiles get +1 Armour until next turn
 - The Admiral
+    - Passive: Air superiority: Airfield units cost 10 AP less to deploy
+    - Active: Precision Strike: Target field and it's neighbours are hit for 5 HP bypassing armour
 - The Captain
+    - Passive: Mentor: All Infantry and Mobile Infantry units start at level 1
+    - Active: Supply: Heal up to four neighbouring units for up to 5HP
 - The Prince
+    - Passive: High Morale: Infantry and Mobile Infantry units get +1 Damage and +1 Armour
+    - Active: Inspire - replenish movement and attack points of a unit within 2 tiles, reset CD on active skill
 - The Warlord
+    - Passive: Intimidating: Claiming buildings now uses all AP instead of consuming a unit
+    - Active: Promote: Upgrade a neighbouring unit by 1 level
 
 #### Powers
 
@@ -338,10 +354,11 @@ An example of possible powers:
 - Units can retaliate even without AP
 - Units have +X movement
 - Units deal +X damage
-- Units receive -X damage
+- Units have +X armour
 - Call an airstrike within X tiles
 - Drop a paratrooper (Infantry unit) nearby
-- Replenish movement points of a unit
+- Replenish movement and attack points of a unit
+- Units cost -X AP
 
 ### Buildings
 
