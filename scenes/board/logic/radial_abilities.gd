@@ -25,7 +25,7 @@ func fill_radial_with_building_abilities(board, radial, building):
     var label
 
     for ability in building.abilities:
-        if ability.TYPE == "production":
+        if ability.TYPE == "production" and ability.is_visible(board):
             var icon_model = board.map.templates.get_template(ability.template_name)
             icon_model.set_side_material(board.map.templates.get_side_material(building.side))
             icon = tile_view_template.instance()

@@ -42,6 +42,9 @@ func _ready():
             self.state.add_player_ap(index, player_setup["ap"])
             index += 1
 
+    self.state.register_heroes(self.map.model)
+    self.events.register_observer(self.events.types.UNIT_SPAWNED, self.state, "track_hero_spawn")
+
     self.start_turn()
 
 func _input(event):
@@ -356,6 +359,9 @@ func battle(attacker_tile, defender_tile):
         self.events.emit_unit_destroyed(attacker, defender_id, defender_side)
 
 func destroy_unit_on_tile(tile):
+    if tile.unit.tile.unit_class == "hero":
+        self.state.clear_hero_for_side(tile.unit.tile.side)
+
     var position = tile.unit.tile.get_translation()
     self.explosion.set_translation(Vector3(position.x, 0, position.z))
     self.explosion.explode()

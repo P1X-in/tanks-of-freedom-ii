@@ -17,6 +17,7 @@ max_hp = 20
 max_move = 5
 attack = 9
 unit_value = 150
+unit_class = "hero"
 
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource( 5 )

@@ -168,6 +168,11 @@ func has_friendly_hq(side):
         return true
     return false
 
+func has_friendly_hero(side):
+    if self.has_friendly_unit(side) && self.unit.tile.unit_class == "hero":
+        return true
+    return false
+
 func is_ground_damage_possible():
     if not self.ground.is_present():
         return false

@@ -18,6 +18,7 @@ export var can_fly = false
 export var max_attacks = 1
 export var uses_metallic_material = false
 export var unit_value = 0
+export var unit_class = ""
 var attacks = 1
 
 var modifiers = []

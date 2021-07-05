@@ -16,6 +16,7 @@ tile_view_height_cam_modifier = -0.5
 max_hp = 15
 attack = 0
 max_attacks = 0
+unit_class = "npc"
 
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource( 5 )

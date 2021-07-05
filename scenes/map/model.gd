@@ -123,3 +123,17 @@ func get_player_bunkers(side):
             bunkers.append(self.tiles[i])
 
     return bunkers
+
+func get_player_hero_position(side):
+    for i in self.tiles.keys():
+        if self.tiles[i].has_friendly_hero(side):
+            return self.tiles[i].position
+
+    return null
+
+func get_player_hero(side):
+    for i in self.tiles.keys():
+        if self.tiles[i].has_friendly_hero(side):
+            return self.tiles[i].unit.tile
+
+    return null

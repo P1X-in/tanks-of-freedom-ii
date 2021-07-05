@@ -7,7 +7,7 @@ var current_player = 0
 var turn = 1
 
 var players = []
-
+var suspended = false
 
 
 func add_player(type, side):
@@ -15,7 +15,8 @@ func add_player(type, side):
         "type": type,
         "side": side,
         "ap" : 0,
-        "alive" : true
+        "alive" : true,
+        "hero" : null
     })
 
 
@@ -36,6 +37,9 @@ func get_current_ap():
 
 func get_current_side():
     return self.get_current_param("side")
+
+func get_current_hero():
+    return self.get_current_param("hero")
 
 func get_player_id_by_side(side):
     var index = 0
@@ -99,3 +103,43 @@ func count_alive_players():
             amount += 1
 
     return amount
+
+func has_current_player_a_hero():
+    return self.get_current_hero() != null
+
+func has_side_a_hero(side):
+    return self.players[self.get_player_id_by_side(side)]['hero'] != null
+
+func set_hero_for_player(id, hero):
+    self.players[id]["hero"] = hero
+
+func set_hero_for_side(side, hero):
+    self.set_hero_for_player(self.get_player_id_by_side(side), hero)
+
+func auto_set_hero(hero):
+    self.set_hero_for_side(hero.side, hero)
+
+func set_current_hero(hero):
+    self.set_hero_for_player(self.current_player, hero)
+
+func clear_hero_for_player(id):
+    self.set_hero_for_player(id, null)
+
+func clear_current_hero():
+    self.clear_hero_for_player(self.current_player)
+
+func clear_hero_for_side(side):
+    self.clear_hero_for_player(self.get_player_id_by_side(side))
+
+func register_heroes(model):
+    var index = 0
+
+    while index < self.players.size():
+        self.players[index]['hero'] = model.get_player_hero(self.players[index]['side'])
+        index += 1
+
+func track_hero_spawn(event):
+    if event.unit.unit_class != "hero":
+        return
+
+    self.auto_set_hero(event.unit)
