@@ -5,6 +5,7 @@ export var unit_can_stand = false
 
 export var main_tile_view_cam_modifier = 0
 export var side_tile_view_cam_modifier = 0
+export var tile_view_height_cam_modifier = 0.0
 
 export var unit_vertical_offset = 0
 

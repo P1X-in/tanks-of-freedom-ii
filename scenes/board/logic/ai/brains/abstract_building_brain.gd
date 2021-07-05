@@ -127,7 +127,19 @@ func _map_template_name(template_name):
         "yellow_heli" : "heli",
         "yellow_m_inf" : "m_inf",
         "yellow_rocket" : "rocket",
-        "yellow_scout" : "scout"
+        "yellow_scout" : "scout",
+        "npc_president" : "npc",
+        "npc_lord" : "npc",
+        "npc_chancellor" : "npc",
+        "npc_king" : "npc",
+        "hero_general" : "hero",
+        "hero_commando" : "hero",
+        "hero_gentleman" : "hero",
+        "hero_noble" : "hero",
+        "hero_admiral" : "hero",
+        "hero_captain" : "hero",
+        "hero_prince" : "hero",
+        "hero_warlord" : "hero"
     }
 
     return map[template_name]

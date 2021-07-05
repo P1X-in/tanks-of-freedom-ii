@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/commando.obj-9fb321d27c4c87697ce1aee3f4d4ba10.mesh"
+
+[deps]
+
+files=[ "res://.import/commando.obj-9fb321d27c4c87697ce1aee3f4d4ba10.mesh" ]
+
+source_file="res://assets/units/heroes/commando.obj"
+dest_files=[ "res://.import/commando.obj-9fb321d27c4c87697ce1aee3f4d4ba10.mesh", "res://.import/commando.obj-9fb321d27c4c87697ce1aee3f4d4ba10.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

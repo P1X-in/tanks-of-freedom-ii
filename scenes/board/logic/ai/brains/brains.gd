@@ -10,7 +10,10 @@ var brains = {
     "heli" : preload("res://scenes/board/logic/ai/brains/heli_brain.gd").new(),
     "mobile_infantry" : preload("res://scenes/board/logic/ai/brains/infantry_brain.gd").new(),
     "rocket_artillery" : preload("res://scenes/board/logic/ai/brains/rocket_artillery_brain.gd").new(),
-    "scout" : preload("res://scenes/board/logic/ai/brains/scout_brain.gd").new()
+    "scout" : preload("res://scenes/board/logic/ai/brains/scout_brain.gd").new(),
+
+    "npc" : preload("res://scenes/board/logic/ai/brains/npc_brain.gd").new(),
+    "hero" : preload("res://scenes/board/logic/ai/brains/hero_brain.gd").new()
 }
 
 var assigned_brains = {
@@ -54,7 +57,20 @@ var assigned_brains = {
     "yellow_heli" : self.brains['heli'],
     "yellow_m_inf" : self.brains['mobile_infantry'],
     "yellow_rocket" : self.brains['rocket_artillery'],
-    "yellow_scout" : self.brains['scout']
+    "yellow_scout" : self.brains['scout'],
+
+    "npc_president" : self.brains['npc'],
+    "npc_lord" : self.brains['npc'],
+    "npc_chancellor" : self.brains['npc'],
+    "npc_king" : self.brains['npc'],
+    "hero_general" : self.brains['hero'],
+    "hero_commando" : self.brains['hero'],
+    "hero_gentleman" : self.brains['hero'],
+    "hero_noble" : self.brains['hero'],
+    "hero_admiral" : self.brains['hero'],
+    "hero_captain" : self.brains['hero'],
+    "hero_prince" : self.brains['hero'],
+    "hero_warlord" : self.brains['hero']
 }
 
 func get_brain_for_template(template_name):

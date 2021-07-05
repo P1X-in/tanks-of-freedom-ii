@@ -146,6 +146,19 @@ const UNIT_YELLOW_MINF = "yellow_m_inf"
 const UNIT_YELLOW_ROCKET = "yellow_rocket"
 const UNIT_YELLOW_SCOUT = "yellow_scout"
 
+const NPC_PRESIDENT = "npc_president"
+const NPC_LORD = "npc_lord"
+const NPC_CHANCELLOR = "npc_chancellor"
+const NPC_KING = "npc_king"
+
+const HERO_GENERAL = "hero_general"
+const HERO_COMMANDO = "hero_commando"
+const HERO_GENTLEMAN = "hero_gentleman"
+const HERO_NOBLE = "hero_noble"
+const HERO_ADMIRAL = "hero_admiral"
+const HERO_CAPTAIN = "hero_captain"
+const HERO_PRINCE = "hero_prince"
+const HERO_WARLORD = "hero_warlord"
 
 const PLAYER_NEUTRAL = "neutral"
 const PLAYER_BLUE = "blue"
@@ -303,6 +316,20 @@ var templates = {
     self.UNIT_YELLOW_MINF : preload("res://scenes/tiles/units/yellow/mobile_infantry.tscn"),
     self.UNIT_YELLOW_ROCKET : preload("res://scenes/tiles/units/yellow/rocket_artillery.tscn"),
     self.UNIT_YELLOW_SCOUT : preload("res://scenes/tiles/units/yellow/scout_heli.tscn"),
+
+    self.NPC_PRESIDENT : preload("res://scenes/tiles/units/npc/president.tscn"),
+    self.NPC_LORD : preload("res://scenes/tiles/units/npc/lord.tscn"),
+    self.NPC_CHANCELLOR : preload("res://scenes/tiles/units/npc/chancellor.tscn"),
+    self.NPC_KING : preload("res://scenes/tiles/units/npc/king.tscn"),
+
+    self.HERO_GENERAL : preload("res://scenes/tiles/units/heroes/general.tscn"),
+    self.HERO_COMMANDO : preload("res://scenes/tiles/units/heroes/commando.tscn"),
+    self.HERO_GENTLEMAN : preload("res://scenes/tiles/units/heroes/gentleman.tscn"),
+    self.HERO_NOBLE : preload("res://scenes/tiles/units/heroes/noble.tscn"),
+    self.HERO_ADMIRAL : preload("res://scenes/tiles/units/heroes/admiral.tscn"),
+    self.HERO_CAPTAIN : preload("res://scenes/tiles/units/heroes/captain.tscn"),
+    self.HERO_PRINCE : preload("res://scenes/tiles/units/heroes/prince.tscn"),
+    self.HERO_WARLORD : preload("res://scenes/tiles/units/heroes/warlord.tscn"),
 }
 
 var side_materials = {

@@ -139,6 +139,21 @@ func build_rotations(templates, builder):
 		templates.UNIT_YELLOW_SCOUT,
 	])
 
+	self.rotations[builder.CLASS_HERO] = self.build_from_array([
+		templates.NPC_PRESIDENT,
+		templates.HERO_GENERAL,
+		templates.HERO_COMMANDO,
+		templates.NPC_LORD,
+		templates.HERO_GENTLEMAN,
+		templates.HERO_NOBLE,
+		templates.NPC_CHANCELLOR,
+		templates.HERO_ADMIRAL,
+		templates.HERO_CAPTAIN,
+		templates.NPC_KING,
+		templates.HERO_PRINCE,
+		templates.HERO_WARLORD,
+	])
+
 	self.types = self.build_from_array([
 		builder.CLASS_GROUND,
 		builder.CLASS_FRAME,
@@ -147,6 +162,7 @@ func build_rotations(templates, builder):
 		builder.CLASS_TERRAIN,
 		builder.CLASS_BUILDING,
 		builder.CLASS_UNIT,
+		builder.CLASS_HERO,
 	])
 
 	self.players = self.build_from_array([

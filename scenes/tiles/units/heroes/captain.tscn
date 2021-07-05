@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/materials/arne32_green.tres" type="Material" id=1]
+[ext_resource path="res://scenes/tiles/units/heroes/hero.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/units/heroes/captain.obj" type="ArrayMesh" id=3]
+
+[node name="captain" instance=ExtResource( 2 )]
+side = "green"
+
+[node name="mesh" parent="mesh_anchor" index="0"]
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 1 )

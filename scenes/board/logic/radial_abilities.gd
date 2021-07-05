@@ -31,7 +31,7 @@ func fill_radial_with_building_abilities(board, radial, building):
             icon = tile_view_template.instance()
             icon.hide_background()
             icon.is_side_tile = false
-            icon.viewport_size = 11
+            icon.viewport_size =  20
             icon.set_tile(icon_model, 0)
             label = ability.label
             label += "\n" + str(ability.ap_cost) + " AP"

@@ -6,6 +6,7 @@ const CLASS_TERRAIN = "terrain"
 const CLASS_BUILDING = "building"
 const CLASS_UNIT = "unit"
 const CLASS_DAMAGE = "damage"
+const CLASS_HERO = "hero"
 
 var map
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/gentleman.obj-7f854c0272203663eb94c38e781c4f7b.mesh"
+
+[deps]
+
+files=[ "res://.import/gentleman.obj-7f854c0272203663eb94c38e781c4f7b.mesh" ]
+
+source_file="res://assets/units/heroes/gentleman.obj"
+dest_files=[ "res://.import/gentleman.obj-7f854c0272203663eb94c38e781c4f7b.mesh", "res://.import/gentleman.obj-7f854c0272203663eb94c38e781c4f7b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

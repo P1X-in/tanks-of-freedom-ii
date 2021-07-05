@@ -105,7 +105,7 @@ func place_tile():
         self.map.builder.place_terrain(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
     if self.selected_class == self.map.builder.CLASS_BUILDING:
         self.map.builder.place_building(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
-    if self.selected_class == self.map.builder.CLASS_UNIT:
+    if self.selected_class == self.map.builder.CLASS_UNIT or self.selected_class == self.map.builder.CLASS_HERO:
         self.map.builder.place_unit(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
 
     self.autosave()
