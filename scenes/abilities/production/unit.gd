@@ -7,7 +7,11 @@ func _init():
 
 func _execute(board, position):
     var new_unit = board.map.builder.place_unit(position, self.template_name, 0, board.state.get_current_side())
-    board.use_current_player_ap(self.ap_cost)
+
+    var cost = self.ap_cost
+    cost = board.abilities.get_modified_cost(cost, self.template_name, self.source)
+
+    board.use_current_player_ap(cost)
 
     if not board.state.is_current_player_ai():
         board.select_tile(position)

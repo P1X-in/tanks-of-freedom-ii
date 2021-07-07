@@ -113,8 +113,14 @@ func has_side_a_hero(side):
 func set_hero_for_player(id, hero):
     self.players[id]["hero"] = hero
 
+func get_hero_for_player(id):
+    return self.players[id]["hero"]
+
 func set_hero_for_side(side, hero):
     self.set_hero_for_player(self.get_player_id_by_side(side), hero)
+
+func get_hero_for_side(side):
+    return self.get_hero_for_player(self.get_player_id_by_side(side))
 
 func auto_set_hero(hero):
     self.set_hero_for_side(hero.side, hero)

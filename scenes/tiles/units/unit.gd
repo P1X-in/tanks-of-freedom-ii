@@ -22,6 +22,7 @@ export var unit_class = ""
 var attacks = 1
 
 var modifiers = []
+var active_ability = null
 
 var unit_rotations = {
     "s" : 0,
@@ -217,3 +218,10 @@ func give_sfx_effect(name):
         $"audio".remove_child(audio_player)
         return audio_player
     return null
+
+func register_ability(ability):
+    if ability.TYPE == "hero_active":
+        self.active_ability = ability
+
+func has_active_ability():
+    return self.active_ability != null
