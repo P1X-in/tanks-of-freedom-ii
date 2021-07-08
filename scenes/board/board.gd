@@ -371,13 +371,16 @@ func destroy_unit_on_tile(tile, skip_explosion=false):
         self.state.clear_hero_for_side(tile.unit.tile.side)
 
     if not skip_explosion:
-        var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile)
-        new_explosion.explode()
-        new_explosion.grab_sfx_effect(tile.unit.tile)
+        self.explode_a_tile(tile, true)
     tile.unit.clear()
     self.collateral.generate_collateral(tile)
     self.collateral.damage_tile(tile)
 
+func explode_a_tile(tile, grab_sfx=false):
+    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile)
+    new_explosion.explode()
+    if grab_sfx:
+        new_explosion.grab_sfx_effect(tile.unit.tile)
 
 func smoke_a_tile(tile):
     var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile)

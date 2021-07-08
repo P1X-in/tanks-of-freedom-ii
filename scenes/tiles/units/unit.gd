@@ -208,6 +208,11 @@ func receive_damage(value):
     if self.hp < 0:
         self.hp = 0
 
+func receive_direct_damage(value):
+    self.hp -= value
+    if self.hp < 0:
+        self.hp = 0
+
 func is_alive():
     return self.hp > 0
 
