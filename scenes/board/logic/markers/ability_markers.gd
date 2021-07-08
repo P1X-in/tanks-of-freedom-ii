@@ -4,7 +4,11 @@ export(NodePath) var map = null;
 
 var marker_template = preload("res://scenes/ui/markers/movement_marker.tscn")
 var colour_materials = {
+    "blue" : ResourceLoader.load("res://assets/materials/arne32_blue.tres"),
+    "red" : ResourceLoader.load("res://assets/materials/arne32_red.tres"),
     "green" : ResourceLoader.load("res://assets/materials/arne32_green.tres"),
+    "yellow" : ResourceLoader.load("res://assets/materials/arne32_yellow.tres"),
+    "neutral" : ResourceLoader.load("res://assets/materials/arne32_neutral.tres"),
 }
 
 var created_markers = {}
@@ -47,7 +51,7 @@ func show_hero_markers_for_tile(tile, ability):
 
     for tile in self.tiles_in_range.values():
         if ability.is_tile_applicable(tile):
-            self.place_marker(tile.position)
+            self.place_marker(tile.position, ability.marker_colour)
 
 func expand_from_tile(tile, depth):
     if depth < 1:
@@ -65,14 +69,14 @@ func expand_from_tile(tile, depth):
 func marker_exists(position):
     return self.created_markers.has(str(position.x) + "_" + str(position.y))
 
-func place_marker(position):
+func place_marker(position, colour="green"):
     var new_marker = self.marker_template.instance()
     self.add_child(new_marker)
     var placement = self.map.map_to_world(position)
     new_marker.set_translation(placement)
 
     self.created_markers[str(position.x) + "_" + str(position.y)] = new_marker
-    new_marker.set_material(self.colour_materials["green"])
+    new_marker.set_material(self.colour_materials[colour])
 
 func _get_key(tile):
     return str(tile.position.x) + "_" + str(tile.position.y)

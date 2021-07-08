@@ -9,3 +9,4 @@ label = "Deep Strike"
 ap_cost = 50
 named_icon = "deep_strike"
 ability_range = 2
+marker_colour = "blue"
