@@ -5,8 +5,7 @@ func _init(_board):
     self.board = _board
 
 func execute_ability(ability, context_object=null):
-    if ability.TYPE == "production":
-        ability.execute(self.board, context_object.position)
+    ability.execute(self.board, context_object.position)
 
 func get_modified_cost(cost, template_name, source):
     var passive_ability = self._get_passive_for_source(source)

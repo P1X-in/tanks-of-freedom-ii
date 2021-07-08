@@ -14,6 +14,7 @@ func _execute(board, position):
     board.use_current_player_ap(cost)
 
     if not board.state.is_current_player_ai():
+        board.active_ability = null
         board.select_tile(position)
 
     new_unit.replenish_moves()

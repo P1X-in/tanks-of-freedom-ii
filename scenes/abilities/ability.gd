@@ -7,7 +7,7 @@ export var label = ""
 export var ap_cost = 0
 export var cooldown = 0
 var source = null
-var turns_left = 0
+var cd_turns_left = 0
 var disabled = false
 
 func _ready():
@@ -23,6 +23,7 @@ func signal(receiver):
 func execute(board, position):
     self._execute(board, position)
     board.events.emit_ability_used(self, position)
+    self.activate_cooldown()
 
 func _execute(_board, _position):
     return
@@ -40,4 +41,15 @@ func is_available(_board=null):
     return true
 
 func is_on_cooldown():
-    return self.turns_left == 0
+    return self.cd_turns_left > 0
+
+func activate_cooldown():
+    self.cd_turns_left = self.cooldown
+
+func reset_cooldown():
+    self.cd_turns_left = 0
+
+func cd_tick_down():
+    if self.cd_turns_left > 0:
+        self.cd_turns_left -= 1
+        

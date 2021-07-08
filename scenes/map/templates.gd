@@ -349,6 +349,7 @@ var side_materials_metallic = {
 }
 
 var generic_building = preload("res://scenes/tiles/buildings/building.gd")
+var generic_unit = preload("res://scenes/tiles/units/unit.gd")
 
 func get_template(template):
     var new_tile = self.templates[template].instance()

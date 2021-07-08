@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/ui/radial/field.gd" type="Script" id=1]
 [ext_resource path="res://assets/gui/editor/circle.png" type="Texture" id=2]
 [ext_resource path="res://assets/gui/editor/circle_white.png" type="Texture" id=3]
+[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=4]
 
 [node name="field" type="Node2D"]
 script = ExtResource( 1 )
@@ -16,3 +17,21 @@ texture = ExtResource( 3 )
 modulate = Color( 1, 1, 1, 0.823529 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
+
+[node name="icon_anchor" type="Node2D" parent="."]
+
+[node name="disabled" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.823529 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="cd" type="Label" parent="disabled"]
+margin_left = -100.0
+margin_top = -95.0
+margin_bottom = 5.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 4 )
+text = "1"
+align = 1
+valign = 1

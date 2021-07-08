@@ -136,10 +136,19 @@ func start_turn():
 func select_tile(position):
     var tile = self.map.model.get_tile(position)
     var current_player = self.state.get_current_player()
+    var open_unit_abilities = false
 
-    if tile.is_selectable(current_player["side"]):
+    if self.active_ability != null:
+        if self.ability_markers.marker_exists(position):
+            self.execute_active_ability(tile)
+        else:
+            self.unselect_tile()
+
+    elif tile.is_selectable(current_player["side"]):
+        if self.selected_tile == tile:
+            open_unit_abilities = true
         self.selected_tile = tile
-        self.show_contextual_select()
+        self.show_contextual_select(open_unit_abilities)
 
     elif self.selected_tile != null:
         if self.selected_tile.unit.is_present():
@@ -152,16 +161,7 @@ func select_tile(position):
                 self.handle_interaction(tile)
 
             else:
-                self.unselect_tile()
-                
-
-        elif self.selected_tile.building.is_present():
-            if self.active_ability != null && self.ability_markers.marker_exists(position):
-                self.execute_active_ability(tile)
-
-            else:
-                self.unselect_tile()
-                
+                self.unselect_tile() 
                 
         else:
             self.unselect_tile()
@@ -180,12 +180,15 @@ func unselect_action():
     
 
 func unselect_tile():
-    self.movement_markers.reset()
-    self.interaction_markers.reset()
-    self.path_markers.reset()
+    self.reset_unit_markers()
     self.cancel_ability()
     self.selected_tile = null
     self.selected_tile_marker.hide()
+
+func reset_unit_markers():
+    self.movement_markers.reset()
+    self.interaction_markers.reset()
+    self.path_markers.reset()
 
 func cancel_ability():
     self.active_ability = null
@@ -248,7 +251,7 @@ func show_unit_movement_markers():
 func show_unit_interaction_markers():
     self.interaction_markers.show_interaction_markers_for_tile(self.selected_tile, self.state.get_current_ap())
 
-func show_contextual_select():
+func show_contextual_select(open_unit_abilities=false):
     self.place_selection_marker()
     self.movement_markers.reset()
     self.path_markers.reset()
@@ -256,6 +259,8 @@ func show_contextual_select():
     if self.selected_tile.unit.is_present():
         self.show_unit_movement_markers()
         self.show_unit_interaction_markers()
+        if open_unit_abilities and self.selected_tile.unit.tile.has_active_ability():
+            self.toggle_radial_menu(self.selected_tile.unit.tile)
     if self.selected_tile.building.is_present():
         self.toggle_radial_menu(self.selected_tile.building.tile)
 
@@ -358,14 +363,15 @@ func battle(attacker_tile, defender_tile):
         self.destroy_unit_on_tile(defender_tile)
         self.events.emit_unit_destroyed(attacker, defender_id, defender_side)
 
-func destroy_unit_on_tile(tile):
+func destroy_unit_on_tile(tile, skip_explosion=false):
     if tile.unit.tile.unit_class == "hero":
         self.state.clear_hero_for_side(tile.unit.tile.side)
 
-    var position = tile.unit.tile.get_translation()
-    self.explosion.set_translation(Vector3(position.x, 0, position.z))
-    self.explosion.explode()
-    self.explosion.grab_sfx_effect(tile.unit.tile)
+    if not skip_explosion:
+        var position = tile.unit.tile.get_translation()
+        self.explosion.set_translation(Vector3(position.x, 0, position.z))
+        self.explosion.explode()
+        self.explosion.grab_sfx_effect(tile.unit.tile)
     tile.unit.clear()
     self.collateral.generate_collateral(tile)
     self.collateral.damage_tile(tile)
@@ -400,10 +406,20 @@ func activate_production_ability(args):
 
     var ability = args[0]
 
-    if self.state.can_current_player_afford(ability.ap_cost):
+    var cost = ability.ap_cost
+    cost = self.abilities.get_modified_cost(cost, ability.template_name, ability.source)
+
+    if self.state.can_current_player_afford(cost):
         self.active_ability = ability
         self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
 
+func activate_ability(args):
+    var ability = args[0]
+    if self.state.can_current_player_afford(ability.ap_cost) and not ability.is_on_cooldown():
+        self.toggle_radial_menu()
+        self.reset_unit_markers()
+        self.active_ability = ability
+        self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
 
 func execute_active_ability(tile):
     self.abilities.execute_ability(self.active_ability, tile)
@@ -423,6 +439,7 @@ func replenish_unit_actions():
 
     for unit in units:
         unit.replenish_moves()
+        unit.ability_cd_tick_down()
 
 func gain_building_ap():
     var ap_sum = 0

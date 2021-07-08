@@ -103,6 +103,10 @@ func replenish_moves():
     self.reset_move()
     self.attacks = self.max_attacks
 
+func remove_moves():
+    self.attacks = 0
+    self.use_all_moves()
+
 func can_attack(_unit):
     return true
 
@@ -225,3 +229,7 @@ func register_ability(ability):
 
 func has_active_ability():
     return self.active_ability != null
+
+func ability_cd_tick_down():
+    if self.has_active_ability():
+        self.active_ability.cd_tick_down()

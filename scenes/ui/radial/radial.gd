@@ -60,6 +60,9 @@ func hide_menu():
 func set_field(icon, new_label, index, new_bound_object=null, new_bound_method=null, new_bound_args=[]):
     self.fields[index].set_field(icon, new_label, new_bound_object, new_bound_method, new_bound_args)
 
+func set_field_disabled(index, cooldown=null):
+    self.fields[index].set_disabled(cooldown)
+
 func clear_fields():
     for field in self.fields:
         field.clear()

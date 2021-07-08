@@ -2,6 +2,8 @@ extends Node2D
 
 onready var background = $"background"
 onready var white_outline = $"white"
+onready var disabled = $"disabled"
+onready var cd_label = $"disabled/cd"
 
 var default_background
 var full_background
@@ -25,11 +27,19 @@ func set_field(new_icon, new_label, new_bound_object=null, new_bound_method=null
     self.set_visible(true)
 
     if self.icon != null:
-        self.add_child(self.icon)
+        $"icon_anchor".add_child(self.icon)
 
     self.bound_object = new_bound_object
     self.bound_method = new_bound_method
     self.bound_args = new_bound_args
+
+func set_disabled(cooldown=null):
+    self.disabled.show()
+
+    if cooldown != null:
+        self.cd_label.set_text(str(cooldown))
+    else:
+        self.cd_label.set_text("")
 
 func clear():
     if self.icon != null:
@@ -38,6 +48,7 @@ func clear():
     self.icon = null
     self.label = ""
     self.set_visible(false)
+    self.disabled.hide()
 
     self.bound_object = null
     self.bound_method = null

@@ -10,12 +10,17 @@ func is_object_without_abilities(board, context_object):
         if context_object.abilities.size() == 0:
             return true
 
+    if context_object is board.map.templates.generic_unit:
+        return not context_object.has_active_ability()
+
     return false
 
 
 func fill_radial_with_abilities(board, radial, context_object):
     if context_object is board.map.templates.generic_building:
         self.fill_radial_with_building_abilities(board, radial, context_object)
+    if context_object is board.map.templates.generic_unit:
+        self.fill_radial_with_unit_abilities(board, radial,context_object)
 
 
 func fill_radial_with_building_abilities(board, radial, building):
@@ -41,3 +46,12 @@ func fill_radial_with_building_abilities(board, radial, building):
             label += "\n" + str(ap_cost) + " AP"
             radial.set_field(icon, label, ability.index, board, "activate_production_ability", [ability])
 
+func fill_radial_with_unit_abilities(board, radial, unit):
+    radial.set_field(board.ui.icons.back.instance(), "Back", 6, board, "toggle_radial_menu")
+    var label
+    label = unit.active_ability.label
+    label += "\n" + str(unit.active_ability.ap_cost) + " AP"
+    radial.set_field(board.ui.icons.get_named_icon(unit.active_ability.named_icon), label, unit.active_ability.index, board, "activate_ability", [unit.active_ability])
+
+    if unit.active_ability.is_on_cooldown():
+        radial.set_field_disabled(unit.active_ability.index, unit.active_ability.cd_turns_left)
