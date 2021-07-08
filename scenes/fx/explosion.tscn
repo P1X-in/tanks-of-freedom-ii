@@ -93,7 +93,7 @@ scale_random = 0.1
 scale_curve = SubResource( 6 )
 color_ramp = SubResource( 2 )
 
-[sub_resource type="ParticlesMaterial" id=20]
+[sub_resource type="ParticlesMaterial" id=18]
 emission_shape = 2
 emission_box_extents = Vector3( 4, 0.1, 4 )
 color = Color( 0.827451, 0.768627, 0.121569, 1 )
@@ -104,7 +104,7 @@ hue_variation_random = 1.0
 flags_unshaded = true
 vertex_color_use_as_albedo = true
 
-[sub_resource type="CubeMesh" id=18]
+[sub_resource type="CubeMesh" id=20]
 material = SubResource( 19 )
 size = Vector3( 0.1, 0.1, 0.1 )
 
@@ -151,22 +151,24 @@ draw_pass_1 = SubResource( 9 )
 
 [node name="bless" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+cast_shadow = 0
 emitting = false
 amount = 1000
 one_shot = true
 speed_scale = 2.0
 randomness = 1.0
-process_material = SubResource( 20 )
-draw_pass_1 = SubResource( 18 )
+process_material = SubResource( 18 )
+draw_pass_1 = SubResource( 20 )
 
 [node name="heal" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+cast_shadow = 0
 emitting = false
 amount = 1000
 one_shot = true
 speed_scale = 2.0
 randomness = 1.0
 process_material = SubResource( 21 )
-draw_pass_1 = SubResource( 18 )
+draw_pass_1 = SubResource( 20 )
 
 [node name="audio" type="Node" parent="."]

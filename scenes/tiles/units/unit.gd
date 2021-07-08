@@ -1,5 +1,7 @@
 extends "res://scenes/tiles/tile.gd"
 
+const MAX_LEVEL = 3
+
 onready var animations = $"animations"
 onready var spotlight = $"mesh_anchor/activity_light"
 onready var explosion = $"explosion"
@@ -20,6 +22,7 @@ export var uses_metallic_material = false
 export var unit_value = 0
 export var unit_class = ""
 var attacks = 1
+var level = 0
 
 var modifiers = {}
 var active_ability = null
@@ -256,3 +259,17 @@ func apply_modifier(name, value):
 
 func clear_modifiers():
     self.modifiers.clear()
+
+func level_up():
+    if not self.is_max_level():
+        self.level += 1
+        self.animations.play("level_up")
+        self.sfx_effect("level_up")
+
+func is_max_level():
+    return self.level >= self.MAX_LEVEL
+
+func heal(value):
+    self.hp += value
+    if self.hp > self.max_hp:
+        self.hp = self.max_hp

@@ -11,3 +11,6 @@ func get_modified_cooldown(cd_value):
 
 func get_modified_ap_gain(value, _template_name):
     return value
+
+func get_initial_level(_template_name):
+    return 0
