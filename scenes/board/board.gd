@@ -26,7 +26,10 @@ onready var movement_markers = $"marker_anchor/movement_markers"
 onready var interaction_markers = $"marker_anchor/interaction_markers"
 onready var path_markers = $"marker_anchor/path_markers"
 onready var ability_markers = $"marker_anchor/ability_markers"
+onready var explosion_anchor = $"marker_anchor"
 onready var explosion = $"marker_anchor/explosion"
+
+var explosion_template = preload("res://scenes/fx/explosion.tscn")
 
 var ending_turn_in_progress = false
 
@@ -369,17 +372,23 @@ func destroy_unit_on_tile(tile, skip_explosion=false):
 
     if not skip_explosion:
         var position = tile.unit.tile.get_translation()
-        self.explosion.set_translation(Vector3(position.x, 0, position.z))
-        self.explosion.explode()
-        self.explosion.grab_sfx_effect(tile.unit.tile)
+        var new_explosion = self.explosion_template.instance()
+        self.explosion_anchor.add_child(new_explosion)
+        new_explosion.set_translation(Vector3(position.x, 0, position.z))
+        new_explosion.explode()
+        new_explosion.grab_sfx_effect(tile.unit.tile)
+        self.destroy_explosion_with_delay(new_explosion, 3)
     tile.unit.clear()
     self.collateral.generate_collateral(tile)
     self.collateral.damage_tile(tile)
 
 func smoke_a_tile(tile):
     var position = self.map.map_to_world(tile.position)
-    self.explosion.set_translation(Vector3(position.x, 0, position.z))
-    self.explosion.puff_some_smoke()
+    var new_explosion = self.explosion_template.instance()
+    self.explosion_anchor.add_child(new_explosion)
+    new_explosion.set_translation(Vector3(position.x, 0, position.z))
+    new_explosion.puff_some_smoke()
+    self.destroy_explosion_with_delay(new_explosion, 3)
 
 
 func capture(attacker_tile, building_tile):
@@ -522,4 +531,8 @@ func abort_ending_turn():
 func main_menu():
     self.ai.abort()
     self.switcher.main_menu()
+
+func destroy_explosion_with_delay(explosion_object, delay):
+    yield(self.get_tree().create_timer(delay), "timeout")
+    explosion_object.queue_free()
 
