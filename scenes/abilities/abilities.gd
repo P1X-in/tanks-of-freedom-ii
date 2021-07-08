@@ -23,7 +23,19 @@ func get_modified_cooldown(cd_value, source):
 
     return passive_ability.get_modified_cooldown(cd_value)
 
+
+func get_modified_ap_gain(value, source):
+    var passive_ability = self._get_passive_for_source(source)
+    
+    if passive_ability == null:
+        return value
+
+    return passive_ability.get_modified_ap_gain(value, source.template_name)
+
 func _get_passive_for_source(source):
+    if source.side == "neutral":
+        return null
+
     var hero = self.board.state.get_hero_for_side(source.side)
     
     if hero == null:

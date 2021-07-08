@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/fx/explosion.gd" type="Script" id=1]
 
@@ -93,6 +93,28 @@ scale_random = 0.1
 scale_curve = SubResource( 6 )
 color_ramp = SubResource( 2 )
 
+[sub_resource type="ParticlesMaterial" id=20]
+emission_shape = 2
+emission_box_extents = Vector3( 4, 0.1, 4 )
+color = Color( 0.827451, 0.768627, 0.121569, 1 )
+hue_variation = 0.2
+hue_variation_random = 1.0
+
+[sub_resource type="SpatialMaterial" id=19]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="CubeMesh" id=18]
+material = SubResource( 19 )
+size = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="ParticlesMaterial" id=21]
+emission_shape = 2
+emission_box_extents = Vector3( 4, 0.1, 4 )
+color = Color( 0.0156863, 0.576471, 0.0784314, 1 )
+hue_variation = 0.2
+hue_variation_random = 1.0
+
 [node name="explosion" type="Spatial"]
 script = ExtResource( 1 )
 
@@ -126,5 +148,25 @@ explosiveness = 1.0
 randomness = 1.0
 process_material = SubResource( 17 )
 draw_pass_1 = SubResource( 9 )
+
+[node name="bless" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+emitting = false
+amount = 1000
+one_shot = true
+speed_scale = 2.0
+randomness = 1.0
+process_material = SubResource( 20 )
+draw_pass_1 = SubResource( 18 )
+
+[node name="heal" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+emitting = false
+amount = 1000
+one_shot = true
+speed_scale = 2.0
+randomness = 1.0
+process_material = SubResource( 21 )
+draw_pass_1 = SubResource( 18 )
 
 [node name="audio" type="Node" parent="."]

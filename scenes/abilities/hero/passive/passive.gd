@@ -8,3 +8,6 @@ func get_modified_cost(cost, _template_name):
 
 func get_modified_cooldown(cd_value):
     return cd_value
+
+func get_modified_ap_gain(value, _template_name):
+    return value

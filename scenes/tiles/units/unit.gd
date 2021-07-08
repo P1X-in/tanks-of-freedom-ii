@@ -21,7 +21,7 @@ export var unit_value = 0
 export var unit_class = ""
 var attacks = 1
 
-var modifiers = []
+var modifiers = {}
 var active_ability = null
 
 var unit_rotations = {
@@ -52,6 +52,7 @@ func reset():
 func get_dict():
     var new_dict = .get_dict()
     new_dict["side"] = self.side
+    new_dict["modifiers"] = self.modifiers
     
     return new_dict
     
@@ -73,12 +74,18 @@ func set_side_material(material):
 
 
 func get_stats_with_modifiers():
-    return {
+    var stats = {
         "hp" : self.hp,
         "move" : self.move,
         "attack" : self.attack,
         "armor" : self.armor,
     }
+
+    for stat_key in stats:
+        if self.modifiers.has(stat_key):
+            stats[stat_key] += self.modifiers[stat_key]
+
+    return stats
 
 func get_move():
     var stats = self.get_stats_with_modifiers()
@@ -123,7 +130,7 @@ func can_retaliate(unit):
     return true
 
 func has_enough_power_to_kill(unit):
-    return self.attack >= unit.hp + unit.armor
+    return self.get_attack() >= unit.hp + unit.get_armor()
 
 func has_attacks():
     return self.attacks > 0
@@ -193,7 +200,7 @@ func show_explosion():
     self.explosion.explode_a_bit()
 
 func receive_damage(value):
-    var final_damage = value - self.armor
+    var final_damage = value - self.get_armor()
     if final_damage < 0:
         final_damage = 0
 
@@ -205,7 +212,12 @@ func is_alive():
     return self.hp > 0
 
 func get_attack():
-    return self.attack
+    var stats = self.get_stats_with_modifiers()
+    return stats["attack"]
+
+func get_armor():
+    var stats = self.get_stats_with_modifiers()
+    return stats["armor"]
 
 func remove_highlight():
     $"mesh_anchor/activity_light".hide()
@@ -224,7 +236,7 @@ func give_sfx_effect(name):
     return null
 
 func register_ability(ability):
-    if ability.TYPE == "hero_active":
+    if ability.TYPE == "active":
         self.active_ability = ability
 
 func has_active_ability():
@@ -233,3 +245,9 @@ func has_active_ability():
 func ability_cd_tick_down():
     if self.has_active_ability():
         self.active_ability.cd_tick_down()
+
+func apply_modifier(name, value):
+    self.modifiers[name] = value
+
+func clear_modifiers():
+    self.modifiers.clear()

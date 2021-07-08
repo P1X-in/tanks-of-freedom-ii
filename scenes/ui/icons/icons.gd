@@ -6,6 +6,8 @@ var tick = preload("res://scenes/ui/icons/tick.tscn")
 
 var deep_strike = preload("res://scenes/ui/icons/abilities/deep_strike.tscn")
 var infiltration = preload("res://scenes/ui/icons/abilities/infiltration.tscn")
+var targeting_automaton = preload("res://scenes/ui/icons/abilities/targeting_automaton.tscn")
+
 
 var named_icons = {
     "disk" : self.disk,
@@ -15,6 +17,7 @@ var named_icons = {
 
     "deep_strike" : self.deep_strike,
     "infiltration" : self.infiltration,
+    "targeting_automaton" : self.targeting_automaton,
 }
 
 func get_named_icon(name):

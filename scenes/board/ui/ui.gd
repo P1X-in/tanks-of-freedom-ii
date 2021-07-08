@@ -60,8 +60,8 @@ func update_tile_highlight(tile_preview):
 func update_tile_highlight_unit_panel(unit):
     self.tile_highlight_unit_panel_hp.set_text(str(unit.hp) + "/" + str(unit.max_hp))
 
-func update_tile_highlight_building_panel(building):
-    self.tile_highlight_unit_panel_hp.set_text("+" + str(building.ap_gain))
+func update_tile_highlight_building_panel(ap_gain):
+    self.tile_highlight_unit_panel_hp.set_text("+" + str(ap_gain))
 
 func hide_resource():
     self.resource.hide()

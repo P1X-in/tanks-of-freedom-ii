@@ -337,7 +337,7 @@ In addition to regular units, each side has access to two hero units. A hero uni
     - Passive: High Morale: Infantry and Mobile Infantry units get +1 Damage and +1 Armour
     - Active: Inspire - replenish movement and attack points of a unit within 2 tiles, reset CD on active skill
 - The Warlord
-    - Passive: Intimidating: Claiming buildings now uses all AP instead of consuming a unit
+    - Passive: Intimidating: Claiming buildings now uses all MP instead of consuming a unit
     - Active: Promote: Upgrade a neighbouring unit by 1 level
 
 #### Powers

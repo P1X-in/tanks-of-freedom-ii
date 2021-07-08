@@ -3,6 +3,8 @@ extends Spatial
 onready var main = $"main"
 onready var smoke = $"main/smoke"
 onready var small_main = $"small_main"
+onready var bless = $"bless"
+onready var heal = $"heal"
 
 func grab_sfx_effect(unit):
     var audio_player = unit.give_sfx_effect("die")
@@ -19,3 +21,9 @@ func explode_a_bit():
 
 func puff_some_smoke():
     self.smoke.set_emitting(true)
+
+func rain_bless():
+    self.bless.set_emitting(true)
+
+func rain_heal():
+    self.heal.set_emitting(true)

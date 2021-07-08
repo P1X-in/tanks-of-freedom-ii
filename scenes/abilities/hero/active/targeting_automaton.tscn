@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/abilities/hero/active/targeting_automaton.gd" type="Script" id=1]
+[ext_resource path="res://scenes/abilities/hero/active/active.tscn" type="PackedScene" id=2]
+
+[node name="targeting_automaton" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+label = "Targeting Automaton"
+named_icon = "targeting_automaton"
+marker_colour = "blue"

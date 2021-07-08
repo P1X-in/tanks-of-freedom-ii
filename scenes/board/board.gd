@@ -371,29 +371,34 @@ func destroy_unit_on_tile(tile, skip_explosion=false):
         self.state.clear_hero_for_side(tile.unit.tile.side)
 
     if not skip_explosion:
-        var position = tile.unit.tile.get_translation()
-        var new_explosion = self.explosion_template.instance()
-        self.explosion_anchor.add_child(new_explosion)
-        new_explosion.set_translation(Vector3(position.x, 0, position.z))
+        var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile)
         new_explosion.explode()
         new_explosion.grab_sfx_effect(tile.unit.tile)
-        self.destroy_explosion_with_delay(new_explosion, 3)
     tile.unit.clear()
     self.collateral.generate_collateral(tile)
     self.collateral.damage_tile(tile)
 
 
 func smoke_a_tile(tile):
-    self.smoke_a_position(tile.position)
+    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile)
+    new_explosion.puff_some_smoke()
 
-func smoke_a_position(tile_position):
-    var position = self.map.map_to_world(tile_position)
+func bless_a_tile(tile):
+    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile)
+    new_explosion.rain_bless()
+
+func heal_a_tile(tile):
+    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile)
+    new_explosion.rain_heal()
+
+func _spawn_temporary_explosion_instance_on_tile(tile, free_delay=3):
+    var position = self.map.map_to_world(tile.position)
     var new_explosion = self.explosion_template.instance()
     self.explosion_anchor.add_child(new_explosion)
     new_explosion.set_translation(Vector3(position.x, 0, position.z))
-    new_explosion.puff_some_smoke()
-    self.destroy_explosion_with_delay(new_explosion, 3)
+    self.destroy_explosion_with_delay(new_explosion, free_delay)
 
+    return new_explosion
 
 func capture(attacker_tile, building_tile):
     var attacker = attacker_tile.unit.tile
@@ -451,6 +456,7 @@ func replenish_unit_actions():
     var units = self.map.model.get_player_units(current_player["side"])
 
     for unit in units:
+        unit.clear_modifiers()
         unit.replenish_moves()
         unit.ability_cd_tick_down()
 
@@ -460,7 +466,7 @@ func gain_building_ap():
     var buildings = self.map.model.get_player_buildings(current_player["side"])
 
     for building in buildings:
-        ap_sum += building.ap_gain
+        ap_sum += self.abilities.get_modified_ap_gain(building.ap_gain, building)
         if building.ap_gain > 0:
             building.animate_coin()
     
@@ -499,7 +505,9 @@ func update_tile_highlight(tile):
     self.ui.update_tile_highlight(new_tile)
 
     if tile.building.is_present():
-        self.ui.update_tile_highlight_building_panel(tile.building.tile)
+        var ap_gain = tile.building.tile.ap_gain
+        ap_gain = self.abilities.get_modified_ap_gain(ap_gain, tile.building.tile)
+        self.ui.update_tile_highlight_building_panel(ap_gain)
     if tile.unit.is_present():
         self.ui.update_tile_highlight_unit_panel(tile.unit.tile)
 
