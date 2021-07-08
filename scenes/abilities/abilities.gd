@@ -40,6 +40,16 @@ func get_initial_level(template_name, source):
 
     return passive_ability.get_initial_level(template_name)
 
+func apply_passive_modifiers(unit):
+    var passive_ability = self._get_passive_for_source(unit)
+    
+    if passive_ability == null:
+        return
+
+    var modifiers = passive_ability.get_passive_modifiers(unit.template_name)
+    for modifier_name in modifiers:
+        unit.apply_modifier(modifier_name, modifiers[modifier_name])
+
 func _get_passive_for_source(source):
     if source.side == "neutral":
         return null

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/abilities/hero/active/active.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/abilities/hero/active/inspire.gd" type="Script" id=2]
+
+[node name="inspire" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+label = "Inspire"
+named_icon = "inspire"
+ability_range = 2
+marker_colour = "blue"

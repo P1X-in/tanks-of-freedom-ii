@@ -254,6 +254,10 @@ func ability_cd_tick_down():
     if self.has_active_ability():
         self.active_ability.cd_tick_down()
 
+func reset_cooldown():
+    if self.has_active_ability():
+        self.active_ability.reset_cooldown()
+
 func apply_modifier(name, value):
     self.modifiers[name] = value
 

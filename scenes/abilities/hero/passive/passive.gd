@@ -14,3 +14,6 @@ func get_modified_ap_gain(value, _template_name):
 
 func get_initial_level(_template_name):
     return 0
+
+func get_passive_modifiers(_template_name):
+    return {}

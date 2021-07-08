@@ -460,6 +460,7 @@ func replenish_unit_actions():
 
     for unit in units:
         unit.clear_modifiers()
+        self.abilities.apply_passive_modifiers(unit)
         unit.replenish_moves()
         unit.ability_cd_tick_down()
 

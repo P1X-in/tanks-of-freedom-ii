@@ -16,6 +16,7 @@ func _execute(board, position):
         board.select_tile(position)
 
     new_unit.replenish_moves()
+    board.abilities.apply_passive_modifiers(new_unit)
     new_unit.sfx_effect("spawn")
 
     if board.abilities.get_initial_level(self.template_name, self.source) > 0:
