@@ -11,6 +11,7 @@ var hardened_armour = preload("res://scenes/ui/icons/abilities/hardened_armour.t
 var precision_strike = preload("res://scenes/ui/icons/abilities/precision_strike.tscn")
 var supply = preload("res://scenes/ui/icons/abilities/supply.tscn")
 var inspire = preload("res://scenes/ui/icons/abilities/inspire.tscn")
+var promote = preload("res://scenes/ui/icons/abilities/promote.tscn")
 
 
 var named_icons = {
@@ -26,6 +27,7 @@ var named_icons = {
     "precision_strike" : self.precision_strike,
     "supply" : self.supply,
     "inspire" : self.inspire,
+    "promote" : self.promote,
 }
 
 func get_named_icon(name):

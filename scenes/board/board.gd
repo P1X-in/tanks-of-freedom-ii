@@ -414,7 +414,7 @@ func capture(attacker_tile, building_tile):
     self.smoke_a_tile(building_tile)
     building.sfx_effect("capture")
 
-    if building.require_crew:
+    if building.require_crew and not self.abilities.can_intimidate_crew(attacker):
         yield(self.get_tree().create_timer(self.RETALIATION_DELAY), "timeout")
         self.smoke_a_tile(attacker_tile)
         attacker_tile.unit.clear()

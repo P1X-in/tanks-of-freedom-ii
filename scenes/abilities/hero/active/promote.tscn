@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/abilities/hero/active/active.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/abilities/hero/active/promote.gd" type="Script" id=2]
+
+[node name="promote" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+label = "Promote"
+named_icon = "promote"
+ability_range = 1
+marker_colour = "blue"

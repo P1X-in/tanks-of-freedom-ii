@@ -50,6 +50,14 @@ func apply_passive_modifiers(unit):
     for modifier_name in modifiers:
         unit.apply_modifier(modifier_name, modifiers[modifier_name])
 
+func can_intimidate_crew(source):
+    var passive_ability = self._get_passive_for_source(source)
+    
+    if passive_ability == null:
+        return false
+
+    return passive_ability.can_intimidate_crew()
+
 func _get_passive_for_source(source):
     if source.side == "neutral":
         return null

@@ -17,3 +17,6 @@ func get_initial_level(_template_name):
 
 func get_passive_modifiers(_template_name):
     return {}
+
+func can_intimidate_crew():
+    return false
