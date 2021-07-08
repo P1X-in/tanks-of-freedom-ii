@@ -23,7 +23,7 @@ func signal(receiver):
 func execute(board, position):
     self._execute(board, position)
     board.events.emit_ability_used(self, position)
-    self.activate_cooldown()
+    self.activate_cooldown(board)
 
 func _execute(_board, _position):
     return
@@ -43,8 +43,10 @@ func is_available(_board=null):
 func is_on_cooldown():
     return self.cd_turns_left > 0
 
-func activate_cooldown():
-    self.cd_turns_left = self.cooldown
+func activate_cooldown(board):
+    var modified_cooldown = board.abilities.get_modified_cooldown(self.cooldown, self.source)
+
+    self.cd_turns_left = modified_cooldown
 
 func reset_cooldown():
     self.cd_turns_left = 0

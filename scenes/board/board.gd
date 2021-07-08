@@ -382,8 +382,12 @@ func destroy_unit_on_tile(tile, skip_explosion=false):
     self.collateral.generate_collateral(tile)
     self.collateral.damage_tile(tile)
 
+
 func smoke_a_tile(tile):
-    var position = self.map.map_to_world(tile.position)
+    self.smoke_a_position(tile.position)
+
+func smoke_a_position(tile_position):
+    var position = self.map.map_to_world(tile_position)
     var new_explosion = self.explosion_template.instance()
     self.explosion_anchor.add_child(new_explosion)
     new_explosion.set_translation(Vector3(position.x, 0, position.z))

@@ -15,6 +15,14 @@ func get_modified_cost(cost, template_name, source):
 
     return passive_ability.get_modified_cost(cost, template_name)
 
+func get_modified_cooldown(cd_value, source):
+    var passive_ability = self._get_passive_for_source(source)
+    
+    if passive_ability == null:
+        return cd_value
+
+    return passive_ability.get_modified_cooldown(cd_value)
+
 func _get_passive_for_source(source):
     var hero = self.board.state.get_hero_for_side(source.side)
     
