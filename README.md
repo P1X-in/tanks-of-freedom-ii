@@ -35,8 +35,6 @@ Follow [official documentation](https://docs.godotengine.org/en/stable/getting_s
 
 ## Credits
 
-![Alt text](http://i.imgur.com/wZPAs75.jpg)
-
 ### P1X Team
 ###  code
    - czlowiekimadlo https://twitter.com/czlowiekimadlo
