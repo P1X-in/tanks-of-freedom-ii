@@ -1,6 +1,7 @@
-MIT License
+# The MIT License (MIT)
+This license applies both to the code, and to all graphical assets within this repository.
 
-Copyright (c) 2020 P1X
+Copyright (c) 2021 P1X
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -30,3 +31,10 @@ This font is licensed under OFL license.
 NotoSans font used in this project has been sourced from this repository:
 [https://github.com/nowri/sample-noto](https://github.com/nowri/sample-noto)
 It is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+
+## Music & SFX License
+Original copyrights of all audio assets belong to QmYaan (Grand Beats) http://www.grandbeats.com/
+
+All sfx and music assets in this repository are licensed under Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0).
+
+[Full text of the license provided by Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/legalcode)
