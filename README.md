@@ -21,6 +21,10 @@ Game is made using [Godot Engine 3.3+](https://godotengine.org).
 - Official P1X page: [p1x.in](https://p1x.in)
 - Devlog articles: [czlowiekimadlo.pl](https://czlowiekimadlo.pl/blog)
 
+## Roadmap
+
+Development progress can be tracked at [the trello board](https://trello.com/b/RQOwyCwm/tanks-of-freedom-3-d).
+
 ## Build from sources
 To get the latest version of the game, you'll need to use the source code and Godot Engine.
 
