@@ -50,9 +50,11 @@ var move_finished_args = []
 
 
 func reset():
-    self.hp = self.max_hp
-    self.move = self.max_move
-    self.attacks = 1
+    var stats = self.get_stats_with_modifiers()
+
+    self.hp = stats["max_hp"]
+    self.move = stats["max_move"]
+    self.attacks = stats["max_attacks"]
 
 func get_dict():
     var new_dict = .get_dict()
@@ -84,11 +86,20 @@ func get_stats_with_modifiers():
         "move" : self.move,
         "attack" : self.attack,
         "armor" : self.armor,
+        "max_move" : self.max_move,
+        "max_hp" : self.max_hp,
+        "attacks" : self.attacks,
+        "max_attacks" : self.max_attacks,
     }
 
     for stat_key in stats:
         if self.modifiers.has(stat_key):
             stats[stat_key] += self.modifiers[stat_key]
+
+    if self.level > 1:
+        stats["armor"] += 1
+    if self.level > 2:
+        stats["max_move"] += 1
 
     return stats
 
@@ -108,12 +119,14 @@ func use_all_moves():
     self.use_move(self.move)
 
 func reset_move():
-    self.move = self.max_move
+    var stats = self.get_stats_with_modifiers()
+    self.move = stats["max_move"]
     self.spotlight.show()
 
 func replenish_moves():
     self.reset_move()
-    self.attacks = self.max_attacks
+    var stats = self.get_stats_with_modifiers()
+    self.attacks = stats["max_attacks"]
 
 func remove_moves():
     self.attacks = 0
@@ -250,7 +263,7 @@ func register_ability(ability):
         self.active_ability = ability
 
 func has_active_ability():
-    return self.active_ability != null
+    return self.active_ability != null and self.level > 0
 
 func ability_cd_tick_down():
     if self.has_active_ability():
@@ -284,6 +297,7 @@ func is_max_level():
     return self.level >= self.MAX_LEVEL
 
 func heal(value):
+    var stats = self.get_stats_with_modifiers()
     self.hp += value
-    if self.hp > self.max_hp:
-        self.hp = self.max_hp
+    if self.hp > stats["max_hp"]:
+        self.hp = stats["max_hp"]

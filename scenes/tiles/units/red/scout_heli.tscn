@@ -1,76 +1,15 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/tiles/units/templates/scout_heli.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/materials/arne32_metallic_red.tres" type="Material" id=2]
 [ext_resource path="res://assets/units/red/scout_heli.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://assets/units/red/scout_heli_rotor.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://assets/materials/arne32_metallic.tres" type="Material" id=5]
-[ext_resource path="res://assets/units/audio/helicopter_spawn.wav" type="AudioStream" id=6]
-[ext_resource path="res://assets/units/audio/helicopter_attack.wav" type="AudioStream" id=7]
-[ext_resource path="res://assets/units/audio/helicopter_damage.wav" type="AudioStream" id=8]
-[ext_resource path="res://assets/units/audio/helicopter_die.wav" type="AudioStream" id=9]
-[ext_resource path="res://assets/units/audio/helicopter_move.wav" type="AudioStream" id=10]
+[ext_resource path="res://scenes/tiles/units/red/scout_heli_rotor.tscn" type="PackedScene" id=4]
 
-[sub_resource type="Animation" id=1]
-resource_name = "rotation"
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 180, 0 ) ]
-}
-
-[node name="tile" instance=ExtResource( 1 )]
-main_tile_view_cam_modifier = -10
-side_tile_view_cam_modifier = -25
+[node name="scout" instance=ExtResource( 1 )]
 side = "red"
-material_type = "metallic"
-max_move = 9
-attack = 5
-armor = 1
-can_fly = true
-uses_metallic_material = true
-unit_value = 50
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 2 )
 
-[node name="rotor" type="MeshInstance" parent="mesh_anchor/mesh" index="0"]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 1.3, 0.1 )
-mesh = ExtResource( 4 )
-material/0 = ExtResource( 5 )
-
-[node name="animations" type="AnimationPlayer" parent="mesh_anchor/mesh/rotor" index="0"]
-autoplay = "rotation"
-playback_speed = 5.0
-anims/rotation = SubResource( 1 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="explosion" parent="." index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
-
-[node name="spawn" parent="audio" index="0"]
-stream = ExtResource( 6 )
-
-[node name="move" parent="audio" index="1"]
-stream = ExtResource( 10 )
-
-[node name="attack" parent="audio" index="2"]
-stream = ExtResource( 7 )
-
-[node name="damage" parent="audio" index="3"]
-stream = ExtResource( 8 )
-
-[node name="die" parent="audio" index="4"]
-stream = ExtResource( 9 )
+[node name="rotor" parent="mesh_anchor/mesh" index="0" instance=ExtResource( 4 )]

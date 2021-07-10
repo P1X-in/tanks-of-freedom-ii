@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/ui/board/voxel_star.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/audio/pickup_box.wav" type="AudioStream" id=5]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "level_up"
 length = 12.0
 tracks/0/type = "value"
@@ -34,8 +34,7 @@ tracks/1/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 8, 0 ) ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "move"
+[sub_resource type="Animation" id=2]
 length = 0.5
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -80,8 +79,8 @@ spot_angle = 80.0
 
 [node name="animations" type="AnimationPlayer" parent="." index="1"]
 playback_speed = 6.0
-anims/level_up = SubResource( 2 )
-anims/move = SubResource( 1 )
+anims/level_up = SubResource( 1 )
+anims/move = SubResource( 2 )
 
 [node name="explosion" parent="." index="3" instance=ExtResource( 3 )]
 

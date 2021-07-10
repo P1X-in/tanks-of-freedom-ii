@@ -305,9 +305,9 @@ Special: Rapid response - restores all action points and attacks
 #### Leveling up
 
 Units can level up when they destroy enemies. Each level grants bonuses:
-1. Increased armor
-2. Increased mobility
-3. Access to active ability
+1. Access to active ability
+2. Increased armor
+3. Increased mobility
 
 ### Heroes
 

@@ -1,0 +1,121 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/units/yellow/heli_rotor_vertical.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/units/yellow/heli_rotor_horizontal.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://assets/materials/arne32_metallic.tres" type="Material" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "rotate"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "rotate"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "rotate"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 90 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "rotate"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 90 ) ]
+}
+
+[node name="rotor" type="Spatial"]
+
+[node name="rotor_pivot" type="Spatial" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.25, 1.3, -0.25 )
+
+[node name="rotor" type="MeshInstance" parent="rotor_pivot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0, -0.05 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="animations" type="AnimationPlayer" parent="rotor_pivot"]
+autoplay = "rotate"
+playback_speed = 8.0
+anims/rotate = SubResource( 1 )
+
+[node name="rotor_pivot2" type="Spatial" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.25, 1.3, -0.25 )
+
+[node name="rotor" type="MeshInstance" parent="rotor_pivot2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0, -0.05 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="animations" type="AnimationPlayer" parent="rotor_pivot2"]
+autoplay = "rotate"
+playback_speed = 8.0
+anims/rotate = SubResource( 2 )
+
+[node name="h_rotor_pivot" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 1.1, -0.6 )
+
+[node name="rotor" type="MeshInstance" parent="h_rotor_pivot"]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 3 )
+
+[node name="animations" type="AnimationPlayer" parent="h_rotor_pivot"]
+autoplay = "rotate"
+playback_speed = 8.0
+anims/rotate = SubResource( 3 )
+
+[node name="h_rotor_pivot2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 1.1, -0.6 )
+
+[node name="rotor" type="MeshInstance" parent="h_rotor_pivot2"]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 3 )
+
+[node name="animations" type="AnimationPlayer" parent="h_rotor_pivot2"]
+autoplay = "rotate"
+playback_speed = 8.0
+anims/rotate = SubResource( 4 )

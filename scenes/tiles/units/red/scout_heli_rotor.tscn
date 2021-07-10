@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/units/red/scout_heli_rotor.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/materials/arne32_metallic.tres" type="Material" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "rotation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 180, 0 ) ]
+}
+
+[node name="rotor" type="Spatial"]
+
+[node name="rotor" type="MeshInstance" parent="."]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 1.3, 0.1 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="animations" type="AnimationPlayer" parent="rotor"]
+autoplay = "rotation"
+playback_speed = 5.0
+anims/rotation = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}

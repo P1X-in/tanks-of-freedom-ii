@@ -10,5 +10,9 @@ func register_ability(ability):
 
     .register_ability(ability)
 
+
+func has_active_ability():
+    return self.active_ability != null
+
 func has_passive_ability():
     return self.passive_ability != null
