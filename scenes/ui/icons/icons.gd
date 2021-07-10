@@ -14,6 +14,7 @@ var supply = preload("res://scenes/ui/icons/abilities/supply.tscn")
 var inspire = preload("res://scenes/ui/icons/abilities/inspire.tscn")
 var promote = preload("res://scenes/ui/icons/abilities/promote.tscn")
 
+var heavy_weapon = preload("res://scenes/ui/icons/abilities/heavy_weapon.tscn")
 
 var named_icons = {
     "disk" : self.disk,
@@ -30,6 +31,8 @@ var named_icons = {
     "supply" : self.supply,
     "inspire" : self.inspire,
     "promote" : self.promote,
+    
+    "heavy_weapon" : self.heavy_weapon,
 }
 
 func get_named_icon(name):

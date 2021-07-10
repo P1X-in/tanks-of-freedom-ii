@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://scenes/abilities/unit/heavy_weapon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/units/audio/soldier_spawn.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/units/audio/soldier_move.wav" type="AudioStream" id=4]
@@ -29,6 +30,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0 )
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="heavy_weapon" parent="." index="3" instance=ExtResource( 1 )]
+index = 2
 
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource( 3 )

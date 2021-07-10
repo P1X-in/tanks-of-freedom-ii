@@ -33,7 +33,7 @@ func show_ability_markers_for_tile(ability, tile):
     self.destroy_markers()
     if ability.TYPE == "production":
         self.show_production_markers_for_tile(tile)
-    if ability.TYPE == "hero_active":
+    if ability.TYPE == "hero_active" or ability.TYPE == "active":
         self.show_hero_markers_for_tile(tile, ability)
     
 func show_production_markers_for_tile(tile):
