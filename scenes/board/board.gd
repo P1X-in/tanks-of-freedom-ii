@@ -13,6 +13,7 @@ var state = preload("res://scenes/board/logic/state.gd").new()
 var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").new()
 var abilities = preload("res://scenes/abilities/abilities.gd").new(self)
 var events = preload("res://scenes/board/logic/events.gd").new()
+var observers = preload("res://scenes/board/logic/observers/observers.gd").new(self)
 var scripting = preload("res://scenes/board/logic/scripting.gd").new()
 var ai = preload("res://scenes/board/logic/ai/ai.gd").new(self)
 var collateral = preload("res://scenes/board/logic/collateral.gd").new(self)
@@ -46,7 +47,6 @@ func _ready():
             index += 1
 
     self.state.register_heroes(self.map.model)
-    self.events.register_observer(self.events.types.UNIT_SPAWNED, self.state, "track_hero_spawn")
 
     self.start_turn()
 

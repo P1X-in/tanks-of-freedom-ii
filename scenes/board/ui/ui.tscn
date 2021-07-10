@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/board/ui/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ui/radial/radial.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scenes/ui/board/start_turn.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/ui/board/story_dialog.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/ui/board/cinematic_bars.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/ui/icons/star.tscn" type="PackedScene" id=11]
 
 [node name="ui" type="Control"]
 anchor_right = 1.0
@@ -66,7 +67,7 @@ __meta__ = {
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -40.0
-margin_right = 40.0
+margin_bottom = -40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -85,6 +86,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="level1" type="Node2D" parent="tile_highlight"]
+visible = false
+
+[node name="star" parent="tile_highlight/level1" instance=ExtResource( 11 )]
+position = Vector2( 60, -70 )
+
+[node name="level2" type="Node2D" parent="tile_highlight"]
+visible = false
+
+[node name="star" parent="tile_highlight/level2" instance=ExtResource( 11 )]
+position = Vector2( 50, -70 )
+
+[node name="star2" parent="tile_highlight/level2" instance=ExtResource( 11 )]
+position = Vector2( 70, -70 )
+
+[node name="level3" type="Node2D" parent="tile_highlight"]
+visible = false
+
+[node name="star" parent="tile_highlight/level3" instance=ExtResource( 11 )]
+position = Vector2( 50, -65 )
+
+[node name="star2" parent="tile_highlight/level3" instance=ExtResource( 11 )]
+position = Vector2( 70, -65 )
+
+[node name="star3" parent="tile_highlight/level3" instance=ExtResource( 11 )]
+position = Vector2( 60, -80 )
+
 [node name="summary" type="MarginContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -94,6 +122,9 @@ margin_left = -20.0
 margin_top = -20.0
 margin_right = 20.0
 margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="summary_view" parent="summary" instance=ExtResource( 6 )]
 visible = false

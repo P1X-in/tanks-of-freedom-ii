@@ -10,6 +10,9 @@ onready var story_dialog = $"story_dialog/story_dialog"
 onready var cinematic_bars = $"cinematic_bars/cinematic_bars"
 
 onready var tile_highlight = $"tile_highlight/tile_view"
+onready var tile_highlight_level1 = $"tile_highlight/level1"
+onready var tile_highlight_level2 = $"tile_highlight/level2"
+onready var tile_highlight_level3 = $"tile_highlight/level3"
 onready var tile_highlight_unit_panel_hp = $"tile_highlight/tile_view/hp"
 
 var icons = preload("res://scenes/ui/icons/icons.gd").new()
@@ -60,6 +63,14 @@ func update_tile_highlight(tile_preview):
 func update_tile_highlight_unit_panel(unit):
     self.tile_highlight_unit_panel_hp.set_text(str(unit.hp) + "/" + str(unit.max_hp))
 
+    match unit.level:
+        1:
+            self.tile_highlight_level1.show()
+        2:
+            self.tile_highlight_level2.show()
+        3:
+            self.tile_highlight_level3.show()
+
 func update_tile_highlight_building_panel(ap_gain):
     self.tile_highlight_unit_panel_hp.set_text("+" + str(ap_gain))
 
@@ -69,6 +80,9 @@ func hide_resource():
 func clear_tile_highlight():
     self.tile_highlight.clear()
     self.tile_highlight.hide()
+    self.tile_highlight_level1.hide()
+    self.tile_highlight_level2.hide()
+    self.tile_highlight_level3.hide()
     self.tile_highlight_unit_panel_hp.set_text("")
 
 func show_summary(winner):

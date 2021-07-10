@@ -7,7 +7,6 @@ var current_player = 0
 var turn = 1
 
 var players = []
-var suspended = false
 
 
 func add_player(type, side):
@@ -143,9 +142,3 @@ func register_heroes(model):
     while index < self.players.size():
         self.players[index]['hero'] = model.get_player_hero(self.players[index]['side'])
         index += 1
-
-func track_hero_spawn(event):
-    if event.unit.unit_class != "hero":
-        return
-
-    self.auto_set_hero(event.unit)
