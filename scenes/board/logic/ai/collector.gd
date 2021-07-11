@@ -50,7 +50,7 @@ func _gather_unit_actions(units, enemy_buildings, enemy_units, own_buildings, ow
     var brain
 
     for unit_tile in units:
-        brain = self.brains.get_brain_for_template(unit_tile.unit.tile.template_name)
+        brain = self.brains.get_brain_for_unit(unit_tile.unit.tile)
         if brain == null:
             continue
         units_actions += brain.get_actions(unit_tile, enemy_buildings, enemy_units, own_buildings, own_units, ap)

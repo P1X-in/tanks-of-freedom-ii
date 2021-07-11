@@ -91,14 +91,14 @@ func _gather_unit_stats(units):
     var stats = {
         'total' : units.size()
     }
-    var template_name
+    var unit_class
 
     for unit_tile in units:
-        template_name = self._map_template_name(unit_tile.unit.tile.template_name)
-        if stats.has(template_name):
-            stats[template_name] += 1
+        unit_class = unit_tile.unit.tile.unit_class
+        if stats.has(unit_class):
+            stats[unit_class] += 1
         else:
-            stats[template_name] = 1
+            stats[unit_class] = 1
 
     return stats
 
@@ -107,26 +107,26 @@ func _map_template_name(template_name):
         "blue_infantry" : "infantry",
         "blue_tank" : "tank",
         "blue_heli" : "heli",
-        "blue_m_inf" : "m_inf",
-        "blue_rocket" : "rocket",
+        "blue_m_inf" : "mobile_infantry",
+        "blue_rocket" : "rocket_artillery",
         "blue_scout" : "scout",
         "red_infantry" : "infantry",
         "red_tank" : "tank",
         "red_heli" : "heli",
-        "red_m_inf" : "m_inf",
-        "red_rocket" : "rocket",
+        "red_m_inf" : "mobile_infantry",
+        "red_rocket" : "rocket_artillery",
         "red_scout" : "scout",
         "green_infantry" : "infantry",
         "green_tank" : "tank",
         "green_heli" : "heli",
-        "green_m_inf" : "m_inf",
-        "green_rocket" : "rocket",
+        "green_m_inf" : "mobile_infantry",
+        "green_rocket" : "rocket_artillery",
         "green_scout" : "scout",
         "yellow_infantry" : "infantry",
         "yellow_tank" : "tank",
         "yellow_heli" : "heli",
-        "yellow_m_inf" : "m_inf",
-        "yellow_rocket" : "rocket",
+        "yellow_m_inf" : "mobile_infantry",
+        "yellow_rocket" : "rocket_artillery",
         "yellow_scout" : "scout",
         "npc_president" : "npc",
         "npc_lord" : "npc",

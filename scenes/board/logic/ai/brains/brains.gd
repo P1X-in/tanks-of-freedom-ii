@@ -33,44 +33,6 @@ var assigned_brains = {
     "feudal_barracks" : self.brains['barracks'],
     "feudal_factory" : self.brains['factory'],
     "feudal_hq" : self.brains['hq'],
-
-    "blue_infantry" : self.brains['infantry'],
-    "blue_tank" : self.brains['tank'],
-    "blue_heli" : self.brains['heli'],
-    "blue_m_inf" : self.brains['mobile_infantry'],
-    "blue_rocket" : self.brains['rocket_artillery'],
-    "blue_scout" : self.brains['scout'],
-    "red_infantry" : self.brains['infantry'],
-    "red_tank" : self.brains['tank'],
-    "red_heli" : self.brains['heli'],
-    "red_m_inf" : self.brains['mobile_infantry'],
-    "red_rocket" : self.brains['rocket_artillery'],
-    "red_scout" : self.brains['scout'],
-    "green_infantry" : self.brains['infantry'],
-    "green_tank" : self.brains['tank'],
-    "green_heli" : self.brains['heli'],
-    "green_m_inf" : self.brains['mobile_infantry'],
-    "green_rocket" : self.brains['rocket_artillery'],
-    "green_scout" : self.brains['scout'],
-    "yellow_infantry" : self.brains['infantry'],
-    "yellow_tank" : self.brains['tank'],
-    "yellow_heli" : self.brains['heli'],
-    "yellow_m_inf" : self.brains['mobile_infantry'],
-    "yellow_rocket" : self.brains['rocket_artillery'],
-    "yellow_scout" : self.brains['scout'],
-
-    "npc_president" : self.brains['npc'],
-    "npc_lord" : self.brains['npc'],
-    "npc_chancellor" : self.brains['npc'],
-    "npc_king" : self.brains['npc'],
-    "hero_general" : self.brains['hero'],
-    "hero_commando" : self.brains['hero'],
-    "hero_gentleman" : self.brains['hero'],
-    "hero_noble" : self.brains['hero'],
-    "hero_admiral" : self.brains['hero'],
-    "hero_captain" : self.brains['hero'],
-    "hero_prince" : self.brains['hero'],
-    "hero_warlord" : self.brains['hero']
 }
 
 func get_brain_for_template(template_name):
@@ -79,3 +41,8 @@ func get_brain_for_template(template_name):
 
     return null
 
+func get_brain_for_unit(unit):
+    if self.brains.has(unit.unit_class):
+        return self.brains[unit.unit_class]
+
+    return null
