@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/gui/icons/abilities/pick_up.png" type="Texture" id=1]
+
+[node name="pick_up" type="Sprite"]
+texture = ExtResource( 1 )

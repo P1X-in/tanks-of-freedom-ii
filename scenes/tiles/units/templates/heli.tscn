@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
+[ext_resource path="res://scenes/tiles/units/templates/heli.gd" type="Script" id=1]
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/units/audio/helicopter_move.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/units/audio/helicopter_damage.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/units/audio/helicopter_spawn.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/units/audio/helicopter_die.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/units/audio/helicopter_attack.wav" type="AudioStream" id=7]
+[ext_resource path="res://scenes/abilities/unit/pick_up.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/abilities/unit/drop_off.tscn" type="PackedScene" id=9]
 
 [node name="heli" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
 material_type = "metallic"
@@ -17,12 +21,19 @@ armor = 1
 can_fly = true
 uses_metallic_material = true
 unit_value = 70
+unit_class = "heli"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 
 [node name="explosion" parent="." index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="pick_up" parent="." index="4" instance=ExtResource( 8 )]
+index = 2
+
+[node name="drop_off" parent="." index="5" instance=ExtResource( 9 )]
+index = 2
 
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource( 5 )

@@ -16,6 +16,7 @@ attack = 11
 armor = 0
 uses_metallic_material = true
 unit_value = 70
+unit_class = "rocket_artillery"
 
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource( 2 )

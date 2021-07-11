@@ -18,6 +18,7 @@ max_move = 6
 attack = 10
 uses_metallic_material = true
 unit_value = 50
+unit_class = "tank"
 
 [node name="long_range_shell" parent="." index="4" instance=ExtResource( 7 )]
 index = 2

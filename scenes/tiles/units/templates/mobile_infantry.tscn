@@ -15,6 +15,7 @@ attack = 5
 armor = 0
 can_capture = true
 unit_value = 35
+unit_class = "mobile_infantry"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1 )

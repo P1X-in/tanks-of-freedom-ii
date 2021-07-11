@@ -87,3 +87,13 @@ func move_camera_to_position_if_far_away(destination, tolerance=9, zoom=null):
         self.move_camera_to_position(destination)
 
     return true
+
+func anchor_unit(unit, position):
+    var world_position = self.map_to_world(position)
+    world_position.y = self.GROUND_HEIGHT
+    self.tiles_units_anchor.add_child(unit)
+    unit.set_translation(world_position)
+    
+
+func detach_unit(unit):
+    self.tiles_units_anchor.remove_child(unit)

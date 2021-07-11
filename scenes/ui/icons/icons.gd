@@ -16,6 +16,8 @@ var promote = preload("res://scenes/ui/icons/abilities/promote.tscn")
 
 var heavy_weapon = preload("res://scenes/ui/icons/abilities/heavy_weapon.tscn")
 var long_range_shell = preload("res://scenes/ui/icons/abilities/long_range_shell.tscn")
+var pick_up = preload("res://scenes/ui/icons/abilities/pick_up.tscn")
+var drop_off = preload("res://scenes/ui/icons/abilities/drop_off.tscn")
 
 var named_icons = {
     "disk" : self.disk,
@@ -35,6 +37,8 @@ var named_icons = {
     
     "heavy_weapon" : self.heavy_weapon,
     "long_range_shell" : self.long_range_shell,
+    "pick_up" : self.pick_up,
+    "drop_off" : self.drop_off,
 }
 
 func get_named_icon(name):

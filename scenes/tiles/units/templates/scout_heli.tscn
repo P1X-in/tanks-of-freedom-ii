@@ -17,6 +17,7 @@ armor = 1
 can_fly = true
 uses_metallic_material = true
 unit_value = 50
+unit_class = "scout"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
