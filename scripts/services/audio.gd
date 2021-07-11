@@ -7,6 +7,9 @@ var samples = {}
 var soundtracks = {}
 var current_track = null
 
+var sounds_enabled = true
+var music_enabled = true
+
 func _ready():
     self.register_sample("menu_click", preload("res://assets/audio/menu.wav"))
     self.register_sample("explosion", preload("res://assets/audio/explosion.wav"))
@@ -18,12 +21,18 @@ func _ready():
 
 
 func play(name):
+    if not self.sounds_enabled:
+        return
+
     if not self.samples.has(name):
         return
 
     self.samples[name].play()
 
 func track(name):
+    if not self.music_enabled:
+        return
+
     if not self.soundtracks.has(name):
         return
 

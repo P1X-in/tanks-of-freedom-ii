@@ -26,5 +26,6 @@ func _read_setting():
             self.button.set_text("OFF")
 
 func _on_toggle_button_pressed():
+    self.audio.play("menu_click")
     self.settings.set_option(self.option_key, not self.settings.get_option(self.option_key))
     self._read_setting()

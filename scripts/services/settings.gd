@@ -2,10 +2,13 @@ extends Node
 
 const SETTINGS_FILE_PATH = "user://settings.json"
 
+onready var audio = $"/root/SimpleAudioLibrary"
 var filesystem = preload("res://scripts/services/filesystem.gd").new()
 
 var settings = {
     "fullscreen" : false,
+    "sound" : true,
+    "music" : true,
 }
 
 
@@ -36,3 +39,11 @@ func set_option(key, value):
 func _apply_option(key):
     if key == "fullscreen":
         OS.set_window_fullscreen(self.settings[key])
+    elif key == "sound":
+        self.audio.sounds_enabled = self.settings[key]
+    elif key == "music":
+        self.audio.music_enabled = self.settings[key]
+        if self.settings[key]:
+            self.audio.track("menu")
+        else:
+            self.audio.stop()

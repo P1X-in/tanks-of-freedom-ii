@@ -18,6 +18,7 @@ func bind_menu(menu):
     self.main_menu = menu
 
 func _on_skirmish_button_pressed():
+    self.audio.play("menu_click")
     self.main_menu.open_picker()
 
 func _on_editor_button_pressed():
@@ -26,6 +27,7 @@ func _on_editor_button_pressed():
     self.switcher.map_editor()
 
 func _on_settings_button_pressed():
+    self.audio.play("menu_click")
     self.main_menu.open_settings()
 
 func _on_quit_button_pressed():
