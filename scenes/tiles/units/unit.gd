@@ -263,7 +263,7 @@ func register_ability(ability):
         self.active_abilities.append(ability)
 
 func has_active_ability():
-    return self.active_abilities.size() > 0# and self.level > 0
+    return self.active_abilities.size() > 0 and self.level > 0
 
 func ability_cd_tick_down():
     for ability in self.active_abilities:
