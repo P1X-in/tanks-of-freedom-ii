@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/abilities/unit/missile.tscn" type="PackedScene" id=1]
+
+[node name="heavy_missile" instance=ExtResource( 1 )]
+label = "Heavy Missile"
+named_icon = "heavy_missile"
+ability_range = 4
+damage = 11
+min_level = 1
+max_level = 3

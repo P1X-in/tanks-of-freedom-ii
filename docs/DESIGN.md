@@ -284,8 +284,9 @@ Strengths:
 Weaknesses:
 - low health
 - very expensive
+- can not fight directly
 
-Special: Targeted strike - can damage a unit within 4 squares, both air and ground
+Special: Missile - can damage a unit within 4 squares, both air and ground
 
 #### Scout Helicopter
 

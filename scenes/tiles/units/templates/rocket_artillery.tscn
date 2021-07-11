@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/units/audio/tank_spawn.wav" type="AudioStream" id=2]
@@ -6,17 +6,27 @@
 [ext_resource path="res://assets/units/audio/tank_attack.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/units/audio/tank_move.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/units/audio/tank_damage.wav" type="AudioStream" id=6]
+[ext_resource path="res://scenes/tiles/units/templates/rocket_artillery.gd" type="Script" id=7]
+[ext_resource path="res://scenes/abilities/unit/missile.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/abilities/unit/heavy_missile.tscn" type="PackedScene" id=9]
 
 [node name="rocket_artillery" instance=ExtResource( 1 )]
+script = ExtResource( 7 )
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
 material_type = "metallic"
-max_move = 5
-attack = 11
+attack = 0
 armor = 0
+max_attacks = 0
 uses_metallic_material = true
 unit_value = 70
 unit_class = "rocket_artillery"
+
+[node name="missile" parent="." index="4" instance=ExtResource( 8 )]
+index = 2
+
+[node name="heavy_missile" parent="." index="5" instance=ExtResource( 9 )]
+index = 2
 
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource( 2 )

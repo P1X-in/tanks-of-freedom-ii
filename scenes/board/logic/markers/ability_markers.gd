@@ -13,6 +13,7 @@ var colour_materials = {
 
 var created_markers = {}
 var tiles_in_range = {}
+var explored_tiles_distance = {}
 
 func _ready():
     self.map = self.get_node(self.map)
@@ -46,25 +47,31 @@ func show_production_markers_for_tile(tile):
 func show_hero_markers_for_tile(source_tile, ability):
     self.tiles_in_range.clear()
     self.tiles_in_range[self._get_key(source_tile)] = source_tile
+    self.explored_tiles_distance[self._get_key(source_tile)] = 0
 
-    self.expand_from_tile(source_tile, ability.ability_range)
+    self.expand_from_tile(source_tile, ability.ability_range, 0)
 
     for tile in self.tiles_in_range.values():
         if ability.is_tile_applicable(tile, source_tile):
             self.place_marker(tile.position, ability.marker_colour)
 
-func expand_from_tile(tile, depth):
+func expand_from_tile(tile, depth, distance):
     if depth < 1:
         return
 
     var key
+    var neighbour_distance = null
+
 
     for neighbour in tile.neighbours.values():
         key = self._get_key(neighbour)
+        if self.explored_tiles_distance.has(key):
+            neighbour_distance = self.explored_tiles_distance[key]
 
-        if not self.tiles_in_range.has(key):
+        if not self.tiles_in_range.has(key) or (neighbour_distance != null and neighbour_distance > distance + 1):
             self.tiles_in_range[key] = neighbour
-            self.expand_from_tile(neighbour, depth - 1)
+            self.explored_tiles_distance[key] = distance + 1
+            self.expand_from_tile(neighbour, depth - 1, distance + 1)
 
 func marker_exists(position):
     return self.created_markers.has(str(position.x) + "_" + str(position.y))
