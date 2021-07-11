@@ -18,6 +18,8 @@ var heavy_weapon = preload("res://scenes/ui/icons/abilities/heavy_weapon.tscn")
 var long_range_shell = preload("res://scenes/ui/icons/abilities/long_range_shell.tscn")
 var pick_up = preload("res://scenes/ui/icons/abilities/pick_up.tscn")
 var drop_off = preload("res://scenes/ui/icons/abilities/drop_off.tscn")
+var medkit = preload("res://scenes/ui/icons/abilities/medkit.tscn")
+var repair_kit = preload("res://scenes/ui/icons/abilities/repair_kit.tscn")
 
 var named_icons = {
     "disk" : self.disk,
@@ -39,6 +41,8 @@ var named_icons = {
     "long_range_shell" : self.long_range_shell,
     "pick_up" : self.pick_up,
     "drop_off" : self.drop_off,
+    "medkit" : self.medkit,
+    "repair_kit" : self.repair_kit,
 }
 
 func get_named_icon(name):

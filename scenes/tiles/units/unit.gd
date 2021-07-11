@@ -273,6 +273,10 @@ func reset_cooldown():
     for ability in self.active_abilities:
         ability.reset_cooldown()
 
+func activate_all_cooldowns(board):
+    for ability in self.active_abilities:
+        ability.activate_cooldown(board)
+
 func apply_modifier(name, value):
     self.modifiers[name] = value
 

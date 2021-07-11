@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
+[ext_resource path="res://scenes/abilities/unit/repair_kit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/units/audio/tank_spawn.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/units/audio/tank_move.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/units/audio/soldier_damage.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/units/audio/soldier_die.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/units/audio/soldier_attack.wav" type="AudioStream" id=7]
+[ext_resource path="res://scenes/abilities/unit/medkit.tscn" type="PackedScene" id=8]
 
 [node name="mobile_infantry" instance=ExtResource( 2 )]
 main_tile_view_cam_modifier = -10
@@ -25,6 +27,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1 )
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="medkit" parent="." index="4" instance=ExtResource( 8 )]
+index = 1
+
+[node name="repair_kit" parent="." index="5" instance=ExtResource( 1 )]
+index = 3
 
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource( 3 )
