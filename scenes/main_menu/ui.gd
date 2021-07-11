@@ -4,19 +4,20 @@ onready var menu = $"options/menu"
 onready var logo = $"logo/logo_view"
 onready var picker = $"map_picker/picker"
 onready var skirmish = $"skirmish/skirmish"
+onready var settings = $"settings/settings"
 
 func bind_menu(main_menu):
     self.menu.bind_menu(main_menu)
     self.skirmish.bind_menu(main_menu)
+    self.settings.bind_menu(main_menu)
 
 func hide_menu():
-    self.menu.hide()
+    self.menu.hide_panel()
     #self.logo.hide()
 
 func show_menu():
-    self.menu.show()
+    self.menu.show_panel()
     #self.logo.show()
-    self.menu.skirmish_button.grab_focus()
 
 func show_picker():
     self.picker.show_picker()
@@ -29,3 +30,9 @@ func show_skirmish(map_name):
 
 func hide_skirmish():
     self.skirmish.hide_panel()
+
+func show_settings():
+    self.settings.show_panel()
+
+func hide_settings():
+    self.settings.hide_panel()

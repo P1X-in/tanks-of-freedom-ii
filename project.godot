@@ -28,6 +28,7 @@ GamepadAdapter="*res://scripts/services/gamepad_adapter.gd"
 SimpleAudioLibrary="*res://scripts/services/audio.gd"
 SceneSwitcher="*res://scripts/services/scene_switcher.gd"
 MatchSetup="*res://scripts/services/match_setup.gd"
+Settings="*res://scripts/services/settings.gd"
 
 [debug]
 

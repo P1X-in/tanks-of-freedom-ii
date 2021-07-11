@@ -3,6 +3,7 @@ extends Control
 onready var skirmish_button = $"skirmish_button"
 onready var quit_button = $"quit_button"
 onready var editor_button = $"editor_button"
+onready var animations = $"animations"
 onready var gamepad_adapter = $"/root/GamepadAdapter"
 
 onready var switcher = $"/root/SceneSwitcher"
@@ -24,5 +25,16 @@ func _on_editor_button_pressed():
     self.gamepad_adapter.disable()
     self.switcher.map_editor()
 
+func _on_settings_button_pressed():
+    self.main_menu.open_settings()
+
 func _on_quit_button_pressed():
     self.get_tree().quit()
+
+func show_panel():
+    self.animations.play("show")
+    yield(self.get_tree().create_timer(0.1), "timeout")
+    self.skirmish_button.grab_focus()
+
+func hide_panel():
+    self.animations.play("hide")

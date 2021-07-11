@@ -2,6 +2,62 @@
 
 [ext_resource path="res://scenes/ui/menu/menu.gd" type="Script" id=1]
 
+[sub_resource type="Animation" id=1]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
 [node name="menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -53,7 +109,6 @@ margin_left = -150.0
 margin_top = 70.0
 margin_right = 150.0
 margin_bottom = 110.0
-disabled = true
 text = "SETTINGS"
 
 [node name="quit_button" type="Button" parent="."]
@@ -62,6 +117,16 @@ margin_top = 130.0
 margin_right = 150.0
 margin_bottom = 170.0
 text = "QUIT GAME"
+
+[node name="animations" type="AnimationPlayer" parent="."]
+playback_speed = 4.0
+anims/hide = SubResource( 1 )
+anims/show = SubResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+
 [connection signal="pressed" from="skirmish_button" to="." method="_on_skirmish_button_pressed"]
 [connection signal="pressed" from="editor_button" to="." method="_on_editor_button_pressed"]
+[connection signal="pressed" from="settings_button" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]

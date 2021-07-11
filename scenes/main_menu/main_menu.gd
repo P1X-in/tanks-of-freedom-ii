@@ -26,6 +26,7 @@ func _setup_camera():
 
 func open_picker():
     self.ui.hide_menu()
+    yield(self.get_tree().create_timer(0.2), "timeout")
     self.ui.show_picker()
 
     self.ui.picker.bind_cancel(self, "close_picker")
@@ -48,3 +49,13 @@ func close_skirmish():
     self.ui.hide_skirmish()
     yield(self.get_tree().create_timer(0.2), "timeout")
     self.ui.show_picker()
+
+func open_settings():
+    self.ui.hide_menu()
+    yield(self.get_tree().create_timer(0.2), "timeout")
+    self.ui.show_settings()
+
+func close_settings():
+    self.ui.hide_settings()
+    yield(self.get_tree().create_timer(0.2), "timeout")
+    self.ui.show_menu()
