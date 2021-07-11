@@ -6,7 +6,7 @@ const UNITS_SOFT_LIMIT = 10
 
 var action_template = preload("res://scenes/board/logic/ai/actions/use_ability_action.gd")
 
-func get_actions(entity_tile, enemy_buildings, enemy_units, _own_buildings, own_units, ap):
+func get_actions(entity_tile, enemy_buildings, enemy_units, _own_buildings, own_units, ap, _board):
     var spawn_points = self._get_spawn_points(entity_tile)
 
     if spawn_points.size() < 1:

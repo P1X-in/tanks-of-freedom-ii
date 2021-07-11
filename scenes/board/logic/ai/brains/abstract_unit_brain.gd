@@ -7,15 +7,17 @@ var pathfinder = preload("res://scenes/board/logic/ai/pathfinder.gd").new()
 var actions_templates = {
     'attack' : preload("res://scenes/board/logic/ai/actions/attack_action.gd"),
     'move' : preload("res://scenes/board/logic/ai/actions/move_action.gd"),
-    'capture' : preload("res://scenes/board/logic/ai/actions/capture_action.gd")
+    'capture' : preload("res://scenes/board/logic/ai/actions/capture_action.gd"),
+    'ability' : preload("res://scenes/board/logic/ai/actions/use_ability_action.gd"),
 }
 
-func get_actions(entity_tile, _enemy_buildings, _enemy_units, _own_buildings, _own_units, ap):
+func get_actions(entity_tile, _enemy_buildings, _enemy_units, _own_buildings, _own_units, ap, _board):
     var actions = []
 
     self.pathfinder.explore(entity_tile, self.EXPLORE_DISTANCE)
 
     actions += self._gather_attack_actions(entity_tile, ap)
+    actions += self._gather_ability_actions(entity_tile, ap, _board)
     if entity_tile.unit.tile.can_capture:
         actions += self._gather_capture_actions(entity_tile, ap)
 
@@ -125,6 +127,9 @@ func _gather_capture_actions(entity_tile, ap):
 
     return actions
 
+func _gather_ability_actions(_entity_tile, _ap, _board):
+    return []
+
 func _attack_action(entity_tile, interaction_tile, target_tile, path):
     var action = self.actions_templates['attack'].new(entity_tile, interaction_tile, target_tile, path.size())
     
@@ -144,6 +149,9 @@ func _attack_action(entity_tile, interaction_tile, target_tile, path):
 
 func _capture_action(entity_tile, interaction_tile, target_tile, path):
     return self.actions_templates['capture'].new(entity_tile, interaction_tile, target_tile, path.size())
+
+func _ability_action(ability, target):
+    return self.actions_templates['ability'].new(ability, target)
 
 func _approach_action(entity_tile, path, unit_range):
     if unit_range < 1:

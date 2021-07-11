@@ -41,7 +41,7 @@ func _gather_building_actions(buildings, enemy_buildings, enemy_units, own_build
         brain = self.brains.get_brain_for_template(building_tile.building.tile.template_name)
         if brain == null:
             continue
-        buildings_actions += brain.get_actions(building_tile, enemy_buildings, enemy_units, own_buildings, own_units, ap)
+        buildings_actions += brain.get_actions(building_tile, enemy_buildings, enemy_units, own_buildings, own_units, ap, self.board)
 
     return buildings_actions
 
@@ -53,7 +53,7 @@ func _gather_unit_actions(units, enemy_buildings, enemy_units, own_buildings, ow
         brain = self.brains.get_brain_for_unit(unit_tile.unit.tile)
         if brain == null:
             continue
-        units_actions += brain.get_actions(unit_tile, enemy_buildings, enemy_units, own_buildings, own_units, ap)
+        units_actions += brain.get_actions(unit_tile, enemy_buildings, enemy_units, own_buildings, own_units, ap, self.board)
 
     return units_actions
 
