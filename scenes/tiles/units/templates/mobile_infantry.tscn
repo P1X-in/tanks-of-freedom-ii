@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/abilities/unit/repair_kit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=2]
@@ -8,8 +8,10 @@
 [ext_resource path="res://assets/units/audio/soldier_die.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/units/audio/soldier_attack.wav" type="AudioStream" id=7]
 [ext_resource path="res://scenes/abilities/unit/medkit.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/tiles/units/templates/mobile_infantry.gd" type="Script" id=9]
 
 [node name="mobile_infantry" instance=ExtResource( 2 )]
+script = ExtResource( 9 )
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
 max_move = 6

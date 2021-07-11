@@ -285,6 +285,7 @@ Weaknesses:
 - low health
 - very expensive
 - can not fight directly
+- short range
 
 Special: Missile - can damage a unit within 4 squares, both air and ground
 
@@ -294,7 +295,7 @@ Lightweight, flying machine capable of covering a lot of ground very quickly.
 
 Strengths:
 - very good mobility
-- high visibility
+- tactical strikes
 
 Weaknesses:
 - expensive
