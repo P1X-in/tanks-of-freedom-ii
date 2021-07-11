@@ -22,6 +22,7 @@ var medkit = preload("res://scenes/ui/icons/abilities/medkit.tscn")
 var repair_kit = preload("res://scenes/ui/icons/abilities/repair_kit.tscn")
 var missile = preload("res://scenes/ui/icons/abilities/missile.tscn")
 var heavy_missile = preload("res://scenes/ui/icons/abilities/heavy_missile.tscn")
+var rapid_response = preload("res://scenes/ui/icons/abilities/rapid_response.tscn")
 
 var named_icons = {
     "disk" : self.disk,
@@ -47,6 +48,7 @@ var named_icons = {
     "repair_kit" : self.repair_kit,
     "missile" : self.missile,
     "heavy_missile" : self.heavy_missile,
+    "rapid_response" : self.rapid_response,
 }
 
 func get_named_icon(name):
