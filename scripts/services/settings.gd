@@ -20,7 +20,19 @@ func load_settings_from_file():
 
     for settings_key in loaded_settings:
         self.settings[settings_key] = loaded_settings[settings_key]
+        self._apply_option(settings_key)
+
+func get_option(key):
+    if self.settings.has(key):
+        return self.settings[key]
+    return null
 
 func set_option(key, value):
     self.settings[key] = value
     self.save_settings_to_file()
+
+    self._apply_option(key)
+
+func _apply_option(key):
+    if key == "fullscreen":
+        OS.set_window_fullscreen(self.settings[key])

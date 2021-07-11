@@ -81,10 +81,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -20.0
-margin_bottom = 20.0
+margin_left = 6.10352e-05
+margin_top = 20.0
+margin_right = 6.10352e-05
+margin_bottom = 60.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 
 [node name="settings" parent="settings" instance=ExtResource( 7 )]
