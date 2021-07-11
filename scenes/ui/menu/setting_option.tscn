@@ -19,7 +19,7 @@ margin_top = 13.0
 margin_right = 253.0
 margin_bottom = 63.0
 custom_fonts/font = ExtResource( 1 )
-text = "Fullscreen
+text = "Option
 "
 valign = 1
 

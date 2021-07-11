@@ -19,6 +19,7 @@ func _read_setting():
     match value:
         null:
             self.button.set_text("???")
+            self.button.set_disabled(true)
         true:
             self.button.set_text("ON")
         false:
