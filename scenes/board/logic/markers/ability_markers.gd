@@ -43,14 +43,14 @@ func show_production_markers_for_tile(tile):
         if neighbour.can_acommodate_unit():
             self.place_marker(neighbour.position)
 
-func show_hero_markers_for_tile(tile, ability):
+func show_hero_markers_for_tile(source_tile, ability):
     self.tiles_in_range.clear()
-    self.tiles_in_range[self._get_key(tile)] = tile
+    self.tiles_in_range[self._get_key(source_tile)] = source_tile
 
-    self.expand_from_tile(tile, ability.ability_range)
+    self.expand_from_tile(source_tile, ability.ability_range)
 
     for tile in self.tiles_in_range.values():
-        if ability.is_tile_applicable(tile):
+        if ability.is_tile_applicable(tile, source_tile):
             self.place_marker(tile.position, ability.marker_colour)
 
 func expand_from_tile(tile, depth):

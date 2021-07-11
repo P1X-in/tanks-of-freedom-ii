@@ -1,6 +1,6 @@
 extends "res://scenes/abilities/unit/active.gd"
 
-export var damage = 8
+export var damage = 10
 
 func _execute(board, position):
     var tile = board.map.model.get_tile(position)
@@ -15,5 +15,5 @@ func _execute(board, position):
 
     board.explode_a_tile(tile)
 
-func is_tile_applicable(tile, _source_tile):
-    return tile.has_enemy_unit(self.source.side)
+func is_tile_applicable(tile, source_tile):
+    return tile.has_enemy_unit(self.source.side) and self.source.can_attack(tile.unit.tile) and (tile.position.x == source_tile.position.x or tile.position.y == source_tile.position.y)

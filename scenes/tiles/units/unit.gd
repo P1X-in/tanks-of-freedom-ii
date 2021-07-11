@@ -27,7 +27,7 @@ var level = 0
 var experience = 0
 
 var modifiers = {}
-var active_ability = null
+var active_abilities = []
 
 var unit_rotations = {
     "s" : 0,
@@ -260,18 +260,18 @@ func give_sfx_effect(name):
 
 func register_ability(ability):
     if ability.TYPE == "active":
-        self.active_ability = ability
+        self.active_abilities.append(ability)
 
 func has_active_ability():
-    return self.active_ability != null and self.level > 0
+    return self.active_abilities.size() > 0 and self.level > 0
 
 func ability_cd_tick_down():
-    if self.has_active_ability():
-        self.active_ability.cd_tick_down()
+    for ability in self.active_abilities:
+        ability.cd_tick_down()
 
 func reset_cooldown():
-    if self.has_active_ability():
-        self.active_ability.reset_cooldown()
+    for ability in self.active_abilities:
+        ability.reset_cooldown()
 
 func apply_modifier(name, value):
     self.modifiers[name] = value

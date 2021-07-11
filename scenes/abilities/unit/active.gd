@@ -12,5 +12,11 @@ func execute(board, position):
     board.use_current_player_ap(self.ap_cost)
     self.source.use_move(1)
 
-func is_tile_applicable(_tile):
+    if not board.state.is_current_player_ai():
+        board.active_ability = null
+        position = board.selected_tile.position
+        board.unselect_tile()
+        board.select_tile(position)
+
+func is_tile_applicable(_tile, _source_tile):
     return true

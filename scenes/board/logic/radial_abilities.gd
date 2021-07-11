@@ -52,10 +52,13 @@ func fill_radial_with_building_abilities(board, radial, building):
 func fill_radial_with_unit_abilities(board, radial, unit):
     radial.set_field(board.ui.icons.back.instance(), "Back", 6, board, "toggle_radial_menu")
     var label
-    label = unit.active_ability.label
-    if unit.active_ability.ap_cost > 0:
-        label += "\n" + str(unit.active_ability.ap_cost) + " AP"
-    radial.set_field(board.ui.icons.get_named_icon(unit.active_ability.named_icon), label, unit.active_ability.index, board, "activate_ability", [unit.active_ability])
 
-    if unit.active_ability.is_on_cooldown():
-        radial.set_field_disabled(unit.active_ability.index, unit.active_ability.cd_turns_left)
+    for ability in unit.active_abilities:
+        if ability.is_visible(board):
+            label = ability.label
+            if ability.ap_cost > 0:
+                label += "\n" + str(ability.ap_cost) + " AP"
+            radial.set_field(board.ui.icons.get_named_icon(ability.named_icon), label, ability.index, board, "activate_ability", [ability])
+
+            if ability.is_on_cooldown():
+                radial.set_field_disabled(ability.index, ability.cd_turns_left)

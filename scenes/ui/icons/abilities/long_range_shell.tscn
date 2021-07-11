@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/gui/icons/abilities/long_range_shell.png" type="Texture" id=1]
+
+[node name="long_range_shell" type="Sprite"]
+texture = ExtResource( 1 )

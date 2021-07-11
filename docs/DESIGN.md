@@ -220,7 +220,7 @@ Weaknesses:
 - low damage
 - short range
 
-Special: Bazooka - can deal high damage to a neighbouring unit
+Special: Heavy Weapon - can deal high damage to a neighbouring unit
 
 #### Tank
 

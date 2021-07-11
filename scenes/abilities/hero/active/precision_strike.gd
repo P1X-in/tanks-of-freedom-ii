@@ -13,7 +13,7 @@ func _execute(board, position):
     board.ability_markers.add_child(executor)
     executor.set_translation(board.map.map_to_world(position))
 
-func is_tile_applicable(tile):
+func is_tile_applicable(tile, _source_tile):
     if tile.unit.is_present():
         return tile.unit.tile != self.source
     return true

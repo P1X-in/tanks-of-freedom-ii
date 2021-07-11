@@ -13,5 +13,5 @@ func _execute(board, position):
 
     board.events.emit_unit_moved(destination_tile.unit.tile, source_tile, destination_tile)
 
-func is_tile_applicable(tile):
+func is_tile_applicable(tile, _source_tile):
     return tile.can_acommodate_unit()
