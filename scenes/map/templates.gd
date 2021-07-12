@@ -339,6 +339,13 @@ var side_materials = {
     self.PLAYER_GREEN : ResourceLoader.load("res://assets/materials/arne32_green.tres"),
     self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_yellow.tres"),
 }
+var side_materials_desat = {
+    self.PLAYER_NEUTRAL : ResourceLoader.load("res://assets/materials/arne32_neutral.tres"),
+    self.PLAYER_BLUE : ResourceLoader.load("res://assets/materials/arne32_blue_desat.tres"),
+    self.PLAYER_RED : ResourceLoader.load("res://assets/materials/arne32_red_desat.tres"),
+    self.PLAYER_GREEN : ResourceLoader.load("res://assets/materials/arne32_green_desat.tres"),
+    self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_yellow_desat.tres"),
+}
 
 var side_materials_metallic = {
     self.PLAYER_NEUTRAL : ResourceLoader.load("res://assets/materials/arne32_metallic_neutral.tres"),
@@ -346,6 +353,13 @@ var side_materials_metallic = {
     self.PLAYER_RED : ResourceLoader.load("res://assets/materials/arne32_metallic_red.tres"),
     self.PLAYER_GREEN : ResourceLoader.load("res://assets/materials/arne32_metallic_green.tres"),
     self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_metallic_yellow.tres"),
+}
+var side_materials_metallic_desat = {
+    self.PLAYER_NEUTRAL : ResourceLoader.load("res://assets/materials/arne32_metallic_neutral.tres"),
+    self.PLAYER_BLUE : ResourceLoader.load("res://assets/materials/arne32_metallic_blue_desat.tres"),
+    self.PLAYER_RED : ResourceLoader.load("res://assets/materials/arne32_metallic_red_desat.tres"),
+    self.PLAYER_GREEN : ResourceLoader.load("res://assets/materials/arne32_metallic_green_desat.tres"),
+    self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_metallic_yellow_desat.tres"),
 }
 
 var generic_building = preload("res://scenes/tiles/buildings/building.gd")
@@ -362,3 +376,10 @@ func get_side_material(side, type="normal"):
         return self.side_materials_metallic[side]
 
     return self.side_materials[side]
+
+func get_side_material_desat(side, type="normal"):
+    if type == self.MATERIAL_METALLIC:
+        return self.side_materials_metallic_desat[side]
+
+    return self.side_materials_desat[side]
+    

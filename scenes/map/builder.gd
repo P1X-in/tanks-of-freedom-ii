@@ -215,4 +215,4 @@ func set_unit_side(position, new_side):
         if tile.unit.tile.uses_metallic_material:
             material_type = self.map.templates.MATERIAL_METALLIC
         tile.unit.tile.set_side(new_side)
-        tile.unit.tile.set_side_material(self.map.templates.get_side_material(new_side, material_type))
+        tile.unit.tile.set_side_materials(self.map.templates.get_side_material(new_side, material_type), self.map.templates.get_side_material_desat(new_side, material_type))

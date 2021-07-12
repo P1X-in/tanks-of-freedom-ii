@@ -49,6 +49,10 @@ var move_finished_method = ""
 var move_finished_args = []
 
 
+var base_material
+var desaturated_material
+
+
 func reset():
     var stats = self.get_stats_with_modifiers()
 
@@ -66,7 +70,15 @@ func get_dict():
 func set_side(new_side):
     self.side = new_side
 
+func set_side_materials(_base_material, _desaturated_material):
+    self.base_material = _base_material
+    self.desaturated_material = _desaturated_material
+    self.set_side_material(self.base_material)
+
 func set_side_material(material):
+    if material == null:
+        return
+
     $"mesh_anchor/mesh".set_surface_material(0, material)
 
     var additional_mesh
@@ -113,7 +125,8 @@ func has_moves():
 func use_move(value):
     self.move -= value
     if self.move < 1:
-        self.spotlight.hide()
+        self.set_side_material(self.desaturated_material)
+        #self.spotlight.hide()
 
 func use_all_moves():
     self.use_move(self.move)
@@ -121,7 +134,8 @@ func use_all_moves():
 func reset_move():
     var stats = self.get_stats_with_modifiers()
     self.move = stats["max_move"]
-    self.spotlight.show()
+    self.set_side_material(self.base_material)
+    #self.spotlight.show()
 
 func replenish_moves():
     self.reset_move()
@@ -243,7 +257,8 @@ func get_armor():
     return stats["armor"]
 
 func remove_highlight():
-    $"mesh_anchor/activity_light".hide()
+    self.set_side_material(self.desaturated_material)
+    #$"mesh_anchor/activity_light".hide()
 
 
 func sfx_effect(name):
