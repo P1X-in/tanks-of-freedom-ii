@@ -6,13 +6,17 @@ This document describes the details for a classic, turn-baset strategy game, tha
 
 Certain level of backwards compatibility is meant to be preserved. This new game should be able to import ToF online shared maps. It is not expected to be able to share maps, that original ToF could use. Online cross-play between ToF and this game is considered, but is not a part of core requirements.
 
-Working title for the game is Tanks of Freedom 3-D, it is a subject to change, most likely based on it's story. Proposed title: *Tanks of Freedom - Liberum Gentem*
+Working title for the game is Tanks of Freedom 3-D, it is a subject to change, most likely based on it's story. 
+
+Proposed titles: 
+- *Tanks of Freedom - Liberum Gentem*
+- *Tanks of Freedom 2*
 
 
 ## World
-A fictional world of Libre populated by humans. It consists of one, big landmass and an archipelago of islands of varying sizes. Team Yellow is situated in a place suitable for trade routes and with a lot of resources. It borders with Team Blue and Team Red. It also borders with Team Green, which is situated on the archipelago.
+A fictional world of Libre populated by humans. It houses a big landmass called Lux Continent. Amber Noon is situated in a central place suitable for trade routes and with a lot of resources. It borders with Sapphire Dawn, Jade Twilight and Ruby Dusk.
 
-It is possible, there are other countries in this world, that are not part of the story, and could be used in the future.
+It is possible, there are other continents in this world, that are not part of the story, and could be used in the future.
 
 ### Sapphire Dawn (Team Blue)
 A democratic, capitalist nation that values business, ambition and freedom. In rivalry with Ruby Dusk.
@@ -25,7 +29,7 @@ An industrial nation, that values hard work and ingeniuity. In rivalry with Sapp
 Style: Steampunk
 
 ### Jade Twilight (Team Green)
-A peacful and prosperous nation, consisting of a federation of Islands. Values science and diplomacy. In good relations with everyone.
+A peacful and prosperous nation, consisting of a federation of smaller cultures. Values science and diplomacy. In good relations with everyone.
 
 Style: Futuristic
 
