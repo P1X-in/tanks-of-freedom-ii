@@ -8,6 +8,7 @@ onready var ui = $"ui"
 onready var audio = $"/root/SimpleAudioLibrary"
 onready var switcher = $"/root/SceneSwitcher"
 onready var match_setup = $"/root/MatchSetup"
+onready var settings = $"/root/Settings"
 
 var state = preload("res://scenes/board/logic/state.gd").new()
 var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").new()
@@ -116,7 +117,7 @@ func start_turn():
         if self.ui.cinematic_bars.is_extended:
             self.ui.hide_cinematic_bars()
 
-    if not self.state.is_current_player_ai():
+    if not self.state.is_current_player_ai() and self.settings.get_option("hq_cam"):
         self.map.move_camera_to_position(self.map.model.get_player_bunker_position(self.state.get_current_side()))
         yield(self.get_tree().create_timer(1), "timeout")
 

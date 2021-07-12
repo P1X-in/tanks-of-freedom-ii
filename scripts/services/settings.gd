@@ -9,6 +9,7 @@ var settings = {
     "fullscreen" : false,
     "sound" : true,
     "music" : true,
+    "hq_cam" : true,
 }
 
 
