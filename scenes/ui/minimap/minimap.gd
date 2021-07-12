@@ -94,7 +94,7 @@ func fill_minimap(map_name):
     for y in range(self.map_list_service.MAX_MAP_SIZE):
         for x in range(self.map_list_service.MAX_MAP_SIZE):
             key = str(x) + "_" + str(y)
-            if map_data["tiles"].has(key):
+            if map_data.has("tiles") and map_data["tiles"].has(key):
                 self.set_cell_from_data(x, y, map_data["tiles"][key])
             else:
                 self.set_cell_from_data(x, y, null)

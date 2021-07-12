@@ -41,6 +41,10 @@ window/size/width=1920
 window/size/height=1080
 window/vsync/use_vsync=false
 
+[global]
+
+tab=false
+
 [input]
 
 ui_up={
