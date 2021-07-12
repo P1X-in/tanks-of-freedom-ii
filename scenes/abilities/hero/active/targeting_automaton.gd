@@ -1,12 +1,5 @@
 extends "res://scenes/abilities/hero/active/active.gd"
 
-const TANK_TEMPLATES = [
-    "blue_tank",
-    "red_tank",
-    "green_tank",
-    "yellow_tank",
-]
-
 func _ready():
     self.label = "Targeting"
     self.label += "\n" + "Automaton"
@@ -18,9 +11,10 @@ func _execute(board, _position):
     for neighbour in source_tile.neighbours.values():
         if neighbour.has_friendly_unit(self.source.side):
             unit = neighbour.unit.tile
-            if unit.template_name in self.TANK_TEMPLATES:
+            if unit.unit_class == "tank":
                 unit.apply_modifier("attack_air", true)
-            else:
+                board.bless_a_tile(neighbour)
+            elif unit.unit_class != "rocket_artillery":
                 unit.apply_modifier("attack", 1)
-            board.bless_a_tile(neighbour)
+                board.bless_a_tile(neighbour)
 
