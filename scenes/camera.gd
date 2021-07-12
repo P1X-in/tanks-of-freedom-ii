@@ -7,6 +7,7 @@ const CAMERA_AXIS_X = JOY_ANALOG_RX
 const CAMERA_AXIS_Y = JOY_ANALOG_RY
 const CAMERA_AXIS_ZOOM_IN = JOY_ANALOG_L2
 const CAMERA_AXIS_ZOOM_OUT = JOY_ANALOG_R2
+const SHAKE_MAX_MAGNITUDE = 0.5
 
 
 const MODE_FREE = "free"
@@ -70,7 +71,11 @@ var camera_tof_zoom_start = null
 var camera_aw_zoom_start = null
 var camera_zoom_fraction = null
 
+var shakes_left = 0
+var last_shake_time = 0
+
 func _ready():
+    randomize()
     self.camera_pivot = $"pivot"
     self.camera_arm = $"pivot/arm"
     self.camera_lens = $"pivot/arm/lens"
@@ -142,6 +147,8 @@ func _process(delta):
 func _physics_process(delta):
     if self.paused:
         return
+
+    self._perform_shake(delta)
 
     self.process_free_camera_input(delta)
     self.process_tof_camera_input(delta)
@@ -306,3 +313,29 @@ func set_camera_zoom(fraction):
     self.camera_zoom_fraction = fraction
 
     return
+
+func shake():
+    self.shakes_left = 3
+    self.last_shake_time = 900.0
+
+func _perform_shake(delta):
+    var shake_offset = Vector2(0, 0)
+    self.last_shake_time += delta
+
+    if self.last_shake_time > 0.04:
+        self.last_shake_time = 0.0
+        if self.shakes_left > 0:
+            self.shakes_left -= 1
+            shake_offset.x = self.SHAKE_MAX_MAGNITUDE * rand_range(-1, 1)
+            shake_offset.y = self.SHAKE_MAX_MAGNITUDE * rand_range(-1, 1)
+
+        self._set_camera_translation(self.camera_lens, shake_offset)
+        self._set_camera_translation(self.camera_tof, shake_offset)
+        self._set_camera_translation(self.camera_aw, shake_offset)
+
+
+func _set_camera_translation(camera, offset):
+    var translation = camera.get_translation()
+    translation.x = offset.x
+    translation.y = offset.y
+    camera.set_translation(translation)

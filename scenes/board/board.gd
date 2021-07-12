@@ -373,29 +373,32 @@ func destroy_unit_on_tile(tile, skip_explosion=false):
 
     if not skip_explosion:
         self.explode_a_tile(tile, true)
+        self.collateral.generate_collateral(tile)
+        self.collateral.damage_tile(tile)
+
+        if self.settings.get_option("cam_shake"):
+            self.map.camera.shake()
     tile.unit.clear()
-    self.collateral.generate_collateral(tile)
-    self.collateral.damage_tile(tile)
 
 func explode_a_tile(tile, grab_sfx=false):
-    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile)
+    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile, 0.5)
     new_explosion.explode()
     if grab_sfx:
         new_explosion.grab_sfx_effect(tile.unit.tile)
 
 func smoke_a_tile(tile):
-    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile)
+    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile, 0.5)
     new_explosion.puff_some_smoke()
 
 func bless_a_tile(tile):
-    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile)
+    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile, 1.0)
     new_explosion.rain_bless()
 
 func heal_a_tile(tile):
-    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile)
+    var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile, 1.0)
     new_explosion.rain_heal()
 
-func _spawn_temporary_explosion_instance_on_tile(tile, free_delay=3):
+func _spawn_temporary_explosion_instance_on_tile(tile, free_delay=1.5):
     var position = self.map.map_to_world(tile.position)
     var new_explosion = self.explosion_template.instance()
     self.explosion_anchor.add_child(new_explosion)

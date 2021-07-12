@@ -10,6 +10,7 @@ var settings = {
     "sound" : true,
     "music" : true,
     "hq_cam" : true,
+    "cam_shake" : true,
 }
 
 
