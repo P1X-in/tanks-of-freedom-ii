@@ -6,7 +6,7 @@ const UNITS_SOFT_LIMIT = 10
 
 var action_template = preload("res://scenes/board/logic/ai/actions/use_ability_action.gd")
 
-func get_actions(entity_tile, enemy_buildings, enemy_units, _own_buildings, own_units, ap, _board):
+func get_actions(entity_tile, enemy_buildings, enemy_units, _own_buildings, own_units, ap, board):
     var spawn_points = self._get_spawn_points(entity_tile)
 
     if spawn_points.size() < 1:
@@ -18,12 +18,14 @@ func get_actions(entity_tile, enemy_buildings, enemy_units, _own_buildings, own_
     var building = entity_tile.building.tile
     var actions = []
     var action
+    var ability_cost
 
     var bonus = self._calculate_proximity_value_bonus(entity_tile, enemy_units, enemy_buildings)
     var units_stats = self._gather_unit_stats(own_units)
 
     for ability in building.abilities:
-        if ability.ap_cost <= ap:
+        ability_cost = board.abilities.get_modified_cost(ability.ap_cost, ability.template_name, building)
+        if ability_cost <= ap:
             action = self._create_ability_action(ability, self._select_random_spawn_point(spawn_points))
             action.value = self._calculate_value(action, bonus, units_stats, ap)
             actions.append(action)

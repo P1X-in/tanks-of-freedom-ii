@@ -6,6 +6,7 @@ const EXP_PER_LEVEL = 2
 onready var animations = $"animations"
 onready var spotlight = $"mesh_anchor/activity_light"
 onready var explosion = $"explosion"
+onready var level_star = $"voxel_star"
 
 export var side = "neutral"
 export var material_type = "normal"
@@ -204,6 +205,7 @@ func move_in_direction(direction):
 
 func stop_animations():
     self.animations.stop()
+    self.voxel_star.hide()
 
 func execute_move_callback():
     if self.move_finished_object != null:

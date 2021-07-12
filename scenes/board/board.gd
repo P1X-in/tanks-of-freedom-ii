@@ -102,7 +102,7 @@ func end_turn():
     if self.ui.radial.is_visible():
         self.toggle_radial_menu()
     self.unselect_tile()
-    self.remove_unit_hightlights()
+    #self.remove_unit_hightlights()
     self.state.switch_to_next_player()
     self.call_deferred("start_turn")
 
