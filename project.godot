@@ -29,6 +29,7 @@ SimpleAudioLibrary="*res://scripts/services/audio.gd"
 SceneSwitcher="*res://scripts/services/scene_switcher.gd"
 MatchSetup="*res://scripts/services/match_setup.gd"
 Settings="*res://scripts/services/settings.gd"
+Campaign="*res://scripts/services/campaign.gd"
 
 [debug]
 

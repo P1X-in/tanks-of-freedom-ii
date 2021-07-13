@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/ui/menu/campaign_selection.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ui/menu/campaign_tile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=3]
 
 [sub_resource type="Animation" id=1]
@@ -62,6 +63,8 @@ tracks/1/keys = {
 [node name="campaign_selection" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1.05945
+margin_right = 1.05945
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -87,6 +90,32 @@ __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
+
+[node name="campaign1" parent="widgets" instance=ExtResource( 2 )]
+
+[node name="campaign2" parent="widgets" instance=ExtResource( 2 )]
+margin_left = 620.0
+margin_right = 1160.0
+
+[node name="campaign3" parent="widgets" instance=ExtResource( 2 )]
+margin_top = 240.0
+margin_bottom = 420.0
+
+[node name="campaign4" parent="widgets" instance=ExtResource( 2 )]
+margin_left = 620.0
+margin_top = 240.0
+margin_right = 1160.0
+margin_bottom = 420.0
+
+[node name="campaign5" parent="widgets" instance=ExtResource( 2 )]
+margin_top = 440.0
+margin_bottom = 620.0
+
+[node name="campaign6" parent="widgets" instance=ExtResource( 2 )]
+margin_left = 620.0
+margin_top = 440.0
+margin_right = 1160.0
+margin_bottom = 620.0
 
 [node name="back_button" type="Button" parent="widgets"]
 margin_left = 550.0

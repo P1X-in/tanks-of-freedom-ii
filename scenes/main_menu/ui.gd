@@ -39,8 +39,10 @@ func show_settings():
 func hide_settings():
     self.settings.hide_panel()
 
-func show_campaign_selection():
+func show_campaign_selection(reset_page=false):
     self.campaign_selection.show_panel()
+    if reset_page:
+        self.campaign_selection.show_first_page()
 
 func hide_campaign_selection():
     self.campaign_selection.hide_panel()

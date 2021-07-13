@@ -1,0 +1,13 @@
+{
+    "name" : "core_prologue",
+    "title" : "Prologue",
+    "icon" : "book",
+    "missions" : [
+        {
+            "name" : "test",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [0, 0]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "name" : "core_sapphire_dawn",
+    "title" : "Sapphire Dawn",
+    "icon" : "blue_gem",
+    "prerequisite" : "core_prologue",
+    "missions" : [
+        {
+            "name" : "test",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [0, 0]
+        }
+    ]
+}

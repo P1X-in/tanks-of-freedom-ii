@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/gui/campaign/campaign_tile_frame.png" type="Texture" id=1]
+[ext_resource path="res://assets/gui/campaign/campaign_tile_pressed.png" type="Texture" id=2]
+[ext_resource path="res://assets/gui/campaign/campaign_tile_focused.png" type="Texture" id=3]
+[ext_resource path="res://assets/gui/campaign/campaign_tile_disabled.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=5]
+[ext_resource path="res://scenes/ui/menu/campaign_tile.gd" type="Script" id=6]
+[ext_resource path="res://scenes/ui/icons/tick.tscn" type="PackedScene" id=7]
+
+[node name="campaign" type="Control"]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 580.0
+margin_bottom = 220.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="icon_anchor" type="Control" parent="."]
+margin_left = 270.0
+margin_top = 60.0
+margin_right = 270.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -60.0
+margin_bottom = -1.52588e-05
+custom_fonts/font = ExtResource( 5 )
+text = "Campaign Name"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 510, 30 )
+
+[node name="button" type="TextureButton" parent="."]
+margin_right = 540.0
+margin_bottom = 180.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+texture_disabled = ExtResource( 4 )
+texture_focused = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="button" to="." method="_on_button_pressed"]

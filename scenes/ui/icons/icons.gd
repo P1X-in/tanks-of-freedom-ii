@@ -4,6 +4,8 @@ var back = preload("res://scenes/ui/icons/back.tscn")
 var trash = preload("res://scenes/ui/icons/trash.tscn")
 var tick = preload("res://scenes/ui/icons/tick.tscn")
 var star = preload("res://scenes/ui/icons/star.tscn")
+var info = preload("res://scenes/ui/icons/info.tscn")
+var book = preload("res://scenes/ui/icons/book.tscn")
 
 var deep_strike = preload("res://scenes/ui/icons/abilities/deep_strike.tscn")
 var infiltration = preload("res://scenes/ui/icons/abilities/infiltration.tscn")
@@ -24,12 +26,19 @@ var missile = preload("res://scenes/ui/icons/abilities/missile.tscn")
 var heavy_missile = preload("res://scenes/ui/icons/abilities/heavy_missile.tscn")
 var rapid_response = preload("res://scenes/ui/icons/abilities/rapid_response.tscn")
 
+var blue_gem = preload("res://scenes/ui/icons/nations/blue.tscn")
+var red_gem = preload("res://scenes/ui/icons/nations/red.tscn")
+var green_gem = preload("res://scenes/ui/icons/nations/green.tscn")
+var yellow_gem = preload("res://scenes/ui/icons/nations/yellow.tscn")
+
 var named_icons = {
     "disk" : self.disk,
     "back" : self.back,
     "trash" : self.trash,
     "tick" : self.tick,
     "star" : self.star,
+    "info" : self.info,
+    "book" : self.book,
 
     "deep_strike" : self.deep_strike,
     "infiltration" : self.infiltration,
@@ -49,7 +58,14 @@ var named_icons = {
     "missile" : self.missile,
     "heavy_missile" : self.heavy_missile,
     "rapid_response" : self.rapid_response,
+
+    "blue_gem" : self.blue_gem,
+    "red_gem" : self.red_gem,
+    "green_gem" : self.green_gem,
+    "yellow_gem" : self.yellow_gem,
 }
 
 func get_named_icon(name):
-    return self.named_icons[name].instance()
+    if self.named_icons.has(name):
+        return self.named_icons[name].instance()
+    return null

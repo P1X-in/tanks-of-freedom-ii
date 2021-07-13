@@ -47,6 +47,7 @@ var current_page = 0
 
 func _ready():
     self.connect_buttons()
+    self.set_process_input(false)  
 
 func _input(event):
     if event.is_action_pressed("ui_cancel"):

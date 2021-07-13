@@ -11,6 +11,9 @@ var main_menu
 func bind_menu(menu):
     self.main_menu = menu
 
+func _ready():
+    self.set_process_input(false)  
+    
 func _input(event):
     if event.is_action_pressed("ui_cancel"):
         self._on_back_button_pressed()
