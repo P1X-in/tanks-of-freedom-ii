@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/ui/menu/menu.gd" type="Script" id=1]
 
@@ -81,7 +81,6 @@ margin_left = -150.0
 margin_top = -110.0
 margin_right = 150.0
 margin_bottom = -70.0
-disabled = true
 text = "CAMPAIGN"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -126,6 +125,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[connection signal="pressed" from="campaign_button" to="." method="_on_campaign_button_pressed"]
 [connection signal="pressed" from="skirmish_button" to="." method="_on_skirmish_button_pressed"]
 [connection signal="pressed" from="editor_button" to="." method="_on_editor_button_pressed"]
 [connection signal="pressed" from="settings_button" to="." method="_on_settings_button_pressed"]

@@ -5,11 +5,13 @@ onready var logo = $"logo/logo_view"
 onready var picker = $"map_picker/picker"
 onready var skirmish = $"skirmish/skirmish"
 onready var settings = $"settings/settings"
+onready var campaign_selection = $"campaign_selection/campaign_selection"
 
 func bind_menu(main_menu):
     self.menu.bind_menu(main_menu)
     self.skirmish.bind_menu(main_menu)
     self.settings.bind_menu(main_menu)
+    self.campaign_selection.bind_menu(main_menu)
 
 func hide_menu():
     self.menu.hide_panel()
@@ -36,3 +38,9 @@ func show_settings():
 
 func hide_settings():
     self.settings.hide_panel()
+
+func show_campaign_selection():
+    self.campaign_selection.show_panel()
+
+func hide_campaign_selection():
+    self.campaign_selection.hide_panel()

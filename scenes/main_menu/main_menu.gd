@@ -59,3 +59,13 @@ func close_settings():
     self.ui.hide_settings()
     yield(self.get_tree().create_timer(0.2), "timeout")
     self.ui.show_menu()
+
+func open_campaign_selection():
+    self.ui.hide_menu()
+    yield(self.get_tree().create_timer(0.2), "timeout")
+    self.ui.show_campaign_selection()
+
+func close_campaign_selection():
+    self.ui.hide_campaign_selection()
+    yield(self.get_tree().create_timer(0.2), "timeout")
+    self.ui.show_menu()
