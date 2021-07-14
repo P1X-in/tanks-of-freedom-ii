@@ -1,0 +1,13 @@
+{
+    "name" : "dlc_test",
+    "title" : "DLC Test",
+    "icon" : "info",
+    "missions" : [
+        {
+            "name" : "test",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [0, 0]
+        }
+    ]
+}

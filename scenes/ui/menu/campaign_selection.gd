@@ -6,6 +6,8 @@ onready var audio = $"/root/SimpleAudioLibrary"
 onready var campaign = $"/root/Campaign"
 
 onready var animations = $"animations"
+onready var prev_button = $"widgets/prev_button"
+onready var next_button = $"widgets/next_button"
 
 onready var campaign_tiles = [
     $"widgets/campaign1",
@@ -37,6 +39,18 @@ func _input(event):
 func _on_back_button_pressed():
     self.audio.play("menu_click")
     self.main_menu.close_campaign_selection()
+
+func _on_prev_button_pressed():
+    self.audio.play("menu_click")
+    self._switch_to_page(self.page - 1)
+    if self._is_first_page():
+        self.campaign_tiles[0].focus_tile()
+
+func _on_next_button_pressed():
+    self.audio.play("menu_click")
+    self._switch_to_page(self.page + 1)
+    if self._is_last_page():
+        self.campaign_tiles[0].focus_tile()
 
 func show_panel():
     self.animations.play("show")
@@ -85,6 +99,7 @@ func _switch_to_page(page_no):
         else:
             self.campaign_tiles[index].hide()
         index += 1
+    self._manage_navigation()
 
 func _fill_tile(tile, manifest):
     tile.show()
@@ -96,6 +111,17 @@ func _fill_tile(tile, manifest):
             tile.set_locked(icon)
             return
 
-    tile.set_up(manifest["title"], icon)
+    tile.set_up(manifest["title"], icon, manifest["name"])
     if self.campaign.is_campaign_complete(manifest["name"]):
         tile.set_complete()
+
+func _manage_navigation():
+    if self._is_first_page():
+        self.prev_button.hide()
+    else:
+        self.prev_button.show()
+
+    if self._is_last_page():
+        self.next_button.hide()
+    else:
+        self.next_button.show()

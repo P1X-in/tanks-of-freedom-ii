@@ -2,6 +2,7 @@ extends Node
 
 const PROGRESS_FILE_PATH = "user://campaigns.json"
 const CORE_CAMPAIGNS_BASE_PATH = "res://assets/campaigns/"
+const CUSTOM_CAMPAIGNS_BASE_PATH = "campaign"
 const CAMPAIGN_MANIFEST = "/campaign.json"
 
 var filesystem = preload("res://scripts/services/filesystem.gd").new()
@@ -84,7 +85,17 @@ func _load_core_campaigns():
     
 
 func _load_custom_campaigns():
-    return
+    if self.filesystem.dir_exists(self.CUSTOM_CAMPAIGNS_BASE_PATH):
+        var dirs_found = self.filesystem.dir_list(self.CUSTOM_CAMPAIGNS_BASE_PATH)
+        var campaign_details
+
+        for dir_name in dirs_found:
+            campaign_details = self._load_campaign_details(self.CUSTOM_CAMPAIGNS_BASE_PATH + "/" + dir_name)
+            if campaign_details != null:
+                self.custom_campaigns.append(campaign_details)
+                self.custom_campaigns_by_name[dir_name] = campaign_details
+    else:
+        print("Custom dir not found " + self.CUSTOM_CAMPAIGNS_BASE_PATH)
 
 func _load_campaign_details(directory_path):
     var manifest_path = directory_path + self.CAMPAIGN_MANIFEST
