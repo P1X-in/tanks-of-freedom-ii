@@ -16,7 +16,7 @@ onready var cancel_button = $"widgets/cancel_button"
 onready var next_button = $"widgets/list_next"
 onready var prev_button = $"widgets/list_prev"
 
-onready var map_list_service = $"/root/MapList"
+onready var map_list_service = $"/root/MapManager"
 onready var gamepad_adapter = $"/root/GamepadAdapter"
 
 onready var map_selection_buttons = [
