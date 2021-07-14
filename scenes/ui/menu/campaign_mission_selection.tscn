@@ -1,0 +1,184 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/ui/menu/campaign_mission_selection.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/gui/campaign/lux_continent.png" type="Texture" id=3]
+[ext_resource path="res://scenes/ui/icons/arrow_left.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/ui/icons/arrow_right.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[node name="campaign_mission_selection" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+margin_left = -600.0
+margin_top = -350.0
+margin_right = 600.0
+margin_bottom = 350.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="widgets" type="Control" parent="."]
+margin_left = -600.0
+margin_top = -350.0
+margin_right = 600.0
+margin_bottom = 350.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="map" type="Sprite" parent="widgets"]
+position = Vector2( 600, 350 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="missions_anchor" type="Control" parent="widgets"]
+margin_left = 120.0
+margin_top = 107.0
+margin_right = 1080.0
+margin_bottom = 593.0
+rect_clip_content = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back_button" type="Button" parent="widgets"]
+margin_left = 550.0
+margin_top = 650.0
+margin_right = 650.0
+margin_bottom = 680.0
+custom_fonts/font = ExtResource( 2 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="prev_button" type="Button" parent="widgets"]
+margin_left = 40.0
+margin_top = 107.0
+margin_right = 120.0
+margin_bottom = 593.0
+custom_fonts/font = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="anchor" type="Control" parent="widgets/prev_button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="arrow_left" parent="widgets/prev_button/anchor" instance=ExtResource( 4 )]
+
+[node name="next_button" type="Button" parent="widgets"]
+margin_left = 1080.0
+margin_top = 107.0
+margin_right = 1160.0
+margin_bottom = 593.0
+custom_fonts/font = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="anchor" type="Control" parent="widgets/next_button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="arrow_right" parent="widgets/next_button/anchor" instance=ExtResource( 5 )]
+
+[node name="title" type="Label" parent="widgets"]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 1160.0
+margin_bottom = 105.0
+custom_fonts/font = ExtResource( 6 )
+text = "Campaign Title"
+align = 1
+valign = 1
+
+[node name="animations" type="AnimationPlayer" parent="."]
+playback_speed = 4.0
+anims/hide = SubResource( 1 )
+anims/show = SubResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="widgets/prev_button" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="widgets/next_button" to="." method="_on_next_button_pressed"]

@@ -70,8 +70,12 @@ func close_campaign_selection():
     yield(self.get_tree().create_timer(0.2), "timeout")
     self.ui.show_menu()
 
-func open_campaign_map(_campaign_name):
-    return
+func open_campaign_mission_selection(campaign_name):
+    self.ui.hide_campaign_selection()
+    yield(self.get_tree().create_timer(0.2), "timeout")
+    self.ui.show_campaign_mission_selection(campaign_name)
 
-func close_campaign_map():
-    return
+func close_campaign_mission_selection():
+    self.ui.hide_campaign_mission_selection()
+    yield(self.get_tree().create_timer(0.2), "timeout")
+    self.ui.show_campaign_selection()

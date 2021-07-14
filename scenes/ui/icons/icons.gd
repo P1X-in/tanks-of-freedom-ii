@@ -6,6 +6,8 @@ var tick = preload("res://scenes/ui/icons/tick.tscn")
 var star = preload("res://scenes/ui/icons/star.tscn")
 var info = preload("res://scenes/ui/icons/info.tscn")
 var book = preload("res://scenes/ui/icons/book.tscn")
+var arrow_left = preload("res://scenes/ui/icons/arrow_left.tscn")
+var arrow_right = preload("res://scenes/ui/icons/arrow_right.tscn")
 
 var deep_strike = preload("res://scenes/ui/icons/abilities/deep_strike.tscn")
 var infiltration = preload("res://scenes/ui/icons/abilities/infiltration.tscn")
@@ -39,6 +41,8 @@ var named_icons = {
     "star" : self.star,
     "info" : self.info,
     "book" : self.book,
+    "arrow_left" : self.arrow_left,
+    "arrow_right" : self.arrow_right,
 
     "deep_strike" : self.deep_strike,
     "infiltration" : self.infiltration,

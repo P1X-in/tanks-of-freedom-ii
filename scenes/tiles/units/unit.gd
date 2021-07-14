@@ -205,7 +205,7 @@ func move_in_direction(direction):
 
 func stop_animations():
     self.animations.stop()
-    self.voxel_star.hide()
+    self.level_star.hide()
 
 func execute_move_callback():
     if self.move_finished_object != null:

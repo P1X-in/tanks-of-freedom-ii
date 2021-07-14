@@ -40,9 +40,10 @@ func _set_icon(icon):
 
     if icon != null:
         self.icon_anchor.add_child(icon)
-        icon.set_scale(Vector2(2, 2))
+        #icon.set_scale(Vector2(2, 2))
         self.attached_icon = icon
 
 func _on_button_pressed():
     self.audio.play("menu_click")
-    self.main_menu.open_campaign_map(self.campaign_name)
+    self.main_menu.open_campaign_mission_selection(self.campaign_name)
+    self.main_menu.ui.campaign_selection.last_campaign_tile_clicked = self

@@ -23,6 +23,8 @@ var icons = preload("res://scenes/ui/icons/icons.gd").new()
 var main_menu
 var page = 0
 
+var last_campaign_tile_clicked = null
+
 func bind_menu(menu):
     self.main_menu = menu
 
@@ -56,7 +58,7 @@ func show_panel():
     self.animations.play("show")
     self.set_process_input(true)
     yield(self.get_tree().create_timer(0.1), "timeout")
-    self.campaign_tiles[0].focus_tile()
+    self.restore_focus()
 
 func hide_panel():
     self.animations.play("hide")
@@ -125,3 +127,10 @@ func _manage_navigation():
         self.next_button.hide()
     else:
         self.next_button.show()
+
+func restore_focus():
+    if self.last_campaign_tile_clicked != null:
+        self.last_campaign_tile_clicked.focus_tile()
+        self.last_campaign_tile_clicked = null
+    else:
+        self.campaign_tiles[0].focus_tile()
