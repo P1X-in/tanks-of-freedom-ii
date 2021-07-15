@@ -577,6 +577,11 @@ func shoot_projectile(source_tile, destination_tile, tween_time=0.5):
     var position = self.map.map_to_world(destination_tile.position)
     new_projectile.shoot_at_position(Vector3(position.x, 0, position.z), tween_time)
 
+func lob_projectile(source_tile, destination_tile, tween_time=0.5):
+    var new_projectile = self._spawn_temporary_projectile_instance_on_tile(source_tile)
+    var position = self.map.map_to_world(destination_tile.position)
+    new_projectile.lob_at_position(Vector3(position.x, 0, position.z), tween_time)
+
 func _spawn_temporary_projectile_instance_on_tile(tile):
     var position = self.map.map_to_world(tile.position)
     var new_projectile = self.projectile_template.instance()

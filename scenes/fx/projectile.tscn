@@ -25,9 +25,10 @@ tracks/0/keys = {
 script = ExtResource( 3 )
 
 [node name="pivot" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
 [node name="mesh" type="MeshInstance" parent="pivot"]
-transform = Transform( 0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 1, 0 )
+transform = Transform( 0.999999, -1.74845e-07, 0, 1.74845e-07, 0.999999, 0, 0, 0, 1, 0, 0, 0 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
 
@@ -36,3 +37,7 @@ autoplay = "rotate"
 anims/rotate = SubResource( 1 )
 
 [node name="tween" type="Tween" parent="."]
+
+[node name="tween2" type="Tween" parent="."]
+
+[node name="tween3" type="Tween" parent="."]

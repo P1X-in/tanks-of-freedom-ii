@@ -41,6 +41,7 @@ func _gather_ability_actions(entity_tile, ap, board):
             for target_tile in targets_in_range:
                 action = self._ability_action(ability, target_tile)
                 ability.active_source_tile = entity_tile
+                action.delay = 0.5
                 action.value = target_tile.unit.tile.unit_value
                 actions.append(action)
 

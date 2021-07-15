@@ -1,5 +1,7 @@
 extends "res://scenes/abilities/unit/active.gd"
 
+const TWEEN_TIME = 0.5
+
 export var damage = 10
 export var min_level = 0
 export var max_level = 3
@@ -7,7 +9,12 @@ export var max_level = 3
 func _execute(board, position):
     var tile = board.map.model.get_tile(position)
     self.source.sfx_effect("attack")
+
+    board.smoke_a_tile(self.active_source_tile)
+    board.lob_projectile(self.active_source_tile, tile, self.TWEEN_TIME)
+    yield(self.get_tree().create_timer(self.TWEEN_TIME), "timeout")
     
+    tile.unit.tile.sfx_effect("damage")
     tile.unit.tile.receive_damage(self.damage)
     if not tile.unit.tile.is_alive():
         var unit_id = tile.unit.tile.get_instance_id()
