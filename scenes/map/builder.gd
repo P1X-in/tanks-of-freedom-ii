@@ -168,25 +168,25 @@ func clear_tile_layer(position):
     var tile = self.map.model.get_tile(position)
 
     if tile.unit.is_present():
-        self._notify_removal(tile.unit, position, self.map.builder.CLASS_UNIT, tile.unit.tile.side)
+        self._notify_removal(tile.unit, position, self.map.builder.CLASS_UNIT, tile.unit.tile.side, {}, false)
         tile.unit.clear()
     elif tile.building.is_present():
-        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side, {}, false)
         tile.building.clear()
     elif tile.terrain.is_present():
-        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
+        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN, null, {}, false)
         tile.terrain.clear()
     elif tile.decoration.is_present():
-        self._notify_removal(tile.decoration, position, self.map.builder.CLASS_DECORATION)
+        self._notify_removal(tile.decoration, position, self.map.builder.CLASS_DECORATION, null, {}, false)
         tile.decoration.clear()
     elif tile.damage.is_present():
-        self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
+        self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE, null, {}, false)
         tile.damage.clear()
     elif tile.frame.is_present():
-        self._notify_removal(tile.frame, position, self.map.builder.CLASS_FRAME)
+        self._notify_removal(tile.frame, position, self.map.builder.CLASS_FRAME, null, {}, false)
         tile.frame.clear()
     elif tile.ground.is_present():
-        self._notify_removal(tile.ground, position, self.map.builder.CLASS_GROUND)
+        self._notify_removal(tile.ground, position, self.map.builder.CLASS_GROUND, null, {}, false)
         tile.ground.clear()
 
 func wipe_tile(position):
@@ -257,7 +257,7 @@ func set_unit_side(position, new_side):
         tile.unit.tile.set_side(new_side)
         tile.unit.tile.set_side_materials(self.map.templates.get_side_material(new_side, material_type), self.map.templates.get_side_material_desat(new_side, material_type))
 
-func _notify_removal(tile_fragment, position, tile_class, side=null, modifiers=null):
+func _notify_removal(tile_fragment, position, tile_class, side=null, modifiers=null, double=true):
     if self.editor != null:
         self.editor.notify_about_removal({
             "type" : "remove",
@@ -267,4 +267,5 @@ func _notify_removal(tile_fragment, position, tile_class, side=null, modifiers=n
             "rotation" : tile_fragment.tile.current_rotation,
             "side" : side,
             "modifiers" : modifiers,
+            "double" : double
         })

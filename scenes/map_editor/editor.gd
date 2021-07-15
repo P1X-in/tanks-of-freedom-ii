@@ -100,8 +100,6 @@ func autosave():
 
 
 func place_tile():
-    self._place_tile(self.selected_class, self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
-
     self.actions_history.append({
         "type" : "add",
         "class" : self.selected_class,
@@ -109,6 +107,7 @@ func place_tile():
         "tile" : self.selected_tile,
         "rotation" : self.tile_rotation,
     })
+    self._place_tile(self.selected_class, self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
     self.autosave()
 
 func _place_tile(tile_class, position, tile_type, _tile_rotation):
@@ -156,6 +155,8 @@ func undo_action():
                 "hero":
                     tile.unit.clear()
         elif recent_action["type"] == "remove":
+            if recent_action["double"]:
+                self.undo_action()
             self._place_tile(recent_action["class"], recent_action["position"], recent_action["tile"], recent_action["rotation"])
             match recent_action["class"]:
                 "building":
