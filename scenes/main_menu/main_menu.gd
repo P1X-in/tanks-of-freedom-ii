@@ -5,6 +5,7 @@ onready var ui = $"ui"
 onready var audio = $"/root/SimpleAudioLibrary"
 onready var switcher = $"/root/SceneSwitcher"
 onready var gamepad_adapter = $"/root/GamepadAdapter"
+onready var match_setup = $"/root/MatchSetup"
 
 func _ready():
     self.map.loader.load_map_file("main_menu_bg", "bundle")
@@ -13,6 +14,9 @@ func _ready():
     self.audio.track("menu")
     self.gamepad_adapter.enable()
     self.ui.bind_menu(self)
+
+    if self.match_setup.campaign_win:
+        self.reopen_campaign_mission_selection_after_win()
 
 func _setup_camera():
     self.map.camera.paused = true
@@ -89,3 +93,10 @@ func close_campaign_mission():
     self.ui.hide_campaign_mission()
     yield(self.get_tree().create_timer(0.2), "timeout")
     self.ui.show_campaign_mission_selection()
+
+func reopen_campaign_mission_selection_after_win():
+    self.match_setup.campaign_win = false
+    self.ui.hide_menu()
+    self.ui.campaign_selection.show_first_page()
+    yield(self.get_tree().create_timer(0.2), "timeout")
+    self.ui.show_campaign_mission_selection(self.match_setup.campaign_name)

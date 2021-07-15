@@ -48,18 +48,16 @@ func get_campaign_progress(campaign_name):
         return self.campaign_progress[campaign_name]["progress"]
     return 0
 
-func update_campaign_progress(campaign_name, scenario_name):
+func update_campaign_progress(campaign_name, mission_no):
     if not self.campaign_progress.has(campaign_name):
         self.campaign_progress[campaign_name] = {
             "progress" : 0,
             "complete" : false,
         }
 
-    var progress = self._get_scenario_index(campaign_name, scenario_name)
-
-    if progress > self.campaign_progress[campaign_name]["progress"]:
-        self.campaign_progress[campaign_name]["progress"] = progress
-        self.campaign_progress[campaign_name]["complete"] = self._is_last_scenario(campaign_name, scenario_name)
+    if mission_no + 1 > self.campaign_progress[campaign_name]["progress"]:
+        self.campaign_progress[campaign_name]["progress"] = mission_no + 1
+        self.campaign_progress[campaign_name]["complete"] = self._is_last_scenario(campaign_name, mission_no)
 
     self._save_campaign_progress()
 
@@ -138,11 +136,23 @@ func _search_manifest_for_scenario_index(manifest, scenario_name):
 
     return 0
 
-func _is_last_scenario(campaign_name, scenario_name):
-    var index = self._get_scenario_index(campaign_name, scenario_name)
-
+func _is_last_scenario(campaign_name, mission_no):
     var manifest = self.get_campaign(campaign_name)
     if manifest == null:
         return false
 
-    return index == manifest["missions"].size()
+    return mission_no + 1 == manifest["missions"].size()
+
+func _get_campaign_path(campaign_name):
+    if self.core_campaigns_by_name.has(campaign_name):
+        return self.CORE_CAMPAIGNS_BASE_PATH + campaign_name
+    elif self.custom_campaigns_by_name.has(campaign_name):
+        return self.CUSTOM_CAMPAIGNS_BASE_PATH + "/" + campaign_name
+    return null
+
+func get_campaign_mission_map(campaign_name, mission_no):
+    var manifest = self.get_campaign(campaign_name)
+    var map_path = self._get_campaign_path(campaign_name) + "/maps/" + manifest["missions"][mission_no]["map"]
+    if self.filesystem.file_exists(map_path):
+        return self.filesystem.read_json_from_file(map_path)
+    return null

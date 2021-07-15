@@ -5,6 +5,7 @@ const GROUND_HEIGHT = 4
 
 onready var tile_box = $"tiles/tile_box"
 onready var camera = $"camera"
+onready var campaign = $"/root/Campaign"
 
 var tile_box_space_size
 var camera_tile_position = Vector2(0, 0)

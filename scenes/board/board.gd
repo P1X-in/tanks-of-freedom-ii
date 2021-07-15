@@ -9,6 +9,7 @@ onready var audio = $"/root/SimpleAudioLibrary"
 onready var switcher = $"/root/SceneSwitcher"
 onready var match_setup = $"/root/MatchSetup"
 onready var settings = $"/root/Settings"
+onready var campaign = $"/root/Campaign"
 
 var state = preload("res://scenes/board/logic/state.gd").new()
 var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").new()
@@ -36,19 +37,8 @@ var explosion_template = preload("res://scenes/fx/explosion.tscn")
 var ending_turn_in_progress = false
 
 func _ready():
-    self.load_map(self.match_setup.map_name)
+    self.set_up_map()
     self.set_up_board()
-    self.setup_radial_menu()
-
-    var index = 0
-    for player_setup in self.match_setup.setup:
-        if player_setup["side"] != self.map.templates.PLAYER_NEUTRAL:
-            self.state.add_player(player_setup["type"], player_setup["side"])
-            self.state.add_player_ap(index, player_setup["ap"])
-            index += 1
-
-    self.state.register_heroes(self.map.model)
-
     self.start_turn()
 
 func _input(event):
@@ -92,10 +82,25 @@ func hover_tile():
             self.path_markers.draw_path(path)
             
 
+func set_up_map():
+    if self.match_setup.campaign_name != null:
+        self.load_campaign_map()
+    else:
+        self.load_skirmish_map()
 
 func set_up_board():
     self.audio.track("soundtrack_1")
     self.scripting.ingest_scripts(self, self.map.model.scripts)
+    self.setup_radial_menu()
+
+    var index = 0
+    for player_setup in self.match_setup.setup:
+        if player_setup["side"] != self.map.templates.PLAYER_NEUTRAL:
+            self.state.add_player(player_setup["type"], player_setup["side"])
+            self.state.add_player_ap(index, player_setup["ap"])
+            index += 1
+
+    self.state.register_heroes(self.map.model)
 
 
 func end_turn():
@@ -199,8 +204,11 @@ func cancel_ability():
     self.ability_markers.reset()
 
 
-func load_map(map_name):
-    self.map.loader.load_map_file(map_name)
+func load_skirmish_map():
+    self.map.loader.load_map_file(self.match_setup.map_name)
+
+func load_campaign_map():
+    self.map.loader.load_campaign_map(self.match_setup.campaign_name, self.match_setup.mission_no)
 
 
 func update_for_current_player():
@@ -524,6 +532,7 @@ func end_game(winner):
     self.ai.abort()
     self.ui.hide_resource()
     self.ui.clear_tile_highlight()
+    self._signal_winner(winner)
     self.ui.show_summary(winner)
 
 func start_ending_turn():
@@ -556,3 +565,7 @@ func destroy_explosion_with_delay(explosion_object, delay):
     yield(self.get_tree().create_timer(delay), "timeout")
     explosion_object.queue_free()
 
+func _signal_winner(winning_side):
+    if self.state.is_player_human(winning_side):
+        self.campaign.update_campaign_progress(self.match_setup.campaign_name, self.match_setup.mission_no)
+        self.match_setup.campaign_win = true

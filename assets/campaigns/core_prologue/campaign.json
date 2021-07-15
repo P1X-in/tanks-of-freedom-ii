@@ -6,14 +6,26 @@
         {
             "name" : "another_excercise",
             "title" : "Just another excercise",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [420, 90]
+            "map" : "yellow_win.tofmap.json",
+            "description" : "A fresh company of soldiers receives new orders from Warlord Grim about their next training excercise. Though not everyghing seems to be as it should about this one...",
+            "marker" : [420, 90],
+            "players": [
+                {
+                    "side" : "yellow",
+                    "ap" : 50,
+                    "type" : "human"
+                },
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
         },
         {
             "name" : "border_inspection",
             "title" : "Border inspection",
-            "map" : "crossroad.tofmap.json",
+            "map" : "yellow_win.tofmap.json",
             "description" : "Lorem ipsum",
             "marker" : [458, 150]
         }

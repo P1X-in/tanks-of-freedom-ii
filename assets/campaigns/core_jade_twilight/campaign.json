@@ -1,6 +1,6 @@
 {
     "name" : "core_jade_twilight",
-    "title" : "Jade Twilight",
+    "title" : "Hard diplomacy",
     "icon" : "green_gem",
     "prerequisite" : "not_unlockable_at_the_moment",
     "missions" : [
