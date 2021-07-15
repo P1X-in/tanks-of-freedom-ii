@@ -33,6 +33,7 @@ onready var explosion_anchor = $"marker_anchor"
 onready var explosion = $"marker_anchor/explosion"
 
 var explosion_template = preload("res://scenes/fx/explosion.tscn")
+var projectile_template = preload("res://scenes/fx/projectile.tscn")
 
 var ending_turn_in_progress = false
 
@@ -454,6 +455,7 @@ func activate_ability(args):
         self.reset_unit_markers()
         self.active_ability = ability
         self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
+        ability.active_source_tile = self.selected_tile
 
 func execute_active_ability(tile):
     self.abilities.execute_ability(self.active_ability, tile)
@@ -569,3 +571,16 @@ func destroy_explosion_with_delay(explosion_object, delay):
 func _signal_winner(winning_side):
     if self.state.is_player_human(winning_side):
         self.campaign.update_campaign_progress(self.match_setup.campaign_name, self.match_setup.mission_no)
+
+func shoot_projectile(source_tile, destination_tile, tween_time=0.5):
+    var new_projectile = self._spawn_temporary_projectile_instance_on_tile(source_tile)
+    var position = self.map.map_to_world(destination_tile.position)
+    new_projectile.shoot_at_position(Vector3(position.x, 0, position.z), tween_time)
+
+func _spawn_temporary_projectile_instance_on_tile(tile):
+    var position = self.map.map_to_world(tile.position)
+    var new_projectile = self.projectile_template.instance()
+    self.explosion_anchor.add_child(new_projectile)
+    new_projectile.set_translation(Vector3(position.x, 0, position.z))
+
+    return new_projectile

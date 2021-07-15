@@ -27,6 +27,7 @@ func get_actions(entity_tile, enemy_buildings, enemy_units, _own_buildings, own_
         ability_cost = board.abilities.get_modified_cost(ability.ap_cost, ability.template_name, building)
         if ability_cost <= ap:
             action = self._create_ability_action(ability, self._select_random_spawn_point(spawn_points))
+            ability.active_source_tile = entity_tile
             action.value = self._calculate_value(action, bonus, units_stats, ap)
             actions.append(action)
 

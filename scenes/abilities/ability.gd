@@ -7,6 +7,7 @@ export var label = ""
 export var ap_cost = 0
 export var cooldown = 0
 var source = null
+var active_source_tile = null
 var cd_turns_left = 0
 var disabled = false
 

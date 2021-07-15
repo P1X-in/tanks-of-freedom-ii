@@ -1,11 +1,17 @@
 extends "res://scenes/abilities/unit/active.gd"
 
+const TWEEN_TIME = 0.1
+
 export var damage = 8
 
 func _execute(board, position):
     var tile = board.map.model.get_tile(position)
     self.source.sfx_effect("attack")
+
+    board.shoot_projectile(self.active_source_tile, tile, self.TWEEN_TIME)
+    yield(self.get_tree().create_timer(self.TWEEN_TIME), "timeout")
     
+    tile.unit.tile.sfx_effect("damage")
     tile.unit.tile.receive_damage(self.damage)
     if not tile.unit.tile.is_alive():
         var unit_id = tile.unit.tile.get_instance_id()
