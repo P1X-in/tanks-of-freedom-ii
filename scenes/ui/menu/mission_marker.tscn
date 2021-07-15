@@ -18,7 +18,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 200, 50 ), Vector2( 0, 50 ) ]
+"values": [ Vector2( 400, 50 ), Vector2( 0, 50 ) ]
 }
 
 [sub_resource type="Animation" id=1]
@@ -34,7 +34,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 50 ), Vector2( 200, 50 ) ]
+"values": [ Vector2( 0, 50 ), Vector2( 400, 50 ) ]
 }
 
 [node name="mission_marker" type="Control"]

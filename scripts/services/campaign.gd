@@ -9,7 +9,7 @@ var filesystem = preload("res://scripts/services/filesystem.gd").new()
 
 var campaign_progress = {
     "tutorial" : {
-        "progress" : 1,
+        "progress" : 4,
         "complete" : true,
     }
 }

@@ -6,6 +6,7 @@
     "missions" : [
         {
             "name" : "test",
+            "title" : "Test",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
             "marker" : [0, 0]

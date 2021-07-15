@@ -109,12 +109,24 @@ __meta__ = {
 }
 
 [node name="back_button" type="Button" parent="widgets"]
-margin_left = 550.0
+margin_left = 450.0
 margin_top = 650.0
-margin_right = 650.0
+margin_right = 550.0
 margin_bottom = 680.0
 custom_fonts/font = ExtResource( 2 )
 text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="select_button" type="Button" parent="widgets"]
+margin_left = 650.0
+margin_top = 650.0
+margin_right = 750.0
+margin_bottom = 680.0
+custom_fonts/font = ExtResource( 2 )
+text = "Select"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
@@ -125,6 +137,7 @@ margin_left = 40.0
 margin_top = 107.0
 margin_right = 120.0
 margin_bottom = 593.0
+focus_neighbour_right = NodePath("../next_button")
 custom_fonts/font = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -147,6 +160,7 @@ margin_left = 1080.0
 margin_top = 107.0
 margin_right = 1160.0
 margin_bottom = 593.0
+focus_neighbour_left = NodePath("../prev_button")
 custom_fonts/font = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -180,5 +194,6 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="widgets/select_button" to="." method="_on_select_button_pressed"]
 [connection signal="pressed" from="widgets/prev_button" to="." method="_on_prev_button_pressed"]
 [connection signal="pressed" from="widgets/next_button" to="." method="_on_next_button_pressed"]

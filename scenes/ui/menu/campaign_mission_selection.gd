@@ -5,6 +5,7 @@ onready var campaign = $"/root/Campaign"
 
 onready var animations = $"animations"
 onready var back_button = $"widgets/back_button"
+onready var select_button = $"widgets/select_button"
 onready var prev_button = $"widgets/prev_button"
 onready var next_button = $"widgets/next_button"
 
@@ -14,10 +15,10 @@ onready var mission_anchor = $"widgets/missions_anchor"
 var main_menu
 
 var manifest
-var selected_mission = 0
 
 var mission_marker_template = preload("res://scenes/ui/menu/mission_marker.tscn")
 var mission_markers = []
+var selected_mission = 0
 
 func bind_menu(menu):
     self.main_menu = menu
@@ -35,15 +36,24 @@ func _on_back_button_pressed():
 
 func _on_prev_button_pressed():
     self.audio.play("menu_click")
+    self._select_marker(self.selected_mission - 1)
+    if self._is_first_mission():
+        self.next_button.grab_focus()
 
 func _on_next_button_pressed():
+    self.audio.play("menu_click")
+    self._select_marker(self.selected_mission + 1)
+    if self._is_last_mission():
+        self.prev_button.grab_focus()
+
+func _on_select_button_pressed():
     self.audio.play("menu_click")
 
 func show_panel():
     self.animations.play("show")
     self.set_process_input(true)
     yield(self.get_tree().create_timer(0.1), "timeout")
-    self.back_button.grab_focus()
+    self.select_button.grab_focus()
 
 func hide_panel():
     self.animations.play("hide")
@@ -59,6 +69,7 @@ func load_campaign(campaign_name):
 
     self.title.set_text(manifest["title"])
     self._add_mission_markers(manifest["missions"])
+    self._select_latest_mission()
 
 func _add_mission_markers(missions):
     var index = 1
@@ -86,5 +97,43 @@ func clear_markers():
         marker.queue_free()
     self.mission_markers = []
 
-func select_first_mission():
-    return
+func _select_latest_mission():
+    if self.campaign.is_campaign_complete(self.manifest["name"]):
+        self._select_marker(0)
+        return
+
+    var campaign_progress = self.campaign.get_campaign_progress(self.manifest["name"])
+
+    if campaign_progress > self.mission_markers.size():
+        campaign_progress = self.mission_markers.size() - 1
+
+    self._select_marker(campaign_progress)
+
+
+func _select_marker(marker_no):
+    if self.selected_mission != marker_no:
+        self.mission_markers[self.selected_mission].hide_panel()
+
+    self.selected_mission = marker_no
+    self.mission_markers[self.selected_mission].show_panel()
+    self.mission_markers[self.selected_mission].raise()
+    self._manage_navigation()
+
+func _manage_navigation():
+    if self._is_first_mission():
+        self.prev_button.hide()
+    else:
+        self.prev_button.show()
+
+    if self._is_last_mission():
+        self.next_button.hide()
+    else:
+        self.next_button.show()
+
+func _is_first_mission():
+    return self.selected_mission == 0
+
+func _is_last_mission():
+    var campaign_progress = self.campaign.get_campaign_progress(self.manifest["name"])
+    return self.selected_mission == campaign_progress or self.selected_mission == self.mission_markers.size() - 1
+
