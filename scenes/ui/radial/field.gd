@@ -41,6 +41,9 @@ func set_disabled(cooldown=null):
     else:
         self.cd_label.set_text("")
 
+func clear_disabled():
+    self.disabled.hide()
+
 func clear():
     if self.icon != null:
         self.icon.queue_free()

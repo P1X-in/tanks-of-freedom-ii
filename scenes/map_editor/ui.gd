@@ -80,6 +80,9 @@ func close_all_popups():
     if self.picker.is_visible():
         self.hide_picker()
 
+func is_radial_open():
+    return self.radial.is_visible()
+    
 func is_popup_open():
     if self.picker.is_visible():
         return true

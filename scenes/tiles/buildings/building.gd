@@ -15,6 +15,7 @@ var abilities = []
 func get_dict():
     var new_dict = .get_dict()
     new_dict["side"] = self.side
+    new_dict["abilities"] = self._get_abilities_status()
     
     return new_dict
 
@@ -34,4 +35,18 @@ func sfx_effect(name):
     var audio_player = self.get_node_or_null("audio/" + name)
     if audio_player != null:
         audio_player.play()
-   
+
+func _get_abilities_status():
+    var status = {}
+
+    for ability in self.abilities:
+        status["ability" + str(ability.index)] = ability.disabled
+
+    return status
+
+func restore_abilities_status(status):
+    var key
+    for ability in self.abilities:
+        key = "ability" + str(ability.index)
+        if status.has(key):
+            ability.disabled = status[key]

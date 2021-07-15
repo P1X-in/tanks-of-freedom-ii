@@ -63,6 +63,9 @@ func set_field(icon, new_label, index, new_bound_object=null, new_bound_method=n
 func set_field_disabled(index, cooldown=null):
     self.fields[index].set_disabled(cooldown)
 
+func clear_field_disabled(index):
+    self.fields[index].clear_disabled()
+
 func clear_fields():
     for field in self.fields:
         field.clear()

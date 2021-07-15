@@ -49,7 +49,7 @@ func place_decoration(position, name, rotation):
         self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
     if tile.building.is_present():
-        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side, tile.building.tile._get_abilities_status())
         tile.building.clear()
     if tile.damage.is_present():
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
@@ -69,7 +69,7 @@ func place_damage(position, name, rotation):
         self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
     if tile.building.is_present():
-        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side, tile.building.tile._get_abilities_status())
         tile.building.clear()
     if tile.damage.is_present():
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
@@ -92,7 +92,7 @@ func place_terrain(position, name, rotation):
         self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
     if tile.building.is_present():
-        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side, tile.building.tile._get_abilities_status())
         tile.building.clear()
     if tile.damage.is_present():
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
@@ -115,7 +115,7 @@ func place_building(position, name, rotation, side=null):
         self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
     if tile.building.is_present():
-        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side, tile.building.tile._get_abilities_status())
         tile.building.clear()
     if tile.damage.is_present():
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
@@ -138,7 +138,7 @@ func place_unit(position, name, rotation, side=null):
         self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
     if tile.building.is_present():
-        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side, tile.building.tile._get_abilities_status())
         tile.building.clear()
 
     var new_unit = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_units_anchor, tile.unit)
@@ -171,7 +171,7 @@ func clear_tile_layer(position):
         self._notify_removal(tile.unit, position, self.map.builder.CLASS_UNIT, tile.unit.tile.side, {}, false)
         tile.unit.clear()
     elif tile.building.is_present():
-        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side, {}, false)
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side, tile.building.tile._get_abilities_status(), false)
         tile.building.clear()
     elif tile.terrain.is_present():
         self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN, null, {}, false)
@@ -235,6 +235,8 @@ func place_tile(tile_id, tile_data):
 
     if tile_data["building"]["tile"] != null:
         self.place_building(tile.position, tile_data["building"]["tile"], tile_data["building"]["rotation"], tile_data["building"]["side"])
+        if tile_data["building"].has("abilities"):
+            tile.building.tile.restore_abilities_status(tile_data["building"]["abilities"])
 
     if tile_data["unit"]["tile"] != null:
         self.place_unit(tile.position, tile_data["unit"]["tile"], tile_data["unit"]["rotation"], tile_data["unit"]["side"])
@@ -257,7 +259,7 @@ func set_unit_side(position, new_side):
         tile.unit.tile.set_side(new_side)
         tile.unit.tile.set_side_materials(self.map.templates.get_side_material(new_side, material_type), self.map.templates.get_side_material_desat(new_side, material_type))
 
-func _notify_removal(tile_fragment, position, tile_class, side=null, modifiers=null, double=true):
+func _notify_removal(tile_fragment, position, tile_class, side=null, modifiers={}, double=true):
     if self.editor != null:
         self.editor.notify_about_removal({
             "type" : "remove",

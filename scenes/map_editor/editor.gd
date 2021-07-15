@@ -10,6 +10,7 @@ onready var audio = $"/root/SimpleAudioLibrary"
 onready var switcher = $"/root/SceneSwitcher"
 
 var rotations = preload("res://scenes/map_editor/rotations.gd").new()
+var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").new()
 
 var tile_rotation = 0
 var selected_tile = "ground_grass"
@@ -82,6 +83,10 @@ func _input(event):
 
         if event.is_action_pressed("ui_cancel"):
             self.undo_action()
+            self.audio.play("menu_click")
+
+        if event.is_action_pressed("editor_ban_menu"):
+            self._open_ability_ban_menu()
             self.audio.play("menu_click")
     else:
         if self.ui.radial.is_visible() and not self.ui.is_popup_open():
@@ -161,6 +166,7 @@ func undo_action():
             match recent_action["class"]:
                 "building":
                     self.map.builder.set_building_side(recent_action["position"], recent_action["side"])
+                    tile.building.tile.restore_abilities_status(recent_action["modifiers"])
                 "unit":
                     self.map.builder.set_unit_side(recent_action["position"], recent_action["side"])
                 "hero":
@@ -227,16 +233,27 @@ func switch_to_next_type():
     self.select_tile(first_tile, type_map["next"])
 
 
-func toggle_radial_menu():
+func toggle_radial_menu(context_object=null):
+    if self.radial_abilities.is_object_without_abilities(self, context_object):
+        return
+
+    if not self.ui.is_radial_open():
+        self.setup_radial_menu(context_object)
+    else:
+        self.map.camera.force_stick_reset()
+
     self.ui.toggle_radial()
     self.map.camera.paused = not self.map.camera.paused
     self.map.tile_box.set_visible(not self.map.tile_box.is_visible())
 
-func setup_radial_menu():
-    self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load map", 2, self, "open_picker")
-    self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, self.switcher, "main_menu")
-    self.ui.radial.set_field(self.ui.icons.trash.instance(), "Clear editor", 4, self, "wipe_editor")
-
+func setup_radial_menu(context_object=null):
+    self.ui.radial.clear_fields()
+    if context_object == null:
+        self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load map", 2, self, "open_picker")
+        self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, self.switcher, "main_menu")
+        self.ui.radial.set_field(self.ui.icons.trash.instance(), "Clear editor", 4, self, "wipe_editor")
+    else:
+        self.radial_abilities.fill_radial_with_ability_bans(self, self.ui.radial, context_object)
 
 func handle_picker_output(args):
     var map_name = args[0]
@@ -339,3 +356,9 @@ func replace_terrain(tile, template_name):
 
 func notify_about_removal(action_details):
     self.actions_history.append(action_details)
+
+func _open_ability_ban_menu():
+    var tile = self.map.model.get_tile(self.map.camera_tile_position)
+    if tile.building.is_present():
+        self.toggle_radial_menu(tile.building.tile)
+            
