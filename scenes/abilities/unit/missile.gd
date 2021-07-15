@@ -8,6 +8,7 @@ export var max_level = 3
 
 func _execute(board, position):
     var tile = board.map.model.get_tile(position)
+    tile.unit.tile.receive_damage(self.damage)
     self.source.sfx_effect("attack")
 
     board.smoke_a_tile(self.active_source_tile)
@@ -15,7 +16,6 @@ func _execute(board, position):
     yield(self.get_tree().create_timer(self.TWEEN_TIME), "timeout")
     
     tile.unit.tile.sfx_effect("damage")
-    tile.unit.tile.receive_damage(self.damage)
     if not tile.unit.tile.is_alive():
         var unit_id = tile.unit.tile.get_instance_id()
         var unit_side = tile.unit.tile.side

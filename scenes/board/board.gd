@@ -462,6 +462,7 @@ func execute_active_ability(tile):
     self.cancel_ability()
 
 
+
 func remove_unit_hightlights():
     var current_player = self.state.get_current_player()
     var units = self.map.model.get_player_units(current_player["side"])
