@@ -177,6 +177,7 @@ func rotate_unit_to_direction(direction):
 
     var rotation = self.unit_rotations[direction]
     self.set_rotation(Vector3(0, deg2rad(rotation), 0))
+    self.current_rotation = rotation
 
 func animate_path(path):
     self.current_path = path

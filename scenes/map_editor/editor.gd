@@ -17,12 +17,15 @@ var selected_class = "ground"
 
 var current_map_name = ""
 
+var actions_history = []
+
 func _ready():
     self.rotations.build_rotations(self.map.templates, self.map.builder)
     self.select_tile(self.map.templates.GROUND_GRASS, self.map.builder.CLASS_GROUND)
     self.map.loader.load_map_file(self.AUTOSAVE_FILE)
     self.ui.load_minimap(self.AUTOSAVE_FILE)
     self.setup_radial_menu()
+    self.map.builder.editor = self
     
 
 func _physics_process(_delta):
@@ -76,6 +79,10 @@ func _input(event):
         if event.is_action_pressed("editor_menu"):
             self.toggle_radial_menu()
             self.audio.play("menu_click")
+
+        if event.is_action_pressed("ui_cancel"):
+            self.undo_action()
+            self.audio.play("menu_click")
     else:
         if self.ui.radial.is_visible() and not self.ui.is_popup_open():
             if event.is_action_pressed("ui_cancel"):
@@ -93,26 +100,77 @@ func autosave():
 
 
 func place_tile():
-    if self.selected_class == self.map.builder.CLASS_GROUND:
-        self.map.builder.place_ground(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
-    if self.selected_class == self.map.builder.CLASS_FRAME:
-        self.map.builder.place_frame(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
-    if self.selected_class == self.map.builder.CLASS_DECORATION:
-        self.map.builder.place_decoration(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
-    if self.selected_class == self.map.builder.CLASS_DAMAGE:
-        self.map.builder.place_damage(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
-    if self.selected_class == self.map.builder.CLASS_TERRAIN:
-        self.map.builder.place_terrain(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
-    if self.selected_class == self.map.builder.CLASS_BUILDING:
-        self.map.builder.place_building(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
-    if self.selected_class == self.map.builder.CLASS_UNIT or self.selected_class == self.map.builder.CLASS_HERO:
-        self.map.builder.place_unit(self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
+    self._place_tile(self.selected_class, self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
 
+    self.actions_history.append({
+        "type" : "add",
+        "class" : self.selected_class,
+        "position" : self.map.camera_tile_position,
+        "tile" : self.selected_tile,
+        "rotation" : self.tile_rotation,
+    })
     self.autosave()
+
+func _place_tile(tile_class, position, tile_type, _tile_rotation):
+    if tile_class == self.map.builder.CLASS_GROUND:
+        self.map.builder.place_ground(position, tile_type, _tile_rotation)
+    if tile_class == self.map.builder.CLASS_FRAME:
+        self.map.builder.place_frame(position, tile_type, _tile_rotation)
+    if tile_class == self.map.builder.CLASS_DECORATION:
+        self.map.builder.place_decoration(position, tile_type, _tile_rotation)
+    if tile_class == self.map.builder.CLASS_DAMAGE:
+        self.map.builder.place_damage(position, tile_type, _tile_rotation)
+    if tile_class == self.map.builder.CLASS_TERRAIN:
+        self.map.builder.place_terrain(position, tile_type, _tile_rotation)
+    if tile_class == self.map.builder.CLASS_BUILDING:
+        self.map.builder.place_building(position, tile_type, _tile_rotation)
+    if tile_class == self.map.builder.CLASS_UNIT or tile_class == self.map.builder.CLASS_HERO:
+        self.map.builder.place_unit(position, tile_type, _tile_rotation)
+
 
 func clear_tile():
     self.map.builder.clear_tile_layer(self.map.camera_tile_position)
     self.autosave()
+
+func undo_action():
+    if self.actions_history.size() > 0:
+        var recent_action = self.actions_history.pop_back()
+        var tile = self.map.model.get_tile(recent_action["position"])
+        
+        if recent_action["type"] == "add":
+            match recent_action["class"]:
+                "ground":
+                    tile.ground.clear()
+                "frame":
+                    tile.frame.clear()
+                "decoration":
+                    tile.decoration.clear()
+                "damage":
+                    tile.damage.clear()
+                "terrain":
+                    tile.terrain.clear()
+                "building":
+                    tile.building.clear()
+                "unit":
+                    tile.unit.clear()
+                "hero":
+                    tile.unit.clear()
+        elif recent_action["type"] == "remove":
+            self._place_tile(recent_action["class"], recent_action["position"], recent_action["tile"], recent_action["rotation"])
+            match recent_action["class"]:
+                "building":
+                    self.map.builder.set_building_side(recent_action["position"], recent_action["side"])
+                "unit":
+                    self.map.builder.set_unit_side(recent_action["position"], recent_action["side"])
+                "hero":
+                    self.map.builder.set_unit_side(recent_action["position"], recent_action["side"])
+        elif recent_action["type"] == "side":
+            match recent_action["class"]:
+                "building":
+                    self.map.builder.set_building_side(recent_action["position"], recent_action["old_side"])
+                "unit":
+                    self.map.builder.set_unit_side(recent_action["position"], recent_action["old_side"])
+        self.autosave()
 
 func refresh_tile():
     self.select_tile(self.selected_tile, self.selected_class)
@@ -190,6 +248,7 @@ func handle_picker_output(args):
     elif context == "load":
         self.map.loader.load_map_file(map_name)
         self.ui.load_minimap(map_name)
+        self.actions_history = []
         
     self.close_picker()
     self.set_map_name(map_name)
@@ -222,12 +281,29 @@ func wipe_editor():
 
 func next_alternative():
     var tile = self.map.model.get_tile(self.map.camera_tile_position)
+    var old_side
 
     if tile.building.is_present():
+        old_side = tile.building.tile.side
         self.next_building_side(tile.building.tile)
+        self.actions_history.append({
+            "type" : "side",
+            "class" : "building",
+            "position" : self.map.camera_tile_position,
+            "old_side" : old_side,
+            "new_side" : tile.building.tile.side,
+        })
 
     if tile.unit.is_present():
+        old_side = tile.unit.tile.side
         self.next_unit_side(tile.unit.tile)
+        self.actions_history.append({
+            "type" : "side",
+            "class" : "unit",
+            "position" : self.map.camera_tile_position,
+            "old_side" : old_side,
+            "new_side" : tile.unit.tile.side,
+        })
 
     if tile.terrain.is_present() and tile.terrain.tile.is_damageable():
         self.next_damage_stage(tile)
@@ -259,3 +335,6 @@ func replace_terrain(tile, template_name):
 
     tile.terrain.clear()
     self.map.builder.place_terrain(tile.position, template_name, rotation.y)
+
+func notify_about_removal(action_details):
+    self.actions_history.append(action_details)

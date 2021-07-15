@@ -209,6 +209,7 @@ func load_skirmish_map():
 
 func load_campaign_map():
     self.map.loader.load_campaign_map(self.match_setup.campaign_name, self.match_setup.mission_no)
+    self.match_setup.campaign_win = true
 
 
 func update_for_current_player():
@@ -568,4 +569,3 @@ func destroy_explosion_with_delay(explosion_object, delay):
 func _signal_winner(winning_side):
     if self.state.is_player_human(winning_side):
         self.campaign.update_campaign_progress(self.match_setup.campaign_name, self.match_setup.mission_no)
-        self.match_setup.campaign_win = true

@@ -10,12 +10,19 @@ const CLASS_HERO = "hero"
 
 var map
 
+var editor = null
+
 func _init(map_scene):
     self.map = map_scene
 
 
 func place_ground(position, name, rotation):
     var tile = self.map.model.get_tile(position)
+
+    if tile.ground.is_present():
+        self._notify_removal(tile.ground, position, self.map.builder.CLASS_GROUND)
+        tile.ground.clear()
+
     self.place_element(position, name, rotation, 0, self.map.tiles_ground_anchor, tile.ground)
 
 func place_frame(position, name, rotation):
@@ -23,6 +30,10 @@ func place_frame(position, name, rotation):
 
     if not tile.ground.is_present():
         return
+
+    if tile.frame.is_present():
+        self._notify_removal(tile.frame, position, self.map.builder.CLASS_FRAME)
+        tile.frame.clear()
 
     self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_frames_anchor, tile.frame)
 
@@ -32,12 +43,16 @@ func place_decoration(position, name, rotation):
     if not tile.ground.is_present():
         return
     if tile.decoration.is_present():
+        self._notify_removal(tile.decoration, position, self.map.builder.CLASS_DECORATION)
         tile.decoration.clear()
     if tile.terrain.is_present():
+        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
     if tile.building.is_present():
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
         tile.building.clear()
     if tile.damage.is_present():
+        self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
 
     self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_terrain_anchor, tile.decoration)
@@ -48,12 +63,16 @@ func place_damage(position, name, rotation):
     if not tile.ground.is_present():
         return
     if tile.decoration.is_present():
+        self._notify_removal(tile.decoration, position, self.map.builder.CLASS_DECORATION)
         tile.decoration.clear()
     if tile.terrain.is_present():
+        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
     if tile.building.is_present():
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
         tile.building.clear()
     if tile.damage.is_present():
+        self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
 
     self.place_element(position, name, rotation, self.map.GROUND_HEIGHT - 0.05, self.map.tiles_terrain_anchor, tile.damage)
@@ -64,14 +83,19 @@ func place_terrain(position, name, rotation):
     if not tile.ground.is_present():
         return
     if tile.decoration.is_present():
+        self._notify_removal(tile.decoration, position, self.map.builder.CLASS_DECORATION)
         tile.decoration.clear()
     if tile.unit.is_present():
+        self._notify_removal(tile.unit, position, self.map.builder.CLASS_UNIT, tile.unit.tile.side)
         tile.unit.clear()
     if tile.terrain.is_present():
+        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
     if tile.building.is_present():
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
         tile.building.clear()
     if tile.damage.is_present():
+        self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
 
     self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_terrain_anchor, tile.terrain)
@@ -82,14 +106,19 @@ func place_building(position, name, rotation, side=null):
     if not tile.ground.is_present():
         return
     if tile.decoration.is_present():
+        self._notify_removal(tile.decoration, position, self.map.builder.CLASS_DECORATION)
         tile.decoration.clear()
     if tile.unit.is_present():
+        self._notify_removal(tile.unit, position, self.map.builder.CLASS_UNIT, tile.unit.tile.side)
         tile.unit.clear()
     if tile.terrain.is_present():
+        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
     if tile.building.is_present():
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
         tile.building.clear()
     if tile.damage.is_present():
+        self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
 
     self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_buildings_anchor, tile.building)
@@ -103,10 +132,13 @@ func place_unit(position, name, rotation, side=null):
     if not tile.ground.is_present():
         return
     if tile.unit.is_present():
+        self._notify_removal(tile.unit, position, self.map.builder.CLASS_UNIT, tile.unit.tile.side)
         tile.unit.clear()
     if tile.terrain.is_present():
+        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
     if tile.building.is_present():
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
         tile.building.clear()
 
     var new_unit = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_units_anchor, tile.unit)
@@ -126,6 +158,7 @@ func place_element(position, name, rotation, vertical_offset, anchor, tile_fragm
     world_position.y = vertical_offset
     new_tile.set_translation(world_position)
     new_tile.set_rotation(Vector3(0, deg2rad(rotation), 0))
+    new_tile.current_rotation = rotation
 
     tile_fragment.set_tile(new_tile)
 
@@ -135,18 +168,25 @@ func clear_tile_layer(position):
     var tile = self.map.model.get_tile(position)
 
     if tile.unit.is_present():
+        self._notify_removal(tile.unit, position, self.map.builder.CLASS_UNIT, tile.unit.tile.side)
         tile.unit.clear()
     elif tile.building.is_present():
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side)
         tile.building.clear()
     elif tile.terrain.is_present():
+        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
     elif tile.decoration.is_present():
+        self._notify_removal(tile.decoration, position, self.map.builder.CLASS_DECORATION)
         tile.decoration.clear()
     elif tile.damage.is_present():
+        self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
     elif tile.frame.is_present():
+        self._notify_removal(tile.frame, position, self.map.builder.CLASS_FRAME)
         tile.frame.clear()
     elif tile.ground.is_present():
+        self._notify_removal(tile.ground, position, self.map.builder.CLASS_GROUND)
         tile.ground.clear()
 
 func wipe_tile(position):
@@ -216,3 +256,15 @@ func set_unit_side(position, new_side):
             material_type = self.map.templates.MATERIAL_METALLIC
         tile.unit.tile.set_side(new_side)
         tile.unit.tile.set_side_materials(self.map.templates.get_side_material(new_side, material_type), self.map.templates.get_side_material_desat(new_side, material_type))
+
+func _notify_removal(tile_fragment, position, tile_class, side=null, modifiers=null):
+    if self.editor != null:
+        self.editor.notify_about_removal({
+            "type" : "remove",
+            "class" : tile_class,
+            "position" : position,
+            "tile" : tile_fragment.tile.template_name,
+            "rotation" : tile_fragment.tile.current_rotation,
+            "side" : side,
+            "modifiers" : modifiers,
+        })

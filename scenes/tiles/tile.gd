@@ -13,6 +13,7 @@ export var next_damage_stage_template = ""
 export var base_stage_template = ""
 
 var scripting_tags = {}
+var current_rotation = 0
 
 func get_dict():
     var rotation = self.get_rotation_degrees()
