@@ -108,16 +108,16 @@ Ruby Dusk responds to provocation, and invades Amber Noon. Sapphire Dawn comes t
 #### Prologue / Tutorial
 During a border inspection by Prince Tybalt, Ruby Dusk starts an offensive. Warlord Grim contacts Prince Tybalt and tells him, that Ruby Dusk started a war, and King Ludwig ordered him to repel the invaders.
 
-#### Red Campaign
+#### Ruby Dusk Campaign
 Ruby Dusk Noble Sidney disregards Lord Dawson orders and captures several provinces of Team Yellow. They approach Amber Noon capital and prepare to occupy it, but their offensive is halted when they get news of Sapphire Dawn joining the fight. Ruby Dusk Gentleman Archibald goes to defend their own lands, encountering both Sapphire Dawn, as well as Jade Twilight forces.
 
-#### Blue Campaign
+#### Sapphire Dawn Campaign
 Driven by their rivalry agains Ruby Dusk and potential gains, Sapphire Dawn President Gideon agrees to help Amber Noon in their war. General Cyrus is sent to attack Ruby Dusk lands, and fight to help free the Amber Noon capital, but then encounter Jade Twilight and Amber Noon forces led by Prince Tybalt in their way. Warlord Grim declares Prince Tybalt a traitor, who wants to overthrow King Ludwig, and asks Sapphire Dawn Commando Blake to deal with them.
 
-#### Green Campaign
+#### Jade Twilight Campaign
 Amber Noon Prince Tybalt visits Jade Twilight Chancelor Irene to ask for help, as his country is being attacked. Jade Twilight sends Admiral Torsten as a diplomatic envoy to Amber Noon capital, but he gets attacked by Amber Noon forces instead, as Warlord Grim fears he would discover the truth. He fights Amber Noon troops, as well as Ruby Dusk forces ocuppying the country. Near the capital, He encounters Sapphire Dawn forces allied with Warlord Grim, and fights them to gain a foothold, while Captain Claude is dispatched to return to Chancelor Irene with the news.
 
-#### Yellow Campaign
+#### Amber Noon Campaign
 Amber Noon Prince Tybalt with a handful of loyal forces trains against Jade Twilight Captain Claude, until he is strong enough.
 
 Prince Tybalt leads his forces against Sapphire Dawn, who allied themselves with Warlord Grim, as well as against Ruby Dusk standing in their way. He arrives with both his and allied Jade Twilight Forces at the outskirts of Amber Noon capital. It is being defended by Sapphire Dawn forces and Amber Noon troops loyal to Warlord Grim, as they defend it from Ruby Dusk. Both opponents are defeated and Prince Tybalt frees King Ludwig, ending the war.
@@ -127,18 +127,19 @@ Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights f
 ### Missions
 
 #### Prologue
+1. Just Another Excercise
+2. Border inspection
+
+#### Ruby Dusk Campaign
 To be designed.
 
-#### Red Campaign
+#### Sapphire Dawn Campaign
 To be designed.
 
-#### Blue Campaign
+#### Jade Twilight Campaign
 To be designed.
 
-#### Green Campaign
-To be designed.
-
-#### Yellow Campaign
+#### Amber Noon Campaign
 To be designed.
 
 

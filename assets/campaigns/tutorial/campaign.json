@@ -8,28 +8,28 @@
             "title" : "Gameplay basics",
             "map" : "crossroad.tofmap.json",
             "description" : "Gameplay basics",
-            "marker" : [430, 200]
+            "marker" : [460, 200]
         },
         {
             "name" : "units_buildings",
             "title" : "Units and buildings",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [360, 335]
+            "marker" : [390, 335]
         },
         {
             "name" : "unit_abilities",
             "title" : "Unit levels and abilities",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [490, 380]
+            "marker" : [520, 380]
         },
         {
             "name" : "heroes",
             "title" : "Hero units",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [620, 400]
+            "marker" : [650, 400]
         }
     ]
 }

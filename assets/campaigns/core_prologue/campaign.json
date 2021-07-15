@@ -4,11 +4,18 @@
     "icon" : "book",
     "missions" : [
         {
-            "name" : "test",
-            "title" : "Test",
+            "name" : "another_excercise",
+            "title" : "Just another excercise",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [0, 0]
+            "marker" : [420, 90]
+        },
+        {
+            "name" : "border_inspection",
+            "title" : "Border inspection",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [458, 150]
         }
     ]
 }

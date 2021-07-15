@@ -1,7 +1,7 @@
 {
-    "name" : "core_sapphire_dawn",
-    "title" : "Sapphire Dawn",
-    "icon" : "blue_gem",
+    "name" : "core_amber_noon",
+    "title" : "Amber Noon",
+    "icon" : "yellow_gem",
     "prerequisite" : "not_unlockable_at_the_moment",
     "missions" : [
         {

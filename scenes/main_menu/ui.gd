@@ -7,6 +7,7 @@ onready var skirmish = $"skirmish/skirmish"
 onready var settings = $"settings/settings"
 onready var campaign_selection = $"campaign_selection/campaign_selection"
 onready var campaign_mission_selection = $"campaign_mission_selection/campaign_mission_selection"
+onready var campaign_mission = $"campaign_mission/campaign_mission"
 
 func bind_menu(main_menu):
     self.menu.bind_menu(main_menu)
@@ -14,6 +15,7 @@ func bind_menu(main_menu):
     self.settings.bind_menu(main_menu)
     self.campaign_selection.bind_menu(main_menu)
     self.campaign_mission_selection.bind_menu(main_menu)
+    self.campaign_mission.bind_menu(main_menu)
 
 func hide_menu():
     self.menu.hide_panel()
@@ -49,9 +51,17 @@ func show_campaign_selection(reset_page=false):
 func hide_campaign_selection():
     self.campaign_selection.hide_panel()
 
-func show_campaign_mission_selection(campaign_name):
+func show_campaign_mission_selection(campaign_name=null):
     self.campaign_mission_selection.show_panel()
-    self.campaign_mission_selection.load_campaign(campaign_name)
+    if campaign_name != null:
+        self.campaign_mission_selection.load_campaign(campaign_name)
 
 func hide_campaign_mission_selection():
-    self.campaign_mission_selection.hide_panel() 
+    self.campaign_mission_selection.hide_panel()
+
+func show_campaign_mission(campaign_name, mission_no):
+    self.campaign_mission.show_panel()
+    self.campaign_mission.load_mission(campaign_name, mission_no)
+
+func hide_campaign_mission():
+    self.campaign_mission.hide_panel()

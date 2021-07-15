@@ -48,6 +48,7 @@ func _on_next_button_pressed():
 
 func _on_select_button_pressed():
     self.audio.play("menu_click")
+    self.main_menu.open_campaign_mission(self.manifest["name"], self.selected_mission)
 
 func show_panel():
     self.animations.play("show")
@@ -96,6 +97,7 @@ func clear_markers():
     for marker in self.mission_markers:
         marker.queue_free()
     self.mission_markers = []
+    self.selected_mission = 0
 
 func _select_latest_mission():
     if self.campaign.is_campaign_complete(self.manifest["name"]):
