@@ -142,6 +142,7 @@ func hide_picker():
 
 func set_map_name(name):
     self.map_name_field.set_text(name)
+    self._on_map_name_text_changed(name)
 
 func refresh_current_maps_page():
     var pages_count = self.map_list_service.get_pages_count(self.PAGE_SIZE)
@@ -217,3 +218,8 @@ func connect_buttons():
     for button in self.map_selection_buttons:
         button.bind_method(self, "map_button_pressed")
         button.bind_focus(self, "map_button_focused")
+
+
+func _on_map_name_text_changed(new_text):
+    self.save_button.set_disabled(self.map_list_service.is_reserved_name(new_text))
+

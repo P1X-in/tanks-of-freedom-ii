@@ -231,3 +231,5 @@ margin_bottom = 320.0
 playback_speed = 4.0
 anims/hide = SubResource( 1 )
 anims/show = SubResource( 2 )
+
+[connection signal="text_changed" from="widgets/name/map_name" to="." method="_on_map_name_text_changed"]
