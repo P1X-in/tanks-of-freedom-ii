@@ -23,7 +23,7 @@ config/windows_native_icon="res://assets/icons/win.ico"
 
 [autoload]
 
-MapList="*res://scripts/services/map_list.gd"
+MapManager="*res://scripts/services/map_manager.gd"
 GamepadAdapter="*res://scripts/services/gamepad_adapter.gd"
 SimpleAudioLibrary="*res://scripts/services/audio.gd"
 SceneSwitcher="*res://scripts/services/scene_switcher.gd"

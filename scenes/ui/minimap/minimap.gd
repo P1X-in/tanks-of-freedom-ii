@@ -1,6 +1,6 @@
 extends Control
 
-onready var map_list_service = $"/root/MapList"
+onready var map_list_service = $"/root/MapManager"
 onready var minimap = $"minimap"
 
 var grass_tiles = ["ground_grass"]

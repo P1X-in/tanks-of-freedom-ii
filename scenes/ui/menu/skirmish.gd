@@ -1,6 +1,6 @@
 extends Control
 
-onready var map_list_service = $"/root/MapList"
+onready var map_list_service = $"/root/MapManager"
 onready var audio = $"/root/SimpleAudioLibrary"
 onready var switcher = $"/root/SceneSwitcher"
 onready var match_setup = $"/root/MatchSetup"

@@ -8,7 +8,7 @@ onready var gamepad_adapter = $"/root/GamepadAdapter"
 onready var match_setup = $"/root/MatchSetup"
 
 func _ready():
-    self.map.loader.load_map_file("main_menu_bg", "bundle")
+    self.map.loader.load_map_file("main_menu_bg")
     self._setup_camera()
     self.map.hide_tile_box()
     self.audio.track("menu")
