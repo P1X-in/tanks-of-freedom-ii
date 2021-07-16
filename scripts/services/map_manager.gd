@@ -72,6 +72,7 @@ func get_maps_page(page_number: int, page_size: int) -> Array:
 func get_pages_count(page_size: int) -> int:
     var total_map_count := self.maps.size()
     var last_page_overflow := total_map_count % page_size
+    #warning-ignore:integer_division
     var pages_count := (total_map_count - last_page_overflow) / page_size
 
     if last_page_overflow > 0:
@@ -106,4 +107,4 @@ func get_map_details(map_key: String) -> String:
     return self.maps[map_key]
 
 func _is_bundled(map_name: String) -> bool:
-    return self.maps.has(map_name) and self.maps[map_name].bundled
+    return self.maps.has(map_name) and self.maps[map_name].has("bundled")

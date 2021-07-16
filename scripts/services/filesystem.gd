@@ -40,14 +40,14 @@ func write_data_as_json_to_file(filepath, data):
     self.file.store_string(content)
     self.file.close()
 
-func dir_list(dirpath):
+func dir_list(dirpath, files=false):
     if self._dir_exists_os(dirpath):
-        return self._dir_list_os(dirpath)
+        return self._dir_list_os(dirpath, files)
     elif self._dir_exists_project(dirpath):
-        return self._dir_list(dirpath)
+        return self._dir_list(dirpath, files)
     return []
 
-func _dir_list(dirpath):
+func _dir_list(dirpath, files=false):
     var listing = []
     var file_name
 
@@ -56,7 +56,9 @@ func _dir_list(dirpath):
         file_name = self.directory.get_next()
 
         while file_name != "":
-            if self.directory.current_is_dir():
+            if self.directory.current_is_dir() and not files:
+                listing.append(file_name)
+            if not self.directory.current_is_dir() and files:
                 listing.append(file_name)
             file_name = self.directory.get_next()
     else:
@@ -64,6 +66,7 @@ func _dir_list(dirpath):
 
     return listing
 
-func _dir_list_os(dirpath):
+
+func _dir_list_os(dirpath, files=false):
     var real_path = OS.get_executable_path().get_base_dir().plus_file(dirpath)
-    return self.dir_list(real_path)
+    return self._dir_list(real_path, files)
