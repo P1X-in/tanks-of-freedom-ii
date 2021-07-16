@@ -44,3 +44,6 @@ func _on_button_pressed():
 func _on_focus_entered():
     if self.focus_object != null:
         self.focus_object.call_deferred(self.focus_method, self.map_name)
+
+func _on_mouse_entered():
+    self._on_focus_entered()
