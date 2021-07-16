@@ -31,7 +31,11 @@ func add_map_to_list(map_name: String, online_id=null, bundled := false):
 
 func save_list_to_file() -> void:
     #TODO remove bundled maps
-    self.filesystem.write_data_as_json_to_file(self.LIST_FILE_PATH, self.maps)
+    var maps_to_save := self.maps.duplicate()
+    for key in self.maps.keys():
+        if (maps_to_save[key].bundled):
+            maps_to_save.erase(key)
+    self.filesystem.write_data_as_json_to_file(self.LIST_FILE_PATH, maps_to_save)
 
 func load_list_from_file() -> void:
     self.maps = self.filesystem.read_json_from_file(self.LIST_FILE_PATH)
@@ -52,7 +56,7 @@ func get_maps_page(page_number: int, page_size: int) -> Array:
     var map_key_list := self.maps.keys()
     map_key_list.sort()
 
-    var maps_count: int = self.maps.keys().size()
+    var maps_count: int = self.maps.size()
     if index_end > maps_count:
         index_end = maps_count
 
@@ -82,18 +86,18 @@ func map_exists(map_name: String) -> bool:
     return self.filesystem.file_exists(filepath)
 
 func get_map_data(map_name: String) -> Dictionary:
-    var filepath := get_map_path(map_name)
+    var filepath := self.get_map_path(map_name)
     return self.filesystem.read_json_from_file(filepath)
 
 func save_map_to_file(filename: String, content: Dictionary) -> void:
-    var filepath = _get_user_map_path(filename)
+    var filepath = self._get_user_map_path(filename)
     self.filesystem.write_data_as_json_to_file(filepath, content)
 
 func get_map_path(map_name: String) -> String:
     if self._is_bundled(map_name) or map_name == MAIN_MENU_MAP_NAME:
         return self.BUNDLED_MAP_PATH + map_name + self.MAP_EXTENSION
     else:
-        return _get_user_map_path(map_name)
+        return self._get_user_map_path(map_name)
 
 func _get_user_map_path(map_name: String) -> String:
     return self.MAP_PATH + map_name + self.MAP_EXTENSION
