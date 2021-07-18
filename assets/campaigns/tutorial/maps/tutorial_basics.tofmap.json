@@ -7,10 +7,21 @@
     },
     "scripts": {
         "stories": {
-
+            "welcome_message" : [
+                {"action" : "lock"},
+                {"action" : "message", "details": {"text" : "Welcome to the boot camp, recruit! My name is General Cyrus, and I will be your instructor today. Pay attention and you might even survive a day on a real battlefield!", "portrait" : "hero_general", "name" : "General Cyrus", "side" : "left"}},
+                {"action" : "message", "details": {"text" : "Let us start with getting familiar with moving your forces around. In front of you, there is an Infantry unit waiting for your orders.", "portrait" : "hero_general", "name" : "General Cyrus", "side" : "left"}},
+                 {"action" : "message", "details": {"text" : "Select your unit, and you will see possible movement tiles highlighted. An Infantry unit has 4 Movement Points (MP) available to it, so once these are used up, you need to end your turn by holding the Y button. You can tell, that a unit used up all their MP, when unit changes it's appearance to grey colours.", "portrait" : "hero_general", "name" : "General Cyrus", "side" : "left"}},
+                {"action" : "message", "details": {"text" : "Try moving your unit around. Once you familiarize yourself with giving orders, move your unit onto a blue tile next to a building in the woods.", "portrait" : "hero_general", "name" : "General Cyrus", "side" : "left"}},
+                {"action" : "unlock"},
+            ],
+            "give_movement_resources" : [
+                {"action" : "ap", "details" : {"amount" : 5, "side" : "blue", "set" : true}},
+            ],
         },
         "triggers": {
-
+            "phase_one_turn_start" : {"type" : "turn", "story" : "give_movement_resources", "details" : {"player" : 0}},
+            "first_turn" : {"type" : "turn", "story" : "welcome_message", "details" : {"turn" : 1, "player" : 0}, "one_off" : true},
         }
     },
     "tiles": {

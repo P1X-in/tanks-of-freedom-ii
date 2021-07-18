@@ -13,6 +13,8 @@ func _execute(_metadata):
         'side' : self.side
     }
 
+    actor['portrait_tile'].tile_view_height_cam_modifier = -0.2
+
     self.board.ui.show_story_dialog(text, actor)
 
 func _ingest_details(details):

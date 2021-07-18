@@ -7,9 +7,11 @@ func _init():
     self.observed_event_type = ['turn_started']
 
 func _observe(event):
-    if self.turn_no == event.turn_no:
+    if self.turn_no != null and self.turn_no == event.turn_no:
         if self.player_id == null or self.player_id == event.player_id:
             self.execute_outcome(event)
+    elif self.player_id != null and self.player_id == event.player_id:
+        self.execute_outcome(event)
 
 func _get_outcome_metadata(event):
     return {
@@ -18,7 +20,8 @@ func _get_outcome_metadata(event):
     }
 
 func ingest_details(details):
-    self.turn_no = details['turn']
+    if details.has('turn'):
+        self.turn_no = details['turn']
     if details.has('player'):
         self.player_id = details['player']
     if details.has('player_side'):

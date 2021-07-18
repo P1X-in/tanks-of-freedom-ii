@@ -55,6 +55,9 @@ func get_current_param(param_name):
     var player_data = self.get_current_player()
     return player_data[param_name]
 
+func set_player_ap(id, value):
+    self.players[id]["ap"] = value
+
 func add_player_ap(id, value):
     self.players[id]["ap"] += value
 
