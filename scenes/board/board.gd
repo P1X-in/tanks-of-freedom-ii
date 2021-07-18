@@ -124,8 +124,8 @@ func start_turn():
             self.ui.hide_cinematic_bars()
 
     if not self.state.is_current_player_ai() and self.settings.get_option("hq_cam"):
-        self.map.move_camera_to_position(self.map.model.get_player_bunker_position(self.state.get_current_side()))
-        yield(self.get_tree().create_timer(1), "timeout")
+        if self._move_camera_to_hq():
+            yield(self.get_tree().create_timer(1), "timeout")
 
     self.replenish_unit_actions()
     self.gain_building_ap()
@@ -590,3 +590,12 @@ func _spawn_temporary_projectile_instance_on_tile(tile):
     new_projectile.set_translation(Vector3(position.x, 0, position.z))
 
     return new_projectile
+
+func _move_camera_to_hq():
+    var hq_position = self.map.model.get_player_bunker_position(self.state.get_current_side())
+
+    if hq_position != null:
+        self.map.move_camera_to_position(hq_position)
+        return true
+
+    return false

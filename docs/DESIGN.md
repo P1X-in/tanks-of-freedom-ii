@@ -11,6 +11,7 @@ Working title for the game is Tanks of Freedom 3-D, it is a subject to change, m
 Proposed titles: 
 - *Tanks of Freedom - Liberum Gentem*
 - *Tanks of Freedom 2*
+- *Tanks of Freedom 2: Grim War*
 
 
 ## World
@@ -105,7 +106,11 @@ Amber Noon Warlord Grim has imprisoned the King and started a war with Ruby Dusk
 
 Ruby Dusk responds to provocation, and invades Amber Noon. Sapphire Dawn comes to help and attacks Ruby Dusk.
 
-#### Prologue / Tutorial
+#### Tutorial
+
+Sapphire Dawn General Cyrus is training new recruits on how to operate on the battlefield. This includes The Commando, named Blake.
+
+#### Prologue
 During a border inspection by Prince Tybalt, Ruby Dusk starts an offensive. Warlord Grim contacts Prince Tybalt and tells him, that Ruby Dusk started a war, and King Ludwig ordered him to repel the invaders.
 
 #### Ruby Dusk Campaign
@@ -125,6 +130,31 @@ Prince Tybalt leads his forces against Sapphire Dawn, who allied themselves with
 Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights frees him from his cell. He gathers his forces and fights through Jade Twilight forces stationed nearby to escape. He dissapears into the mountains to plot his revenge.
 
 ### Missions
+
+#### Tutorial
+1. Gameplay basics
+    - moving units
+    - claiming buildings
+    - action points
+    - buying units
+    - combat
+    - winning
+
+2. Units and buildings
+    - basic units
+    - advanced units
+    - buildings
+
+3. Unit levels and abilities
+    - level ups
+    - unit abilities
+
+4. Hero units
+    - deploying heroes
+    - passive abilities
+    - active abilities
+    - second hero
+    - npcs
 
 #### Prologue
 1. Just Another Excercise

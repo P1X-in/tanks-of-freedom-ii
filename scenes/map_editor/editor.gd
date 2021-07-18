@@ -290,6 +290,7 @@ func close_picker():
     self.map.camera.paused = false
     self.map.tile_box.set_visible(true)
     self.ui.show_tiles()
+    self.ui.show_position()
 
 func wipe_editor():
     self.toggle_radial_menu()

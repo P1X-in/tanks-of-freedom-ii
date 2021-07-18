@@ -273,6 +273,13 @@ func move_camera_to_position(destination):
     self.camera_transit_time = 0.0
     self.camera_in_transit = true
 
+func set_camera_position(position):
+    var current_position = self.get_translation()
+    current_position.x = position.x
+    current_position.z = position.y
+
+    self.set_translation(current_position)
+
 func pan_camera(delta):
     self.camera_transit_time += delta * self.camera_auto_pan_speed_modifier
 

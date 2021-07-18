@@ -89,6 +89,9 @@ func move_camera_to_position_if_far_away(destination, tolerance=9, zoom=null):
 
     return true
 
+func snap_camera_to_position(destination):
+    self.camera.set_camera_position(destination * self.TILE_SIZE + Vector2(0.5, 0.5) * self.TILE_SIZE)
+
 func anchor_unit(unit, position):
     var world_position = self.map_to_world(position)
     world_position.y = self.GROUND_HEIGHT

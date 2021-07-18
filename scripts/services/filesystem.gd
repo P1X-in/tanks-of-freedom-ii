@@ -34,7 +34,7 @@ func read_json_from_file(filepath):
     return {}
 
 func write_data_as_json_to_file(filepath, data):
-    var content = JSON.print(data, "", true)
+    var content = JSON.print(data, "    ", true)
 
     self.file.open(filepath, File.WRITE)
     self.file.store_string(content)

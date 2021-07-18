@@ -6,9 +6,16 @@
         {
             "name" : "basics",
             "title" : "Gameplay basics",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Gameplay basics",
-            "marker" : [460, 200]
+            "map" : "tutorial_basics.tofmap.json",
+            "description" : "In this training scenario you are going to learn about core game mechanics: moving units, claiming buildings, resources, recruitment and combat.",
+            "marker" : [460, 200],
+            "players": [
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "human"
+                }
+            ]
         },
         {
             "name" : "units_buildings",

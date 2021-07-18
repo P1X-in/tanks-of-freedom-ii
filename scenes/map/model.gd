@@ -8,6 +8,7 @@ var scripts = {
     "stories" : {},
     "triggers" : {}
 }
+var metadata = {}
 
 func _init():
     for x in range(self.SIZE):
@@ -28,7 +29,7 @@ func get_dict():
           tiles_dict[i] = self.tiles[i].get_dict()
 
     return {
-        "metadata" : {},
+        "metadata" : self.metadata,
         "tiles" : tiles_dict,
         "scripts" : self.scripts
     }

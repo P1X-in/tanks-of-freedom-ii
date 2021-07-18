@@ -208,6 +208,9 @@ func fill_map_from_data(data):
     if data.has("scripts"):
         scripts = data["scripts"]
 
+    if data.has("metadata"):
+        self.map.model.metadata = data["metadata"]
+
     for tile_id in self.map.model.tiles.keys():
         if tiles_data.has(tile_id):
             self.place_tile(tile_id, tiles_data[tile_id])
