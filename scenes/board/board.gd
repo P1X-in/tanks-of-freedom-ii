@@ -363,19 +363,21 @@ func battle(attacker_tile, defender_tile):
                 self.events.emit_unit_attacked(defender, attacker)
             else:
                 var attacker_id = attacker.get_instance_id()
+                var attacker_type = attacker.template_name
                 var attacker_side = attacker.side
 
                 self.unselect_tile()
                 self.destroy_unit_on_tile(attacker_tile)
-                self.events.emit_unit_destroyed(defender, attacker_id, attacker_side)
+                self.events.emit_unit_destroyed(defender, attacker_id, attacker_type, attacker_side)
 
         self.events.emit_unit_attacked(attacker, defender)
     else:
         var defender_id = defender.get_instance_id()
+        var defender_type = defender.template_name
         var defender_side = defender.side
 
         self.destroy_unit_on_tile(defender_tile)
-        self.events.emit_unit_destroyed(attacker, defender_id, defender_side)
+        self.events.emit_unit_destroyed(attacker, defender_id, defender_type, defender_side)
 
 func destroy_unit_on_tile(tile, skip_explosion=false):
     if tile.unit.tile.unit_class == "hero":

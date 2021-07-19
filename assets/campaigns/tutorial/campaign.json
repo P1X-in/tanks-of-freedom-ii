@@ -20,9 +20,16 @@
         {
             "name" : "units_buildings",
             "title" : "Units and buildings",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [390, 335]
+            "map" : "tutorial_units_buildings.tofmap.json",
+            "description" : "In this training scenario you are going to learn about unit types, with their strenghts and weaknesses, as well as all the types of military buildings.",
+            "marker" : [390, 335],
+            "players": [
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "human"
+                }
+            ]
         },
         {
             "name" : "unit_abilities",

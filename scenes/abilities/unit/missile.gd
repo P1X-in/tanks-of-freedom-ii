@@ -18,8 +18,9 @@ func _execute(board, position):
     tile.unit.tile.sfx_effect("damage")
     if not tile.unit.tile.is_alive():
         var unit_id = tile.unit.tile.get_instance_id()
+        var unit_type = tile.unit.tile.template_name
         var unit_side = tile.unit.tile.side
-        board.events.emit_unit_destroyed(self.source, unit_id, unit_side)
+        board.events.emit_unit_destroyed(self.source, unit_id, unit_type, unit_side)
         board.destroy_unit_on_tile(tile)
 
     board.explode_a_tile(tile)
