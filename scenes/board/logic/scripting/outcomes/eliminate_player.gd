@@ -1,11 +1,12 @@
 
 var winner = null
+var force_kill = false
 var board
 
 func execute(metadata={}):
     var bunkers = self.board.map.model.get_player_bunkers(metadata['old_side'])
 
-    if bunkers.size() > 0:
+    if bunkers.size() > 0 and not self.force_kill:
         return
 
     self.board.state.eliminate_player(metadata['old_side'])
@@ -15,3 +16,9 @@ func execute(metadata={}):
             self.winner = metadata['new_side']
 
         self.board.end_game(self.winner)
+
+func _ingest_details(details):
+    if details.has('winner'):
+        self.winner = details['winner']
+    if details.has('force'):
+        self.force_kill = details['force']

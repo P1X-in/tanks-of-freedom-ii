@@ -57,6 +57,7 @@ const CITY_BUILDING_SMALL4 = "city_building_small4"
 const CITY_BUILDING_SMALL5 = "city_building_small5"
 const CITY_BUILDING_SMALL6 = "city_building_small6"
 const CITY_BRIDGE = "city_bridge"
+const CITY_ROADBLOCK = "city_roadblock"
 
 const DAMAGED_STATUE = "damaged_statue"
 const DAMAGED_FOUNTAIN = "damaged_fountain"
@@ -228,6 +229,7 @@ var templates = {
     self.CITY_BUILDING_SMALL5 : preload("res://scenes/tiles/city/building_small_5_overtile.tscn"),
     self.CITY_BUILDING_SMALL6 : preload("res://scenes/tiles/city/building_small_6_overtile.tscn"),
     self.CITY_BRIDGE : preload("res://scenes/tiles/city/river_bridge_overtile.tscn"),
+    self.CITY_ROADBLOCK : preload("res://scenes/tiles/city/roadblock_overtile.tscn"),
 
     self.DAMAGED_STATUE : preload("res://scenes/tiles/decorations/statue_damaged.tscn"),
     self.DAMAGED_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_damaged.tscn"),

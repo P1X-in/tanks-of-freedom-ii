@@ -7,21 +7,614 @@
     },
     "scripts": {
         "stories": {
-            "welcome_message" : [
-                {"action" : "lock"},
-                {"action" : "message", "details": {"text" : "Welcome to the boot camp, recruit! My name is General Cyrus, and I will be your instructor today. Pay attention and you might even survive a day on a real battlefield!", "portrait" : "hero_general", "name" : "General Cyrus", "side" : "left"}},
-                {"action" : "message", "details": {"text" : "Let us start with getting familiar with moving your forces around. In front of you, there is an Infantry unit waiting for your orders.", "portrait" : "hero_general", "name" : "General Cyrus", "side" : "left"}},
-                 {"action" : "message", "details": {"text" : "Select your unit, and you will see possible movement tiles highlighted. An Infantry unit has 4 Movement Points (MP) available to it, so once these are used up, you need to end your turn by holding the Y button. You can tell, that a unit used up all their MP, when unit changes it's appearance to grey colours.", "portrait" : "hero_general", "name" : "General Cyrus", "side" : "left"}},
-                {"action" : "message", "details": {"text" : "Try moving your unit around. Once you familiarize yourself with giving orders, move your unit onto a blue tile next to a building in the woods.", "portrait" : "hero_general", "name" : "General Cyrus", "side" : "left"}},
-                {"action" : "unlock"},
+            "barracks_claimed": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "01_phase_one_turn_start",
+                        "suspended": true
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "05_reinforce",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "ap",
+                    "details": {
+                        "amount": 30,
+                        "set": true,
+                        "side": "blue"
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            13,
+                            15
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Excellent. The building is yours."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "As you might have noticed, your Infantry unit is gone though. Every production building requires crew to operate, so you have to make sure, that you always have enough infantry on hand."
+                    }
+                },
+                {"action" : "terrain_add", "details" : {"where" : [13, 14], "type" : "terrain", "template" : "city_roadblock"}},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Luckily, you can recruit more in these Barracks. Select the building to open a recruitment radial menu. From there, use your left analogue stick to select an Infantry unit. Then, select a neighbouring tile with a green marker to confirm deployment."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
             ],
-            "give_movement_resources" : [
-                {"action" : "ap", "details" : {"amount" : 5, "side" : "blue", "set" : true}},
+            "give_movement_resources": [
+                {
+                    "action": "ap",
+                    "details": {
+                        "amount": 5,
+                        "set": true,
+                        "side": "blue"
+                    }
+                }
             ],
+            "moved_to_barracks": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Good job! You learn quickly."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Strong forces are key to success. However, every force is going to falter without proper support. And for this, you are going to need buildings."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "A blue movement marker next to a building means, that, if you move that unit there, you can claim that building. Notice, that when your infantry unit is selected, there is a blue indicator on the building. That means you can capture it!"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "When you are ready, with your Infantry unit selected, click on that building to proceed."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "reinforced": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            13,
+                            15
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Your new Infantry squad is immidiately ready for action."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Next lesson is going to be about the one resource, that keeps your armies going: Action Points. Or AP for short."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "When you were ordering your units, you might have noticed a coin with a number in the top-left corner. This is your AP counter. It is not visible during our conversations, so don't worry about it. Up until this point, you have been provided with all the AP you needed, but now you have to learn how to aquire it yourself."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Every military building you have under your control provides certain amount of AP at the beggining of your turn. You can see exactly how much by looking at the tile information in the bottom-left corner, when you hover over the building."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "These Barracks provide 5AP per turn. Not much, but it will be enough to achieve our next goal."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "AP are required both to order your units on the field (in addition to units own MP) as well as to deploy more units. That is why dominating the battlefield by capturing as many military installations as you can is very important."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            11,
+                            18
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Further down the road there is an unoccupied Comms Tower. These buildings can provide you with 15AP per turn, so they are worth claiming whenever you have such opportunity."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Use your Infantry and take that Tower."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "tower_claimed": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Well done! With that Tower, you should have more than enough AP available to you to complete this training scenario."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Please note, that this time your Infantry unit did not dissapear, when you claimed a building. This is because Towers do not require a crew to operate. They do need to be configured though, so claiming a Tower always consumes all of the remaining MP points that unit had. That move still costs only 1AP."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "That is all you need to know for this lesson, so we can move to the next one: Combat."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            12,
+                            21
+                        ]
+                    }
+                },
+                {"action" : "terrain_remove", "details" : {"where" : [12, 20], "type" : "terrain"}},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "At the end of the road, there is a Ruby Dusk Infantry unit stationed, guarding a building. We need to take it out."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "You have to move your own Infantry unit next to it. This time, the movement marker is going to be red, to indicate, that combat can happen from that position."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "welcome_message": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "05_reinforce",
+                        "suspended": true
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Welcome to the boot camp, recruit! My name is General Cyrus, and I will be your instructor today. Pay attention and you might even survive a day on a real battlefield!"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Let us start with getting familiar with moving your forces around. In front of you, there is an Infantry unit waiting for your orders."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Select your unit, and you will see possible movement tiles highlighted. An Infantry unit has 4 Movement Points (MP) available to it, so once these are used up, you need to end your turn by holding the Y button. You can tell, that a unit used up all their MP, when unit changes it's appearance to grey colours."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Try moving your unit around. Once you familiarize yourself with giving orders, move your unit onto a blue tile next to a building in the woods. Sometimes that tile might appear white instead of blue, which will indicate, that your unit is going to use up all of their MP to get there. In that case, just pass the turn."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "moved_to_red_unit": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            12,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Infantry is in position to strike. Just like with claiming a building, select your unit, and you will see an attack marker on the enemy, only this time it will be red instead of green. With your Infantry selected, click on the enemy unit to order it to attack."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "red_unit_attacked": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            12,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Shots fired! Your unit attacked an enemy, and they responded!"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "A short lesson about counterattacks. As long as a unit still has some MP left at the end of their turn, they will be able to counterattack once during the enemy turn - given that they survive and are able to target the attacker, but we will cover that in a different training."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Both your and enemy Infantry units are injured. This does not reduce their combat capabilities though, so they can still be useful. Injuries do not affect their ability to claim buildings, so using such units might be a good idea. You can hover over these units and check out the tile highlight information in the bottom-left to see how much HP they have."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "We still have to finish off this Infantry unit. All units can attack only once per turn, unless some effect changes that. Pass the turn and attack again!"
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "red_unit_destroyed": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            12,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Target down. This time, your attack was enough to destroy the enemy unit, so it did not had a chance to counterattack - even if it had MP left."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Now it is time for a final lesson for today: Winning!"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "You will be sent on a variety of missions, with different objectives, which will determine your success or failure. However, in most skirmish scenarios your goal is going to be simple: take the enemy HQ before they can take yours."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "In this training scenario you do not have an HQ of your own, so you don't have to worry about it being taken. But your enemy does have one! Go ahead and capture it to complete this training mission."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "hq_claimed": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            11,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Great job, all objectives complete. Remember these lessons well, and you will surely succeed."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Dismissed, recruit."
+                    }
+                },
+                {
+                    "action": "unlock"
+                },
+                {"action" : "end_game", "details" : {"winner" : "blue"}}
+            ]
         },
         "triggers": {
-            "phase_one_turn_start" : {"type" : "turn", "story" : "give_movement_resources", "details" : {"player" : 0}},
-            "first_turn" : {"type" : "turn", "story" : "welcome_message", "details" : {"turn" : 1, "player" : 0}, "one_off" : true},
+            "01_phase_one_turn_start": {
+                "details": {
+                    "player": 0
+                },
+                "story": "give_movement_resources",
+                "type": "turn"
+            },
+            "02_first_turn": {
+                "details": {
+                    "player": 0,
+                    "turn": 1
+                },
+                "one_off": true,
+                "story": "welcome_message",
+                "type": "turn"
+            },
+            "03_move_to_barracks": {
+                "details": {
+                    "fields": [
+                        {
+                            "x1": 13,
+                            "x2": 13,
+                            "y1": 14,
+                            "y2": 14
+                        }
+                    ],
+                    "player_side": "blue"
+                },
+                "one_off": true,
+                "story": "moved_to_barracks",
+                "type": "move"
+            },
+            "04_barracks_claimed": {
+                "details": {
+                    "amount": 1,
+                    "list": [
+                        [
+                            13,
+                            15
+                        ]
+                    ],
+                    "player_side": "blue"
+                },
+                "one_off": true,
+                "story": "barracks_claimed",
+                "type": "claim"
+            },
+            "05_reinforce": {
+                "details": {
+                    "amount": 1,
+                    "player_side": "blue",
+                    "type": "blue_infantry"
+                },
+                "one_off": true,
+                "story": "reinforced",
+                "type": "deploy"
+            },
+            "06_tower_claimed": {
+                "details": {
+                    "amount": 1,
+                    "list": [
+                        [
+                            11,
+                            18
+                        ]
+                    ],
+                    "player_side": "blue"
+                },
+                "one_off": true,
+                "story": "tower_claimed",
+                "type": "claim"
+            },
+            "07_move_to_red_unit": {
+                "details": {
+                    "fields": [
+                        {
+                            "x1": 12,
+                            "x2": 12,
+                            "y1": 20,
+                            "y2": 20
+                        }
+                    ],
+                    "player_side": "blue"
+                },
+                "one_off": true,
+                "story": "moved_to_red_unit",
+                "type": "move"
+            },
+            "08_red_unit_attacked" : {"type" : "attacked", "story" : "red_unit_attacked", "details" : { "vip" : [12, 21] }, "one_off" : true},
+            "09_red_unit_destroyed" : {"type" : "assasination", "story" : "red_unit_destroyed", "details" : { "vip" : [12, 21] }, "one_off" : true},
+            "10_hq_claimed": {
+                "details": {
+                    "amount": 1,
+                    "list": [
+                        [
+                            11,
+                            21
+                        ]
+                    ],
+                    "player_side": "blue"
+                },
+                "one_off": true,
+                "story": "hq_claimed",
+                "type": "claim"
+            }
         }
     },
     "tiles": {
@@ -597,8 +1190,12 @@
         },
         "11_18": {
             "building": {
-                "rotation": 0,
-                "tile": null
+                "abilities": {
+
+                },
+                "rotation": 90,
+                "side": "neutral",
+                "tile": "modern_tower"
             },
             "damage": {
                 "rotation": 0,
@@ -606,11 +1203,11 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": "deco_flower1"
+                "tile": null
             },
             "frame": {
-                "rotation": 180,
-                "tile": "frame_grass4"
+                "rotation": 90,
+                "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 0,
@@ -688,9 +1285,9 @@
         "11_21": {
             "building": {
                 "abilities": {
-                    "ability0": false,
-                    "ability2": false,
-                    "ability4": false
+                    "ability0": true,
+                    "ability2": true,
+                    "ability4": true
                 },
                 "rotation": 90,
                 "side": "red",
@@ -1039,20 +1636,16 @@
                 "tile": "frame_river3"
             },
             "ground": {
-                "rotation": 0,
-                "tile": "ground_dirt_road2"
+                "rotation": 270,
+                "tile": "ground_dirt_road3"
             },
             "terrain": {
                 "rotation": 0,
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
                 "rotation": 0,
-                "side": "red",
-                "tile": "red_infantry"
+                "tile": null
             }
         },
         "12_19": {
@@ -1108,7 +1701,7 @@
             },
             "terrain": {
                 "rotation": 0,
-                "tile": null
+                "tile": "city_roadblock"
             },
             "unit": {
                 "rotation": 0,
@@ -1141,8 +1734,12 @@
                 "tile": null
             },
             "unit": {
-                "rotation": 0,
-                "tile": null
+                "modifiers": {
+
+                },
+                "rotation": 180,
+                "side": "red",
+                "tile": "red_infantry"
             }
         },
         "12_22": {
@@ -1362,7 +1959,7 @@
         "13_15": {
             "building": {
                 "abilities": {
-                    "ability0": false,
+                    "ability0": true,
                     "ability2": false
                 },
                 "rotation": 0,

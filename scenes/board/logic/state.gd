@@ -48,6 +48,8 @@ func get_player_id_by_side(side):
             return index
         index += 1
 
+    return null
+
 func get_player_side_by_id(id):
     return self.players[id]['side']
 
@@ -125,7 +127,10 @@ func set_hero_for_side(side, hero):
     self.set_hero_for_player(self.get_player_id_by_side(side), hero)
 
 func get_hero_for_side(side):
-    return self.get_hero_for_player(self.get_player_id_by_side(side))
+    var side_id = self.get_player_id_by_side(side)
+    if side_id == null:
+        return null
+    return self.get_hero_for_player(side_id)
 
 func auto_set_hero(hero):
     self.set_hero_for_side(hero.side, hero)
