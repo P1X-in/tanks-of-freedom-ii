@@ -8,6 +8,8 @@ func _execute(_metadata):
     if self.who != null:
         tile = self.board.map.model.get_tile(self.who)
         if tile.unit.is_present():
+            if tile.unit.tile.unit_class == "hero":
+                self.board.state.clear_hero_for_side(tile.unit.tile.side)
             tile.unit.clear()
             self.board.smoke_a_tile(tile)
     elif self.fields != null:
@@ -21,6 +23,8 @@ func _execute(_metadata):
                 while y_index <= rectangle["y2"]:
                     tile = self.board.map.model.get_tile(Vector2(x_index, y_index))
                     if tile.unit.is_present():
+                        if tile.unit.tile.unit_class == "hero":
+                            self.board.state.clear_hero_for_side(tile.unit.tile.side)
                         tile.unit.clear()
                         self.board.smoke_a_tile(tile)
                     y_index += 1

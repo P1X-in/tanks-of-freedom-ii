@@ -51,7 +51,7 @@ For ToF3D we intend to have four sides to the conflict, with each having an npc 
 - The General - Cyrus
     - good leader
     - old fashioned
-- The Commando - Blake
+- The Commando - Sergeant Blake
     - patriotic
     - hot headed
 
@@ -150,10 +150,9 @@ Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights f
     - unit abilities
 
 4. Hero units
-    - deploying heroes
     - passive abilities
     - active abilities
-    - second hero
+    - deploying heroes
     - npcs
 
 #### Prologue

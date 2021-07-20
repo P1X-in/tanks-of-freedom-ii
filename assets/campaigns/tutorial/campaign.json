@@ -48,7 +48,7 @@
         {
             "name" : "heroes",
             "title" : "Hero units",
-            "map" : "crossroad.tofmap.json",
+            "map" : "tutorial_hero_units.tofmap.json",
             "description" : "In this training scenario you are going to learn about some Hero units and their unique abilities.",
             "marker" : [650, 400],
             "players": [
