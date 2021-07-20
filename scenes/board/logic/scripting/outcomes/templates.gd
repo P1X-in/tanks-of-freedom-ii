@@ -17,6 +17,7 @@ var templates = {
     'despawn' : preload("res://scenes/board/logic/scripting/outcomes/despawn.gd"),
     'trigger' : preload("res://scenes/board/logic/scripting/outcomes/trigger.gd"),
     'ap' : preload("res://scenes/board/logic/scripting/outcomes/ap.gd"),
+    'level_up' : preload("res://scenes/board/logic/scripting/outcomes/level_up.gd"),
 
     'eliminate_player' : preload("res://scenes/board/logic/scripting/outcomes/eliminate_player.gd")
 }

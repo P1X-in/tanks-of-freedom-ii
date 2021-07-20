@@ -8,7 +8,8 @@ var templates = {
     'decimate' : preload("res://scenes/board/logic/scripting/triggers/decimate.gd"),
     'assasination' : preload("res://scenes/board/logic/scripting/triggers/assasination.gd"),
     'attacked' : preload("res://scenes/board/logic/scripting/triggers/attacked.gd"),
-    'resources' : preload("res://scenes/board/logic/scripting/triggers/resources.gd")
+    'resources' : preload("res://scenes/board/logic/scripting/triggers/resources.gd"),
+    'ability' : preload("res://scenes/board/logic/scripting/triggers/ability.gd"),
 }
 
 func get_trigger(name):

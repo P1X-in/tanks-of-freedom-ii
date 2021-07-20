@@ -1,0 +1,1399 @@
+{
+    "metadata": {
+        "initial_cam_pos": [
+            20,
+            20
+        ]
+    },
+    "scripts": {
+        "stories": {
+            "give_movement_resources": [
+                {
+                    "action": "ap",
+                    "details": {
+                        "amount": 500,
+                        "set": true,
+                        "side": "blue"
+                    }
+                }
+            ],
+            "welcome_message": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "05_tank_ability_used",
+                        "suspended": true
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "06_pick_up_ability_used",
+                        "suspended": true
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "07_drop_off_ability_used",
+                        "suspended": true
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "08_heal_ability_used",
+                        "suspended": true
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "09_missile_ability_used",
+                        "suspended": true
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "10_heavy_missile_ability_used",
+                        "suspended": true
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "11_red_infantry_destroyed",
+                        "suspended": true
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Attention, recruit! This training mission will cover more advanced topics, so stay focused!"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Today you are going to learn how your units gain experience during battles, and why veterans are more valuable than freshly deployed forces."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Here we have a fresh Tank, that is currently at level 0. Every two kills that unit manages to perform, they will gain a level, up to the maximum of level 3."
+                    }
+                },
+                {"action" : "spawn", "details" : {"where" : [19, 21], "template" : "red_infantry", "side" : "red", "rotation" : 90}},
+                {"action" : "spawn", "details" : {"where" : [20, 21], "template" : "red_infantry", "side" : "red", "rotation" : 90}},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Order your tank to destroy these two enemy units. You will have to end your turn to attack again."
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "03_red_infantry_destroyed",
+                        "suspended": true
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "first_red_infantry_destroyed": [
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "03_red_infantry_destroyed",
+                        "suspended": false
+                    }
+                }
+            ],
+            "second_red_infantry_destroyed": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Your tank just leveled up. If you need to check a level of a unit, it is visible on a tile highlight in the bottom-left when you hover over the unit."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Levels are not just pure numbers. Each level brings some benefits."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "At level 1 units gain access to their active abilities."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "At level 2 units gain one additional point of armour, which makes them more resilient against enemy attacks."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "At level 3 units gain one additional Movement Point, making them more mobile."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom" : 0.5
+                    }
+                },
+                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Let us now move to learning about active abilities."
+                    }
+                },
+                {"action" : "spawn", "details" : {"where" : [20, 20], "template" : "blue_infantry", "side" : "blue", "rotation" : 90}},
+                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "red_infantry", "side" : "red", "rotation" : 90}, "delay" : 1},
+                {"action" : "level_up", "details" : {"who" : [20, 20]}},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "In order to use an active ability, select your unit, and then click it again. If a unit has abilities available, then a radial menu will open. From that menu, you can select an ability to be activated. Once activated, tiles that can be affected will be highlighted. Click on any of the highlighted tiles to confirm the use of ability."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Infantry units have the ability to use Heavy Weapon. It allows them to hit a nearby unit for 8 points of damage, minus target armour. This ability can only be used on an enemy directly adjacent to your unit, and it costs 15AP to activate. Try it out."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "infantry_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Using Heavy Weapon ability will not trigger counterattacks, so it is a perfect tool to soften up enemy Tanks. It can be also used to destroy a lightly-armoured targets with only one Infantry unit in a single turn."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Remember, that abilities do have a cost, and a cooldown period after use. When ability is on cooldown, it will be greyed out, with a number of turns left displayed on it."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom" : 0.5
+                    }
+                },
+                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
+                {"action" : "spawn", "details" : {"where" : [20, 21], "template" : "blue_tank", "side" : "blue", "rotation" : 90}},
+                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "red_infantry", "side" : "red", "rotation" : 90}, "delay" : 1},
+                {"action" : "level_up", "details" : {"who" : [20, 21]}},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Tank active ability is called a Long-range Shell. It allows your unit to hit an enemy target up to two tiles away. It can only shoot in a straight line, so make sure you line it up first. Long-range Shell deals 10 points of damage, minus target armour, and costs 30AP to use. Try it out."
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "05_tank_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "tank_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "While a bit expensive, Long-range Shell is a powerful attack, that allows you to hit enemies even in a back row."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom" : 0.5
+                    }
+                },
+                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
+                {"action" : "spawn", "details" : {"where" : [20, 20], "template" : "blue_heli", "side" : "blue", "rotation" : 90}},
+                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "blue_infantry", "side" : "blue", "rotation" : 90}, "delay" : 1},
+                {"action" : "level_up", "details" : {"who" : [20, 20]}},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Level 1 Attack Helicopters are able to transport your own troops. They can pick up an Infantry unit from an adjacent tile, though that action will use up all of their MP, so be careful to not expose your valuable Helicopter to danger. Pick Up and Drop Off actions are free and have no cooldown. Try it out."
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "06_pick_up_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "pick_up_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Your Infantry is now on board of the Helicopter. Make sure it does not get destroyed, or suffer double loss. Now end your turn, and then order your Helicopter to drop off the Infantry unit."
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "07_drop_off_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "drop_off_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "An Infantry unit, that has been dropped off, can not perform any actions this turn, so make sure that landing zone is safe and secured."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Attack Helicopters can be a great way to quickly deliver Infantry units to the enemy buildings, but use them wisely."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom" : 0.5
+                    }
+                },
+                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
+                {"action" : "spawn", "details" : {"where" : [20, 20], "template" : "blue_m_inf", "side" : "blue", "rotation" : 90}},
+                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "blue_infantry", "side" : "blue", "rotation" : 90}, "delay" : 1},
+                {"action" : "level_up", "details" : {"who" : [20, 20]}},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Mobile Infantry is a great support unit with two abilities, that allow you to heal soldiers or repair vehicles. They can only target adjacent tiles, and using one of them triggers cooldown on both. Medkit ability costs 15AP to use, while Repair kit costs 30AP. Try it out."
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "08_heal_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "heal_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Being able to heal high level or mission critical units can make the difference between a successfull mission and a total failure."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom" : 0.5
+                    }
+                },
+                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
+                {"action" : "spawn", "details" : {"where" : [20, 21], "template" : "blue_rocket", "side" : "blue", "rotation" : 90}},
+                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "red_heli", "side" : "red", "rotation" : 90}, "delay" : 1},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Rocket Artillery is a unique type of unit. As you should already know, it can not fight in direct combat. Instead it has access to it's active ability on level 0. It can hit targets up to three tiles away, and does not require direct line of sight to do so. This ability is free to use, and has 2 turns cooldown."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Great thing about Rocket Artillery is that it can hit both ground and flying units. It can not hit targets directly adjacent to it, so make sure to keep enemies at bay with other units. Try it out."
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "09_missile_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "missile_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "When used correctly, these Artillery units allow you to destroy targets, that would otherwise be hard to reach. They can also deal significant damage to any enemy forces approaching your base."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom" : 0.5
+                    }
+                },
+                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
+                {"action" : "spawn", "details" : {"where" : [20, 21], "template" : "blue_rocket", "side" : "blue", "rotation" : 90}},
+                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "red_heli", "side" : "red", "rotation" : 90}, "delay" : 1},
+                {"action" : "level_up", "details" : {"who" : [20, 21]}},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "When leveled up, the active ability of the Rocket Artillery becomes more powerful. It can now hit targets up to four tiles away, and deals more damage. Try it out and see the difference."
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "10_heavy_missile_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "heavy_missile_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Veteran Artillery, with it's long range and high damage is a bane of lightly-armoured units. It is especially effective against all types of Helicopters, though it is equally devastating when used against Infantry or Tanks."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom" : 0.5
+                    }
+                },
+                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
+                {"action" : "spawn", "details" : {"where" : [20, 21], "template" : "blue_scout", "side" : "blue", "rotation" : 90}},
+                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "red_infantry", "side" : "red", "rotation" : 90}, "delay" : 1},
+                {"action" : "level_up", "details" : {"who" : [20, 21]}},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Scout Helicopters have the Rapid Response ability. It allows them to replenish all of their MP and perform an additional attack this turn, if they already did one. It costs 15AP to activate. Just make sure to use it before your Helicopter is out of moves, as it requires 1MP to activate it."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Approach the enemy unit and attack it. Then, activate your ability and attack again."
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "11_red_infantry_destroyed",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "final_infantry_destroyed": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Scout Helicopters can cover a lot of ground with this ability. It is perfect for when you really need that air support at the other side of the battlefield, or to finish off that heavily damaged Tank."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom" : 0.5
+                    }
+                },
+                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "This concludes the lesson about unit levels and abilities. Make sure to use them as often as possible."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Class dismissed."
+                    }
+                },
+                {
+                    "action": "unlock"
+                },
+                {"action" : "end_game", "details" : {"winner" : "blue"}}
+            ],
+        },
+        "triggers": {
+            "01_phase_one_turn_start": {
+                "details": {
+                    "player": 0
+                },
+                "story": "give_movement_resources",
+                "type": "turn"
+            },
+            "02_first_turn": {
+                "details": {
+                    "player": 0,
+                    "turn": 1
+                },
+                "one_off": true,
+                "story": "welcome_message",
+                "type": "turn"
+            },
+            "03_red_infantry_destroyed" : {"type" : "assasination", "story" : "second_red_infantry_destroyed", "details" : { "type" : "red_infantry" }, "one_off" : true},
+            "04_red_infantry_destroyed" : {"type" : "assasination", "story" : "first_red_infantry_destroyed", "details" : { "type" : "red_infantry" }, "one_off" : true},
+            "05_infantry_ability_used" : {"type" : "ability", "story" : "infantry_ability_used", "details" : {}, "one_off" : true},
+            "05_tank_ability_used" : {"type" : "ability", "story" : "tank_ability_used", "details" : {}, "one_off" : true},
+            "06_pick_up_ability_used" : {"type" : "ability", "story" : "pick_up_ability_used", "details" : {}, "one_off" : true},
+            "07_drop_off_ability_used" : {"type" : "ability", "story" : "drop_off_ability_used", "details" : {}, "one_off" : true},
+            "08_heal_ability_used" : {"type" : "ability", "story" : "heal_ability_used", "details" : {}, "one_off" : true},
+            "09_missile_ability_used" : {"type" : "ability", "story" : "missile_ability_used", "details" : {}, "one_off" : true},
+            "10_heavy_missile_ability_used" : {"type" : "ability", "story" : "heavy_missile_ability_used", "details" : {}, "one_off" : true},
+            "11_red_infantry_destroyed" : {"type" : "assasination", "story" : "final_infantry_destroyed", "details" : { "type" : "red_infantry" }, "one_off" : true}
+        }
+    },
+    "tiles": {
+        "18_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_road2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_road2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_road1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_road1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_road1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_road2"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_road2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "city_bridge"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river3"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_river2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_rocks2"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_road1"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_road1"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_flower3"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "modifiers": {
+
+                },
+                "rotation": 0,
+                "side": "blue",
+                "tile": "blue_tank"
+            }
+        },
+        "20_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_flower2"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_road1"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_road1"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_flower5"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_river2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river1"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "city_bridge"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_road2"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_road2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_road1"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_road1"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_road1"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_road2"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_road2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        }
+    }
+}
