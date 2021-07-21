@@ -20,6 +20,8 @@ func ingest_scripts(board_object, incoming_scripts):
 func _setup_basic_win_condition():
     self._build_hq_lost_event(self.board.map.templates.MODERN_HQ)
     self._build_hq_lost_event(self.board.map.templates.STEAMPUNK_HQ)
+    self._build_hq_lost_event(self.board.map.templates.MODERN_HQ)
+    self._build_hq_lost_event(self.board.map.templates.FEUDAL_HQ)
 
 func _build_hq_lost_event(hq_type):
     var trigger = self.trigger_templates.get_trigger('building_lost')
@@ -31,7 +33,7 @@ func _build_hq_lost_event(hq_type):
     outcome.board = self.board
 
     self.board.events.register_observer(self.board.events.types.BUILDING_CAPTURED, trigger, 'observe')
-    
+
 func _setup_trigger(trigger_definition):
     var new_trigger = self.trigger_templates.get_trigger(trigger_definition['type'])
     new_trigger.outcome = self._build_outcome_story(trigger_definition['story'])
@@ -41,7 +43,7 @@ func _setup_trigger(trigger_definition):
 
     if trigger_definition.has('one_off'):
         new_trigger.one_off = trigger_definition['one_off']
-    
+
     for event_type in new_trigger.observed_event_type:
         self.board.events.register_observer(event_type, new_trigger, 'observe')
 
@@ -64,7 +66,7 @@ func _build_outcome_story_step(step_definition):
         new_step.ingest_details(step_definition['details'])
     if step_definition.has('delay'):
         new_step.delay = step_definition['delay']
-        
+
     return new_step
 
 func suspend_trigger(name, state):

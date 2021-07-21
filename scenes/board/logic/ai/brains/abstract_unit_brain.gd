@@ -56,7 +56,7 @@ func _gather_attack_actions(entity_tile, ap):
         if path.size() - 1 > unit_range:
             action = self._approach_action(entity_tile, path, unit_range - 1)
             if action != null:
-                action.value = target_tile.unit.tile.unit_value - 20
+                action.value = target_tile.unit.tile.get_value() - 20
                 actions.append(action)
         else:
             interaction_tiles = self._get_interaction_tiles(target_tile)
@@ -67,7 +67,7 @@ func _gather_attack_actions(entity_tile, ap):
                 if path.size() - 1 > unit_range - 1:
                     action = self._approach_action(entity_tile, path, unit_range - 1)
                     if action != null:
-                        action.value = target_tile.unit.tile.unit_value - 20
+                        action.value = target_tile.unit.tile.get_value() - 20
                         actions.append(action)
                 else:
                     action = self._attack_action(entity_tile, interaction_tile, target_tile, path)
@@ -97,7 +97,7 @@ func _gather_capture_actions(entity_tile, ap):
 
         if entity_tile.is_neighbour(target_tile):
             action = self._capture_action(entity_tile, null, target_tile, [])
-            action.value = target_tile.building.tile.capture_value - (unit.unit_value - 20)
+            action.value = target_tile.building.tile.capture_value - (unit.get_value() - 20)
             actions.append(action)
             continue
 
@@ -121,7 +121,7 @@ func _gather_capture_actions(entity_tile, ap):
                         actions.append(action)
                 else:
                     action = self._capture_action(entity_tile, interaction_tile, target_tile, path)
-                    action.value = target_tile.building.tile.capture_value - (unit.unit_value - 20)
+                    action.value = target_tile.building.tile.capture_value - (unit.get_value() - 20)
                     action.value -= path.size()
                     actions.append(action)
 
@@ -132,8 +132,8 @@ func _gather_ability_actions(_entity_tile, _ap, _board):
 
 func _attack_action(entity_tile, interaction_tile, target_tile, path):
     var action = self.actions_templates['attack'].new(entity_tile, interaction_tile, target_tile, path.size())
-    
-    var value = target_tile.unit.tile.unit_value
+
+    var value = target_tile.unit.tile.get_value()
 
     if entity_tile.unit.tile.can_kill(target_tile.unit.tile):
         value += 100

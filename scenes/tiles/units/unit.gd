@@ -3,6 +3,8 @@ extends "res://scenes/tiles/tile.gd"
 const MAX_LEVEL = 3
 const EXP_PER_LEVEL = 2
 
+onready var audio = $"/root/SimpleAudioLibrary"
+
 onready var animations = $"animations"
 onready var spotlight = $"mesh_anchor/activity_light"
 onready var explosion = $"explosion"
@@ -65,9 +67,9 @@ func get_dict():
     var new_dict = .get_dict()
     new_dict["side"] = self.side
     new_dict["modifiers"] = self.modifiers
-    
+
     return new_dict
-    
+
 func set_side(new_side):
     self.side = new_side
 
@@ -265,11 +267,17 @@ func remove_highlight():
 
 
 func sfx_effect(name):
+    if not self.audio.sounds_enabled:
+        return
+
     var audio_player = self.get_node_or_null("audio/" + name)
     if audio_player != null:
         audio_player.play()
 
 func give_sfx_effect(name):
+    if not self.audio.sounds_enabled:
+        return null
+
     var audio_player = self.get_node_or_null("audio/" + name)
     if audio_player != null:
         $"audio".remove_child(audio_player)
@@ -323,3 +331,6 @@ func heal(value):
     self.hp += value
     if self.hp > stats["max_hp"]:
         self.hp = stats["max_hp"]
+
+func get_value():
+    return self.unit_value + self.level * 10

@@ -17,16 +17,25 @@ func _gather_ability_actions(entity_tile, ap, board):
     if unit_range > ap:
         unit_range = ap
 
+    var closest_enemy = 999
+
     for enemy_unit_tile in self.pathfinder.enemy_units:
         approach_target_tile = self.pathfinder.enemy_units[enemy_unit_tile]
 
         path = self.pathfinder.get_path_to_tile(approach_target_tile)
 
-        if path.size() - 1 > unit_range + 2:
-            action = self._approach_action(entity_tile, path, unit_range - 1)
-            if action != null:
-                action.value = approach_target_tile.unit.tile.unit_value - 20
-                actions.append(action)
+        if path.size() < closest_enemy:
+            closest_enemy = path.size()
+
+    if closest_enemy > 4:
+        for enemy_unit_tile in self.pathfinder.enemy_units:
+            approach_target_tile = self.pathfinder.enemy_units[enemy_unit_tile]
+            path = self.pathfinder.get_path_to_tile(approach_target_tile)
+            if path.size() - 1 > unit_range + 2:
+                action = self._approach_action(entity_tile, path, unit_range - 1)
+                if action != null:
+                    action.value = approach_target_tile.unit.tile.unit_value - 20
+                    actions.append(action)
 
     for ability in unit.active_abilities:
         if ability.is_visible() and ability.ap_cost <= ap and not ability.is_on_cooldown():

@@ -1,5 +1,7 @@
 extends "res://scenes/tiles/tile.gd"
 
+onready var audio = $"/root/SimpleAudioLibrary"
+
 onready var animations = $"animations"
 
 export var side = "neutral"
@@ -16,7 +18,7 @@ func get_dict():
     var new_dict = .get_dict()
     new_dict["side"] = self.side
     new_dict["abilities"] = self._get_abilities_status()
-    
+
     return new_dict
 
 func set_side(new_side):
@@ -32,6 +34,9 @@ func animate_coin():
     self.animations.play("ap_gain")
 
 func sfx_effect(name):
+    if not self.audio.sounds_enabled:
+        return
+
     var audio_player = self.get_node_or_null("audio/" + name)
     if audio_player != null:
         audio_player.play()
