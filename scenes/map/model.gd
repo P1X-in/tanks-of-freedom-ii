@@ -16,6 +16,13 @@ func _init():
             self.tiles[str(x) + "_" + str(y)] = self.tile_template.new(x, y)
     self.connect_neightbours()
 
+func wipe_metadata():
+    self.metadata.clear()
+
+func wipe_scripts():
+    self.scripts["stories"].clear()
+    self.scripts["triggers"].clear()
+
 func get_tile(position):
     return self.tiles[str(position.x) + "_" + str(position.y)]
 

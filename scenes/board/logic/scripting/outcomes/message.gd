@@ -1,9 +1,9 @@
 extends "res://scenes/board/logic/scripting/outcomes/base_outcome.gd"
 
 var text
-var portrait
+var portrait = null
 var name
-var side
+var side = "left"
 
 func _execute(_metadata):
     var actor = {
@@ -19,6 +19,8 @@ func _execute(_metadata):
 
 func _ingest_details(details):
     self.text = details['text']
-    self.portrait = details['portrait']
+    if details.has("portrait"):
+        self.portrait = details['portrait']
     self.name = details['name']
-    self.side = details['side']
+    if details.has("side"):
+        self.side = details['side']

@@ -157,7 +157,15 @@ Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights f
 
 #### Prologue
 1. Just Another Excercise
+    - Warlord Grim orders recruits to attack Ruby Dusk facility as na excercise
+    - Ruby Dusk reacts with confusion
+    - Grim orders further attacks
 2. Border inspection
+    - Prince Tybalt visits a border outpost for inspection
+    - Ruby Dusk attacks the outpost
+    - Grim Informs Tybalt, that Ruby Dusk started a war
+    - Prince Tybalt repels the attack
+    - Prince Tybalt heads for capital to talk with King Ludwig
 
 #### Ruby Dusk Campaign
 To be designed.

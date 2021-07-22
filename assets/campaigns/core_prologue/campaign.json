@@ -6,13 +6,13 @@
         {
             "name" : "another_excercise",
             "title" : "Just another excercise",
-            "map" : "yellow_win.tofmap.json",
+            "map" : "prologue_excercise.tofmap.json",
             "description" : "A fresh company of soldiers receives new orders from Warlord Grim about their next training excercise. Though not everyghing seems to be as it should about this one...",
             "marker" : [420, 90],
             "players": [
                 {
                     "side" : "yellow",
-                    "ap" : 50,
+                    "ap" : 0,
                     "type" : "human"
                 },
                 {

@@ -297,6 +297,8 @@ func wipe_editor():
     self.set_map_name("")
     self.map.builder.wipe_map()
     self.ui.wipe_minimap()
+    self.map.model.wipe_metadata()
+    self.map.model.wipe_scripts()
 
 func next_alternative():
     var tile = self.map.model.get_tile(self.map.camera_tile_position)

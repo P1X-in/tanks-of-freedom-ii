@@ -368,6 +368,9 @@ var generic_building = preload("res://scenes/tiles/buildings/building.gd")
 var generic_unit = preload("res://scenes/tiles/units/unit.gd")
 
 func get_template(template):
+    if template == null:
+        return null
+
     var new_tile = self.templates[template].instance()
     new_tile.template_name = template
 
