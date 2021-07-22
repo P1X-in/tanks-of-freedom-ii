@@ -20,7 +20,7 @@ func ingest_scripts(board_object, incoming_scripts):
 func _setup_basic_win_condition():
     self._build_hq_lost_event(self.board.map.templates.MODERN_HQ)
     self._build_hq_lost_event(self.board.map.templates.STEAMPUNK_HQ)
-    self._build_hq_lost_event(self.board.map.templates.MODERN_HQ)
+    self._build_hq_lost_event(self.board.map.templates.FUTURISTIC_HQ)
     self._build_hq_lost_event(self.board.map.templates.FEUDAL_HQ)
 
 func _build_hq_lost_event(hq_type):

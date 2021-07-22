@@ -15,7 +15,9 @@ func perform(board):
     board.select_tile(self.unit.position)
     if self.interaction != null:
         board.select_tile(self.interaction.position)
+        board.unselect_tile()
         yield(board.get_tree().create_timer(self.path_length * 0.1), "timeout")
+        board.select_tile(self.interaction.position)
     board.select_tile(self.target.position)
     board.unselect_tile()
     yield(board.get_tree().create_timer(0.5), "timeout")

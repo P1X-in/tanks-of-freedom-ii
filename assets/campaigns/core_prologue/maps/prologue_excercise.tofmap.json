@@ -75,7 +75,7 @@
                         "name": "Ruby Dusk Commander",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Alarm! Amber Noon forces spotted on our lands!"
+                        "text": "Alarm! Amber Noon forces just entered our lands!"
                     }
                 },
                 {
@@ -284,7 +284,7 @@
                         "name": "Infantry #1 and Infantry #2",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "Sir Warlord! Welcome back!"
+                        "text": "Sir Grim! Welcome back!"
                     }
                 },
                 {
@@ -302,7 +302,7 @@
                         "name": "Infantry #1",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "No issues, Sir! The Tank and some motorbikes for Mobile Infantry arrived just in time for vehicle excercises."
+                        "text": "No issues, Sir! The Tank and some motorbikes for the Mobile Infantry arrived just in time for vehicle excercises."
                     }
                 },
                 {
