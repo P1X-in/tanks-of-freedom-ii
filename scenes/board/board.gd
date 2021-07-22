@@ -36,6 +36,7 @@ var explosion_template = preload("res://scenes/fx/explosion.tscn")
 var projectile_template = preload("res://scenes/fx/projectile.tscn")
 
 var ending_turn_in_progress = false
+var initial_hq_cam_skipped = false
 
 func _ready():
     self.set_up_map()
@@ -67,7 +68,7 @@ func _input(event):
                 self.toggle_radial_menu()
 
 func _physics_process(_delta):
-    self.hover_tile() 
+    self.hover_tile()
 
 func hover_tile():
     var tile = self.map.model.get_tile(self.map.camera_tile_position)
@@ -81,7 +82,7 @@ func hover_tile():
         if self.should_draw_move_path(tile):
             var path = self.movement_markers.get_path_to_tile(tile)
             self.path_markers.draw_path(path)
-            
+
 
 func set_up_map():
     if self.match_setup.campaign_name != null:
@@ -123,7 +124,7 @@ func start_turn():
         if self.ui.cinematic_bars.is_extended:
             self.ui.hide_cinematic_bars()
 
-    if not self.state.is_current_player_ai() and self.settings.get_option("hq_cam"):
+    if self._should_perform_hq_cam():
         if self._move_camera_to_hq():
             yield(self.get_tree().create_timer(1), "timeout")
 
@@ -144,6 +145,9 @@ func start_turn():
 
 
 func select_tile(position):
+    if self.map.camera.camera_in_transit or self.map.camera.script_operated:
+        return
+
     var tile = self.map.model.get_tile(position)
     var current_player = self.state.get_current_player()
     var open_unit_abilities = false
@@ -166,13 +170,13 @@ func select_tile(position):
                 self.move_unit(self.selected_tile, tile)
                 self.selected_tile = tile
                 self.show_contextual_select()
-                
+
             elif self.selected_tile.is_neighbour(tile) && tile.can_unit_interact(self.selected_tile.unit.tile) && self.state.can_current_player_afford(1):
                 self.handle_interaction(tile)
 
             else:
-                self.unselect_tile() 
-                
+                self.unselect_tile()
+
         else:
             self.unselect_tile()
 
@@ -187,7 +191,7 @@ func unselect_action():
         self.cancel_ability()
     else:
         self.unselect_tile()
-    
+
 
 func unselect_tile():
     self.reset_unit_markers()
@@ -240,7 +244,7 @@ func toggle_radial_menu(context_object=null):
         self.ai._ai_paused = true
 
     self.ui.toggle_radial()
-        
+
     self.map.tile_box.set_visible(not self.map.tile_box.is_visible())
 
 func setup_radial_menu(context_object=null):
@@ -250,7 +254,7 @@ func setup_radial_menu(context_object=null):
         self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, self, "main_menu")
     else:
         self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
-        
+
 
 func place_selection_marker():
     self.selected_tile_marker.show()
@@ -269,7 +273,7 @@ func show_contextual_select(open_unit_abilities=false):
     self.place_selection_marker()
     self.movement_markers.reset()
     self.path_markers.reset()
-    
+
     if self.selected_tile.unit.is_present():
         self.show_unit_movement_markers()
         self.show_unit_interaction_markers()
@@ -491,7 +495,7 @@ func gain_building_ap():
         ap_sum += self.abilities.get_modified_ap_gain(building.ap_gain, building)
         if building.ap_gain > 0:
             building.animate_coin()
-    
+
     self.add_current_player_ap(ap_sum)
 
 func add_current_player_ap(ap_sum):
@@ -600,4 +604,13 @@ func _move_camera_to_hq():
         self.map.move_camera_to_position(hq_position)
         return true
 
+    return false
+
+
+func _should_perform_hq_cam():
+    if not self.state.is_current_player_ai() and self.settings.get_option("hq_cam"):
+        if self.map.model.metadata.has("skip_initial_hq_cam") and not self.initial_hq_cam_skipped:
+            self.initial_hq_cam_skipped = true
+            return false
+        return true
     return false

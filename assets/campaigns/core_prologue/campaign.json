@@ -27,7 +27,7 @@
             "title" : "Border inspection",
             "map" : "yellow_win.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [458, 150],
+            "marker" : [450, 155],
             "players": [
                 {
                     "side" : "yellow",

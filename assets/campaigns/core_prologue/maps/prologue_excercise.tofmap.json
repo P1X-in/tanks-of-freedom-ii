@@ -3,7 +3,8 @@
         "initial_cam_pos": [
             26,
             18
-        ]
+        ],
+        "skip_initial_hq_cam": true
     },
     "scripts": {
         "stories": {
@@ -366,6 +367,16 @@
                         "portrait": "hero_warlord",
                         "side": "left",
                         "text": "Then get to it."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            26,
+                            18
+                        ],
+                        "zoom": 0.5
                     }
                 },
                 {

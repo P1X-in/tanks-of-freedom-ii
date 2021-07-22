@@ -246,7 +246,7 @@ func process_movement_input(delta):
         self.set_translation(position)
     elif axis_value.length() < self.DEADZONE && self.reset_stick:
         self.reset_stick = false
-        
+
 
 func switch_camera():
     if self.camera_mode == self.MODE_TOF:
