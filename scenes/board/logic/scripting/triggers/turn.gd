@@ -10,7 +10,7 @@ func _observe(event):
     if self.turn_no != null and self.turn_no == event.turn_no:
         if self.player_id == null or self.player_id == event.player_id:
             self.execute_outcome(event)
-    elif self.player_id != null and self.player_id == event.player_id:
+    elif self.turn_no == null and self.player_id != null and self.player_id == event.player_id:
         self.execute_outcome(event)
 
 func _get_outcome_metadata(event):

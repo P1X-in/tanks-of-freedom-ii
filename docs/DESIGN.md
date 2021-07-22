@@ -164,8 +164,8 @@ Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights f
     - Prince Tybalt visits a border outpost for inspection
     - Ruby Dusk attacks the outpost
     - Grim Informs Tybalt, that Ruby Dusk started a war
-    - Prince Tybalt repels the attack
-    - Prince Tybalt heads for capital to talk with King Ludwig
+    - Prince Tybalt holds off the attack for a while
+    - Prince Tybalt runs away, goes to capital to talk with King Ludwig
 
 #### Ruby Dusk Campaign
 To be designed.

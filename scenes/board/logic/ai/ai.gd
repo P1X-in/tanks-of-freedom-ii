@@ -16,7 +16,7 @@ func _finish_run():
     self.board.end_turn()
 
 func _ai_tick():
-    while self._ai_paused:
+    while self._ai_paused or self.board.map.camera.camera_in_transit or self.board.map.camera.script_operated:
         yield(self.board.get_tree().create_timer(0.5), "timeout")
         if self._ai_abort:
             return

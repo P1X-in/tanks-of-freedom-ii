@@ -25,13 +25,13 @@
         {
             "name" : "border_inspection",
             "title" : "Border inspection",
-            "map" : "yellow_win.tofmap.json",
-            "description" : "Lorem ipsum",
+            "map" : "prologue_inspection.tofmap.json",
+            "description" : "Prince Tybalt is visiting one of the border outposts for inspection. Out of nowhere Ruby Dusk strikes! Why would they commit such a sudden act of aggression?",
             "marker" : [450, 155],
             "players": [
                 {
                     "side" : "yellow",
-                    "ap" : 50,
+                    "ap" : 0,
                     "type" : "human"
                 },
                 {
