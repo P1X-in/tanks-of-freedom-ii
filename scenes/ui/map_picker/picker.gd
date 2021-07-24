@@ -50,7 +50,7 @@ func _ready():
     self.set_process_input(false)  
 
 func _input(event):
-    if event.is_action_pressed("ui_cancel"):
+    if event.is_action_pressed("ui_cancel") or event.is_action_pressed('editor_menu'):
         self.execute_cancel()
 
 func set_name_mode():

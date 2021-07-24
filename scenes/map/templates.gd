@@ -1,4 +1,6 @@
 
+const DUMMY_GROUND = "dummy_ground"
+
 const GROUND_GRASS = "ground_grass"
 const GROUND_CONCRETE = "ground_concrete"
 const GROUND_RIVER1 = "ground_river1"
@@ -171,6 +173,8 @@ const MATERIAL_NORMAL = "normal"
 const MATERIAL_METALLIC = "metallic"
 
 var templates = {
+    self.DUMMY_GROUND : preload("res://scenes/tiles/ground/base_ground.tscn"),
+
     self.GROUND_GRASS : preload("res://scenes/tiles/ground/grass.tscn"),
     self.GROUND_CONCRETE : preload("res://scenes/tiles/ground/concrete.tscn"),
     self.GROUND_RIVER1 : preload("res://scenes/tiles/ground/river1.tscn"),

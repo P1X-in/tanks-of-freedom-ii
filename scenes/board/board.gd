@@ -47,7 +47,7 @@ func _input(event):
     if not self.ui.is_panel_open():
         if not self.state.is_current_player_ai():
             if event.is_action_pressed("ui_accept"):
-                self.select_tile(self.map.camera_tile_position)
+                self.select_tile(self.map.tile_box_position)
 
             if event.is_action_pressed("ui_cancel"):
                 self.unselect_action()
@@ -71,7 +71,7 @@ func _physics_process(_delta):
     self.hover_tile()
 
 func hover_tile():
-    var tile = self.map.model.get_tile(self.map.camera_tile_position)
+    var tile = self.map.model.get_tile(self.map.tile_box_position)
 
     if tile != self.last_hover_tile:
         self.last_hover_tile = tile
@@ -103,6 +103,7 @@ func set_up_board():
             index += 1
 
     self.state.register_heroes(self.map.model)
+    self.map.builder.call_deferred("fill_dummy_ground")
 
 
 func end_turn():

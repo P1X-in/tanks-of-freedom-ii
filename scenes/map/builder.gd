@@ -25,6 +25,12 @@ func place_ground(position, name, rotation):
 
     self.place_element(position, name, rotation, 0, self.map.tiles_ground_anchor, tile.ground)
 
+func place_dummy_ground(position):
+    var tile = self.map.model.get_tile(position)
+
+    self.place_element(position, "dummy_ground", 0, 0, self.map.tiles_ground_anchor, tile.dummy_ground)
+    tile.dummy_ground.tile.bind_ground_for_mouse(self.map, tile.position)
+
 func place_frame(position, name, rotation):
     var tile = self.map.model.get_tile(position)
 
@@ -217,6 +223,10 @@ func fill_map_from_data(data):
 
     self.map.model.ingest_scripts(scripts)
 
+func fill_dummy_ground():
+    for tile in self.map.model.tiles.values():
+        #self.call_deferred("place_dummy_ground", tile.position)
+        self.place_dummy_ground(tile.position)
 
 func place_tile(tile_id, tile_data):
     var tile = self.map.model.tiles[tile_id]

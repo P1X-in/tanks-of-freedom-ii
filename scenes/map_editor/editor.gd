@@ -27,6 +27,7 @@ func _ready():
     self.ui.load_minimap(self.AUTOSAVE_FILE)
     self.setup_radial_menu()
     self.map.builder.editor = self
+    self.map.builder.call_deferred("fill_dummy_ground")
     
 
 func _physics_process(_delta):
@@ -34,7 +35,7 @@ func _physics_process(_delta):
 
 
 func update_ui_position():
-    self.ui.update_position(self.map.camera_tile_position.x, self.map.camera_tile_position.y)
+    self.ui.update_position(self.map.tile_box_position.x, self.map.tile_box_position.y)
 
 
 func _input(event):
@@ -108,11 +109,11 @@ func place_tile():
     self.actions_history.append({
         "type" : "add",
         "class" : self.selected_class,
-        "position" : self.map.camera_tile_position,
+        "position" : self.map.tile_box_position,
         "tile" : self.selected_tile,
         "rotation" : self.tile_rotation,
     })
-    self._place_tile(self.selected_class, self.map.camera_tile_position, self.selected_tile, self.tile_rotation)
+    self._place_tile(self.selected_class, self.map.tile_box_position, self.selected_tile, self.tile_rotation)
     self.autosave()
 
 func _place_tile(tile_class, position, tile_type, _tile_rotation):
@@ -133,7 +134,7 @@ func _place_tile(tile_class, position, tile_type, _tile_rotation):
 
 
 func clear_tile():
-    self.map.builder.clear_tile_layer(self.map.camera_tile_position)
+    self.map.builder.clear_tile_layer(self.map.tile_box_position)
     self.autosave()
 
 func undo_action():
@@ -301,7 +302,7 @@ func wipe_editor():
     self.map.model.wipe_scripts()
 
 func next_alternative():
-    var tile = self.map.model.get_tile(self.map.camera_tile_position)
+    var tile = self.map.model.get_tile(self.map.tile_box_position)
     var old_side
 
     if tile.building.is_present():
@@ -310,7 +311,7 @@ func next_alternative():
         self.actions_history.append({
             "type" : "side",
             "class" : "building",
-            "position" : self.map.camera_tile_position,
+            "position" : self.map.tile_box_position,
             "old_side" : old_side,
             "new_side" : tile.building.tile.side,
         })
@@ -321,7 +322,7 @@ func next_alternative():
         self.actions_history.append({
             "type" : "side",
             "class" : "unit",
-            "position" : self.map.camera_tile_position,
+            "position" : self.map.tile_box_position,
             "old_side" : old_side,
             "new_side" : tile.unit.tile.side,
         })
@@ -335,7 +336,7 @@ func next_alternative():
 
 func next_building_side(building_object):
     var side_map = self.rotations.get_player_map(building_object.side)
-    self.map.builder.set_building_side(self.map.camera_tile_position, side_map["next"])
+    self.map.builder.set_building_side(self.map.tile_box_position, side_map["next"])
 
 func next_unit_side(unit_object):
     var side_map = self.rotations.get_player_map(unit_object.side)
@@ -343,7 +344,7 @@ func next_unit_side(unit_object):
     if side_map["next"] == "neutral":
         side_map = self.rotations.get_player_map(side_map["next"])
 
-    self.map.builder.set_unit_side(self.map.camera_tile_position, side_map["next"])
+    self.map.builder.set_unit_side(self.map.tile_box_position, side_map["next"])
     
 func next_damage_stage(tile):
     self.replace_terrain(tile, tile.terrain.tile.next_damage_stage_template)
@@ -361,7 +362,7 @@ func notify_about_removal(action_details):
     self.actions_history.append(action_details)
 
 func _open_ability_ban_menu():
-    var tile = self.map.model.get_tile(self.map.camera_tile_position)
+    var tile = self.map.model.get_tile(self.map.tile_box_position)
     if tile.building.is_present():
         self.toggle_radial_menu(tile.building.tile)
             

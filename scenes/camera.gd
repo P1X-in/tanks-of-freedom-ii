@@ -18,6 +18,7 @@ export var device_id = 0
 export var rotate_speed = 100
 export var zoom_speed = 20
 export var move_speed = 50
+export var mouse_zoom_step = 2.0
 export var camera_auto_pan_follow_speed = 9.0
 export var camera_auto_pan_speed_modifier = 1.5
 export var camera_min_deg = -70
@@ -74,6 +75,10 @@ var camera_zoom_fraction = null
 var shakes_left = 0
 var last_shake_time = 0
 
+var snap_tile_box_to_camera = true
+var mouse_drag = false
+var mouse_click_position = null
+
 func _ready():
     randomize()
     self.camera_pivot = $"pivot"
@@ -108,6 +113,25 @@ func _input(event):
 
     if event.is_action_pressed("switch_camera"):
         self.switch_camera()
+    if event.is_action_pressed("mouse_zoom_in"):
+        self._mouse_zoom_in()
+    if event.is_action_pressed("mouse_zoom_out"):
+        self._mouse_zoom_out()
+
+    if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
+        if event.pressed:
+            self.mouse_click_position = event.position
+        else:
+            self.mouse_click_position = null
+    elif event is InputEventMouseMotion:
+        if self.mouse_click_position != null:
+            if event.position.distance_squared_to(self.mouse_click_position) > 16:
+                self.mouse_drag = true
+        else:
+            self.mouse_drag = false
+
+        if self.mouse_drag:
+            self._mouse_shift_camera(event.relative)
 
 func _process(delta):
     if self.paused:
@@ -244,6 +268,7 @@ func process_movement_input(delta):
         position.z = clamp(position.z, 0, self.camera_space_size)
 
         self.set_translation(position)
+        self.snap_tile_box_to_camera = true
     elif axis_value.length() < self.DEADZONE && self.reset_stick:
         self.reset_stick = false
 
@@ -346,3 +371,47 @@ func _set_camera_translation(camera, offset):
     translation.x = offset.x
     translation.y = offset.y
     camera.set_translation(translation)
+
+func _shift_camera_translation(offset):
+    var current_position = self.get_translation()
+    current_position.x += offset.x
+    current_position.z += offset.y
+
+    self.set_translation(current_position)
+
+func _mouse_zoom_in():
+    camera_distance -= self.mouse_zoom_step
+    camera_distance = clamp(camera_distance, self.camera_distance_min, self.camera_distance_max)
+
+    tof_camera_distance -= self.mouse_zoom_step
+    tof_camera_distance = clamp(tof_camera_distance, self.tof_camera_distance_min, self.tof_camera_distance_max)
+
+    aw_camera_distance -= self.mouse_zoom_step
+    aw_camera_distance = clamp(aw_camera_distance, self.aw_camera_distance_min, self.aw_camera_distance_max)
+
+
+func _mouse_zoom_out():
+    camera_distance += self.mouse_zoom_step
+    camera_distance = clamp(camera_distance, self.camera_distance_min, self.camera_distance_max)
+
+    tof_camera_distance += self.mouse_zoom_step
+    tof_camera_distance = clamp(tof_camera_distance, self.tof_camera_distance_min, self.tof_camera_distance_max)
+
+    aw_camera_distance += self.mouse_zoom_step
+    aw_camera_distance = clamp(aw_camera_distance, self.aw_camera_distance_min, self.aw_camera_distance_max)
+
+func _mouse_shift_camera(relative_offset):
+    var camera_fraction
+    if self.camera_mode == self.MODE_TOF:
+        camera_fraction = self.tof_camera_distance / self.tof_camera_distance_max
+        relative_offset = relative_offset * camera_fraction * Vector2(0.08, 0.16)
+        relative_offset = relative_offset.rotated(deg2rad(-45))
+    if self.camera_mode == self.MODE_AW:
+        pass
+    if self.camera_mode == self.MODE_FREE:
+        pass
+
+
+    #relative_offset.y = -relative_offset.y
+    self._shift_camera_translation(-relative_offset)
+

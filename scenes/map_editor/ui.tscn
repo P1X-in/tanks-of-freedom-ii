@@ -122,6 +122,7 @@ tracks/1/keys = {
 [node name="ui" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 theme = ExtResource( 6 )
 script = ExtResource( 1 )
 __meta__ = {

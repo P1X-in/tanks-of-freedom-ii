@@ -8,7 +8,7 @@ onready var camera = $"camera"
 onready var campaign = $"/root/Campaign"
 
 var tile_box_space_size
-var camera_tile_position = Vector2(0, 0)
+var tile_box_position = Vector2(0, 0)
 
 var templates = preload("res://scenes/map/templates.gd").new()
 var model = preload("res://scenes/map/model.gd").new()
@@ -26,17 +26,22 @@ func _ready():
 
 
 func _physics_process(_delta):
-    self.update_camera_tile_position()
+    self.update_tile_box_position_from_camera()
     self.snap_tile_box()
 
 
-func update_camera_tile_position():
-    self.camera_tile_position = self.world_to_map(self.camera.get_translation())
+func update_tile_box_position_from_camera():
+    if self.camera.snap_tile_box_to_camera:
+        self.tile_box_position = self.world_to_map(self.camera.get_translation())
+
+func set_tile_box_position(position):
+    self.camera.snap_tile_box_to_camera = false
+    self.tile_box_position = position
 
 
 func snap_tile_box():
     var position = self.tile_box.get_translation()
-    var placement = self.map_to_world(self.camera_tile_position)
+    var placement = self.map_to_world(self.tile_box_position)
 
     placement.y = position.y
 
@@ -84,7 +89,7 @@ func move_camera_to_position_if_far_away(destination, tolerance=9, zoom=null):
     if destination == null:
         return false
 
-    if self.camera_tile_position.distance_squared_to(destination) > tolerance or zoom != null:
+    if self.tile_box_position.distance_squared_to(destination) > tolerance or zoom != null:
         self.move_camera_to_position(destination)
 
     return true

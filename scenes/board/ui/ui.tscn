@@ -17,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -0.529724
 margin_right = -0.529785
+mouse_filter = 2
 theme = ExtResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -163,6 +164,7 @@ __meta__ = {
 [node name="cinematic_bars" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -172,6 +174,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1919.0
 margin_bottom = 1080.0
+mouse_filter = 2
 
 [node name="story_dialog" type="MarginContainer" parent="."]
 anchor_left = 0.5
