@@ -37,6 +37,7 @@ var projectile_template = preload("res://scenes/fx/projectile.tscn")
 
 var ending_turn_in_progress = false
 var initial_hq_cam_skipped = false
+var mouse_click_position = null
 
 func _ready():
     self.set_up_map()
@@ -57,6 +58,13 @@ func _input(event):
             elif event.is_action_released("end_turn"):
                 self.abort_ending_turn()
 
+            if event.is_action_pressed("mouse_click"):
+                self.mouse_click_position = event.position
+            if event.is_action_released("mouse_click"):
+                if event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD:
+                    self.select_tile(self.map.tile_box_position)
+                self.mouse_click_position = null
+
         if event.is_action_pressed("editor_menu"):
             self.toggle_radial_menu()
     else:
@@ -71,17 +79,18 @@ func _physics_process(_delta):
     self.hover_tile()
 
 func hover_tile():
-    var tile = self.map.model.get_tile(self.map.tile_box_position)
+    if not self.ui.is_panel_open():
+        var tile = self.map.model.get_tile(self.map.tile_box_position)
 
-    if tile != self.last_hover_tile:
-        self.last_hover_tile = tile
+        if tile != self.last_hover_tile:
+            self.last_hover_tile = tile
 
-        self.update_tile_highlight(tile)
+            self.update_tile_highlight(tile)
 
-        self.path_markers.reset()
-        if self.should_draw_move_path(tile):
-            var path = self.movement_markers.get_path_to_tile(tile)
-            self.path_markers.draw_path(path)
+            self.path_markers.reset()
+            if self.should_draw_move_path(tile):
+                var path = self.movement_markers.get_path_to_tile(tile)
+                self.path_markers.draw_path(path)
 
 
 func set_up_map():
@@ -103,7 +112,6 @@ func set_up_board():
             index += 1
 
     self.state.register_heroes(self.map.model)
-    self.map.builder.call_deferred("fill_dummy_ground")
 
 
 func end_turn():

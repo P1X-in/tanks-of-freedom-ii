@@ -8,6 +8,7 @@ const CAMERA_AXIS_Y = JOY_ANALOG_RY
 const CAMERA_AXIS_ZOOM_IN = JOY_ANALOG_L2
 const CAMERA_AXIS_ZOOM_OUT = JOY_ANALOG_R2
 const SHAKE_MAX_MAGNITUDE = 0.5
+const MOUSE_MOVE_THRESHOLD = 16
 
 
 const MODE_FREE = "free"
@@ -125,7 +126,7 @@ func _input(event):
             self.mouse_click_position = null
     elif event is InputEventMouseMotion:
         if self.mouse_click_position != null:
-            if event.position.distance_squared_to(self.mouse_click_position) > 16:
+            if event.position.distance_squared_to(self.mouse_click_position) > self.MOUSE_MOVE_THRESHOLD:
                 self.mouse_drag = true
         else:
             self.mouse_drag = false
@@ -198,6 +199,11 @@ func process_free_camera_input(delta):
 
     if abs(axis_value.x) > DEADZONE:
         camera_angle_y -= self.rotate_speed * axis_value.x * delta
+
+    if camera_angle_y > 360.0:
+        camera_angle_y -= 360.0
+    if camera_angle_y < 0.0:
+        camera_angle_y += 360.0
 
     if abs(axis_value.y) > DEADZONE:
        camera_angle_x += self.rotate_speed * axis_value.y * delta
@@ -407,11 +413,12 @@ func _mouse_shift_camera(relative_offset):
         relative_offset = relative_offset * camera_fraction * Vector2(0.08, 0.16)
         relative_offset = relative_offset.rotated(deg2rad(-45))
     if self.camera_mode == self.MODE_AW:
-        pass
+        camera_fraction = self.aw_camera_distance / self.aw_camera_distance_max
+        relative_offset = relative_offset * camera_fraction * Vector2(0.08, 0.12)
     if self.camera_mode == self.MODE_FREE:
-        pass
+        camera_fraction = self.camera_distance / self.camera_distance_max
+        relative_offset = relative_offset * camera_fraction * 0.08
+        relative_offset = relative_offset.rotated(deg2rad(-self.camera_angle_y))
 
-
-    #relative_offset.y = -relative_offset.y
     self._shift_camera_translation(-relative_offset)
 

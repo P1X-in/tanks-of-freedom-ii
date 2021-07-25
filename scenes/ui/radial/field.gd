@@ -17,9 +17,16 @@ var bound_object = null
 var bound_method = null
 var bound_args = []
 
+var radial
+var index
+
 func _ready():
     self.default_background = self.background.get_modulate()
     self.full_background = Color(1, 1, 1, 1)
+
+func bind_radial(_radial, _index):
+    self.radial = _radial
+    self.index = _index
 
 func set_field(new_icon, new_label, new_bound_object=null, new_bound_method=null, new_bound_args=[]):
     self.icon = new_icon
@@ -76,3 +83,12 @@ func execute_bound_method():
             self.bound_object.call_deferred(self.bound_method, self.bound_args)
         else:
             self.bound_object.call_deferred(self.bound_method)
+
+
+func _on_mouse_click_mouse_entered():
+    self.radial.focus_field(self.index)
+    self.radial.mouse_mode = true
+
+
+func _on_mouse_click_mouse_exited():
+    self.radial.unfocus_field()

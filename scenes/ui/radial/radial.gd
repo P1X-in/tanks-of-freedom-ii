@@ -12,6 +12,8 @@ export var device_id = 0
 var fields = []
 var focused_field = null
 
+var mouse_mode = false
+
 func _ready():
     self.fields = [
         $"fields/field1",
@@ -25,6 +27,11 @@ func _ready():
     ]
     self.set_process_input(false)
 
+    var index = 0
+    while index < self.fields.size():
+        self.fields[index].bind_radial(self, index)
+        index += 1
+
 func _input(event):
     var axis_value = Vector2()
 
@@ -32,6 +39,7 @@ func _input(event):
     axis_value.y = Input.get_joy_axis(self.device_id, self.analog_axis_y)
 
     if axis_value.length() > 0.5:
+        self.mouse_mode = false
         var angle = rad2deg(axis_value.angle()) + 112.5
         if angle < 0.0:
             angle += 360
@@ -46,7 +54,11 @@ func _input(event):
             self.execute_focused_field()
 
     else:
-        self.unfocus_field()
+        if not self.mouse_mode:
+            self.unfocus_field()
+
+    if event.is_action_pressed("mouse_click"):
+        self.execute_focused_field() 
 
 func show_menu():
     self.animations.play("show")

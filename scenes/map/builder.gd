@@ -12,6 +12,7 @@ var map
 
 var editor = null
 
+
 func _init(map_scene):
     self.map = map_scene
 
@@ -24,12 +25,6 @@ func place_ground(position, name, rotation):
         tile.ground.clear()
 
     self.place_element(position, name, rotation, 0, self.map.tiles_ground_anchor, tile.ground)
-
-func place_dummy_ground(position):
-    var tile = self.map.model.get_tile(position)
-
-    self.place_element(position, "dummy_ground", 0, 0, self.map.tiles_ground_anchor, tile.dummy_ground)
-    tile.dummy_ground.tile.bind_ground_for_mouse(self.map, tile.position)
 
 func place_frame(position, name, rotation):
     var tile = self.map.model.get_tile(position)
@@ -217,16 +212,25 @@ func fill_map_from_data(data):
     if data.has("metadata"):
         self.map.model.metadata = data["metadata"]
 
+    self.attach_mouse_layer()
+
     for tile_id in self.map.model.tiles.keys():
         if tiles_data.has(tile_id):
             self.place_tile(tile_id, tiles_data[tile_id])
 
     self.map.model.ingest_scripts(scripts)
 
-func fill_dummy_ground():
-    for tile in self.map.model.tiles.values():
-        #self.call_deferred("place_dummy_ground", tile.position)
-        self.place_dummy_ground(tile.position)
+func attach_mouse_layer():
+    var ground_point
+    var tile
+
+    self.map.mouse_layer.initialize(self.map.model.SIZE, self.map.TILE_SIZE)
+    self.map.tiles_ground_anchor.add_child(self.map.mouse_layer.mouse_layer)
+    for key in self.map.mouse_layer.ground_points.keys():
+        ground_point = self.map.mouse_layer.ground_points[key]
+        tile = self.map.model.tiles[key]
+        ground_point.bind_ground_for_mouse(self.map, tile.position)
+
 
 func place_tile(tile_id, tile_data):
     var tile = self.map.model.tiles[tile_id]

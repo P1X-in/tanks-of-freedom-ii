@@ -12,7 +12,7 @@ func is_object_without_abilities(board, context_object, include_disabled=false):
         for ability in context_object.abilities:
             if not ability.disabled:
                 return false
-            return true
+        return true
 
     if context_object is board.map.templates.generic_unit:
         if not context_object.has_moves():

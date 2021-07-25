@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/ui/radial/field.gd" type="Script" id=1]
 [ext_resource path="res://assets/gui/editor/circle.png" type="Texture" id=2]
 [ext_resource path="res://assets/gui/editor/circle_white.png" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 50.0
 
 [node name="field" type="Node2D"]
 script = ExtResource( 1 )
@@ -35,3 +38,11 @@ custom_fonts/font = ExtResource( 4 )
 text = "1"
 align = 1
 valign = 1
+
+[node name="mouse_click" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="mouse_click"]
+shape = SubResource( 1 )
+
+[connection signal="mouse_entered" from="mouse_click" to="." method="_on_mouse_click_mouse_entered"]
+[connection signal="mouse_exited" from="mouse_click" to="." method="_on_mouse_click_mouse_exited"]

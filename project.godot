@@ -26,6 +26,7 @@ config/windows_native_icon="res://assets/icons/win.ico"
 MapManager="*res://scripts/services/map_manager.gd"
 GamepadAdapter="*res://scripts/services/gamepad_adapter.gd"
 SimpleAudioLibrary="*res://scripts/services/audio.gd"
+MouseLayer="*res://scripts/services/mouse_layer.gd"
 SceneSwitcher="*res://scripts/services/scene_switcher.gd"
 MatchSetup="*res://scripts/services/match_setup.gd"
 Settings="*res://scripts/services/settings.gd"
@@ -123,11 +124,13 @@ end_turn={
 "deadzone": 0.5,
 "events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":67,"unicode":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":3,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 editor_ban_menu={
 "deadzone": 0.5,
 "events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":9,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":3,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 mouse_click={

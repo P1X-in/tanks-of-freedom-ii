@@ -15,6 +15,7 @@ var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").n
 var tile_rotation = 0
 var selected_tile = "ground_grass"
 var selected_class = "ground"
+var mouse_click_position = null
 
 var current_map_name = ""
 
@@ -27,7 +28,6 @@ func _ready():
     self.ui.load_minimap(self.AUTOSAVE_FILE)
     self.setup_radial_menu()
     self.map.builder.editor = self
-    self.map.builder.call_deferred("fill_dummy_ground")
     
 
 func _physics_process(_delta):
@@ -43,6 +43,14 @@ func _input(event):
         if event.is_action_pressed("ui_accept"):
             self.place_tile()
             self.audio.play("menu_click")
+
+        if event.is_action_pressed("mouse_click"):
+            self.mouse_click_position = event.position
+        if event.is_action_released("mouse_click"):
+            if event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD:
+                self.audio.play("menu_click")
+                self.place_tile()
+            self.mouse_click_position = null
 
         if event.is_action_pressed("editor_clear"):
             self.clear_tile()
