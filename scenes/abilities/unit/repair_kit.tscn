@@ -6,7 +6,7 @@
 [node name="repair_kit" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "Repair Kit"
-ap_cost = 30
+ap_cost = 15
 cooldown = 3
 named_icon = "repair_kit"
 ability_range = 1

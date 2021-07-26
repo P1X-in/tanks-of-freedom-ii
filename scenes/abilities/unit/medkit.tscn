@@ -6,7 +6,7 @@
 [node name="medkit" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "Medkit"
-ap_cost = 15
+ap_cost = 5
 cooldown = 3
 named_icon = "medkit"
 ability_range = 1
