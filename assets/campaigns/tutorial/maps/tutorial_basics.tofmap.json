@@ -67,7 +67,7 @@
                         "name": "General Cyrus",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Luckily, you can recruit more in these Barracks. Select the building to open a recruitment radial menu. From there, use your left analogue stick to select an Infantry unit. Then, select a neighbouring tile with a green marker to confirm deployment."
+                        "text": "Luckily, you can recruit more in these Barracks. Select the building to open a recruitment radial menu. From there, select an Infantry unit. Then, select a neighbouring tile with a green marker to confirm deployment."
                     }
                 },
                 {
@@ -359,7 +359,7 @@
                         "name": "General Cyrus",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Infantry is in position to strike. Just like with claiming a building, select your unit, and you will see an attack marker on the enemy, only this time it will be red instead of green. With your Infantry selected, click on the enemy unit to order it to attack."
+                        "text": "Infantry is in position to strike. Just like with claiming a building, select your unit, and you will see an attack marker on the enemy, only this time it will be red instead of blue. With your Infantry selected, click on the enemy unit to order an attack."
                     }
                 },
                 {
