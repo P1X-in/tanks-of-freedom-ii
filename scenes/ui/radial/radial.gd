@@ -57,7 +57,7 @@ func _input(event):
         if not self.mouse_mode:
             self.unfocus_field()
 
-    if event.is_action_pressed("mouse_click"):
+    if event.is_action_released("mouse_click"):
         self.execute_focused_field() 
 
 func show_menu():
