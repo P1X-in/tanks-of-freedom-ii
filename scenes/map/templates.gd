@@ -80,6 +80,10 @@ const DECO_GROUND_DMG_4 = "deco_ground_dmg4"
 const DECO_GROUND_DMG_5 = "deco_ground_dmg5"
 const DECO_GROUND_DMG_6 = "deco_ground_dmg6"
 
+const BRIDGE_PLATE = "bridge_plate"
+const BRIDGE_LEGS = "bridge_legs"
+const BRIDGE_SUSPENSION = "bridge_suspension"
+
 const CITY_BUILDING_BIG1 = "city_building_big1"
 const CITY_BUILDING_BIG2 = "city_building_big2"
 const CITY_BUILDING_BIG3 = "city_building_big3"
@@ -252,6 +256,9 @@ var templates = {
     self.GROUND_SAND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/sand/sand_dirt_road3.tscn"),
     self.GROUND_SAND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/sand/sand_dirt_road4.tscn"),
 
+    self.BRIDGE_PLATE : preload("res://scenes/tiles/ground/bridge_plate.tscn"),
+    self.BRIDGE_LEGS : preload("res://scenes/tiles/ground/bridge_legs.tscn"),
+
     self.FRAME_GRASS1 : preload("res://scenes/tiles/frames/grass_1_overtile.tscn"),
     self.FRAME_GRASS2 : preload("res://scenes/tiles/frames/grass_2_overtile.tscn"),
     self.FRAME_GRASS3 : preload("res://scenes/tiles/frames/grass_3_overtile.tscn"),
@@ -306,6 +313,7 @@ var templates = {
     self.CITY_BUILDING_SMALL6 : preload("res://scenes/tiles/city/building_small_6_overtile.tscn"),
     self.CITY_BRIDGE : preload("res://scenes/tiles/city/river_bridge_overtile.tscn"),
     self.CITY_ROADBLOCK : preload("res://scenes/tiles/city/roadblock_overtile.tscn"),
+    self.BRIDGE_SUSPENSION : preload("res://scenes/tiles/city/bridge_suspension.tscn"),
 
     self.DAMAGED_STATUE : preload("res://scenes/tiles/decorations/statue_damaged.tscn"),
     self.DAMAGED_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_damaged.tscn"),

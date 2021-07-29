@@ -135,12 +135,12 @@ func place_unit(position, name, rotation, side=null):
     if tile.unit.is_present():
         self._notify_removal(tile.unit, position, self.map.builder.CLASS_UNIT, tile.unit.tile.side)
         tile.unit.clear()
-    if tile.terrain.is_present():
-        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
-        tile.terrain.clear()
     if tile.building.is_present():
         self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side, tile.building.tile._get_abilities_status())
         tile.building.clear()
+    if tile.terrain.is_present() and not tile.can_acommodate_unit():
+        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
+        tile.terrain.clear()
 
     var new_unit = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_units_anchor, tile.unit)
 
