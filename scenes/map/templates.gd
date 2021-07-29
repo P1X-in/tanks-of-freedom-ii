@@ -129,12 +129,13 @@ const NATURE_TREES4 = "nature_trees4"
 const NATURE_TREES5 = "nature_trees5"
 const NATURE_TREES6 = "nature_trees6"
 
-const NATURE_SAND_DUNES1 = "nature_sand_dunes1"
-const NATURE_SAND_DUNES2 = "nature_sand_dunes2"
-const NATURE_SAND_DUNES3 = "nature_sand_dunes3"
 const NATURE_SAND_CACTI1 = "nature_sand_cacti1"
 const NATURE_SAND_CACTI2 = "nature_sand_cacti2"
 const NATURE_SAND_CACTI3 = "nature_sand_cacti3"
+const NATURE_SAND_DUNES1 = "nature_sand_dunes1"
+const NATURE_SAND_DUNES2 = "nature_sand_dunes2"
+const NATURE_SAND_DUNES3 = "nature_sand_dunes3"
+const NATURE_SAND_DUNES4 = "nature_sand_dunes4"
 
 const MODERN_AIRFIELD = "modern_airfield"
 const MODERN_BARRACKS = "modern_barracks"
@@ -348,6 +349,7 @@ var templates = {
     self.NATURE_SAND_DUNES1 : preload("res://scenes/tiles/nature/sand/dunes_1_overtile.tscn"),
     self.NATURE_SAND_DUNES2 : preload("res://scenes/tiles/nature/sand/dunes_2_overtile.tscn"),
     self.NATURE_SAND_DUNES3 : preload("res://scenes/tiles/nature/sand/dunes_3_overtile.tscn"),
+    self.NATURE_SAND_DUNES4 : preload("res://scenes/tiles/nature/sand/dunes_4_overtile.tscn"),
 
     self.MODERN_AIRFIELD : preload("res://scenes/tiles/buildings/blue/airfield.tscn"),
     self.MODERN_BARRACKS : preload("res://scenes/tiles/buildings/blue/barracks.tscn"),
