@@ -14,6 +14,18 @@ const GROUND_DIRT_ROAD2 = "ground_dirt_road2"
 const GROUND_DIRT_ROAD3 = "ground_dirt_road3"
 const GROUND_DIRT_ROAD4 = "ground_dirt_road4"
 
+const GROUND_SNOW = "ground_snow"
+const GROUND_SNOW_RIVER1 = "ground_snow_river1"
+const GROUND_SNOW_RIVER2 = "ground_snow_river2"
+const GROUND_SNOW_ROAD1 = "ground_snow_road1"
+const GROUND_SNOW_ROAD2 = "ground_snow_road2"
+const GROUND_SNOW_ROAD3 = "ground_snow_road3"
+const GROUND_SNOW_ROAD4 = "ground_snow_road4"
+const GROUND_SNOW_DIRT_ROAD1 = "ground_snow_dirt_road1"
+const GROUND_SNOW_DIRT_ROAD2 = "ground_snow_dirt_road2"
+const GROUND_SNOW_DIRT_ROAD3 = "ground_snow_dirt_road3"
+const GROUND_SNOW_DIRT_ROAD4 = "ground_snow_dirt_road4"
+
 const FRAME_GRASS1 = "frame_grass1"
 const FRAME_GRASS2 = "frame_grass2"
 const FRAME_GRASS3 = "frame_grass3"
@@ -27,6 +39,14 @@ const FRAME_ROAD2 = "frame_road2"
 const FRAME_ROAD3 = "frame_road3"
 const FRAME_ROAD4 = "frame_road4"
 const FRAME_FENCE = "frame_fence"
+
+const FRAME_SNOW2 = "frame_snow2"
+const FRAME_SNOW3 = "frame_snow3"
+const FRAME_SNOW4 = "frame_snow4"
+const FRAME_SNOW_RIVER1 = "frame_snow_river1"
+const FRAME_SNOW_RIVER2 = "frame_snow_river2"
+const FRAME_SNOW_RIVER3 = "frame_snow_river3"
+const FRAME_SNOW_RIVER4 = "frame_snow_river4"
 
 const DECO_FLOWERS1 = "deco_flower1"
 const DECO_FLOWERS2 = "deco_flower2"
@@ -188,6 +208,18 @@ var templates = {
     self.GROUND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/dirt_road3.tscn"),
     self.GROUND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/dirt_road4.tscn"),
 
+    self.GROUND_SNOW : preload("res://scenes/tiles/ground/snow/snow.tscn"),
+    self.GROUND_SNOW_RIVER1 : preload("res://scenes/tiles/ground/snow/ice_river1.tscn"),
+    self.GROUND_SNOW_RIVER2 : preload("res://scenes/tiles/ground/snow/ice_river2.tscn"),
+    self.GROUND_SNOW_ROAD1 : preload("res://scenes/tiles/ground/snow/snow_road1.tscn"),
+    self.GROUND_SNOW_ROAD2 : preload("res://scenes/tiles/ground/snow/snow_road2.tscn"),
+    self.GROUND_SNOW_ROAD3 : preload("res://scenes/tiles/ground/snow/snow_road3.tscn"),
+    self.GROUND_SNOW_ROAD4 : preload("res://scenes/tiles/ground/snow/snow_road4.tscn"),
+    self.GROUND_SNOW_DIRT_ROAD1 : preload("res://scenes/tiles/ground/snow/snow_dirt_road1.tscn"),
+    self.GROUND_SNOW_DIRT_ROAD2 : preload("res://scenes/tiles/ground/snow/snow_dirt_road2.tscn"),
+    self.GROUND_SNOW_DIRT_ROAD3 : preload("res://scenes/tiles/ground/snow/snow_dirt_road3.tscn"),
+    self.GROUND_SNOW_DIRT_ROAD4 : preload("res://scenes/tiles/ground/snow/snow_dirt_road4.tscn"),
+
     self.FRAME_GRASS1 : preload("res://scenes/tiles/frames/grass_1_overtile.tscn"),
     self.FRAME_GRASS2 : preload("res://scenes/tiles/frames/grass_2_overtile.tscn"),
     self.FRAME_GRASS3 : preload("res://scenes/tiles/frames/grass_3_overtile.tscn"),
@@ -201,6 +233,14 @@ var templates = {
     self.FRAME_ROAD3 : preload("res://scenes/tiles/frames/road_3_overtile.tscn"),
     self.FRAME_ROAD4 : preload("res://scenes/tiles/frames/road_4_overtile.tscn"),
     self.FRAME_FENCE : preload("res://scenes/tiles/frames/wired_fence_overtile.tscn"),
+
+    self.FRAME_SNOW2 : preload("res://scenes/tiles/frames/snow/snow_2_overtile.tscn"),
+    self.FRAME_SNOW3 : preload("res://scenes/tiles/frames/snow/snow_3_overtile.tscn"),
+    self.FRAME_SNOW4 : preload("res://scenes/tiles/frames/snow/snow_4_overtile.tscn"),
+    self.FRAME_SNOW_RIVER1 : preload("res://scenes/tiles/frames/snow/river_snow_1_overtile.tscn"),
+    self.FRAME_SNOW_RIVER2 : preload("res://scenes/tiles/frames/snow/river_snow_2_overtile.tscn"),
+    self.FRAME_SNOW_RIVER3 : preload("res://scenes/tiles/frames/snow/river_snow_3_overtile.tscn"),
+    self.FRAME_SNOW_RIVER4 : preload("res://scenes/tiles/frames/snow/river_snow_4_overtile.tscn"),
 
     self.DECO_FLOWERS1 : preload("res://scenes/tiles/decorations/flowers_1_overtile.tscn"),
     self.DECO_FLOWERS2 : preload("res://scenes/tiles/decorations/flowers_2_overtile.tscn"),

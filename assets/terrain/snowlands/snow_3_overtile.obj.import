@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/snow_3_overtile.obj-19334e4bdbc2e67077933b64432e63b9.mesh"
+
+[deps]
+
+files=[ "res://.import/snow_3_overtile.obj-19334e4bdbc2e67077933b64432e63b9.mesh" ]
+
+source_file="res://assets/terrain/snowlands/snow_3_overtile.obj"
+dest_files=[ "res://.import/snow_3_overtile.obj-19334e4bdbc2e67077933b64432e63b9.mesh", "res://.import/snow_3_overtile.obj-19334e4bdbc2e67077933b64432e63b9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -18,6 +18,17 @@ func build_rotations(templates, builder):
 		templates.GROUND_DIRT_ROAD2,
 		templates.GROUND_DIRT_ROAD3,
 		templates.GROUND_DIRT_ROAD4,
+		templates.GROUND_SNOW,
+		templates.GROUND_SNOW_RIVER1,
+		templates.GROUND_SNOW_RIVER2,
+		templates.GROUND_SNOW_ROAD1,
+		templates.GROUND_SNOW_ROAD2,
+		templates.GROUND_SNOW_ROAD3,
+		templates.GROUND_SNOW_ROAD4,
+		templates.GROUND_SNOW_DIRT_ROAD1,
+		templates.GROUND_SNOW_DIRT_ROAD2,
+		templates.GROUND_SNOW_DIRT_ROAD3,
+		templates.GROUND_SNOW_DIRT_ROAD4,
 	])
 
 	self.rotations[builder.CLASS_FRAME] = self.build_from_array([
@@ -33,6 +44,13 @@ func build_rotations(templates, builder):
 		templates.FRAME_ROAD2,
 		templates.FRAME_ROAD3,
 		templates.FRAME_ROAD4,
+		templates.FRAME_SNOW2,
+		templates.FRAME_SNOW3,
+		templates.FRAME_SNOW4,
+		templates.FRAME_SNOW_RIVER1,
+		templates.FRAME_SNOW_RIVER2,
+		templates.FRAME_SNOW_RIVER3,
+		templates.FRAME_SNOW_RIVER4,
 		templates.FRAME_FENCE,
 	])
 

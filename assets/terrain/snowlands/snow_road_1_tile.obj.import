@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/snow_road_1_tile.obj-5ba486ffb2343c7e7dd7a18e0d8d7c10.mesh"
+
+[deps]
+
+files=[ "res://.import/snow_road_1_tile.obj-5ba486ffb2343c7e7dd7a18e0d8d7c10.mesh" ]
+
+source_file="res://assets/terrain/snowlands/snow_road_1_tile.obj"
+dest_files=[ "res://.import/snow_road_1_tile.obj-5ba486ffb2343c7e7dd7a18e0d8d7c10.mesh", "res://.import/snow_road_1_tile.obj-5ba486ffb2343c7e7dd7a18e0d8d7c10.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
