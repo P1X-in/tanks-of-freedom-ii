@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cacti_1_overtile.obj-964089aa3efbb6cae552a846c6ebae6f.mesh"
+
+[deps]
+
+files=[ "res://.import/cacti_1_overtile.obj-964089aa3efbb6cae552a846c6ebae6f.mesh" ]
+
+source_file="res://assets/terrain/sandlands/cacti_1_overtile.obj"
+dest_files=[ "res://.import/cacti_1_overtile.obj-964089aa3efbb6cae552a846c6ebae6f.mesh", "res://.import/cacti_1_overtile.obj-964089aa3efbb6cae552a846c6ebae6f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

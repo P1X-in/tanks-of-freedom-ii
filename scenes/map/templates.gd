@@ -26,6 +26,18 @@ const GROUND_SNOW_DIRT_ROAD2 = "ground_snow_dirt_road2"
 const GROUND_SNOW_DIRT_ROAD3 = "ground_snow_dirt_road3"
 const GROUND_SNOW_DIRT_ROAD4 = "ground_snow_dirt_road4"
 
+const GROUND_SAND = "ground_sand"
+const GROUND_SAND_RIVER1 = "ground_sand_river1"
+const GROUND_SAND_RIVER2 = "ground_sand_river2"
+const GROUND_SAND_ROAD1 = "ground_sand_road1"
+const GROUND_SAND_ROAD2 = "ground_sand_road2"
+const GROUND_SAND_ROAD3 = "ground_sand_road3"
+const GROUND_SAND_ROAD4 = "ground_sand_road4"
+const GROUND_SAND_DIRT_ROAD1 = "ground_sand_dirt_road1"
+const GROUND_SAND_DIRT_ROAD2 = "ground_sand_dirt_road2"
+const GROUND_SAND_DIRT_ROAD3 = "ground_sand_dirt_road3"
+const GROUND_SAND_DIRT_ROAD4 = "ground_sand_dirt_road4"
+
 const FRAME_GRASS1 = "frame_grass1"
 const FRAME_GRASS2 = "frame_grass2"
 const FRAME_GRASS3 = "frame_grass3"
@@ -116,6 +128,13 @@ const NATURE_TREES3 = "nature_trees3"
 const NATURE_TREES4 = "nature_trees4"
 const NATURE_TREES5 = "nature_trees5"
 const NATURE_TREES6 = "nature_trees6"
+
+const NATURE_SAND_DUNES1 = "nature_sand_dunes1"
+const NATURE_SAND_DUNES2 = "nature_sand_dunes2"
+const NATURE_SAND_DUNES3 = "nature_sand_dunes3"
+const NATURE_SAND_CACTI1 = "nature_sand_cacti1"
+const NATURE_SAND_CACTI2 = "nature_sand_cacti2"
+const NATURE_SAND_CACTI3 = "nature_sand_cacti3"
 
 const MODERN_AIRFIELD = "modern_airfield"
 const MODERN_BARRACKS = "modern_barracks"
@@ -220,6 +239,18 @@ var templates = {
     self.GROUND_SNOW_DIRT_ROAD3 : preload("res://scenes/tiles/ground/snow/snow_dirt_road3.tscn"),
     self.GROUND_SNOW_DIRT_ROAD4 : preload("res://scenes/tiles/ground/snow/snow_dirt_road4.tscn"),
 
+    self.GROUND_SAND : preload("res://scenes/tiles/ground/sand/sand.tscn"),
+    self.GROUND_SAND_RIVER1 : preload("res://scenes/tiles/ground/sand/sand_river1.tscn"),
+    self.GROUND_SAND_RIVER2 : preload("res://scenes/tiles/ground/sand/sand_river2.tscn"),
+    self.GROUND_SAND_ROAD1 : preload("res://scenes/tiles/ground/sand/sand_road1.tscn"),
+    self.GROUND_SAND_ROAD2 : preload("res://scenes/tiles/ground/sand/sand_road2.tscn"),
+    self.GROUND_SAND_ROAD3 : preload("res://scenes/tiles/ground/sand/sand_road3.tscn"),
+    self.GROUND_SAND_ROAD4 : preload("res://scenes/tiles/ground/sand/sand_road4.tscn"),
+    self.GROUND_SAND_DIRT_ROAD1 : preload("res://scenes/tiles/ground/sand/sand_dirt_road1.tscn"),
+    self.GROUND_SAND_DIRT_ROAD2 : preload("res://scenes/tiles/ground/sand/sand_dirt_road2.tscn"),
+    self.GROUND_SAND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/sand/sand_dirt_road3.tscn"),
+    self.GROUND_SAND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/sand/sand_dirt_road4.tscn"),
+
     self.FRAME_GRASS1 : preload("res://scenes/tiles/frames/grass_1_overtile.tscn"),
     self.FRAME_GRASS2 : preload("res://scenes/tiles/frames/grass_2_overtile.tscn"),
     self.FRAME_GRASS3 : preload("res://scenes/tiles/frames/grass_3_overtile.tscn"),
@@ -310,6 +341,13 @@ var templates = {
     self.NATURE_TREES4 : preload("res://scenes/tiles/nature/trees_4_overtile.tscn"),
     self.NATURE_TREES5 : preload("res://scenes/tiles/nature/trees_5_overtile.tscn"),
     self.NATURE_TREES6 : preload("res://scenes/tiles/nature/trees_6_overtile.tscn"),
+
+    self.NATURE_SAND_CACTI1 : preload("res://scenes/tiles/nature/sand/cacti_1_overtile.tscn"),
+    self.NATURE_SAND_CACTI2 : preload("res://scenes/tiles/nature/sand/cacti_2_overtile.tscn"),
+    self.NATURE_SAND_CACTI3 : preload("res://scenes/tiles/nature/sand/cacti_3_overtile.tscn"),
+    self.NATURE_SAND_DUNES1 : preload("res://scenes/tiles/nature/sand/dunes_1_overtile.tscn"),
+    self.NATURE_SAND_DUNES2 : preload("res://scenes/tiles/nature/sand/dunes_2_overtile.tscn"),
+    self.NATURE_SAND_DUNES3 : preload("res://scenes/tiles/nature/sand/dunes_3_overtile.tscn"),
 
     self.MODERN_AIRFIELD : preload("res://scenes/tiles/buildings/blue/airfield.tscn"),
     self.MODERN_BARRACKS : preload("res://scenes/tiles/buildings/blue/barracks.tscn"),
