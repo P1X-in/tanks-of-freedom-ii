@@ -119,6 +119,9 @@ func _input(event):
     if event.is_action_pressed("mouse_zoom_out"):
         self._mouse_zoom_out()
 
+    if self.camera_in_transit or self.ai_operated or self.script_operated:
+        return
+
     if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
         if event.pressed:
             self.mouse_click_position = event.position
