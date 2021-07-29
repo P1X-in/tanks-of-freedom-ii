@@ -61,7 +61,7 @@ func _input(event):
             if event.is_action_pressed("mouse_click"):
                 self.mouse_click_position = event.position
             if event.is_action_released("mouse_click"):
-                if event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD:
+                if self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD:
                     self.select_tile(self.map.tile_box_position)
                 self.mouse_click_position = null
 

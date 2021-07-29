@@ -28,7 +28,7 @@ func _ready():
     self.ui.load_minimap(self.AUTOSAVE_FILE)
     self.setup_radial_menu()
     self.map.builder.editor = self
-    
+
 
 func _physics_process(_delta):
     self.update_ui_position()
@@ -47,7 +47,7 @@ func _input(event):
         if event.is_action_pressed("mouse_click"):
             self.mouse_click_position = event.position
         if event.is_action_released("mouse_click"):
-            if event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD:
+            if self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD:
                 self.audio.play("menu_click")
                 self.place_tile()
             self.mouse_click_position = null
@@ -106,7 +106,7 @@ func _input(event):
             if event.is_action_pressed("editor_menu"):
                 self.toggle_radial_menu()
                 self.audio.play("menu_click")
-    
+
 
 func autosave():
     self.map.loader.save_map_file(self.AUTOSAVE_FILE)
@@ -149,7 +149,7 @@ func undo_action():
     if self.actions_history.size() > 0:
         var recent_action = self.actions_history.pop_back()
         var tile = self.map.model.get_tile(recent_action["position"])
-        
+
         if recent_action["type"] == "add":
             match recent_action["class"]:
                 "ground":
@@ -209,11 +209,11 @@ func select_tile(name, type):
     self.ui.set_type_prev(self.map.templates.get_template(first_tile), self.tile_rotation)
     first_tile = self.rotations.get_first_tile(type_map["next"])
     self.ui.set_type_next(self.map.templates.get_template(first_tile), self.tile_rotation)
-    
+
 
 func switch_to_prev_tile():
     var rotation_map = self.rotations.get_map(self.selected_tile, self.selected_class)
-    self.select_tile(rotation_map["prev"], self.selected_class) 
+    self.select_tile(rotation_map["prev"], self.selected_class)
 
 func switch_to_next_tile():
     var rotation_map = self.rotations.get_map(self.selected_tile, self.selected_class)
@@ -276,7 +276,7 @@ func handle_picker_output(args):
         self.map.loader.load_map_file(map_name)
         self.ui.load_minimap(map_name)
         self.actions_history = []
-        
+
     self.close_picker()
     self.set_map_name(map_name)
 
@@ -339,7 +339,7 @@ func next_alternative():
         self.next_damage_stage(tile)
     elif tile.terrain.is_present() and tile.terrain.tile.is_restoreable():
         self.restore_damage_stage(tile)
-        
+
     self.autosave()
 
 func next_building_side(building_object):
@@ -353,7 +353,7 @@ func next_unit_side(unit_object):
         side_map = self.rotations.get_player_map(side_map["next"])
 
     self.map.builder.set_unit_side(self.map.tile_box_position, side_map["next"])
-    
+
 func next_damage_stage(tile):
     self.replace_terrain(tile, tile.terrain.tile.next_damage_stage_template)
 
@@ -373,4 +373,4 @@ func _open_ability_ban_menu():
     var tile = self.map.model.get_tile(self.map.tile_box_position)
     if tile.building.is_present():
         self.toggle_radial_menu(tile.building.tile)
-            
+
