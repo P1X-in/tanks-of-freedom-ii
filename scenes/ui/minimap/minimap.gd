@@ -56,6 +56,7 @@ var city_tiles = [
     "destroyed_building_big4",
     "destroyed_statue",
     "destroyed_fountain",
+    "maidan_monument",
 ]
 var mountain_tiles = [
     "nature_big_rocks1",

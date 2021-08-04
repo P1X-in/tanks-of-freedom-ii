@@ -216,6 +216,9 @@ const PLAYER_YELLOW = "yellow"
 const MATERIAL_NORMAL = "normal"
 const MATERIAL_METALLIC = "metallic"
 
+#Maidan stuff
+const MAIDAN_MONUMENT = "maidan_monument"
+
 var templates = {
     self.DUMMY_GROUND : preload("res://scenes/tiles/ground/base_ground.tscn"),
 
@@ -424,6 +427,9 @@ var templates = {
     self.HERO_CAPTAIN : preload("res://scenes/tiles/units/heroes/captain.tscn"),
     self.HERO_PRINCE : preload("res://scenes/tiles/units/heroes/prince.tscn"),
     self.HERO_WARLORD : preload("res://scenes/tiles/units/heroes/warlord.tscn"),
+
+    #Maidan stuff
+    self.MAIDAN_MONUMENT : preload("res://scenes/tiles/maidan/monument_overtile.tscn")
 }
 
 var side_materials = {

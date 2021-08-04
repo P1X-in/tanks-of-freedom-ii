@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/independence_monument_overtile.png-563ddf526edca84946f78964488f16b7.s3tc.stex"
-path.etc2="res://.import/independence_monument_overtile.png-563ddf526edca84946f78964488f16b7.etc2.stex"
+path.s3tc="res://.import/independence_monument_overtile.png-d91609962d04bed08067109c44c9cd19.s3tc.stex"
+path.etc2="res://.import/independence_monument_overtile.png-d91609962d04bed08067109c44c9cd19.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/terrain/grasslands/independence_monument_overtile.png"
-dest_files=[ "res://.import/independence_monument_overtile.png-563ddf526edca84946f78964488f16b7.s3tc.stex", "res://.import/independence_monument_overtile.png-563ddf526edca84946f78964488f16b7.etc2.stex" ]
+source_file="res://assets/terrain/maidan/independence_monument_overtile.png"
+dest_files=[ "res://.import/independence_monument_overtile.png-d91609962d04bed08067109c44c9cd19.s3tc.stex", "res://.import/independence_monument_overtile.png-d91609962d04bed08067109c44c9cd19.etc2.stex" ]
 
 [params]
 
