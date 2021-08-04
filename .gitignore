@@ -17,3 +17,5 @@ export_presets.cfg
 # Files too big for github, need to be re-done in Godot
 assets/terrain/grasslands/grassland_library.tres
 assets/terrain/grasslands_library.tres
+
+**/.DS_Store
