@@ -4,7 +4,7 @@
 o 
 
 # material
-mtllib independence_monument_overtile.mtl
+mtllib independence_monument_overtile.vox.mtl
 usemtl palette
 
 # normals
