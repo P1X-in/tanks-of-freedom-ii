@@ -158,6 +158,9 @@ func select_tile(position):
         return
 
     var tile = self.map.model.get_tile(position)
+    if tile == null:
+        return
+
     var current_player = self.state.get_current_player()
     var open_unit_abilities = false
 

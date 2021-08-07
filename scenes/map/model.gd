@@ -24,7 +24,10 @@ func wipe_scripts():
     self.scripts["triggers"].clear()
 
 func get_tile(position):
-    return self.tiles[str(position.x) + "_" + str(position.y)]
+    var key = str(position.x) + "_" + str(position.y)
+    if self.tiles.has(key):
+        return self.tiles[key]
+    return null
 
 func get_tile2(x, y):
     return self.tiles[str(x) + "_" + str(y)]
