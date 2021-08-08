@@ -114,6 +114,10 @@ func autosave():
 
 
 func place_tile():
+    var tile = self.map.model.get_tile(self.map.tile_box_position)
+    if tile == null:
+        return
+
     self.actions_history.append({
         "type" : "add",
         "class" : self.selected_class,

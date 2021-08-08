@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/buildings/wired_fence_overtile.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/terrain/variety/wired_fence_overtile.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://assets/materials/arne32.tres" type="Material" id=2]
 [ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=3]
 
