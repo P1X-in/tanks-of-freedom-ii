@@ -218,6 +218,10 @@ const MATERIAL_METALLIC = "metallic"
 
 #Maidan stuff
 const MAIDAN_MONUMENT = "maidan_monument"
+const MAIDAN_CIRCLE_TOP = "maidan_circle_top"
+const MAIDAN_CIRCLE_SIDE = "maidan_circle_side"
+const MAIDAN_CIRCLE_CORNER = "maidan_circle_corner"
+const MAIDAN_CIRCLE_CORNER_MIRRORED = "maidan_circle_corner_mirrored"
 
 var templates = {
     self.DUMMY_GROUND : preload("res://scenes/tiles/ground/base_ground.tscn"),
@@ -429,7 +433,11 @@ var templates = {
     self.HERO_WARLORD : preload("res://scenes/tiles/units/heroes/warlord.tscn"),
 
     #Maidan stuff
-    self.MAIDAN_MONUMENT : preload("res://scenes/tiles/maidan/monument_overtile.tscn")
+    self.MAIDAN_MONUMENT : preload("res://scenes/tiles/maidan/monument_overtile.tscn"),
+    self.MAIDAN_CIRCLE_CORNER : preload("res://scenes/tiles/maidan/monument_circle_corner_overtile.tscn"),
+    self.MAIDAN_CIRCLE_CORNER_MIRRORED : preload("res://scenes/tiles/maidan/monument_circle_corner_mirrored_overtile.tscn"),
+    self.MAIDAN_CIRCLE_TOP : preload("res://scenes/tiles/maidan/monument_circle_top_overtile.tscn"),
+    self.MAIDAN_CIRCLE_SIDE : preload("res://scenes/tiles/maidan/monument_circle_side_overtile.tscn"),
 }
 
 var side_materials = {

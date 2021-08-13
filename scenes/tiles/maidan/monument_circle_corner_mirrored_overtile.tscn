@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=1]
+[ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/terrain/maidan/monument_circle_corner_overtile.obj" type="ArrayMesh" id=3]
+
+[node name="tile" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -1, -1.50996e-07, 0, 1.50996e-07, -1, 0, 2.38419e-07, 0 )
+
+[node name="mesh" parent="." index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 1 )

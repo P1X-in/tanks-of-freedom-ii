@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/monument_circle_side_overtile.obj-8cd75192441065de2e9ec5280b16b37f.mesh"
+
+[deps]
+
+files=[ "res://.import/monument_circle_side_overtile.obj-8cd75192441065de2e9ec5280b16b37f.mesh" ]
+
+source_file="res://assets/terrain/maidan/monument_circle_side_overtile.obj"
+dest_files=[ "res://.import/monument_circle_side_overtile.obj-8cd75192441065de2e9ec5280b16b37f.mesh", "res://.import/monument_circle_side_overtile.obj-8cd75192441065de2e9ec5280b16b37f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -57,6 +57,10 @@ var city_tiles = [
     "destroyed_statue",
     "destroyed_fountain",
     "maidan_monument",
+    "maidan_circle_top",
+    "maidan_circle_side",
+    "maidan_circle_corner",
+    "maidan_circle_corner_mirrored",
 ]
 var mountain_tiles = [
     "nature_big_rocks1",
