@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/independence_monument_reflection.obj-9f2d8929bc515971279d9445e26a4afa.mesh"
+
+[deps]
+
+files=[ "res://.import/independence_monument_reflection.obj-9f2d8929bc515971279d9445e26a4afa.mesh" ]
+
+source_file="res://assets/terrain/maidan/independence_monument_reflection.obj"
+dest_files=[ "res://.import/independence_monument_reflection.obj-9f2d8929bc515971279d9445e26a4afa.mesh", "res://.import/independence_monument_reflection.obj-9f2d8929bc515971279d9445e26a4afa.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
