@@ -86,6 +86,8 @@ const DECO_GROUND_DMG_6 = "deco_ground_dmg6"
 const BRIDGE_PLATE = "bridge_plate"
 const BRIDGE_LEGS = "bridge_legs"
 const BRIDGE_SUSPENSION = "bridge_suspension"
+const BRIDGE_STONE = "bridge_stone"
+const BRIDGE_STONE_BARRIER = "bridge_stone_barrier"
 
 const CITY_BUILDING_BIG1 = "city_building_big1"
 const CITY_BUILDING_BIG2 = "city_building_big2"
@@ -263,6 +265,7 @@ var templates = {
 
     self.BRIDGE_PLATE : preload("res://scenes/tiles/ground/bridge_plate.tscn"),
     self.BRIDGE_LEGS : preload("res://scenes/tiles/ground/bridge_legs.tscn"),
+    self.BRIDGE_STONE : preload("res://scenes/tiles/ground/bridge_stone.tscn"),
 
     self.FRAME_GRASS1 : preload("res://scenes/tiles/frames/grass_1_overtile.tscn"),
     self.FRAME_GRASS2 : preload("res://scenes/tiles/frames/grass_2_overtile.tscn"),
@@ -322,6 +325,7 @@ var templates = {
     self.CITY_BRIDGE : preload("res://scenes/tiles/city/river_bridge_overtile.tscn"),
     self.CITY_ROADBLOCK : preload("res://scenes/tiles/city/roadblock_overtile.tscn"),
     self.BRIDGE_SUSPENSION : preload("res://scenes/tiles/city/bridge_suspension.tscn"),
+    self.BRIDGE_STONE_BARRIER : preload("res://scenes/tiles/city/bridge_stone_barrier.tscn"),
 
     self.CITY_BRIDGE_WOOD : preload("res://scenes/tiles/city/wooden_bridge_overtile.tscn"),
 

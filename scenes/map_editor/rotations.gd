@@ -42,6 +42,7 @@ func build_rotations(templates, builder):
 		templates.GROUND_SAND_DIRT_ROAD4,
 		templates.BRIDGE_PLATE,
 		templates.BRIDGE_LEGS,
+		templates.BRIDGE_STONE,
 	])
 
 	self.rotations[builder.CLASS_FRAME] = self.build_from_array([
@@ -108,6 +109,7 @@ func build_rotations(templates, builder):
 		templates.CITY_BRIDGE_WOOD,
 		templates.CITY_ROADBLOCK,
 		templates.BRIDGE_SUSPENSION,
+		templates.BRIDGE_STONE_BARRIER,
 		templates.NATURE_BIG_ROCKS1,
 		templates.NATURE_BIG_ROCKS2,
 		templates.NATURE_BIG_ROCKS3,
