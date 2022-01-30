@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/laser_fence_overtile.obj-e5d218a48d3c28a0d4fb78885c8d6a3d.mesh"
+
+[deps]
+
+files=[ "res://.import/laser_fence_overtile.obj-e5d218a48d3c28a0d4fb78885c8d6a3d.mesh" ]
+
+source_file="res://assets/terrain/variety/laser_fence_overtile.obj"
+dest_files=[ "res://.import/laser_fence_overtile.obj-e5d218a48d3c28a0d4fb78885c8d6a3d.mesh", "res://.import/laser_fence_overtile.obj-e5d218a48d3c28a0d4fb78885c8d6a3d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -3,8 +3,7 @@
         "initial_cam_pos": [
             26,
             18
-        ],
-        "skip_initial_hq_cam": true
+        ]
     },
     "scripts": {
         "stories": {
@@ -102,7 +101,7 @@
                         "name": "Warlord Grim",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Oh, and make use of this Tank and Mobile Infantry, they may come in handy. Be careful though, if you lose them, they can not be replaced."
+                        "text": "Oh, and make use of these Tank and Mobile Infantry units, they may come in handy. Be careful though - if you lose them, they can not be replaced."
                     }
                 },
                 {
@@ -129,7 +128,7 @@
                         "name": "Ruby Dusk Commander",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Amber Noon is taking our positions. Send a message immidiately to King Ludwig about this!"
+                        "text": "Amber Noon is taking our positions. Send a message about this to King Ludwig immidiately!"
                     }
                 },
                 {
@@ -194,7 +193,7 @@
                         "name": "Ruby Dusk Commander",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Alarm! We lost contact with one of our Towers! Investigate immidiately!"
+                        "text": "Alarm! We have lost contact with one of our Towers! Investigate immidiately!"
                     }
                 },
                 {
@@ -221,7 +220,7 @@
                         "name": "Warlord Grim",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Oh, and make use of this Tank and Mobile Infantry, they may come in handy. Be careful though, if you lose them, they can not be replaced."
+                        "text": "Oh, and make use of these Tank and Mobile Infantry units, they may come in handy. Be careful though - if you lose them, they can not be replaced."
                     }
                 },
                 {
@@ -302,7 +301,7 @@
                         "name": "Infantry #1",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "No issues, Sir! The Tank and some motorbikes for the Mobile Infantry arrived just in time for vehicle excercises."
+                        "text": "No issues, Sir! A Tank and some motorbikes for Mobile Infantry arrived just in time for vehicle excercises."
                     }
                 },
                 {
@@ -312,6 +311,15 @@
                         "portrait": "hero_warlord",
                         "side": "left",
                         "text": "Excellent. Your training objective has been updated. Your performance in capturing military structures was terrible."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Infantry #1",
+                        "portrait": "yellow_infantry",
+                        "side": "right",
+                        "text": "Oh..."
                     }
                 },
                 {
@@ -367,16 +375,6 @@
                         "portrait": "hero_warlord",
                         "side": "left",
                         "text": "Then get to it."
-                    }
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            26,
-                            18
-                        ],
-                        "zoom": 0.5
                     }
                 },
                 {
@@ -5539,7 +5537,7 @@
             },
             "frame": {
                 "rotation": 0,
-                "tile": "frame_fence"
+                "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 180,
@@ -7429,7 +7427,7 @@
             },
             "frame": {
                 "rotation": 90,
-                "tile": "frame_fence"
+                "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 180,
@@ -7467,8 +7465,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 180,
@@ -7774,7 +7772,7 @@
             },
             "frame": {
                 "rotation": 0,
-                "tile": null
+                "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 0,
@@ -8112,7 +8110,7 @@
             },
             "frame": {
                 "rotation": 270,
-                "tile": "frame_fence"
+                "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 180,
@@ -8150,7 +8148,7 @@
             },
             "frame": {
                 "rotation": 270,
-                "tile": "frame_fence"
+                "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 180,

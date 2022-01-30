@@ -50,7 +50,10 @@ const FRAME_ROAD1 = "frame_road1"
 const FRAME_ROAD2 = "frame_road2"
 const FRAME_ROAD3 = "frame_road3"
 const FRAME_ROAD4 = "frame_road4"
+
 const FRAME_FENCE = "frame_fence"
+const FRAME_LASER = "frame_laser"
+const FRAME_WALL = "frame_wall"
 
 const FRAME_SNOW2 = "frame_snow2"
 const FRAME_SNOW3 = "frame_snow3"
@@ -271,7 +274,10 @@ var templates = {
     self.FRAME_ROAD2 : preload("res://scenes/tiles/frames/road_2_overtile.tscn"),
     self.FRAME_ROAD3 : preload("res://scenes/tiles/frames/road_3_overtile.tscn"),
     self.FRAME_ROAD4 : preload("res://scenes/tiles/frames/road_4_overtile.tscn"),
+
     self.FRAME_FENCE : preload("res://scenes/tiles/frames/wired_fence_overtile.tscn"),
+    self.FRAME_LASER : preload("res://scenes/tiles/frames/laser_fence_overtile.tscn"),
+    self.FRAME_WALL : preload("res://scenes/tiles/frames/wall_fence_overtile.tscn"),
 
     self.FRAME_SNOW2 : preload("res://scenes/tiles/frames/snow/snow_2_overtile.tscn"),
     self.FRAME_SNOW3 : preload("res://scenes/tiles/frames/snow/snow_3_overtile.tscn"),
