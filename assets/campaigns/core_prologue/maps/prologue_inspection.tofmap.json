@@ -4677,8 +4677,8 @@
                 "tile": "ground_river1"
             },
             "terrain": {
-                "rotation": 180,
-                "tile": "city_bridge"
+                "rotation": 0,
+                "tile": "city_bridge_wood"
             },
             "unit": {
                 "rotation": 0,
