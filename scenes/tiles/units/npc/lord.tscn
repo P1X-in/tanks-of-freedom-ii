@@ -5,6 +5,7 @@
 [ext_resource path="res://assets/units/npcs/lord.obj" type="ArrayMesh" id=3]
 
 [node name="lord" instance=ExtResource( 2 )]
+unit_name = "Lord"
 side = "red"
 
 [node name="mesh" parent="mesh_anchor" index="0"]

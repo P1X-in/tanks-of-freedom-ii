@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/abilities/hero/active/hardened_armour.tscn" type="PackedScene" id=5]
 
 [node name="noble" instance=ExtResource( 2 )]
+unit_name = "Noble"
 side = "red"
 
 [node name="mesh" parent="mesh_anchor" index="0"]

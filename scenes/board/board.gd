@@ -65,6 +65,9 @@ func _input(event):
                     self.select_tile(self.map.tile_box_position)
                 self.mouse_click_position = null
 
+            if event.is_action_pressed("game_context"):
+                self.open_context_panel()
+
         if event.is_action_pressed("editor_menu"):
             self.toggle_radial_menu()
     else:
@@ -74,6 +77,7 @@ func _input(event):
 
             if event.is_action_pressed("editor_menu"):
                 self.toggle_radial_menu()
+
 
 func _physics_process(_delta):
     self.hover_tile()
@@ -548,6 +552,27 @@ func update_tile_highlight(tile):
         self.ui.update_tile_highlight_building_panel(ap_gain)
     if tile.unit.is_present():
         self.ui.update_tile_highlight_unit_panel(tile.unit.tile)
+
+func open_context_panel():
+    var tile = self.map.model.get_tile(self.map.tile_box_position)
+    if tile != null:
+        if not tile.unit.is_present():
+            return
+
+        var template_name
+        var new_side
+        var material_type = self.map.templates.MATERIAL_NORMAL
+
+        if tile.unit.tile.uses_metallic_material:
+            material_type = self.map.templates.MATERIAL_METALLIC
+        template_name = tile.unit.tile.template_name
+        new_side = tile.unit.tile.side
+
+        var tile_preview = self.map.templates.get_template(template_name)
+        tile_preview.set_side_material(self.map.templates.get_side_material(new_side, material_type))
+
+        self.ui.show_unit_stats(tile.unit.tile, tile_preview, self)
+
 
 func end_game(winner):
     self.map.camera.paused = true

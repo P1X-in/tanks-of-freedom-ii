@@ -8,6 +8,7 @@ onready var end_turn = $"end_turn/end_turn"
 onready var start_turn = $"start_turn/start_turn"
 onready var story_dialog = $"story_dialog/story_dialog"
 onready var cinematic_bars = $"cinematic_bars/cinematic_bars"
+onready var unit_stats = $"unit_stats/unit_stats"
 
 onready var tile_highlight = $"tile_highlight/tile_view"
 onready var tile_highlight_level1 = $"tile_highlight/level1"
@@ -22,6 +23,9 @@ func is_popup_open():
         return true
 
     if self.story_dialog.is_visible():
+        return true
+
+    if self.unit_stats.is_visible():
         return true
 
     return false
@@ -119,3 +123,10 @@ func hide_cinematic_bars():
 
 func are_cinematic_bars_visible():
     return self.cinematic_bars.is_extended
+
+func show_unit_stats(unit, tile_preview, board):
+    self.unit_stats.bind_unit(unit, tile_preview, board)
+    self.unit_stats.show_panel()
+
+func hide_unit_stats():
+    self.unit_stats.hide()

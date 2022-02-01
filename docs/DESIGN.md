@@ -114,7 +114,7 @@ Sapphire Dawn General Cyrus is training new recruits on how to operate on the ba
 During a border inspection by Prince Tybalt, Ruby Dusk starts an offensive. Warlord Grim contacts Prince Tybalt and tells him, that Ruby Dusk started a war, and King Ludwig ordered him to repel the invaders.
 
 #### Ruby Dusk Campaign
-Ruby Dusk Noble Sidney disregards Lord Dawson orders and captures several provinces of Team Yellow. They approach Amber Noon capital and prepare to occupy it, but their offensive is halted when they get news of Sapphire Dawn joining the fight. Ruby Dusk Gentleman Archibald goes to defend their own lands, encountering both Sapphire Dawn, as well as Jade Twilight forces.
+Ruby Dusk Noble Sidney disregards Lord Dawson orders and captures several provinces of Team Yellow. They approach Amber Noon capital and prepare to occupy it, but their offensive is halted when they get news of Sapphire Dawn joining the fight. Ruby Dusk Gentleman Archibald goes to defend their own lands, encountering Sapphire Dawn.
 
 #### Sapphire Dawn Campaign
 Driven by their rivalry agains Ruby Dusk and potential gains, Sapphire Dawn President Gideon agrees to help Amber Noon in their war. General Cyrus is sent to attack Ruby Dusk lands, and fight to help free the Amber Noon capital, but then encounter Jade Twilight and Amber Noon forces led by Prince Tybalt in their way. Warlord Grim declares Prince Tybalt a traitor, who wants to overthrow King Ludwig, and asks Sapphire Dawn Commando Blake to deal with them.
@@ -162,7 +162,7 @@ Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights f
     - Grim orders further attacks
 2. Border inspection
     - Prince Tybalt visits a border outpost for inspection
-    - Ruby Dusk attacks the outpost
+    - Ruby Dusk attacks the outpost (sent by Sidney)
     - Grim Informs Tybalt, that Ruby Dusk started a war
     - Prince Tybalt holds off the attack for a while
     - Prince Tybalt runs away, goes to capital to talk with King Ludwig

@@ -14,6 +14,7 @@
 script = ExtResource( 9 )
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
+unit_name = "Mobile Infantry"
 max_move = 6
 attack = 5
 armor = 0

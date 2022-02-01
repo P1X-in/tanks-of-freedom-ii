@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/abilities/hero/active/precision_strike.tscn" type="PackedScene" id=5]
 
 [node name="admiral" instance=ExtResource( 2 )]
+unit_name = "Admiral"
 side = "green"
 
 [node name="mesh" parent="mesh_anchor" index="0"]

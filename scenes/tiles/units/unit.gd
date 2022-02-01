@@ -10,6 +10,7 @@ onready var spotlight = $"mesh_anchor/activity_light"
 onready var explosion = $"explosion"
 onready var level_star = $"voxel_star"
 
+export var unit_name = ""
 export var side = "neutral"
 export var material_type = "normal"
 
@@ -28,6 +29,7 @@ export var unit_class = ""
 var attacks = 1
 var level = 0
 var experience = 0
+var kills = 0
 
 var modifiers = {}
 var active_abilities = []
@@ -95,7 +97,7 @@ func set_side_material(material):
         additional_mesh.set_surface_material(0, material)
 
 
-func get_stats_with_modifiers():
+func get_stats():
     var stats = {
         "hp" : self.hp,
         "move" : self.move,
@@ -106,6 +108,11 @@ func get_stats_with_modifiers():
         "attacks" : self.attacks,
         "max_attacks" : self.max_attacks,
     }
+
+    return stats
+
+func get_stats_with_modifiers():
+    var stats = self.get_stats()
 
     for stat_key in stats:
         if self.modifiers.has(stat_key):
@@ -310,6 +317,7 @@ func clear_modifiers():
     self.modifiers.clear()
 
 func gain_exp():
+    self.kills += 1
     if not self.is_max_level():
         self.experience += 1
 

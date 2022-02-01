@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/abilities/hero/active/targeting_automaton.tscn" type="PackedScene" id=5]
 
 [node name="gentleman" instance=ExtResource( 3 )]
+unit_name = "Gentleman"
 side = "red"
 
 [node name="mesh" parent="mesh_anchor" index="0"]

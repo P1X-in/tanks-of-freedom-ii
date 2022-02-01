@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/board/ui/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ui/radial/radial.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://scenes/ui/board/story_dialog.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/ui/board/cinematic_bars.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/ui/icons/star.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/ui/board/unit_stats.tscn" type="PackedScene" id=12]
 
 [node name="ui" type="Control"]
 anchor_right = 1.0
@@ -74,6 +75,7 @@ __meta__ = {
 }
 
 [node name="tile_view" parent="tile_highlight" instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 60, -20 )
 
 [node name="hp" type="Label" parent="tile_highlight/tile_view"]
@@ -190,4 +192,20 @@ __meta__ = {
 }
 
 [node name="story_dialog" parent="story_dialog" instance=ExtResource( 9 )]
+visible = false
+
+[node name="unit_stats" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="unit_stats" parent="unit_stats" instance=ExtResource( 12 )]
 visible = false

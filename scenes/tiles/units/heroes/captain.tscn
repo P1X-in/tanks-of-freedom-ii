@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/abilities/hero/active/supply.tscn" type="PackedScene" id=5]
 
 [node name="captain" instance=ExtResource( 2 )]
+unit_name = "Captain"
 side = "green"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
@@ -17,16 +18,3 @@ material/0 = ExtResource( 1 )
 
 [node name="supply" parent="." index="4" instance=ExtResource( 5 )]
 index = 2
-
-[node name="spawn" parent="audio" index="0"]
-unit_db = 45.0
-bus = "Units"
-
-[node name="attack" parent="audio" index="2"]
-bus = "Attack"
-
-[node name="damage" parent="audio" index="3"]
-bus = "Damage"
-
-[node name="die" parent="audio" index="4"]
-bus = "Explosion"

@@ -88,5 +88,6 @@ text = "Restart"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="menu_button" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]
