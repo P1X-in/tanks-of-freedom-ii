@@ -100,3 +100,13 @@ func reopen_campaign_mission_selection_after_win():
     self.ui.campaign_selection.show_first_page()
     yield(self.get_tree().create_timer(0.2), "timeout")
     self.ui.show_campaign_mission_selection(self.match_setup.campaign_name)
+
+func open_controls():
+    self.ui.hide_menu()
+    yield(self.get_tree().create_timer(0.2), "timeout")
+    self.ui.show_controls()
+
+func close_controls():
+    self.ui.hide_controls()
+    yield(self.get_tree().create_timer(0.2), "timeout")
+    self.ui.show_menu()

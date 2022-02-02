@@ -38,3 +38,6 @@ Original copyrights of all audio assets belong to QmYaan (Grand Beats) http://ww
 All sfx and music assets in this repository are licensed under Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0).
 
 [Full text of the license provided by Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/legalcode)
+
+## Control icons
+Control icons tilemap has been created by KenneyNL and is distributed under CC0. See `assets/gui/icons/controls` for details.

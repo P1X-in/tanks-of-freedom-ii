@@ -4,6 +4,7 @@ onready var campaign_button = $"campaign_button"
 onready var skirmish_button = $"skirmish_button"
 onready var editor_button = $"editor_button"
 onready var settings_button = $"settings_button"
+onready var controls_button = $"controls_button"
 onready var quit_button = $"quit_button"
 onready var animations = $"animations"
 onready var gamepad_adapter = $"/root/GamepadAdapter"
@@ -40,6 +41,11 @@ func _on_campaign_button_pressed():
     self.recent_button_used = self.campaign_button
     self.audio.play("menu_click")
     self.main_menu.open_campaign_selection()
+
+func _on_controls_button_pressed():
+    self.recent_button_used = self.controls_button
+    self.audio.play("menu_click")
+    self.main_menu.open_controls()
 
 func _on_quit_button_pressed():
     self.get_tree().quit()

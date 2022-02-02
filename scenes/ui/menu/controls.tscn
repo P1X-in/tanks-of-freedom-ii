@@ -1,0 +1,1176 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/ui/menu/controls.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/gui/icons/controls/tilemap_packed.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rect_pivot_offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[node name="controls" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+margin_left = -400.0
+margin_top = -130.0
+margin_right = 400.0
+margin_bottom = 420.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="game" type="Label" parent="background"]
+margin_top = 7.0
+margin_right = 400.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 2 )
+text = "Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="camera" type="Label" parent="background/game"]
+margin_left = 20.0
+margin_top = 47.0
+margin_right = 200.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 2 )
+text = "Camera"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/game/camera"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/game/camera"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 253
+
+[node name="key2" type="Sprite" parent="background/game/camera"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 321
+
+[node name="key3" type="Sprite" parent="background/game/camera"]
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 77
+
+[node name="switch_cam" type="Label" parent="background/game"]
+margin_left = 20.0
+margin_top = 87.0
+margin_right = 200.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 2 )
+text = "Switch Camera"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/game/switch_cam"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/game/switch_cam"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 650
+
+[node name="key2" type="Sprite" parent="background/game/switch_cam"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 123
+
+[node name="key3" type="Sprite" parent="background/game/switch_cam"]
+visible = false
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 77
+
+[node name="zoom" type="Label" parent="background/game"]
+margin_left = 20.0
+margin_top = 127.0
+margin_right = 200.0
+margin_bottom = 158.0
+custom_fonts/font = ExtResource( 2 )
+text = "Zoom"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/game/zoom"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/game/zoom"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 585
+
+[node name="key2" type="Sprite" parent="background/game/zoom"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 586
+
+[node name="key3" type="Sprite" parent="background/game/zoom"]
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 82
+
+[node name="select" type="Label" parent="background/game"]
+margin_left = 20.0
+margin_top = 167.0
+margin_right = 200.0
+margin_bottom = 198.0
+custom_fonts/font = ExtResource( 2 )
+text = "Select"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/game/select"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/game/select"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 47
+
+[node name="key2" type="Sprite" parent="background/game/select"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 77
+
+[node name="key3" type="Sprite" parent="background/game/select"]
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 235
+
+[node name="key4" type="Sprite" parent="background/game/select"]
+position = Vector2( 312, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 67
+
+[node name="back" type="Label" parent="background/game"]
+margin_left = 20.0
+margin_top = 207.0
+margin_right = 200.0
+margin_bottom = 238.0
+custom_fonts/font = ExtResource( 2 )
+text = "Back"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/game/back"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/game/back"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 48
+
+[node name="key2" type="Sprite" parent="background/game/back"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 78
+
+[node name="key3" type="Sprite" parent="background/game/back"]
+visible = false
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 77
+
+[node name="nav" type="Label" parent="background/game"]
+margin_left = 20.0
+margin_top = 247.0
+margin_right = 200.0
+margin_bottom = 278.0
+custom_fonts/font = ExtResource( 2 )
+text = "Navigate"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/game/nav"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/game/nav"]
+position = Vector2( 130, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 253
+
+[node name="key2" type="Sprite" parent="background/game/nav"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 68
+
+[node name="key3" type="Sprite" parent="background/game/nav"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 166
+
+[node name="key4" type="Sprite" parent="background/game/nav"]
+position = Vector2( 265, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 167
+
+[node name="key5" type="Sprite" parent="background/game/nav"]
+position = Vector2( 300, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 168
+
+[node name="key6" type="Sprite" parent="background/game/nav"]
+position = Vector2( 335, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 169
+
+[node name="menu" type="Label" parent="background/game"]
+margin_left = 20.0
+margin_top = 287.0
+margin_right = 200.0
+margin_bottom = 318.0
+custom_fonts/font = ExtResource( 2 )
+text = "Menu"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/game/menu"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/game/menu"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 651
+
+[node name="key2" type="Sprite" parent="background/game/menu"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 155
+
+[node name="key3" type="Sprite" parent="background/game/menu"]
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 17
+
+[node name="end_turn" type="Label" parent="background/game"]
+margin_left = 20.0
+margin_top = 327.0
+margin_right = 200.0
+margin_bottom = 358.0
+custom_fonts/font = ExtResource( 2 )
+text = "End Turn"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/game/end_turn"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/game/end_turn"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 50
+
+[node name="key2" type="Sprite" parent="background/game/end_turn"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 157
+
+[node name="key3" type="Sprite" parent="background/game/end_turn"]
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 79
+
+[node name="unit_stats" type="Label" parent="background/game"]
+margin_left = 20.0
+margin_top = 367.0
+margin_right = 200.0
+margin_bottom = 398.0
+custom_fonts/font = ExtResource( 2 )
+text = "Unit Stats"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/game/unit_stats"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/game/unit_stats"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 49
+
+[node name="key2" type="Sprite" parent="background/game/unit_stats"]
+visible = false
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 157
+
+[node name="key3" type="Sprite" parent="background/game/unit_stats"]
+visible = false
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 79
+
+[node name="editor" type="Label" parent="background"]
+margin_left = 400.0
+margin_top = 7.0
+margin_right = 800.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 2 )
+text = "Editor"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="camera" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 47.0
+margin_right = 200.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 2 )
+text = "Camera"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/camera"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/camera"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 253
+
+[node name="key2" type="Sprite" parent="background/editor/camera"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 321
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="key3" type="Sprite" parent="background/editor/camera"]
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 77
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="switch_cam" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 87.0
+margin_right = 200.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 2 )
+text = "Switch Camera"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/switch_cam"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/switch_cam"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 650
+
+[node name="key2" type="Sprite" parent="background/editor/switch_cam"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 123
+
+[node name="key3" type="Sprite" parent="background/editor/switch_cam"]
+visible = false
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 77
+
+[node name="zoom" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 127.0
+margin_right = 200.0
+margin_bottom = 158.0
+custom_fonts/font = ExtResource( 2 )
+text = "Zoom"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/zoom"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/zoom"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 585
+
+[node name="key2" type="Sprite" parent="background/editor/zoom"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 586
+
+[node name="key3" type="Sprite" parent="background/editor/zoom"]
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 82
+
+[node name="select" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 167.0
+margin_right = 200.0
+margin_bottom = 198.0
+custom_fonts/font = ExtResource( 2 )
+text = "Select"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/select"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/select"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 47
+
+[node name="key2" type="Sprite" parent="background/editor/select"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 77
+
+[node name="key3" type="Sprite" parent="background/editor/select"]
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 235
+
+[node name="key4" type="Sprite" parent="background/editor/select"]
+position = Vector2( 312, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 67
+
+[node name="back" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 207.0
+margin_right = 200.0
+margin_bottom = 238.0
+custom_fonts/font = ExtResource( 2 )
+text = "Undo"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/back"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/back"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 48
+
+[node name="key2" type="Sprite" parent="background/editor/back"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 78
+
+[node name="key3" type="Sprite" parent="background/editor/back"]
+visible = false
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 77
+
+[node name="tiles" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 247.0
+margin_right = 200.0
+margin_bottom = 278.0
+custom_fonts/font = ExtResource( 2 )
+text = "Change Tile"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/tiles"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/tiles"]
+visible = false
+position = Vector2( 130, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 253
+
+[node name="key2" type="Sprite" parent="background/editor/tiles"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 68
+
+[node name="key3" type="Sprite" parent="background/editor/tiles"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 166
+
+[node name="key4" type="Sprite" parent="background/editor/tiles"]
+position = Vector2( 265, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 167
+
+[node name="key5" type="Sprite" parent="background/editor/tiles"]
+position = Vector2( 300, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 168
+
+[node name="key6" type="Sprite" parent="background/editor/tiles"]
+position = Vector2( 335, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 169
+
+[node name="menu" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 287.0
+margin_right = 200.0
+margin_bottom = 318.0
+custom_fonts/font = ExtResource( 2 )
+text = "Menu"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/menu"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/menu"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 651
+
+[node name="key2" type="Sprite" parent="background/editor/menu"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 155
+
+[node name="key3" type="Sprite" parent="background/editor/menu"]
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 17
+
+[node name="rotate" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 327.0
+margin_right = 200.0
+margin_bottom = 358.0
+custom_fonts/font = ExtResource( 2 )
+text = "Rotate"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/rotate"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/rotate"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 653
+
+[node name="key2" type="Sprite" parent="background/editor/rotate"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 654
+
+[node name="key3" type="Sprite" parent="background/editor/rotate"]
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 85
+
+[node name="key4" type="Sprite" parent="background/editor/rotate"]
+position = Vector2( 320, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 87
+
+[node name="clear" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 367.0
+margin_right = 200.0
+margin_bottom = 398.0
+custom_fonts/font = ExtResource( 2 )
+text = "Clear"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/clear"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/clear"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 49
+
+[node name="key2" type="Sprite" parent="background/editor/clear"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 156
+
+[node name="key3" type="Sprite" parent="background/editor/clear"]
+visible = false
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 85
+
+[node name="alternative" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 407.0
+margin_right = 200.0
+margin_bottom = 438.0
+custom_fonts/font = ExtResource( 2 )
+text = "Alternative"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/alternative"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/alternative"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 50
+
+[node name="key2" type="Sprite" parent="background/editor/alternative"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 88
+
+[node name="key3" type="Sprite" parent="background/editor/alternative"]
+visible = false
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 85
+
+[node name="ban" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 447.0
+margin_right = 200.0
+margin_bottom = 478.0
+custom_fonts/font = ExtResource( 2 )
+text = "Bans"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/ban"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/ban"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 322
+
+[node name="key2" type="Sprite" parent="background/editor/ban"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 79
+
+[node name="key3" type="Sprite" parent="background/editor/ban"]
+visible = false
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 85
+
+[node name="widgets" type="Control" parent="."]
+margin_left = -200.0
+margin_top = -130.0
+margin_right = 200.0
+margin_bottom = 190.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="back_button" type="Button" parent="widgets"]
+margin_left = 150.0
+margin_top = 500.0
+margin_right = 250.0
+margin_bottom = 530.0
+custom_fonts/font = ExtResource( 2 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="animations" type="AnimationPlayer" parent="."]
+reset_on_save = false
+playback_speed = 4.0
+anims/RESET = SubResource( 3 )
+anims/hide = SubResource( 1 )
+anims/show = SubResource( 2 )
+
+[connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

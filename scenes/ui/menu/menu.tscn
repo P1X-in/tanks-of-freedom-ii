@@ -70,7 +70,7 @@ __meta__ = {
 margin_left = -200.0
 margin_top = -130.0
 margin_right = 200.0
-margin_bottom = 190.0
+margin_bottom = 250.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
 "_editor_description_": ""
@@ -109,12 +109,25 @@ margin_top = 70.0
 margin_right = 150.0
 margin_bottom = 110.0
 text = "SETTINGS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="quit_button" type="Button" parent="."]
+[node name="controls_button" type="Button" parent="."]
 margin_left = -150.0
 margin_top = 130.0
 margin_right = 150.0
 margin_bottom = 170.0
+text = "CONTROLS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit_button" type="Button" parent="."]
+margin_left = -150.0
+margin_top = 190.0
+margin_right = 150.0
+margin_bottom = 230.0
 text = "QUIT GAME"
 
 [node name="animations" type="AnimationPlayer" parent="."]
@@ -129,4 +142,5 @@ __meta__ = {
 [connection signal="pressed" from="skirmish_button" to="." method="_on_skirmish_button_pressed"]
 [connection signal="pressed" from="editor_button" to="." method="_on_editor_button_pressed"]
 [connection signal="pressed" from="settings_button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="controls_button" to="." method="_on_controls_button_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]

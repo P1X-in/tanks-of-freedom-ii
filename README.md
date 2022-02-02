@@ -45,6 +45,7 @@ Follow [official documentation](https://docs.godotengine.org/en/stable/getting_s
 
 ### gfx
    - czlowiekimadlo https://twitter.com/czlowiekimadlo
+   - kenneyNL https://twitter.com/KenneyNL - Control icons
 
 ### music
    - QmYaan (Grand Beats) http://www.grandbeats.com/ licensed under CC BY-SA 4.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/main_menu/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ui/menu/logo_view.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scenes/ui/menu/campaign_selection.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/ui/menu/campaign_mission_selection.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/ui/menu/campaign_mission.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/ui/menu/controls.tscn" type="PackedScene" id=11]
 
 [node name="ui" type="Control"]
 anchor_right = 1.0
@@ -98,6 +99,26 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_bottom = 40.0
 rect_scale = Vector2( 1, 1 )
+
+[node name="controls" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 6.10352e-05
+margin_top = 20.0
+margin_right = 6.10352e-05
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="controls" parent="controls" instance=ExtResource( 11 )]
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_bottom = 40.0
 
 [node name="campaign_selection" type="MarginContainer" parent="."]
 anchor_left = 0.5
