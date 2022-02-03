@@ -102,6 +102,7 @@ func set_up_map():
         self.load_campaign_map()
     else:
         self.load_skirmish_map()
+    self.map.hide_invisible_tiles()
 
 func set_up_board():
     self.audio.track("soundtrack_1")
@@ -326,7 +327,7 @@ func reset_unit_position(tile, unit):
 
 func can_move_to_tile(tile):
     var move_cost = self.movement_markers.get_tile_cost(tile)
-    if move_cost != null and move_cost > 0 and tile.can_acommodate_unit():
+    if move_cost != null and move_cost > 0 and tile.can_acommodate_unit(self.selected_tile.unit.tile):
         return true
     return false
 

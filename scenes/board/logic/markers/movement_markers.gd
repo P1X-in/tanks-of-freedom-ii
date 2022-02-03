@@ -52,13 +52,13 @@ func expand_from_tile(tile, depth, reach_cost, unit, ap_limit):
     var neighbour
     var neighbour_cost
 
-    if not self.marker_exists(tile.position) and tile.can_acommodate_unit():
+    if not self.marker_exists(tile.position) and tile.can_acommodate_unit(unit):
         self.place_movement_marker(tile.position)
 
     if self.marker_exists(tile.position):
         self.colour_marker(tile, unit, ap_limit)
 
-    if depth < 1 || not tile.can_pass_through(unit.side) || reach_cost + 1 > ap_limit:
+    if depth < 1 || not tile.can_pass_through(unit) || reach_cost + 1 > ap_limit:
         return
 
     for key in tile.neighbours.keys():

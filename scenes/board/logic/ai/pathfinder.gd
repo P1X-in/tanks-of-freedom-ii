@@ -39,10 +39,10 @@ func expand_from_tile(tile, depth, reach_cost, unit):
     var neighbour
     var neighbour_cost
 
-    if not tile.can_acommodate_unit():
+    if not tile.can_acommodate_unit(unit):
         self._scout_tile(tile, unit.side)
 
-    if not tile.can_pass_through(unit.side):
+    if not tile.can_pass_through(unit):
         return
 
     if depth < 1:

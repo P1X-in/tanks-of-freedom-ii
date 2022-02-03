@@ -107,3 +107,7 @@ func anchor_unit(unit, position):
 
 func detach_unit(unit):
     self.tiles_units_anchor.remove_child(unit)
+
+func hide_invisible_tiles():
+    for i in self.model.tiles.keys():
+        self.model.tiles[i].apply_invisibility()

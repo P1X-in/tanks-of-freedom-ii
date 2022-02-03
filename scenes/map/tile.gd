@@ -82,8 +82,10 @@ func is_neighbour(tile):
     return false
 
 
-func can_acommodate_unit():
+func can_acommodate_unit(moving_unit=null):
     if not self.ground.is_present():
+        return false
+    if self.ground.tile.unit_can_fly and (moving_unit == null or not moving_unit.can_fly):
         return false
     if self.unit.is_present():
         return false
@@ -94,12 +96,14 @@ func can_acommodate_unit():
 
     return true
 
-func can_pass_through(side):
+func can_pass_through(moving_unit):
     if not self.ground.is_present():
+        return false
+    if self.ground.tile.unit_can_fly and not moving_unit.can_fly:
         return false
     if self.building.is_present():
         return false
-    if self.has_enemy_unit(side):
+    if self.has_enemy_unit(unit.side):
         return false
     if self.terrain.is_present():
         return self.terrain.tile.unit_can_stand
@@ -192,3 +196,8 @@ func is_object_damage_possible():
 
 func is_damageable():
    return self.is_ground_damage_possible() or self.is_object_damage_possible()
+
+func apply_invisibility():
+    for fragment in self.fragments:
+        if fragment.is_present() and fragment.tile.is_invisible:
+            fragment.tile.hide_mesh() 

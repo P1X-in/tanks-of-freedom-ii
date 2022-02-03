@@ -159,7 +159,7 @@ func _approach_action(entity_tile, path, unit_range):
 
     var target_tile = self.pathfinder.visited_tiles[path[path.size() - unit_range - 1]]
 
-    if target_tile.can_acommodate_unit():
+    if target_tile.can_acommodate_unit(entity_tile.unit.tile):
         return self.actions_templates['move'].new(entity_tile, target_tile, unit_range)
     else:
         var nearby_path
@@ -169,7 +169,7 @@ func _approach_action(entity_tile, path, unit_range):
             nearby_path = self.pathfinder.get_path_to_tile(nearby_tile)
             if nearby_path.size() - 1 > unit_range:
                 continue
-            if nearby_tile.can_acommodate_unit():
+            if nearby_tile.can_acommodate_unit(entity_tile.unit.tile):
                 return self.actions_templates['move'].new(entity_tile, nearby_tile, nearby_path.size())
 
     return null
@@ -177,7 +177,7 @@ func _approach_action(entity_tile, path, unit_range):
 func _get_interaction_tiles(tile):
     var tiles = []
     for neighbour in tile.neighbours:
-        if not tile.neighbours[neighbour].can_acommodate_unit():
+        if not tile.neighbours[neighbour].can_acommodate_unit(tile.unit.tile):
             continue
         if not self.pathfinder.is_tile_reachable(tile.neighbours[neighbour]):
             continue

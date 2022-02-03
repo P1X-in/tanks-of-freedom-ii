@@ -8,7 +8,7 @@ func _init(board_object):
     self.board = board_object
 
 func damage_tile(tile):
-    if tile.damage.is_present() or tile.terrain.is_present():
+    if tile.damage.is_present() or tile.terrain.is_present() or tile.ground.tile.unit_can_fly:
         return
 
     var angles = [0, 90, 180, 270]

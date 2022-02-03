@@ -43,6 +43,7 @@ func build_rotations(templates, builder):
 		templates.BRIDGE_PLATE,
 		templates.BRIDGE_LEGS,
 		templates.BRIDGE_STONE,
+		templates.GROUND_FLYABLE,
 	])
 
 	self.rotations[builder.CLASS_FRAME] = self.build_from_array([

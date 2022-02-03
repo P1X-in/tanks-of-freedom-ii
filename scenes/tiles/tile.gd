@@ -2,6 +2,8 @@ extends Spatial
 
 export var template_name = ""
 export var unit_can_stand = false
+export var unit_can_fly = false
+export var is_invisible = false
 
 export var main_tile_view_cam_modifier = 0
 export var side_tile_view_cam_modifier = 0
@@ -40,3 +42,7 @@ func is_damageable():
 
 func is_restoreable():
     return not self.base_stage_template == ""
+
+func hide_mesh():
+    $"mesh".hide()
+    
