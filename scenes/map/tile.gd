@@ -103,7 +103,7 @@ func can_pass_through(moving_unit):
         return false
     if self.building.is_present():
         return false
-    if self.has_enemy_unit(unit.side):
+    if self.has_enemy_unit(moving_unit.side):
         return false
     if self.terrain.is_present():
         return self.terrain.tile.unit_can_stand
