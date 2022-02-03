@@ -8,7 +8,7 @@ var brains = {
     "infantry" : preload("res://scenes/board/logic/ai/brains/infantry_brain.gd").new(),
     "tank" : preload("res://scenes/board/logic/ai/brains/tank_brain.gd").new(),
     "heli" : preload("res://scenes/board/logic/ai/brains/heli_brain.gd").new(),
-    "mobile_infantry" : preload("res://scenes/board/logic/ai/brains/infantry_brain.gd").new(),
+    "mobile_infantry" : preload("res://scenes/board/logic/ai/brains/mobile_infantry_brain.gd").new(),
     "rocket_artillery" : preload("res://scenes/board/logic/ai/brains/rocket_artillery_brain.gd").new(),
     "scout" : preload("res://scenes/board/logic/ai/brains/scout_brain.gd").new(),
 
