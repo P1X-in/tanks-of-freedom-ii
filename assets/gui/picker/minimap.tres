@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=11 format=2]
+[gd_resource type="TileSet" load_steps=16 format=2]
 
 [ext_resource path="res://assets/gui/picker/minimap_tile_building.png" type="Texture" id=1]
 [ext_resource path="res://assets/gui/picker/minimap_tile_city.png" type="Texture" id=2]
@@ -10,6 +10,11 @@
 [ext_resource path="res://assets/gui/picker/minimap_tile_road.png" type="Texture" id=8]
 [ext_resource path="res://assets/gui/picker/minimap_tile_concrete.png" type="Texture" id=9]
 [ext_resource path="res://assets/gui/picker/minimap_tile_water.png" type="Texture" id=10]
+[ext_resource path="res://assets/gui/picker/minimap_tile_snow.png" type="Texture" id=11]
+[ext_resource path="res://assets/gui/picker/minimap_tile_sand.png" type="Texture" id=12]
+[ext_resource path="res://assets/gui/picker/minimap_tile_dunes.png" type="Texture" id=13]
+[ext_resource path="res://assets/gui/picker/minimap_tile_forest_autumn.png" type="Texture" id=14]
+[ext_resource path="res://assets/gui/picker/minimap_tile_cacti.png" type="Texture" id=15]
 
 [resource]
 0/name = "building"
@@ -152,3 +157,73 @@
 9/shape_one_way_margin = 0.0
 9/shapes = [  ]
 9/z_index = 0
+10/name = "snow"
+10/texture = ExtResource( 11 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 12, 12 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 6, 6 )
+10/navigation_offset = Vector2( 6, 6 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "sand"
+11/texture = ExtResource( 12 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 12, 12 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 6, 6 )
+11/navigation_offset = Vector2( 6, 6 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "autumn"
+12/texture = ExtResource( 14 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 12, 12 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 6, 6 )
+12/navigation_offset = Vector2( 6, 6 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "dunes"
+13/texture = ExtResource( 13 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 12, 12 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 6, 6 )
+13/navigation_offset = Vector2( 6, 6 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "cacti"
+14/texture = ExtResource( 15 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 12, 12 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 6, 6 )
+14/navigation_offset = Vector2( 6, 6 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0

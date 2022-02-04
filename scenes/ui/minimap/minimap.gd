@@ -4,20 +4,41 @@ onready var map_list_service = $"/root/MapManager"
 onready var minimap = $"minimap"
 
 var grass_tiles = ["ground_grass"]
+var snow_tiles = ["ground_snow"]
+var sand_tiles = ["ground_sand"]
 var concrete_tiles = ["ground_concrete"]
-var river_tiles = ["ground_river1", "ground_river2"]
+var river_tiles = [
+    "ground_river1", 
+    "ground_river2", 
+    "ground_snow_river1",
+    "ground_snow_river2",
+    "ground_sand_river1",
+    "ground_sand_river2",
+]
 var road_tiles = [
     "ground_road1",
     "ground_road2",
     "ground_road3",
     "ground_road4",
     "city_bridge",
+    "ground_snow_road1",
+    "ground_snow_road2",
+    "ground_snow_road3",
+    "ground_snow_road4",
+    "ground_sand_road1",
+    "ground_sand_road2",
+    "ground_sand_road3",
+    "ground_sand_road4",
+    "bridge_plate",
+    "bridge_legs",
 ]
 var dirt_road_tiles = [
     "ground_dirt_road1",
     "ground_dirt_road2",
     "ground_dirt_road3",
     "ground_dirt_road4",
+    "city_bridge_wood",
+    "bridge_stone",
 ]
 var city_tiles = [
     "city_building_big1",
@@ -71,6 +92,25 @@ var forest_tiles = [
     "nature_trees6",
 ]
 
+var forest_autumn_tiles = [
+    "nature_trees7",
+    "nature_trees8",
+    "nature_trees9",
+]
+
+var cacti_tiles = [
+    "nature_sand_cacti1",
+    "nature_sand_cacti2",
+    "nature_sand_cacti3",
+]
+
+var dune_tiles = [
+    "nature_sand_dunes1",
+    "nature_sand_dunes2",
+    "nature_sand_dunes3",
+    "nature_sand_dunes4",
+]
+
 
 const TILE_BUILDING = 0
 const TILE_CITY = 1
@@ -82,6 +122,11 @@ const TILE_MOUNTAIN = 6
 const TILE_RIVER = 7
 const TILE_ROAD = 8
 const TILE_WATER = 9
+const TILE_SNOW = 10
+const TILE_SAND = 11
+const TILE_AUTUMN = 12
+const TILE_DUNES = 13
+const TILE_CACTI = 14
 
 
 var cache = {}
@@ -135,7 +180,19 @@ func set_cell_from_data(x, y, data):
         self.set_cell(x, y, self.TILE_FOREST)
         return
 
-    if data["ground"]["tile"] in self.dirt_road_tiles:
+    if data["terrain"]["tile"] in self.forest_autumn_tiles:
+        self.set_cell(x, y, self.TILE_AUTUMN)
+        return
+
+    if data["terrain"]["tile"] in self.dune_tiles:
+        self.set_cell(x, y, self.TILE_DUNES)
+        return
+
+    if data["terrain"]["tile"] in self.cacti_tiles:
+        self.set_cell(x, y, self.TILE_CACTI)
+        return
+
+    if data["ground"]["tile"] in self.dirt_road_tiles || data["terrain"]["tile"] in self.dirt_road_tiles:
         self.set_cell(x, y, self.TILE_DIRT_ROAD)
         return
 
@@ -154,6 +211,17 @@ func set_cell_from_data(x, y, data):
     if data["ground"]["tile"] in self.grass_tiles:
         self.set_cell(x, y, self.TILE_GRASS)
         return
+
+    if data["ground"]["tile"] in self.snow_tiles:
+        self.set_cell(x, y, self.TILE_SNOW)
+        return
+
+    if data["ground"]["tile"] in self.sand_tiles:
+        self.set_cell(x, y, self.TILE_SAND)
+        return
+
+    #fallback for undefined tiles
+    self.set_cell(x, y, self.TILE_WATER)
 
 func set_cell(x, y, id):
     self.minimap.set_cell(x, y, id)

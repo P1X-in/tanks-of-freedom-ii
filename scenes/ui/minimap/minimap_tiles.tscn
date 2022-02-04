@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/gui/picker/minimap_tile_building.png" type="Texture" id=1]
 [ext_resource path="res://assets/gui/picker/minimap_tile_city.png" type="Texture" id=2]
@@ -10,6 +10,11 @@
 [ext_resource path="res://assets/gui/picker/minimap_tile_road.png" type="Texture" id=8]
 [ext_resource path="res://assets/gui/picker/minimap_tile_concrete.png" type="Texture" id=9]
 [ext_resource path="res://assets/gui/picker/minimap_tile_water.png" type="Texture" id=10]
+[ext_resource path="res://assets/gui/picker/minimap_tile_snow.png" type="Texture" id=11]
+[ext_resource path="res://assets/gui/picker/minimap_tile_sand.png" type="Texture" id=12]
+[ext_resource path="res://assets/gui/picker/minimap_tile_forest_autumn.png" type="Texture" id=13]
+[ext_resource path="res://assets/gui/picker/minimap_tile_dunes.png" type="Texture" id=14]
+[ext_resource path="res://assets/gui/picker/minimap_tile_cacti.png" type="Texture" id=15]
 
 [node name="minimap_tiles" type="Node2D"]
 
@@ -52,3 +57,23 @@ texture = ExtResource( 8 )
 [node name="water" type="Sprite" parent="."]
 position = Vector2( -506, -33 )
 texture = ExtResource( 10 )
+
+[node name="snow" type="Sprite" parent="."]
+position = Vector2( -506, -33 )
+texture = ExtResource( 11 )
+
+[node name="sand" type="Sprite" parent="."]
+position = Vector2( -506, -33 )
+texture = ExtResource( 12 )
+
+[node name="autumn" type="Sprite" parent="."]
+position = Vector2( -506, -33 )
+texture = ExtResource( 13 )
+
+[node name="dunes" type="Sprite" parent="."]
+position = Vector2( -506, -33 )
+texture = ExtResource( 14 )
+
+[node name="cacti" type="Sprite" parent="."]
+position = Vector2( -506, -33 )
+texture = ExtResource( 15 )
