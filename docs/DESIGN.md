@@ -6,12 +6,13 @@ This document describes the details for a classic, turn-baset strategy game, tha
 
 Certain level of backwards compatibility is meant to be preserved. This new game should be able to import ToF online shared maps. It is not expected to be able to share maps, that original ToF could use. Online cross-play between ToF and this game is considered, but is not a part of core requirements.
 
-Working title for the game is Tanks of Freedom 3-D, it is a subject to change, most likely based on it's story. 
+Working title for the game is Tanks of Freedom 3-D, it is a subject to change, most likely based on it's story.
 
-Proposed titles: 
+Proposed titles:
 - *Tanks of Freedom - Liberum Gentem*
 - *Tanks of Freedom 2*
 - *Tanks of Freedom 2: Grim War*
+- *Tanks of Freedom 2: Heroes*
 
 
 ## World
@@ -23,21 +24,25 @@ It is possible, there are other continents in this world, that are not part of t
 A democratic, capitalist nation that values business, ambition and freedom. In rivalry with Ruby Dusk.
 
 Style: Modern
+Biome: Desert
 
 ### Ruby Dusk (Team Red)
 An industrial nation, that values hard work and ingeniuity. In rivalry with Sapphire Dawn.
 
 Style: Steampunk
+Biome: Snowy mountains
 
 ### Jade Twilight (Team Green)
 A peacful and prosperous nation, consisting of a federation of smaller cultures. Values science and diplomacy. In good relations with everyone.
 
 Style: Futuristic
+Biome: Tropical
 
 ### Amber Noon (Team Yellow)
 A feudal nation, that values honor and courage. Led by a royal family. In reserved relations with other nations.
 
 Style: Feudal/Knights
+Biome: Temperate
 
 
 ## Characters
@@ -131,6 +136,8 @@ Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights f
 
 ### Missions
 
+Each of the main campaigns should be about 10 mission long.
+
 #### Tutorial
 1. Gameplay basics
     - moving units
@@ -168,7 +175,80 @@ Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights f
     - Prince Tybalt runs away, goes to capital to talk with King Ludwig
 
 #### Ruby Dusk Campaign
-To be designed.
+1. Sudden Strike
+    - Noble Sidney recieves a report
+        - Outpost unprepared, taken, losses bigger than expected
+        - Prince Tybalt seen fleeing
+        - Can't count for reinforcements for now
+    - Noble Sidney attacks second outpost
+    - Only Infantry available
+    - Outpost has single tank guarding it.
+    - Noble Sidney explains his Active ability
+    - Noble Sidney explains Infantry ability
+    - Noble Sidney captures second outpost
+    - Gentleman Archibald comes with message from Lord Dawson to stop
+    - Noble Sidney disregards orders, calls Lord Dawson soft
+    - Noble Sidney plots to gain more power by conquering Amber Noon
+
+2. Securing the lines
+    - Reinforcements lagging due to supply difficulties
+    - Noble Sidney helps secure supply lines to get Tanks
+    - Noble Sidney recieves a couple of Tanks
+    - Enemy base has Tank factory as well
+    - Explain passive
+    - Explain Tank ability
+    - Noble Sidney takes over the enemy base
+
+3. Taking flight
+    - Amber Noon mobilised a lot of Tanks
+    - Noble Sidney had an Airfield built, but is not ready yet
+    - Hold out long enough to get Attack Helicopters
+    - After a couple of turns, Airfield is ready
+    - Airfield deploys two Attack Helicopters for free
+    - Noble Sidney takes over the enemy base
+
+4. Gateway
+    - Noble Sidney arrives at a river, needs to cross a bridge
+    - There is a small enemy outpost on the same side, and a big base on the other side
+    - Noble Sidney explains Attack Helicopter ability
+    - Noble Sidney has to take over a military bases guarding the bridge
+
+5. Amber Fotress
+    - Prince Tybalt talks to guards
+    - Noble Sidney arrives at Amber Noon capital city
+    - Need to take out guard forces, city itself is inaccesible
+    - Prince Tybalt helps defend the outpost
+    - Noble Sidney captures a base on a strategic spot good for siege
+    - Gentleman Archibald arrives with orders from Lord Dawson to return home
+
+6. Stranded
+    - Ruby Dusk forces can't return home, cut off by Sapphire Dawn
+    - Lord Dawson orders Gentleman Archibald to get back ASAP
+    - Gentleman Archibald has to leave the bulk of Ruby Dusk forces with Sidney in current position
+    - Mobile Infantry available for faster movement
+    - Explain passive
+    - Gentleman Archibald goes through with small detachment
+
+7. Uinvited guests
+    - Gentleman Archibald reaches Ruby Dusk border
+    - Need to re-take border base
+    - Scout Helicopters available
+    - If Scout abilities are used, small outpost can be saved
+
+8. Research and development
+    - Gentleman Archibald arrives at research facility
+    - Enemy uses a lot of fliers
+    - Gentleman Archibald has very limited access to Infantry
+    - Facility provides Rocket Artillery and Tanks
+    - Explain Hero active and Artillery ability
+    - Capture airfields
+
+9. Hold the line
+    - Sapphire Dawn is attacking defensive line, led by Commando Blake
+    - Commando Blake taunts Gentleman Archibald for attacking Amber Noon
+    - Gentleman Archibald explains, but Commando Blake does not listen
+    - Sapphire Dawn drops troops regularly
+    - Gentleman Archibald needs to capture and hold line of towers
 
 #### Sapphire Dawn Campaign
 To be designed.
