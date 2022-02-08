@@ -2,14 +2,178 @@
     "name" : "core_ruby_dusk",
     "title" : "Ruby Dusk",
     "icon" : "red_gem",
-    "prerequisite" : "not_unlockable_at_the_moment",
+    "prerequisite" : "core_prologue",
     "missions" : [
+         {
+            "name" : "sudden_strike",
+            "title" : "Sudden Strike",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Noble Sidney leads a strike team agains Amber Noon after they suddenly attacked a Ruby Dusk outpost. No time to waste waiting for Lord Dawson to send orders.",
+            "marker" : [420, 90],
+            "players": [
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "yellow",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
+        },
         {
-            "name" : "test",
-            "title" : "Test",
+            "name" : "securing_lines",
+            "title" : "Securing the lines",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [0, 0]
+            "marker" : [450, 110],
+            "players": [
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "yellow",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
+        },
+        {
+            "name" : "taking_flight",
+            "title" : "Taking flight",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [460, 40],
+            "players": [
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "yellow",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
+        },
+        {
+            "name" : "gateway",
+            "title" : "Gateway",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [550, 70],
+            "players": [
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "yellow",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
+        },
+        {
+            "name" : "amber_fortress",
+            "title" : "Amber Fotress",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [540, 130],
+            "players": [
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "yellow",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
+        },
+        {
+            "name" : "stranded",
+            "title" : "Stranded",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [500, 140],
+            "players": [
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
+        },
+        {
+            "name" : "uninvited_guests",
+            "title" : "Uinvited guests",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [445, 170],
+            "players": [
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
+        },
+        {
+            "name" : "research_and_development",
+            "title" : "Research and development",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [380, 210],
+            "players": [
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
+        },
+        {
+            "name" : "hold_the_line",
+            "title" : "Hold the line",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [345, 270],
+            "players": [
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
         }
     ]
 }
