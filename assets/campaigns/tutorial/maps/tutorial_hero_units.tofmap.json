@@ -155,6 +155,15 @@
                     }
                 },
                 {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "Remember, that different Heroes have different abilities. Some of them will target specific units or tiles. Some of them might target Heros themselves in order to be used, like the ones that give benefits to units in certain radius around the Hero."
+                    }
+                },
+                {
                     "action": "camera",
                     "details": {
                         "where": [

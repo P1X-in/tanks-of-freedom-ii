@@ -7,13 +7,13 @@
          {
             "name" : "sudden_strike",
             "title" : "Sudden Strike",
-            "map" : "crossroad.tofmap.json",
+            "map" : "core_ruby_dusk_sudden_strike.tofmap.json",
             "description" : "Noble Sidney leads a strike team agains Amber Noon after they suddenly attacked a Ruby Dusk outpost. No time to waste waiting for Lord Dawson to send orders.",
             "marker" : [420, 90],
             "players": [
                 {
                     "side" : "red",
-                    "ap" : 0,
+                    "ap" : 10,
                     "type" : "human"
                 },
                 {

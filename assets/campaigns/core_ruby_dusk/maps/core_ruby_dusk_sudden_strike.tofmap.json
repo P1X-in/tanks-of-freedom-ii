@@ -1,0 +1,5511 @@
+{
+    "metadata": {
+        "initial_cam_pos": [
+            18,
+            30
+        ],
+        "skip_initial_hq_cam": true
+    },
+    "scripts": {
+        "stories": {
+            "01_report": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            18,
+                            31
+                        ],
+                        "zoom": 0.2
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "delay": 1,
+                    "details": {
+                        "rotation": 180,
+                        "side": "red",
+                        "template": "red_infantry",
+                        "where": [
+                            18,
+                            32
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Messenger",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "Sir! I'm bearing important frontline report."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "What is the situation? Have we taken the outpost?"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Messenger",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "We did, Sir! Second battalion caught them by surprise, they seemed unprepared."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "A swift victory then."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Messenger",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "Not quite... Amber Noon soldiers put up a real fight, we have lost more units than anticipated. Our scouts have seen Prince Tybalt evacuating from the base not long after our initial strike."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "Prince Tybalt running away with his tail between his legs? Not surprising. It would explain why they fought so ferociously. Are our forces ready for another push?"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Messenger",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "I'm afraid not. They have a lot of wounded soldiers and damaged equipment, which slows them down significantly. Second battalion will not be able to assist for a couple of days."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "Bah! I'll reprimend their commander once we join forces. You are dismissed."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Messenger",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "Yes, Sir!"
+                    }
+                },
+                {
+                    "action": "despawn",
+                    "delay": 1,
+                    "details": {
+                        "who": [
+                            18,
+                            32
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "Without second battalion this attack might be difficult."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            18,
+                            29
+                        ],
+                        "zoom": 0.2
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "I only have few units here. It will have to do."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            21,
+                            29
+                        ],
+                        "zoom": 0.2
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "There are some old Infantry barracks here, I could use them."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            23,
+                            19
+                        ],
+                        "zoom": 0.2
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "I have to capture that outpost to secure this mountain passage into Amber Noon lands."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "There is a Tank guarding it though. These are very effective against Infantry, I have to be careful. It does not look like they can deploy more of them though. If I take it out, my mission will be much easier."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            18,
+                            30
+                        ],
+                        "zoom": 0.2
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "Luckily, I do have a couple aces up my sleeve."
+                    }
+                },
+                {
+                    "action": "level_up",
+                    "details": {
+                        "who": [
+                            18,
+                            29
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "That Infantry unit can now use their Heavy Weapon ability, which should make a quick job of that Tank. It does require that unit to get close, and has a long cooldown, so I have to be careful. Leveling up other Infantry units is a good idea."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "In order to make sure my Infantry units survive combat with that Tank, I can use my active ability - Hardened Armour. When used, it increases the armour of all units standing 2 tiles away from me, or closer. In order to use it, I have to cast it on myself."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "sidney_defeated": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "No! How could I fail?"
+                    }
+                },
+                {
+                    "action": "unlock"
+                },
+                {
+                    "action": "end_game",
+                    "details": {
+                        "winner": "yellow"
+                    }
+                }
+            ],
+            "amber_hq_claimed": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            23,
+                            19
+                        ],
+                        "zoom": 0.2
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Infantry",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "Enemy command has been captured, Sir!"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "Finally, I was getting impatient."
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            18,
+                            31
+                        ],
+                        "zoom": 0.2
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "delay": 1,
+                    "details": {
+                        "rotation": 180,
+                        "side": "red",
+                        "template": "hero_gentleman",
+                        "where": [
+                            18,
+                            32
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "???",
+                        "portrait": "hero_gentleman",
+                        "side": "left",
+                        "text": "I see you were not wasting any time, Sidney."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "Lord's lapdog himself showed up. I'm busy, Archibald."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Gentleman Archibald",
+                        "portrait": "hero_gentleman",
+                        "side": "left",
+                        "text": "Not anymore. Lord Dawson sent me to bring new orders to you, personally. Amber Noon attack concerns him, but he wants to get in touch with King Ludwig first, to explain matters. You will take your forces and retreat to Ruby Dusk lands at once."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "And let them get away with an attack against us? Just like that?"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Gentleman Archibald",
+                        "portrait": "hero_gentleman",
+                        "side": "left",
+                        "text": "Lord's orders."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "As my Lord wishes."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Gentleman Archibald",
+                        "portrait": "hero_gentleman",
+                        "side": "left",
+                        "text": "Splendid. I'll return to Rubyport to attend other matters."
+                    }
+                },
+                {
+                    "action": "despawn",
+                    "delay": 1,
+                    "details": {
+                        "who": [
+                            18,
+                            32
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "Lord Dawson is getting soft. Our lands are being attacked and all he can do is sit and wait."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "Ruby Dusk deserves better. Amber Noon will pay for their boldness, and when I return, other nobles will surely see which one of us would be a better ruler."
+                    }
+                },
+                {
+                    "action": "unlock"
+                },
+                {
+                    "action": "end_game",
+                    "details": {
+                        "winner": "red"
+                    }
+                }
+            ],
+        },
+        "triggers": {
+            "01_first_turn": {
+                "details": {
+                    "player": 0,
+                    "turn": 1
+                },
+                "one_off": true,
+                "story": "01_report",
+                "type": "turn"
+            },
+            "02_hq_captured": {
+                "details": {
+                    "amount": 1,
+                    "list": [
+                        [
+                            23,
+                            19
+                        ]
+                    ],
+                    "player_side": "red"
+                },
+                "one_off": true,
+                "story": "amber_hq_claimed",
+                "type": "claim"
+            },
+            "sidney_defeated": {
+                "details": {
+                    "vip": [
+                        18,
+                        30
+                    ]
+                },
+                "one_off": true,
+                "story": "sidney_defeated",
+                "type": "assasination"
+            }
+        }
+    },
+    "tiles": {
+        "11_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "city_building_small3"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "11_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river1"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "11_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 90,
+                "tile": "nature_big_rocks1"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "11_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "nature_big_rocks2"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "12_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "city_building_small4"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "12_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "city_building_small2"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "12_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "12_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 270,
+                "tile": "deco_flower1"
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "12_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "nature_big_rocks1"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "12_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 90,
+                "tile": "nature_big_rocks2"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "13_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 90,
+                "tile": "city_building_small1"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "13_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 90,
+                "tile": "city_building_small2"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "13_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "city_building_small5"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "13_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river1"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "13_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "13_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 180,
+                "tile": "deco_log"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "13_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "nature_big_rocks3"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "13_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 270,
+                "tile": "nature_big_rocks1"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "14_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "14_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "modifiers": {
+
+                },
+                "rotation": 0,
+                "side": "yellow",
+                "tile": "yellow_infantry"
+            }
+        },
+        "14_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_dirt_road3"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "14_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river4"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_dirt_road2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "14_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_flower2"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass3"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "14_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 270,
+                "tile": "deco_rocks2"
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "14_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 270,
+                "tile": "nature_big_rocks3"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "14_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "nature_big_rocks2"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "14_26": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "nature_big_rocks3"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "city_bridge_wood"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_river4"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_river2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 270,
+                "tile": "deco_flower7"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 180,
+                "tile": "deco_rocks1"
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "nature_big_rocks1"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_26": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 270,
+                "tile": "nature_big_rocks1"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_27": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 90,
+                "tile": "nature_big_rocks3"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_28": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "nature_trees4"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "15_29": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_snow3"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass3"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_flower5"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river1"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_23": {
+            "building": {
+                "abilities": {
+
+                },
+                "rotation": 0,
+                "side": "yellow",
+                "tile": "feudal_tower"
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 90,
+                "tile": "deco_flower3"
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "nature_trees4"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_26": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "nature_trees5"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_27": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 270,
+                "tile": "nature_trees5"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_28": {
+            "building": {
+                "abilities": {
+
+                },
+                "rotation": 0,
+                "side": "red",
+                "tile": "steampunk_tower"
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_fence"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_29": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_snow_river3"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_snow_dirt_road2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_30": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 270,
+                "tile": "deco_rocks2"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "16_31": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_snow2"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 270,
+                "tile": "deco_flower6"
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river1"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_flower4"
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_river2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river3"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_river2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_26": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_snow3"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_27": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 90,
+                "tile": "deco_rocks1"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_28": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 180,
+                "tile": "deco_flower3"
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_29": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_snow_river2"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_snow_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "modifiers": {
+
+                },
+                "rotation": 180,
+                "side": "red",
+                "tile": "red_infantry"
+            }
+        },
+        "17_30": {
+            "building": {
+                "abilities": {
+                    "ability0": true,
+                    "ability2": false,
+                    "ability4": true
+                },
+                "rotation": 90,
+                "side": "red",
+                "tile": "steampunk_hq"
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_fence"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_31": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_flower3"
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_snow3"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "17_32": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_log"
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 90,
+                "tile": "deco_flower1"
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass3"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 90,
+                "tile": "deco_flower2"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river3"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_river2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river1"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_26": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_snow_river1"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_snow_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_27": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_snow_river4"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_snow_river2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_28": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_snow2"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_29": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow_dirt_road3"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "modifiers": {
+
+                },
+                "rotation": 180,
+                "side": "red",
+                "tile": "red_infantry"
+            }
+        },
+        "18_30": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_snow_dirt_road3"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "modifiers": {
+
+                },
+                "rotation": 90,
+                "side": "red",
+                "tile": "hero_noble"
+            }
+        },
+        "18_31": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow_river1"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_snow_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "18_32": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow_river1"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_snow_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_dirt_road3"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 90,
+                "tile": "deco_rocks1"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "modifiers": {
+
+                },
+                "rotation": 0,
+                "side": "yellow",
+                "tile": "yellow_infantry"
+            }
+        },
+        "19_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_flower3"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass3"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_26": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_27": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_28": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 270,
+                "tile": "deco_log"
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow3"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_29": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_snow_river2"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_30": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_snow_river3"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_snow_river2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_31": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_snow_river1"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_snow_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "19_32": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_snow_river2"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_snow_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 180,
+                "tile": "deco_flower3"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river1"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 90,
+                "tile": "deco_flower5"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 180,
+                "tile": "deco_flower6"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_rocks2"
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_26": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 270,
+                "tile": "deco_flower3"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_snow2"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_27": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_snow_river3"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow_river2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_28": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_snow_river2"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_snow_river1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_29": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_snow_river1"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "city_bridge_wood"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_30": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow_river4"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_snow_river2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_31": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_rocks2"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "20_32": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_snow2"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 180,
+                "tile": "deco_flower7"
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river1"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 180,
+                "tile": "deco_flower1"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 270,
+                "tile": "deco_flower4"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_23": {
+            "building": {
+                "abilities": {
+
+                },
+                "rotation": 0,
+                "side": "yellow",
+                "tile": "feudal_tower"
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 270,
+                "tile": "deco_log"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass3"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 270,
+                "tile": "nature_trees5"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_26": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "nature_trees5"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_27": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "nature_trees4"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_28": {
+            "building": {
+                "abilities": {
+                    "ability0": true,
+                    "ability2": false
+                },
+                "rotation": 0,
+                "side": "neutral",
+                "tile": "steampunk_barracks"
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_fence"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_29": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_snow_dirt_road3"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_30": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_rocks1"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_snow3"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "21_31": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 180,
+                "tile": "deco_flower5"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass3"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_river2"
+            },
+            "ground": {
+                "rotation": 90,
+                "tile": "ground_dirt_road1"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 90,
+                "tile": "deco_flower7"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 270,
+                "tile": "deco_flower2"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 270,
+                "tile": "nature_big_rocks2"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_26": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "nature_big_rocks3"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_27": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "nature_big_rocks1"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_28": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 90,
+                "tile": "nature_trees4"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "22_29": {
+            "building": {
+                "abilities": {
+
+                },
+                "rotation": 270,
+                "side": "neutral",
+                "tile": "steampunk_tower"
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_fence"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "23_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "23_19": {
+            "building": {
+                "abilities": {
+                    "ability0": true,
+                    "ability2": false,
+                    "ability4": true
+                },
+                "rotation": 0,
+                "side": "yellow",
+                "tile": "feudal_hq"
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_wall"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_concrete"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "23_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_river3"
+            },
+            "ground": {
+                "rotation": 180,
+                "tile": "ground_dirt_road2"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "23_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "23_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 90,
+                "tile": "deco_flower6"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "23_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "23_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "nature_big_rocks3"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "23_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "nature_big_rocks1"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "23_26": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 90,
+                "tile": "nature_big_rocks1"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "24_18": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "24_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 180,
+                "tile": "deco_flower2"
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "modifiers": {
+
+                },
+                "rotation": 0,
+                "side": "yellow",
+                "tile": "yellow_tank"
+            }
+        },
+        "24_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "24_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_rocks2"
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass3"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "24_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "24_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 90,
+                "tile": "deco_rocks1"
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "24_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 180,
+                "tile": "nature_big_rocks2"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "24_25": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "nature_big_rocks2"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "25_19": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass1"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "25_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_flower7"
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "25_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "25_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": "deco_log"
+            },
+            "frame": {
+                "rotation": 270,
+                "tile": "frame_grass3"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "25_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 90,
+                "tile": "nature_big_rocks3"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "25_24": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "nature_big_rocks1"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "26_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 180,
+                "tile": "deco_flower4"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "26_21": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 90,
+                "tile": "deco_rocks2"
+            },
+            "frame": {
+                "rotation": 90,
+                "tile": "frame_grass2"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "26_22": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_grass4"
+            },
+            "ground": {
+                "rotation": 0,
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "nature_big_rocks3"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        },
+        "26_23": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 180,
+                "tile": "frame_snow4"
+            },
+            "ground": {
+                "rotation": 270,
+                "tile": "ground_snow"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": "nature_big_rocks1"
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        }
+    }
+}

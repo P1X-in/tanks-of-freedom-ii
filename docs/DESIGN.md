@@ -25,24 +25,28 @@ A democratic, capitalist nation that values business, ambition and freedom. In r
 
 Style: Modern
 Biome: Desert
+Capital: Sapphire City
 
 ### Ruby Dusk (Team Red)
 An industrial nation, that values hard work and ingeniuity. In rivalry with Sapphire Dawn.
 
 Style: Steampunk
 Biome: Snowy mountains
+Capital: Rubyport
 
 ### Jade Twilight (Team Green)
 A peacful and prosperous nation, consisting of a federation of smaller cultures. Values science and diplomacy. In good relations with everyone.
 
 Style: Futuristic
 Biome: Tropical
+Capital: Jade Oasis
 
 ### Amber Noon (Team Yellow)
 A feudal nation, that values honor and courage. Led by a royal family. In reserved relations with other nations.
 
 Style: Feudal/Knights
 Biome: Temperate
+Capital: Amber Fortress
 
 
 ## Characters
@@ -732,6 +736,7 @@ var triggers = {
                 {"action" : "trigger", "details" : {"name" : "other_player", "suspended" : true}},
                 {"action" : "ap", "details" : {"amount" : -100, "side" : "red"}, "delay" : 1},
                 {"action" : "ap", "details" : {"amount" : 500, "side" : "blue"}, "delay" : 1},
+                {"action" : "level_up", "details" : {"who" : [20, 20]}},
                 {"action" : "unlock"},
             ],
             "capture" : [
