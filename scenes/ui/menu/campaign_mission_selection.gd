@@ -81,6 +81,8 @@ func _add_mission_markers(missions):
         marker = self._add_mission_marker(index, mission)
         if index <= campaign_progress:
             marker.set_complete()
+        if index > campaign_progress + 1:
+            marker.hide()
         index += 1
 
 func _add_mission_marker(index, mission_details):

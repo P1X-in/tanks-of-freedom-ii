@@ -13,7 +13,7 @@
             "players": [
                 {
                     "side" : "red",
-                    "ap" : 10,
+                    "ap" : 0,
                     "type" : "human"
                 },
                 {
@@ -26,8 +26,8 @@
         {
             "name" : "securing_lines",
             "title" : "Securing the lines",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
+            "map" : "core_ruby_dusk_securing_lines.tofmap.json",
+            "description" : "After meeting up with the Second Battalion, Sidney plans his next move. He needs to secure supply lines before venturing deeper into Amber Noon territory.",
             "marker" : [450, 110],
             "players": [
                 {
