@@ -8,6 +8,9 @@ onready var heal = $"heal"
 
 func grab_sfx_effect(unit):
     var audio_player = unit.give_sfx_effect("die")
+    if audio_player == null:
+        return
+
     audio_player.connect("finished", audio_player, "queue_free")
     $"audio".add_child(audio_player)
     audio_player.play()
