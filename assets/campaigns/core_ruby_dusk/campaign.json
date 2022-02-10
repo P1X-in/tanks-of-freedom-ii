@@ -45,8 +45,8 @@
         {
             "name" : "taking_flight",
             "title" : "Taking flight",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
+            "map" : "core_ruby_dusk_taking_flight.tofmap.json",
+            "description" : "Faced with an ever increasing amounts of Amber Noon armored vehicles, First Battalion under Sidney's command needs to establish air superiority.",
             "marker" : [460, 40],
             "players": [
                 {
@@ -56,7 +56,7 @@
                 },
                 {
                     "side" : "yellow",
-                    "ap" : 0,
+                    "ap" : 50,
                     "type" : "ai"
                 }
             ]
