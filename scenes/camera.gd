@@ -386,6 +386,9 @@ func _shift_camera_translation(offset):
     current_position.x += offset.x
     current_position.z += offset.y
 
+    current_position.x = clamp(current_position.x, 0, self.camera_space_size)
+    current_position.z = clamp(current_position.z, 0, self.camera_space_size)
+
     self.set_translation(current_position)
 
 func _mouse_zoom_in():
