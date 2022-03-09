@@ -225,6 +225,8 @@ func attach_mouse_layer():
     var tile
 
     self.map.mouse_layer.initialize(self.map.model.SIZE, self.map.TILE_SIZE)
+    if self.map.mouse_layer.mouse_layer.get_parent():
+        self.map.mouse_layer.mouse_layer.get_parent().remove_child(self.map.mouse_layer.mouse_layer)
     self.map.tiles_ground_anchor.add_child(self.map.mouse_layer.mouse_layer)
     for key in self.map.mouse_layer.ground_points.keys():
         ground_point = self.map.mouse_layer.ground_points[key]

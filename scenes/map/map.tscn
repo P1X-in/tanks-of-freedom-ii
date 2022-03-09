@@ -39,7 +39,7 @@ camera_max_deg = -35
 camera_distance_max = 60
 tof_camera_distance_max = 110
 aw_camera_distance_max = 110
-camera_space_size = 328
+camera_space_size = 320
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 12 )
