@@ -64,8 +64,8 @@
         {
             "name" : "gateway",
             "title" : "Gateway",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
+            "map" : "core_ruby_dusk_gateway.tofmap.json",
+            "description" : "Assembled forces of Ruby Dusk are face one last obstacle on their way to Amber Fotress: the Amber River.",
             "marker" : [550, 70],
             "players": [
                 {
