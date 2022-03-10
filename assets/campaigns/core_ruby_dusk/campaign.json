@@ -83,8 +83,8 @@
         {
             "name" : "amber_fortress",
             "title" : "Amber Fotress",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
+            "map" : "core_ruby_dusk_amber_fortress.tofmap.json",
+            "description" : "Ruby Dusk is pushing forward with their offensive. Sidney prepares to capture a stretegic position, that will allow him to lay a siege on the Amber Noon capital city of Amber Fotress. ",
             "marker" : [540, 130],
             "players": [
                 {
