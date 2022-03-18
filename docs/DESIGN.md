@@ -249,6 +249,7 @@ Each of the main campaigns should be about 10 mission long.
 
 9. Hold the line
     - Sapphire Dawn is attacking defensive line, led by Commando Blake
+    - Add some nice battle cutscene here
     - Commando Blake taunts Gentleman Archibald for attacking Amber Noon
     - Gentleman Archibald explains, but Commando Blake does not listen
     - Sapphire Dawn drops troops regularly
