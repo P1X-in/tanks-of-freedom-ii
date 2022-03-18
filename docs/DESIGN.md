@@ -16,7 +16,7 @@ Proposed titles:
 
 
 ## World
-A fictional world of Libre populated by humans. It houses a big landmass called Lux Continent. Amber Noon is situated in a central place suitable for trade routes and with a lot of resources. It borders with Sapphire Dawn, Jade Twilight and Ruby Dusk.
+A fictional world of Libre populated by humans. It houses a big landmass called Dyke Continent. Amber Noon is situated in a central place suitable for trade routes and with a lot of resources. It borders with Sapphire Dawn, Jade Twilight and Ruby Dusk.
 
 It is possible, there are other continents in this world, that are not part of the story, and could be used in the future.
 
