@@ -102,13 +102,13 @@
         {
             "name" : "stranded",
             "title" : "Stranded",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
+            "map" : "core_ruby_dusk_stranded.tofmap.json",
+            "description" : "Archibalds task is simple: bring Noble Sidney back to Rubyport. Or so it seemed, as a new and unexpected force is standing in his way, cutting him off.",
             "marker" : [500, 140],
             "players": [
                 {
                     "side" : "red",
-                    "ap" : 0,
+                    "ap" : 20,
                     "type" : "human"
                 },
                 {
