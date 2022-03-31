@@ -12,7 +12,8 @@ func get_actions(entity_tile, enemy_buildings, enemy_units, _own_buildings, own_
     if spawn_points.size() < 1:
         return []
 
-    if own_units.size() >= self.UNITS_HARD_LIMIT:
+    var units_stats = self._gather_unit_stats(own_units)
+    if units_stats["total"] >= self.UNITS_HARD_LIMIT:
         return []
 
     var building = entity_tile.building.tile
@@ -21,7 +22,6 @@ func get_actions(entity_tile, enemy_buildings, enemy_units, _own_buildings, own_
     var ability_cost
 
     var bonus = self._calculate_proximity_value_bonus(entity_tile, enemy_units, enemy_buildings)
-    var units_stats = self._gather_unit_stats(own_units)
 
     for ability in building.abilities:
         ability_cost = board.abilities.get_modified_cost(ability.ap_cost, ability.template_name, building)
@@ -97,6 +97,10 @@ func _gather_unit_stats(units):
     var unit_class
 
     for unit_tile in units:
+        if unit_tile.unit.tile.ai_paused:
+            stats['total'] -= 1
+            continue
+
         unit_class = unit_tile.unit.tile.unit_class
         if stats.has(unit_class):
             stats[unit_class] += 1
