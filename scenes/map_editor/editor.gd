@@ -97,6 +97,10 @@ func _input(event):
         if event.is_action_pressed("editor_ban_menu"):
             self._open_ability_ban_menu()
             self.audio.play("menu_click")
+
+        if event.is_action_pressed("editor_ai_pause"):
+            self.toggle_unit_ai_pause()
+            self.audio.play("menu_click")
     else:
         if self.ui.radial.is_visible() and not self.ui.is_popup_open():
             if event.is_action_pressed("ui_cancel"):
@@ -378,3 +382,12 @@ func _open_ability_ban_menu():
     if tile.building.is_present():
         self.toggle_radial_menu(tile.building.tile)
 
+func toggle_unit_ai_pause():
+    var tile = self.map.model.get_tile(self.map.tile_box_position)
+    if tile.unit.is_present():
+        tile.unit.tile.ai_paused = not tile.unit.tile.ai_paused
+
+    if tile.unit.tile.ai_paused:
+        tile.unit.tile.remove_highlight()
+    else:
+        tile.unit.tile.restore_highlight()

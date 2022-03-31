@@ -30,6 +30,7 @@ var attacks = 1
 var level = 0
 var experience = 0
 var kills = 0
+var ai_paused = false
 
 var modifiers = {}
 var active_abilities = []
@@ -69,6 +70,7 @@ func get_dict():
     var new_dict = .get_dict()
     new_dict["side"] = self.side
     new_dict["modifiers"] = self.modifiers
+    new_dict["ai_paused"] = self.ai_paused
 
     return new_dict
 
@@ -135,8 +137,7 @@ func has_moves():
 func use_move(value):
     self.move -= value
     if self.move < 1:
-        self.set_side_material(self.desaturated_material)
-        #self.spotlight.hide()
+        self.remove_highlight()
 
 func use_all_moves():
     self.use_move(self.move)
@@ -144,8 +145,7 @@ func use_all_moves():
 func reset_move():
     var stats = self.get_stats_with_modifiers()
     self.move = stats["max_move"]
-    self.set_side_material(self.base_material)
-    #self.spotlight.show()
+    self.restore_highlight()
 
 func replenish_moves():
     self.reset_move()
@@ -272,6 +272,11 @@ func remove_highlight():
     self.set_side_material(self.desaturated_material)
     #$"mesh_anchor/activity_light".hide()
 
+func restore_highlight():
+    if self.ai_paused:
+        return
+    self.set_side_material(self.base_material)
+    #self.spotlight.show()
 
 func sfx_effect(name):
     if not self.audio.sounds_enabled:

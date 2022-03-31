@@ -127,7 +127,7 @@ func place_building(position, name, rotation, side=null):
     if side != null:
         self.set_building_side(position, side)
 
-func place_unit(position, name, rotation, side=null):
+func place_unit(position, name, rotation, side=null, ai_paused=false):
     var tile = self.map.model.get_tile(position)
 
     if not tile.ground.is_present():
@@ -146,7 +146,11 @@ func place_unit(position, name, rotation, side=null):
 
     if side != null:
         self.set_unit_side(position, side)
+    tile.unit.tile.ai_paused = ai_paused
     tile.unit.tile.reset()
+
+    if ai_paused:
+        tile.unit.tile.remove_highlight()
 
     return new_unit
 
@@ -258,7 +262,9 @@ func place_tile(tile_id, tile_data):
             tile.building.tile.restore_abilities_status(tile_data["building"]["abilities"])
 
     if tile_data["unit"]["tile"] != null:
-        self.place_unit(tile.position, tile_data["unit"]["tile"], tile_data["unit"]["rotation"], tile_data["unit"]["side"])
+        if not tile_data["unit"].has("ai_paused"):
+            tile_data["unit"]["ai_paused"] = false
+        self.place_unit(tile.position, tile_data["unit"]["tile"], tile_data["unit"]["rotation"], tile_data["unit"]["side"], tile_data["unit"]["ai_paused"])
 
 
 func set_building_side(position, new_side):
