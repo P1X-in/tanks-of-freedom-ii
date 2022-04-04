@@ -59,7 +59,7 @@ func _gather_attack_actions(entity_tile, ap):
                 action.value = target_tile.unit.tile.get_value() - 20
                 actions.append(action)
         else:
-            interaction_tiles = self._get_interaction_tiles(target_tile)
+            interaction_tiles = self._get_interaction_tiles(target_tile, entity_tile)
 
             for interaction_tile in interaction_tiles:
                 path = self.pathfinder.get_path_to_tile(interaction_tile)
@@ -109,7 +109,7 @@ func _gather_capture_actions(entity_tile, ap):
                 action.value = 10
                 actions.append(action)
         else:
-            interaction_tiles = self._get_interaction_tiles(target_tile)
+            interaction_tiles = self._get_interaction_tiles(target_tile, entity_tile)
 
             for interaction_tile in interaction_tiles:
                 path = self.pathfinder.get_path_to_tile(interaction_tile)
@@ -163,7 +163,7 @@ func _approach_action(entity_tile, path, unit_range):
         return self.actions_templates['move'].new(entity_tile, target_tile, unit_range)
     else:
         var nearby_path
-        var nearby_tiles = self._get_interaction_tiles(target_tile)
+        var nearby_tiles = self._get_interaction_tiles(target_tile, entity_tile)
 
         for nearby_tile in nearby_tiles:
             nearby_path = self.pathfinder.get_path_to_tile(nearby_tile)
@@ -174,10 +174,10 @@ func _approach_action(entity_tile, path, unit_range):
 
     return null
 
-func _get_interaction_tiles(tile):
+func _get_interaction_tiles(tile, source_tile):
     var tiles = []
     for neighbour in tile.neighbours:
-        if not tile.neighbours[neighbour].can_acommodate_unit(tile.unit.tile):
+        if not tile.neighbours[neighbour].can_acommodate_unit(source_tile.unit.tile):
             continue
         if not self.pathfinder.is_tile_reachable(tile.neighbours[neighbour]):
             continue
