@@ -120,14 +120,14 @@
         },
         {
             "name" : "uninvited_guests",
-            "title" : "Uinvited guests",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
+            "title" : "Uninvited guests",
+            "map" : "core_ruby_dusk_uninv_guests.tofmap.json",
+            "description" : "Ruby Dusk lands are under attack. Gentleman Archibald must secure the base in Tripoint and stop Sapphire Dawn before it is too late.",
             "marker" : [445, 170],
             "players": [
                 {
                     "side" : "red",
-                    "ap" : 0,
+                    "ap" : 10,
                     "type" : "human"
                 },
                 {
