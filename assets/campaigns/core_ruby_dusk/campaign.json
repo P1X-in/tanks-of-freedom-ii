@@ -140,8 +140,8 @@
         {
             "name" : "research_and_development",
             "title" : "Research and development",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
+            "map" : "core_ruby_dusk_res_and_dev.tofmap.json",
+            "description" : "Sapphire Dawn is attacking a secret lab working on new weapons for Ruby Dusk. Make use of previously unseen, powerful units and repel the invaders.",
             "marker" : [380, 210],
             "players": [
                 {
