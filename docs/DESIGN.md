@@ -136,6 +136,8 @@ Amber Noon Prince Tybalt with a handful of loyal forces trains against Jade Twil
 
 Prince Tybalt leads his forces against Sapphire Dawn, who allied themselves with Warlord Grim, as well as against Ruby Dusk standing in their way. He arrives with both his and allied Jade Twilight Forces at the outskirts of Amber Noon capital. It is being defended by Sapphire Dawn forces and Amber Noon troops loyal to Warlord Grim, as they defend it from Ruby Dusk. Both opponents are defeated and Prince Tybalt frees King Ludwig, ending the war.
 
+#### Epilogue
+
 Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights frees him from his cell. He gathers his forces and fights through Jade Twilight forces stationed nearby to escape. He dissapears into the mountains to plot his revenge.
 
 ### Missions
@@ -178,7 +180,7 @@ Each of the main campaigns should be about 10 mission long.
     - Prince Tybalt holds off the attack for a while
     - Prince Tybalt runs away, goes to capital to talk with King Ludwig
 
-#### Ruby Dusk Campaign
+#### Ruby Dusk Campaign - Noble Intentions
 1. Sudden Strike
     - Noble Sidney recieves a report
         - Outpost unprepared, taken, losses bigger than expected
@@ -255,13 +257,13 @@ Each of the main campaigns should be about 10 mission long.
     - Sapphire Dawn drops troops regularly
     - Gentleman Archibald needs to capture and hold line of towers
 
-#### Sapphire Dawn Campaign
+#### Sapphire Dawn Campaign - Business as usual
 To be designed.
 
-#### Jade Twilight Campaign
+#### Jade Twilight Campaign - Hard Diplomacy
 To be designed.
 
-#### Amber Noon Campaign
+#### Amber Noon Campaign - Royal Blood
 To be designed.
 
 
