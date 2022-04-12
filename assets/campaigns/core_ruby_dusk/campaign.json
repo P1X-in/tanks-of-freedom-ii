@@ -159,13 +159,13 @@
         {
             "name" : "hold_the_line",
             "title" : "Hold the line",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
+            "map" : "core_ruby_dusk_hold_the_line.tofmap.json",
+            "description" : "Commando Blake and his troops are pushing hard towards Lord Dawson's positions. It is up to Gentleman Archibald to stop the Sapphire Dawn commander and put an end to this incursion.",
             "marker" : [345, 270],
             "players": [
                 {
                     "side" : "red",
-                    "ap" : 0,
+                    "ap" : 100,
                     "type" : "human"
                 },
                 {
