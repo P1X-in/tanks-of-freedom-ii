@@ -10,7 +10,7 @@ Working title for the game is Tanks of Freedom 3-D, it is a subject to change, m
 
 Proposed titles:
 - *Tanks of Freedom - Liberum Gentem*
-- *Tanks of Freedom 2*
+- *Tanks of Freedom 2* (chosen title)
 - *Tanks of Freedom 2: Grim War*
 - *Tanks of Freedom 2: Heroes*
 

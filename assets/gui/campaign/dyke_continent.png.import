@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lux_continent.png-c02e3228f33901b2df52dcf9f955a077.stex"
+path="res://.import/dyke_continent.png-d2e2cc1f90f722f6a1c7797ee6830adb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gui/campaign/lux_continent.png"
-dest_files=[ "res://.import/lux_continent.png-c02e3228f33901b2df52dcf9f955a077.stex" ]
+source_file="res://assets/gui/campaign/dyke_continent.png"
+dest_files=[ "res://.import/dyke_continent.png-d2e2cc1f90f722f6a1c7797ee6830adb.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

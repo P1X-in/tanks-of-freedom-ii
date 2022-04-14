@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/ui/menu/campaign_mission_selection.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
-[ext_resource path="res://assets/gui/campaign/lux_continent.png" type="Texture" id=3]
+[ext_resource path="res://assets/gui/campaign/dyke_continent.png" type="Texture" id=3]
 [ext_resource path="res://scenes/ui/icons/arrow_left.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ui/icons/arrow_right.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=6]
