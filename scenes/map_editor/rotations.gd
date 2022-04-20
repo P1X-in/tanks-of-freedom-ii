@@ -11,6 +11,7 @@ func build_rotations(templates, builder):
 		templates.GROUND_MUD,
 		templates.GROUND_RIVER1,
 		templates.GROUND_RIVER2,
+		templates.GROUND_SWAMP,
 		templates.GROUND_ROAD1,
 		templates.GROUND_ROAD2,
 		templates.GROUND_ROAD3,

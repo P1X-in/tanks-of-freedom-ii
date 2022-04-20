@@ -14,6 +14,7 @@ var river_tiles = [
     "ground_snow_river2",
     "ground_sand_river1",
     "ground_sand_river2",
+    "ground_swamp",
 ]
 var road_tiles = [
     "ground_road1",
