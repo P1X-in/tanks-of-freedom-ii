@@ -105,8 +105,8 @@ func set_up_map():
     self.map.hide_invisible_tiles()
 
 func set_up_board():
-    self.audio.track("soundtrack_1")
     self.scripting.ingest_scripts(self, self.map.model.scripts)
+    self.start_music_track()
     self.setup_radial_menu()
 
     var index = 0
@@ -117,6 +117,15 @@ func set_up_board():
             index += 1
 
     self.state.register_heroes(self.map.model)
+
+func start_music_track():
+    var tracks = 5
+
+    if self.map.model.metadata.has("track"):
+        self.audio.track(self.map.model.metadata["track"])
+    else:
+        self.audio.track("soundtrack_" + str((randi() % tracks) + 1))
+    
 
 
 func end_turn():

@@ -3,7 +3,8 @@
         "initial_cam_pos": [
             13,
             12
-        ]
+        ],
+        "track": "soundtrack_3",
     },
     "scripts": {
         "stories": {

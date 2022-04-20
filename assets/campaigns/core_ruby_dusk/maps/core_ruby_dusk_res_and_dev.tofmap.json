@@ -4,7 +4,8 @@
             20,
             20
         ],
-        "skip_initial_hq_cam": true
+        "skip_initial_hq_cam": true,
+        "track": "soundtrack_4",
     },
     "scripts": {
         "stories": {

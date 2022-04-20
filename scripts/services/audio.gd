@@ -18,6 +18,9 @@ func _ready():
     self.register_track("menu", preload("res://assets/audio/soundtrack/grand_beats_menu_soundtrack.ogg"))
     self.register_track("soundtrack_1", preload("res://assets/audio/soundtrack/grand_beats_soundtrack_1_metal.ogg"))
     self.register_track("soundtrack_2", preload("res://assets/audio/soundtrack/grand_beats_110.ogg"))
+    self.register_track("soundtrack_3", preload("res://assets/audio/soundtrack/reduz_all_star_champion_sheep.ogg"))
+    self.register_track("soundtrack_4", preload("res://assets/audio/soundtrack/reduz_like_a_whale.ogg"))
+    self.register_track("soundtrack_5", preload("res://assets/audio/soundtrack/reduz_the_sorrows_of_a_crab.ogg"))
 
 
 func play(name):
