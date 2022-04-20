@@ -123,13 +123,13 @@ func set_up_board():
     self.state.register_heroes(self.map.model)
 
 func start_music_track():
-    var tracks = 5
+    var tracks = 6
 
     if self.map.model.metadata.has("track"):
         self.audio.track(self.map.model.metadata["track"])
     else:
         self.audio.track("soundtrack_" + str((randi() % tracks) + 1))
-    
+
 
 
 func end_turn():

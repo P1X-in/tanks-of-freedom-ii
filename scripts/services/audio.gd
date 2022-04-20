@@ -21,6 +21,7 @@ func _ready():
     self.register_track("soundtrack_3", preload("res://assets/audio/soundtrack/reduz_all_star_champion_sheep.ogg"))
     self.register_track("soundtrack_4", preload("res://assets/audio/soundtrack/reduz_like_a_whale.ogg"))
     self.register_track("soundtrack_5", preload("res://assets/audio/soundtrack/reduz_the_sorrows_of_a_crab.ogg"))
+    self.register_track("soundtrack_6", preload("res://assets/audio/soundtrack/reduz_capybara_love.ogg"))
 
 
 func play(name):
@@ -71,7 +72,7 @@ func register_sample(name, stream):
     self.get_tree().get_root().call_deferred("add_child", sfx)
     sfx.set_stream(stream)
     sfx.set_bus(self.BUS_SFX)
-    
+
     self.samples[name] = sfx
 
 
@@ -83,5 +84,5 @@ func register_track(name, stream):
     self.get_tree().get_root().call_deferred("add_child", track)
     track.set_stream(stream)
     track.set_bus(self.BUS_MUSIC)
-    
+
     self.soundtracks[name] = track

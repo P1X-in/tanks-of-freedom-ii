@@ -33,7 +33,7 @@ NotoSans font used in this project has been sourced from this repository:
 It is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 ## Music & SFX License
-Original copyrights of all audio assets belong to their respective authors.
+Original copyrights of all audio assets belong to their respective authors. Audio files have been converted into OGG format from their original files.
  - QmYaan (Grand Beats) http://www.grandbeats.com/
  - Juan "reduz" Linietsky
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/reduz_capybara_love.ogg-bdb64f16611cc52a7a4ec09940ca7db4.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/reduz_capybara_love.ogg"
+dest_files=[ "res://.import/reduz_capybara_love.ogg-bdb64f16611cc52a7a4ec09940ca7db4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
