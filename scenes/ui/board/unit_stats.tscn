@@ -171,11 +171,33 @@ margin_bottom = 160.0
 text = "Level"
 valign = 1
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
 [node name="level_value" type="Label" parent="background/level_label"]
+margin_left = 100.0
+margin_right = 200.0
+margin_bottom = 20.0
+text = "0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="kills_label" type="Label" parent="background"]
+margin_left = 300.0
+margin_top = 160.0
+margin_right = 400.0
+margin_bottom = 180.0
+text = "Kills"
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="kills_value" type="Label" parent="background/kills_label"]
 margin_left = 100.0
 margin_right = 200.0
 margin_bottom = 20.0

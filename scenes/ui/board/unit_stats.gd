@@ -11,6 +11,7 @@ onready var armour_value = $"background/armour_label/armour_value"
 onready var ap_value = $"background/ap_label/ap_value"
 onready var attack_value = $"background/attack_label/attack_value"
 onready var level_value = $"background/level_label/level_value"
+onready var kills_value = $"background/kills_label/kills_value"
 
 onready var ab1 = $"background/abilities/ab1"
 onready var ab1_anchor = $"background/abilities/ab1/anchor"
@@ -60,6 +61,7 @@ func bind_unit(unit, tile_preview, board):
     self.ap_value.set_text(str(unit.move) + "/" + str(stats['max_move']))
     self.attack_value.set_text(str(stats['attack']))
     self.level_value.set_text(str(unit.level))
+    self.kills_value.set_text(str(unit.kills))
 
     match unit.level:
         1:
