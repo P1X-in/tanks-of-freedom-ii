@@ -78,6 +78,10 @@ func _input(event):
             if event.is_action_pressed("editor_menu"):
                 self.toggle_radial_menu()
 
+        if self.ui.unit_stats.is_visible():
+            if event.is_action_pressed("ui_cancel") or event.is_action_pressed("editor_menu") or event.is_action_pressed("game_context"):
+                self.ui.hide_unit_stats()
+
 
 func _physics_process(_delta):
     self.hover_tile()

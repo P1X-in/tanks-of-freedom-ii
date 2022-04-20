@@ -559,14 +559,13 @@ vframes = 24
 frame = 49
 
 [node name="key2" type="Sprite" parent="background/game/unit_stats"]
-visible = false
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 centered = false
 hframes = 34
 vframes = 24
-frame = 157
+frame = 156
 
 [node name="key3" type="Sprite" parent="background/game/unit_stats"]
 visible = false
@@ -1015,7 +1014,6 @@ custom_fonts/font = ExtResource( 2 )
 text = "Clear"
 valign = 2
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
