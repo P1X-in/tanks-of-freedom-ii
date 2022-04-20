@@ -38,6 +38,7 @@ const GROUND_SAND_DIRT_ROAD2 = "ground_sand_dirt_road2"
 const GROUND_SAND_DIRT_ROAD3 = "ground_sand_dirt_road3"
 const GROUND_SAND_DIRT_ROAD4 = "ground_sand_dirt_road4"
 
+const GROUND_MUD = "ground_mud"
 const GROUND_FLYABLE = "ground_flyable"
 
 const FRAME_GRASS1 = "frame_grass1"
@@ -268,6 +269,7 @@ var templates = {
     self.GROUND_SAND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/sand/sand_dirt_road3.tscn"),
     self.GROUND_SAND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/sand/sand_dirt_road4.tscn"),
 
+    self.GROUND_MUD : preload("res://scenes/tiles/ground/mud.tscn"),
     self.GROUND_FLYABLE : preload("res://scenes/tiles/ground/flyable.tscn"),
 
     self.BRIDGE_PLATE : preload("res://scenes/tiles/ground/bridge_plate.tscn"),

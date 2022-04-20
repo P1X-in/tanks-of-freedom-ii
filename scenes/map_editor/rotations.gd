@@ -8,6 +8,7 @@ func build_rotations(templates, builder):
 	self.rotations[builder.CLASS_GROUND] = self.build_from_array([
 		templates.GROUND_GRASS,
 		templates.GROUND_CONCRETE,
+		templates.GROUND_MUD,
 		templates.GROUND_RIVER1,
 		templates.GROUND_RIVER2,
 		templates.GROUND_ROAD1,

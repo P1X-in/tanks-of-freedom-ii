@@ -39,6 +39,7 @@ var dirt_road_tiles = [
     "ground_dirt_road4",
     "city_bridge_wood",
     "bridge_stone",
+    "ground_mud",
 ]
 var city_tiles = [
     "city_building_big1",
