@@ -33,11 +33,16 @@ NotoSans font used in this project has been sourced from this repository:
 It is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 ## Music & SFX License
-Original copyrights of all audio assets belong to QmYaan (Grand Beats) http://www.grandbeats.com/
+Original copyrights of all audio assets belong to their respective authors.
+ - QmYaan (Grand Beats) http://www.grandbeats.com/
+ - Juan "reduz" Linietsky
 
-All sfx and music assets in this repository are licensed under Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0).
+All sfx and music assets in this repository made by QmYaan are licensed under Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0).
 
-[Full text of the license provided by Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/legalcode)
+All sfx and music assets in this repository made by reduz are licensed under Creative Commons Attribution 4.0 license (CC BY-SA 4.0).
+
+[Full text of the CC BY-SA 4.0 license provided by Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/legalcode)
+[Full text of the CC BY 4.0 license provided by Creative Commons](http://creativecommons.org/licenses/by/4.0/legalcode)
 
 ## Control icons
 Control icons tilemap has been created by KenneyNL and is distributed under CC0. See `assets/gui/icons/controls` for details.
