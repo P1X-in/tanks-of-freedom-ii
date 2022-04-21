@@ -46,6 +46,8 @@ const FRAME_GRASS1 = "frame_grass1"
 const FRAME_GRASS2 = "frame_grass2"
 const FRAME_GRASS3 = "frame_grass3"
 const FRAME_GRASS4 = "frame_grass4"
+const FRAME_GRASS5 = "frame_grass5"
+const FRAME_GRASS6 = "frame_grass6"
 const FRAME_RIVER1 = "frame_river1"
 const FRAME_RIVER2 = "frame_river2"
 const FRAME_RIVER3 = "frame_river3"
@@ -285,6 +287,8 @@ var templates = {
     self.FRAME_GRASS2 : preload("res://scenes/tiles/frames/grass_2_overtile.tscn"),
     self.FRAME_GRASS3 : preload("res://scenes/tiles/frames/grass_3_overtile.tscn"),
     self.FRAME_GRASS4 : preload("res://scenes/tiles/frames/grass_4_overtile.tscn"),
+    self.FRAME_GRASS5 : preload("res://scenes/tiles/frames/grass_5_overtile.tscn"),
+    self.FRAME_GRASS6 : preload("res://scenes/tiles/frames/grass_6_overtile.tscn"),
     self.FRAME_RIVER1 : preload("res://scenes/tiles/frames/river_plants_1_overtile.tscn"),
     self.FRAME_RIVER2 : preload("res://scenes/tiles/frames/river_plants_2_overtile.tscn"),
     self.FRAME_RIVER3 : preload("res://scenes/tiles/frames/river_plants_3_overtile.tscn"),
