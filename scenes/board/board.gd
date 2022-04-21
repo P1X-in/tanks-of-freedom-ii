@@ -565,7 +565,7 @@ func update_tile_highlight(tile):
         ap_gain = self.abilities.get_modified_ap_gain(ap_gain, tile.building.tile)
         self.ui.update_tile_highlight_building_panel(ap_gain)
     if tile.unit.is_present():
-        self.ui.update_tile_highlight_unit_panel(tile.unit.tile)
+        self.ui.update_tile_highlight_unit_panel(tile.unit.tile, self)
 
 func open_context_panel():
     var tile = self.map.model.get_tile(self.map.tile_box_position)

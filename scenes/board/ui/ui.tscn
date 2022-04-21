@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/board/ui/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ui/radial/radial.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://scenes/ui/board/cinematic_bars.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/ui/icons/star.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/ui/board/unit_stats.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/gui/editor/circle.png" type="Texture" id=13]
+[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=14]
 
 [node name="ui" type="Control"]
 anchor_right = 1.0
@@ -21,9 +23,6 @@ margin_right = -0.529785
 mouse_filter = 2
 theme = ExtResource( 4 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="radial" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -70,12 +69,8 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -40.0
 margin_bottom = -40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="tile_view" parent="tile_highlight" instance=ExtResource( 5 )]
-visible = false
 position = Vector2( 60, -20 )
 
 [node name="hp" type="Label" parent="tile_highlight/tile_view"]
@@ -115,6 +110,144 @@ position = Vector2( 70, -65 )
 
 [node name="star3" parent="tile_highlight/level3" instance=ExtResource( 11 )]
 position = Vector2( 60, -80 )
+
+[node name="abilities" type="Node2D" parent="tile_highlight"]
+position = Vector2( 20, -20 )
+
+[node name="ab1" type="Node2D" parent="tile_highlight/abilities"]
+visible = false
+position = Vector2( 120, 0 )
+
+[node name="bg" type="Sprite" parent="tile_highlight/abilities/ab1"]
+modulate = Color( 1, 1, 1, 0.823529 )
+position = Vector2( 50, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="anchor" type="Node2D" parent="tile_highlight/abilities/ab1"]
+position = Vector2( 50, 0 )
+
+[node name="disabled" type="Sprite" parent="tile_highlight/abilities/ab1"]
+visible = false
+modulate = Color( 1, 1, 1, 0.823529 )
+position = Vector2( 50, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="cd" type="Label" parent="tile_highlight/abilities/ab1/disabled"]
+margin_left = -100.0
+margin_top = -95.0
+margin_bottom = 5.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 14 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="label" type="Label" parent="tile_highlight/abilities/ab1"]
+margin_left = -50.0
+margin_top = 20.0
+margin_right = 150.0
+margin_bottom = 70.0
+text = "Heavy Weapon"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ab2" type="Node2D" parent="tile_highlight/abilities"]
+visible = false
+position = Vector2( 260, 0 )
+
+[node name="bg" type="Sprite" parent="tile_highlight/abilities/ab2"]
+modulate = Color( 1, 1, 1, 0.823529 )
+position = Vector2( 50, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="anchor" type="Node2D" parent="tile_highlight/abilities/ab2"]
+position = Vector2( 50, 0 )
+
+[node name="disabled" type="Sprite" parent="tile_highlight/abilities/ab2"]
+visible = false
+modulate = Color( 1, 1, 1, 0.823529 )
+position = Vector2( 50, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="cd" type="Label" parent="tile_highlight/abilities/ab2/disabled"]
+margin_left = -100.0
+margin_top = -95.0
+margin_bottom = 5.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 14 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="label" type="Label" parent="tile_highlight/abilities/ab2"]
+margin_left = -50.0
+margin_top = 20.0
+margin_right = 150.0
+margin_bottom = 70.0
+text = "Heavy Weapon"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ab3" type="Node2D" parent="tile_highlight/abilities"]
+visible = false
+position = Vector2( 400, 0 )
+
+[node name="bg" type="Sprite" parent="tile_highlight/abilities/ab3"]
+modulate = Color( 1, 1, 1, 0.823529 )
+position = Vector2( 50, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="anchor" type="Node2D" parent="tile_highlight/abilities/ab3"]
+position = Vector2( 50, 0 )
+
+[node name="disabled" type="Sprite" parent="tile_highlight/abilities/ab3"]
+visible = false
+modulate = Color( 1, 1, 1, 0.823529 )
+position = Vector2( 50, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="cd" type="Label" parent="tile_highlight/abilities/ab3/disabled"]
+margin_left = -100.0
+margin_top = -95.0
+margin_bottom = 5.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 14 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="label" type="Label" parent="tile_highlight/abilities/ab3"]
+margin_left = -50.0
+margin_top = 20.0
+margin_right = 150.0
+margin_bottom = 70.0
+text = "Heavy Weapon"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="summary" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -174,8 +307,8 @@ __meta__ = {
 [node name="cinematic_bars" parent="cinematic_bars" instance=ExtResource( 10 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1919.0
-margin_bottom = 1080.0
+margin_right = 1279.0
+margin_bottom = 800.0
 mouse_filter = 2
 
 [node name="story_dialog" type="MarginContainer" parent="."]
