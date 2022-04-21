@@ -104,6 +104,9 @@ var cacti_tiles = [
     "nature_sand_cacti1",
     "nature_sand_cacti2",
     "nature_sand_cacti3",
+    "nature_sand_palms1",
+    "nature_sand_palms2",
+    "nature_sand_palms3",
 ]
 
 var dune_tiles = [

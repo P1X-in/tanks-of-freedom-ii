@@ -154,6 +154,9 @@ const NATURE_SAND_DUNES1 = "nature_sand_dunes1"
 const NATURE_SAND_DUNES2 = "nature_sand_dunes2"
 const NATURE_SAND_DUNES3 = "nature_sand_dunes3"
 const NATURE_SAND_DUNES4 = "nature_sand_dunes4"
+const NATURE_SAND_PALMS1 = "nature_sand_palms1"
+const NATURE_SAND_PALMS2 = "nature_sand_palms2"
+const NATURE_SAND_PALMS3 = "nature_sand_palms3"
 
 const MODERN_AIRFIELD = "modern_airfield"
 const MODERN_BARRACKS = "modern_barracks"
@@ -386,6 +389,9 @@ var templates = {
     self.NATURE_SAND_DUNES2 : preload("res://scenes/tiles/nature/sand/dunes_2_overtile.tscn"),
     self.NATURE_SAND_DUNES3 : preload("res://scenes/tiles/nature/sand/dunes_3_overtile.tscn"),
     self.NATURE_SAND_DUNES4 : preload("res://scenes/tiles/nature/sand/dunes_4_overtile.tscn"),
+    self.NATURE_SAND_PALMS1 : preload("res://scenes/tiles/nature/sand/palms_1_overtile.tscn"),
+    self.NATURE_SAND_PALMS2 : preload("res://scenes/tiles/nature/sand/palms_2_overtile.tscn"),
+    self.NATURE_SAND_PALMS3 : preload("res://scenes/tiles/nature/sand/palms_3_overtile.tscn"),
 
     self.MODERN_AIRFIELD : preload("res://scenes/tiles/buildings/blue/airfield.tscn"),
     self.MODERN_BARRACKS : preload("res://scenes/tiles/buildings/blue/barracks.tscn"),

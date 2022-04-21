@@ -132,6 +132,9 @@ func build_rotations(templates, builder):
 		templates.NATURE_SAND_DUNES2,
 		templates.NATURE_SAND_DUNES3,
 		templates.NATURE_SAND_DUNES4,
+		templates.NATURE_SAND_PALMS1,
+		templates.NATURE_SAND_PALMS2,
+		templates.NATURE_SAND_PALMS3,
 	])
 
 	self.rotations[builder.CLASS_BUILDING] = self.build_from_array([
