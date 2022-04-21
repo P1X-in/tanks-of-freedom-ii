@@ -100,10 +100,8 @@ tracks/1/keys = {
 }
 
 [node name="controls" type="Control"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_scale = Vector2( 1e-05, 1e-05 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -111,12 +109,11 @@ __meta__ = {
 
 [node name="background" type="ColorRect" parent="."]
 margin_left = -400.0
-margin_top = -275.0
+margin_top = -300.0
 margin_right = 400.0
-margin_bottom = 275.0
+margin_bottom = 300.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
@@ -1105,7 +1102,6 @@ custom_fonts/font = ExtResource( 2 )
 text = "Bans"
 valign = 2
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
@@ -1142,21 +1138,65 @@ hframes = 34
 vframes = 24
 frame = 85
 
-[node name="widgets" type="Control" parent="."]
-margin_left = -200.0
-margin_top = -275.0
+[node name="ai_toggle" type="Label" parent="background/editor"]
+margin_left = 20.0
+margin_top = 487.0
 margin_right = 200.0
-margin_bottom = 45.0
+margin_bottom = 518.0
+custom_fonts/font = ExtResource( 2 )
+text = "Unit AI Toggle"
+valign = 2
 __meta__ = {
-"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="line" type="Line2D" parent="background/editor/ai_toggle"]
+points = PoolVector2Array( 0, 27, 360, 27 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="key" type="Sprite" parent="background/editor/ai_toggle"]
+position = Vector2( 180, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 254
+
+[node name="key2" type="Sprite" parent="background/editor/ai_toggle"]
+position = Vector2( 230, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 92
+
+[node name="key3" type="Sprite" parent="background/editor/ai_toggle"]
+visible = false
+position = Vector2( 280, -7 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+hframes = 34
+vframes = 24
+frame = 85
+
+[node name="widgets" type="Control" parent="."]
+margin_left = -400.0
+margin_top = -300.0
+margin_right = 400.0
+margin_bottom = 300.0
+__meta__ = {
 "_editor_description_": ""
 }
 
 [node name="back_button" type="Button" parent="widgets"]
-margin_left = 150.0
-margin_top = 500.0
-margin_right = 250.0
-margin_bottom = 530.0
+margin_left = 350.0
+margin_top = 550.0
+margin_right = 450.0
+margin_bottom = 580.0
 custom_fonts/font = ExtResource( 2 )
 text = "Back"
 __meta__ = {
