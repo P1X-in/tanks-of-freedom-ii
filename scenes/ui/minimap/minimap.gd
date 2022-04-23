@@ -5,7 +5,7 @@ onready var minimap = $"minimap"
 
 var grass_tiles = ["ground_grass"]
 var snow_tiles = ["ground_snow"]
-var sand_tiles = ["ground_sand"]
+var sand_tiles = ["ground_sand", "frame_wheat"]
 var concrete_tiles = ["ground_concrete"]
 var river_tiles = [
     "ground_river1", 
