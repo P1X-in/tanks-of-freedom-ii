@@ -19,8 +19,11 @@ func _get_outcome_metadata(event):
         'attacker' : event.attacker
     }
 
+func set_vip(x, y):
+    self.vip_id = self.board.map.model.get_tile2(x, y).unit.tile.get_instance_id()
+
 func ingest_details(details):
     if details.has("vip"):
-        self.vip_id = self.board.map.model.get_tile2(details['vip'][0], details['vip'][1]).unit.tile.get_instance_id()
+        self.set_vip(details['vip'][0], details['vip'][1])
     if details.has("type"):
         self.unit_type = details["type"]

@@ -30,6 +30,10 @@ func _get_outcome_metadata(event):
         'unit' : event.unit
     }
 
+func set_vip(x, y):
+    self.unit_tag = "move_" + str(x) + "_" + str(y)
+    self.board.map.model.get_tile2(x, y).unit.tile.add_script_tag(self.unit_tag)
+
 func ingest_details(details):
     self.fields = details['fields']
     if details.has('player'):
@@ -37,8 +41,7 @@ func ingest_details(details):
     if details.has('player_side'):
         self.player_side = details['player_side']
     if details.has('unit'):
-        self.unit_tag = "move_" + str(details['unit'][0]) + "_" + str(details['unit'][1])
-        self.board.map.model.get_tile2(details['unit'][0], details['unit'][1]).unit.tile.add_script_tag(self.unit_tag)
+        self.set_vip(details['unit'][0], details['unit'][1])
     if details.has('unit_tag'):
         self.unit_tag = details['unit_tag']
 

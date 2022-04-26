@@ -15,5 +15,9 @@ func _get_outcome_metadata(event):
         'attacker' : event.attacker
     }
 
+
+func set_vip(x, y):
+    self.unit = self.board.map.model.get_tile2(x, y).unit.tile
+
 func ingest_details(details):
-    self.unit = self.board.map.model.get_tile2(details['vip'][0], details['vip'][1]).unit.tile
+    self.set_vip(details['vip'][0], details['vip'][1])
