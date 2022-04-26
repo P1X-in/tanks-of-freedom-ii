@@ -70,6 +70,10 @@ const FRAME_SNOW_RIVER2 = "frame_snow_river2"
 const FRAME_SNOW_RIVER3 = "frame_snow_river3"
 const FRAME_SNOW_RIVER4 = "frame_snow_river4"
 
+const FRAME_SAND_BEACH1 = "frame_sand_beach1"
+const FRAME_SAND_BEACH2 = "frame_sand_beach2"
+const FRAME_SAND_BEACH3 = "frame_sand_beach3"
+
 const DECO_FLOWERS1 = "deco_flower1"
 const DECO_FLOWERS2 = "deco_flower2"
 const DECO_FLOWERS3 = "deco_flower3"
@@ -311,6 +315,10 @@ var templates = {
     self.FRAME_SNOW_RIVER2 : preload("res://scenes/tiles/frames/snow/river_snow_2_overtile.tscn"),
     self.FRAME_SNOW_RIVER3 : preload("res://scenes/tiles/frames/snow/river_snow_3_overtile.tscn"),
     self.FRAME_SNOW_RIVER4 : preload("res://scenes/tiles/frames/snow/river_snow_4_overtile.tscn"),
+
+    self.FRAME_SAND_BEACH1 : preload("res://scenes/tiles/frames/sand/beach_1_overtile.tscn"),
+    self.FRAME_SAND_BEACH2 : preload("res://scenes/tiles/frames/sand/beach_2_overtile.tscn"),
+    self.FRAME_SAND_BEACH3 : preload("res://scenes/tiles/frames/sand/beach_3_overtile.tscn"),
 
     self.DECO_FLOWERS1 : preload("res://scenes/tiles/decorations/flowers_1_overtile.tscn"),
     self.DECO_FLOWERS2 : preload("res://scenes/tiles/decorations/flowers_2_overtile.tscn"),
