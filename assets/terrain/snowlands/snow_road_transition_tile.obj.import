@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/snow_road_transition_tile.obj-8a33ab144177bed8169e8d2255653240.mesh"
+
+[deps]
+
+files=[ "res://.import/snow_road_transition_tile.obj-8a33ab144177bed8169e8d2255653240.mesh" ]
+
+source_file="res://assets/terrain/snowlands/snow_road_transition_tile.obj"
+dest_files=[ "res://.import/snow_road_transition_tile.obj-8a33ab144177bed8169e8d2255653240.mesh", "res://.import/snow_road_transition_tile.obj-8a33ab144177bed8169e8d2255653240.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -32,6 +32,9 @@ var road_tiles = [
     "ground_sand_road4",
     "bridge_plate",
     "bridge_legs",
+    "ground_road_transition",
+    "ground_snow_road_transition",
+    "ground_sand_road_transition",
 ]
 var dirt_road_tiles = [
     "ground_dirt_road1",

@@ -13,6 +13,7 @@ const GROUND_DIRT_ROAD1 = "ground_dirt_road1"
 const GROUND_DIRT_ROAD2 = "ground_dirt_road2"
 const GROUND_DIRT_ROAD3 = "ground_dirt_road3"
 const GROUND_DIRT_ROAD4 = "ground_dirt_road4"
+const GROUND_ROAD_TRANSITION = "ground_road_transition"
 
 const GROUND_SNOW = "ground_snow"
 const GROUND_SNOW_RIVER1 = "ground_snow_river1"
@@ -25,6 +26,7 @@ const GROUND_SNOW_DIRT_ROAD1 = "ground_snow_dirt_road1"
 const GROUND_SNOW_DIRT_ROAD2 = "ground_snow_dirt_road2"
 const GROUND_SNOW_DIRT_ROAD3 = "ground_snow_dirt_road3"
 const GROUND_SNOW_DIRT_ROAD4 = "ground_snow_dirt_road4"
+const GROUND_SNOW_ROAD_TRANSITION = "ground_snow_road_transition"
 
 const GROUND_SAND = "ground_sand"
 const GROUND_SAND_RIVER1 = "ground_sand_river1"
@@ -37,6 +39,7 @@ const GROUND_SAND_DIRT_ROAD1 = "ground_sand_dirt_road1"
 const GROUND_SAND_DIRT_ROAD2 = "ground_sand_dirt_road2"
 const GROUND_SAND_DIRT_ROAD3 = "ground_sand_dirt_road3"
 const GROUND_SAND_DIRT_ROAD4 = "ground_sand_dirt_road4"
+const GROUND_SAND_ROAD_TRANSITION = "ground_sand_road_transition"
 
 const GROUND_MUD = "ground_mud"
 const GROUND_SWAMP = "ground_swamp"
@@ -255,6 +258,7 @@ var templates = {
     self.GROUND_DIRT_ROAD2 : preload("res://scenes/tiles/ground/dirt_road2.tscn"),
     self.GROUND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/dirt_road3.tscn"),
     self.GROUND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/dirt_road4.tscn"),
+    self.GROUND_ROAD_TRANSITION : preload("res://scenes/tiles/ground/road_transition.tscn"),
 
     self.GROUND_SNOW : preload("res://scenes/tiles/ground/snow/snow.tscn"),
     self.GROUND_SNOW_RIVER1 : preload("res://scenes/tiles/ground/snow/ice_river1.tscn"),
@@ -267,6 +271,7 @@ var templates = {
     self.GROUND_SNOW_DIRT_ROAD2 : preload("res://scenes/tiles/ground/snow/snow_dirt_road2.tscn"),
     self.GROUND_SNOW_DIRT_ROAD3 : preload("res://scenes/tiles/ground/snow/snow_dirt_road3.tscn"),
     self.GROUND_SNOW_DIRT_ROAD4 : preload("res://scenes/tiles/ground/snow/snow_dirt_road4.tscn"),
+    self.GROUND_SNOW_ROAD_TRANSITION : preload("res://scenes/tiles/ground/snow/snow_road_transition.tscn"),
 
     self.GROUND_SAND : preload("res://scenes/tiles/ground/sand/sand.tscn"),
     self.GROUND_SAND_RIVER1 : preload("res://scenes/tiles/ground/sand/sand_river1.tscn"),
@@ -279,6 +284,7 @@ var templates = {
     self.GROUND_SAND_DIRT_ROAD2 : preload("res://scenes/tiles/ground/sand/sand_dirt_road2.tscn"),
     self.GROUND_SAND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/sand/sand_dirt_road3.tscn"),
     self.GROUND_SAND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/sand/sand_dirt_road4.tscn"),
+    self.GROUND_SAND_ROAD_TRANSITION : preload("res://scenes/tiles/ground/sand/sand_road_transition.tscn"),
 
     self.GROUND_MUD : preload("res://scenes/tiles/ground/mud.tscn"),
     self.GROUND_SWAMP : preload("res://scenes/tiles/ground/swamp.tscn"),

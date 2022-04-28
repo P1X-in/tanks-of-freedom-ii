@@ -230,57 +230,6 @@
                     "action": "unlock"
                 }
             ],
-            "hq_captured": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            14,
-                            18
-                        ],
-                        "zoom": 0.2
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Gentleman Archibald",
-                        "portrait": "hero_gentleman",
-                        "side": "right",
-                        "text": "Great work men, victory is ours. But we can't rest just yet."
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Infantry",
-                        "portrait": "red_infantry",
-                        "side": "left",
-                        "text": "Have a look sir, we found these plans in the officers quarters. They are going to attack our top-secret research facility."
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Gentleman Archibald",
-                        "portrait": "hero_gentleman",
-                        "side": "right",
-                        "text": "That laboratory needs our help then. Maybe they are working on something interesting."
-                    }
-                },
-                {
-                    "action": "unlock"
-                },
-                {
-                    "action": "end_game",
-                    "details": {
-                        "winner": "red"
-                    }
-                }
-            ],
             "airfield_captured": [
                 {
                     "action": "lock"
@@ -395,6 +344,57 @@
                         "winner": "blue"
                     }
                 }
+            ],
+            "hq_captured": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            14,
+                            18
+                        ],
+                        "zoom": 0.2
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Gentleman Archibald",
+                        "portrait": "hero_gentleman",
+                        "side": "right",
+                        "text": "Great work men, victory is ours. But we can't rest just yet."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Infantry",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "Have a look sir, we found these plans in the officers quarters. They are going to attack our top-secret research facility."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Gentleman Archibald",
+                        "portrait": "hero_gentleman",
+                        "side": "right",
+                        "text": "That laboratory needs our help then. Maybe they are working on something interesting."
+                    }
+                },
+                {
+                    "action": "unlock"
+                },
+                {
+                    "action": "end_game",
+                    "details": {
+                        "winner": "red"
+                    }
+                }
             ]
         },
         "triggers": {
@@ -406,21 +406,6 @@
                 "one_off": true,
                 "story": "01_first_turn",
                 "type": "turn"
-            },
-            "hq_captured": {
-                "details": {
-                    "amount": 1,
-                    "list": [
-                        [
-                            14,
-                            18
-                        ]
-                    ],
-                    "player_side": "red"
-                },
-                "one_off": true,
-                "story": "hq_captured",
-                "type": "claim"
             },
             "airfield_captured": {
                 "details": {
@@ -456,6 +441,21 @@
                 "one_off": true,
                 "story": "archibald_defeated",
                 "type": "assasination"
+            },
+            "hq_captured": {
+                "details": {
+                    "amount": 1,
+                    "list": [
+                        [
+                            14,
+                            18
+                        ]
+                    ],
+                    "player_side": "red"
+                },
+                "one_off": true,
+                "story": "hq_captured",
+                "type": "claim"
             }
         }
     },
@@ -7906,7 +7906,7 @@
             },
             "ground": {
                 "rotation": 0,
-                "tile": "ground_dirt_road1"
+                "tile": "ground_road_transition"
             },
             "terrain": {
                 "rotation": 0,
