@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/swamp_2_tile.obj-76a332d5ba9f341bb6a3152b28688395.mesh"
+
+[deps]
+
+files=[ "res://.import/swamp_2_tile.obj-76a332d5ba9f341bb6a3152b28688395.mesh" ]
+
+source_file="res://assets/terrain/variety/swamp_2_tile.obj"
+dest_files=[ "res://.import/swamp_2_tile.obj-76a332d5ba9f341bb6a3152b28688395.mesh", "res://.import/swamp_2_tile.obj-76a332d5ba9f341bb6a3152b28688395.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
