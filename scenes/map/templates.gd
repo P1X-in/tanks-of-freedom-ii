@@ -158,6 +158,10 @@ const NATURE_TREES6 = "nature_trees6"
 const NATURE_TREES7 = "nature_trees7"
 const NATURE_TREES8 = "nature_trees8"
 const NATURE_TREES9 = "nature_trees9"
+const NATURE_TREES10 = "nature_trees10"
+const NATURE_TREES11 = "nature_trees11"
+const NATURE_TREES12 = "nature_trees12"
+const NATURE_TREES13 = "nature_trees13"
 
 const NATURE_SAND_CACTI1 = "nature_sand_cacti1"
 const NATURE_SAND_CACTI2 = "nature_sand_cacti2"
@@ -405,6 +409,10 @@ var templates = {
     self.NATURE_TREES7 : preload("res://scenes/tiles/nature/trees_7_overtile.tscn"),
     self.NATURE_TREES8 : preload("res://scenes/tiles/nature/trees_8_overtile.tscn"),
     self.NATURE_TREES9 : preload("res://scenes/tiles/nature/trees_9_overtile.tscn"),
+    self.NATURE_TREES10 : preload("res://scenes/tiles/nature/trees_10_overtile.tscn"),
+    self.NATURE_TREES11 : preload("res://scenes/tiles/nature/trees_11_overtile.tscn"),
+    self.NATURE_TREES12 : preload("res://scenes/tiles/nature/trees_12_overtile.tscn"),
+    self.NATURE_TREES13 : preload("res://scenes/tiles/nature/trees_13_overtile.tscn"),
 
     self.NATURE_SAND_CACTI1 : preload("res://scenes/tiles/nature/sand/cacti_1_overtile.tscn"),
     self.NATURE_SAND_CACTI2 : preload("res://scenes/tiles/nature/sand/cacti_2_overtile.tscn"),

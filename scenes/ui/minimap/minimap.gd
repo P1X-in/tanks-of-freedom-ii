@@ -97,6 +97,10 @@ var forest_tiles = [
     "nature_trees4",
     "nature_trees5",
     "nature_trees6",
+    "nature_trees10",
+    "nature_trees11",
+    "nature_trees12",
+    "nature_trees13",
 ]
 
 var forest_autumn_tiles = [
