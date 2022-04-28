@@ -127,6 +127,7 @@ func build_rotations(templates, builder):
 		templates.NATURE_BIG_ROCKS1,
 		templates.NATURE_BIG_ROCKS2,
 		templates.NATURE_BIG_ROCKS3,
+		templates.NATURE_BIG_ROCKS4,
 		templates.NATURE_TREES1,
 		templates.NATURE_TREES2,
 		templates.NATURE_TREES3,

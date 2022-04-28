@@ -89,6 +89,7 @@ var mountain_tiles = [
     "nature_big_rocks1",
     "nature_big_rocks2",
     "nature_big_rocks3",
+    "nature_big_rocks4",
 ]
 var forest_tiles = [
     "nature_trees1",

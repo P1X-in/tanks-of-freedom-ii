@@ -149,6 +149,7 @@ const DESTROYED_BUILDING_BIG4 = "destroyed_building_big4"
 const NATURE_BIG_ROCKS1 = "nature_big_rocks1"
 const NATURE_BIG_ROCKS2 = "nature_big_rocks2"
 const NATURE_BIG_ROCKS3 = "nature_big_rocks3"
+const NATURE_BIG_ROCKS4 = "nature_big_rocks4"
 const NATURE_TREES1 = "nature_trees1"
 const NATURE_TREES2 = "nature_trees2"
 const NATURE_TREES3 = "nature_trees3"
@@ -400,6 +401,7 @@ var templates = {
     self.NATURE_BIG_ROCKS1 : preload("res://scenes/tiles/nature/big_rocks_1_overtile.tscn"),
     self.NATURE_BIG_ROCKS2 : preload("res://scenes/tiles/nature/big_rocks_2_overtile.tscn"),
     self.NATURE_BIG_ROCKS3 : preload("res://scenes/tiles/nature/big_rocks_3_overtile.tscn"),
+    self.NATURE_BIG_ROCKS4 : preload("res://scenes/tiles/nature/big_rocks_4_overtile.tscn"),
     self.NATURE_TREES1 : preload("res://scenes/tiles/nature/trees_1_overtile.tscn"),
     self.NATURE_TREES2 : preload("res://scenes/tiles/nature/trees_2_overtile.tscn"),
     self.NATURE_TREES3 : preload("res://scenes/tiles/nature/trees_3_overtile.tscn"),
