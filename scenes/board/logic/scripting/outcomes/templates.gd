@@ -20,6 +20,7 @@ var templates = {
     'level_up' : preload("res://scenes/board/logic/scripting/outcomes/level_up.gd"),
     'target_vip' : preload("res://scenes/board/logic/scripting/outcomes/target_vip.gd"),
     'ban_unit' : preload("res://scenes/board/logic/scripting/outcomes/ban_unit.gd"),
+    'pause_ai' : preload("res://scenes/board/logic/scripting/outcomes/pause_ai.gd"),
 
     'eliminate_player' : preload("res://scenes/board/logic/scripting/outcomes/eliminate_player.gd")
 }
