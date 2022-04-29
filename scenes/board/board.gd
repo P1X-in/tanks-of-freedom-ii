@@ -378,22 +378,22 @@ func battle(attacker_tile, defender_tile):
 
     defender.receive_damage(attacker.get_attack())
     attacker.sfx_effect("attack")
+    attacker.sfx_effect("hit")
 
     if defender.is_alive():
         defender.show_explosion()
-        defender.sfx_effect("damage")
 
         if defender.can_attack(attacker) && defender.has_moves():
             defender.use_all_moves()
             attacker.receive_damage(defender.get_attack())
+            yield(self.get_tree().create_timer(self.RETALIATION_DELAY), "timeout")
+            defender.rotate_unit_to_direction(defender_tile.get_direction_to_neighbour(attacker_tile))
+
+            defender.sfx_effect("attack")
+            defender.sfx_effect("hit")
 
             if attacker.is_alive():
-                yield(self.get_tree().create_timer(self.RETALIATION_DELAY), "timeout")
-                defender.rotate_unit_to_direction(defender_tile.get_direction_to_neighbour(attacker_tile))
-                defender.sfx_effect("attack")
                 attacker.show_explosion()
-                attacker.sfx_effect("damage")
-
                 self.events.emit_unit_attacked(defender, attacker)
             else:
                 var attacker_id = attacker.get_instance_id()

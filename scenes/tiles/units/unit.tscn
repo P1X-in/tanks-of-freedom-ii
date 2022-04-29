@@ -101,15 +101,19 @@ bus = "Units"
 unit_db = 45.0
 bus = "Attack"
 
-[node name="damage" type="AudioStreamPlayer3D" parent="audio" index="3"]
+[node name="hit" type="AudioStreamPlayer3D" parent="audio" index="3"]
+unit_db = 45.0
+bus = "Attack"
+
+[node name="damage" type="AudioStreamPlayer3D" parent="audio" index="4"]
 unit_db = 45.0
 bus = "Damage"
 
-[node name="die" type="AudioStreamPlayer3D" parent="audio" index="4"]
+[node name="die" type="AudioStreamPlayer3D" parent="audio" index="5"]
 unit_db = 45.0
 bus = "Explosion"
 
-[node name="level_up" type="AudioStreamPlayer3D" parent="audio" index="5"]
+[node name="level_up" type="AudioStreamPlayer3D" parent="audio" index="6"]
 stream = ExtResource( 5 )
 unit_db = 45.0
 bus = "Units"
