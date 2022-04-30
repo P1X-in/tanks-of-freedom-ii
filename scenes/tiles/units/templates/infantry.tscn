@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/abilities/unit/heavy_weapon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://assets/units/audio/soldier_damage.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/units/audio/soldier_die.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/units/audio/soldier_attack.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/units/audio/soldier_hit.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/units/audio/tank_attack.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/units/audio/missile_attack.wav" type="AudioStream" id=10]
 
 [node name="infantry" instance=ExtResource( 2 )]
 main_tile_view_cam_modifier = -10
@@ -45,8 +48,19 @@ stream = ExtResource( 4 )
 [node name="attack" parent="audio" index="2"]
 stream = ExtResource( 7 )
 
-[node name="damage" parent="audio" index="3"]
+[node name="hit" parent="audio" index="3"]
+stream = ExtResource( 8 )
+
+[node name="damage" parent="audio" index="4"]
 stream = ExtResource( 5 )
 
-[node name="die" parent="audio" index="4"]
+[node name="die" parent="audio" index="5"]
 stream = ExtResource( 6 )
+
+[node name="ab_attack" type="AudioStreamPlayer3D" parent="audio" index="7"]
+stream = ExtResource( 10 )
+unit_db = 45.0
+
+[node name="ab_hit" type="AudioStreamPlayer3D" parent="audio" index="8"]
+stream = ExtResource( 9 )
+unit_db = 45.0

@@ -15,7 +15,7 @@ func _execute(board, position):
     board.lob_projectile(self.active_source_tile, tile, self.TWEEN_TIME)
     yield(self.get_tree().create_timer(self.TWEEN_TIME), "timeout")
     
-    tile.unit.tile.sfx_effect("damage")
+    self.source.sfx_effect("hit")
     if not tile.unit.tile.is_alive():
         var unit_id = tile.unit.tile.get_instance_id()
         var unit_type = tile.unit.tile.template_name

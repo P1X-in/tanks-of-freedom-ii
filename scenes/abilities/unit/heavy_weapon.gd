@@ -7,12 +7,12 @@ export var damage = 8
 func _execute(board, position):
     var tile = board.map.model.get_tile(position)
     tile.unit.tile.receive_damage(self.damage)
-    self.source.sfx_effect("attack")
+    self.source.sfx_effect("ab_attack")
 
     board.shoot_projectile(self.active_source_tile, tile, self.TWEEN_TIME)
     yield(self.get_tree().create_timer(self.TWEEN_TIME), "timeout")
     
-    tile.unit.tile.sfx_effect("damage")
+    self.source.sfx_effect("ab_hit")
     if not tile.unit.tile.is_alive():
         var unit_id = tile.unit.tile.get_instance_id()
         var unit_type = tile.unit.tile.template_name
