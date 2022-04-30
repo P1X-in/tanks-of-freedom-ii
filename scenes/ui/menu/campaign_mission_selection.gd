@@ -31,7 +31,7 @@ func _input(event):
         self._on_back_button_pressed()
 
 func _on_back_button_pressed():
-    self.audio.play("menu_click")
+    self.audio.play("menu_back")
     self.main_menu.close_campaign_mission_selection()
 
 func _on_prev_button_pressed():

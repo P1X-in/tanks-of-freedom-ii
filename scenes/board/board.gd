@@ -66,20 +66,25 @@ func _input(event):
                 self.mouse_click_position = null
 
             if event.is_action_pressed("game_context"):
+                self.audio.play("menu_click")
                 self.open_context_panel()
 
         if event.is_action_pressed("editor_menu"):
+            self.audio.play("menu_click")
             self.toggle_radial_menu()
     else:
         if self.ui.radial.is_visible() and not self.ui.is_popup_open():
             if event.is_action_pressed("ui_cancel"):
+                self.audio.play("menu_back")
                 self.toggle_radial_menu()
 
             if event.is_action_pressed("editor_menu"):
+                self.audio.play("menu_click")
                 self.toggle_radial_menu()
 
         if self.ui.unit_stats.is_visible():
             if event.is_action_pressed("ui_cancel") or event.is_action_pressed("editor_menu") or event.is_action_pressed("game_context"):
+                self.audio.play("menu_back")
                 self.ui.hide_unit_stats()
 
 
@@ -213,7 +218,7 @@ func select_tile(position):
     self.update_tile_highlight(tile)
 
     if self.selected_tile != null:
-        self.audio.play("menu_click")
+        self.audio.play("click")
 
 
 func unselect_action():

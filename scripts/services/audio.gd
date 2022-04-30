@@ -11,7 +11,9 @@ var sounds_enabled = true
 var music_enabled = true
 
 func _ready():
-    self.register_sample("menu_click", preload("res://assets/audio/menu.wav"))
+    self.register_sample("click", preload("res://assets/audio/menu.wav"))
+    self.register_sample("menu_click", preload("res://assets/audio/menu_click.wav"))
+    self.register_sample("menu_back", preload("res://assets/audio/menu_back.wav"))
     self.register_sample("explosion", preload("res://assets/audio/explosion.wav"))
 
 

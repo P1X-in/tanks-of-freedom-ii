@@ -108,7 +108,7 @@ func _on_start_button_pressed():
 
 
 func _on_back_button_pressed():
-    self.audio.play("menu_click")
+    self.audio.play("menu_back")
     self.main_menu.close_skirmish()
 
 func _get_map_data(name):

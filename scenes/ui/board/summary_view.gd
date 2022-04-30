@@ -10,6 +10,7 @@ onready var yellow_wins = $"background/yellow_wins"
 
 onready var switcher = $"/root/SceneSwitcher"
 onready var gamepad_adapter = $"/root/GamepadAdapter"
+onready var audio = $"/root/SimpleAudioLibrary"
 
 func configure_winner(winner):
     self.gamepad_adapter.enable()
@@ -29,8 +30,10 @@ func configure_winner(winner):
 func _on_menu_button_pressed():
     self.gamepad_adapter.disable()
     self.switcher.main_menu()
+    self.audio.play("menu_click")
 
 
 func _on_restart_button_pressed():
     self.gamepad_adapter.disable()
     self.switcher.board()
+    self.audio.play("menu_click")

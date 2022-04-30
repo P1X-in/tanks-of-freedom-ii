@@ -25,6 +25,8 @@ onready var ab3_name = $"background/abilities/ab3/label"
 
 onready var back_button = $"back_button"
 
+onready var audio = $"/root/SimpleAudioLibrary"
+
 var icons = [null, null, null]
 
 func show_panel():
@@ -114,3 +116,4 @@ func _back_grab_focus():
 
 func _on_back_button_pressed():
     self.hide()
+    self.audio.play("menu_back")

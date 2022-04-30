@@ -112,7 +112,7 @@ func execute_save():
     self.execute_success(map_name, "save")
 
 func execute_cancel():
-    self.audio.play("menu_click")
+    self.audio.play("menu_back")
     if self.bound_cancel_object != null:
         if self.bound_cancel_args.size() > 0:
             self.bound_cancel_object.call_deferred(self.bound_cancel_method, self.bound_cancel_args)

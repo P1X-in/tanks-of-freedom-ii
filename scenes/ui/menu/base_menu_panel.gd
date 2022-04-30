@@ -14,7 +14,7 @@ func _input(event):
         self._on_back_button_pressed()
 
 func _on_back_button_pressed():
-    self.audio.play("menu_click")
+    self.audio.play("menu_back")
 
 func bind_menu(menu):
     self.main_menu = menu
