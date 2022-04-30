@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/tiles/units/heroes/hero.gd" type="Script" id=2]
 [ext_resource path="res://assets/units/audio/soldier_die.wav" type="AudioStream" id=3]
-[ext_resource path="res://assets/units/audio/soldier_move.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/units/audio/hero_move.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/units/audio/soldier_spawn.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/units/audio/soldier_attack.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/units/audio/soldier_damage.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/units/audio/soldier_hit.wav" type="AudioStream" id=8]
 
 [node name="hero" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -28,8 +29,11 @@ stream = ExtResource( 4 )
 [node name="attack" parent="audio" index="2"]
 stream = ExtResource( 6 )
 
-[node name="damage" parent="audio" index="3"]
+[node name="hit" parent="audio" index="3"]
+stream = ExtResource( 8 )
+
+[node name="damage" parent="audio" index="4"]
 stream = ExtResource( 7 )
 
-[node name="die" parent="audio" index="4"]
+[node name="die" parent="audio" index="5"]
 stream = ExtResource( 3 )
