@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/abilities/unit/repair_kit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/units/audio/tank_spawn.wav" type="AudioStream" id=3]
-[ext_resource path="res://assets/units/audio/tank_move.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/units/audio/motorcycle_move.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/units/audio/soldier_damage.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/units/audio/soldier_die.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/units/audio/soldier_attack.wav" type="AudioStream" id=7]
@@ -46,8 +46,8 @@ stream = ExtResource( 4 )
 [node name="attack" parent="audio" index="2"]
 stream = ExtResource( 7 )
 
-[node name="damage" parent="audio" index="3"]
+[node name="damage" parent="audio" index="4"]
 stream = ExtResource( 5 )
 
-[node name="die" parent="audio" index="4"]
+[node name="die" parent="audio" index="5"]
 stream = ExtResource( 6 )
