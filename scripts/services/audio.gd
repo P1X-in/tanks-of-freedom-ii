@@ -46,6 +46,15 @@ func track(name):
     self.soundtracks[name].play()
     self.current_track = self.soundtracks[name]
 
+func is_playing(name):
+    if not self.music_enabled:
+        return false
+
+    if not self.soundtracks.has(name):
+        return false
+
+    return self.soundtracks[name].is_playing()
+
 func stop(name=null):
     if name == null and self.current_track != null:
         self.current_track.stop()

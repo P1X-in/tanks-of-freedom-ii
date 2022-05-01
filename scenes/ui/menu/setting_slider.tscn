@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=1]
-[ext_resource path="res://scenes/ui/menu/setting_option.gd" type="Script" id=2]
+[ext_resource path="res://scenes/ui/menu/setting_slider.gd" type="Script" id=2]
 
 [node name="option" type="Control"]
 margin_left = 20.0
@@ -20,13 +20,20 @@ text = "Option
 "
 valign = 1
 
-[node name="toggle" type="Button" parent="."]
-margin_left = 350.0
+[node name="slider_value" type="Label" parent="."]
+margin_left = 200.0
+margin_top = 13.0
+margin_right = 250.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 1 )
+text = "10
+"
+valign = 1
+
+[node name="slider" type="HSlider" parent="."]
+margin_left = 250.0
 margin_right = 450.0
 margin_bottom = 50.0
-text = "OFF"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+max_value = 10.0
 
-[connection signal="pressed" from="toggle" to="." method="_on_toggle_button_pressed"]
+[connection signal="value_changed" from="slider" to="." method="_on_slider_value_changed"]

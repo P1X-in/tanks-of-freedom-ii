@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/ui/menu/settings.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
-[ext_resource path="res://scenes/ui/menu/setting_option.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/ui/menu/settings_camera.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/ui/menu/settings_video.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/ui/menu/settings_audio.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hide"
@@ -71,9 +73,9 @@ __meta__ = {
 }
 
 [node name="background" type="ColorRect" parent="."]
-margin_left = -200.0
+margin_left = -350.0
 margin_top = -130.0
-margin_right = 200.0
+margin_right = 350.0
 margin_bottom = 270.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
@@ -82,52 +84,70 @@ __meta__ = {
 }
 
 [node name="widgets" type="Control" parent="."]
-margin_left = -200.0
+margin_left = -350.0
 margin_top = -130.0
-margin_right = 200.0
+margin_right = 350.0
 margin_bottom = 190.0
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
-[node name="fullscreen" parent="widgets" instance=ExtResource( 3 )]
-option_name = "Fullscreen"
-option_key = "fullscreen"
+[node name="tabs" type="Control" parent="widgets"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 120.0
+margin_bottom = 320.0
 
-[node name="sound" parent="widgets" instance=ExtResource( 3 )]
-margin_top = 85.0
-margin_bottom = 135.0
-option_name = "Sound"
-option_key = "sound"
+[node name="video" type="Button" parent="widgets/tabs"]
+margin_right = 100.0
+margin_bottom = 30.0
+custom_fonts/font = ExtResource( 2 )
+text = "Video"
+__meta__ = {
+"_editor_description_": ""
+}
 
-[node name="music" parent="widgets" instance=ExtResource( 3 )]
-margin_top = 150.0
-margin_bottom = 200.0
-option_name = "Music"
-option_key = "music"
+[node name="audio" type="Button" parent="widgets/tabs"]
+margin_top = 50.0
+margin_right = 100.0
+margin_bottom = 80.0
+custom_fonts/font = ExtResource( 2 )
+text = "Audio"
+__meta__ = {
+"_editor_description_": ""
+}
 
-[node name="hq_cam" parent="widgets" instance=ExtResource( 3 )]
-margin_top = 215.0
-margin_bottom = 265.0
-option_name = "Move camera to HQ"
-option_key = "hq_cam"
+[node name="camera" type="Button" parent="widgets/tabs"]
+margin_top = 100.0
+margin_right = 100.0
+margin_bottom = 130.0
+custom_fonts/font = ExtResource( 2 )
+text = "Camera"
+__meta__ = {
+"_editor_description_": ""
+}
 
-[node name="cam_shake" parent="widgets" instance=ExtResource( 3 )]
-margin_top = 280.0
-margin_bottom = 330.0
-option_name = "Camera shake"
-option_key = "cam_shake"
+[node name="boxes" type="Control" parent="widgets"]
+margin_left = 150.0
+margin_right = 650.0
+margin_bottom = 300.0
+
+[node name="settings_video" parent="widgets/boxes" instance=ExtResource( 4 )]
+
+[node name="settings_audio" parent="widgets/boxes" instance=ExtResource( 5 )]
+visible = false
+
+[node name="settings_camera" parent="widgets/boxes" instance=ExtResource( 3 )]
+visible = false
 
 [node name="back_button" type="Button" parent="widgets"]
-margin_left = 150.0
+margin_left = 300.0
 margin_top = 350.0
-margin_right = 250.0
+margin_right = 400.0
 margin_bottom = 380.0
 custom_fonts/font = ExtResource( 2 )
 text = "Back"
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
@@ -139,4 +159,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[connection signal="pressed" from="widgets/tabs/video" to="." method="_on_video_pressed"]
+[connection signal="pressed" from="widgets/tabs/audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="widgets/tabs/camera" to="." method="_on_camera_pressed"]
 [connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

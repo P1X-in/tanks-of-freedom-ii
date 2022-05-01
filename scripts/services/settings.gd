@@ -7,6 +7,9 @@ var filesystem = preload("res://scripts/services/filesystem.gd").new()
 
 var settings = {
     "fullscreen" : false,
+    "vol_master" : 10,
+    "vol_sfx" : 10,
+    "vol_music" : 7,
     "sound" : true,
     "music" : true,
     "hq_cam" : true,
@@ -46,6 +49,43 @@ func _apply_option(key):
     elif key == "music":
         self.audio.music_enabled = self.settings[key]
         if self.settings[key]:
-            self.audio.track("menu")
+            if not self.audio.is_playing("menu"):
+                self.audio.track("menu")
         else:
             self.audio.stop()
+    elif key == "vol_master":
+        self._set_bus_vol("Master", key)
+    elif key == "vol_sfx":
+        self._set_bus_vol("SFX", key)
+        self.set_option("sound", self.settings[key] > 0)
+    elif key == "vol_music":
+        self._set_bus_vol("Music", key)
+        self.set_option("music", self.settings[key] > 0)
+
+func _set_bus_vol(name, key):
+    var decibels = self._get_decibels(self.settings[key])
+    AudioServer.set_bus_volume_db(AudioServer.get_bus_index(name), decibels)
+
+func _get_decibels(value):
+    if value == 10:
+        return 0
+    elif value == 9:
+        return -6
+    elif value == 8:
+        return -12
+    elif value == 7:
+        return -18
+    elif value == 6:
+        return -24
+    elif value == 5:
+        return -30
+    elif value == 4:
+        return -36
+    elif value == 3:
+        return -42
+    elif value == 2:
+        return -48
+    elif value == 1:
+        return -54
+    elif value == 0:
+        return -80
