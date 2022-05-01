@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/ui/menu/setting_option.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/ui/menu/setting_option_camera.gd" type="Script" id=2]
 
 [node name="settings_camera" type="Control"]
 anchor_right = 1.0
@@ -17,3 +18,10 @@ margin_top = 85.0
 margin_bottom = 135.0
 option_name = "Camera shake"
 option_key = "cam_shake"
+
+[node name="def_cam_st" parent="." instance=ExtResource( 1 )]
+margin_top = 150.0
+margin_bottom = 200.0
+script = ExtResource( 2 )
+option_name = "Default Style"
+option_key = "def_cam_st"

@@ -11,9 +11,9 @@ const SHAKE_MAX_MAGNITUDE = 0.5
 const MOUSE_MOVE_THRESHOLD = 16
 
 
-const MODE_FREE = "free"
-const MODE_TOF = "tof"
-const MODE_AW = "aw"
+const MODE_FREE = "FREE"
+const MODE_TOF = "TOF"
+const MODE_AW = "AW"
 
 export var device_id = 0
 export var rotate_speed = 100
@@ -35,7 +35,7 @@ export var aw_camera_distance_max = 50
 
 export var camera_space_size = 100
 
-var camera_mode = "tof"
+var camera_mode = "TOF"
 
 var camera_pivot
 var camera_arm
@@ -80,6 +80,9 @@ var snap_tile_box_to_camera = true
 var mouse_drag = false
 var mouse_click_position = null
 
+
+onready var settings = $"/root/Settings"
+
 func _ready():
     randomize()
     self.camera_pivot = $"pivot"
@@ -107,6 +110,8 @@ func _ready():
     rotation = self.camera_aw.get_translation()
     aw_camera_distance = rotation.z
     _aw_camera_distance = rotation.z
+
+    self.switch_to_camera_style(self.settings.get_option("def_cam_st"))
 
 func _input(event):
     if self.paused:
@@ -295,6 +300,17 @@ func switch_camera():
         self.camera_mode = self.MODE_TOF
         self.camera_tof.make_current()
         return
+
+func switch_to_camera_style(style):
+    if style == self.MODE_TOF:
+        self.camera_mode = self.MODE_TOF
+        self.camera_tof.make_current()
+    if style == self.MODE_AW:
+        self.camera_mode = self.MODE_AW
+        self.camera_aw.make_current()
+    if style == self.MODE_FREE:
+        self.camera_mode = self.MODE_FREE
+        self.camera_lens.make_current()
 
 func force_stick_reset():
     self.reset_stick = true

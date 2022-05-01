@@ -14,6 +14,7 @@ var settings = {
     "music" : true,
     "hq_cam" : true,
     "cam_shake" : true,
+    "def_cam_st" : "TOF",
 }
 
 
