@@ -141,6 +141,8 @@ func build_rotations(templates, builder):
 		templates.NATURE_TREES7,
 		templates.NATURE_TREES8,
 		templates.NATURE_TREES9,
+		templates.NATURE_TREES14,
+		templates.NATURE_TREES15,
 		templates.NATURE_SAND_CACTI1,
 		templates.NATURE_SAND_CACTI2,
 		templates.NATURE_SAND_CACTI3,
@@ -151,6 +153,7 @@ func build_rotations(templates, builder):
 		templates.NATURE_SAND_PALMS1,
 		templates.NATURE_SAND_PALMS2,
 		templates.NATURE_SAND_PALMS3,
+		templates.NATURE_SAND_PALMS4,
 	])
 
 	self.rotations[builder.CLASS_BUILDING] = self.build_from_array([

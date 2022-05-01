@@ -108,6 +108,8 @@ var forest_autumn_tiles = [
     "nature_trees7",
     "nature_trees8",
     "nature_trees9",
+    "nature_trees14",
+    "nature_trees15",
 ]
 
 var cacti_tiles = [
@@ -117,6 +119,7 @@ var cacti_tiles = [
     "nature_sand_palms1",
     "nature_sand_palms2",
     "nature_sand_palms3",
+    "nature_sand_palms4",
 ]
 
 var dune_tiles = [

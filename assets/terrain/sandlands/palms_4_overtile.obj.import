@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/palms_4_overtile.obj-bc94049842c9b93840adc824241a41d4.mesh"
+
+[deps]
+
+files=[ "res://.import/palms_4_overtile.obj-bc94049842c9b93840adc824241a41d4.mesh" ]
+
+source_file="res://assets/terrain/sandlands/palms_4_overtile.obj"
+dest_files=[ "res://.import/palms_4_overtile.obj-bc94049842c9b93840adc824241a41d4.mesh", "res://.import/palms_4_overtile.obj-bc94049842c9b93840adc824241a41d4.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
