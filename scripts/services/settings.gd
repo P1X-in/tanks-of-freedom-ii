@@ -6,7 +6,7 @@ onready var audio = $"/root/SimpleAudioLibrary"
 var filesystem = preload("res://scripts/services/filesystem.gd").new()
 
 var settings = {
-    "fullscreen" : false,
+    "fullscreen" : true,
     "vol_master" : 10,
     "vol_sfx" : 8,
     "vol_music" : 7,
