@@ -8,7 +8,7 @@ var filesystem = preload("res://scripts/services/filesystem.gd").new()
 var settings = {
     "fullscreen" : false,
     "vol_master" : 10,
-    "vol_sfx" : 10,
+    "vol_sfx" : 8,
     "vol_music" : 7,
     "sound" : true,
     "music" : true,
