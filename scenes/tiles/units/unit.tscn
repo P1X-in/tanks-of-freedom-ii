@@ -89,31 +89,24 @@ visible = false
 
 [node name="audio" type="Node" parent="." index="5"]
 
-[node name="spawn" type="AudioStreamPlayer3D" parent="audio" index="0"]
-unit_db = 45.0
+[node name="spawn" type="AudioStreamPlayer" parent="audio" index="0"]
 bus = "Units"
 
-[node name="move" type="AudioStreamPlayer3D" parent="audio" index="1"]
-unit_db = 45.0
+[node name="move" type="AudioStreamPlayer" parent="audio" index="1"]
 bus = "Units"
 
-[node name="attack" type="AudioStreamPlayer3D" parent="audio" index="2"]
-unit_db = 45.0
+[node name="attack" type="AudioStreamPlayer" parent="audio" index="2"]
 bus = "Attack"
 
-[node name="hit" type="AudioStreamPlayer3D" parent="audio" index="3"]
-unit_db = 45.0
+[node name="hit" type="AudioStreamPlayer" parent="audio" index="3"]
 bus = "Attack"
 
-[node name="damage" type="AudioStreamPlayer3D" parent="audio" index="4"]
-unit_db = 45.0
+[node name="damage" type="AudioStreamPlayer" parent="audio" index="4"]
 bus = "Damage"
 
-[node name="die" type="AudioStreamPlayer3D" parent="audio" index="5"]
-unit_db = 45.0
+[node name="die" type="AudioStreamPlayer" parent="audio" index="5"]
 bus = "Explosion"
 
-[node name="level_up" type="AudioStreamPlayer3D" parent="audio" index="6"]
+[node name="level_up" type="AudioStreamPlayer" parent="audio" index="6"]
 stream = ExtResource( 5 )
-unit_db = 45.0
 bus = "Units"

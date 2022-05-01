@@ -57,10 +57,8 @@ stream = ExtResource( 5 )
 [node name="die" parent="audio" index="5"]
 stream = ExtResource( 6 )
 
-[node name="ab_attack" type="AudioStreamPlayer3D" parent="audio" index="7"]
+[node name="ab_attack" type="AudioStreamPlayer" parent="audio" index="7"]
 stream = ExtResource( 10 )
-unit_db = 45.0
 
-[node name="ab_hit" type="AudioStreamPlayer3D" parent="audio" index="8"]
+[node name="ab_hit" type="AudioStreamPlayer" parent="audio" index="8"]
 stream = ExtResource( 9 )
-unit_db = 45.0
