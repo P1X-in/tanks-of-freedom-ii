@@ -14,3 +14,6 @@ func perform(board):
     board.select_tile(self.target.position)
     board.unselect_tile()
     yield(board.get_tree().create_timer(self.path_length * 0.1), "timeout")
+
+func _to_string():
+    return str(self.unit.position) + " moves to " + str(self.target.position)

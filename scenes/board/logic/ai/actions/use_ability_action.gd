@@ -13,3 +13,7 @@ func perform(board):
     board.unselect_tile()
     if self.delay > 0:
         yield(board.get_tree().create_timer(self.delay), "timeout")
+
+
+func _to_string():
+    return str(self.ability.active_source_tile.position) + " uses ability on " + str(self.target.position)

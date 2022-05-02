@@ -21,3 +21,9 @@ func perform(board):
     board.select_tile(self.target.position)
     board.unselect_tile()
     yield(board.get_tree().create_timer(0.5), "timeout")
+
+func _to_string():
+    var message = str(self.unit.position) + " attacks " + str(self.target.position)
+    if self.interaction != null:
+        message += " from " + str(self.interaction.position)
+    return message
