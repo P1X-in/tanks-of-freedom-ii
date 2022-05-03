@@ -7,5 +7,6 @@
 [node name="tile" instance=ExtResource( 2 )]
 
 [node name="mesh" parent="." index="0"]
+cast_shadow = 0
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 3 )

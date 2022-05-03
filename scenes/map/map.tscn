@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/water/water_material.tres" type="Material" id=2]
 [ext_resource path="res://scenes/ui/markers/tile_box.tscn" type="PackedScene" id=3]
@@ -11,6 +11,15 @@ material = ExtResource( 2 )
 size = Vector2( 1000, 1000 )
 subdivide_width = 70
 subdivide_depth = 70
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.345098, 0.447059, 1, 1 )
+
+[sub_resource type="PlaneMesh" id=3]
+material = SubResource( 2 )
+size = Vector2( 1000, 1000 )
+subdivide_width = 4
+subdivide_depth = 4
 
 [node name="map" type="Spatial"]
 script = ExtResource( 4 )
@@ -54,5 +63,13 @@ directional_shadow_normal_bias = 0.7
 
 [node name="water" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 2, 50 )
+cast_shadow = 0
 mesh = SubResource( 1 )
+material/0 = null
+
+[node name="water_simple" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 2, 50 )
+visible = false
+cast_shadow = 0
+mesh = SubResource( 3 )
 material/0 = null
