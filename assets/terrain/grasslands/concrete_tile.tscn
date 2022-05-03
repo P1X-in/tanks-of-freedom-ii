@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=2]
-
-[ext_resource path="res://assets/terrain/grasslands/concrete_tile.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=2]
-
-
-[node name="concrete_tile" type="MeshInstance"]
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
