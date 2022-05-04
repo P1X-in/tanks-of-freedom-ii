@@ -14,6 +14,8 @@ export var unit_vertical_offset = 0
 export var next_damage_stage_template = ""
 export var base_stage_template = ""
 
+export var shadow_override = false
+
 var scripting_tags = {}
 var current_rotation = 0
 

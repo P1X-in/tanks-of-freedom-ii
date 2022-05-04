@@ -301,6 +301,9 @@ func _notify_removal(tile_fragment, position, tile_class, side=null, modifiers={
         })
 
 func _disable_shadow(tile):
+    if tile.shadow_override:
+        return
+
     for child in tile.get_children():
         if child is Spatial:
             for next_child in child.get_children():
