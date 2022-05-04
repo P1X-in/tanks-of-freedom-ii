@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/tiles/damaged_tile.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/terrain/grasslands/building_small_6_destroyed.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=3]
+[ext_resource path="res://assets/terrain/grasslands/building_small_6_destroyed.glb" type="PackedScene" id=2]
 
 [node name="damaged_tile" instance=ExtResource( 1 )]
 main_tile_view_cam_modifier = -10
@@ -10,6 +9,4 @@ side_tile_view_cam_modifier = -25
 base_stage_template = "city_building_small6"
 is_smoking = true
 
-[node name="mesh" parent="." index="0"]
-mesh = ExtResource( 2 )
-material/0 = ExtResource( 3 )
+[node name="building_small_6_destroyed" parent="." index="1" instance=ExtResource( 2 )]
