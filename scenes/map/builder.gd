@@ -36,7 +36,8 @@ func place_frame(position, name, rotation):
         self._notify_removal(tile.frame, position, self.map.builder.CLASS_FRAME)
         tile.frame.clear()
 
-    self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_frames_anchor, tile.frame)
+    var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_frames_anchor, tile.frame)
+    self._disable_shadow(new_element)
 
 func place_decoration(position, name, rotation):
     var tile = self.map.model.get_tile(position)
@@ -56,7 +57,8 @@ func place_decoration(position, name, rotation):
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
 
-    self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_terrain_anchor, tile.decoration)
+    var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_terrain_anchor, tile.decoration)
+    self._disable_shadow(new_element)
 
 func place_damage(position, name, rotation):
     var tile = self.map.model.get_tile(position)
@@ -76,7 +78,8 @@ func place_damage(position, name, rotation):
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
 
-    self.place_element(position, name, rotation, self.map.GROUND_HEIGHT - 0.05, self.map.tiles_terrain_anchor, tile.damage)
+    var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT - 0.05, self.map.tiles_terrain_anchor, tile.damage)
+    self._disable_shadow(new_element)
 
 func place_terrain(position, name, rotation):
     var tile = self.map.model.get_tile(position)
@@ -296,3 +299,11 @@ func _notify_removal(tile_fragment, position, tile_class, side=null, modifiers={
             "modifiers" : modifiers,
             "double" : double
         })
+
+func _disable_shadow(tile):
+    for child in tile.get_children():
+        if child is Spatial:
+            for next_child in child.get_children():
+                if next_child is MeshInstance:
+                    next_child.cast_shadow = 0
+                    return
