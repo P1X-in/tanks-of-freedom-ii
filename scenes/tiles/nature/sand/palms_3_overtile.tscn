@@ -1,12 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/terrain/sandlands/palms_3_overtile.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=2]
+[ext_resource path="res://assets/terrain/sandlands/palms_3_overtile.glb" type="PackedScene" id=1]
 [ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=3]
-
 
 [node name="tile" instance=ExtResource( 3 )]
 
-[node name="mesh" parent="." index="0"]
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+[node name="palms_3_overtile" parent="." index="1" instance=ExtResource( 1 )]
