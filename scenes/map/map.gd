@@ -7,6 +7,7 @@ onready var tile_box = $"tiles/tile_box"
 onready var camera = $"camera"
 onready var campaign = $"/root/Campaign"
 onready var mouse_layer = $"/root/MouseLayer"
+onready var settings = $"/root/Settings"
 
 var tile_box_space_size
 var tile_box_position = Vector2(0, 0)
@@ -24,6 +25,9 @@ onready var tiles_units_anchor = $"tiles/units"
 
 func _ready():
     self.tile_box_space_size = self.camera.camera_space_size - self.TILE_SIZE
+
+    if not self.settings.get_option("decorations"):
+        self.tiles_frames_anchor.hide()
 
 
 func _physics_process(_delta):

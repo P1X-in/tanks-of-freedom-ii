@@ -48,3 +48,15 @@ func is_restoreable():
 func hide_mesh():
     $"mesh".hide()
     
+func disable_shadow():
+    $"mesh".cast_shadow = 0
+    var reflection = self.get_node_or_null("reflection")
+    if reflection != null:
+        reflection.cast_shadow = 0
+
+    for child in self.get_children():
+        if child is Spatial:
+            for next_child in child.get_children():
+                if next_child is MeshInstance:
+                    next_child.cast_shadow = 0
+                    return

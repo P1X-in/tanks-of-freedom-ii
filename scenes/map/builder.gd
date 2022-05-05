@@ -12,7 +12,6 @@ var map
 
 var editor = null
 
-
 func _init(map_scene):
     self.map = map_scene
 
@@ -24,7 +23,10 @@ func place_ground(position, name, rotation):
         self._notify_removal(tile.ground, position, self.map.builder.CLASS_GROUND)
         tile.ground.clear()
 
-    self.place_element(position, name, rotation, 0, self.map.tiles_ground_anchor, tile.ground)
+    var new_element = self.place_element(position, name, rotation, 0, self.map.tiles_ground_anchor, tile.ground)
+    if not self.map.settings.get_option("shadows"):
+        self._disable_shadow(new_element)
+
 
 func place_frame(position, name, rotation):
     var tile = self.map.model.get_tile(position)
@@ -57,7 +59,7 @@ func place_decoration(position, name, rotation):
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
 
-    var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_terrain_anchor, tile.decoration)
+    var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_frames_anchor, tile.decoration)
     self._disable_shadow(new_element)
 
 func place_damage(position, name, rotation):
@@ -78,7 +80,7 @@ func place_damage(position, name, rotation):
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
 
-    var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT - 0.05, self.map.tiles_terrain_anchor, tile.damage)
+    var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT - 0.05, self.map.tiles_frames_anchor, tile.damage)
     self._disable_shadow(new_element)
 
 func place_terrain(position, name, rotation):
@@ -102,7 +104,9 @@ func place_terrain(position, name, rotation):
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
 
-    self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_terrain_anchor, tile.terrain)
+    var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_terrain_anchor, tile.terrain)
+    if not self.map.settings.get_option("shadows"):
+        self._disable_shadow(new_element)
 
 func place_building(position, name, rotation, side=null):
     var tile = self.map.model.get_tile(position)
@@ -124,8 +128,10 @@ func place_building(position, name, rotation, side=null):
     if tile.damage.is_present():
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
-
-    self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_buildings_anchor, tile.building)
+    
+    var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_buildings_anchor, tile.building)
+    if not self.map.settings.get_option("shadows"):
+        self._disable_shadow(new_element)
 
     if side != null:
         self.set_building_side(position, side)
@@ -145,7 +151,10 @@ func place_unit(position, name, rotation, side=null, ai_paused=false):
         self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
 
+    
     var new_unit = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_units_anchor, tile.unit)
+    if not self.map.settings.get_option("shadows"):
+        self._disable_shadow(new_unit)
 
     if side != null:
         self.set_unit_side(position, side)
@@ -301,12 +310,7 @@ func _notify_removal(tile_fragment, position, tile_class, side=null, modifiers={
         })
 
 func _disable_shadow(tile):
-    if tile.shadow_override:
+    if tile.shadow_override and self.map.settings.get_option("shadows"):
         return
 
-    for child in tile.get_children():
-        if child is Spatial:
-            for next_child in child.get_children():
-                if next_child is MeshInstance:
-                    next_child.cast_shadow = 0
-                    return
+    tile.disable_shadow()

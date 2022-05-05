@@ -11,3 +11,15 @@ margin_bottom = -500.0
 [node name="fullscreen" parent="." instance=ExtResource( 1 )]
 option_name = "Fullscreen"
 option_key = "fullscreen"
+
+[node name="shadows" parent="." instance=ExtResource( 1 )]
+margin_top = 85.0
+margin_bottom = 135.0
+option_name = "Shadows"
+option_key = "shadows"
+
+[node name="decorations" parent="." instance=ExtResource( 1 )]
+margin_top = 150.0
+margin_bottom = 200.0
+option_name = "Decorations"
+option_key = "decorations"

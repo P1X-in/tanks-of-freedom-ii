@@ -347,3 +347,19 @@ func heal(value):
 
 func get_value():
     return self.unit_value + self.level * 10
+
+
+func disable_shadow():
+    .disable_shadow()
+
+    $"mesh_anchor/mesh".cast_shadow = 0
+
+    var additional_mesh
+
+    additional_mesh = self.get_node_or_null("mesh_anchor/mesh2")
+    if additional_mesh != null:
+        additional_mesh.cast_shadow = 0
+
+    additional_mesh = self.get_node_or_null("mesh_anchor/mesh3")
+    if additional_mesh != null:
+        additional_mesh.cast_shadow = 0

@@ -28,6 +28,7 @@ func _ready():
     self.ui.load_minimap(self.AUTOSAVE_FILE)
     self.setup_radial_menu()
     self.map.builder.editor = self
+    self.map.tiles_frames_anchor.show()
 
 
 func _physics_process(_delta):

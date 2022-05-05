@@ -15,6 +15,8 @@ var settings = {
     "hq_cam" : true,
     "cam_shake" : true,
     "def_cam_st" : "TOF",
+    "shadows" : true,
+    "decorations" : true,
 }
 
 
