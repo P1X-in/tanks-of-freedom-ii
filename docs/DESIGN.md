@@ -8,6 +8,8 @@ Certain level of backwards compatibility is meant to be preserved. This new game
 
 Working title for the game is Tanks of Freedom 3-D, it is a subject to change, most likely based on it's story.
 
+*Final title of the game is _Tanks of Freedom II_*
+
 Proposed titles:
 - *Tanks of Freedom - Liberum Gentem*
 - *Tanks of Freedom 2* (chosen title)
@@ -114,6 +116,8 @@ Story has to decieve the player into thinking, that certain factions and charact
 Amber Noon Warlord Grim has imprisoned the King and started a war with Ruby Dusk. Betting on their rivalry, he asks Sapphire Dawn for help, telling them, that Ruby Dusk attacked first.
 
 Ruby Dusk responds to provocation, and invades Amber Noon. Sapphire Dawn comes to help and attacks Ruby Dusk.
+
+### Outline
 
 #### Tutorial
 
@@ -258,7 +262,56 @@ Each of the main campaigns should be about 10 mission long.
     - Gentleman Archibald needs to capture and hold line of towers
 
 #### Sapphire Dawn Campaign - Business as usual
-To be designed.
+1. Lucrative offer
+    - General Cyrus arrives at a Sapphire Dawn border garrison to take command
+    - President Gideon contacts General Cyrus and briefs him in on a deal with Warlord Grim
+    - Commando Blake has been already dispatched to help, but failed and needs reinforcements
+    - General Cyrus recruits more forces and gathers them at a staging area
+    - Sapphire Dawn forces approach the border and discover Amber Noon base taken over by Ruby Dusk
+    - Sapphire Dawn forces secure a road leading into Amber Noon territory
+
+2. Consolidation
+    - General Cyrus encounters some Sapphire Dawn units left from the initial wave led by Commando Blake
+    - More advanced units are dispersed and need to be rescued
+    - General Cyrus has no base and can only reinforce by rescuing on-field units
+    - General Cyrus has to recapture a Sapphire Dawn encampment
+
+3. Capital offence
+    - Substantial Ruby Dusk forces are still stationed right outside the Amber Fortress
+    - General Cyrus is tasked with cutting off their supply line
+    - Sapphire Dawn needs to capture all towers along a highway
+    - Ruby Dusk might deploy waves of units from an inaccesible base.
+
+4. Noble cause
+    - Ruby Dusk forces are pressured by Sapphire Dawn
+    - Ruby Dusk forces are in need of a commander, so Noble Sidney is released
+    - General Cyrus needs to hold the line agains waves of enemy units until reinforcements arrive
+    - Noble Sidney taunts General Cyrus about being mercenaries for Warlord Grim
+    - Noble Sidney tells General Cyrus that it was Amber Noon who attacked first, which Cyrus finds disturbing
+
+5. A glimmer of Jade
+    - Scouting party reports that Prince Tybalt has been spotted heading east
+    - General Cyrus follows and encountersa group of Jade Twilight soldiers
+    - Surprised by this, Cyrus reports the encounter to Warlord Grim
+    - Warlord Grim informs Cyrus, that Jade Twilight must have made an alliance with Ruby Dusk, orders to attack
+    - Just as General Cyrus captures Jade Twilight camp, Prince Tybalt arrives
+    - General Cyrus leaves with Prince Tybalt to his camp
+
+6. Hostile takeover
+    - Prince Tybalt suspects that Warlord Grim holds King Ludwig as prisoner
+    - Warlord Grim says Prince Tybalt is a traitor and orders General Cyrus to arrest him
+    - General Cyrus refuses
+    - Commando Blake appears, relieves General Cyrus of command
+    - General Cyrus is sent away
+    - Commando Blake attacks Jade Twilight forces in the camp
+    - Prince Tybalt escapes east
+
+7. In pursuit of greatness
+    - Commando Blake chases Prince Tybalt
+    - Prince Tybalt takes refuge in a large Jade Twilight base
+    - Commando Blake has to attack the base from the front to lure away guards
+    - Commando Blake has to sneak past defences and capture Prince Tybalt
+    - Commando Blake must not loose base
 
 #### Jade Twilight Campaign - Hard Diplomacy
 To be designed.
