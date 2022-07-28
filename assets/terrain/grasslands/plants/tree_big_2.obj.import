@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tree_big_2.obj-e23a4eeedc3ee9b48c65c3c7e3c25e57.mesh"
+
+[deps]
+
+files=[ "res://.import/tree_big_2.obj-e23a4eeedc3ee9b48c65c3c7e3c25e57.mesh" ]
+
+source_file="res://assets/terrain/grasslands/plants/tree_big_2.obj"
+dest_files=[ "res://.import/tree_big_2.obj-e23a4eeedc3ee9b48c65c3c7e3c25e57.mesh", "res://.import/tree_big_2.obj-e23a4eeedc3ee9b48c65c3c7e3c25e57.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

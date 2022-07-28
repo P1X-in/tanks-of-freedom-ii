@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tree_small_autumn_1.obj-dcded8d282d9fb73a2d9e2abb8b37759.mesh"
+
+[deps]
+
+files=[ "res://.import/tree_small_autumn_1.obj-dcded8d282d9fb73a2d9e2abb8b37759.mesh" ]
+
+source_file="res://assets/terrain/grasslands/plants/tree_small_autumn_1.obj"
+dest_files=[ "res://.import/tree_small_autumn_1.obj-dcded8d282d9fb73a2d9e2abb8b37759.mesh", "res://.import/tree_small_autumn_1.obj-dcded8d282d9fb73a2d9e2abb8b37759.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

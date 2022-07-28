@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/palm_2.obj-bcb3d504548f54ba2c4c7c7b09f72969.mesh"
+
+[deps]
+
+files=[ "res://.import/palm_2.obj-bcb3d504548f54ba2c4c7c7b09f72969.mesh" ]
+
+source_file="res://assets/terrain/sandlands/plants/palm_2.obj"
+dest_files=[ "res://.import/palm_2.obj-bcb3d504548f54ba2c4c7c7b09f72969.mesh", "res://.import/palm_2.obj-bcb3d504548f54ba2c4c7c7b09f72969.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
