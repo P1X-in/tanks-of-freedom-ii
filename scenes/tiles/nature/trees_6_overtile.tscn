@@ -1,6 +1,5 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/terrain/grasslands/trees_6_overtile.glb" type="PackedScene" id=1]
 [ext_resource path="res://assets/terrain/grasslands/plants/bush_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/terrain/grasslands/plants/tree_big_1.tscn" type="PackedScene" id=4]
@@ -176,5 +175,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, 1.4 )
 
 [node name="tree_big_2_2" parent="mesh" index="53" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, -2.6 )
-
-[node name="trees_6_overtile" parent="." index="1" instance=ExtResource( 1 )]
