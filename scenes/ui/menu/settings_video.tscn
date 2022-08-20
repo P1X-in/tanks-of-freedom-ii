@@ -23,3 +23,9 @@ margin_top = 150.0
 margin_bottom = 200.0
 option_name = "Decorations"
 option_key = "decorations"
+
+[node name="dec_shadows" parent="." instance=ExtResource( 1 )]
+margin_top = 220.0
+margin_bottom = 270.0
+option_name = "Decorative Shadows"
+option_key = "dec_shadows"

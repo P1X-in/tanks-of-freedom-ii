@@ -54,6 +54,10 @@ func disable_shadow():
     if reflection != null:
         reflection.cast_shadow = 0
 
+    for child in $"mesh".get_children():
+        if child is MeshInstance:
+            child.cast_shadow = 0
+
     for child in self.get_children():
         if child is Spatial:
             for next_child in child.get_children():

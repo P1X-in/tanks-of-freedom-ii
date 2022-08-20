@@ -39,7 +39,8 @@ func place_frame(position, name, rotation):
         tile.frame.clear()
 
     var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_frames_anchor, tile.frame)
-    self._disable_shadow(new_element)
+    if not self.map.settings.get_option("shadows") or not self.map.settings.get_option("dec_shadows"):
+        self._disable_shadow(new_element)
 
 func place_decoration(position, name, rotation):
     var tile = self.map.model.get_tile(position)
@@ -60,7 +61,8 @@ func place_decoration(position, name, rotation):
         tile.damage.clear()
 
     var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_frames_anchor, tile.decoration)
-    self._disable_shadow(new_element)
+    if not self.map.settings.get_option("shadows") or not self.map.settings.get_option("dec_shadows"):
+        self._disable_shadow(new_element)
 
 func place_damage(position, name, rotation):
     var tile = self.map.model.get_tile(position)

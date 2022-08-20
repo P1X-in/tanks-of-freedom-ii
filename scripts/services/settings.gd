@@ -17,6 +17,7 @@ var settings = {
     "def_cam_st" : "TOF",
     "shadows" : true,
     "decorations" : true,
+    "dec_shadows" : true,
 }
 
 
