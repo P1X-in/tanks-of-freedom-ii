@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=1]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_4.obj" type="ArrayMesh" id=2]
+
+[node name="flower_4" type="MeshInstance"]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 1 )
