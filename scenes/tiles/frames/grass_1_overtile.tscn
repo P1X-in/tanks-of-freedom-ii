@@ -1,11 +1,1587 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://assets/terrain/grasslands/grass_1_overtile.glb" type="PackedScene" id=1]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/grass_1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_4.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_5.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_6.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_7.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_8.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_9.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/grass_2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/grass_3.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/grass_4.tscn" type="PackedScene" id=15]
 
 [node name="tile" instance=ExtResource( 3 )]
 
 [node name="mesh" parent="." index="0"]
 cast_shadow = 0
 
-[node name="grass_1_overtile" parent="." index="1" instance=ExtResource( 1 )]
+[node name="flower_g_1_1" parent="mesh" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, -3.7 )
+
+[node name="flower_g_1_2" parent="mesh" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0, -3.5 )
+
+[node name="flower_g_1_3" parent="mesh" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0.1, -3.4 )
+
+[node name="grass_1" parent="mesh/flower_g_1_3" index="0" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
+
+[node name="flower_g_2_1" parent="mesh" index="3" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, -3.7 )
+
+[node name="flower_g_2_2" parent="mesh" index="4" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2.7 )
+
+[node name="flower_g_3" parent="mesh" index="5" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, -1.4 )
+
+[node name="flower_g_4_1" parent="mesh" index="6" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, -1.5 )
+
+[node name="flower_g_4_2" parent="mesh" index="7" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0.1, 3.1 )
+
+[node name="grass_1" parent="mesh/flower_g_4_2" index="0" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
+
+[node name="flower_g_5" parent="mesh" index="8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, 3.5 )
+
+[node name="flower_g_6_1" parent="mesh" index="9" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, -3.2 )
+
+[node name="flower_g_6_2" parent="mesh" index="10" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 0, 3.7 )
+
+[node name="flower_g_6_3" parent="mesh" index="11" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 3.6 )
+
+[node name="flower_g_7_1" parent="mesh" index="12" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, 2.8 )
+
+[node name="flower_g_7_2" parent="mesh" index="13" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, 2.9 )
+
+[node name="flower_g_7_3" parent="mesh" index="14" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, 3.5 )
+
+[node name="flower_g_7_4" parent="mesh" index="15" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0.1, 3.7 )
+
+[node name="grass_1" parent="mesh/flower_g_7_4" index="0" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
+
+[node name="flower_g_8" parent="mesh" index="16" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, -2.9 )
+
+[node name="flower_g_9_1" parent="mesh" index="17" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -3.5 )
+
+[node name="flower_g_9_2" parent="mesh" index="18" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 0.1, -3.7 )
+
+[node name="grass_1" parent="mesh/flower_g_9_2" index="0" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
+
+[node name="grass_1_1" parent="mesh" index="19" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, -4 )
+
+[node name="grass_1_2" parent="mesh" index="20" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, -3.8 )
+
+[node name="grass_1_3" parent="mesh" index="21" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -3.6 )
+
+[node name="grass_1_4" parent="mesh" index="22" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3.9 )
+
+[node name="grass_1_5" parent="mesh" index="23" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, -3.6 )
+
+[node name="grass_1_6" parent="mesh" index="24" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, -3.4 )
+
+[node name="grass_1_7" parent="mesh" index="25" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0, -3.3 )
+
+[node name="grass_1_8" parent="mesh" index="26" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, 0, -3.5 )
+
+[node name="grass_1_9" parent="mesh" index="27" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, -3.9 )
+
+[node name="grass_1_10" parent="mesh" index="28" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, -3.6 )
+
+[node name="grass_1_11" parent="mesh" index="29" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, -3.7 )
+
+[node name="grass_1_12" parent="mesh" index="30" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, -4 )
+
+[node name="grass_1_13" parent="mesh" index="31" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -3.6 )
+
+[node name="grass_1_14" parent="mesh" index="32" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, -3.9 )
+
+[node name="grass_1_15" parent="mesh" index="33" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -3.7 )
+
+[node name="grass_1_16" parent="mesh" index="34" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -3.9 )
+
+[node name="grass_1_17" parent="mesh" index="35" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -3.6 )
+
+[node name="grass_1_18" parent="mesh" index="36" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -3.9 )
+
+[node name="grass_1_19" parent="mesh" index="37" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -3.8 )
+
+[node name="grass_1_20" parent="mesh" index="38" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -3.5 )
+
+[node name="grass_1_21" parent="mesh" index="39" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -3.30034 )
+
+[node name="grass_1_22" parent="mesh" index="40" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, -3.4 )
+
+[node name="grass_1_23" parent="mesh" index="41" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, -3.9 )
+
+[node name="grass_1_24" parent="mesh" index="42" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0, -3.9 )
+
+[node name="grass_1_25" parent="mesh" index="43" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0, -3.5 )
+
+[node name="grass_1_26" parent="mesh" index="44" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6, 0, -3.9 )
+
+[node name="grass_1_27" parent="mesh" index="45" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, -3.4 )
+
+[node name="grass_1_28" parent="mesh" index="46" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, 0, -3.7 )
+
+[node name="grass_1_29" parent="mesh" index="47" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0, -3.9 )
+
+[node name="grass_1_30" parent="mesh" index="48" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 0, -3.5 )
+
+[node name="grass_1_31" parent="mesh" index="49" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -3.4 )
+
+[node name="grass_1_32" parent="mesh" index="50" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0, -3.5 )
+
+[node name="grass_1_33" parent="mesh" index="51" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -3.9 )
+
+[node name="grass_1_34" parent="mesh" index="52" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, -3.9 )
+
+[node name="grass_1_35" parent="mesh" index="53" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -3.5 )
+
+[node name="grass_1_36" parent="mesh" index="54" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, -3.6 )
+
+[node name="grass_1_37" parent="mesh" index="55" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, -3.9 )
+
+[node name="grass_1_38" parent="mesh" index="56" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -3.6 )
+
+[node name="grass_1_39" parent="mesh" index="57" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, -3.2 )
+
+[node name="grass_1_40" parent="mesh" index="58" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, -2.9 )
+
+[node name="grass_1_41" parent="mesh" index="59" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0, -2.5 )
+
+[node name="grass_1_42" parent="mesh" index="60" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -2.4 )
+
+[node name="grass_1_43" parent="mesh" index="61" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0, -2.2 )
+
+[node name="grass_1_44" parent="mesh" index="62" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -2 )
+
+[node name="grass_1_45" parent="mesh" index="63" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -1.9 )
+
+[node name="grass_1_46" parent="mesh" index="64" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, -1.7 )
+
+[node name="grass_1_47" parent="mesh" index="65" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -1.3 )
+
+[node name="grass_1_48" parent="mesh" index="66" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -1.1 )
+
+[node name="grass_1_49" parent="mesh" index="67" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0, -1 )
+
+[node name="grass_1_50" parent="mesh" index="68" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -0.8 )
+
+[node name="grass_1_51" parent="mesh" index="69" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -0.8 )
+
+[node name="grass_1_52" parent="mesh" index="70" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -0.5 )
+
+[node name="grass_1_53" parent="mesh" index="71" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0, -0.3 )
+
+[node name="grass_1_54" parent="mesh" index="72" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -0.2 )
+
+[node name="grass_1_55" parent="mesh" index="73" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, 0 )
+
+[node name="grass_1_56" parent="mesh" index="74" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, 0.2 )
+
+[node name="grass_1_57" parent="mesh" index="75" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, 0.2 )
+
+[node name="grass_1_58" parent="mesh" index="76" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, 0.6 )
+
+[node name="grass_1_59" parent="mesh" index="77" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, 1.7 )
+
+[node name="grass_1_60" parent="mesh" index="78" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, 2.1 )
+
+[node name="grass_1_61" parent="mesh" index="79" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0, 2.3 )
+
+[node name="grass_1_62" parent="mesh" index="80" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, 2.4 )
+
+[node name="grass_1_63" parent="mesh" index="81" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 2.6 )
+
+[node name="grass_1_64" parent="mesh" index="82" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 2.9 )
+
+[node name="grass_1_65" parent="mesh" index="83" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, 2.9 )
+
+[node name="grass_1_66" parent="mesh" index="84" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, 3.1 )
+
+[node name="grass_1_67" parent="mesh" index="85" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0, 3.1 )
+
+[node name="grass_1_68" parent="mesh" index="86" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, 3.4 )
+
+[node name="grass_1_69" parent="mesh" index="87" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, 3.7 )
+
+[node name="grass_1_70" parent="mesh" index="88" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, 3.9 )
+
+[node name="grass_1_71" parent="mesh" index="89" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, 3.8 )
+
+[node name="grass_1_72" parent="mesh" index="90" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, 3.2 )
+
+[node name="grass_1_73" parent="mesh" index="91" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50014, 0, 3.2 )
+
+[node name="grass_1_74" parent="mesh" index="92" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, 3.4 )
+
+[node name="grass_1_75" parent="mesh" index="93" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0, 3.4 )
+
+[node name="grass_1_76" parent="mesh" index="94" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0, 3.8 )
+
+[node name="grass_1_77" parent="mesh" index="95" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, 0, 3.3 )
+
+[node name="grass_1_78" parent="mesh" index="96" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0, 3.6 )
+
+[node name="grass_1_79" parent="mesh" index="97" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6, 0, 3.2 )
+
+[node name="grass_1_80" parent="mesh" index="98" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6, 0, 3.4 )
+
+[node name="grass_1_81" parent="mesh" index="99" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0, 3.4 )
+
+[node name="grass_1_82" parent="mesh" index="100" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0, 3.6 )
+
+[node name="grass_1_83" parent="mesh" index="101" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0, 3.8 )
+
+[node name="grass_1_84" parent="mesh" index="102" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0, 3.6 )
+
+[node name="grass_1_85" parent="mesh" index="103" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, 3.3 )
+
+[node name="grass_1_86" parent="mesh" index="104" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 3.9 )
+
+[node name="grass_1_87" parent="mesh" index="105" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, 3.5 )
+
+[node name="grass_1_88" parent="mesh" index="106" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 3.3 )
+
+[node name="grass_1_89" parent="mesh" index="107" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 3.6 )
+
+[node name="grass_1_90" parent="mesh" index="108" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 3.9 )
+
+[node name="grass_1_91" parent="mesh" index="109" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 3.9 )
+
+[node name="grass_1_92" parent="mesh" index="110" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5 )
+
+[node name="grass_1_93" parent="mesh" index="111" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.8 )
+
+[node name="grass_1_94" parent="mesh" index="112" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 3.3 )
+
+[node name="grass_1_95" parent="mesh" index="113" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 3.7 )
+
+[node name="grass_1_96" parent="mesh" index="114" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 3.4 )
+
+[node name="grass_1_97" parent="mesh" index="115" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 3.7 )
+
+[node name="grass_1_98" parent="mesh" index="116" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 3.4 )
+
+[node name="grass_1_99" parent="mesh" index="117" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, 3.8 )
+
+[node name="grass_1_100" parent="mesh" index="118" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, 3.5 )
+
+[node name="grass_1_101" parent="mesh" index="119" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, 3.7 )
+
+[node name="grass_1_102" parent="mesh" index="120" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3.9 )
+
+[node name="grass_1_103" parent="mesh" index="121" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, 3.4 )
+
+[node name="grass_1_104" parent="mesh" index="122" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, 3.8 )
+
+[node name="grass_1_105" parent="mesh" index="123" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, 3.7 )
+
+[node name="grass_1_106" parent="mesh" index="124" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, 3.5 )
+
+[node name="grass_1_107" parent="mesh" index="125" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, 3.8 )
+
+[node name="grass_1_108" parent="mesh" index="126" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, 3.8 )
+
+[node name="grass_1_109" parent="mesh" index="127" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, 3.3 )
+
+[node name="grass_1_110" parent="mesh" index="128" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6, 0, 3.8 )
+
+[node name="grass_1_111" parent="mesh" index="129" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, 3.3 )
+
+[node name="grass_1_112" parent="mesh" index="130" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, 3.5 )
+
+[node name="grass_1_113" parent="mesh" index="131" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, 3.3 )
+
+[node name="grass_1_114" parent="mesh" index="132" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, 3.8 )
+
+[node name="grass_1_115" parent="mesh" index="133" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 3.6 )
+
+[node name="grass_1_116" parent="mesh" index="134" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, 3.6 )
+
+[node name="grass_1_117" parent="mesh" index="135" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, 3.4 )
+
+[node name="grass_1_118" parent="mesh" index="136" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, 3.1 )
+
+[node name="grass_1_119" parent="mesh" index="137" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, 2.9 )
+
+[node name="grass_1_120" parent="mesh" index="138" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, 2.9 )
+
+[node name="grass_1_121" parent="mesh" index="139" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 2.7 )
+
+[node name="grass_1_122" parent="mesh" index="140" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, 2.5 )
+
+[node name="grass_1_123" parent="mesh" index="141" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, 2.3 )
+
+[node name="grass_1_124" parent="mesh" index="142" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 2.3 )
+
+[node name="grass_1_125" parent="mesh" index="143" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 2.1 )
+
+[node name="grass_1_126" parent="mesh" index="144" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, 1.8 )
+
+[node name="grass_1_127" parent="mesh" index="145" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, 1.7 )
+
+[node name="grass_1_128" parent="mesh" index="146" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, 1.7 )
+
+[node name="grass_1_129" parent="mesh" index="147" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 1.5 )
+
+[node name="grass_1_130" parent="mesh" index="148" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, 0.9 )
+
+[node name="grass_1_131" parent="mesh" index="149" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 0.8 )
+
+[node name="grass_1_132" parent="mesh" index="150" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0.6 )
+
+[node name="grass_1_133" parent="mesh" index="151" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 0.6 )
+
+[node name="grass_1_134" parent="mesh" index="152" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0.2 )
+
+[node name="grass_1_135" parent="mesh" index="153" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, 0.2 )
+
+[node name="grass_1_136" parent="mesh" index="154" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, 0 )
+
+[node name="grass_1_137" parent="mesh" index="155" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, -0.2 )
+
+[node name="grass_1_138" parent="mesh" index="156" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -0.5 )
+
+[node name="grass_1_139" parent="mesh" index="157" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -0.9 )
+
+[node name="grass_1_140" parent="mesh" index="158" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, -1.2 )
+
+[node name="grass_1_141" parent="mesh" index="159" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, -1.6 )
+
+[node name="grass_1_142" parent="mesh" index="160" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, -1.8 )
+
+[node name="grass_1_143" parent="mesh" index="161" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1.9 )
+
+[node name="grass_1_144" parent="mesh" index="162" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, -2 )
+
+[node name="grass_1_145" parent="mesh" index="163" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, -2.2 )
+
+[node name="grass_1_146" parent="mesh" index="164" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, -2.4 )
+
+[node name="grass_1_147" parent="mesh" index="165" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2.4 )
+
+[node name="grass_1_148" parent="mesh" index="166" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -2.7 )
+
+[node name="grass_1_149" parent="mesh" index="167" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, -2.8 )
+
+[node name="grass_1_150" parent="mesh" index="168" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, -3.1 )
+
+[node name="grass_1_151" parent="mesh" index="169" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -3.3 )
+
+[node name="grass_1_152" parent="mesh" index="170" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, -3.3 )
+
+[node name="grass_1_153" parent="mesh" index="171" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, -2.8 )
+
+[node name="grass_1_154" parent="mesh" index="172" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, -2.5 )
+
+[node name="grass_1_155" parent="mesh" index="173" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, -2.3 )
+
+[node name="grass_1_156" parent="mesh" index="174" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, -2.9 )
+
+[node name="grass_1_157" parent="mesh" index="175" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, -2.8 )
+
+[node name="grass_1_158" parent="mesh" index="176" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0, -2.3 )
+
+[node name="grass_1_159" parent="mesh" index="177" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, -2.5 )
+
+[node name="grass_1_160" parent="mesh" index="178" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6, 0, -2.8 )
+
+[node name="grass_1_161" parent="mesh" index="179" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, 0, -3 )
+
+[node name="grass_1_162" parent="mesh" index="180" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 0, -3.3 )
+
+[node name="grass_1_163" parent="mesh" index="181" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2.7 )
+
+[node name="grass_1_164" parent="mesh" index="182" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, -3.5 )
+
+[node name="grass_1_165" parent="mesh" index="183" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0, -2.6 )
+
+[node name="grass_1_166" parent="mesh" index="184" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, -3.1 )
+
+[node name="grass_1_167" parent="mesh" index="185" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, -3.3 )
+
+[node name="grass_1_168" parent="mesh" index="186" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, -2.8 )
+
+[node name="grass_1_169" parent="mesh" index="187" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, -2.9 )
+
+[node name="grass_1_170" parent="mesh" index="188" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, -3.1 )
+
+[node name="grass_1_171" parent="mesh" index="189" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, -3.3 )
+
+[node name="grass_1_172" parent="mesh" index="190" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3 )
+
+[node name="grass_1_173" parent="mesh" index="191" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -3.3 )
+
+[node name="grass_1_174" parent="mesh" index="192" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -2.7 )
+
+[node name="grass_1_175" parent="mesh" index="193" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, -3 )
+
+[node name="grass_1_176" parent="mesh" index="194" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -3.2 )
+
+[node name="grass_1_177" parent="mesh" index="195" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -2.9 )
+
+[node name="grass_1_178" parent="mesh" index="196" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -3.3 )
+
+[node name="grass_1_179" parent="mesh" index="197" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -3.4 )
+
+[node name="grass_1_180" parent="mesh" index="198" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -2.8 )
+
+[node name="grass_1_181" parent="mesh" index="199" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -3 )
+
+[node name="grass_1_182" parent="mesh" index="200" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3.2 )
+
+[node name="grass_1_183" parent="mesh" index="201" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0, -3 )
+
+[node name="grass_1_184" parent="mesh" index="202" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0, -3.2 )
+
+[node name="grass_1_185" parent="mesh" index="203" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -2.9 )
+
+[node name="grass_1_186" parent="mesh" index="204" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, -2.8 )
+
+[node name="grass_1_187" parent="mesh" index="205" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, -3.2 )
+
+[node name="grass_1_188" parent="mesh" index="206" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3.2 )
+
+[node name="grass_1_189" parent="mesh" index="207" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0, -3 )
+
+[node name="grass_1_190" parent="mesh" index="208" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0, -2.8 )
+
+[node name="grass_1_191" parent="mesh" index="209" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -2.9 )
+
+[node name="grass_1_192" parent="mesh" index="210" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -3.2 )
+
+[node name="grass_1_193" parent="mesh" index="211" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -2.9 )
+
+[node name="grass_1_194" parent="mesh" index="212" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -3 )
+
+[node name="grass_1_195" parent="mesh" index="213" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0, -2.7 )
+
+[node name="grass_1_196" parent="mesh" index="214" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, -2.5 )
+
+[node name="grass_1_197" parent="mesh" index="215" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -2.5 )
+
+[node name="grass_1_198" parent="mesh" index="216" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -2.1 )
+
+[node name="grass_1_199" parent="mesh" index="217" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0, -2 )
+
+[node name="grass_1_200" parent="mesh" index="218" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -1.8 )
+
+[node name="grass_1_201" parent="mesh" index="219" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -1.7 )
+
+[node name="grass_1_202" parent="mesh" index="220" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1.6 )
+
+[node name="grass_1_203" parent="mesh" index="221" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, -1.4 )
+
+[node name="grass_1_204" parent="mesh" index="222" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -1.3 )
+
+[node name="grass_1_205" parent="mesh" index="223" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -1.2 )
+
+[node name="grass_1_206" parent="mesh" index="224" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -0.8 )
+
+[node name="grass_1_207" parent="mesh" index="225" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, -0.7 )
+
+[node name="grass_1_208" parent="mesh" index="226" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0, -0.5 )
+
+[node name="grass_1_209" parent="mesh" index="227" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -0.2 )
+
+[node name="grass_1_210" parent="mesh" index="228" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, -0.1 )
+
+[node name="grass_1_211" parent="mesh" index="229" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, 0.2 )
+
+[node name="grass_1_212" parent="mesh" index="230" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, 0.5 )
+
+[node name="grass_1_213" parent="mesh" index="231" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, 0.6 )
+
+[node name="grass_1_214" parent="mesh" index="232" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, 0.7 )
+
+[node name="grass_1_215" parent="mesh" index="233" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, 0.8 )
+
+[node name="grass_1_216" parent="mesh" index="234" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, 1 )
+
+[node name="grass_1_217" parent="mesh" index="235" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1.1 )
+
+[node name="grass_1_218" parent="mesh" index="236" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, 1.3 )
+
+[node name="grass_1_219" parent="mesh" index="237" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, 1.5 )
+
+[node name="grass_1_220" parent="mesh" index="238" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, 1.6 )
+
+[node name="grass_1_221" parent="mesh" index="239" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, 2 )
+
+[node name="grass_1_222" parent="mesh" index="240" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, 2.2 )
+
+[node name="grass_1_223" parent="mesh" index="241" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, 2.4 )
+
+[node name="grass_1_224" parent="mesh" index="242" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, 2.4 )
+
+[node name="grass_1_225" parent="mesh" index="243" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0, 2.7 )
+
+[node name="grass_1_226" parent="mesh" index="244" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, 2.4 )
+
+[node name="grass_1_227" parent="mesh" index="245" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, 2.5 )
+
+[node name="grass_1_228" parent="mesh" index="246" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 0, 3 )
+
+[node name="grass_1_229" parent="mesh" index="247" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0, 2.8 )
+
+[node name="grass_1_230" parent="mesh" index="248" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0, 2.5 )
+
+[node name="grass_1_231" parent="mesh" index="249" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, 2.7 )
+
+[node name="grass_1_232" parent="mesh" index="250" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 2.8 )
+
+[node name="grass_1_233" parent="mesh" index="251" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0, 2.5 )
+
+[node name="grass_1_234" parent="mesh" index="252" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0, 3.1 )
+
+[node name="grass_1_235" parent="mesh" index="253" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2.7 )
+
+[node name="grass_1_236" parent="mesh" index="254" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, 2.8 )
+
+[node name="grass_1_237" parent="mesh" index="255" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 3 )
+
+[node name="grass_1_238" parent="mesh" index="256" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 3.2 )
+
+[node name="grass_1_239" parent="mesh" index="257" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 3.1 )
+
+[node name="grass_1_240" parent="mesh" index="258" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 3.2 )
+
+[node name="grass_1_241" parent="mesh" index="259" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 2.8 )
+
+[node name="grass_1_242" parent="mesh" index="260" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 2.9 )
+
+[node name="grass_1_243" parent="mesh" index="261" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 3.2 )
+
+[node name="grass_1_244" parent="mesh" index="262" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 3.1 )
+
+[node name="grass_1_245" parent="mesh" index="263" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 2.9 )
+
+[node name="grass_1_246" parent="mesh" index="264" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 3.1 )
+
+[node name="grass_1_247" parent="mesh" index="265" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, 3.3 )
+
+[node name="grass_1_248" parent="mesh" index="266" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, 2.9 )
+
+[node name="grass_1_249" parent="mesh" index="267" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, 3.2 )
+
+[node name="grass_1_250" parent="mesh" index="268" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 3 )
+
+[node name="grass_1_251" parent="mesh" index="269" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, 2.9 )
+
+[node name="grass_1_252" parent="mesh" index="270" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, 3.1 )
+
+[node name="grass_1_253" parent="mesh" index="271" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, 2.7 )
+
+[node name="grass_1_254" parent="mesh" index="272" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 2.5 )
+
+[node name="grass_1_255" parent="mesh" index="273" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6, 0, 2.9 )
+
+[node name="grass_1_256" parent="mesh" index="274" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6, 0, 3.1 )
+
+[node name="grass_1_257" parent="mesh" index="275" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2.7 )
+
+[node name="grass_1_258" parent="mesh" index="276" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, 2.5 )
+
+[node name="grass_1_259" parent="mesh" index="277" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, 2.3 )
+
+[node name="grass_1_260" parent="mesh" index="278" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, 2.2 )
+
+[node name="grass_1_261" parent="mesh" index="279" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, 2.1 )
+
+[node name="grass_1_262" parent="mesh" index="280" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, 1.4 )
+
+[node name="grass_1_263" parent="mesh" index="281" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, 1.4 )
+
+[node name="grass_1_264" parent="mesh" index="282" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, 1.2 )
+
+[node name="grass_1_265" parent="mesh" index="283" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, 1.1 )
+
+[node name="grass_1_266" parent="mesh" index="284" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0.8 )
+
+[node name="grass_1_267" parent="mesh" index="285" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, 0.6 )
+
+[node name="grass_1_268" parent="mesh" index="286" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0.3 )
+
+[node name="grass_1_269" parent="mesh" index="287" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, 0 )
+
+[node name="grass_1_270" parent="mesh" index="288" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, -0.3 )
+
+[node name="grass_1_271" parent="mesh" index="289" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, -0.3 )
+
+[node name="grass_1_272" parent="mesh" index="290" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, -0.6 )
+
+[node name="grass_1_273" parent="mesh" index="291" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -0.6 )
+
+[node name="grass_1_274" parent="mesh" index="292" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, -0.8 )
+
+[node name="grass_1_275" parent="mesh" index="293" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0, -0.8 )
+
+[node name="grass_1_276" parent="mesh" index="294" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, -1 )
+
+[node name="grass_1_277" parent="mesh" index="295" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, -1.2 )
+
+[node name="grass_1_278" parent="mesh" index="296" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, -1.4 )
+
+[node name="grass_1_279" parent="mesh" index="297" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, -1.6 )
+
+[node name="grass_1_280" parent="mesh" index="298" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, -1.9 )
+
+[node name="grass_2_1" parent="mesh" index="299" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3.5 )
+
+[node name="grass_2_2" parent="mesh" index="300" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, -3.9 )
+
+[node name="grass_2_3" parent="mesh" index="301" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, -3.4 )
+
+[node name="grass_2_4" parent="mesh" index="302" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, -3.5 )
+
+[node name="grass_2_5" parent="mesh" index="303" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, -3.7 )
+
+[node name="grass_2_6" parent="mesh" index="304" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, -3.2 )
+
+[node name="grass_2_7" parent="mesh" index="305" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0, -3.5 )
+
+[node name="grass_2_8" parent="mesh" index="306" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0, -3.8 )
+
+[node name="grass_2_9" parent="mesh" index="307" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, -4 )
+
+[node name="grass_2_10" parent="mesh" index="308" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, -3 )
+
+[node name="grass_2_11" parent="mesh" index="309" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6, 0, -3.8 )
+
+[node name="grass_2_12" parent="mesh" index="310" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -2.6 )
+
+[node name="grass_2_13" parent="mesh" index="311" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, -3.2 )
+
+[node name="grass_2_14" parent="mesh" index="312" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, 0, -2.8 )
+
+[node name="grass_2_15" parent="mesh" index="313" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, 0, -3.7 )
+
+[node name="grass_2_16" parent="mesh" index="314" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, 0, -4 )
+
+[node name="grass_2_17" parent="mesh" index="315" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 0, -3.9 )
+
+[node name="grass_2_18" parent="mesh" index="316" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 0, -3.1 )
+
+[node name="grass_2_19" parent="mesh" index="317" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, -2.9 )
+
+[node name="grass_2_20" parent="mesh" index="318" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, -3.2 )
+
+[node name="grass_2_21" parent="mesh" index="319" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0, -3.8 )
+
+[node name="grass_2_22" parent="mesh" index="320" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, -3.5 )
+
+[node name="grass_2_23" parent="mesh" index="321" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -3.9 )
+
+[node name="grass_2_24" parent="mesh" index="322" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -3.4 )
+
+[node name="grass_2_25" parent="mesh" index="323" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -3.1 )
+
+[node name="grass_2_26" parent="mesh" index="324" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, -3.5 )
+
+[node name="grass_2_27" parent="mesh" index="325" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3.8 )
+
+[node name="grass_2_28" parent="mesh" index="326" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, -3.3 )
+
+[node name="grass_2_29" parent="mesh" index="327" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -3.5 )
+
+[node name="grass_2_30" parent="mesh" index="328" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -2.8 )
+
+[node name="grass_2_31" parent="mesh" index="329" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -3.8 )
+
+[node name="grass_2_32" parent="mesh" index="330" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.6 )
+
+[node name="grass_2_33" parent="mesh" index="331" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
+
+[node name="grass_2_34" parent="mesh" index="332" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, -3.6 )
+
+[node name="grass_2_35" parent="mesh" index="333" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -2.9 )
+
+[node name="grass_2_36" parent="mesh" index="334" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, -3.3 )
+
+[node name="grass_2_37" parent="mesh" index="335" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, -3.6 )
+
+[node name="grass_2_38" parent="mesh" index="336" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, -2.9 )
+
+[node name="grass_2_39" parent="mesh" index="337" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, -3.7 )
+
+[node name="grass_2_40" parent="mesh" index="338" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3.5 )
+
+[node name="grass_2_41" parent="mesh" index="339" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0, -2.9 )
+
+[node name="grass_2_42" parent="mesh" index="340" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0, -3.2 )
+
+[node name="grass_2_43" parent="mesh" index="341" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0, -3.5 )
+
+[node name="grass_2_44" parent="mesh" index="342" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0, -3.8 )
+
+[node name="grass_2_45" parent="mesh" index="343" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0, -3.6 )
+
+[node name="grass_2_46" parent="mesh" index="344" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, -3.9 )
+
+[node name="grass_2_47" parent="mesh" index="345" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3.5 )
+
+[node name="grass_2_48" parent="mesh" index="346" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0, -3.7 )
+
+[node name="grass_2_49" parent="mesh" index="347" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0, -3.29979 )
+
+[node name="grass_2_50" parent="mesh" index="348" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, -3.1 )
+
+[node name="grass_2_51" parent="mesh" index="349" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, -3.9 )
+
+[node name="grass_2_52" parent="mesh" index="350" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, -3.2 )
+
+[node name="grass_2_53" parent="mesh" index="351" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, -3.6 )
+
+[node name="grass_2_54" parent="mesh" index="352" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -3.9 )
+
+[node name="grass_2_55" parent="mesh" index="353" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3.2 )
+
+[node name="grass_2_56" parent="mesh" index="354" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -3.3 )
+
+[node name="grass_2_57" parent="mesh" index="355" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0, -3.8 )
+
+[node name="grass_2_58" parent="mesh" index="356" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -3.9 )
+
+[node name="grass_2_59" parent="mesh" index="357" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -3.3 )
+
+[node name="grass_2_60" parent="mesh" index="358" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, -3.1 )
+
+[node name="grass_2_61" parent="mesh" index="359" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -2.9 )
+
+[node name="grass_2_62" parent="mesh" index="360" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, -2.8 )
+
+[node name="grass_2_63" parent="mesh" index="361" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, -2.6 )
+
+[node name="grass_2_64" parent="mesh" index="362" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, -2.4 )
+
+[node name="grass_2_65" parent="mesh" index="363" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -2.4 )
+
+[node name="grass_2_66" parent="mesh" index="364" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -2.3 )
+
+[node name="grass_2_67" parent="mesh" index="365" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, -2.3 )
+
+[node name="grass_2_68" parent="mesh" index="366" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -2.2 )
+
+[node name="grass_2_69" parent="mesh" index="367" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, -2.2 )
+
+[node name="grass_2_70" parent="mesh" index="368" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, -1.9 )
+
+[node name="grass_2_71" parent="mesh" index="369" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, -1.8 )
+
+[node name="grass_2_72" parent="mesh" index="370" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, -1.6 )
+
+[node name="grass_2_73" parent="mesh" index="371" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -1.6 )
+
+[node name="grass_2_74" parent="mesh" index="372" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -1.5 )
+
+[node name="grass_2_75" parent="mesh" index="373" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -1.2 )
+
+[node name="grass_2_76" parent="mesh" index="374" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, -1 )
+
+[node name="grass_2_77" parent="mesh" index="375" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, -0.9 )
+
+[node name="grass_2_78" parent="mesh" index="376" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0, -0.9 )
+
+[node name="grass_2_79" parent="mesh" index="377" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, -0.6 )
+
+[node name="grass_2_80" parent="mesh" index="378" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0, -0.5 )
+
+[node name="grass_2_81" parent="mesh" index="379" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -0.4 )
+
+[node name="grass_2_82" parent="mesh" index="380" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, -0.2 )
+
+[node name="grass_2_83" parent="mesh" index="381" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, -0.2 )
+
+[node name="grass_2_84" parent="mesh" index="382" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, 0 )
+
+[node name="grass_2_85" parent="mesh" index="383" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, 0 )
+
+[node name="grass_2_86" parent="mesh" index="384" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, 0.2 )
+
+[node name="grass_2_87" parent="mesh" index="385" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0, 0.2 )
+
+[node name="grass_2_88" parent="mesh" index="386" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, 0.4 )
+
+[node name="grass_2_89" parent="mesh" index="387" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 0.6 )
+
+[node name="grass_2_90" parent="mesh" index="388" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, 0.8 )
+
+[node name="grass_2_91" parent="mesh" index="389" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 1 )
+
+[node name="grass_2_92" parent="mesh" index="390" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, 1.1 )
+
+[node name="grass_2_93" parent="mesh" index="391" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, 1.4 )
+
+[node name="grass_2_94" parent="mesh" index="392" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1.4 )
+
+[node name="grass_2_95" parent="mesh" index="393" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 1.6 )
+
+[node name="grass_2_96" parent="mesh" index="394" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, 1.7 )
+
+[node name="grass_2_97" parent="mesh" index="395" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, 1.9 )
+
+[node name="grass_2_98" parent="mesh" index="396" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, 2 )
+
+[node name="grass_2_99" parent="mesh" index="397" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 2.1 )
+
+[node name="grass_2_100" parent="mesh" index="398" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, 2.2 )
+
+[node name="grass_2_101" parent="mesh" index="399" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 2.4 )
+
+[node name="grass_2_102" parent="mesh" index="400" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2.6 )
+
+[node name="grass_2_103" parent="mesh" index="401" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, 2.7 )
+
+[node name="grass_2_104" parent="mesh" index="402" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, 2.8 )
+
+[node name="grass_2_105" parent="mesh" index="403" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, 3 )
+
+[node name="grass_2_106" parent="mesh" index="404" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, 3.5 )
+
+[node name="grass_2_107" parent="mesh" index="405" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, 3 )
+
+[node name="grass_2_108" parent="mesh" index="406" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, 3.8 )
+
+[node name="grass_2_109" parent="mesh" index="407" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 3.6 )
+
+[node name="grass_2_110" parent="mesh" index="408" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, 0, 3.7 )
+
+[node name="grass_2_111" parent="mesh" index="409" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, 3 )
+
+[node name="grass_2_112" parent="mesh" index="410" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0, 3.2 )
+
+[node name="grass_2_113" parent="mesh" index="411" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3.8 )
+
+[node name="grass_2_114" parent="mesh" index="412" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, 3.6 )
+
+[node name="grass_2_115" parent="mesh" index="413" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 3.1 )
+
+[node name="grass_2_116" parent="mesh" index="414" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, 3.7 )
+
+[node name="grass_2_117" parent="mesh" index="415" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 3.4 )
+
+[node name="grass_2_118" parent="mesh" index="416" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 3.8 )
+
+[node name="grass_2_119" parent="mesh" index="417" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, 3.1 )
+
+[node name="grass_2_120" parent="mesh" index="418" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, 3.6 )
+
+[node name="grass_2_121" parent="mesh" index="419" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 3.5 )
+
+[node name="grass_2_122" parent="mesh" index="420" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 3.3 )
+
+[node name="grass_2_123" parent="mesh" index="421" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, 3.8 )
+
+[node name="grass_2_124" parent="mesh" index="422" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3.6 )
+
+[node name="grass_2_125" parent="mesh" index="423" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, 3.6 )
+
+[node name="grass_2_126" parent="mesh" index="424" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, 2.9 )
+
+[node name="grass_2_127" parent="mesh" index="425" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, 3.6 )
+
+[node name="grass_2_128" parent="mesh" index="426" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, 2.7 )
+
+[node name="grass_2_129" parent="mesh" index="427" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0, 3.1 )
+
+[node name="grass_2_130" parent="mesh" index="428" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, 3.7 )
+
+[node name="grass_2_131" parent="mesh" index="429" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, 3.2 )
+
+[node name="grass_2_132" parent="mesh" index="430" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, 3.2 )
+
+[node name="grass_2_133" parent="mesh" index="431" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, 3.8 )
+
+[node name="grass_2_134" parent="mesh" index="432" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 3.4 )
+
+[node name="grass_2_135" parent="mesh" index="433" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, 3.1 )
+
+[node name="grass_2_136" parent="mesh" index="434" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, 2.7 )
+
+[node name="grass_2_137" parent="mesh" index="435" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 2.6 )
+
+[node name="grass_2_138" parent="mesh" index="436" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, 3.3 )
+
+[node name="grass_2_139" parent="mesh" index="437" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, 2.5 )
+
+[node name="grass_2_140" parent="mesh" index="438" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, 2.3 )
+
+[node name="grass_2_141" parent="mesh" index="439" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, 2.3 )
+
+[node name="grass_2_142" parent="mesh" index="440" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, 1.8 )
+
+[node name="grass_2_143" parent="mesh" index="441" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 1.8 )
+
+[node name="grass_2_144" parent="mesh" index="442" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, 1.3 )
+
+[node name="grass_2_145" parent="mesh" index="443" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, 1.3 )
+
+[node name="grass_2_146" parent="mesh" index="444" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, 1 )
+
+[node name="grass_2_147" parent="mesh" index="445" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1 )
+
+[node name="grass_2_148" parent="mesh" index="446" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, 0.8 )
+
+[node name="grass_2_149" parent="mesh" index="447" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, 0.6 )
+
+[node name="grass_2_150" parent="mesh" index="448" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, 0.6 )
+
+[node name="grass_2_151" parent="mesh" index="449" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, 0.4 )
+
+[node name="grass_2_152" parent="mesh" index="450" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, 0.3 )
+
+[node name="grass_2_153" parent="mesh" index="451" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 0.3 )
+
+[node name="grass_2_154" parent="mesh" index="452" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, -0.299862 )
+
+[node name="grass_2_155" parent="mesh" index="453" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -0.3 )
+
+[node name="grass_2_156" parent="mesh" index="454" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0, -0.4 )
+
+[node name="grass_2_157" parent="mesh" index="455" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, -0.5 )
+
+[node name="grass_2_158" parent="mesh" index="456" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, -0.9 )
+
+[node name="grass_2_159" parent="mesh" index="457" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, -1 )
+
+[node name="grass_2_160" parent="mesh" index="458" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, -1.3 )
+
+[node name="grass_2_161" parent="mesh" index="459" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, -1.7 )
+
+[node name="grass_2_162" parent="mesh" index="460" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, -1.8 )
+
+[node name="grass_2_163" parent="mesh" index="461" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -2 )
+
+[node name="grass_2_164" parent="mesh" index="462" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -2.2 )
+
+[node name="grass_2_165" parent="mesh" index="463" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, -2.2 )
+
+[node name="grass_2_166" parent="mesh" index="464" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2.4 )
+
+[node name="grass_2_167" parent="mesh" index="465" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, -2.5 )
+
+[node name="grass_2_168" parent="mesh" index="466" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, -3.1 )
+
+[node name="grass_3_1" parent="mesh" index="467" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 0, -3.9 )
+
+[node name="grass_3_2" parent="mesh" index="468" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, -2.7 )
+
+[node name="grass_3_3" parent="mesh" index="469" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3.1 )
+
+[node name="grass_3_4" parent="mesh" index="470" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, -3.8 )
+
+[node name="grass_3_5" parent="mesh" index="471" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, -3.7 )
+
+[node name="grass_3_6" parent="mesh" index="472" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -3.2 )
+
+[node name="grass_3_7" parent="mesh" index="473" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, -3.2 )
+
+[node name="grass_3_8" parent="mesh" index="474" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -3.9 )
+
+[node name="grass_3_9" parent="mesh" index="475" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, -3.1 )
+
+[node name="grass_3_10" parent="mesh" index="476" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6, 0, -3.3 )
+
+[node name="grass_3_11" parent="mesh" index="477" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0, -3 )
+
+[node name="grass_3_12" parent="mesh" index="478" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, -3.1 )
+
+[node name="grass_3_13" parent="mesh" index="479" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, -2.7 )
+
+[node name="grass_3_14" parent="mesh" index="480" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, -2 )
+
+[node name="grass_3_15" parent="mesh" index="481" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, -0.800476 )
+
+[node name="grass_3_16" parent="mesh" index="482" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, -0.4 )
+
+[node name="grass_3_17" parent="mesh" index="483" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -0.3 )
+
+[node name="grass_3_18" parent="mesh" index="484" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, 0.2 )
+
+[node name="grass_3_19" parent="mesh" index="485" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 0, 0.4 )
+
+[node name="grass_3_20" parent="mesh" index="486" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, 0.8 )
+
+[node name="grass_3_21" parent="mesh" index="487" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 1.3 )
+
+[node name="grass_3_22" parent="mesh" index="488" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2.2 )
+
+[node name="grass_3_23" parent="mesh" index="489" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, 2.5 )
+
+[node name="grass_3_24" parent="mesh" index="490" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, 3.1 )
+
+[node name="grass_3_25" parent="mesh" index="491" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0, 3.3 )
+
+[node name="grass_3_26" parent="mesh" index="492" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, 3.4 )
+
+[node name="grass_3_27" parent="mesh" index="493" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 3.7 )
+
+[node name="grass_3_28" parent="mesh" index="494" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, 3.7 )
+
+[node name="grass_3_29" parent="mesh" index="495" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0, 3.3 )
+
+[node name="grass_3_30" parent="mesh" index="496" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, 3 )
+
+[node name="grass_3_31" parent="mesh" index="497" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0, 3.2 )
+
+[node name="grass_3_32" parent="mesh" index="498" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6, 0, 3.8 )
+
+[node name="grass_3_33" parent="mesh" index="499" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0, 2.9 )
+
+[node name="grass_3_34" parent="mesh" index="500" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 3.7 )
+
+[node name="grass_3_35" parent="mesh" index="501" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, 3.1 )
+
+[node name="grass_3_36" parent="mesh" index="502" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, 3.4 )
+
+[node name="grass_3_37" parent="mesh" index="503" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 3.7 )
+
+[node name="grass_3_38" parent="mesh" index="504" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 2.9 )
+
+[node name="grass_3_39" parent="mesh" index="505" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, 1.5 )
+
+[node name="grass_3_40" parent="mesh" index="506" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1.1 )
+
+[node name="grass_3_41" parent="mesh" index="507" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0 )
+
+[node name="grass_3_42" parent="mesh" index="508" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, -0.7 )
+
+[node name="grass_3_43" parent="mesh" index="509" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, -0.8 )
+
+[node name="grass_3_44" parent="mesh" index="510" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, -1.4 )
+
+[node name="grass_3_45" parent="mesh" index="511" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, -2.7 )
+
+[node name="grass_4_1" parent="mesh" index="512" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, -3.7 )
+
+[node name="grass_4_2" parent="mesh" index="513" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0, -3.7 )
+
+[node name="grass_4_3" parent="mesh" index="514" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 1.8 )
+
+[node name="grass_4_4" parent="mesh" index="515" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0, 3.4 )
+
+[node name="grass_4_5" parent="mesh" index="516" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 2.1 )
+
+[node name="grass_4_6" parent="mesh" index="517" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, 1.7 )
