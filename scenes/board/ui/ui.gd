@@ -82,6 +82,8 @@ func update_tile_highlight(tile_preview):
     self.tile_highlight.set_tile(tile_preview, 0)
 
 func update_tile_highlight_unit_panel(unit, board):
+    if self.cinematic_bars.is_extended:
+        return
     self.tile_highlight_unit_panel_hp.set_text(str(unit.hp) + "/" + str(unit.max_hp))
 
     match unit.level:
