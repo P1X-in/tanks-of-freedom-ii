@@ -74,10 +74,10 @@ func update_resource_value(value):
     self.resource_label.set_text(str(value))
 
 func update_tile_highlight(tile_preview):
+    self.clear_tile_highlight()
     if self.cinematic_bars.is_extended:
         return
 
-    self.clear_tile_highlight()
     self.tile_highlight.show()
     self.tile_highlight.set_tile(tile_preview, 0)
 
