@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scenes/ui/board/start_turn.gd" type="Script" id=2]
@@ -6,6 +6,33 @@
 [ext_resource path="res://scenes/ui/icons/nations/yellow.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ui/icons/nations/green.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/ui/icons/nations/red.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "show"
@@ -27,19 +54,31 @@ tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5, 3.5, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [node name="start_turn" type="Node2D"]
-scale = Vector2( 1e-05, 1e-05 )
 script = ExtResource( 2 )
 
 [node name="background" type="ColorRect" parent="."]
+visible = false
 margin_left = -200.0
 margin_top = -90.0
 margin_right = 200.0
@@ -136,4 +175,5 @@ __meta__ = {
 
 [node name="animations" type="AnimationPlayer" parent="."]
 playback_speed = 4.0
+anims/RESET = SubResource( 2 )
 anims/show = SubResource( 1 )
