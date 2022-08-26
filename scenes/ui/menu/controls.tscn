@@ -100,12 +100,11 @@ tracks/1/keys = {
 }
 
 [node name="controls" type="Control"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_scale = Vector2( 1e-05, 1e-05 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="background" type="ColorRect" parent="."]
 margin_left = -400.0
