@@ -29,4 +29,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="focus_entered" from="toggle" to="." method="_show_help"]
+[connection signal="mouse_entered" from="toggle" to="." method="_show_help"]
+[connection signal="mouse_exited" from="toggle" to="." method="_clear_help"]
 [connection signal="pressed" from="toggle" to="." method="_on_toggle_button_pressed"]

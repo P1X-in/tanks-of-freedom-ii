@@ -14,6 +14,9 @@ onready var video_panel = $"widgets/boxes/settings_video"
 onready var audio_panel = $"widgets/boxes/settings_audio"
 onready var camera_panel = $"widgets/boxes/settings_camera"
 
+onready var help = $"help"
+onready var help_text = $"help/text"
+
 var main_menu
 
 func bind_menu(menu):
@@ -27,10 +30,12 @@ func _input(event):
         self._on_back_button_pressed()
 
 func _on_back_button_pressed():
+    self.hide_help()
     self.audio.play("menu_back")
     self.main_menu.close_settings()
 
 func show_panel():
+    self.hide_help()
     self.video_panel.show()
     self.audio_panel.hide()
     self.camera_panel.hide()
@@ -40,6 +45,7 @@ func show_panel():
     self.video_button.grab_focus()
 
 func hide_panel():
+    self.hide_help()
     self.animations.play("hide")
     self.set_process_input(false)
 
@@ -60,3 +66,10 @@ func _on_camera_pressed():
     self.audio_panel.hide()
     self.camera_panel.show()
     self.audio.play("menu_click")
+
+func show_help(text):
+    self.help_text.set_text(text)
+    self.help.show()
+
+func hide_help():
+    self.help.hide()

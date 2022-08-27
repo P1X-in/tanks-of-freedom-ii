@@ -36,4 +36,7 @@ margin_right = 450.0
 margin_bottom = 50.0
 max_value = 10.0
 
+[connection signal="focus_entered" from="slider" to="." method="_show_help"]
+[connection signal="mouse_entered" from="slider" to="." method="_show_help"]
+[connection signal="mouse_exited" from="slider" to="." method="_clear_help"]
 [connection signal="value_changed" from="slider" to="." method="_on_slider_value_changed"]

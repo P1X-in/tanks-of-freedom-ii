@@ -7,8 +7,9 @@ onready var label = $"label"
 onready var slider_value = $"slider_value"
 onready var slider = $"slider"
 
-export var option_name = "name"
-export var option_key = "key"
+export var option_name = ""
+export var option_key = ""
+export var help_tip = ""
 
 var ready = false
 
@@ -29,4 +30,13 @@ func _on_slider_value_changed(value):
     if self.ready:
         self.audio.play("menu_click")
     self.slider_value.set_text(str(int(value)))
+    
+func _show_help():
+    if self.help_tip != "":
+        self.get_parent().get_parent().get_parent().get_parent().show_help(self.help_tip)
+    else:
+        self._clear_help()
+
+func _clear_help():
+    self.get_parent().get_parent().get_parent().get_parent().hide_help()
     

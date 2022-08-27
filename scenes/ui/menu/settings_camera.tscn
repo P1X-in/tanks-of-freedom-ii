@@ -12,16 +12,19 @@ margin_bottom = -500.0
 [node name="hq_cam" parent="." instance=ExtResource( 1 )]
 option_name = "Move camera to HQ"
 option_key = "hq_cam"
+help_tip = "Automatically move camera to current player HQ at the beginning of their turn."
 
 [node name="cam_shake" parent="." instance=ExtResource( 1 )]
 margin_top = 85.0
 margin_bottom = 135.0
 option_name = "Camera shake"
 option_key = "cam_shake"
+help_tip = "Shake camera on explosions."
 
 [node name="def_cam_st" parent="." instance=ExtResource( 3 )]
 margin_top = 150.0
 margin_bottom = 200.0
 option_name = "Default Style"
 option_key = "def_cam_st"
+help_tip = "Default camera style when a map is loaded."
 available_values = [ "TOF", "AW", "FREE" ]
