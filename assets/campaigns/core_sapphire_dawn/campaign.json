@@ -2,11 +2,65 @@
     "name" : "core_sapphire_dawn",
     "title" : "Business as usual",
     "icon" : "blue_gem",
-    "prerequisite" : "not_unlockable_at_the_moment",
+    "prerequisite" : "core_ruby_dusk",
     "missions" : [
         {
-            "name" : "test",
-            "title" : "Test",
+            "name" : "lucrative_offer",
+            "title" : "Lucrative offer",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [500, 180],
+            "players": [
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
+        },
+        {
+            "name" : "consolidation",
+            "title" : "Consolidation",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [0, 0]
+        },
+        {
+            "name" : "capital_offence",
+            "title" : "Capital offence",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [0, 0]
+        },
+        {
+            "name" : "noble_cause",
+            "title" : "Noble cause",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [0, 0]
+        },
+        {
+            "name" : "glimmer_of_jade",
+            "title" : "A glimmer of Jade",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [0, 0]
+        },
+        {
+            "name" : "hostile_takeover",
+            "title" : "Hostile takeover",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [0, 0]
+        },
+        {
+            "name" : "pursuit_of_greatness",
+            "title" : "In pursuit of greatness",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
             "marker" : [0, 0]
