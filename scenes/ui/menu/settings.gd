@@ -31,13 +31,13 @@ func _on_back_button_pressed():
     self.main_menu.close_settings()
 
 func show_panel():
+    self.video_panel.show()
+    self.audio_panel.hide()
+    self.camera_panel.hide()
     self.animations.play("show")
     self.set_process_input(true)
     yield(self.get_tree().create_timer(0.1), "timeout")
     self.video_button.grab_focus()
-    self.video_panel.show()
-    self.audio_panel.hide()
-    self.camera_panel.hide()
 
 func hide_panel():
     self.animations.play("hide")
