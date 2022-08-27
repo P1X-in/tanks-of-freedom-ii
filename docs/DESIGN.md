@@ -28,6 +28,7 @@ A democratic, capitalist nation that values business, ambition and freedom. In r
 Style: Modern
 Biome: Desert
 Capital: Sapphire City
+Theme: _All star champion sheep_ by Reduz (soundtrack_3)
 
 ### Ruby Dusk (Team Red)
 An industrial nation, that values hard work and ingeniuity. In rivalry with Sapphire Dawn.
@@ -35,6 +36,7 @@ An industrial nation, that values hard work and ingeniuity. In rivalry with Sapp
 Style: Steampunk
 Biome: Snowy mountains
 Capital: Rubyport
+Theme: _Like a whale_ by Reduz (soundtrack_4)
 
 ### Jade Twilight (Team Green)
 A peacful and prosperous nation, consisting of a federation of smaller cultures. Values science and diplomacy. In good relations with everyone.
@@ -42,6 +44,7 @@ A peacful and prosperous nation, consisting of a federation of smaller cultures.
 Style: Futuristic
 Biome: Tropical
 Capital: Jade Oasis
+Theme: _Capybara love_ by Reduz (soundtrack_6)
 
 ### Amber Noon (Team Yellow)
 A feudal nation, that values honor and courage. Led by a royal family. In reserved relations with other nations.
@@ -49,6 +52,7 @@ A feudal nation, that values honor and courage. Led by a royal family. In reserv
 Style: Feudal/Knights
 Biome: Temperate
 Capital: Amber Fortress
+Theme: _The sorrows of a crab_ by Reduz (soundtrack_5)
 
 
 ## Characters
