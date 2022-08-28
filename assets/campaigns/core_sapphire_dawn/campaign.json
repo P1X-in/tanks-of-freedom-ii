@@ -7,8 +7,8 @@
         {
             "name" : "lucrative_offer",
             "title" : "Lucrative offer",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
+            "map" : "core_sap_dawn_lucrative_offer.tofmap.json",
+            "description" : "President Gideon, unhappy with Blake's progress in dealing with Ruby Dusk, sends General Cyrus to a small outposts with a very important task.",
             "marker" : [500, 180],
             "players": [
                 {

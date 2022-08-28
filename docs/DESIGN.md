@@ -265,6 +265,7 @@ Each of the main campaigns should be about 10 mission long.
     - Sapphire Dawn drops troops regularly
     - Gentleman Archibald needs to capture and hold line of towers
 
+
 #### Sapphire Dawn Campaign - Business as usual
 1. Lucrative offer
     - General Cyrus arrives at a Sapphire Dawn border garrison to take command
