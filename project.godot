@@ -175,4 +175,5 @@ common/physics_fps=144
 [rendering]
 
 threads/thread_model=2
+gles3/shaders/shader_compilation_mode=2
 environment/default_environment="res://assets/environment.tres"
