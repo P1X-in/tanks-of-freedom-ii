@@ -550,7 +550,7 @@ func update_tile_highlight(tile):
         self.ui.clear_tile_highlight()
         return
 
-    if self.state.is_current_player_ai():
+    if self.state.is_current_player_ai() or self.map.camera.ai_operated:
         return
 
     var template_name
