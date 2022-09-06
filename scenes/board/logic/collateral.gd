@@ -1,4 +1,3 @@
-extends Spatial
 
 const COLLATERAL_CHANCE = 0.5
 

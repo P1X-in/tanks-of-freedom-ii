@@ -92,6 +92,9 @@ func _physics_process(_delta):
     self.hover_tile()
 
 func hover_tile():
+    if self.state.is_current_player_ai():
+        return
+
     if not self.ui.is_panel_open():
         var tile = self.map.model.get_tile(self.map.tile_box_position)
 
@@ -545,6 +548,9 @@ func use_current_player_ap(value):
 func update_tile_highlight(tile):
     if not tile.building.is_present() and not tile.unit.is_present():
         self.ui.clear_tile_highlight()
+        return
+
+    if self.state.is_current_player_ai():
         return
 
     var template_name

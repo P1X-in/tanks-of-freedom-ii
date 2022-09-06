@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/buildings/blue/headquarters.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://assets/materials/arne32_blue.tres" type="Material" id=2]
@@ -6,9 +6,12 @@
 [ext_resource path="res://scenes/abilities/production/blue/infantry.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/abilities/production/heroes/general.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/abilities/production/heroes/commando.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/tiles/buildings/blue/headquarters.gd" type="Script" id=7]
 
-[node name="tile" instance=ExtResource( 3 )]
+[node name="headquarters" instance=ExtResource( 3 )]
+script = ExtResource( 7 )
 side = "blue"
+require_crew = true
 ap_gain = 20
 capture_value = 1000
 
