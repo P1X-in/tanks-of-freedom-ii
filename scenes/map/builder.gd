@@ -160,6 +160,8 @@ func place_unit(position, name, rotation, side=null, ai_paused=false):
 
     if side != null:
         self.set_unit_side(position, side)
+    else:
+        self.set_unit_side(position, tile.unit.tile.side)
     tile.unit.tile.ai_paused = ai_paused
     tile.unit.tile.reset()
 

@@ -358,8 +358,8 @@ func next_building_side(building_object):
 func next_unit_side(unit_object):
     var side_map = self.rotations.get_player_map(unit_object.side)
 
-    if side_map["next"] == "neutral":
-        side_map = self.rotations.get_player_map(side_map["next"])
+    #if side_map["next"] == "neutral":
+    #    side_map = self.rotations.get_player_map(side_map["next"])
 
     self.map.builder.set_unit_side(self.map.tile_box_position, side_map["next"])
 
@@ -388,7 +388,7 @@ func toggle_unit_ai_pause():
     if tile.unit.is_present():
         tile.unit.tile.ai_paused = not tile.unit.tile.ai_paused
 
-    if tile.unit.tile.ai_paused:
-        tile.unit.tile.remove_highlight()
-    else:
-        tile.unit.tile.restore_highlight()
+        if tile.unit.tile.ai_paused:
+            tile.unit.tile.remove_highlight()
+        else:
+            tile.unit.tile.restore_highlight()
