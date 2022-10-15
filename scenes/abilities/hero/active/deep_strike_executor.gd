@@ -30,3 +30,4 @@ func _deploy_unit():
     new_unit.sfx_effect("spawn")
 
     self.board.events.emit_unit_spawned(self.source, new_unit)
+    self.board.events.emit_unit_moved(new_unit, self.position, self.position)
