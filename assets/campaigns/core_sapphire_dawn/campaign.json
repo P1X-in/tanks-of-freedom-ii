@@ -9,7 +9,7 @@
             "title" : "Lucrative offer",
             "map" : "core_sap_dawn_lucrative_offer.tofmap.json",
             "description" : "President Gideon, unhappy with Blake's progress in dealing with Ruby Dusk, sends General Cyrus to a small outposts with a very important task.",
-            "marker" : [500, 180],
+            "marker" : [470, 180],
             "players": [
                 {
                     "side" : "blue",
@@ -26,44 +26,56 @@
         {
             "name" : "consolidation",
             "title" : "Consolidation",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [0, 0]
+            "map" : "core_sap_dawn_consolidation.tofmap.json",
+            "description" : "During Commando Blake's hasty attack, many units couldn't keep up, and were left behind to fend for themselves. It is up to General Cyrus to reach those soldiers before Ruby Dusk does.",
+            "marker" : [510, 140],
+            "players": [
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
         },
         {
             "name" : "capital_offence",
             "title" : "Capital offence",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [0, 0]
+            "marker" : [550, 130]
         },
         {
             "name" : "noble_cause",
             "title" : "Noble cause",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [0, 0]
+            "marker" : [520, 80]
         },
         {
             "name" : "glimmer_of_jade",
             "title" : "A glimmer of Jade",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [0, 0]
+            "marker" : [630, 110]
         },
         {
             "name" : "hostile_takeover",
             "title" : "Hostile takeover",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [0, 0]
+            "marker" : [615, 170]
         },
         {
             "name" : "pursuit_of_greatness",
             "title" : "In pursuit of greatness",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [0, 0]
+            "marker" : [600, 230]
         }
     ]
 }

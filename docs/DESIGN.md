@@ -299,6 +299,8 @@ Each of the main campaigns should be about 10 mission long.
     - General Cyrus follows and encountersa group of Jade Twilight soldiers
     - Surprised by this, Cyrus reports the encounter to Warlord Grim
     - Warlord Grim informs Cyrus, that Jade Twilight must have made an alliance with Ruby Dusk, orders to attack
+    - Small Amber Noon detachment engages Jade Twilight forces
+    - General Cyrus moves in to assist
     - Just as General Cyrus captures Jade Twilight camp, Prince Tybalt arrives
     - General Cyrus leaves with Prince Tybalt to his camp
 
@@ -309,7 +311,7 @@ Each of the main campaigns should be about 10 mission long.
     - Commando Blake appears, relieves General Cyrus of command
     - General Cyrus is sent away
     - Commando Blake attacks Jade Twilight forces in the camp
-    - Prince Tybalt escapes east
+    - Prince Tybalt escapes south
 
 7. In pursuit of greatness
     - Commando Blake chases Prince Tybalt
