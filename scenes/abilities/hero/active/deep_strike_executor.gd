@@ -23,6 +23,7 @@ func set_side_material():
     drop_ship.set_side_material(self.board.map.templates.get_side_material(self.source.side, self.board.map.templates.MATERIAL_METALLIC))
 
 func _deploy_unit():
+    var tile = self.board.map.model.get_tile(self.position)
     var new_unit = self.board.map.builder.place_unit(self.position, self.template_name, 90, self.source.side)
 
     new_unit.remove_moves()
@@ -30,4 +31,4 @@ func _deploy_unit():
     new_unit.sfx_effect("spawn")
 
     self.board.events.emit_unit_spawned(self.source, new_unit)
-    self.board.events.emit_unit_moved(new_unit, self.position, self.position)
+    self.board.events.emit_unit_moved(new_unit, tile, tile)
