@@ -23,6 +23,7 @@ var templates = {
     'pause_ai' : preload("res://scenes/board/logic/scripting/outcomes/pause_ai.gd"),
     'hero_ability' : preload("res://scenes/board/logic/scripting/outcomes/hero_ability.gd"),
     'side' : preload("res://scenes/board/logic/scripting/outcomes/side.gd"),
+    'use_ability' : preload("res://scenes/board/logic/scripting/outcomes/use_ability.gd"),
 
     'eliminate_player' : preload("res://scenes/board/logic/scripting/outcomes/eliminate_player.gd")
 }
