@@ -143,6 +143,12 @@ func place_unit(position, name, rotation, side=null, ai_paused=false):
 
     if not tile.ground.is_present():
         return
+
+    return self.force_place_unit(position, name, rotation, side, ai_paused)
+
+func force_place_unit(position, name, rotation, side=null, ai_paused=false):
+    var tile = self.map.model.get_tile(position)
+
     if tile.unit.is_present():
         self._notify_removal(tile.unit, position, self.map.builder.CLASS_UNIT, tile.unit.tile.side)
         tile.unit.clear()

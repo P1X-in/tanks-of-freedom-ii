@@ -45,9 +45,21 @@
         {
             "name" : "capital_offence",
             "title" : "Capital offence",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [550, 130]
+            "map" : "core_sap_dawn_capital_offence.tofmap.json",
+            "description" : "A key supply line of the Ruby Dusk army has been located. Sapphire Dawn must cut it off, in order to significantly weaken the occupying force, and open the path towards Amber Fortress.",
+            "marker" : [550, 130],
+            "players": [
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
         },
         {
             "name" : "noble_cause",

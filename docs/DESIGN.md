@@ -227,7 +227,7 @@ Each of the main campaigns should be about 10 mission long.
     - Noble Sidney explains Attack Helicopter ability
     - Noble Sidney has to take over a military bases guarding the bridge
 
-5. Amber Fotress
+5. Amber Fortress
     - Prince Tybalt talks to guards
     - Noble Sidney arrives at Amber Noon capital city
     - Need to take out guard forces, city itself is inaccesible
@@ -508,7 +508,7 @@ In addition to regular units, each side has access to two hero units. A hero uni
 
 - The General
     - Passive: Recruitment: Barracks units cost 10 AP less to deploy.
-    - Active: Deep Strike: Drop an Infantry unit with no MP within 2 tiles. Costs 50 AP
+    - Active: Deep Strike: Drop an Infantry unit with no MP within 2 tiles.
 - The Commando
     - Passive: Trained Specialist: All unit skill CDs are reduced by 1
     - Active: Infiltration: Hero teleports in range up to 2 tiles with 1 MP left
