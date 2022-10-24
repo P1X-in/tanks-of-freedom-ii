@@ -64,9 +64,21 @@
         {
             "name" : "noble_cause",
             "title" : "Noble cause",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [520, 80]
+            "map" : "core_sap_dawn_noble_cause.tofmap.json",
+            "description" : "Wave after wave of Ruby Dusk attackers are being repelled by Amber Noon soldiers defending the Amber Fortress. General Cyrus commands his troops to capture the Ruby HQ, which also appears to be holding a VIP under guard.",
+            "marker" : [520, 80],
+            "players": [
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "red",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
         },
         {
             "name" : "glimmer_of_jade",

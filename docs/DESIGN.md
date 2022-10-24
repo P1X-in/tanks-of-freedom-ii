@@ -290,7 +290,7 @@ Each of the main campaigns should be about 10 mission long.
 4. Noble cause
     - Ruby Dusk forces are pressured by Sapphire Dawn
     - Ruby Dusk forces are in need of a commander, so Noble Sidney is released
-    - General Cyrus needs to hold the line agains waves of enemy units until reinforcements arrive
+    - General Cyrus needs to hold the line agains waves of enemy units while he captures Ruby Dusk HQ
     - Noble Sidney taunts General Cyrus about being mercenaries for Warlord Grim
     - Noble Sidney tells General Cyrus that it was Amber Noon who attacked first, which Cyrus finds disturbing
 
