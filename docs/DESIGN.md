@@ -319,6 +319,7 @@ Each of the main campaigns should be about 10 mission long.
     - Commando Blake has to attack the base from the front to lure away guards
     - Commando Blake has to sneak past defences and capture Prince Tybalt
     - Commando Blake must not loose base
+    - When Commando Blake reaches Prince Tybalt, a trap is revealed, and he is captured
 
 #### Jade Twilight Campaign - Hard Diplomacy
 To be designed.

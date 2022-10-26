@@ -83,9 +83,26 @@
         {
             "name" : "glimmer_of_jade",
             "title" : "A glimmer of Jade",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [630, 110]
+            "map" : "core_sap_dawn_glimmer_of_jade.tofmap.json",
+            "description" : "President Gideon orders General Cyrus to travel east, where Warlord Grim requested help in dealing with new threat. But how could have Ruby Dusk gone that deep into Amber Noon lands? Or is it something else?",
+            "marker" : [630, 110],
+            "players": [
+                {
+                    "side" : "yellow",
+                    "ap" : 0,
+                    "type" : "ai"
+                },
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "green",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
         },
         {
             "name" : "hostile_takeover",
