@@ -139,6 +139,8 @@ func set_current_hero(hero):
     self.set_hero_for_player(self.current_player, hero)
 
 func clear_hero_for_player(id):
+    if id == null:
+        return
     self.set_hero_for_player(id, null)
 
 func clear_current_hero():
