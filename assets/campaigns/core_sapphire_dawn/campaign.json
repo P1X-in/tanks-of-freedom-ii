@@ -107,9 +107,21 @@
         {
             "name" : "hostile_takeover",
             "title" : "Hostile takeover",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [615, 170]
+            "map" : "core_sap_dawn_hostile_takeover.tofmap.json",
+            "description" : "As Prince Tybalt reveals the mastermind behind the invasion, an unexpected guest arrives to crash the party.",
+            "marker" : [615, 170],
+            "players": [
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "green",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
         },
         {
             "name" : "pursuit_of_greatness",
