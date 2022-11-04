@@ -54,6 +54,14 @@ Biome: Temperate
 Capital: Amber Fortress
 Theme: _The sorrows of a crab_ by Reduz (soundtrack_5)
 
+### Obsidian Night (Team Black)
+A rebel group splintered from Amber Noon, led by Warlord Grim.
+
+Style: Feudal/Knights
+Biome: N/A
+Capital: None
+Theme: not selected yet
+
 
 ## Characters
 
@@ -103,6 +111,11 @@ For ToF3D we intend to have four sides to the conflict, with each having an npc 
     - ambitous
     - intimidating
 
+### Obsidian Night (Team Black)
+- The Warlord - Grim
+    - vengeful
+    - intimidating
+
 
 ## Story
 
@@ -142,11 +155,11 @@ Amber Noon Prince Tybalt visits Jade Twilight Chancelor Irene to ask for help, a
 #### Amber Noon Campaign
 Amber Noon Prince Tybalt with a handful of loyal forces trains against Jade Twilight Captain Claude, until he is strong enough.
 
-Prince Tybalt leads his forces against Sapphire Dawn, who allied themselves with Warlord Grim, as well as against Ruby Dusk standing in their way. He arrives with both his and allied Jade Twilight Forces at the outskirts of Amber Noon capital. It is being defended by Sapphire Dawn forces and Amber Noon troops loyal to Warlord Grim, as they defend it from Ruby Dusk. Both opponents are defeated and Prince Tybalt frees King Ludwig, ending the war.
+Prince Tybalt leads his forces against Sapphire Dawn, who allied themselves with Warlord Grim, as well as against Ruby Dusk standing in their way. He arrives with both his and allied Jade Twilight Forces at the outskirts of Amber Noon capital. It is being defended by Sapphire Dawn forces and ex-Amber Noon troops loyal to Warlord Grim, who are now Obsidian Night, as they defend it from Ruby Dusk. Ruby Dusk led by Noble Sidney, Jade Twilight led by Admiral Torsten as well as Sapphire Dawn led by Genral Cyrus help Prince Tybalt free King Ludwig, ending the war.
 
 #### Epilogue
 
-Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights frees him from his cell. He gathers his forces and fights through Jade Twilight forces stationed nearby to escape. He dissapears into the mountains to plot his revenge.
+Warlord Grim is imprisoned in the Amber Castle. A handful of his loyal knights frees him from his cell. He gathers his forces and fights through Amber Noon forces stationed nearby to escape. He dissapears into the mountains to plot his revenge.
 
 ### Missions
 
@@ -325,6 +338,9 @@ Each of the main campaigns should be about 10 mission long.
 To be designed.
 
 #### Amber Noon Campaign - Royal Blood
+To be designed.
+
+#### Epilogue
 To be designed.
 
 
