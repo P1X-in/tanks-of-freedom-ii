@@ -4,6 +4,7 @@ var where
 var template_name = null
 var side
 var rotation = 0
+var sound = false
 
 func _execute(_metadata):
     var tile = self.board.map.model.get_tile(self.where)
@@ -11,7 +12,9 @@ func _execute(_metadata):
 
     var new_unit = self.board.map.builder.force_place_unit(self.where, self.template_name, self.rotation, self.side)
     new_unit.replenish_moves()
-    new_unit.sfx_effect("spawn")  
+
+    if self.sound:
+        new_unit.sfx_effect("spawn")  
 
 func _ingest_details(details):
     self.where = Vector2(details['where'][0], details['where'][1])
@@ -19,3 +22,5 @@ func _ingest_details(details):
     self.side = details['side']
     if details.has('rotation'):
         self.rotation = details['rotation']
+    if details.has('sound'):
+        self.sound = details['sound']

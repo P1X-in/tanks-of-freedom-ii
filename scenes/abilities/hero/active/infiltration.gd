@@ -11,6 +11,9 @@ func _execute(board, position):
     board.smoke_a_tile(source_tile)
     board.smoke_a_tile(destination_tile)
 
+    board.cancel_ability()
+    board.select_tile(position)
+
     board.events.emit_unit_moved(destination_tile.unit.tile, source_tile, destination_tile)
 
 func is_tile_applicable(tile, _source_tile):
