@@ -6,6 +6,9 @@ var pause
 func _execute(_metadata):
     var tile = self.board.map.model.get_tile2(self.who[0], self.who[1])
 
+    if not tile.unit.is_present():
+        return
+
     if self.pause:
         tile.unit.tile.ai_paused = true
         tile.unit.tile.remove_moves()
