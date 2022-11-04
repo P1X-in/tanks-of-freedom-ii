@@ -126,9 +126,21 @@
         {
             "name" : "pursuit_of_greatness",
             "title" : "In pursuit of greatness",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [600, 230]
+            "map" : "core_sap_dawn_pursuit_of_great.tofmap.json",
+            "description" : "Just as Amber Noon Prince takes refuge in a Jade Twilight stronghold, Commando Blake plans to infiltrate it and capture Tybalt before he slips away.",
+            "marker" : [600, 230],
+            "players": [
+                {
+                    "side" : "blue",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "green",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
         }
     ]
 }
