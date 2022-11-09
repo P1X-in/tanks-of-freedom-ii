@@ -22,6 +22,7 @@ func _setup_basic_win_condition():
     self._build_hq_lost_event(self.board.map.templates.STEAMPUNK_HQ)
     self._build_hq_lost_event(self.board.map.templates.FUTURISTIC_HQ)
     self._build_hq_lost_event(self.board.map.templates.FEUDAL_HQ)
+    self.board.ui.objectives.set_objective_slot(0, "Capture enemy HQ")
 
 func _build_hq_lost_event(hq_type):
     var trigger = self.trigger_templates.get_trigger('building_lost')

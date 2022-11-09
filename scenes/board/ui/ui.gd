@@ -1,5 +1,6 @@
 extends Control
 
+# Panels
 onready var radial = $"radial/radial"
 onready var resource = $"resources/coin_view"
 onready var resource_label = $"resources/coin_view/label"
@@ -9,13 +10,16 @@ onready var start_turn = $"start_turn/start_turn"
 onready var story_dialog = $"story_dialog/story_dialog"
 onready var cinematic_bars = $"cinematic_bars/cinematic_bars"
 onready var unit_stats = $"unit_stats/unit_stats"
+onready var objectives = $"objectives/objectives"
 
+# Tile highlight
 onready var tile_highlight = $"tile_highlight/tile_view"
 onready var tile_highlight_level1 = $"tile_highlight/level1"
 onready var tile_highlight_level2 = $"tile_highlight/level2"
 onready var tile_highlight_level3 = $"tile_highlight/level3"
 onready var tile_highlight_unit_panel_hp = $"tile_highlight/tile_view/hp"
 
+# Tile highlight abilities
 onready var ab1 = $"tile_highlight/abilities/ab1"
 onready var ab1_anchor = $"tile_highlight/abilities/ab1/anchor"
 onready var ab1_name = $"tile_highlight/abilities/ab1/label"
@@ -214,3 +218,9 @@ func show_unit_stats(unit, tile_preview, board):
 
 func hide_unit_stats():
     self.unit_stats.hide()
+
+func show_objectives():
+    self.objectives.show()
+
+func hide_objectives():
+    self.objectives.hide()

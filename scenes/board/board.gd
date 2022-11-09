@@ -117,9 +117,9 @@ func set_up_map():
     self.map.hide_invisible_tiles()
 
 func set_up_board():
+    self.ui.objectives.clear()
     self.scripting.ingest_scripts(self, self.map.model.scripts)
     self.start_music_track()
-    self.setup_radial_menu()
 
     var index = 0
     for player_setup in self.match_setup.setup:
@@ -268,6 +268,7 @@ func toggle_radial_menu(context_object=null):
         self.setup_radial_menu(context_object)
     else:
         self.map.camera.force_stick_reset()
+        self.ui.hide_objectives()
 
     # this might look odd, but is_visible does not change until the next frame after show/hide
     if not self.map.camera.ai_operated:
@@ -290,6 +291,7 @@ func setup_radial_menu(context_object=null):
     if context_object == null:
         self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load game", 2)
         self.ui.radial.set_field(self.ui.icons.back.instance(), "Main menu", 6, self, "main_menu")
+        self.ui.show_objectives()
     else:
         self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/board/ui/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ui/radial/radial.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://scenes/ui/board/unit_stats.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/gui/editor/circle.png" type="Texture" id=13]
 [ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=14]
+[ext_resource path="res://scenes/ui/board/objectives.tscn" type="PackedScene" id=15]
 
 [node name="ui" type="Control"]
 anchor_right = 1.0
@@ -336,9 +337,20 @@ margin_left = -20.0
 margin_top = -20.0
 margin_right = 20.0
 margin_bottom = 20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="unit_stats" parent="unit_stats" instance=ExtResource( 12 )]
 visible = false
+
+[node name="objectives" type="MarginContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -40.0
+margin_bottom = 40.0
+
+[node name="objectives" parent="objectives" instance=ExtResource( 15 )]
+visible = false
+anchor_left = 0.0
+anchor_right = 0.0
+margin_left = 0.0
+margin_right = 40.0
+margin_bottom = 40.0

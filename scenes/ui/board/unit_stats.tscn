@@ -16,7 +16,6 @@ margin_right = 400.0
 margin_bottom = 200.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
@@ -63,7 +62,6 @@ text = "Infantry"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
@@ -289,7 +287,6 @@ text = "Heavy Weapon"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
