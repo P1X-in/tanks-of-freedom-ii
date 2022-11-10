@@ -260,6 +260,27 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Capture the Amber Noon buildings."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Noble Sidney must survive."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 2,
+                        "text": "(Optional) Defeat Prince Tybalt."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],

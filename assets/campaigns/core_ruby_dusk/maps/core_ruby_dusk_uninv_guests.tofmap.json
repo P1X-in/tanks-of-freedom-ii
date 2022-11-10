@@ -227,6 +227,27 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Capture the Sapphire Dawn HQ."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Gentleman Archibald must survive."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 2,
+                        "text": "(Optional) Support the far side Airfield."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -266,7 +287,8 @@
                     "action": "trigger",
                     "details": {
                         "name": "airfield_reinforcement",
-                        "suspended": false
+                        "suspended": false,
+                        "turns": 3
                     }
                 },
                 {

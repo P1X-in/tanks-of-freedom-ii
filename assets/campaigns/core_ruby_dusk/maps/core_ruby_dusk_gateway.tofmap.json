@@ -202,6 +202,20 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Capture the Amber Noon buildings."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Noble Sidney must survive."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -352,6 +366,13 @@
                         "portrait": "hero_noble",
                         "side": "right",
                         "text": "We can also use our helicopters to perform flanking attacks on enemy units trying to hold or cross the bridge. Any Tank will be a sitting duck."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 2,
+                        "text": "(Optional) Transport Infantry units for back attack."
                     }
                 },
                 {

@@ -97,6 +97,20 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Lord Dawson must survive."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Gentleman Archibald must survive."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -307,6 +321,20 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 2,
+                        "text": "Capture Towers along the way."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 3,
+                        "text": "(Optional) Defeat Commando Blake."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -321,6 +349,13 @@
                         "portrait": "hero_commando",
                         "side": "left",
                         "text": "You think you defeated me? This is but a flesh wound. I'll be back!"
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 3,
+                        "text": "(Done) Defeat Commando Blake."
                     }
                 },
                 {

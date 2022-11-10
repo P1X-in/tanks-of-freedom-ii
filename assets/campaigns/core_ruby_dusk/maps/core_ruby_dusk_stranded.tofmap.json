@@ -289,6 +289,20 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Bring Gentleman Archibald to the end of the road."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Gentleman Archibald must survive."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],

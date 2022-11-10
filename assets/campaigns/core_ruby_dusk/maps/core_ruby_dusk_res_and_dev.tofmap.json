@@ -319,6 +319,20 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Capture the Sapphire Dawn Airfields."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Gentleman Archibald must survive."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],

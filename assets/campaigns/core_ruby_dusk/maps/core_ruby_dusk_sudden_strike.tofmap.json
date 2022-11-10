@@ -249,6 +249,20 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Capture the Amber Noon HQ."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Noble Sidney must survive."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
