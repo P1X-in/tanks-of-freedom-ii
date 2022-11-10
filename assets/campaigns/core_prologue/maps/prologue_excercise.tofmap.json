@@ -106,6 +106,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Claim the enemy HQ."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -222,6 +229,13 @@
                         "portrait": "hero_warlord",
                         "side": "left",
                         "text": "Oh, and make use of these Tank and Mobile Infantry units, they may come in handy. Be careful though - if you lose them, they can not be replaced."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Claim the enemy HQ."
                     }
                 },
                 {
@@ -376,6 +390,20 @@
                         "portrait": "hero_warlord",
                         "side": "left",
                         "text": "Then get to it."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Claim the Ruby Dusk Tower."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Defend your HQ."
                     }
                 },
                 {
