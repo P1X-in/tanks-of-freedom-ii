@@ -91,6 +91,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Destroy enemy units."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],

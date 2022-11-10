@@ -110,6 +110,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Destroy enemy units."
+                    }
+                },
+                {
                     "action": "trigger",
                     "details": {
                         "name": "03_red_infantry_destroyed",
@@ -148,7 +155,7 @@
                         "name": "General Cyrus",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Levels are not just pure numbers. Each level brings some benefits."
+                        "text": "Levels are not just decorative stars. Each level brings some benefits."
                     }
                 },
                 {
@@ -220,6 +227,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Use special ability."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -265,7 +279,7 @@
                         "name": "General Cyrus",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Tank active ability is called a Long-range Shell. It allows your unit to hit an enemy target up to two tiles away. It can only shoot in a straight line, so make sure you line it up first. Long-range Shell deals 10 points of damage, minus target armour. Try it out."
+                        "text": "Tank active ability is called a Long-range Shell. It allows your unit to hit an enemy target up to two tiles away, even if there is something in the way. It can only shoot in a straight line, so make sure you line it up first. Long-range Shell deals 10 points of damage, minus target armour. Try it out."
                     }
                 },
                 {

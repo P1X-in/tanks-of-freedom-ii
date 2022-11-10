@@ -113,6 +113,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Destroy Infantry using Rocket Artillery."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -126,7 +133,7 @@
                         "name": "General Cyrus",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Good. Now open the ability radial of your Artillery unit again. You will notice, that turns left to cool down the ability is 1 instead of 2. You can end your turn, reposition your Artillery and strike again."
+                        "text": "Good. Now open the ability radial of your Artillery unit again. You will notice, that turns left to cool down the ability is 1 instead of usual 2. You can end your turn, reposition your Artillery and strike again."
                     }
                 },
                 {
@@ -136,6 +143,13 @@
                         "portrait": "hero_general",
                         "side": "left",
                         "text": "In the meantime, a field on the other side of the forest opened up. Move Blake there using his active ability Infiltration. If you already used his active ability, just wait a few turns for it to cool down."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Use Blake's ability to bypass Forest."
                     }
                 },
                 {
@@ -161,7 +175,7 @@
                         "name": "General Cyrus",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Remember, that different Heroes have different abilities. Some of them will target specific units or tiles. Some of them might target Heros themselves in order to be used, like the ones that give benefits to units in certain radius around the Hero."
+                        "text": "Remember, that different Heroes have different abilities. Some of them will target specific units or tiles. Some of them might target Heroes themselves in order to be used, like the ones that give benefits to units in certain radius around the Hero."
                     }
                 },
                 {
@@ -184,12 +198,26 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Destroy enemy unit."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
             "guard_destroyed": [
                 {
                     "action": "lock"
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "04_blake_moved",
+                        "suspended": true
+                    }
                 },
                 {
                     "action": "message",
@@ -247,15 +275,14 @@
                         "text": "Yes Sir!"
                     }
                 },
-                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}},
-                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 25, "y2": 27}]}, "delay" : 1},
+                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 27}]}, "delay" : 1},
                 {
                     "action": "message",
                     "details": {
                         "name": "General Cyrus",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "On some missions, the hero will be there from the beggining, and loosing one might fail your missions. But in a typical skirmish, you will have to deploy your Heroes from your HQ building."
+                        "text": "On most missions, the hero will be there from the beggining, and loosing one might fail your missions. But in a typical skirmish, you will have to deploy your Hero from your HQ building."
                     }
                 },
                 {
@@ -265,6 +292,13 @@
                         "portrait": "hero_general",
                         "side": "left",
                         "text": "Time for me to stretch my legs. Go ahead and deploy me from this HQ."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Deploy General from HQ."
                     }
                 },
                 {
@@ -282,6 +316,13 @@
                         "portrait": "hero_general",
                         "side": "left",
                         "text": "With me on the battlefield, thanks to my Recruitment passive ability, all Infantry and Mobile Infantry units can be deployed for 10AP less. This effect applies both to HQ and Barracks. Go on and deploy an Infantry unit from HQ - you should notice, that it only costs 30AP instead of typical 40AP."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Deploy Infantry unit from HQ."
                     }
                 },
                 {
@@ -336,6 +377,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Deploy an Infantry unit using General's ability."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -361,6 +409,7 @@
                         "text": "Every Nation has thier own, unique Heroes, with their own unique abilities, so be on your guard, as you never know what will happen, when one of them shows up."
                     }
                 },
+                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}},
                 {
                     "action": "camera",
                     "details": {
@@ -368,10 +417,9 @@
                             20,
                             20
                         ],
-                        "zoom": 0.0
+                        "zoom": 0.3
                     }
                 },
-                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}},
                 {
                     "action": "message",
                     "details": {

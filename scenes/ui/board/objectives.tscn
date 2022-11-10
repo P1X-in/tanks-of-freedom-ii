@@ -21,7 +21,7 @@ mouse_filter = 1
 [node name="obj1" type="Label" parent="objective_wrapper"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -500.0
+margin_left = -1000.0
 margin_bottom = 30.0
 text = "Lorem Ipsum"
 align = 2
@@ -30,7 +30,7 @@ valign = 1
 [node name="obj2" type="Label" parent="objective_wrapper"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -500.0
+margin_left = -1000.0
 margin_top = 30.0
 margin_bottom = 60.0
 text = "Lorem Ipsum"
@@ -40,7 +40,7 @@ valign = 1
 [node name="obj3" type="Label" parent="objective_wrapper"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -500.0
+margin_left = -1000.0
 margin_top = 60.0
 margin_bottom = 90.0
 text = "Lorem Ipsum"
@@ -50,7 +50,7 @@ valign = 1
 [node name="obj4" type="Label" parent="objective_wrapper"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -500.0
+margin_left = -1000.0
 margin_top = 90.0
 margin_bottom = 120.0
 text = "Lorem Ipsum"

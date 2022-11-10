@@ -72,6 +72,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Recruit a new unit."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -123,6 +130,13 @@
                         "portrait": "hero_general",
                         "side": "left",
                         "text": "When you are ready, with your Infantry unit selected, click on that building to proceed."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Capture Barracks."
                     }
                 },
                 {
@@ -224,6 +238,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Claim the Tower building."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -287,6 +308,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Approach enemy unit."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -338,6 +366,22 @@
                     }
                 },
                 {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "If at any point in the game you don't know what is your goal, opening the menu will show you your current list of objectives."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Move unit to the building."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -361,6 +405,13 @@
                         "portrait": "hero_general",
                         "side": "left",
                         "text": "Infantry is in position to strike. Just like with claiming a building, select your unit, and you will see an attack marker on the enemy, only this time it will be red instead of blue. With your Infantry selected, click on the enemy unit to order an attack."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Defeat enemy unit."
                     }
                 },
                 {
@@ -467,6 +518,13 @@
                         "portrait": "hero_general",
                         "side": "left",
                         "text": "In this training scenario you do not have an HQ of your own, so you don't have to worry about it being taken. But your enemy does have one! Go ahead and capture it to complete this training mission."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Claim enemy HQ."
                     }
                 },
                 {
