@@ -298,6 +298,27 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Capture the Jade Twilight buildings."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "General Cyrus must survive."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 2,
+                        "text": "(Optional) Capture the Jade Twilight Airfield."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],

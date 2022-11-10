@@ -335,6 +335,27 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Capture the Towers along the highway."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Defend Sapphire Dawn HQ."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 2,
+                        "text": "General Cyrus must survive."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -1284,6 +1305,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Hold the Towers along the highway for 5 turns."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -1312,6 +1340,13 @@
                     "details": {
                         "name": "tower_lost",
                         "suspended": true
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Capture the Towers along the highway."
                     }
                 },
                 {

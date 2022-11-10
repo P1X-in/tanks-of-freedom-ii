@@ -276,6 +276,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Recruit Infantry units."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -357,6 +364,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Recruit Mobile Infantry units."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -409,6 +423,13 @@
                             20
                         ],
                         "ban": false
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Deploy more Tanks."
                     }
                 },
                 {
@@ -661,6 +682,20 @@
                             22,
                             23
                         ]
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Capture the Ruby Dusk HQ."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "General Cyrus must survive."
                     }
                 },
                 {

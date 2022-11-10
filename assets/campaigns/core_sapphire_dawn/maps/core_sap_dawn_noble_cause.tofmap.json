@@ -196,6 +196,34 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Establish Base in Sapphire Dawn camp."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Capture the Ruby Dusk HQ."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 2,
+                        "text": "General Cyrus must survive."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 3,
+                        "text": "(Optional) Capture the Ruby Dusk forward Camp."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -542,6 +570,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 3,
+                        "text": "(Optional) Defeat Noble Sidney."
+                    }
+                },
+                {
                     "action": "unlock"
                 },
             ],
@@ -565,6 +600,13 @@
                         "portrait": "hero_general",
                         "side": "right",
                         "text": "What are you even talking about? Bring him in for questioning."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 3,
+                        "text": "(Done) Defeat Noble Sidney."
                     }
                 },
                 {

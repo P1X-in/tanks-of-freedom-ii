@@ -245,6 +245,34 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Rescue Sapphire Dawn forces."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Defeat Ruby Dusk forces."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 2,
+                        "text": "General Cyrus must survive."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 3,
+                        "text": "(Optional) Rescue advanced units."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],

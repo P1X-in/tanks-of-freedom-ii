@@ -461,6 +461,20 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Bring Commando Blake to the end of the road."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Commando Blake must survive."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],

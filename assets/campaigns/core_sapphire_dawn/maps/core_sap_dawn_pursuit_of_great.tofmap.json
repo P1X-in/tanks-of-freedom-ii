@@ -225,6 +225,34 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Infiltrate Jade Twilight base."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 1,
+                        "text": "Defend Sapphire Dawn camp."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 2,
+                        "text": "Commando Blake must survive."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 3,
+                        "text": "(Optional) Do not raise an alarm."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -669,6 +697,13 @@
                     }
                 },
                 {
+                    "action": "objective",
+                    "details": {
+                        "slot": 3,
+                        "text": "(Failed) Do not raise an alarm."
+                    }
+                },
+                {
                     "action": "unlock"
                 }
             ],
@@ -739,6 +774,13 @@
                         "portrait": "hero_commando",
                         "side": "right",
                         "text": "Almost there. All I have to do is to approach the target and grab him!"
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Capture Prince Tybalt."
                     }
                 },
                 {
