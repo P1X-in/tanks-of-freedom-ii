@@ -17,9 +17,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 4 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="logo" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -78,7 +75,6 @@ __meta__ = {
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_bottom = 40.0
-rect_scale = Vector2( 1, 1 )
 
 [node name="settings" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -98,7 +94,6 @@ __meta__ = {
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_bottom = 40.0
-rect_scale = Vector2( 1, 1 )
 
 [node name="controls" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -115,7 +110,6 @@ __meta__ = {
 }
 
 [node name="controls" parent="controls" instance=ExtResource( 11 )]
-visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_bottom = 40.0
@@ -137,7 +131,6 @@ anchor_bottom = 0.0
 margin_left = 0.0
 margin_right = 0.0
 margin_bottom = 40.0
-rect_scale = Vector2( 1, 1 )
 
 [node name="campaign_mission_selection" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -154,7 +147,6 @@ __meta__ = {
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_bottom = 40.0
-rect_scale = Vector2( 1, 1 )
 
 [node name="campaign_mission" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -168,7 +160,17 @@ __meta__ = {
 }
 
 [node name="campaign_mission" parent="campaign_mission" instance=ExtResource( 10 )]
-visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_bottom = 40.0
+
+[node name="version" type="MarginContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -40.0
+margin_right = 50.0
+
+[node name="version" type="Label" parent="version"]
+margin_right = 1000.0
+margin_bottom = 19.0

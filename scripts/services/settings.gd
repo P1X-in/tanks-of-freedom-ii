@@ -4,8 +4,11 @@ const SETTINGS_FILE_PATH = "user://settings.json"
 
 onready var audio = $"/root/SimpleAudioLibrary"
 var filesystem = preload("res://scripts/services/filesystem.gd").new()
+var os_string = ""
 
 var settings = {
+    "steamdeck_detection": false,
+    "is_steamdeck": false,
     "fullscreen" : true,
     "vol_master" : 10,
     "vol_sfx" : 8,
@@ -18,10 +21,16 @@ var settings = {
     "shadows" : true,
     "decorations" : true,
     "dec_shadows" : true,
+    "msaa": 0.0,
+    "fxaa": false,
+    "vsync": false,
+    "fps": 144.0,
+    "ips": 144.0,
 }
 
 
 func _ready():
+    self._detect_steam_deck()
     self.load_settings_from_file()
 
 func save_settings_to_file():
@@ -65,6 +74,16 @@ func _apply_option(key):
     elif key == "vol_music":
         self._set_bus_vol("Music", key)
         self.set_option("music", self.settings[key] > 0)
+    elif key == "msaa":
+        get_viewport().set_msaa(self._get_msaa(self.settings[key]))
+    elif key == "fxaa":
+        get_viewport().set_use_fxaa(self.settings[key])
+    elif key == "vsync":
+        OS.set_use_vsync(self.settings[key])
+    elif key == "fps":
+        Engine.set_target_fps(self.settings[key])
+    elif key == "ips":
+        Engine.set_iterations_per_second(self.settings[key])
 
 func _set_bus_vol(name, key):
     var decibels = self._get_decibels(self.settings[key])
@@ -93,3 +112,44 @@ func _get_decibels(value):
         return -54
     elif value == 0:
         return -80
+
+func _get_msaa(value):
+    if value == 0:
+        return 0
+    elif value == 2:
+        return 1
+    elif value == 4:
+        return 2
+    elif value == 8:
+        return 3
+    elif value == 16:
+        return 4
+
+func _detect_steam_deck():
+    if self.settings["steamdeck_detection"]:
+        return
+
+    self.settings["steamdeck_detection"] = true
+    
+    if OS.get_name() == "X11":
+        var output = []
+        var exit_code = OS.execute("lsb_release", ["-si"], true, output)
+        
+        if exit_code == 0 and output.size() > 0 and output[0].strip_edges() == "SteamOS":
+            self.settings["is_steamdeck"] = true
+            self._apply_steam_deck_settings()
+
+func _apply_steam_deck_settings():
+    self.settings["fullscreen"] = true
+    self.settings["def_cam_st"] = "FREE"
+    self.settings["shadows"] = false
+    self.settings["decorations"] = true
+    self.settings["dec_shadows"] = false
+    self.settings["msaa"] = 0.0
+    self.settings["fxaa"] = false
+    self.settings["vsync"] = false
+    self.settings["fps"] = 30.0
+    self.settings["ips"] = 60.0
+
+    if not self.filesystem.file_exists(self.SETTINGS_FILE_PATH):
+        self.save_settings_to_file()

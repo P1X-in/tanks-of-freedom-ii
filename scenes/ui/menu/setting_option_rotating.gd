@@ -20,7 +20,10 @@ func _read_setting():
     
     for known_value in self.available_values:
         if value == known_value:
-            self.button.set_text(known_value)
+            if known_value is String:
+                self.button.set_text(known_value)
+            else:
+                self.button.set_text(str(known_value))
             return
 
     self.button.set_text("???")

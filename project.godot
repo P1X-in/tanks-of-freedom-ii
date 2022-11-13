@@ -37,7 +37,6 @@ Campaign="*res://scripts/services/campaign.gd"
 [debug]
 
 settings/fps/force_fps=144
-settings/stdout/print_fps=true
 
 [display]
 
@@ -171,6 +170,7 @@ ssl/certificates="res://assets/dst.crt"
 [physics]
 
 common/physics_fps=144
+3d/active_soft_world=false
 
 [rendering]
 

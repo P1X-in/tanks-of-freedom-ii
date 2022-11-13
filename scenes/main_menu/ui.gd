@@ -19,6 +19,8 @@ func bind_menu(main_menu):
     self.campaign_mission_selection.bind_menu(main_menu)
     self.campaign_mission.bind_menu(main_menu)
 
+    self.set_version(self.settings.settings.os_string)
+
 func hide_menu():
     self.menu.hide_panel()
     #self.logo.hide()
@@ -73,3 +75,6 @@ func show_campaign_mission(campaign_name, mission_no):
 
 func hide_campaign_mission():
     self.campaign_mission.hide_panel()
+
+func set_version(value):
+    $"version/version".set_text(value)

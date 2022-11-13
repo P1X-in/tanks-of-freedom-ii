@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/ui/menu/settings.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scenes/ui/menu/settings_camera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/ui/menu/settings_video.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ui/menu/settings_audio.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/ui/menu/settings_graphics.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -153,10 +154,20 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="audio" type="Button" parent="widgets/tabs"]
+[node name="graphics" type="Button" parent="widgets/tabs"]
 margin_top = 50.0
 margin_right = 100.0
 margin_bottom = 80.0
+custom_fonts/font = ExtResource( 2 )
+text = "Graphics"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="audio" type="Button" parent="widgets/tabs"]
+margin_top = 100.0
+margin_right = 100.0
+margin_bottom = 130.0
 custom_fonts/font = ExtResource( 2 )
 text = "Audio"
 __meta__ = {
@@ -164,9 +175,9 @@ __meta__ = {
 }
 
 [node name="camera" type="Button" parent="widgets/tabs"]
-margin_top = 100.0
+margin_top = 150.0
 margin_right = 100.0
-margin_bottom = 130.0
+margin_bottom = 180.0
 custom_fonts/font = ExtResource( 2 )
 text = "Camera"
 __meta__ = {
@@ -184,6 +195,9 @@ margin_bottom = 300.0
 visible = false
 
 [node name="settings_camera" parent="widgets/boxes" instance=ExtResource( 3 )]
+visible = false
+
+[node name="settings_graphics" parent="widgets/boxes" instance=ExtResource( 6 )]
 visible = false
 
 [node name="back_button" type="Button" parent="widgets"]
@@ -232,6 +246,8 @@ __meta__ = {
 
 [connection signal="focus_entered" from="widgets/tabs/video" to="." method="hide_help"]
 [connection signal="pressed" from="widgets/tabs/video" to="." method="_on_video_pressed"]
+[connection signal="focus_entered" from="widgets/tabs/graphics" to="." method="hide_help"]
+[connection signal="pressed" from="widgets/tabs/graphics" to="." method="_on_graphics_pressed"]
 [connection signal="focus_entered" from="widgets/tabs/audio" to="." method="hide_help"]
 [connection signal="pressed" from="widgets/tabs/audio" to="." method="_on_audio_pressed"]
 [connection signal="focus_entered" from="widgets/tabs/camera" to="." method="hide_help"]

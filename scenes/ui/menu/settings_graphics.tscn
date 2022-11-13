@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/ui/menu/setting_option.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/ui/menu/setting_option_rotating.tscn" type="PackedScene" id=2]
+
+[node name="settings_graphics" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -780.0
+margin_bottom = -500.0
+
+[node name="msaa" parent="." instance=ExtResource( 2 )]
+option_name = "MSAA"
+option_key = "msaa"
+help_tip = "Anti-aliasing intensity for smoother edges."
+available_values = [ 0.0, 2.0, 4.0, 8.0, 16.0 ]
+
+[node name="fxaa" parent="." instance=ExtResource( 1 )]
+margin_top = 85.0
+margin_bottom = 135.0
+option_name = "FXAA"
+option_key = "fxaa"
+help_tip = "Fast anti-aliasing method. Can look blurry."
+
+[node name="vsync" parent="." instance=ExtResource( 1 )]
+margin_top = 150.0
+margin_bottom = 200.0
+option_name = "V-Sync"
+option_key = "vsync"
+help_tip = "Vertical syncronisation. Prevents screen tearing."
+
+[node name="fps" parent="." instance=ExtResource( 2 )]
+margin_top = 215.0
+margin_bottom = 265.0
+option_name = "FPS limit"
+option_key = "fps"
+help_tip = "Limit for rendering FPS"
+available_values = [ 30.0, 60.0, 120.0, 144.0 ]
+
+[node name="ips" parent="." instance=ExtResource( 2 )]
+margin_top = 280.0
+margin_bottom = 330.0
+option_name = "Input FPS"
+option_key = "ips"
+help_tip = "Input frequency. Higher value makes controls smoother, but consumes more CPU."
+available_values = [ 30.0, 60.0, 120.0, 144.0 ]

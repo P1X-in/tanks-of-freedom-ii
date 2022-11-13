@@ -6,11 +6,13 @@ onready var settings = $"/root/Settings"
 onready var animations = $"animations"
 
 onready var video_button = $"widgets/tabs/video"
+onready var graphics_button = $"widgets/tabs/graphics"
 onready var audio_button = $"widgets/tabs/audio"
 onready var camera_button = $"widgets/tabs/camera"
 onready var back_button = $"widgets/back_button"
 
 onready var video_panel = $"widgets/boxes/settings_video"
+onready var graphics_panel = $"widgets/boxes/settings_graphics"
 onready var audio_panel = $"widgets/boxes/settings_audio"
 onready var camera_panel = $"widgets/boxes/settings_camera"
 
@@ -37,6 +39,7 @@ func _on_back_button_pressed():
 func show_panel():
     self.hide_help()
     self.video_panel.show()
+    self.graphics_panel.hide()
     self.audio_panel.hide()
     self.camera_panel.hide()
     self.animations.play("show")
@@ -51,18 +54,28 @@ func hide_panel():
 
 func _on_video_pressed():
     self.video_panel.show()
+    self.graphics_panel.hide()
+    self.audio_panel.hide()
+    self.camera_panel.hide()
+    self.audio.play("menu_click")
+
+func _on_graphics_pressed():
+    self.video_panel.hide()
+    self.graphics_panel.show()
     self.audio_panel.hide()
     self.camera_panel.hide()
     self.audio.play("menu_click")
 
 func _on_audio_pressed():
     self.video_panel.hide()
+    self.graphics_panel.hide()
     self.audio_panel.show()
     self.camera_panel.hide()
     self.audio.play("menu_click")
 
 func _on_camera_pressed():
     self.video_panel.hide()
+    self.graphics_panel.hide()
     self.audio_panel.hide()
     self.camera_panel.show()
     self.audio.play("menu_click")
