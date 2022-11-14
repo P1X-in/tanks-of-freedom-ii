@@ -29,21 +29,33 @@ func _ready():
 func _input(event):
     if event.is_action_pressed("ui_cancel") or event.is_action_pressed('editor_menu'):
         self._on_back_button_pressed()
+    if event.is_action_pressed("rotate_cw"):
+        self._on_next_button_pressed(false)
+        self.select_button.grab_focus()
+    if event.is_action_pressed("rotate_ccw"):
+        self._on_prev_button_pressed(false)
+        self.select_button.grab_focus()
 
 func _on_back_button_pressed():
     self.audio.play("menu_back")
     self.main_menu.close_campaign_mission_selection()
 
-func _on_prev_button_pressed():
+func _on_prev_button_pressed(do_grab=true):
+    if self._is_first_mission():
+        return
+
     self.audio.play("menu_click")
     self._select_marker(self.selected_mission - 1)
-    if self._is_first_mission():
+    if do_grab and self._is_first_mission():
         self.next_button.grab_focus()
 
-func _on_next_button_pressed():
+func _on_next_button_pressed(do_grab=true):
+    if self._is_last_mission():
+        return
+
     self.audio.play("menu_click")
     self._select_marker(self.selected_mission + 1)
-    if self._is_last_mission():
+    if do_grab and self._is_last_mission():
         self.prev_button.grab_focus()
 
 func _on_select_button_pressed():

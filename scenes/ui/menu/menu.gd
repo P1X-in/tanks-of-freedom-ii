@@ -16,7 +16,12 @@ var main_menu
 var recent_button_used = null
 
 func _ready():
+    self.set_process_input(true)
     self.campaign_button.grab_focus()
+
+func _input(event):
+    if event.is_action_pressed("ui_cancel"):
+        self.quit_button.grab_focus()
 
 func bind_menu(menu):
     self.main_menu = menu
@@ -52,6 +57,7 @@ func _on_quit_button_pressed():
 
 func show_panel():
     self.animations.play("show")
+    self.set_process_input(true)
     yield(self.get_tree().create_timer(0.1), "timeout")
 
     if self.recent_button_used != null:
@@ -60,4 +66,5 @@ func show_panel():
         self.campaign_button.grab_focus()
 
 func hide_panel():
+    self.set_process_input(false)
     self.animations.play("hide")

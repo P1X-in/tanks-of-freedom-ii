@@ -37,18 +37,28 @@ func _ready():
 func _input(event):
     if event.is_action_pressed("ui_cancel") or event.is_action_pressed('editor_menu'):
         self._on_back_button_pressed()
+    if event.is_action_pressed("rotate_cw"):
+        self._on_next_button_pressed()
+    if event.is_action_pressed("rotate_ccw"):
+        self._on_prev_button_pressed()
 
 func _on_back_button_pressed():
     self.audio.play("menu_back")
     self.main_menu.close_campaign_selection()
 
 func _on_prev_button_pressed():
+    if self._is_first_page():
+        return
+
     self.audio.play("menu_click")
     self._switch_to_page(self.page - 1)
     if self._is_first_page():
         self.campaign_tiles[0].focus_tile()
 
 func _on_next_button_pressed():
+    if self._is_last_page():
+        return
+        
     self.audio.play("menu_click")
     self._switch_to_page(self.page + 1)
     if self._is_last_page():

@@ -52,6 +52,14 @@ func _ready():
 func _input(event):
     if event.is_action_pressed("ui_cancel") or event.is_action_pressed('editor_menu'):
         self.execute_cancel()
+    if event.is_action_pressed("rotate_cw"):
+        self.switch_to_next_page()
+        if self.map_selection_buttons[0].is_visible():
+            self.map_selection_buttons[0].grab_focus()
+    if event.is_action_pressed("rotate_ccw"):
+        self.switch_to_prev_page()
+        if self.map_selection_buttons[0].is_visible():
+            self.map_selection_buttons[0].grab_focus()
 
 func set_name_mode():
     self.operation_mode = self.MODE_NAME

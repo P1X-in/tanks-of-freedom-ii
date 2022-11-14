@@ -18,6 +18,7 @@ var device_id = 0
 
 
 var enabled = false
+var ticks = 0
 
 func _ready():
     self.disable()
@@ -62,6 +63,7 @@ func _physics_process(delta):
             self.handle_direction(self.UI_UP)
     else:
         self.increment_directions(self.BUTTON_INTERVAL)
+        self.ticks = 0
         
 
 func increment_directions(delta):
@@ -75,11 +77,15 @@ func handle_direction(direction):
         self.emit_event(direction, false)
         return
 
-    if self.state[direction]["delay"] > self.BUTTON_INTERVAL:
+    var step_delay = self.BUTTON_INTERVAL
+    if self.ticks > 1:
+        step_delay = step_delay / 2
+    if self.state[direction]["delay"] > step_delay:
         self.state[direction]["pressed"] = true
         self.state[direction]["delay"] = 0
         
         self.emit_event(direction, true)
+        self.ticks += 1
 
 func emit_event(direction, pressed):
     if pressed:
