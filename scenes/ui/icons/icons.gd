@@ -1,6 +1,8 @@
 
 var disk = preload("res://scenes/ui/icons/disk.tscn")
+var quicksave = preload("res://scenes/ui/icons/quicksave.tscn")
 var back = preload("res://scenes/ui/icons/back.tscn")
+var quit = preload("res://scenes/ui/icons/quit.tscn")
 var trash = preload("res://scenes/ui/icons/trash.tscn")
 var tick = preload("res://scenes/ui/icons/tick.tscn")
 var star = preload("res://scenes/ui/icons/star.tscn")
@@ -35,7 +37,9 @@ var yellow_gem = preload("res://scenes/ui/icons/nations/yellow.tscn")
 
 var named_icons = {
     "disk" : self.disk,
+    "quicksave" : self.quicksave,
     "back" : self.back,
+    "quit" : self.quit,
     "trash" : self.trash,
     "tick" : self.tick,
     "star" : self.star,
