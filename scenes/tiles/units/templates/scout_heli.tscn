@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/abilities/unit/rapid_response.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=2]
@@ -8,16 +8,22 @@
 [ext_resource path="res://assets/units/audio/helicopter_die.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/units/audio/soldier_attack.wav" type="AudioStream" id=7]
 [ext_resource path="res://assets/units/audio/soldier_hit.wav" type="AudioStream" id=8]
+[ext_resource path="res://scenes/tiles/units/templates/scout_heli.gd" type="Script" id=9]
 
 [node name="scout" instance=ExtResource( 2 )]
+script = ExtResource( 9 )
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
 unit_name = "Scout Helicopter"
+side = "neutral"
 material_type = "metallic"
+max_hp = 10
 max_move = 9
 attack = 5
 armor = 1
+can_capture = false
 can_fly = true
+max_attacks = 1
 uses_metallic_material = true
 unit_value = 50
 unit_class = "scout"
@@ -30,6 +36,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 
 [node name="rapid_response" parent="." index="4" instance=ExtResource( 1 )]
 index = 2
+ability_range = 0
 
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource( 5 )

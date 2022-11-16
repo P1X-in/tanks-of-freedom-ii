@@ -1,7 +1,5 @@
 extends "res://scenes/tiles/units/unit.gd"
 
-var passenger = null
-
 func disable_shadow():
     .disable_shadow()
 
