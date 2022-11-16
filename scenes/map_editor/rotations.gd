@@ -65,6 +65,8 @@ func build_rotations(templates, builder):
 		templates.FRAME_RIVER2,
 		templates.FRAME_RIVER3,
 		templates.FRAME_RIVER4,
+		templates.FRAME_RIVER5,
+		templates.FRAME_RIVER6,
 		templates.FRAME_ROAD1,
 		templates.FRAME_ROAD2,
 		templates.FRAME_ROAD3,

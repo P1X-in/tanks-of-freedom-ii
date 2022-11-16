@@ -57,6 +57,8 @@ const FRAME_RIVER1 = "frame_river1"
 const FRAME_RIVER2 = "frame_river2"
 const FRAME_RIVER3 = "frame_river3"
 const FRAME_RIVER4 = "frame_river4"
+const FRAME_RIVER5 = "frame_river5"
+const FRAME_RIVER6 = "frame_river6"
 const FRAME_ROAD1 = "frame_road1"
 const FRAME_ROAD2 = "frame_road2"
 const FRAME_ROAD3 = "frame_road3"
@@ -321,6 +323,8 @@ var templates = {
     self.FRAME_RIVER2 : preload("res://scenes/tiles/frames/river_plants_2_overtile.tscn"),
     self.FRAME_RIVER3 : preload("res://scenes/tiles/frames/river_plants_3_overtile.tscn"),
     self.FRAME_RIVER4 : preload("res://scenes/tiles/frames/river_plants_4_overtile.tscn"),
+    self.FRAME_RIVER5 : preload("res://scenes/tiles/frames/river_plants_5_overtile.tscn"),
+    self.FRAME_RIVER6 : preload("res://scenes/tiles/frames/river_plants_6_overtile.tscn"),
     self.FRAME_ROAD1 : preload("res://scenes/tiles/frames/road_1_overtile.tscn"),
     self.FRAME_ROAD2 : preload("res://scenes/tiles/frames/road_2_overtile.tscn"),
     self.FRAME_ROAD3 : preload("res://scenes/tiles/frames/road_3_overtile.tscn"),
