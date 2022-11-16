@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hero_standard.obj-0005363c46b58b924013827fa5205e1c.mesh"
+
+[deps]
+
+files=[ "res://.import/hero_standard.obj-0005363c46b58b924013827fa5205e1c.mesh" ]
+
+source_file="res://assets/units/heroes/hero_standard.obj"
+dest_files=[ "res://.import/hero_standard.obj-0005363c46b58b924013827fa5205e1c.mesh", "res://.import/hero_standard.obj-0005363c46b58b924013827fa5205e1c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

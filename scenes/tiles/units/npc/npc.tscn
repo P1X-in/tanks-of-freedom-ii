@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/tiles/units/npc/npc.gd" type="Script" id=2]
@@ -7,16 +7,29 @@
 [ext_resource path="res://assets/units/audio/soldier_spawn.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/units/audio/soldier_attack.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/units/audio/soldier_damage.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/units/heroes/hero_standard.obj" type="ArrayMesh" id=8]
 
 [node name="npc" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 main_tile_view_cam_modifier = -16
 side_tile_view_cam_modifier = -35
 tile_view_height_cam_modifier = -0.5
+unit_name = ""
+side = "neutral"
+material_type = "normal"
 max_hp = 15
+max_move = 4
 attack = 0
+armor = 2
+can_capture = false
+can_fly = false
 max_attacks = 0
+uses_metallic_material = false
+unit_value = 0
 unit_class = "npc"
+
+[node name="standard" type="MeshInstance" parent="mesh_anchor" index="1"]
+mesh = ExtResource( 8 )
 
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource( 5 )
@@ -27,8 +40,8 @@ stream = ExtResource( 4 )
 [node name="attack" parent="audio" index="2"]
 stream = ExtResource( 6 )
 
-[node name="damage" parent="audio" index="3"]
+[node name="damage" parent="audio" index="4"]
 stream = ExtResource( 7 )
 
-[node name="die" parent="audio" index="4"]
+[node name="die" parent="audio" index="5"]
 stream = ExtResource( 3 )
