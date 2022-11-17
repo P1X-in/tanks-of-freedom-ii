@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arrow_right.png-522128b80ac61e677a26fa4a71f20277.stex"
+path="res://.import/medal.png-87ccc9d026b9fd57275ee50b39397757.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gui/icons/arrow_right.png"
-dest_files=[ "res://.import/arrow_right.png-522128b80ac61e677a26fa4a71f20277.stex" ]
+source_file="res://assets/gui/icons/medal.png"
+dest_files=[ "res://.import/medal.png-87ccc9d026b9fd57275ee50b39397757.stex" ]
 
 [params]
 

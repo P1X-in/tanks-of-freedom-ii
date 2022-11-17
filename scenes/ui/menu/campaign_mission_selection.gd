@@ -8,6 +8,7 @@ onready var back_button = $"widgets/back_button"
 onready var select_button = $"widgets/select_button"
 onready var prev_button = $"widgets/prev_button"
 onready var next_button = $"widgets/next_button"
+onready var medal = $"widgets/medal"
 
 onready var title = $"widgets/title"
 onready var mission_anchor = $"widgets/missions_anchor"
@@ -83,6 +84,11 @@ func load_campaign(campaign_name):
     self.title.set_text(manifest["title"])
     self._add_mission_markers(manifest["missions"])
     self._select_latest_mission()
+
+    if self.campaign.is_campaign_complete(manifest["name"]):
+        self.medal.show()
+    else:
+        self.medal.hide()
 
 func _add_mission_markers(missions):
     var index = 1

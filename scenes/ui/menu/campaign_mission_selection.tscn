@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/ui/menu/campaign_mission_selection.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/ui/icons/arrow_left.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ui/icons/arrow_right.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=6]
+[ext_resource path="res://scenes/ui/icons/medal.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -119,9 +120,6 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="background" type="ColorRect" parent="."]
 margin_left = -600.0
@@ -234,6 +232,12 @@ custom_fonts/font = ExtResource( 6 )
 text = "Campaign Title"
 align = 1
 valign = 1
+
+[node name="medal" parent="widgets" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 40, 60 )
+scale = Vector2( 2, 2 )
+offset = Vector2( 60, 53 )
 
 [node name="animations" type="AnimationPlayer" parent="."]
 playback_speed = 4.0
