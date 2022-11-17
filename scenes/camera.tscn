@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://default_env.tres" type="Environment" id=1]
 [ext_resource path="res://scenes/camera.gd" type="Script" id=2]
 [ext_resource path="res://assets/gui/markers/pointer.tscn" type="PackedScene" id=3]
 
@@ -21,7 +20,6 @@ transform = Transform( 1, 0, 0, 0, 0.819152, 0.573577, 0, -0.573577, 0.819152, 0
 
 [node name="lens" type="Camera" parent="pivot/arm"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30 )
-environment = ExtResource( 1 )
 current = true
 fov = 50.0
 size = 65.0
