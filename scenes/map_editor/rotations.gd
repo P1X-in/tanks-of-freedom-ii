@@ -252,6 +252,7 @@ func build_rotations(templates, builder):
 		templates.PLAYER_RED,
 		templates.PLAYER_GREEN,
 		templates.PLAYER_YELLOW,
+		templates.PLAYER_BLACK,
 	])
 
 

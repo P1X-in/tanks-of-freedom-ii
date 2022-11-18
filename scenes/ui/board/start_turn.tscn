@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scenes/ui/board/start_turn.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/ui/icons/nations/yellow.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ui/icons/nations/green.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/ui/icons/nations/red.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/ui/icons/nations/black.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -158,6 +159,24 @@ __meta__ = {
 }
 
 [node name="green" parent="background/green_player" instance=ExtResource( 5 )]
+position = Vector2( 200, -40 )
+
+[node name="black_player" type="Label" parent="background"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 85.0
+margin_bottom = -45.0
+custom_fonts/font = ExtResource( 1 )
+text = "Obsidian Night"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="black" parent="background/black_player" instance=ExtResource( 7 )]
 position = Vector2( 200, -40 )
 
 [node name="turn" type="Label" parent="background"]

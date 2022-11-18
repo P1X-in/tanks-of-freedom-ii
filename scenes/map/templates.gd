@@ -258,6 +258,7 @@ const PLAYER_BLUE = "blue"
 const PLAYER_RED = "red"
 const PLAYER_GREEN = "green"
 const PLAYER_YELLOW = "yellow"
+const PLAYER_BLACK = "black"
 
 const MATERIAL_NORMAL = "normal"
 const MATERIAL_METALLIC = "metallic"
@@ -524,6 +525,7 @@ var side_materials = {
     self.PLAYER_RED : ResourceLoader.load("res://assets/materials/arne32_red.tres"),
     self.PLAYER_GREEN : ResourceLoader.load("res://assets/materials/arne32_green.tres"),
     self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_yellow.tres"),
+    self.PLAYER_BLACK : ResourceLoader.load("res://assets/materials/arne32_black.tres"),
 }
 var side_materials_desat = {
     self.PLAYER_NEUTRAL : ResourceLoader.load("res://assets/materials/arne32_neutral.tres"),
@@ -531,6 +533,7 @@ var side_materials_desat = {
     self.PLAYER_RED : ResourceLoader.load("res://assets/materials/arne32_red_desat.tres"),
     self.PLAYER_GREEN : ResourceLoader.load("res://assets/materials/arne32_green_desat.tres"),
     self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_yellow_desat.tres"),
+    self.PLAYER_BLACK : ResourceLoader.load("res://assets/materials/arne32_black_desat.tres"),
 }
 
 var side_materials_metallic = {
@@ -539,6 +542,7 @@ var side_materials_metallic = {
     self.PLAYER_RED : ResourceLoader.load("res://assets/materials/arne32_metallic_red.tres"),
     self.PLAYER_GREEN : ResourceLoader.load("res://assets/materials/arne32_metallic_green.tres"),
     self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_metallic_yellow.tres"),
+    self.PLAYER_BLACK : ResourceLoader.load("res://assets/materials/arne32_metallic_black.tres"),
 }
 var side_materials_metallic_desat = {
     self.PLAYER_NEUTRAL : ResourceLoader.load("res://assets/materials/arne32_metallic_neutral.tres"),
@@ -546,6 +550,7 @@ var side_materials_metallic_desat = {
     self.PLAYER_RED : ResourceLoader.load("res://assets/materials/arne32_metallic_red_desat.tres"),
     self.PLAYER_GREEN : ResourceLoader.load("res://assets/materials/arne32_metallic_green_desat.tres"),
     self.PLAYER_YELLOW : ResourceLoader.load("res://assets/materials/arne32_metallic_yellow_desat.tres"),
+    self.PLAYER_BLACK : ResourceLoader.load("res://assets/materials/arne32_metallic_black_desat.tres"),
 }
 
 var generic_building = preload("res://scenes/tiles/buildings/building.gd")

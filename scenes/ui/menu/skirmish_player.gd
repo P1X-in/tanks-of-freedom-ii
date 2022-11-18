@@ -12,11 +12,13 @@ onready var blue_player = $"blue_player"
 onready var red_player = $"red_player"
 onready var yellow_player = $"yellow_player"
 onready var green_player = $"green_player"
+onready var black_player = $"black_player"
 
 onready var blue_border = $"border_blue"
 onready var red_border = $"border_red"
 onready var yellow_border = $"border_yellow"
 onready var green_border = $"border_green"
+onready var black_border = $"border_black"
 
 onready var type_button = $"player_type"
 onready var ap_button = $"starting_ap"
@@ -52,17 +54,22 @@ func fill_panel(player_side):
         "green":
             self.green_player.show()
             self.green_border.show()
+        "black":
+            self.black_player.show()
+            self.black_border.show()
 
 func _reset_labels():
     self.blue_player.hide()
     self.red_player.hide()
     self.yellow_player.hide()
     self.green_player.hide()
+    self.black_player.hide()
 
     self.blue_border.hide()
     self.red_border.hide()
     self.yellow_border.hide()
     self.green_border.hide()
+    self.black_border.hide()
 
     self.ap = self.AP_STEP
     self.type = self.PLAYER_HUMAN

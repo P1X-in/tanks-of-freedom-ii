@@ -66,6 +66,8 @@ func _fill_player_panels(name):
     var index = 0
 
     for side in sides:
+        if index >= self.player_panels.size():
+            continue
         self.player_panels[index].fill_panel(side)
         self.player_panels[index].show()
         index += 1

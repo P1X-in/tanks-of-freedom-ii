@@ -34,6 +34,7 @@ var blue_gem = preload("res://scenes/ui/icons/nations/blue.tscn")
 var red_gem = preload("res://scenes/ui/icons/nations/red.tscn")
 var green_gem = preload("res://scenes/ui/icons/nations/green.tscn")
 var yellow_gem = preload("res://scenes/ui/icons/nations/yellow.tscn")
+var black_gem = preload("res://scenes/ui/icons/nations/black.tscn")
 
 var named_icons = {
     "disk" : self.disk,
@@ -71,6 +72,7 @@ var named_icons = {
     "red_gem" : self.red_gem,
     "green_gem" : self.green_gem,
     "yellow_gem" : self.yellow_gem,
+    "black_gem" : self.black_gem,
 }
 
 func get_named_icon(name):
