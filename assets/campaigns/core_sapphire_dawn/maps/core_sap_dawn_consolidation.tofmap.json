@@ -12529,7 +12529,7 @@
             },
             "frame": {
                 "rotation": 0,
-                "tile": "frame_river3"
+                "tile": "frame_river6"
             },
             "ground": {
                 "rotation": 0,
@@ -14582,8 +14582,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 180,
-                "tile": "frame_river2"
+                "rotation": 0,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 0,
@@ -25914,7 +25914,7 @@
             },
             "frame": {
                 "rotation": 0,
-                "tile": "frame_river3"
+                "tile": "frame_river6"
             },
             "ground": {
                 "rotation": 0,

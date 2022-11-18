@@ -1276,7 +1276,7 @@
                     "action": "unlock"
                 }
             ],
-            "towers_captured": [
+            "cyrus_defeated": [
                 {
                     "action": "lock"
                 },
@@ -1286,33 +1286,17 @@
                         "name": "General Cyrus",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "All towers captured. Now we have to hold them."
-                    }
-                },
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "00_towers_held",
-                        "suspended": false,
-                        "turns": 5
-                    }
-                },
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "tower_lost",
-                        "suspended": false
-                    }
-                },
-                {
-                    "action": "objective",
-                    "details": {
-                        "slot": 0,
-                        "text": "Hold the Towers along the highway for 5 turns."
+                        "text": "I have made a tactical mistake! Fall back!"
                     }
                 },
                 {
                     "action": "unlock"
+                },
+                {
+                    "action": "end_game",
+                    "details": {
+                        "winner": "red"
+                    }
                 }
             ],
             "tower_lost": [
@@ -1347,6 +1331,45 @@
                     "details": {
                         "slot": 0,
                         "text": "Capture the Towers along the highway."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "towers_captured": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "right",
+                        "text": "All towers captured. Now we have to hold them."
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "00_towers_held",
+                        "suspended": false,
+                        "turns": 5
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "tower_lost",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "Hold the Towers along the highway for 5 turns."
                     }
                 },
                 {
@@ -1483,32 +1506,18 @@
                         "winner": "blue"
                     }
                 }
-            ],
-            "cyrus_defeated": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "General Cyrus",
-                        "portrait": "hero_general",
-                        "side": "right",
-                        "text": "I have made a tactical mistake! Fall back!"
-                    }
-                },
-                {
-                    "action": "unlock"
-                },
-                {
-                    "action": "end_game",
-                    "details": {
-                        "winner": "red"
-                    }
-                }
             ]
         },
         "triggers": {
+            "00_towers_held": {
+                "details": {
+                    "player": 1,
+                    "turn": 999
+                },
+                "one_off": true,
+                "story": "towers_held",
+                "type": "turn"
+            },
             "01_first_turn": {
                 "details": {
                     "player": 0,
@@ -1527,15 +1536,6 @@
                 "story": "02_waves_start",
                 "type": "turn"
             },
-            "spawn_wave": {
-                "details": {
-                    "player": 1,
-                    "turn": 5
-                },
-                "one_off": false,
-                "story": "03_wave",
-                "type": "turn"
-            },
             "cyrus_defeated": {
                 "details": {
                     "vip": [
@@ -1547,36 +1547,29 @@
                 "story": "cyrus_defeated",
                 "type": "assasination"
             },
-            "towers_captured": {
+            "hq_lost": {
                 "details": {
-                    "amount": 5,
+                    "amount": 1,
                     "list": [
                         [
-                            18,
-                            33
-                        ],
-                        [
-                            22,
-                            26
-                        ],
-                        [
-                            18,
-                            19
-                        ],
-                        [
-                            22,
-                            12
-                        ],
-                        [
-                            18,
-                            6
+                            36,
+                            18
                         ]
                     ],
-                    "player_side": "blue"
+                    "player_side": "red"
+                },
+                "one_off": true,
+                "story": "cyrus_defeated",
+                "type": "claim"
+            },
+            "spawn_wave": {
+                "details": {
+                    "player": 1,
+                    "turn": 5
                 },
                 "one_off": false,
-                "story": "towers_captured",
-                "type": "claim"
+                "story": "03_wave",
+                "type": "turn"
             },
             "tower_lost": {
                 "details": {
@@ -1609,28 +1602,35 @@
                 "story": "tower_lost",
                 "type": "claim"
             },
-            "00_towers_held": {
+            "towers_captured": {
                 "details": {
-                    "player": 1,
-                    "turn": 999
-                },
-                "one_off": true,
-                "story": "towers_held",
-                "type": "turn"
-            },
-            "hq_lost": {
-                "details": {
-                    "amount": 1,
+                    "amount": 5,
                     "list": [
                         [
-                            36,
-                            18
+                            18,
+                            33
+                        ],
+                        [
+                            22,
+                            26
+                        ],
+                        [
+                            18,
+                            19
+                        ],
+                        [
+                            22,
+                            12
+                        ],
+                        [
+                            18,
+                            6
                         ]
                     ],
-                    "player_side": "red"
+                    "player_side": "blue"
                 },
-                "one_off": true,
-                "story": "cyrus_defeated",
+                "one_off": false,
+                "story": "towers_captured",
                 "type": "claim"
             }
         }
@@ -3811,7 +3811,7 @@
             },
             "frame": {
                 "rotation": 270,
-                "tile": "frame_river1"
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 90,
@@ -4561,7 +4561,7 @@
             },
             "frame": {
                 "rotation": 270,
-                "tile": "frame_river3"
+                "tile": "frame_river6"
             },
             "ground": {
                 "rotation": 270,
@@ -15142,7 +15142,7 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tile": "deco_stumps2"
             },
             "frame": {
                 "rotation": 270,
@@ -15441,8 +15441,8 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "deco_stumps1"
             },
             "frame": {
                 "rotation": 180,
@@ -15712,7 +15712,7 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tile": "deco_stumps3"
             },
             "frame": {
                 "rotation": 180,
@@ -15861,8 +15861,8 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 180,
@@ -17725,8 +17725,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 90,
-                "tile": "frame_river1"
+                "rotation": 270,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 90,
@@ -18321,8 +18321,8 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "deco_stumps2"
             },
             "frame": {
                 "rotation": 270,
@@ -18535,8 +18535,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 90,
-                "tile": "frame_river1"
+                "rotation": 270,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 90,
@@ -18801,8 +18801,8 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 90,
@@ -19316,7 +19316,7 @@
             },
             "frame": {
                 "rotation": 270,
-                "tile": "frame_river2"
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 90,
@@ -20006,7 +20006,7 @@
             },
             "frame": {
                 "rotation": 270,
-                "tile": "frame_river1"
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 90,
@@ -20186,8 +20186,8 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "deco_stumps3"
             },
             "frame": {
                 "rotation": 0,
@@ -21074,8 +21074,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 90,
-                "tile": "frame_river2"
+                "rotation": 270,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 90,
@@ -23483,8 +23483,8 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "deco_stumps2"
             },
             "frame": {
                 "rotation": 270,

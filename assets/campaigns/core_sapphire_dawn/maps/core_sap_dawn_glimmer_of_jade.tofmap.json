@@ -3294,8 +3294,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 90,
-                "tile": "frame_river1"
+                "rotation": 270,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 90,
@@ -3963,8 +3963,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 90,
-                "tile": "frame_river1"
+                "rotation": 270,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 90,
@@ -5888,8 +5888,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 90,
-                "tile": "frame_river1"
+                "rotation": 270,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 90,
@@ -6584,7 +6584,7 @@
             },
             "frame": {
                 "rotation": 270,
-                "tile": "frame_river3"
+                "tile": "frame_river6"
             },
             "ground": {
                 "rotation": 270,
@@ -6614,7 +6614,7 @@
             },
             "frame": {
                 "rotation": 90,
-                "tile": "frame_river3"
+                "tile": "frame_river6"
             },
             "ground": {
                 "rotation": 90,
@@ -7337,8 +7337,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 90,
-                "tile": "frame_river1"
+                "rotation": 270,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 90,
@@ -8987,8 +8987,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 90,
-                "tile": "frame_river1"
+                "rotation": 270,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 90,
@@ -10067,8 +10067,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": "frame_river1"
+                "rotation": 180,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 180,
@@ -10098,7 +10098,7 @@
             },
             "frame": {
                 "rotation": 90,
-                "tile": "frame_river3"
+                "tile": "frame_river6"
             },
             "ground": {
                 "rotation": 90,
@@ -10247,8 +10247,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": "frame_river1"
+                "rotation": 180,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 0,
@@ -11006,7 +11006,7 @@
             },
             "frame": {
                 "rotation": 270,
-                "tile": "frame_river3"
+                "tile": "frame_river6"
             },
             "ground": {
                 "rotation": 270,
@@ -11035,8 +11035,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": "frame_river1"
+                "rotation": 180,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 180,
@@ -11185,8 +11185,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": "frame_river1"
+                "rotation": 180,
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 0,
@@ -11216,7 +11216,7 @@
             },
             "frame": {
                 "rotation": 180,
-                "tile": "frame_river3"
+                "tile": "frame_river6"
             },
             "ground": {
                 "rotation": 180,
