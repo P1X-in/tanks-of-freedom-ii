@@ -37,9 +37,9 @@ func _ready():
 func _input(event):
     if event.is_action_pressed("ui_cancel") or event.is_action_pressed('editor_menu'):
         self._on_back_button_pressed()
-    if event.is_action_pressed("rotate_cw"):
+    if event.is_action_pressed("ui_page_down"):
         self._on_next_button_pressed()
-    if event.is_action_pressed("rotate_ccw"):
+    if event.is_action_pressed("ui_page_up"):
         self._on_prev_button_pressed()
 
 func _on_back_button_pressed():

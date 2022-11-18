@@ -268,7 +268,7 @@ func setup_radial_menu(context_object=null):
     self.ui.radial.clear_fields()
     if context_object == null:
         self.ui.radial.set_field(self.ui.icons.trash.instance(), "Clear editor", 0, self, "wipe_editor")
-        if self.current_map_name != "":
+        if self.current_map_name != "" and not self.map_list_service.is_reserved_name(current_map_name):
             self.ui.radial.set_field(self.ui.icons.quicksave.instance(), "Quicksave", 1, self, "quicksave")
         self.ui.radial.set_field(self.ui.icons.disk.instance(), "Save/Load map", 2, self, "open_picker")
         self.ui.radial.set_field(self.ui.icons.quit.instance(), "Main menu", 4, self.switcher, "main_menu")

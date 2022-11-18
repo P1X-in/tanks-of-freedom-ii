@@ -2547,8 +2547,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_suspension"
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -2577,8 +2577,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -2607,8 +2607,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_suspension"
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -2637,8 +2637,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -2667,8 +2667,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_suspension"
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -2697,8 +2697,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -3537,8 +3537,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 90,
-                "tile": "bridge_suspension"
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -3777,8 +3777,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 90,
-                "tile": "bridge_suspension"
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -4377,8 +4377,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -4617,8 +4617,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -5252,8 +5252,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -5492,8 +5492,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -8921,8 +8921,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_suspension"
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -8951,8 +8951,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -8981,8 +8981,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_suspension"
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -9011,8 +9011,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_suspension"
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -9041,8 +9041,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -12280,8 +12280,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 90,
-                "tile": "bridge_suspension"
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -12520,8 +12520,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 90,
-                "tile": "bridge_suspension"
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -13244,8 +13244,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -13484,8 +13484,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -14209,8 +14209,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -14449,8 +14449,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -15709,8 +15709,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_suspension"
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -15739,8 +15739,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -15769,8 +15769,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_suspension"
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -15799,8 +15799,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -15829,8 +15829,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_suspension"
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -15859,8 +15859,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,

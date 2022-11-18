@@ -5,7 +5,7 @@
             30
         ],
         "skip_initial_hq_cam": true,
-        "track": "soundtrack_4",
+        "track": "soundtrack_4"
     },
     "scripts": {
         "stories": {
@@ -1861,6 +1861,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -2345,6 +2346,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -2780,6 +2782,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -3654,6 +3657,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -7648,6 +7652,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -8886,6 +8891,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -11230,6 +11236,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -11402,8 +11409,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -11432,8 +11439,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -13421,8 +13428,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -13451,8 +13458,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -14201,8 +14208,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -14231,8 +14238,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -14926,8 +14933,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -14956,8 +14963,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -14986,8 +14993,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -15646,8 +15653,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -15676,8 +15683,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -16341,8 +16348,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -16371,8 +16378,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -16413,6 +16420,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -17009,8 +17017,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -17099,8 +17107,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -17823,8 +17831,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -18525,6 +18533,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -18667,8 +18676,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -23017,8 +23026,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 90,
@@ -23047,8 +23056,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 90,
@@ -23077,8 +23086,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 90,
@@ -24135,8 +24144,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24165,8 +24174,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24375,8 +24384,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24405,8 +24414,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24435,8 +24444,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24465,8 +24474,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24495,8 +24504,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24525,8 +24534,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24555,8 +24564,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24585,8 +24594,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24615,8 +24624,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24825,8 +24834,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25155,8 +25164,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25185,8 +25194,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25215,8 +25224,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25245,8 +25254,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25275,8 +25284,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25335,8 +25344,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25365,8 +25374,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25575,8 +25584,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25605,8 +25614,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25635,8 +25644,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25665,8 +25674,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25695,8 +25704,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25725,8 +25734,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25755,8 +25764,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25785,8 +25794,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -25815,8 +25824,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -26025,8 +26034,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -26355,8 +26364,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -26385,8 +26394,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -26415,8 +26424,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -26445,8 +26454,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -26475,8 +26484,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "bridge_stone_barrier"
+                "rotation": 180,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -28563,6 +28572,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -28597,6 +28607,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -28631,6 +28642,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -29150,6 +29162,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -29634,6 +29647,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -32498,6 +32512,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -33342,6 +33357,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -33376,6 +33392,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -33680,6 +33697,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -35766,6 +35784,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -35800,6 +35819,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -35834,6 +35854,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -35868,6 +35889,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -36082,6 +36104,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -36116,6 +36139,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },

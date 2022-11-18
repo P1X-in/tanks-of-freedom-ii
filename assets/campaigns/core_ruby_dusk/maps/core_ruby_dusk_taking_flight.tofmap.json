@@ -5,7 +5,7 @@
             23
         ],
         "skip_initial_hq_cam": true,
-        "track": "soundtrack_4",
+        "track": "soundtrack_4"
     },
     "scripts": {
         "stories": {
@@ -42,7 +42,7 @@
                         "path": [
                             "e",
                             "e",
-                            "e",
+                            "e"
                         ],
                         "where": [
                             28,
@@ -243,7 +243,17 @@
                         "zoom": 0.2
                     }
                 },
-                {"action" : "claim", "details" : {"what" : [26, 30], "side" : "red"}, "delay" : 1},
+                {
+                    "action": "claim",
+                    "delay": 1,
+                    "details": {
+                        "side": "red",
+                        "what": [
+                            26,
+                            30
+                        ]
+                    }
+                },
                 {
                     "action": "message",
                     "details": {
@@ -828,8 +838,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 90,
@@ -1248,8 +1258,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 90,
@@ -1608,8 +1618,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 90,
@@ -1668,8 +1678,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 90,
@@ -3056,8 +3066,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 90,
@@ -3758,6 +3768,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -3792,6 +3803,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -4341,6 +4353,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -5113,8 +5126,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 90,
@@ -5537,8 +5550,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 90,
@@ -5957,8 +5970,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 90,
@@ -9051,6 +9064,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -9085,6 +9099,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -9119,6 +9134,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -10403,6 +10419,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -11187,6 +11204,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },
@@ -11557,6 +11575,7 @@
                 "tile": null
             },
             "unit": {
+                "ai_paused": false,
                 "modifiers": {
 
                 },

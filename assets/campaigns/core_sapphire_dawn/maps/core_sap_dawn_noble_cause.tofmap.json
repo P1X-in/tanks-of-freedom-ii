@@ -66,7 +66,8 @@
                             11
                         ]
                     }
-                },{
+                },
+                {
                     "action": "use_ability",
                     "delay": 1,
                     "details": {
@@ -227,26 +228,27 @@
                     "action": "unlock"
                 }
             ],
-            "cyrus_defeated": [
+            "airfield_captured": [
                 {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
+                    "action": "trigger",
                     "details": {
-                        "name": "General Cyrus",
-                        "portrait": "hero_general",
-                        "side": "right",
-                        "text": "I have made a tactical mistake! Fall back!"
+                        "name": "crossroad_camp_captured",
+                        "suspended": false
                     }
                 },
                 {
-                    "action": "unlock"
+                    "action": "trigger",
+                    "details": {
+                        "name": "crossroad_camp_captured_no_airfield",
+                        "suspended": true
+                    }
                 },
                 {
-                    "action": "end_game",
+                    "action": "trigger",
                     "details": {
-                        "winner": "red"
+                        "name": "free_sidney",
+                        "suspended": false,
+                        "turns": 0
                     }
                 }
             ],
@@ -282,7 +284,7 @@
                 },
                 {
                     "action": "unlock"
-                },
+                }
             ],
             "crossroad_camp_captured_no_airfield": [
                 {
@@ -324,7 +326,7 @@
                 },
                 {
                     "action": "unlock"
-                },
+                }
             ],
             "crossroad_wave": [
                 {
@@ -439,159 +441,9 @@
                     "action": "unlock"
                 }
             ],
-            "airfield_captured": [
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "crossroad_camp_captured",
-                        "suspended": false
-                    }
-                },
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "crossroad_camp_captured_no_airfield",
-                        "suspended": true
-                    }
-                },
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "free_sidney",
-                        "suspended": false,
-                        "turns": 0
-                    }
-                }
-            ],
-            "sidney_released": [
+            "cyrus_defeated": [
                 {
                     "action": "lock"
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            19,
-                            15
-                        ],
-                        "zoom": 0.5
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Officer",
-                        "portrait": "red_infantry",
-                        "side": "left",
-                        "text": "Sapphire Dawn is really pushing on us. We need a more skilled commander."
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Officer",
-                        "portrait": "red_infantry",
-                        "side": "left",
-                        "text": "Bring in the prisoner!"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Guard",
-                        "portrait": "red_infantry",
-                        "side": "right",
-                        "text": "Are you sure, sir? Lord Dawson might not be happy when he hears about this."
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Officer",
-                        "portrait": "red_infantry",
-                        "side": "left",
-                        "text": "He also won't be happy if we won't stand our ground effectively, since we are not able to retreat..."
-                    }
-                },
-                {
-                    "action": "pause_ai",
-                    "delay": 1,
-                    "details": {
-                        "pause": false,
-                        "who": [
-                            19,
-                            15
-                        ]
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Noble Sidney",
-                        "portrait": "hero_noble",
-                        "side": "right",
-                        "text": "I've heard you summoned me, commander."
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Officer",
-                        "portrait": "red_infantry",
-                        "side": "left",
-                        "text": "Situation is getting difficult, Sir. General Cyrus arrived not long ago, and he is already giving us a lot of trouble."
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Officer",
-                        "portrait": "red_infantry",
-                        "side": "left",
-                        "text": "My troops need someone a lot more experienced to lead them. I am asking you to take command."
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Noble Sidney",
-                        "portrait": "hero_noble",
-                        "side": "right",
-                        "text": "I see. I hate to admit it, but this current predicament might be due to my own making. Even so, I'll do what I can to help."
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Officer",
-                        "portrait": "red_infantry",
-                        "side": "left",
-                        "text": "Thank you, Sir!"
-                    }
-                },
-                {
-                    "action": "objective",
-                    "details": {
-                        "slot": 3,
-                        "text": "(Optional) Defeat Noble Sidney."
-                    }
-                },
-                {
-                    "action": "unlock"
-                },
-            ],
-            "sidney_defeated": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "Noble Sidney",
-                        "portrait": "hero_noble",
-                        "side": "left",
-                        "text": "Bested by Warlord Grim's lackeys. What a shame to see honourable General Cyrus doing mercenary work."
-                    }
                 },
                 {
                     "action": "message",
@@ -599,18 +451,17 @@
                         "name": "General Cyrus",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "What are you even talking about? Bring him in for questioning."
-                    }
-                },
-                {
-                    "action": "objective",
-                    "details": {
-                        "slot": 3,
-                        "text": "(Done) Defeat Noble Sidney."
+                        "text": "I have made a tactical mistake! Fall back!"
                     }
                 },
                 {
                     "action": "unlock"
+                },
+                {
+                    "action": "end_game",
+                    "details": {
+                        "winner": "red"
+                    }
                 }
             ],
             "ruby_hq_claimed": [
@@ -743,6 +594,156 @@
                         "winner": "blue"
                     }
                 }
+            ],
+            "sidney_defeated": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "left",
+                        "text": "Bested by Warlord Grim's lackeys. What a shame to see honourable General Cyrus doing mercenary work."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "General Cyrus",
+                        "portrait": "hero_general",
+                        "side": "right",
+                        "text": "What are you even talking about? Bring him in for questioning."
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 3,
+                        "text": "(Done) Defeat Noble Sidney."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "sidney_released": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            19,
+                            15
+                        ],
+                        "zoom": 0.5
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Officer",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "Sapphire Dawn is really pushing on us. We need a more skilled commander."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Officer",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "Bring in the prisoner!"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Guard",
+                        "portrait": "red_infantry",
+                        "side": "right",
+                        "text": "Are you sure, sir? Lord Dawson might not be happy when he hears about this."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Officer",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "He also won't be happy if we won't stand our ground effectively, since we are not able to retreat..."
+                    }
+                },
+                {
+                    "action": "pause_ai",
+                    "delay": 1,
+                    "details": {
+                        "pause": false,
+                        "who": [
+                            19,
+                            15
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "I've heard you summoned me, commander."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Officer",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "Situation is getting difficult, Sir. General Cyrus arrived not long ago, and he is already giving us a lot of trouble."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Officer",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "My troops need someone a lot more experienced to lead them. I am asking you to take command."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Noble Sidney",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "I see. I hate to admit it, but this current predicament might be due to my own making. Even so, I'll do what I can to help."
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "Officer",
+                        "portrait": "red_infantry",
+                        "side": "left",
+                        "text": "Thank you, Sir!"
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 3,
+                        "text": "(Optional) Defeat Noble Sidney."
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
             ]
         },
         "triggers": {
@@ -754,17 +755,6 @@
                 "one_off": true,
                 "story": "01_task",
                 "type": "turn"
-            },
-            "cyrus_defeated": {
-                "details": {
-                    "vip": [
-                        37,
-                        34
-                    ]
-                },
-                "one_off": true,
-                "story": "cyrus_defeated",
-                "type": "assasination"
             },
             "crossroad_camp_captured": {
                 "details": {
@@ -804,6 +794,26 @@
                 "story": "crossroad_camp_captured_no_airfield",
                 "type": "claim"
             },
+            "cyrus_defeated": {
+                "details": {
+                    "vip": [
+                        37,
+                        34
+                    ]
+                },
+                "one_off": true,
+                "story": "cyrus_defeated",
+                "type": "assasination"
+            },
+            "free_sidney": {
+                "details": {
+                    "player": 1,
+                    "turn": 5
+                },
+                "one_off": false,
+                "story": "sidney_released",
+                "type": "turn"
+            },
             "island_airfield_captured": {
                 "details": {
                     "amount": 1,
@@ -819,35 +829,6 @@
                 "story": "airfield_captured",
                 "type": "claim"
             },
-            "free_sidney": {
-                "details": {
-                    "player": 1,
-                    "turn": 5
-                },
-                "one_off": false,
-                "story": "sidney_released",
-                "type": "turn"
-            },
-            "spawn_wave": {
-                "details": {
-                    "player": 1,
-                    "turn": 5
-                },
-                "one_off": false,
-                "story": "crossroad_wave",
-                "type": "turn"
-            },
-            "sidney_defeated": {
-                "details": {
-                    "vip": [
-                        19,
-                        15
-                    ]
-                },
-                "one_off": true,
-                "story": "sidney_defeated",
-                "type": "assasination"
-            },
             "ruby_hq_captured": {
                 "details": {
                     "amount": 1,
@@ -862,6 +843,26 @@
                 "one_off": true,
                 "story": "ruby_hq_claimed",
                 "type": "claim"
+            },
+            "sidney_defeated": {
+                "details": {
+                    "vip": [
+                        19,
+                        15
+                    ]
+                },
+                "one_off": true,
+                "story": "sidney_defeated",
+                "type": "assasination"
+            },
+            "spawn_wave": {
+                "details": {
+                    "player": 1,
+                    "turn": 5
+                },
+                "one_off": false,
+                "story": "crossroad_wave",
+                "type": "turn"
             }
         }
     },
@@ -22657,7 +22658,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -22687,7 +22688,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -22717,7 +22718,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "ai_paused": false,
@@ -22752,7 +22753,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "ai_paused": false,
@@ -22787,7 +22788,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -22817,7 +22818,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -22877,7 +22878,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -22907,7 +22908,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -22937,7 +22938,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -22967,7 +22968,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -22997,7 +22998,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -23027,7 +23028,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -23057,7 +23058,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -23906,7 +23907,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -23936,7 +23937,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -23966,7 +23967,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "ai_paused": false,
@@ -24001,7 +24002,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "ai_paused": false,
@@ -24036,7 +24037,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24066,7 +24067,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24126,7 +24127,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24156,7 +24157,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24186,7 +24187,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24216,7 +24217,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24246,7 +24247,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24276,7 +24277,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -24306,7 +24307,7 @@
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "bridge_stone_barrier"
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,

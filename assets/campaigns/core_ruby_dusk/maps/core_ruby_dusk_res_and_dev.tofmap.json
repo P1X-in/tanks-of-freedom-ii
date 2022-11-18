@@ -5,7 +5,7 @@
             20
         ],
         "skip_initial_hq_cam": true,
-        "track": "soundtrack_4",
+        "track": "soundtrack_4"
     },
     "scripts": {
         "stories": {
@@ -1871,8 +1871,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -2171,8 +2171,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -2501,8 +2501,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -2801,8 +2801,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -2831,8 +2831,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -2861,8 +2861,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -2891,8 +2891,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -2921,8 +2921,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -2951,8 +2951,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -5421,8 +5421,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -6501,8 +6501,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -6531,8 +6531,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -6591,8 +6591,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -7641,8 +7641,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -7761,8 +7761,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -8181,8 +8181,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -8489,8 +8489,8 @@
                 "tile": "bridge_legs"
             },
             "terrain": {
-                "rotation": 90,
-                "tile": "bridge_suspension"
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -8751,8 +8751,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -9315,8 +9315,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -9623,8 +9623,8 @@
                 "tile": "bridge_plate"
             },
             "terrain": {
-                "rotation": 90,
-                "tile": "bridge_suspension"
+                "rotation": 270,
+                "tile": "bridge_suspension_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -9855,8 +9855,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -10430,8 +10430,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -11579,8 +11579,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -12254,8 +12254,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -12709,8 +12709,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -13373,8 +13373,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -13837,8 +13837,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -14497,8 +14497,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -14957,8 +14957,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -15592,8 +15592,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -16656,8 +16656,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -17232,8 +17232,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -18252,8 +18252,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -19242,8 +19242,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -20202,8 +20202,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -21167,8 +21167,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
@@ -21197,8 +21197,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,

@@ -1608,8 +1608,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 90,
-                "tile": "bridge_stone_barrier"
+                "rotation": 270,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
@@ -2178,8 +2178,8 @@
                 "tile": "bridge_stone"
             },
             "terrain": {
-                "rotation": 90,
-                "tile": "bridge_stone_barrier"
+                "rotation": 270,
+                "tile": "bridge_stone_barrier_tiled"
             },
             "unit": {
                 "rotation": 0,
