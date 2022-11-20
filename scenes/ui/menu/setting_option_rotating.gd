@@ -6,6 +6,7 @@ onready var settings = $"/root/Settings"
 onready var label = $"label"
 onready var button = $"toggle"
 
+export var unavailable = false
 export var option_name = ""
 export var option_key = ""
 export var help_tip = ""
@@ -14,6 +15,7 @@ export var available_values = ["first", "second"]
 func _ready():
     self.label.set_text(self.option_name)
     self._read_setting()
+    self.button.set_disabled(self.unavailable)
 
 func _read_setting():
     var value = self.settings.get_option(self.option_key)
