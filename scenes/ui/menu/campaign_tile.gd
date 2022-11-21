@@ -22,7 +22,7 @@ func set_up(name, icon, _campaign_name):
     self.tick.hide()
 
 func set_locked(icon):
-    self.label.set_text("LOCKED")
+    self.label.set_text("TR_LOCKED")
     self._set_icon(icon)
     self.button.set_disabled(true)
     self.tick.hide()

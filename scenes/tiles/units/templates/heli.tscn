@@ -14,12 +14,16 @@
 script = ExtResource( 1 )
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
-unit_name = "Attack Helicopter"
+unit_name = "TR_ATT_HELI"
+side = "neutral"
 material_type = "metallic"
+max_hp = 10
 max_move = 7
 attack = 8
 armor = 1
+can_capture = false
 can_fly = true
+max_attacks = 1
 uses_metallic_material = true
 unit_value = 70
 unit_class = "heli"
@@ -45,8 +49,8 @@ stream = ExtResource( 3 )
 [node name="attack" parent="audio" index="2"]
 stream = ExtResource( 7 )
 
-[node name="damage" parent="audio" index="3"]
+[node name="damage" parent="audio" index="4"]
 stream = ExtResource( 4 )
 
-[node name="die" parent="audio" index="4"]
+[node name="die" parent="audio" index="5"]
 stream = ExtResource( 6 )

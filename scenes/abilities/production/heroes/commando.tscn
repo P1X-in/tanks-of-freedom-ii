@@ -3,6 +3,6 @@
 [ext_resource path="res://scenes/abilities/production/heroes/hero.tscn" type="PackedScene" id=1]
 
 [node name="commando" instance=ExtResource( 1 )]
-label = "The Commando"
+label = "TR_COMMANDO"
 ap_cost = 150
 template_name = "hero_commando"

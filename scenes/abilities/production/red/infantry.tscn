@@ -3,6 +3,6 @@
 [ext_resource path="res://scenes/abilities/production/unit.tscn" type="PackedScene" id=1]
 
 [node name="infantry" instance=ExtResource( 1 )]
-label = "Infantry"
+label = "TR_INFANTRY"
 ap_cost = 25
 template_name = "red_infantry"

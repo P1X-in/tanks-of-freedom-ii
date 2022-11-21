@@ -78,7 +78,7 @@ func _load_core_campaigns():
         if campaign_details != null:
             self.core_campaigns.append(campaign_details)
             self.core_campaigns_by_name[registered_campaign] = campaign_details
-    
+
 
 func _load_custom_campaigns():
     if self.filesystem.dir_exists(self.CUSTOM_CAMPAIGNS_BASE_PATH):
@@ -100,6 +100,7 @@ func _load_campaign_details(directory_path):
     if self.filesystem.file_exists(manifest_path):
         details = self.filesystem.read_json_from_file(manifest_path)
         if self._validate_manifest(details, directory_path):
+            self._load_translations(directory_path)
             return details
 
     return null
@@ -114,6 +115,18 @@ func _validate_manifest(manifest, directory_path):
 
     return true
 
+func _load_translations(directory_path):
+    if self.filesystem.file_exists(directory_path + "/translations.json"):
+        var translations = self.filesystem.read_json_from_file(directory_path + "/translations.json")
+
+        for locale in translations:
+            var translation = Translation.new()
+            translation.locale = locale
+
+            for key in translations[locale]:
+                translation.add_message(key, translations[locale][key])
+            TranslationServer.add_translation(translation)
+
 func _get_scenario_index(campaign_name, scenario_name):
     var manifest = self.get_campaign(campaign_name)
     if manifest == null:
@@ -127,7 +140,7 @@ func _search_manifest_for_scenario_index(manifest, scenario_name):
     for mission_details in manifest["missions"]:
         index += 1
         if mission_details["name"] == scenario_name:
-            return index 
+            return index
 
     return 0
 

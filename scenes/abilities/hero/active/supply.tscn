@@ -5,6 +5,7 @@
 
 [node name="supply" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-label = "Supply"
+label = "TR_SUPPLY"
 named_icon = "supply"
+ability_range = 0
 marker_colour = "blue"

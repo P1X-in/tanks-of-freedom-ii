@@ -156,7 +156,7 @@ margin_top = 7.0
 margin_right = 400.0
 margin_bottom = 40.0
 custom_fonts/font = ExtResource( 2 )
-text = "Game"
+text = "TR_GAME"
 align = 1
 valign = 1
 __meta__ = {
@@ -170,7 +170,7 @@ margin_top = 47.0
 margin_right = 200.0
 margin_bottom = 78.0
 custom_fonts/font = ExtResource( 2 )
-text = "Camera"
+text = "TR_CAMERA"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -215,7 +215,7 @@ margin_top = 87.0
 margin_right = 200.0
 margin_bottom = 118.0
 custom_fonts/font = ExtResource( 2 )
-text = "Switch Camera"
+text = "TR_CAM_SW"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -261,7 +261,7 @@ margin_top = 127.0
 margin_right = 200.0
 margin_bottom = 158.0
 custom_fonts/font = ExtResource( 2 )
-text = "Zoom"
+text = "TR_ZOOM"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -306,7 +306,7 @@ margin_top = 167.0
 margin_right = 200.0
 margin_bottom = 198.0
 custom_fonts/font = ExtResource( 2 )
-text = "Select"
+text = "TR_SELECT"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -360,7 +360,7 @@ margin_top = 207.0
 margin_right = 200.0
 margin_bottom = 238.0
 custom_fonts/font = ExtResource( 2 )
-text = "Back"
+text = "TR_BACK"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -406,7 +406,7 @@ margin_top = 247.0
 margin_right = 200.0
 margin_bottom = 278.0
 custom_fonts/font = ExtResource( 2 )
-text = "Navigate"
+text = "TR_NAV"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -478,7 +478,7 @@ margin_top = 287.0
 margin_right = 200.0
 margin_bottom = 318.0
 custom_fonts/font = ExtResource( 2 )
-text = "Menu"
+text = "TR_MENU"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -523,7 +523,7 @@ margin_top = 327.0
 margin_right = 200.0
 margin_bottom = 358.0
 custom_fonts/font = ExtResource( 2 )
-text = "End Turn"
+text = "TR_END_TURN"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -568,7 +568,7 @@ margin_top = 367.0
 margin_right = 200.0
 margin_bottom = 398.0
 custom_fonts/font = ExtResource( 2 )
-text = "Unit Stats"
+text = "TR_UNIT_STATS"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -614,7 +614,7 @@ margin_top = 7.0
 margin_right = 800.0
 margin_bottom = 40.0
 custom_fonts/font = ExtResource( 2 )
-text = "Editor"
+text = "TR_EDITOR"
 align = 1
 valign = 1
 __meta__ = {
@@ -628,7 +628,7 @@ margin_top = 47.0
 margin_right = 200.0
 margin_bottom = 78.0
 custom_fonts/font = ExtResource( 2 )
-text = "Camera"
+text = "TR_CAMERA"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -679,7 +679,7 @@ margin_top = 87.0
 margin_right = 200.0
 margin_bottom = 118.0
 custom_fonts/font = ExtResource( 2 )
-text = "Switch Camera"
+text = "TR_CAM_SW"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -725,7 +725,7 @@ margin_top = 127.0
 margin_right = 200.0
 margin_bottom = 158.0
 custom_fonts/font = ExtResource( 2 )
-text = "Zoom"
+text = "TR_ZOOM"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -770,7 +770,7 @@ margin_top = 167.0
 margin_right = 200.0
 margin_bottom = 198.0
 custom_fonts/font = ExtResource( 2 )
-text = "Select"
+text = "TR_SELECT"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -824,7 +824,7 @@ margin_top = 207.0
 margin_right = 200.0
 margin_bottom = 238.0
 custom_fonts/font = ExtResource( 2 )
-text = "Undo"
+text = "TR_UNDO"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -870,7 +870,7 @@ margin_top = 247.0
 margin_right = 200.0
 margin_bottom = 278.0
 custom_fonts/font = ExtResource( 2 )
-text = "Change Tile"
+text = "TR_CHANGE_TILE"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -943,7 +943,7 @@ margin_top = 287.0
 margin_right = 200.0
 margin_bottom = 318.0
 custom_fonts/font = ExtResource( 2 )
-text = "Menu"
+text = "TR_MENU"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -988,7 +988,7 @@ margin_top = 327.0
 margin_right = 200.0
 margin_bottom = 358.0
 custom_fonts/font = ExtResource( 2 )
-text = "Rotate"
+text = "TR_ROTATE"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -1042,7 +1042,7 @@ margin_top = 367.0
 margin_right = 200.0
 margin_bottom = 398.0
 custom_fonts/font = ExtResource( 2 )
-text = "Clear"
+text = "TR_CLEAR"
 valign = 2
 __meta__ = {
 "_editor_description_": ""
@@ -1087,7 +1087,7 @@ margin_top = 407.0
 margin_right = 200.0
 margin_bottom = 438.0
 custom_fonts/font = ExtResource( 2 )
-text = "Alternative"
+text = "TR_ALTERNATIVE"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -1133,7 +1133,7 @@ margin_top = 447.0
 margin_right = 200.0
 margin_bottom = 478.0
 custom_fonts/font = ExtResource( 2 )
-text = "Bans"
+text = "TR_BANS"
 valign = 2
 __meta__ = {
 "_editor_description_": ""
@@ -1178,7 +1178,7 @@ margin_top = 487.0
 margin_right = 200.0
 margin_bottom = 518.0
 custom_fonts/font = ExtResource( 2 )
-text = "Unit AI Toggle"
+text = "TR_AI_TOGGLE"
 valign = 2
 __meta__ = {
 "_editor_description_": ""
@@ -1232,7 +1232,7 @@ margin_top = 550.0
 margin_right = 450.0
 margin_bottom = 580.0
 custom_fonts/font = ExtResource( 2 )
-text = "Back"
+text = "TR_BACK"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""

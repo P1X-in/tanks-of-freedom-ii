@@ -14,16 +14,23 @@
 script = ExtResource( 9 )
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
-unit_name = "Tank"
+unit_name = "TR_TANK"
+side = "neutral"
 material_type = "metallic"
+max_hp = 10
 max_move = 6
 attack = 10
+armor = 2
+can_capture = false
+can_fly = false
+max_attacks = 1
 uses_metallic_material = true
 unit_value = 50
 unit_class = "tank"
 
 [node name="long_range_shell" parent="." index="4" instance=ExtResource( 7 )]
 index = 2
+damage = 10
 
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource( 2 )

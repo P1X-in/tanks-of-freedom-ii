@@ -1,6 +1,6 @@
 {
     "name" : "tutorial",
-    "title" : "Tutorial",
+    "title" : "tr_core_tutorial_campaign_title",
     "icon" : "info",
     "missions" : [
         {

@@ -80,9 +80,9 @@ script = ExtResource( 2 )
 
 [node name="background" type="ColorRect" parent="."]
 visible = false
-margin_left = -200.0
+margin_left = -300.0
 margin_top = -90.0
-margin_right = 200.0
+margin_right = 300.0
 margin_bottom = 90.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
@@ -96,7 +96,7 @@ anchor_bottom = 1.0
 margin_top = 85.0
 margin_bottom = -45.0
 custom_fonts/font = ExtResource( 1 )
-text = "Sapphire Dawn"
+text = "TR_SAP_DAWN"
 align = 1
 valign = 1
 __meta__ = {
@@ -105,7 +105,7 @@ __meta__ = {
 }
 
 [node name="blue" parent="background/blue_player" instance=ExtResource( 3 )]
-position = Vector2( 200, -40 )
+position = Vector2( 300, -40 )
 
 [node name="red_player" type="Label" parent="background"]
 visible = false
@@ -114,7 +114,7 @@ anchor_bottom = 1.0
 margin_top = 85.0
 margin_bottom = -45.0
 custom_fonts/font = ExtResource( 1 )
-text = "Ruby Dusk"
+text = "TR_RUBY_DUSK"
 align = 1
 valign = 1
 __meta__ = {
@@ -123,7 +123,7 @@ __meta__ = {
 }
 
 [node name="red" parent="background/red_player" instance=ExtResource( 6 )]
-position = Vector2( 200, -40 )
+position = Vector2( 300, -40 )
 
 [node name="yellow_player" type="Label" parent="background"]
 visible = false
@@ -132,7 +132,7 @@ anchor_bottom = 1.0
 margin_top = 85.0
 margin_bottom = -45.0
 custom_fonts/font = ExtResource( 1 )
-text = "Amber Noon"
+text = "TR_AMBER_NOON"
 align = 1
 valign = 1
 __meta__ = {
@@ -141,7 +141,7 @@ __meta__ = {
 }
 
 [node name="yellow" parent="background/yellow_player" instance=ExtResource( 4 )]
-position = Vector2( 200, -40 )
+position = Vector2( 300, -40 )
 
 [node name="green_player" type="Label" parent="background"]
 visible = false
@@ -150,7 +150,7 @@ anchor_bottom = 1.0
 margin_top = 85.0
 margin_bottom = -45.0
 custom_fonts/font = ExtResource( 1 )
-text = "Jade Twilight"
+text = "TR_JADE_TWILIGHT"
 align = 1
 valign = 1
 __meta__ = {
@@ -159,7 +159,7 @@ __meta__ = {
 }
 
 [node name="green" parent="background/green_player" instance=ExtResource( 5 )]
-position = Vector2( 200, -40 )
+position = Vector2( 300, -40 )
 
 [node name="black_player" type="Label" parent="background"]
 visible = false
@@ -168,7 +168,7 @@ anchor_bottom = 1.0
 margin_top = 85.0
 margin_bottom = -45.0
 custom_fonts/font = ExtResource( 1 )
-text = "Obsidian Night"
+text = "TR_OBS_NIGHT"
 align = 1
 valign = 1
 __meta__ = {
@@ -177,7 +177,7 @@ __meta__ = {
 }
 
 [node name="black" parent="background/black_player" instance=ExtResource( 7 )]
-position = Vector2( 200, -40 )
+position = Vector2( 300, -40 )
 
 [node name="turn" type="Label" parent="background"]
 anchor_right = 1.0

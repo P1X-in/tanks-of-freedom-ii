@@ -5,9 +5,9 @@
 
 [node name="heavy_weapon" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-label = "Heavy Weapon"
-ap_cost = 0
+label = "TR_HEAVY_WEAP"
 cooldown = 3
 named_icon = "heavy_weapon"
 ability_range = 1
 marker_colour = "red"
+damage = 8

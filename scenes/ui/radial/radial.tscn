@@ -103,9 +103,9 @@ position = Vector2( -140, -140 )
 visible = false
 
 [node name="background" type="ColorRect" parent="label"]
-margin_left = -100.0
+margin_left = -130.0
 margin_top = -50.0
-margin_right = 100.0
+margin_right = 130.0
 margin_bottom = 50.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
@@ -115,17 +115,14 @@ __meta__ = {
 [node name="label" type="Label" parent="label"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -100.0
+margin_left = -150.0
 margin_top = -50.0
-margin_right = 100.0
+margin_right = 150.0
 margin_bottom = 50.0
 custom_fonts/font = ExtResource( 3 )
 text = "Lorem Ipsum"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="animations" type="AnimationPlayer" parent="."]
 playback_speed = 4.0

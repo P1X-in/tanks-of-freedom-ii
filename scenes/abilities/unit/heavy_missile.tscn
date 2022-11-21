@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/abilities/unit/missile.tscn" type="PackedScene" id=1]
 
 [node name="heavy_missile" instance=ExtResource( 1 )]
-label = "Heavy Missile"
+label = "TR_HEAVY_MISS"
 named_icon = "heavy_missile"
 ability_range = 4
 damage = 11

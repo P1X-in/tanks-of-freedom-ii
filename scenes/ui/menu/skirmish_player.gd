@@ -2,7 +2,7 @@ extends Control
 
 const PLAYER_HUMAN = "human"
 const PLAYER_AI = "ai"
-const PLAYER_HUMAN_LABEL = "Human"
+const PLAYER_HUMAN_LABEL = "TR_HUMAN"
 const PLAYER_AI_LABEL = "AI"
 
 const AP_STEP = 50

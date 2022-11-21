@@ -12,9 +12,8 @@ script = ExtResource( 2 )
 
 [node name="label" type="Label" parent="."]
 margin_left = 3.0
-margin_top = 13.0
 margin_right = 253.0
-margin_bottom = 63.0
+margin_bottom = 50.0
 custom_fonts/font = ExtResource( 1 )
 text = "Option
 "
@@ -22,9 +21,8 @@ valign = 1
 
 [node name="slider_value" type="Label" parent="."]
 margin_left = 200.0
-margin_top = 13.0
 margin_right = 250.0
-margin_bottom = 63.0
+margin_bottom = 50.0
 custom_fonts/font = ExtResource( 1 )
 text = "10
 "

@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/tiles/units/npc/npc.tscn" type="PackedScene" id=3]
 
 [node name="king" instance=ExtResource( 3 )]
-unit_name = "King"
+unit_name = "TR_KING"
 side = "yellow"
 
 [node name="mesh" parent="mesh_anchor" index="0"]

@@ -13,6 +13,8 @@ var focus_method = null
 
 func _ready():
     var _error = self.connect("pressed", self, "_on_button_pressed")
+    self.label.set_message_translation(false)
+    self.label.notification(NOTIFICATION_TRANSLATION_CHANGED)
 
 func fill_data(name, map_online_id):
     self.map_name = name

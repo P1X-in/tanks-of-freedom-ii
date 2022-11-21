@@ -5,9 +5,11 @@
 
 [node name="missile" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-label = "Missile"
+label = "TR_MISSILE"
 cooldown = 2
 named_icon = "missile"
 ability_range = 3
 marker_colour = "red"
+damage = 10
+min_level = 0
 max_level = 0

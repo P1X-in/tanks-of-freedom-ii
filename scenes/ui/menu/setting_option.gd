@@ -24,9 +24,9 @@ func _read_setting():
             self.button.set_text("???")
             self.button.set_disabled(true)
         true:
-            self.button.set_text("ON")
+            self.button.set_text("TR_ON")
         false:
-            self.button.set_text("OFF")
+            self.button.set_text("TR_OFF")
 
 func _on_toggle_button_pressed():
     self.settings.set_option(self.option_key, not self.settings.get_option(self.option_key))

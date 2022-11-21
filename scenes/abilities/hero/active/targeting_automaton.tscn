@@ -5,6 +5,7 @@
 
 [node name="targeting_automaton" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
-label = "Targeting Automaton"
+label = "TR_TARG_AUT"
 named_icon = "targeting_automaton"
+ability_range = 0
 marker_colour = "blue"

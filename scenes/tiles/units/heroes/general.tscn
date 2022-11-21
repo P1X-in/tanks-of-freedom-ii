@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/abilities/hero/active/deep_strike.tscn" type="PackedScene" id=5]
 
 [node name="general" instance=ExtResource( 2 )]
-unit_name = "General"
+unit_name = "TR_GENERAL"
 side = "blue"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
@@ -18,3 +18,4 @@ material/0 = ExtResource( 1 )
 
 [node name="deep_strike" parent="." index="4" instance=ExtResource( 5 )]
 index = 2
+unit_template = "blue_infantry"

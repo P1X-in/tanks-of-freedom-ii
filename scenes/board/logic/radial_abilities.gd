@@ -31,7 +31,7 @@ func fill_radial_with_abilities(board, radial, context_object):
 
 
 func fill_radial_with_building_abilities(board, radial, building):
-    radial.set_field(board.ui.icons.back.instance(), "Back", 6, board, "toggle_radial_menu")
+    radial.set_field(board.ui.icons.back.instance(), "TR_BACK", 6, board, "toggle_radial_menu")
 
     var icon
     var label
@@ -49,19 +49,19 @@ func fill_radial_with_building_abilities(board, radial, building):
             icon.is_side_tile = false
             icon.viewport_size =  20
             icon.set_tile(icon_model, 0)
-            label = ability.label
-            label += "\n" + str(ap_cost) + " AP"
+            label = tr(ability.label)
+            label += "\n" + str(ap_cost) + " " + tr("TR_AP")
             radial.set_field(icon, label, ability.index, board, "activate_production_ability", [ability])
 
 func fill_radial_with_unit_abilities(board, radial, unit):
-    radial.set_field(board.ui.icons.back.instance(), "Back", 6, board, "toggle_radial_menu")
+    radial.set_field(board.ui.icons.back.instance(), "TR_BACK", 6, board, "toggle_radial_menu")
     var label
 
     for ability in unit.active_abilities:
         if ability.is_visible(board):
-            label = ability.label
+            label = tr(ability.label)
             if ability.ap_cost > 0:
-                label += "\n" + str(ability.ap_cost) + " AP"
+                label += "\n" + str(ability.ap_cost) + " " + tr("TR_AP")
             radial.set_field(board.ui.icons.get_named_icon(ability.named_icon), label, ability.index, board, "activate_ability", [ability])
 
             if ability.is_on_cooldown():
@@ -72,7 +72,7 @@ func fill_radial_with_ability_bans(editor, radial, context_object):
         self.fill_radial_with_building_abilities_bans(editor, radial, context_object)
 
 func fill_radial_with_building_abilities_bans(editor, radial, building):
-    radial.set_field(editor.ui.icons.back.instance(), "Back", 6, editor, "toggle_radial_menu")
+    radial.set_field(editor.ui.icons.back.instance(), "TR_BACK", 6, editor, "toggle_radial_menu")
 
     var icon
     var label
@@ -87,8 +87,8 @@ func fill_radial_with_building_abilities_bans(editor, radial, building):
             icon.is_side_tile = false
             icon.viewport_size =  20
             icon.set_tile(icon_model, 0)
-            label = ability.label
-            label += "\n" + str(ability.ap_cost) + " AP"
+            label = tr(ability.label)
+            label += "\n" + str(ability.ap_cost) + " " + tr("TR_AP")
             radial.set_field(icon, label, ability.index, self, "_ban_ability", [ability, radial])
             if ability.disabled:
                 radial.set_field_disabled(ability.index, "X")

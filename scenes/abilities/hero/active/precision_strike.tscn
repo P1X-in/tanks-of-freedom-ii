@@ -5,8 +5,7 @@
 
 [node name="precision_strike" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-label = "Precision Strike"
-ap_cost = 0
+label = "TR_PREC_STRIKE"
 named_icon = "precision_strike"
 ability_range = 2
 marker_colour = "red"

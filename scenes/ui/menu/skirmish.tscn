@@ -182,7 +182,7 @@ margin_top = 640.0
 margin_right = 1170.0
 margin_bottom = 670.0
 custom_fonts/font = ExtResource( 2 )
-text = "Start"
+text = "TR_START"
 __meta__ = {
 "_editor_description_": ""
 }
@@ -193,7 +193,7 @@ margin_top = 640.0
 margin_right = 130.0
 margin_bottom = 670.0
 custom_fonts/font = ExtResource( 2 )
-text = "Back"
+text = "TR_BACK"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""

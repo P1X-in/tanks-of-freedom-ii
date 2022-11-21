@@ -26,6 +26,7 @@ var settings = {
     "vsync": false,
     "fps": 144.0,
     "ips": 144.0,
+    "locale": "en",
 }
 
 
@@ -84,6 +85,8 @@ func _apply_option(key):
         Engine.set_target_fps(self.settings[key])
     elif key == "ips":
         Engine.set_iterations_per_second(self.settings[key])
+    elif key == "locale":
+        TranslationServer.set_locale(self.settings[key])
 
 func _set_bus_vol(name, key):
     var decibels = self._get_decibels(self.settings[key])
@@ -130,11 +133,11 @@ func _detect_steam_deck():
         return
 
     self.settings["steamdeck_detection"] = true
-    
+
     if OS.get_name() == "X11":
         var output = []
         var exit_code = OS.execute("lsb_release", ["-si"], true, output)
-        
+
         if exit_code == 0 and output.size() > 0 and output[0].strip_edges() == "SteamOS":
             self.settings["is_steamdeck"] = true
             self._apply_steam_deck_settings()

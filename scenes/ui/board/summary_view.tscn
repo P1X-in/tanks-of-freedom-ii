@@ -13,7 +13,6 @@ margin_right = 300.0
 margin_bottom = 50.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
@@ -23,9 +22,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 7.0
 custom_fonts/font = ExtResource( 2 )
-text = "Sapphire Dawn Wins!"
+text = "TR_SAP_DAWN_WIN"
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -36,9 +36,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 7.0
 custom_fonts/font = ExtResource( 2 )
-text = "Ruby Dusk Wins!"
+text = "TR_RUBY_DUSK_WIN"
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -49,9 +50,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 7.0
 custom_fonts/font = ExtResource( 2 )
-text = "Amber Noon Wins!"
+text = "TR_AMBER_NOON_WIN"
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -62,9 +64,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 7.0
 custom_fonts/font = ExtResource( 2 )
-text = "Jade Twilight Wins!"
+text = "TR_JADE_TWI_WIN"
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -75,9 +78,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 7.0
 custom_fonts/font = ExtResource( 2 )
-text = "Obsidian Night Wins!"
+text = "TR_OBS_NIGHT_WIN"
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -87,7 +91,7 @@ margin_left = -300.0
 margin_top = 60.0
 margin_right = -200.0
 margin_bottom = 90.0
-text = "Main Menu"
+text = "TR_MAIN_MENU"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -97,7 +101,7 @@ margin_left = 200.0
 margin_top = 60.0
 margin_right = 300.0
 margin_bottom = 90.0
-text = "Restart"
+text = "TR_RESTART"
 __meta__ = {
 "_edit_use_anchors_": false
 }

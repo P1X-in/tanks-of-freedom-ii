@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/units/npcs/president.obj" type="ArrayMesh" id=3]
 
 [node name="president" instance=ExtResource( 1 )]
-unit_name = "President"
+unit_name = "TR_PRESIDENT"
 side = "blue"
 
 [node name="mesh" parent="mesh_anchor" index="0"]

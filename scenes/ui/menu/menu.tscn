@@ -117,7 +117,7 @@ margin_left = -150.0
 margin_top = -110.0
 margin_right = 150.0
 margin_bottom = -70.0
-text = "CAMPAIGN"
+text = "TR_CAMPAIGN"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -127,14 +127,14 @@ margin_left = -150.0
 margin_top = -50.0
 margin_right = 150.0
 margin_bottom = -10.0
-text = "SKIRMISH"
+text = "TR_SKIRMISH"
 
 [node name="editor_button" type="Button" parent="."]
 margin_left = -150.0
 margin_top = 10.0
 margin_right = 150.0
 margin_bottom = 50.0
-text = "EDITOR"
+text = "TR_EDITOR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -144,7 +144,7 @@ margin_left = -150.0
 margin_top = 70.0
 margin_right = 150.0
 margin_bottom = 110.0
-text = "SETTINGS"
+text = "TR_SETTINGS"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -154,7 +154,7 @@ margin_left = -150.0
 margin_top = 130.0
 margin_right = 150.0
 margin_bottom = 170.0
-text = "CONTROLS"
+text = "TR_CONTROLS"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -164,7 +164,7 @@ margin_left = -150.0
 margin_top = 190.0
 margin_right = 150.0
 margin_bottom = 230.0
-text = "QUIT GAME"
+text = "TR_QUIT"
 
 [node name="animations" type="AnimationPlayer" parent="."]
 playback_speed = 4.0

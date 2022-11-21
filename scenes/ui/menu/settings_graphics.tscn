@@ -11,38 +11,38 @@ margin_bottom = -500.0
 
 [node name="msaa" parent="." instance=ExtResource( 2 )]
 unavailable = true
-option_name = "MSAA"
+option_name = "TR_MSAA"
 option_key = "msaa"
-help_tip = "Anti-aliasing intensity for smoother edges. Disabled due to known issue."
+help_tip = "TR_MSAA_DESC"
 available_values = [ 0.0, 2.0, 4.0, 8.0, 16.0 ]
 
 [node name="fxaa" parent="." instance=ExtResource( 1 )]
 margin_top = 85.0
 margin_bottom = 135.0
 unavailable = true
-option_name = "FXAA"
+option_name = "TR_FXAA"
 option_key = "fxaa"
-help_tip = "Fast anti-aliasing method. Can look blurry. Disabled due to poor presentation."
+help_tip = "TR_FXAA_DESC"
 
 [node name="vsync" parent="." instance=ExtResource( 1 )]
 margin_top = 150.0
 margin_bottom = 200.0
-option_name = "V-Sync"
+option_name = "TR_VSYNC"
 option_key = "vsync"
-help_tip = "Vertical syncronisation. Prevents screen tearing."
+help_tip = "TR_VSYNC_DESC"
 
 [node name="fps" parent="." instance=ExtResource( 2 )]
 margin_top = 215.0
 margin_bottom = 265.0
-option_name = "FPS limit"
+option_name = "TR_FPS_L"
 option_key = "fps"
-help_tip = "Limit for rendering FPS"
+help_tip = "TR_FPS_L_DESC"
 available_values = [ 30.0, 60.0, 120.0, 144.0 ]
 
 [node name="ips" parent="." instance=ExtResource( 2 )]
 margin_top = 280.0
 margin_bottom = 330.0
-option_name = "Input FPS"
+option_name = "TR_IPS_L"
 option_key = "ips"
-help_tip = "Input frequency. Higher value makes controls smoother, but consumes more CPU."
+help_tip = "TR_IPS_L_DESC"
 available_values = [ 30.0, 60.0, 120.0, 144.0 ]

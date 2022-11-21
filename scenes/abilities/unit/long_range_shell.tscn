@@ -5,9 +5,9 @@
 
 [node name="long_range_shell" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-label = "Long-Range Shell"
-ap_cost = 0
+label = "TR_LR_SHELL"
 cooldown = 3
 named_icon = "long_range_shell"
 ability_range = 2
 marker_colour = "red"
+damage = 10

@@ -18,6 +18,10 @@ onready var type_next = $"tile/wrapper/tile_type_next"
 
 var icons = preload("res://scenes/ui/icons/icons.gd").new()
 
+func _ready():
+    self.map_name_label.set_message_translation(false)
+    self.map_name_label.notification(NOTIFICATION_TRANSLATION_CHANGED)
+
 func update_position(x, y):
     self.position_label.set_text("[" + str(x) + ", " + str(y) + "]")
 
@@ -82,7 +86,7 @@ func close_all_popups():
 
 func is_radial_open():
     return self.radial.is_visible()
-    
+
 func is_popup_open():
     if self.picker.is_visible():
         return true
@@ -112,4 +116,4 @@ func load_minimap(map_name):
 
 func wipe_minimap():
     self.minimap.wipe()
-    
+

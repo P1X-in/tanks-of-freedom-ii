@@ -11,8 +11,8 @@
 [node name="skirmish_player" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -1270.0
-margin_bottom = -955.0
+margin_right = -630.0
+margin_bottom = -675.0
 script = ExtResource( 1 )
 
 [node name="background" type="ColorRect" parent="."]
@@ -25,30 +25,23 @@ __meta__ = {
 }
 
 [node name="blue_player" type="Label" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 1.0
-margin_right = -290.0
-margin_bottom = 1.0
+margin_left = 5.0
+margin_right = 505.0
+margin_bottom = 125.0
 custom_fonts/font = ExtResource( 2 )
-text = "Sapphire Dawn"
-align = 1
+text = "TR_SAP_DAWN"
 valign = 1
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
 [node name="red_player" type="Label" parent="."]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 1.0
-margin_right = -290.0
-margin_bottom = 1.0
+margin_left = 5.0
+margin_right = 505.0
+margin_bottom = 125.0
 custom_fonts/font = ExtResource( 2 )
-text = "Ruby Dusk"
-align = 1
+text = "TR_RUBY_DUSK"
 valign = 1
 __meta__ = {
 "_editor_description_": ""
@@ -56,14 +49,11 @@ __meta__ = {
 
 [node name="yellow_player" type="Label" parent="."]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 1.0
-margin_right = -290.0
-margin_bottom = 1.0
+margin_left = 5.0
+margin_right = 505.0
+margin_bottom = 125.0
 custom_fonts/font = ExtResource( 2 )
-text = "Amber Noon"
-align = 1
+text = "TR_AMBER_NOON"
 valign = 1
 __meta__ = {
 "_editor_description_": ""
@@ -71,14 +61,11 @@ __meta__ = {
 
 [node name="green_player" type="Label" parent="."]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 1.0
-margin_right = -290.0
-margin_bottom = 1.0
+margin_left = 5.0
+margin_right = 505.0
+margin_bottom = 125.0
 custom_fonts/font = ExtResource( 2 )
-text = "Jade Twilight"
-align = 1
+text = "TR_JADE_TWILIGHT"
 valign = 1
 __meta__ = {
 "_editor_description_": ""
@@ -86,31 +73,28 @@ __meta__ = {
 
 [node name="black_player" type="Label" parent="."]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 1.0
-margin_right = -290.0
-margin_bottom = 1.0
+margin_left = 5.0
+margin_right = 505.0
+margin_bottom = 125.0
 custom_fonts/font = ExtResource( 2 )
-text = "Obsidian Night"
-align = 1
+text = "TR_OBS_NIGHT"
 valign = 1
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="player_type" type="Button" parent="."]
-margin_left = 370.0
-margin_top = 35.0
-margin_right = 465.0
-margin_bottom = 85.0
-text = "HUMAN"
+margin_left = 540.0
+margin_top = 10.0
+margin_right = 640.0
+margin_bottom = 60.0
+text = "TR_HUMAN"
 
 [node name="starting_ap" type="Button" parent="."]
-margin_left = 475.0
-margin_top = 35.0
-margin_right = 570.0
-margin_bottom = 85.0
+margin_left = 540.0
+margin_top = 65.0
+margin_right = 640.0
+margin_bottom = 115.0
 text = "50 AP"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -141,11 +125,11 @@ position = Vector2( 325, 62 )
 texture = ExtResource( 7 )
 
 [node name="swap" type="Button" parent="."]
-margin_left = 540.0
+margin_left = 100.0
 margin_top = -25.0
-margin_right = 635.0
+margin_right = 195.0
 margin_bottom = 25.0
-text = "Swap"
+text = "TR_SWAP"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -3,6 +3,6 @@
 [ext_resource path="res://scenes/abilities/production/unit.tscn" type="PackedScene" id=1]
 
 [node name="tank" instance=ExtResource( 1 )]
-label = "Tank"
+label = "TR_TANK"
 ap_cost = 50
 template_name = "yellow_tank"

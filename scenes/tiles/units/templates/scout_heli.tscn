@@ -14,7 +14,7 @@
 script = ExtResource( 9 )
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
-unit_name = "Scout Helicopter"
+unit_name = "TR_SCOUT_HELI"
 side = "neutral"
 material_type = "metallic"
 max_hp = 10

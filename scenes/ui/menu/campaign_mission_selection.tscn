@@ -162,7 +162,7 @@ margin_top = 650.0
 margin_right = 550.0
 margin_bottom = 680.0
 custom_fonts/font = ExtResource( 2 )
-text = "Back"
+text = "TR_BACK"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
@@ -174,7 +174,7 @@ margin_top = 650.0
 margin_right = 750.0
 margin_bottom = 680.0
 custom_fonts/font = ExtResource( 2 )
-text = "Select"
+text = "TR_SELECT"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""

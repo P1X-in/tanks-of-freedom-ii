@@ -36,10 +36,7 @@ margin_left = 650.0
 margin_top = 210.0
 margin_right = 800.0
 margin_bottom = 240.0
-text = "Continue..."
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "TR_CONTINUE"
 
 [node name="actor_left" type="Node2D" parent="background"]
 

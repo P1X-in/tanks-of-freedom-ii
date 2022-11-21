@@ -5,6 +5,6 @@
 
 [node name="prince" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-label = "The Prince"
+label = "TR_PRINCE"
 ap_cost = 150
 template_name = "hero_prince"

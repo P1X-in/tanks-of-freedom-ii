@@ -3,6 +3,6 @@
 [ext_resource path="res://scenes/abilities/production/unit.tscn" type="PackedScene" id=1]
 
 [node name="heli" instance=ExtResource( 1 )]
-label = "Attack Helicopter"
+label = "TR_ATT_HELI"
 ap_cost = 70
 template_name = "blue_heli"

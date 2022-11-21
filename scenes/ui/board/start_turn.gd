@@ -12,7 +12,7 @@ onready var turn_label = $"background/turn"
 
 func flash(player, turn):
     self._reset_labels()
-    self.turn_label.set_text("Turn " + str(turn))
+    self.turn_label.set_text(tr("TR_TURN") + " " + str(turn))
 
     match player:
         "blue":

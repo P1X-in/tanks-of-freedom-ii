@@ -5,7 +5,7 @@
 
 [node name="promote" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-label = "Promote"
+label = "TR_PROMOTE"
 named_icon = "promote"
 ability_range = 1
 marker_colour = "blue"

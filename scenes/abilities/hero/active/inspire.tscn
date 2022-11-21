@@ -5,7 +5,7 @@
 
 [node name="inspire" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-label = "Inspire"
+label = "TR_INSPIRE"
 named_icon = "inspire"
 ability_range = 2
 marker_colour = "blue"

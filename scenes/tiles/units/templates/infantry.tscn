@@ -14,10 +14,17 @@
 [node name="infantry" instance=ExtResource( 2 )]
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
-unit_name = "Infantry"
+unit_name = "TR_INFANTRY"
+side = "neutral"
+material_type = "normal"
+max_hp = 10
+max_move = 4
 attack = 6
 armor = 0
 can_capture = true
+can_fly = false
+max_attacks = 1
+uses_metallic_material = false
 unit_value = 25
 unit_class = "infantry"
 
@@ -38,6 +45,7 @@ __meta__ = {
 
 [node name="heavy_weapon" parent="." index="3" instance=ExtResource( 1 )]
 index = 2
+damage = 8
 
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource( 3 )

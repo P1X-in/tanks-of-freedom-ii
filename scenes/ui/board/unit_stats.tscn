@@ -70,10 +70,9 @@ margin_left = 300.0
 margin_top = 60.0
 margin_right = 400.0
 margin_bottom = 80.0
-text = "HP"
+text = "TR_HP"
 valign = 1
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
@@ -94,7 +93,7 @@ margin_left = 300.0
 margin_top = 80.0
 margin_right = 400.0
 margin_bottom = 100.0
-text = "Armour"
+text = "TR_ARMOUR"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -118,7 +117,7 @@ margin_left = 300.0
 margin_top = 100.0
 margin_right = 400.0
 margin_bottom = 120.0
-text = "AP"
+text = "TR_AP"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -142,7 +141,7 @@ margin_left = 300.0
 margin_top = 120.0
 margin_right = 400.0
 margin_bottom = 140.0
-text = "Attack"
+text = "TR_ATTACK"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -166,7 +165,7 @@ margin_left = 300.0
 margin_top = 140.0
 margin_right = 400.0
 margin_bottom = 160.0
-text = "Level"
+text = "TR_LEVEL"
 valign = 1
 __meta__ = {
 "_editor_description_": ""
@@ -189,7 +188,7 @@ margin_left = 300.0
 margin_top = 160.0
 margin_right = 400.0
 margin_bottom = 180.0
-text = "Kills"
+text = "TR_KILLS"
 valign = 1
 __meta__ = {
 "_editor_description_": ""
@@ -298,7 +297,7 @@ margin_left = -50.0
 margin_top = 160.0
 margin_right = 50.0
 margin_bottom = 190.0
-text = "Back"
+text = "TR_BACK"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""

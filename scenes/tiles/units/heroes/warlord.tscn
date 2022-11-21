@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/abilities/hero/active/promote.tscn" type="PackedScene" id=5]
 
 [node name="warlord" instance=ExtResource( 2 )]
-unit_name = "Warlord"
+unit_name = "TR_WARLORD"
 side = "yellow"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
