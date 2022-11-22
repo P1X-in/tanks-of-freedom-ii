@@ -25,19 +25,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Welcome back to the boot camp, recruit!"
+                        "text": "tr_core_tutorial_m2_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Today you are going to learn about types of units and buildings that you will encounter during your deployments. Let us begin."
+                        "text": "tr_core_tutorial_m2_t2"
                     }
                 },
                 {
@@ -53,10 +53,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "You are already familiar with Infantry units. These soldiers are not the strongest, fastest or toughest unit around, but their ability to claim buildings makes them essential. They are also the cheapest to deploy, so make sure, that you always have some under your command."
+                        "text": "tr_core_tutorial_m2_t3"
                     }
                 },
                 {"action" : "despawn", "details" : {"who" : [20, 24]}, "delay" : 1},
@@ -74,27 +74,27 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "This unit is simply called a Tank. These are your frontline-pushing muscle. Good mobility, combined with strong armour and powerful cannon allows them to quickly deal with enemy forces."
+                        "text": "tr_core_tutorial_m2_t4"
                     }
                 },
                 {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "red_infantry", "side" : "red", "rotation" : 90}},
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Tanks are especially effective against enemy Infantry units. Try it out now and destroy that unit."
+                        "text": "tr_core_tutorial_m2_t5"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Destroy enemy units."
+                        "text": "tr_core_tutorial_m2_o1"
                     }
                 },
                 {
@@ -108,19 +108,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "As you can see, that Infantry unit didn't stand a chance. Tanks are also quite effective at dealing with other armoured units. When facing enemy Tanks, keep your own Infantry out of the way, and attack when your opponent will not be able to perform counterattacks!"
+                        "text": "tr_core_tutorial_m2_t6"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Tanks do have a weakness, that you can exploit: they can not attack air units."
+                        "text": "tr_core_tutorial_m2_t7"
                     }
                 },                
                 {"action" : "despawn", "details" : {"who" : [19, 19]}},
@@ -140,20 +140,20 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "This is where Attack Helicopters come in. These very expensive units have moderate armour and attack damage, paired with great mobility, and are a perfect counter for enemy Tanks."
+                        "text": "tr_core_tutorial_m2_t8"
                     }
                 },
                 {"action" : "spawn", "details" : {"where" : [24, 19], "template" : "red_tank", "side" : "red", "rotation" : 90}},
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Attack this enemy tank until it is destroyed. You will have to end your turn to attack again."
+                        "text": "tr_core_tutorial_m2_t9"
                     }
                 },
                 {
@@ -167,10 +167,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Having a couple of Helicopters can quickly put a stop to a wave of Tanks, especially with a bit of support from Tanks on your side. As I mentioned, they are expensive, so use them wisely."
+                        "text": "tr_core_tutorial_m2_t10"
                     }
                 },
                 {"action" : "despawn", "details" : {"who" : [23, 19]}},
@@ -190,29 +190,29 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Helicopters are quite powerful, but not unstoppable. Your simple Infantry units are able to hit them. When faced with an opponent fielding a lot of flying units, countering with a lot of Infantry is always a good tactic."
+                        "text": "tr_core_tutorial_m2_t11"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "If your opponent fails to disengage his fliers from your Infantry, it is going to be very costly for them. In most cases, you can field soldiers way quicker, and in greater numbers, than they can deploy Helicopters. So make them bleed."
+                        "text": "tr_core_tutorial_m2_t12"
                     }
                 },
                 {"action" : "spawn", "details" : {"where" : [24, 23], "template" : "red_heli", "side" : "red", "rotation" : 90}},
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Take down that Helicopter with your Infantry unit to proceed. You will have to end your turn to attack again."
+                        "text": "tr_core_tutorial_m2_t13"
                     }
                 },
                 {
@@ -226,10 +226,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Well done. Infantry, Tanks and Helicopters are the three types of units, that will form the core of your armies."
+                        "text": "tr_core_tutorial_m2_t14"
                     }
                 },
                 {"action" : "despawn", "details" : {"who" : [23, 23]}},
@@ -238,10 +238,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Our engineers are not sitting idly though. On the contrary - they constantly work on building new types of weapons for us to use."
+                        "text": "tr_core_tutorial_m2_t15"
                     }
                 },
                 {
@@ -260,64 +260,64 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Here you can see three newly developed types of units, that you may encounter on your missions."
+                        "text": "tr_core_tutorial_m2_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Mobile Infantry has better mobility than regular Infantry. Coupled with their ability to claim buildings, they are a great option when you absolutely need to capture that building as soon as possible. They also have very useful support abilities, that you will learn about in a separate training session."
+                        "text": "tr_core_tutorial_m2_t17"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "All these improvements are not without a price though. Mobile Infantry lacks specialised and heavy weaponry, so they can not attack flying units. Their attack damage is also lower, but cost of deployment is higher."
+                        "text": "tr_core_tutorial_m2_t18"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Rocket Artillery is a glass cannon of vehicles. It is very expensive, has no armour, is quite slow, and is incapable of direct combat or counterattacks. All of these downsides are worth it, as it can hit enemy units - both air and ground - from a few tiles away."
+                        "text": "tr_core_tutorial_m2_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "They require other units for protection, but in return they can wreck havoc from the back lines."
+                        "text": "tr_core_tutorial_m2_t20"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Scout Helicopters are smaller cousins of Attack Helicopters. They have even more mobility and cost less, than the big ones, but have significantly lower attack damage. Perfect for when you need air support far away from your base, and quickly."
+                        "text": "tr_core_tutorial_m2_t21"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "They are most effective when used to harras your opponent using hit-and-run tactics."
+                        "text": "tr_core_tutorial_m2_t22"
                     }
                 },
                 {"action" : "despawn", "details" : {"who" : [19, 25]}},
@@ -326,10 +326,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "You have now seen all of the types of units, that will be available to you. However, not all units look the same. In fact, every nation came up with their own designs. Let's have a look."
+                        "text": "tr_core_tutorial_m2_t23"
                     }
                 },
                 {
@@ -345,19 +345,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Even though these units look different, they are all equal in effectivnes on the battlefield. You should memorize them, in order to avoid costly mistakes!"
+                        "text": "tr_core_tutorial_m2_t24"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Let's now move on to the buildings."
+                        "text": "tr_core_tutorial_m2_t25"
                     }
                 },
                 {
@@ -373,10 +373,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Here you can see all styles of HQ buildings. These allow you to recruit Infantry units at an inflated price. Use that option only when you really have to. HQ also allows you to deploy Hero units. Loosing HQ usually means, that your mission ends in a failure, so make sure to protect it at all cost. Every HQ provides you with 20AP per turn."
+                        "text": "tr_core_tutorial_m2_t26"
                     }
                 },
                 {
@@ -392,10 +392,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "These are Barracks buildings used to deploy Infantry and Mobile Infantry units. They have standard prices here, so using Barracks is preferrable to using HQ for deployments. Every Barrack provides you with 5AP per turn."
+                        "text": "tr_core_tutorial_m2_t27"
                     }
                 },
                 {
@@ -411,10 +411,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "These are an industrial Factory buildings. They have the ability to build your Tank and Rocket Artillery units, which makes them very valuable. Every Factory provides you with 5AP per turn."
+                        "text": "tr_core_tutorial_m2_t28"
                     }
                 },
                 {
@@ -430,10 +430,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "These are various styles of Airfields, that can provide you with Attack Helicopters and Scout Helicopters. Usually quite rare and of high strategic importance. Every Airfield provides you with 5AP per turn."
+                        "text": "tr_core_tutorial_m2_t29"
                     }
                 },
                 {
@@ -449,19 +449,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "And, finally, the Communication Towers. These structures do not deploy any units, but are quite common, and each one provides you with 15AP per turn."
+                        "text": "tr_core_tutorial_m2_t30"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "This concludes your training about unit and building types. Class dismissed."
+                        "text": "tr_core_tutorial_m2_t31"
                     }
                 },
                 {

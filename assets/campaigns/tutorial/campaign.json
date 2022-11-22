@@ -5,9 +5,9 @@
     "missions" : [
         {
             "name" : "basics",
-            "title" : "tr_core_tutorial_mission_1_name",
+            "title" : "tr_core_tutorial_mission1_name",
             "map" : "tutorial_basics.tofmap.json",
-            "description" : "tr_core_tutorial_camp_desc",
+            "description" : "tr_core_tutorial_mission1_desc",
             "marker" : [460, 200],
             "players": [
                 {
@@ -19,9 +19,9 @@
         },
         {
             "name" : "units_buildings",
-            "title" : "Units and buildings",
+            "title" : "tr_core_tutorial_mission2_name",
             "map" : "tutorial_units_buildings.tofmap.json",
-            "description" : "In this training scenario you are going to learn about unit types, with their strenghts and weaknesses, as well as all the types of military buildings.",
+            "description" : "tr_core_tutorial_mission2_desc",
             "marker" : [390, 335],
             "players": [
                 {
