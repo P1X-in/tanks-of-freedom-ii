@@ -5,9 +5,9 @@
     "missions" : [
         {
             "name" : "basics",
-            "title" : "Gameplay basics",
+            "title" : "tr_core_tutorial_mission_1_name",
             "map" : "tutorial_basics.tofmap.json",
-            "description" : "In this training scenario you are going to learn about core game mechanics: moving units, claiming buildings, resources, recruitment and combat.",
+            "description" : "tr_core_tutorial_camp_desc",
             "marker" : [460, 200],
             "players": [
                 {

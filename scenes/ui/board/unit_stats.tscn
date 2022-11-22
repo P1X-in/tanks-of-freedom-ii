@@ -117,7 +117,7 @@ margin_left = 300.0
 margin_top = 100.0
 margin_right = 400.0
 margin_bottom = 120.0
-text = "TR_AP"
+text = "TR_MP"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false,

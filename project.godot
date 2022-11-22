@@ -175,7 +175,7 @@ editor_ai_pause={
 
 [locale]
 
-translations=PoolStringArray( "res://assets/translations/core.en.en.translation", "res://assets/translations/core.pl.pl.translation" )
+translations=PoolStringArray( "res://assets/translations/core.en.en.translation", "res://assets/translations/core.pl.pl.translation", "res://assets/translations/common.en.en.translation", "res://assets/translations/common.pl.pl.translation" )
 
 [network]
 

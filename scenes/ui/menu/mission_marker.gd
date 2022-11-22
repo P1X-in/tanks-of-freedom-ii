@@ -17,7 +17,7 @@ func hide_panel():
     self.animations.play("hide")
 
 func set_mission_title(mission_no, title):
-    var label_text = str(mission_no) + ". " + title
+    var label_text = str(mission_no) + ". " + tr(title)
     $"label/background/mission_name".set_text(label_text)
     var box = $"label/background"
     var size = box.get_size()
