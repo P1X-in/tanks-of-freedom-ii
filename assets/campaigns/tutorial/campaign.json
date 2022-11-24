@@ -47,9 +47,9 @@
         },
         {
             "name" : "heroes",
-            "title" : "Hero units",
+            "title" : "tr_core_tutorial_mission4_name",
             "map" : "tutorial_hero_units.tofmap.json",
-            "description" : "In this training scenario you are going to learn about some Hero units and their unique abilities.",
+            "description" : "tr_core_tutorial_mission4_desc",
             "marker" : [650, 400],
             "players": [
                 {

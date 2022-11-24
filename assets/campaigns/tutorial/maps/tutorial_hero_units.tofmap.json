@@ -32,10 +32,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Welcome back! This is your last training session. After that, you will be ready for real action."
+                        "text": "tr_core_tutorial_m4_t1"
                     }
                 },
                 {
@@ -51,46 +51,46 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Today we are joined by a Commando - Sergeant Blake. He will be helping me in teaching you about Hero units."
+                        "text": "tr_core_tutorial_m4_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Always glad to help new recruits!"
+                        "text": "tr_core_tutorial_m4_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Hero units are a special type of unit. They are very though and deal a lot of damage, though their mobility is below average."
+                        "text": "tr_core_tutorial_m4_t4"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "More importantly, Hero units have passive and active abilities. Let's start with the passive one."
+                        "text": "tr_core_tutorial_m4_t5"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Every hero, when present on the battlefield, gives you a passive benefit. Commando has the Trained Specialist ability, which makes cooldowns for active abilities of your units 1 turn shorter. Thanks to this, your veteran units become even more valuable."
+                        "text": "tr_core_tutorial_m4_t6"
                     }
                 },
                 {
@@ -106,17 +106,17 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Try using your Artillery unit to clear some tiles on the other side of the forest."
+                        "text": "tr_core_tutorial_m4_t7"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Destroy Infantry using Rocket Artillery."
+                        "text": "tr_core_tutorial_m4_o1"
                     }
                 },
                 {
@@ -130,26 +130,26 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Good. Now open the ability radial of your Artillery unit again. You will notice, that turns left to cool down the ability is 1 instead of usual 2. You can end your turn, reposition your Artillery and strike again."
+                        "text": "tr_core_tutorial_m4_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "In the meantime, a field on the other side of the forest opened up. Move Blake there using his active ability Infiltration. If you already used his active ability, just wait a few turns for it to cool down."
+                        "text": "tr_core_tutorial_m4_t9"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Use Blake's ability to bypass Forest."
+                        "text": "tr_core_tutorial_m4_o2"
                     }
                 },
                 {
@@ -163,19 +163,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Commando ability allows you to reach places otherwise inaccessible, or hard to get to. You can bypass obstacles such as forests, mountains and buildings, as well as enemy units, and reach your target."
+                        "text": "tr_core_tutorial_m4_t10"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Remember, that different Heroes have different abilities. Some of them will target specific units or tiles. Some of them might target Heroes themselves in order to be used, like the ones that give benefits to units in certain radius around the Hero."
+                        "text": "tr_core_tutorial_m4_t11"
                     }
                 },
                 {
@@ -191,17 +191,17 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "There is an enemy Infantry unit guarding our HQ. Have Blake take it out."
+                        "text": "tr_core_tutorial_m4_t12"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Destroy enemy unit."
+                        "text": "tr_core_tutorial_m4_o3"
                     }
                 },
                 {
@@ -222,28 +222,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Excellent performance Sergeant."
+                        "text": "tr_core_tutorial_m4_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Thank you, Sir!"
+                        "text": "tr_core_tutorial_m4_t14"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Now let's claim this building."
+                        "text": "tr_core_tutorial_m4_t15"
                     }
                 },
                 {
@@ -260,45 +260,45 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "That will be all for now, Sergeant. You are dismissed."
+                        "text": "tr_core_tutorial_m4_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Yes Sir!"
+                        "text": "tr_core_tutorial_m4_t17"
                     }
                 },
                 {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 27}]}, "delay" : 1},
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "On most missions, the hero will be there from the beggining, and loosing one might fail your missions. But in a typical skirmish, you will have to deploy your Hero from your HQ building."
+                        "text": "tr_core_tutorial_m4_t18"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Time for me to stretch my legs. Go ahead and deploy me from this HQ."
+                        "text": "tr_core_tutorial_m4_t19"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Deploy General from HQ."
+                        "text": "tr_core_tutorial_m4_o4"
                     }
                 },
                 {
@@ -312,17 +312,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "With me on the battlefield, thanks to my Recruitment passive ability, all Infantry and Mobile Infantry units can be deployed for 10AP less. This effect applies both to HQ and Barracks. Go on and deploy an Infantry unit from HQ - you should notice, that it only costs 30AP instead of typical 40AP."
+                        "text": "tr_core_tutorial_m4_t20"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Deploy Infantry unit from HQ."
+                        "text": "tr_core_tutorial_m4_o5"
+                    }
+                },
+                {
+                    "action": "ban_unit",
+                    "details": {
+                        "ability_id": 2,
+                        "where": [
+                            19,
+                            26
+                        ],
+                        "ban": false
                     }
                 },
                 {
@@ -336,28 +347,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Infantry is my specialty, so make sure to call on me, when you plan on using a lot of them."
+                        "text": "tr_core_tutorial_m4_t21"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "As for my active ability, it is called Deep Strike, and it allows me to call in a paratrooper, that will land up to two tiles away from me. It can be very useful, when you have reached the enemy base, but lost all of your Infantry units in the process."
+                        "text": "tr_core_tutorial_m4_t22"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Just make sure that landing zone is safe, as this new unit is not going to be able to act until next turn."
+                        "text": "tr_core_tutorial_m4_t23"
                     }
                 },
                 {
@@ -370,17 +381,17 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Go on and try using my ability. If you already did that before, wait a few turns and use it again."
+                        "text": "tr_core_tutorial_m4_t24"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Deploy an Infantry unit using General's ability."
+                        "text": "tr_core_tutorial_m4_o6"
                     }
                 },
                 {
@@ -394,19 +405,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Good job. That should give you an overview of Hero units and their abilities."
+                        "text": "tr_core_tutorial_m4_t25"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Every Nation has thier own, unique Heroes, with their own unique abilities, so be on your guard, as you never know what will happen, when one of them shows up."
+                        "text": "tr_core_tutorial_m4_t26"
                     }
                 },
                 {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}},
@@ -423,48 +434,48 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "One final note."
+                        "text": "tr_core_tutorial_m4_t27"
                     }
                 },
                 {"action" : "spawn", "details" : {"where" : [20, 20], "template" : "npc_president", "side" : "blue", "rotation" : 90}, "delay" : 1},
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "On some missions you might be required to protect a non-combatant unit. As an example, here we have Sapphire Dawn President Gideon. Units like him are called NPC units. They are a bit tougher than regular Infantry, so you don't have to worry, that they will die from a single attack. They are not as tough as Heroes, though. And they can not fight."
+                        "text": "tr_core_tutorial_m4_t28"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "President Gideon",
+                        "name": "TR_PREZ_GIDEON",
                         "portrait": "npc_president",
                         "side": "right",
-                        "text": "Wait, what happened? I was in my office, and then suddenly..."
+                        "text": "tr_core_tutorial_m4_t29"
                     }
                 },
                 {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Let our dear President get back to work."
+                        "text": "tr_core_tutorial_m4_t30"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "You have successfully completed your training. Good luck, and see you on the battlefield. Dismissed!"
+                        "text": "tr_core_tutorial_m4_t31"
                     }
                 },
                 {
@@ -1002,7 +1013,7 @@
             "building": {
                 "abilities": {
                     "ability0": false,
-                    "ability2": false,
+                    "ability2": true,
                     "ability4": true
                 },
                 "rotation": 90,
