@@ -33,9 +33,9 @@
         },
         {
             "name" : "unit_abilities",
-            "title" : "Unit levels and abilities",
+            "title" : "tr_core_tutorial_mission3_name",
             "map" : "tutorial_levels_abilities.tofmap.json",
-            "description" : "In this training scenario you are going to learn about units gaining levels, what kind of benefits this brings, and what kinds of abilities they can use.",
+            "description" : "tr_core_tutorial_mission3_desc",
             "marker" : [520, 380],
             "players": [
                 {

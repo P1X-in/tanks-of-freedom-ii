@@ -74,28 +74,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Attention, recruit! This training mission will cover more advanced topics, so stay focused!"
+                        "text": "tr_core_tutorial_m3_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Today you are going to learn how your units gain experience during battles, and why veterans are more valuable than freshly deployed forces."
+                        "text": "tr_core_tutorial_m3_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Here we have a fresh Tank, that is currently at level 0. Every two kills that unit manages to perform, they will gain a level, up to the maximum of level 3."
+                        "text": "tr_core_tutorial_m3_t3"
                     }
                 },
                 {"action" : "spawn", "details" : {"where" : [19, 21], "template" : "red_infantry", "side" : "red", "rotation" : 90}},
@@ -103,17 +103,17 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Order your tank to destroy these two enemy units. You will have to end your turn to attack again."
+                        "text": "tr_core_tutorial_m3_t4"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Destroy enemy units."
+                        "text": "tr_core_tutorial_m3_o1"
                     }
                 },
                 {
@@ -143,46 +143,46 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Your tank just leveled up. If you need to check a level of a unit, it is visible on a tile highlight in the bottom-left when you hover over the unit."
+                        "text": "tr_core_tutorial_m3_t5"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Levels are not just decorative stars. Each level brings some benefits."
+                        "text": "tr_core_tutorial_m3_t6"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "At level 1 units gain access to their active abilities."
+                        "text": "tr_core_tutorial_m3_t7"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "At level 2 units gain one additional point of armour, which makes them more resilient against enemy attacks."
+                        "text": "tr_core_tutorial_m3_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "At level 3 units gain one additional Movement Point, making them more mobile."
+                        "text": "tr_core_tutorial_m3_t9"
                     }
                 },
                 {
@@ -199,10 +199,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Let us now move to learning about active abilities."
+                        "text": "tr_core_tutorial_m3_t10"
                     }
                 },
                 {"action" : "spawn", "details" : {"where" : [20, 20], "template" : "blue_infantry", "side" : "blue", "rotation" : 90}},
@@ -211,26 +211,26 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "In order to use an active ability, select your unit, and then click it again. If a unit has abilities available, then a radial menu will open. From that menu, you can select an ability to be activated. Once activated, tiles that can be affected will be highlighted. Click on any of the highlighted tiles to confirm the use of ability."
+                        "text": "tr_core_tutorial_m3_t11"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Infantry units have the ability to use Heavy Weapon. It allows them to hit a nearby unit for 8 points of damage, minus target armour. This ability can only be used on an enemy directly adjacent to your unit. Try it out."
+                        "text": "tr_core_tutorial_m3_t12"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Use special ability."
+                        "text": "tr_core_tutorial_m3_o2"
                     }
                 },
                 {
@@ -244,19 +244,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Using Heavy Weapon ability will not trigger counterattacks, so it is a perfect tool to soften up enemy Tanks. It can be also used to destroy a lightly-armoured targets with only one Infantry unit in a single turn."
+                        "text": "tr_core_tutorial_m3_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Remember, that some abilities do have a cost, and a cooldown period after use. When ability is on cooldown, it will be greyed out, with a number of turns left displayed on it."
+                        "text": "tr_core_tutorial_m3_t14"
                     }
                 },
                 {
@@ -276,10 +276,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Tank active ability is called a Long-range Shell. It allows your unit to hit an enemy target up to two tiles away, even if there is something in the way. It can only shoot in a straight line, so make sure you line it up first. Long-range Shell deals 10 points of damage, minus target armour. Try it out."
+                        "text": "tr_core_tutorial_m3_t15"
                     }
                 },
                 {
@@ -300,10 +300,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "While a bit expensive, Long-range Shell is a powerful attack, that allows you to hit enemies even in a back row."
+                        "text": "tr_core_tutorial_m3_t16"
                     }
                 },
                 {
@@ -323,10 +323,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Level 1 Attack Helicopters are able to transport your own troops. They can pick up an Infantry unit from an adjacent tile, though that action will use up all of their MP, so be careful to not expose your valuable Helicopter to danger. Pick Up and Drop Off actions are free and have no cooldown. Try it out."
+                        "text": "tr_core_tutorial_m3_t17"
                     }
                 },
                 {
@@ -347,10 +347,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Your Infantry is now on board of the Helicopter. Make sure it does not get destroyed, or suffer double loss. Now end your turn, and then order your Helicopter to drop off the Infantry unit."
+                        "text": "tr_core_tutorial_m3_t18"
                     }
                 },
                 {
@@ -371,19 +371,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "An Infantry unit, that has been dropped off, can not perform any actions this turn, so make sure that landing zone is safe and secured."
+                        "text": "tr_core_tutorial_m3_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Attack Helicopters can be a great way to quickly deliver Infantry units to the enemy buildings, but use them wisely."
+                        "text": "tr_core_tutorial_m3_t20"
                     }
                 },
                 {
@@ -403,10 +403,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Mobile Infantry is a great support unit with two abilities, that allow you to heal soldiers or repair vehicles. Remember they can only target adjacent tiles. Medkit ability costs 5AP to use, while Repair kit costs 15AP. Try it out."
+                        "text": "tr_core_tutorial_m3_t21"
                     }
                 },
                 {
@@ -427,10 +427,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Being able to heal high level or mission critical units can make the difference between a successfull mission and a total failure."
+                        "text": "tr_core_tutorial_m3_t22"
                     }
                 },
                 {
@@ -449,19 +449,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Rocket Artillery is a unique type of unit. As you should already know, it can not fight in direct combat. Instead it has access to it's active ability on level 0. It can hit targets up to three tiles away, and does not require direct line of sight to do so. This ability is free to use, and has 2 turns cooldown."
+                        "text": "tr_core_tutorial_m3_t23"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Great thing about Rocket Artillery is that it can hit both ground and flying units. It can not hit targets directly adjacent to it, so make sure to keep enemies at bay with other units. Try it out."
+                        "text": "tr_core_tutorial_m3_t24"
                     }
                 },
                 {
@@ -482,10 +482,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "When used correctly, these Artillery units allow you to destroy targets, that would otherwise be hard to reach. They can also deal significant damage to any enemy forces approaching your base."
+                        "text": "tr_core_tutorial_m3_t25"
                     }
                 },
                 {
@@ -505,10 +505,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "When leveled up, the active ability of the Rocket Artillery becomes more powerful. It can now hit targets up to four tiles away, and deals more damage. Try it out and see the difference."
+                        "text": "tr_core_tutorial_m3_t26"
                     }
                 },
                 {
@@ -529,10 +529,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Veteran Artillery, with it's long range and high damage is a bane of lightly-armoured units. It is especially effective against all types of Helicopters, though it is equally devastating when used against Infantry or Tanks."
+                        "text": "tr_core_tutorial_m3_t27"
                     }
                 },
                 {
@@ -552,19 +552,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Scout Helicopters have the Rapid Response ability. It allows them to replenish all of their MP and perform an additional attack this turn, if they already did one. Just make sure to use it before your Helicopter is out of moves, as it requires 1MP to activate it."
+                        "text": "tr_core_tutorial_m3_t28"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Approach the enemy unit and attack it. Then, activate your ability and attack again."
+                        "text": "tr_core_tutorial_m3_t29"
                     }
                 },
                 {
@@ -585,10 +585,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Scout Helicopters can cover a lot of ground with this ability. It is perfect for when you really need that air support at the other side of the battlefield, or to finish off that heavily damaged Tank."
+                        "text": "tr_core_tutorial_m3_t30"
                     }
                 },
                 {
@@ -605,19 +605,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "This concludes the lesson about unit levels and abilities. Make sure to use them as often as possible."
+                        "text": "tr_core_tutorial_m3_t31"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
-                        "text": "Class dismissed."
+                        "text": "tr_core_tutorial_m3_t32"
                     }
                 },
                 {
