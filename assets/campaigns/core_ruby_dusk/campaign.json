@@ -1,177 +1,204 @@
 {
-    "name" : "core_ruby_dusk",
-    "title" : "Noble Intentions",
-    "icon" : "red_gem",
-    "prerequisite" : "core_prologue",
-    "missions" : [
-         {
-            "name" : "sudden_strike",
-            "title" : "Sudden Strike",
-            "map" : "core_ruby_dusk_sudden_strike.tofmap.json",
-            "description" : "Noble Sidney leads a strike team agains Amber Noon after they suddenly attacked a Ruby Dusk outpost. No time to waste waiting for Lord Dawson to send orders.",
-            "marker" : [420, 90],
+    "name": "core_ruby_dusk",
+    "title": "tr_core_ruby_dusk_campaign_title",
+    "icon": "red_gem",
+    "prerequisite": "core_prologue",
+    "missions": [
+        {
+            "name": "sudden_strike",
+            "title": "tr_core_ruby_dusk_m1_name",
+            "map": "core_ruby_dusk_sudden_strike.tofmap.json",
+            "description": "tr_core_ruby_dusk_m1_desc",
+            "marker": [
+                420,
+                90
+            ],
             "players": [
                 {
-                    "side" : "red",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "red",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "yellow",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "securing_lines",
-            "title" : "Securing the lines",
-            "map" : "core_ruby_dusk_securing_lines.tofmap.json",
-            "description" : "After meeting up with the Second Battalion, Sidney plans his next move. He needs to secure supply lines before venturing deeper into Amber Noon territory.",
-            "marker" : [450, 110],
+            "name": "securing_lines",
+            "title": "tr_core_ruby_dusk_m2_name",
+            "map": "core_ruby_dusk_securing_lines.tofmap.json",
+            "description": "tr_core_ruby_dusk_m2_desc",
+            "marker": [
+                450,
+                110
+            ],
             "players": [
                 {
-                    "side" : "red",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "red",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "yellow",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "taking_flight",
-            "title" : "Taking flight",
-            "map" : "core_ruby_dusk_taking_flight.tofmap.json",
-            "description" : "Faced with an ever increasing amounts of Amber Noon armored vehicles, First Battalion under Sidney's command needs to establish air superiority.",
-            "marker" : [460, 40],
+            "name": "taking_flight",
+            "title": "tr_core_ruby_dusk_m3_name",
+            "map": "core_ruby_dusk_taking_flight.tofmap.json",
+            "description": "tr_core_ruby_dusk_m3_desc",
+            "marker": [
+                460,
+                40
+            ],
             "players": [
                 {
-                    "side" : "red",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "red",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "yellow",
-                    "ap" : 50,
-                    "type" : "ai"
+                    "side": "yellow",
+                    "ap": 50,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "gateway",
-            "title" : "Gateway",
-            "map" : "core_ruby_dusk_gateway.tofmap.json",
-            "description" : "Assembled forces of Ruby Dusk are face one last obstacle on their way to Amber Fotress: the Amber River.",
-            "marker" : [550, 70],
+            "name": "gateway",
+            "title": "tr_core_ruby_dusk_m4_name",
+            "map": "core_ruby_dusk_gateway.tofmap.json",
+            "description": "tr_core_ruby_dusk_m4_desc",
+            "marker": [
+                550,
+                70
+            ],
             "players": [
                 {
-                    "side" : "red",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "red",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "yellow",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "amber_fortress",
-            "title" : "Amber Fotress",
-            "map" : "core_ruby_dusk_amber_fortress.tofmap.json",
-            "description" : "Ruby Dusk is pushing forward with their offensive. Sidney prepares to capture a stretegic position, that will allow him to lay a siege on the Amber Noon capital city of Amber Fotress. ",
-            "marker" : [540, 130],
+            "name": "amber_fortress",
+            "title": "tr_core_ruby_dusk_m5_name",
+            "map": "core_ruby_dusk_amber_fortress.tofmap.json",
+            "description": "tr_core_ruby_dusk_m5_desc",
+            "marker": [
+                540,
+                130
+            ],
             "players": [
                 {
-                    "side" : "red",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "red",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "yellow",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "stranded",
-            "title" : "Stranded",
-            "map" : "core_ruby_dusk_stranded.tofmap.json",
-            "description" : "Archibalds task is simple: bring Noble Sidney back to Rubyport. Or so it seemed, as a new and unexpected force is standing in his way, cutting him off.",
-            "marker" : [500, 140],
+            "name": "stranded",
+            "title": "tr_core_ruby_dusk_m6_name",
+            "map": "core_ruby_dusk_stranded.tofmap.json",
+            "description": "tr_core_ruby_dusk_m6_desc",
+            "marker": [
+                500,
+                140
+            ],
             "players": [
                 {
-                    "side" : "red",
-                    "ap" : 20,
-                    "type" : "human"
+                    "side": "red",
+                    "ap": 20,
+                    "type": "human"
                 },
                 {
-                    "side" : "blue",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "uninvited_guests",
-            "title" : "Uninvited guests",
-            "map" : "core_ruby_dusk_uninv_guests.tofmap.json",
-            "description" : "Ruby Dusk lands are under attack. Gentleman Archibald must secure the base in Tripoint and stop Sapphire Dawn before it is too late.",
-            "marker" : [445, 170],
+            "name": "uninvited_guests",
+            "title": "tr_core_ruby_dusk_m7_name",
+            "map": "core_ruby_dusk_uninv_guests.tofmap.json",
+            "description": "tr_core_ruby_dusk_m7_desc",
+            "marker": [
+                445,
+                170
+            ],
             "players": [
                 {
-                    "side" : "red",
-                    "ap" : 10,
-                    "type" : "human"
+                    "side": "red",
+                    "ap": 10,
+                    "type": "human"
                 },
                 {
-                    "side" : "blue",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "research_and_development",
-            "title" : "Research and development",
-            "map" : "core_ruby_dusk_res_and_dev.tofmap.json",
-            "description" : "Sapphire Dawn is attacking a secret lab working on new weapons for Ruby Dusk. Make use of previously unseen, powerful units and repel the invaders.",
-            "marker" : [380, 210],
+            "name": "research_and_development",
+            "title": "tr_core_ruby_dusk_m8_name",
+            "map": "core_ruby_dusk_res_and_dev.tofmap.json",
+            "description": "tr_core_ruby_dusk_m8_desc",
+            "marker": [
+                380,
+                210
+            ],
             "players": [
                 {
-                    "side" : "red",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "red",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "blue",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "hold_the_line",
-            "title" : "Hold the line",
-            "map" : "core_ruby_dusk_hold_the_line.tofmap.json",
-            "description" : "Commando Blake and his troops are pushing hard towards Lord Dawson's positions. It is up to Gentleman Archibald to stop the Sapphire Dawn commander and put an end to this incursion.",
-            "marker" : [345, 270],
+            "name": "hold_the_line",
+            "title": "tr_core_ruby_dusk_m9_name",
+            "map": "core_ruby_dusk_hold_the_line.tofmap.json",
+            "description": "tr_core_ruby_dusk_m9_desc",
+            "marker": [
+                345,
+                270
+            ],
             "players": [
                 {
-                    "side" : "red",
-                    "ap" : 100,
-                    "type" : "human"
+                    "side": "red",
+                    "ap": 100,
+                    "type": "human"
                 },
                 {
-                    "side" : "blue",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         }

@@ -57,19 +57,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "What does the road ahead look like?"
+                        "text": "tr_core_ruby_dusk_m3_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Amber Noon has a lot of Factories here, Sir."
+                        "text": "tr_core_ruby_dusk_m3_t2"
                     }
                 },
                 {
@@ -85,10 +85,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "There is one nearby, with some tanks ready to go."
+                        "text": "tr_core_ruby_dusk_m3_t3"
                     }
                 },
                 {
@@ -104,10 +104,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Main forces are stationed in a nearby town."
+                        "text": "tr_core_ruby_dusk_m3_t4"
                     }
                 },
                 {
@@ -123,10 +123,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "They have a number of Towers in the area for support, we should expect a lot of Tanks being produced."
+                        "text": "tr_core_ruby_dusk_m3_t5"
                     }
                 },
                 {
@@ -142,10 +142,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "We need to hasten our work on the Airfield then."
+                        "text": "tr_core_ruby_dusk_m3_t6"
                     }
                 },
                 {
@@ -161,10 +161,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "It is still being worked on, it will take some time for it to provide air support."
+                        "text": "tr_core_ruby_dusk_m3_t7"
                     }
                 },
                 {
@@ -198,31 +198,31 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "These veteran units will help in stopping Amber Noon for now, but we can't hold this position for long."
+                        "text": "tr_core_ruby_dusk_m3_t8"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Defend until your Airfield becomes available."
+                        "text": "tr_core_ruby_dusk_m3_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Capture the Amber Noon buildings."
+                        "text": "tr_core_ruby_dusk_m2_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 2,
-                        "text": "Noble Sidney must survive."
+                        "text": "tr_core_ruby_dusk_m1_o2"
                     }
                 },
                 {
@@ -257,10 +257,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Airfield crew",
+                        "name": "tr_core_ruby_dusk_a2",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Construction complete, Sir."
+                        "text": "tr_core_ruby_dusk_m3_t9"
                     }
                 },
                 {
@@ -292,10 +292,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Airfield crew",
+                        "name": "tr_core_ruby_dusk_a2",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Air support ready to go. Those Tanks are going to be helpless agains them!"
+                        "text": "tr_core_ruby_dusk_m3_t10"
                     }
                 },
                 {
@@ -329,10 +329,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Town guards have been defeated. With an Airfield in this area, Ruby Dusk is able to bring in all the units that we need to beat Amber Noon once and for all."
+                        "text": "tr_core_ruby_dusk_m3_t11"
                     }
                 },
                 {
@@ -352,10 +352,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "No! How could I fail?"
+                        "text": "tr_core_ruby_dusk_m1_t18"
                     }
                 },
                 {
@@ -2026,9 +2026,7 @@
         },
         "13_19": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -2870,9 +2868,7 @@
         },
         "15_15": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -3769,9 +3765,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -3804,9 +3798,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -4354,9 +4346,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -5414,9 +5404,7 @@
         },
         "20_22": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -7218,9 +7206,7 @@
         },
         "24_30": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -7882,9 +7868,7 @@
         },
         "26_24": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -8881,9 +8865,7 @@
         },
         "28_30": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -9065,9 +9047,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_tank"
@@ -9100,9 +9080,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "red",
                 "tile": "hero_noble"
@@ -9135,9 +9113,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "red",
                 "tile": "red_infantry"
@@ -9996,9 +9972,7 @@
         },
         "5_18": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -10420,9 +10394,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -11205,9 +11177,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -11576,9 +11546,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_infantry"

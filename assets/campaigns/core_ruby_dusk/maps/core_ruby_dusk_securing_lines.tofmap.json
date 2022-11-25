@@ -26,28 +26,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "This is taking too long! Where are my troops?"
+                        "text": "tr_core_ruby_dusk_m2_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Second battalion commander",
+                        "name": "tr_core_ruby_dusk_a1",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "They are on their way, Sir, but we are having trouble supplying them with fuel."
+                        "text": "tr_core_ruby_dusk_m2_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "We need a better route then."
+                        "text": "tr_core_ruby_dusk_m2_t3"
                     }
                 },
                 {
@@ -63,10 +63,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Second battalion commander",
+                        "name": "tr_core_ruby_dusk_a1",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "If we could secure this highway, we could bring in more supplies quickly. It's not going to be easy though."
+                        "text": "tr_core_ruby_dusk_m2_t4"
                     }
                 },
                 {
@@ -82,10 +82,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Second battalion commander",
+                        "name": "tr_core_ruby_dusk_a1",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Amber Noon has guarded Barracks right in our path."
+                        "text": "tr_core_ruby_dusk_m2_t5"
                     }
                 },
                 {
@@ -101,10 +101,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Second battalion commander",
+                        "name": "tr_core_ruby_dusk_a1",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Another Barracks and an industrial Factory on the other side of town has to be taken care of as well."
+                        "text": "tr_core_ruby_dusk_m2_t6"
                     }
                 },
                 {
@@ -120,10 +120,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "We are going to need some Tanks then."
+                        "text": "tr_core_ruby_dusk_m2_t7"
                     }
                 },
                 {
@@ -181,10 +181,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Second battalion commander",
+                        "name": "tr_core_ruby_dusk_a1",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Second Battalion veterans are at your command. They can use Long-range Shell ability, allowing them to hit targets up to one tile away in a straight line. They can take out an enemy Tank before it is able to retaliate."
+                        "text": "tr_core_ruby_dusk_m2_t8"
                     }
                 },
                 {
@@ -200,19 +200,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Second battalion commander",
+                        "name": "tr_core_ruby_dusk_a1",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "We have almost finished setting up our own Tank factory. All it needs is a crew."
+                        "text": "tr_core_ruby_dusk_m2_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Marevllous. My passive ability allows me to build Tanks using less AP than usual. That should give me an edge over Amber Noon."
+                        "text": "tr_core_ruby_dusk_m2_t10"
                     }
                 },
                 {
@@ -229,14 +229,14 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Capture the Amber Noon buildings."
+                        "text": "tr_core_ruby_dusk_m2_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Noble Sidney must survive."
+                        "text": "tr_core_ruby_dusk_m1_o2"
                     }
                 },
                 {
@@ -260,19 +260,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Second battalion commander",
+                        "name": "tr_core_ruby_dusk_a1",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Mission complete, Sir! With this route secured, we will be able to advance much faster."
+                        "text": "tr_core_ruby_dusk_m2_t11"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Get moving then. We are already late with the next phase."
+                        "text": "tr_core_ruby_dusk_m2_t12"
                     }
                 },
                 {
@@ -292,10 +292,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "No! How could I fail?"
+                        "text": "tr_core_ruby_dusk_m1_t18"
                     }
                 },
                 {
@@ -928,9 +928,7 @@
         },
         "11_25": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -1082,9 +1080,7 @@
         },
         "12_19": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -2280,9 +2276,7 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -3584,9 +3578,7 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -3594,9 +3586,7 @@
         },
         "20_14": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -3838,9 +3828,7 @@
         },
         "20_22": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -5071,9 +5059,7 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -6491,9 +6477,7 @@
         },
         "27_19": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -7729,9 +7713,7 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "hero_noble"
@@ -7823,9 +7805,7 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_infantry"

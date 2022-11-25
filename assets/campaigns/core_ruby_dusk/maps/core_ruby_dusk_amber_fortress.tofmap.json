@@ -26,37 +26,37 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "I need to get to the Amber Fortress to see my father right now!"
+                        "text": "tr_core_ruby_dusk_m5_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Guard",
+                        "name": "TR_ACT_GUARD",
                         "portrait": "yellow_infantry",
                         "side": "left",
-                        "text": "I'm sorry my prince, but getting into the city might be very difficult. Ruby Dusk is approaching fast."
+                        "text": "tr_core_ruby_dusk_m5_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Guard",
+                        "name": "TR_ACT_GUARD",
                         "portrait": "yellow_infantry",
                         "side": "left",
-                        "text": "No one seen the King Ludwig since the invasion started. Warlord Grim is relaying orders from him."
+                        "text": "tr_core_ruby_dusk_m5_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "My father hiding? He would never do such a thing!"
+                        "text": "tr_core_ruby_dusk_m5_t4"
                     }
                 },
                 {
@@ -72,10 +72,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Lookout",
+                        "name": "tr_core_ruby_dusk_a3",
                         "portrait": "feudal_tower",
                         "side": "left",
-                        "text": "Ruby Dusk main army spotted!"
+                        "text": "tr_core_ruby_dusk_m5_t5"
                     }
                 },
                 {
@@ -91,10 +91,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "To arms! We have to stop them!"
+                        "text": "tr_core_ruby_dusk_m5_t6"
                     }
                 },
                 {
@@ -110,10 +110,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "We have finally arrived."
+                        "text": "tr_core_ruby_dusk_m5_t7"
                     }
                 },
                 {
@@ -129,10 +129,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Amber Noon capital city is in our sight."
+                        "text": "tr_core_ruby_dusk_m5_t8"
                     }
                 },
                 {
@@ -148,10 +148,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "That base is in a perfect spot, if we take it, we can easily occupy the city from there."
+                        "text": "tr_core_ruby_dusk_m5_t9"
                     }
                 },
                 {
@@ -167,10 +167,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_heli",
                         "side": "left",
-                        "text": "We have some trouble, Sir. Our forward outposts have been spotted early."
+                        "text": "tr_core_ruby_dusk_m5_t10"
                     }
                 },
                 {
@@ -186,10 +186,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_heli",
                         "side": "left",
-                        "text": "Infantry barracks are here. This should be our top priority, Amber Noon can use them to attack our flank."
+                        "text": "tr_core_ruby_dusk_m5_t11"
                     }
                 },
                 {
@@ -205,10 +205,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_heli",
                         "side": "left",
-                        "text": "Factory here has no crew, but is guarded by a Tank, we should be careful."
+                        "text": "tr_core_ruby_dusk_m5_t12"
                     }
                 },
                 {
@@ -224,10 +224,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_heli",
                         "side": "left",
-                        "text": "We managed to deploy an Airfield further out, with some Towers for support."
+                        "text": "tr_core_ruby_dusk_m5_t13"
                     }
                 },
                 {
@@ -243,10 +243,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Failure is not an option at this point. I can already smell victory."
+                        "text": "tr_core_ruby_dusk_m5_t14"
                     }
                 },
                 {
@@ -263,21 +263,21 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Capture the Amber Noon buildings."
+                        "text": "tr_core_ruby_dusk_m2_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Noble Sidney must survive."
+                        "text": "tr_core_ruby_dusk_m1_o2"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 2,
-                        "text": "(Optional) Defeat Prince Tybalt."
+                        "text": "tr_core_ruby_dusk_m5_o1"
                     }
                 },
                 {
@@ -301,19 +301,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Second battalion commander",
+                        "name": "tr_core_ruby_dusk_a1",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Position taken. Start preparing troop transports to cross the water."
+                        "text": "tr_core_ruby_dusk_m5_t15"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Hahaha, that was easier than I expected. Amber Fortress will be ours soon, and then we will see what can be done about Lord Dawson..."
+                        "text": "tr_core_ruby_dusk_m5_t16"
                     }
                 },
                 {
@@ -342,46 +342,46 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "left",
-                        "text": "Sidney! That is enough!"
+                        "text": "tr_core_ruby_dusk_m5_t17"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Archibald? What are you doing here?"
+                        "text": "tr_core_ruby_dusk_m5_t18"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "left",
-                        "text": "You have disobeyed Lord's orders. Your offensive ends here. Men, arrest him."
+                        "text": "tr_core_ruby_dusk_m5_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Don't you dare to lay your hands on me!"
+                        "text": "tr_core_ruby_dusk_m5_t20"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "left",
-                        "text": "I will deliver you to Rubyport personally."
+                        "text": "tr_core_ruby_dusk_m5_t21"
                     }
                 },
                 {
@@ -401,10 +401,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "No! How could I fail?"
+                        "text": "tr_core_ruby_dusk_m1_t18"
                     }
                 },
                 {
@@ -424,28 +424,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "Argh! This is no good! I can't keep it up."
+                        "text": "tr_core_ruby_dusk_m5_t22"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "I must find my father immidiately."
+                        "text": "tr_core_ruby_dusk_m5_t23"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "left",
-                        "text": "Haha! Cowardly prince flees yet again."
+                        "text": "tr_core_ruby_dusk_m5_t24"
                     }
                 },
                 {
@@ -1862,9 +1862,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -2347,9 +2345,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -2783,9 +2779,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -3658,9 +3652,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_tank"
@@ -7653,9 +7645,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_infantry"
@@ -8743,9 +8733,7 @@
         },
         "16_25": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "neutral",
                 "tile": "steampunk_tower"
@@ -8892,9 +8880,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_tank"
@@ -11237,9 +11223,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -13167,9 +13151,7 @@
         },
         "20_18": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "neutral",
                 "tile": "steampunk_tower"
@@ -16421,9 +16403,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -16731,9 +16711,7 @@
         },
         "25_1": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "neutral",
                 "tile": "steampunk_tower"
@@ -17665,9 +17643,7 @@
         },
         "26_13": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -18534,9 +18510,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -27939,9 +27913,7 @@
         },
         "3_14": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "neutral",
                 "tile": "steampunk_tower"
@@ -28573,9 +28545,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_heli"
@@ -28608,9 +28578,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_heli"
@@ -28643,9 +28611,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_heli"
@@ -29163,9 +29129,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -29648,9 +29612,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -32244,9 +32206,7 @@
         },
         "6_34": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -32513,9 +32473,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -33358,9 +33316,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "hero_prince"
@@ -33393,9 +33349,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -33698,9 +33652,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_heli"
@@ -34878,9 +34830,7 @@
         },
         "8_5": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -35152,9 +35102,7 @@
         },
         "9_12": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -35636,9 +35584,7 @@
         },
         "9_27": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -35785,9 +35731,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -35820,9 +35764,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -35855,9 +35797,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -35890,9 +35830,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -36105,9 +36043,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "hero_noble"
@@ -36140,9 +36076,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_infantry"

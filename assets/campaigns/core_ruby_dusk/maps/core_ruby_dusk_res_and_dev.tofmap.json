@@ -71,10 +71,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Laboratory HQ",
+                        "name": "tr_core_ruby_dusk_a4",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Is anyone there? We are under attack! Please help!"
+                        "text": "tr_core_ruby_dusk_m8_t1"
                     }
                 },
                 {
@@ -90,19 +90,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "Laboratory is not lost just yet, but they need reinforcements."
+                        "text": "tr_core_ruby_dusk_m8_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "This is Archibald. Do you hear me? What is your situation?"
+                        "text": "tr_core_ruby_dusk_m8_t3"
                     }
                 },
                 {
@@ -118,10 +118,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Laboratory HQ",
+                        "name": "tr_core_ruby_dusk_a4",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "It is so good to hear you. Sapphire Dawn surprised us with an attack."
+                        "text": "tr_core_ruby_dusk_m8_t4"
                     }
                 },
                 {
@@ -137,10 +137,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Laboratory HQ",
+                        "name": "tr_core_ruby_dusk_a4",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "They have taken positions on the other side of the river."
+                        "text": "tr_core_ruby_dusk_m8_t5"
                     }
                 },
                 {
@@ -156,10 +156,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Laboratory HQ",
+                        "name": "tr_core_ruby_dusk_a4",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "The only bridge, that leads to the other side, is already lost. They are getting closer to the lab."
+                        "text": "tr_core_ruby_dusk_m8_t6"
                     }
                 },
                 {
@@ -175,19 +175,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Laboratory HQ",
+                        "name": "tr_core_ruby_dusk_a4",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "You must help us, they must not capture this facility and learn about our secret research."
+                        "text": "tr_core_ruby_dusk_m8_t7"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Laboratory HQ",
+                        "name": "tr_core_ruby_dusk_a4",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "We have a few units here, some of them veterans, that are at your disposal. We are outclassed though. The enemy is using a lot of Helicopters. They are being deployed from these three Airfields."
+                        "text": "tr_core_ruby_dusk_m8_t8"
                     }
                 },
                 {
@@ -236,10 +236,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Laboratory HQ",
+                        "name": "tr_core_ruby_dusk_a4",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "We can deploy more Tanks and Mobile Infantry units, but they are helpless agains flying targets."
+                        "text": "tr_core_ruby_dusk_m8_t9"
                     }
                 },
                 {
@@ -255,19 +255,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Laboratory HQ",
+                        "name": "tr_core_ruby_dusk_a4",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Here you can find two or our latest developments: Mobile Rocket Artillery. These units can deal serious damage from afar, but need a lot of support. We have re-used Tank hulls to build them, but we had to ditch a lot of armour, so expect them to be squishy. Even then, they move slowly. And remember, that they can not fight directly, and their missiles can't hit targets right next to them."
+                        "text": "tr_core_ruby_dusk_m8_t10"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Laboratory HQ",
+                        "name": "tr_core_ruby_dusk_a4",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "These missiles can wreck Helicopters, but watch out for cooldowns."
+                        "text": "tr_core_ruby_dusk_m8_t11"
                     }
                 },
                 {
@@ -283,10 +283,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "I'm sure they will proove very useful. I have brought some Infantry as well, though they fell a bit behind..."
+                        "text": "tr_core_ruby_dusk_m8_t12"
                     }
                 },
                 {
@@ -302,10 +302,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "OK men, let's go and save them! Double time!"
+                        "text": "tr_core_ruby_dusk_m8_t13"
                     }
                 },
                 {
@@ -322,14 +322,14 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Capture the Sapphire Dawn Airfields."
+                        "text": "tr_core_ruby_dusk_m8_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Gentleman Archibald must survive."
+                        "text": "tr_core_ruby_dusk_m6_o2"
                     }
                 },
                 {
@@ -353,10 +353,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "Their attacks from air do not stop. Are you able to provide more missile systems?"
+                        "text": "tr_core_ruby_dusk_m8_t14"
                     }
                 },
                 {
@@ -372,10 +372,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Laboratory HQ",
+                        "name": "tr_core_ruby_dusk_a4",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Fabrication facility that we used to make these two prototypes is not yet fit for larger scale production. We are working on it. You have to keep Sapphire Dawn away just a little bit longer."
+                        "text": "tr_core_ruby_dusk_m8_t15"
                     }
                 },
                 {
@@ -391,19 +391,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "Until that Factory is ready, I can use my special ability to help with fliers as well. Targeting Automaton allows Tanks, that normally can't shoot into the air, to be able to target flying vessels. Other types of units benefit as well, getting 1 bonus attack point instead. I think it might not have any effect on these new fancy rockets though."
+                        "text": "tr_core_ruby_dusk_m8_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "In order to use it, I have to cast it on myself, granting the bonuses to up to four units standing right next to me."
+                        "text": "tr_core_ruby_dusk_m8_t17"
                     }
                 },
                 {
@@ -427,10 +427,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prototype Factory",
+                        "name": "tr_core_ruby_dusk_a5",
                         "portrait": "steampunk_factory",
                         "side": "left",
-                        "text": "We have managed to clear most of the floor used for making custom parts and replaced it with production line for Rocket Artillery. I think we can start it up, Sir."
+                        "text": "tr_core_ruby_dusk_m8_t18"
                     }
                 },
                 {
@@ -458,10 +458,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prototype Factory",
+                        "name": "tr_core_ruby_dusk_a5",
                         "portrait": "steampunk_factory",
                         "side": "left",
-                        "text": "Test run of the new equipment went well."
+                        "text": "tr_core_ruby_dusk_m8_t19"
                     }
                 },
                 {
@@ -479,10 +479,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prototype Factory",
+                        "name": "tr_core_ruby_dusk_a5",
                         "portrait": "steampunk_factory",
                         "side": "left",
-                        "text": "Here is one launcher on the house. Make sure not to loose it, these are expensive."
+                        "text": "tr_core_ruby_dusk_m8_t20"
                     }
                 },
                 {
@@ -516,37 +516,37 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Area is secured."
+                        "text": "tr_core_ruby_dusk_m8_t21"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Laboratory HQ",
+                        "name": "tr_core_ruby_dusk_a4",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Thank you for your assistance. We will ramp up production of new Artillery units right away."
+                        "text": "tr_core_ruby_dusk_m8_t22"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Sir! We've got a transmission from Lord Dawson. Sapphire Dawn is closing in on our capital, they are being encircled."
+                        "text": "tr_core_ruby_dusk_m8_t23"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "Send those missile systems to Rubyport as soon as possible. There is a tough battle ahead of us."
+                        "text": "tr_core_ruby_dusk_m8_t24"
                     }
                 },
                 {
@@ -566,10 +566,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "I have failed you, my lord! Please forgive me!"
+                        "text": "tr_core_ruby_dusk_m6_t25"
                     }
                 },
                 {
@@ -1395,9 +1395,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -1435,9 +1433,7 @@
         },
         "10_32": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "steampunk_tower"
@@ -4499,9 +4495,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "hero_gentleman"
@@ -8829,9 +8823,7 @@
         },
         "16_9": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -9163,9 +9155,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "red",
                 "tile": "red_tank"
@@ -9198,9 +9188,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_m_inf"
@@ -9988,9 +9976,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -11373,9 +11359,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "red",
                 "tile": "red_tank"
@@ -11443,9 +11427,7 @@
         },
         "19_21": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -11862,9 +11844,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -12202,9 +12182,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_heli"
@@ -12507,9 +12485,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "red",
                 "tile": "red_rocket"
@@ -12937,9 +12913,7 @@
         },
         "20_32": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -13626,9 +13600,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "red",
                 "tile": "red_rocket"
@@ -13636,9 +13608,7 @@
         },
         "21_19": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -14720,9 +14690,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "red",
                 "tile": "red_infantry"
@@ -14935,9 +14903,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -15510,9 +15476,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -16205,9 +16169,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_heli"
@@ -16520,9 +16482,7 @@
         },
         "23_6": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -20995,9 +20955,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_heli"
@@ -21360,9 +21318,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -21705,9 +21661,7 @@
         },
         "29_11": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -22694,9 +22648,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -23039,9 +22991,7 @@
         },
         "30_24": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -23938,9 +23888,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -27098,9 +27046,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -28933,9 +28879,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_infantry"
@@ -29298,9 +29242,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_infantry"
@@ -30868,9 +30810,7 @@
         },
         "8_20": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "steampunk_tower"
@@ -31387,9 +31327,7 @@
         },
         "8_4": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -32076,9 +32014,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"

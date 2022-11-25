@@ -26,46 +26,46 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "Sidney made such a mess! It's unbelievable! And now I will have to endure his company all the way to Rubyport. *sigh*"
+                        "text": "tr_core_ruby_dusk_m6_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "It can't be helped. Soldier! Go tell the guards to bring him in and we will depart."
+                        "text": "tr_core_ruby_dusk_m6_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Sir! Sir! I have important news!"
+                        "text": "tr_core_ruby_dusk_m6_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "What is it? Catch your breath and tell me."
+                        "text": "tr_core_ruby_dusk_m6_t4"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "It's Sapphire Dawn! They are everywhere! Have a look!"
+                        "text": "tr_core_ruby_dusk_m6_t5"
                     }
                 },
                 {
@@ -81,10 +81,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "They are already setting up blockades."
+                        "text": "tr_core_ruby_dusk_m6_t6"
                     }
                 },
                 {
@@ -100,28 +100,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "But that is not all! We've got emergency transmission from Lord Dawson. Sapphire Dawn is already assaulting our border. You are being ordered to return as quickly as possible and organize defense."
+                        "text": "tr_core_ruby_dusk_m6_t7"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "What are we waiting for then! Organize Sidney's forces and go home!"
+                        "text": "tr_core_ruby_dusk_m6_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "I don't think we can, Sir."
+                        "text": "tr_core_ruby_dusk_m6_t9"
                     }
                 },
                 {
@@ -137,10 +137,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Sapphire Dawn gathered huge forces on the other side of the river. They are ready to strike on our positions. If we try to move now, they will surely take advantage and wipe us out."
+                        "text": "tr_core_ruby_dusk_m6_t10"
                     }
                 },
                 {
@@ -156,10 +156,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "This is really bad. Looks like our best chance is to sneak past them with a small detachment. Noble Sidney will have to stay here for a little longer..."
+                        "text": "tr_core_ruby_dusk_m6_t11"
                     }
                 },
                 {
@@ -175,10 +175,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "My goal is to reach that road. Looks like Sapphire Dawn is using some of the Amber Noon towers to supply themselves."
+                        "text": "tr_core_ruby_dusk_m6_t12"
                     }
                 },
                 {
@@ -194,19 +194,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "We have barracks and a single tower here. Our resources are going to be really stretched, but it will have to do."
+                        "text": "tr_core_ruby_dusk_m6_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "My passive ability allows me to get additional 5AP from every tower, each turn. It is not much, but it stacks up."
+                        "text": "tr_core_ruby_dusk_m6_t14"
                     }
                 },
                 {
@@ -222,10 +222,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "We have been spotted!"
+                        "text": "tr_core_ruby_dusk_m6_t15"
                     }
                 },
                 {
@@ -264,42 +264,42 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Tank",
+                        "name": "TR_TANK",
                         "portrait": "blue_tank",
                         "side": "left",
-                        "text": "You have nowhere to run. Surrender now!"
+                        "text": "tr_core_ruby_dusk_m6_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "I'm afraid that is out of the question. We have to deal with that Tank somehow. I can deal significant damage to it, but constant fighting might wear me down, so I have to be careful."
+                        "text": "tr_core_ruby_dusk_m6_t17"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "I have to move, there is no time to lose."
+                        "text": "tr_core_ruby_dusk_m6_t18"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Bring Gentleman Archibald to the end of the road."
+                        "text": "tr_core_ruby_dusk_m6_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Gentleman Archibald must survive."
+                        "text": "tr_core_ruby_dusk_m6_o2"
                     }
                 },
                 {
@@ -365,37 +365,37 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Mobile Infantry",
+                        "name": "TR_M_INF",
                         "portrait": "red_m_inf",
                         "side": "left",
-                        "text": "Mobile Infantry ready to support you, Sir."
+                        "text": "tr_core_ruby_dusk_m6_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "This is exactly what I needed. These motorized units are much faster than regular Infantry. They are ideal for quick capture jobs. Their weaponry is not as good, so they can't attack flying targets, though it seems it will not be an issue at this time."
+                        "text": "tr_core_ruby_dusk_m6_t20"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Mobile Infantry",
+                        "name": "TR_M_INF",
                         "portrait": "red_m_inf",
                         "side": "left",
-                        "text": "We also have some experience Sir, so we can use our abilities to heal soldiers and even repair vehicles. It costs AP though. We will do what we can to keep you in this fight!"
+                        "text": "tr_core_ruby_dusk_m6_t21"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "I can recruit more Mobile Infantry units in the barracks if need be."
+                        "text": "tr_core_ruby_dusk_m6_t22"
                     }
                 },
                 {
@@ -419,19 +419,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "What is Sapphire Dawn doing here? And attacking our lands as well? Have Amber Noon asked them for help? Or are they just using an opportunity?"
+                        "text": "tr_core_ruby_dusk_m6_t23"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "No matter. I am needed at our border."
+                        "text": "tr_core_ruby_dusk_m6_t24"
                     }
                 },
                 {
@@ -468,10 +468,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "I have failed you, my lord! Please forgive me!"
+                        "text": "tr_core_ruby_dusk_m6_t25"
                     }
                 },
                 {
@@ -1439,9 +1439,7 @@
         },
         "11_5": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "neutral",
                 "tile": "steampunk_tower"
@@ -3058,9 +3056,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -3908,9 +3904,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "hero_gentleman"
@@ -3943,9 +3937,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -4103,9 +4095,7 @@
         },
         "15_13": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -4342,9 +4332,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -4502,9 +4490,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -4512,9 +4498,7 @@
         },
         "15_26": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "feudal_tower"
@@ -4781,9 +4765,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -5026,9 +5008,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -5241,9 +5221,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -8216,9 +8194,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -8281,9 +8257,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -8466,9 +8440,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -8501,9 +8473,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -8536,9 +8506,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -8571,9 +8539,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -8696,9 +8662,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -9001,9 +8965,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -9036,9 +8998,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -9071,9 +9031,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -9136,9 +9094,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -9171,9 +9127,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -9236,9 +9190,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -9511,9 +9463,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -9546,9 +9496,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -9581,9 +9529,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -9646,9 +9592,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -9681,9 +9625,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -9716,9 +9658,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -9781,9 +9721,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -9846,9 +9784,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -10361,9 +10297,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -10396,9 +10330,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -10431,9 +10363,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -10466,9 +10396,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -10501,9 +10429,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -10536,9 +10462,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -10571,9 +10495,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_heli"
@@ -10636,9 +10558,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_heli"
@@ -10701,9 +10621,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_heli"
@@ -10766,9 +10684,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_heli"
@@ -11251,9 +11167,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -11286,9 +11200,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -11321,9 +11233,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -11356,9 +11266,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -11391,9 +11299,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -11426,9 +11332,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -11461,9 +11365,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -11496,9 +11398,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -11531,9 +11431,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -11566,9 +11464,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -11601,9 +11497,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -11636,9 +11530,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -11671,9 +11563,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -11741,9 +11631,7 @@
         },
         "2_27": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "feudal_tower"
@@ -13065,9 +12953,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -13310,9 +13196,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -14395,9 +14279,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -14405,9 +14287,7 @@
         },
         "9_28": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "feudal_tower"

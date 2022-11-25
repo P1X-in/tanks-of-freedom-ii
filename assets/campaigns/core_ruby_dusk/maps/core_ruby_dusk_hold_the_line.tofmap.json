@@ -25,28 +25,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Lord Dawson",
+                        "name": "TR_LORD_DAWSON",
                         "portrait": "npc_lord",
                         "side": "left",
-                        "text": "Close your ranks, we cannot let them pass."
+                        "text": "tr_core_ruby_dusk_m9_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "We will fight to the last soldier!"
+                        "text": "tr_core_ruby_dusk_m9_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Lord Dawson",
+                        "name": "TR_LORD_DAWSON",
                         "portrait": "npc_lord",
                         "side": "left",
-                        "text": "I hope it will not come to that..."
+                        "text": "tr_core_ruby_dusk_m9_t3"
                     }
                 },
                 {
@@ -62,10 +62,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Lord Dawson",
+                        "name": "TR_LORD_DAWSON",
                         "portrait": "npc_lord",
                         "side": "left",
-                        "text": "...although they do happen to have quite an advantage."
+                        "text": "tr_core_ruby_dusk_m9_t4"
                     }
                 },
                 {
@@ -81,33 +81,33 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "Don't worry my Lord, help is here!"
+                        "text": "tr_core_ruby_dusk_m9_t5"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "All units move forward! Lord Dawson must not fall!"
+                        "text": "tr_core_ruby_dusk_m9_t6"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Lord Dawson must survive."
+                        "text": "tr_core_ruby_dusk_m9_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Gentleman Archibald must survive."
+                        "text": "tr_core_ruby_dusk_m6_o2"
                     }
                 },
                 {
@@ -131,10 +131,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Lord Dawson",
+                        "name": "TR_LORD_DAWSON",
                         "portrait": "npc_lord",
                         "side": "left",
-                        "text": "I am thankful for your help, but you have to push forward."
+                        "text": "tr_core_ruby_dusk_m9_t7"
                     }
                 },
                 {
@@ -150,10 +150,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Lord Dawson",
+                        "name": "TR_LORD_DAWSON",
                         "portrait": "npc_lord",
                         "side": "left",
-                        "text": "That tower is the last thing keeping them from gaining full control of this mountain pass. If they capture it, nothing will stop them from attacking Rubyport."
+                        "text": "tr_core_ruby_dusk_m9_t8"
                     }
                 },
                 {
@@ -169,10 +169,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Lord Dawson",
+                        "name": "TR_LORD_DAWSON",
                         "portrait": "npc_lord",
                         "side": "left",
-                        "text": "There are four more towers that form we must claim in order to secure our position."
+                        "text": "tr_core_ruby_dusk_m9_t9"
                     }
                 },
                 {
@@ -222,10 +222,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "Wait! What is that... ?"
+                        "text": "tr_core_ruby_dusk_m9_t10"
                     }
                 },
                 {
@@ -241,10 +241,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "Sapphire Dawn already established a HQ. Taking it out would be a good idea."
+                        "text": "tr_core_ruby_dusk_m9_t11"
                     }
                 },
                 {
@@ -253,61 +253,61 @@
                         "name": "???",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "I would like to see you try, Archibald."
+                        "text": "tr_core_ruby_dusk_m9_t12"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "They sent you here, Blake? I thought they would entrust such an important mission to someone more... capable."
+                        "text": "tr_core_ruby_dusk_m9_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Watch your mouth! This is just payback for attacking Amber Noon. You thought you could get away with it?"
+                        "text": "tr_core_ruby_dusk_m9_t14"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Lord Dawson",
+                        "name": "TR_LORD_DAWSON",
                         "portrait": "npc_lord",
                         "side": "left",
-                        "text": "That was a misunderstanding. We will make sure that the one responsible will be brough to justice. I tried to reach King Ludwig to explain the situation, but he did not respond."
+                        "text": "tr_core_ruby_dusk_m9_t15"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Why would he? You cannot be trusted!"
+                        "text": "tr_core_ruby_dusk_m9_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "I don't think we can convince him, my Lord."
+                        "text": "tr_core_ruby_dusk_m9_t17"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Lord Dawson",
+                        "name": "TR_LORD_DAWSON",
                         "portrait": "npc_lord",
                         "side": "left",
-                        "text": "Just focus on your mission. Disrupt Sapphire Dawn operations where you can, but capturing these towers is our main goal."
+                        "text": "tr_core_ruby_dusk_m9_t18"
                     }
                 },
                 {
@@ -324,14 +324,14 @@
                     "action": "objective",
                     "details": {
                         "slot": 2,
-                        "text": "Capture Towers along the way."
+                        "text": "tr_core_ruby_dusk_m9_o2"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 3,
-                        "text": "(Optional) Defeat Commando Blake."
+                        "text": "tr_core_ruby_dusk_m9_o3"
                     }
                 },
                 {
@@ -345,17 +345,17 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "You think you defeated me? This is but a flesh wound. I'll be back!"
+                        "text": "tr_core_ruby_dusk_m9_t19"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 3,
-                        "text": "(Done) Defeat Commando Blake."
+                        "text": "tr_core_ruby_dusk_m9_o4"
                     }
                 },
                 {
@@ -379,28 +379,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "That's the last of them. Mission accomplished, my Lord."
+                        "text": "tr_core_ruby_dusk_m9_t20"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Lord Dawson",
+                        "name": "TR_LORD_DAWSON",
                         "portrait": "npc_lord",
                         "side": "left",
-                        "text": "Splendid. Relocate your forces along this mountain pass and clean up remaining Sapphire Dawn units."
+                        "text": "tr_core_ruby_dusk_m9_t21"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Lord Dawson",
+                        "name": "TR_LORD_DAWSON",
                         "portrait": "npc_lord",
                         "side": "left",
-                        "text": "I have to go back and deal with this huge misunderstanding. This has went on for long enough. It is odd that King Ludwig refuses to respond to my letters. He was always a respectable man. Something is not right..."
+                        "text": "tr_core_ruby_dusk_m9_t22"
                     }
                 },
                 {
@@ -420,10 +420,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "right",
-                        "text": "I have failed you, my lord! Please forgive me!"
+                        "text": "tr_core_ruby_dusk_m6_t25"
                     }
                 },
                 {
@@ -2890,9 +2890,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "hero_commando"
@@ -3015,9 +3013,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -3650,9 +3646,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -4200,9 +4194,7 @@
         },
         "12_10": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -6059,9 +6051,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -6579,9 +6569,7 @@
         },
         "14_1": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -7933,9 +7921,7 @@
         },
         "15_14": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -7992,9 +7978,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -8482,9 +8466,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -8642,9 +8624,7 @@
         },
         "15_35": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -10896,9 +10876,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -11741,9 +11719,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -12591,9 +12567,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -12686,9 +12660,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -13291,9 +13263,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -13896,9 +13866,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -14836,9 +14804,7 @@
         },
         "1_4": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -15375,9 +15341,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -15415,9 +15379,7 @@
         },
         "20_20": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "steampunk_tower"
@@ -16199,9 +16161,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -16624,9 +16584,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -16929,9 +16887,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_heli"
@@ -18294,9 +18250,7 @@
         },
         "22_34": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -22498,9 +22452,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -23343,9 +23295,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -23438,9 +23388,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -25003,9 +24951,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -25853,9 +25799,7 @@
         },
         "28_9": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -27507,9 +27451,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -27517,9 +27459,7 @@
         },
         "2_21": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -28001,9 +27941,7 @@
         },
         "2_36": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -28150,9 +28088,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -28515,9 +28451,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -30205,9 +30139,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -30240,9 +30172,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_rocket"
@@ -30575,9 +30505,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_tank"
@@ -30970,9 +30898,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -31010,9 +30936,7 @@
         },
         "32_17": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "steampunk_tower"
@@ -31069,9 +30993,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -31624,9 +31546,7 @@
         },
         "32_35": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -31833,9 +31753,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_tank"
@@ -31988,9 +31906,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_scout"
@@ -32023,9 +31939,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_heli"
@@ -32208,9 +32122,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "npc_lord"
@@ -32243,9 +32155,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -32668,9 +32578,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_heli"
@@ -33423,9 +33331,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -34213,9 +34119,7 @@
         },
         "34_4": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -34272,9 +34176,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -34337,9 +34239,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "hero_gentleman"
@@ -34792,9 +34692,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_m_inf"
@@ -35127,9 +35025,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_m_inf"
@@ -35882,9 +35778,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -36372,9 +36266,7 @@
         },
         "36_31": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -37551,9 +37443,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -38486,9 +38376,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -38496,9 +38384,7 @@
         },
         "38_22": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -40535,9 +40421,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -40660,9 +40544,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -42050,9 +41932,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -42720,9 +42600,7 @@
         },
         "4_5": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "steampunk_tower"
@@ -42809,9 +42687,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -43689,9 +43565,7 @@
         },
         "5_33": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -44738,9 +44612,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_heli"
@@ -45973,9 +45845,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -46678,9 +46548,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -46898,9 +46766,7 @@
         },
         "8_20": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "steampunk_tower"
@@ -48127,9 +47993,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"

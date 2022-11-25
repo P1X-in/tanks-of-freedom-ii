@@ -39,82 +39,82 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Messenger",
+                        "name": "TR_ACT_MESSENGER",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Sir! I'm bearing important frontline report."
+                        "text": "tr_core_ruby_dusk_m1_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "What is the situation? Have we taken the outpost?"
+                        "text": "tr_core_ruby_dusk_m1_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Messenger",
+                        "name": "TR_ACT_MESSENGER",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "We did, Sir! Second battalion caught them by surprise, they seemed unprepared."
+                        "text": "tr_core_ruby_dusk_m1_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "A swift victory then."
+                        "text": "tr_core_ruby_dusk_m1_t4"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Messenger",
+                        "name": "TR_ACT_MESSENGER",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Not quite... Amber Noon soldiers put up a real fight, we have lost more units than anticipated. Our scouts have seen Prince Tybalt evacuating from the base not long after our initial strike."
+                        "text": "tr_core_ruby_dusk_m1_t5"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Prince Tybalt running away with his tail between his legs? Not surprising. It would explain why they fought so ferociously. Are our forces ready for another push?"
+                        "text": "tr_core_ruby_dusk_m1_t6"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Messenger",
+                        "name": "TR_ACT_MESSENGER",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "I'm afraid not. They have a lot of wounded soldiers and damaged equipment, which slows them down significantly. Second battalion will not be able to assist for a couple of days."
+                        "text": "tr_core_ruby_dusk_m1_t7"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Bah! I'll reprimend their commander once we join forces. You are dismissed."
+                        "text": "tr_core_ruby_dusk_m1_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Messenger",
+                        "name": "TR_ACT_MESSENGER",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Yes, Sir!"
+                        "text": "tr_core_ruby_dusk_m1_t9"
                     }
                 },
                 {
@@ -130,10 +130,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Without second battalion this attack might be difficult."
+                        "text": "tr_core_ruby_dusk_m1_t10"
                     }
                 },
                 {
@@ -149,10 +149,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "I only have few units here. It will have to do."
+                        "text": "tr_core_ruby_dusk_m1_t11"
                     }
                 },
                 {
@@ -168,10 +168,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "There are some old Infantry barracks here, I could use them."
+                        "text": "tr_core_ruby_dusk_m1_t12"
                     }
                 },
                 {
@@ -187,19 +187,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "I have to capture that outpost to secure this mountain passage into Amber Noon lands."
+                        "text": "tr_core_ruby_dusk_m1_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "There is a Tank guarding it though. These are very effective against Infantry, I have to be careful. It does not look like they can deploy more of them though. If I take it out, my mission will be much easier."
+                        "text": "tr_core_ruby_dusk_m1_t14"
                     }
                 },
                 {
@@ -215,10 +215,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Luckily, I do have a couple aces up my sleeve."
+                        "text": "tr_core_ruby_dusk_m1_t15"
                     }
                 },
                 {
@@ -233,33 +233,33 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "That Infantry unit can now use their Heavy Weapon ability, which should make a quick job of that Tank. It does require that unit to get close, and has a long cooldown, so I have to be careful. Leveling up other Infantry units is a good idea."
+                        "text": "tr_core_ruby_dusk_m1_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "In order to make sure my Infantry units survive combat with that Tank, I can use my active ability - Hardened Armour. When used, it increases the armour of all units standing 2 tiles away from me, or closer. In order to use it, I have to cast it on myself."
+                        "text": "tr_core_ruby_dusk_m1_t17"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Capture the Amber Noon HQ."
+                        "text": "tr_core_ruby_dusk_m1_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Noble Sidney must survive."
+                        "text": "tr_core_ruby_dusk_m1_o2"
                     }
                 },
                 {
@@ -273,10 +273,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "No! How could I fail?"
+                        "text": "tr_core_ruby_dusk_m1_t18"
                     }
                 },
                 {
@@ -306,19 +306,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Enemy command has been captured, Sir!"
+                        "text": "tr_core_ruby_dusk_m1_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Finally, I was getting impatient."
+                        "text": "tr_core_ruby_dusk_m1_t20"
                     }
                 },
                 {
@@ -350,61 +350,61 @@
                         "name": "???",
                         "portrait": "hero_gentleman",
                         "side": "left",
-                        "text": "I see you were not wasting any time, Sidney."
+                        "text": "tr_core_ruby_dusk_m1_t21"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Lord's lapdog himself showed up. I'm busy, Archibald."
+                        "text": "tr_core_ruby_dusk_m1_t22"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "left",
-                        "text": "Not anymore. Lord Dawson sent me to bring new orders to you, personally. Amber Noon attack concerns him, but he wants to get in touch with King Ludwig first, to explain matters. You will take your forces and retreat to Ruby Dusk lands at once."
+                        "text": "tr_core_ruby_dusk_m1_t23"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "And let them get away with an attack against us? Just like that?"
+                        "text": "tr_core_ruby_dusk_m1_t24"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "left",
-                        "text": "Lord's orders."
+                        "text": "tr_core_ruby_dusk_m1_t25"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "As my Lord wishes."
+                        "text": "tr_core_ruby_dusk_m1_t26"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Gentleman Archibald",
+                        "name": "TR_GENT_ARCHI",
                         "portrait": "hero_gentleman",
                         "side": "left",
-                        "text": "Splendid. I'll return to Rubyport to attend other matters."
+                        "text": "tr_core_ruby_dusk_m1_t27"
                     }
                 },
                 {
@@ -420,19 +420,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Lord Dawson is getting soft. Our lands are being attacked and all he can do is sit and wait."
+                        "text": "tr_core_ruby_dusk_m1_t28"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Noble Sidney",
+                        "name": "TR_NOB_SIDNEY",
                         "portrait": "hero_noble",
                         "side": "right",
-                        "text": "Ruby Dusk deserves better. Amber Noon will pay for their boldness, and when I return, other nobles will surely see which one of us would be a better ruler."
+                        "text": "tr_core_ruby_dusk_m1_t29"
                     }
                 },
                 {
@@ -1081,9 +1081,7 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -1811,9 +1809,7 @@
         },
         "16_23": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -1965,9 +1961,7 @@
         },
         "16_28": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -2443,9 +2437,7 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "red",
                 "tile": "red_infantry"
@@ -2903,9 +2895,7 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "red",
                 "tile": "red_infantry"
@@ -2937,9 +2927,7 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "hero_noble"
@@ -3181,9 +3169,7 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -4061,9 +4047,7 @@
         },
         "21_23": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -4670,9 +4654,7 @@
         },
         "22_29": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "neutral",
                 "tile": "steampunk_tower"
@@ -5034,9 +5016,7 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_tank"
