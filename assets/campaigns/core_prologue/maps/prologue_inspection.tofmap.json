@@ -26,37 +26,37 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Outpost Commander",
+                        "name": "tr_core_prologue_actor_out_comm",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "We have received a message from Warlord Grim addressed to you, Prince."
+                        "text": "tr_core_prologue_m2_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Ruby Dusk declared a war on us. We do not know why - they refuse to talk to us at all."
+                        "text": "tr_core_prologue_m2_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "King Ludwig ordered all forces to mobilize and defend our lands."
+                        "text": "tr_core_prologue_m2_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "Ruby Dusk attacking like that... It does not make any sense. No time to think about it though. We are in a tough spot."
+                        "text": "tr_core_prologue_m2_t4"
                     }
                 },
                 {
@@ -151,19 +151,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Pilot",
+                        "name": "TR_ACT_PILOT",
                         "portrait": "yellow_heli",
                         "side": "left",
-                        "text": "Royal Guard Air Force reporting. We spotted these Tanks from the distance and came as quickly as we could."
+                        "text": "tr_core_prologue_m2_t5"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "And just in time."
+                        "text": "tr_core_prologue_m2_t6"
                     }
                 },
                 {
@@ -203,10 +203,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "Oh no, we have lost our HQ! We can't hold the line without it..."
+                        "text": "tr_core_prologue_m2_t7"
                     }
                 },
                 {
@@ -236,10 +236,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Outpost Commander",
+                        "name": "tr_core_prologue_actor_out_comm",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "More reinforcements coming to help us."
+                        "text": "tr_core_prologue_m2_t8"
                     }
                 },
                 {
@@ -334,28 +334,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Operator",
+                        "name": "TR_ACT_OPERATOR",
                         "portrait": "yellow_rocket",
                         "side": "left",
-                        "text": "Rocket Artillery rolled in. Let us take care of these pesky Helicopters."
+                        "text": "tr_core_prologue_m2_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "Any word from Lord Dawson on why he sent his army to attack us?"
+                        "text": "tr_core_prologue_m2_t10"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Outpost Commander",
+                        "name": "tr_core_prologue_actor_out_comm",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "Nothing, Prince."
+                        "text": "tr_core_prologue_m2_t11"
                     }
                 },
                 {
@@ -405,28 +405,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Outpost Commander",
+                        "name": "tr_core_prologue_actor_out_comm",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "All Knights stand to attention! The Prince has arrived."
+                        "text": "tr_core_prologue_m2_t12"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "No need to be so formal, Commander."
+                        "text": "tr_core_prologue_m2_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Outpost Commander",
+                        "name": "tr_core_prologue_actor_out_comm",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "Of course Prince! Thank you Prince! Guard, begin your route."
+                        "text": "tr_core_prologue_m2_t14"
                     }
                 },
                 {
@@ -455,10 +455,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Guard",
+                        "name": "TR_ACT_GUARD",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "Heading for the border Towers."
+                        "text": "tr_core_prologue_m2_t15"
                     }
                 },
                 {
@@ -497,10 +497,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Guard",
+                        "name": "TR_ACT_GUARD",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "Assuming guard position."
+                        "text": "tr_core_prologue_m2_t16"
                     }
                 },
                 {
@@ -509,7 +509,7 @@
                         "name": "???",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Guard is coming! Move to plan B!"
+                        "text": "tr_core_prologue_m2_t17"
                     }
                 },
                 {
@@ -597,10 +597,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "yellow_m_inf",
                         "side": "right",
-                        "text": "Ruby Dusk is attacking! I repeat..."
+                        "text": "tr_core_prologue_m2_t18"
                     }
                 },
                 {
@@ -724,37 +724,37 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Outpost Commander",
+                        "name": "tr_core_prologue_actor_out_comm",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "We are under attack! Prince, quick, you have to withdraw!"
+                        "text": "tr_core_prologue_m2_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "I will not abandon my soldiers. We have to hold this outpost. Prepare youselves!"
+                        "text": "tr_core_prologue_m2_t20"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "All Infantry and Mobile Infantry units under my command deal more damage and have additional armour. That should help us hold the line."
+                        "text": "tr_core_prologue_m2_t21"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "I have to remember, that I can inspire any nearby unit to get a second wind and act again during the same turn."
+                        "text": "tr_core_prologue_m2_t22"
                     }
                 },
                 {
@@ -798,7 +798,7 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Repel waves of enemies."
+                        "text": "tr_core_prologue_m2_o1"
                     }
                 },
                 {
@@ -935,10 +935,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "I have been defeated... I wasn't ready after all..."
+                        "text": "tr_core_prologue_m2_t23"
                     }
                 },
                 {
@@ -968,19 +968,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "None of this makes any sense. I have to go see my Father in the capital."
+                        "text": "tr_core_prologue_m2_t24"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "Hold on, men! I'll send reinforcements as soon as I can."
+                        "text": "tr_core_prologue_m2_t25"
                     }
                 },
                 {
@@ -1027,37 +1027,37 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Outpost Commander",
+                        "name": "tr_core_prologue_actor_out_comm",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "I don't think we can hold them off, my Prince. You should go, we will buy you as much time as we can."
+                        "text": "tr_core_prologue_m2_t26"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "I can't just leave you here!"
+                        "text": "tr_core_prologue_m2_t27"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Outpost Commander",
+                        "name": "tr_core_prologue_actor_out_comm",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "There is no stopping to them. They just keep coming."
+                        "text": "tr_core_prologue_m2_t28"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "Damn it!"
+                        "text": "tr_core_prologue_m2_t29"
                     }
                 },
                 {
@@ -1073,10 +1073,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Outpost Commander",
+                        "name": "tr_core_prologue_actor_out_comm",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "Please evacuate to the end of the road. It's the only way."
+                        "text": "tr_core_prologue_m2_t30"
                     }
                 },
                 {
@@ -1107,7 +1107,7 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Prince Tybalt must escape."
+                        "text": "tr_core_prologue_m2_o2"
                     }
                 },
                 {
@@ -1140,10 +1140,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Outpost Commander",
+                        "name": "tr_core_prologue_actor_out_comm",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "Here comes more."
+                        "text": "tr_core_prologue_m2_t31"
                     }
                 },
                 {
@@ -1198,10 +1198,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "Armoured units. We need to deploy more Tanks."
+                        "text": "tr_core_prologue_m2_t32"
                     }
                 },
                 {
@@ -1225,10 +1225,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Outpost Commander",
+                        "name": "tr_core_prologue_actor_out_comm",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "New wave incoming."
+                        "text": "tr_core_prologue_m2_t33"
                     }
                 },
                 {
@@ -1339,10 +1339,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "Helicopters incoming. We have to protect our Tanks. Get more Infantry!"
+                        "text": "tr_core_prologue_m2_t34"
                     }
                 },
                 {
@@ -1429,28 +1429,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "I understand why Father sends me on these missions, but come on..."
+                        "text": "tr_core_prologue_m2_t35"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "I could be having fun on the beach right now."
+                        "text": "tr_core_prologue_m2_t36"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "*sigh* Let's get this over with."
+                        "text": "tr_core_prologue_m2_t37"
                     }
                 },
                 {
@@ -1466,10 +1466,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "The outpost is just ahead, I should go there."
+                        "text": "tr_core_prologue_m2_t38"
                     }
                 },
                 {
@@ -1486,21 +1486,21 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Move Prince Tybalt to Amber Noon HQ."
+                        "text": "tr_core_prologue_m2_o3"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Prince Tybalt must survive."
+                        "text": "tr_core_prologue_m2_o4"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 2,
-                        "text": "Defend Amber Noon HQ."
+                        "text": "tr_core_prologue_m2_o5"
                     }
                 },
                 {

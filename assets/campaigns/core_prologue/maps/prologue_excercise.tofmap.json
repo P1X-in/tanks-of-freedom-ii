@@ -25,10 +25,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "What is going on out there? I knew I couldn't trust a recruit to complete even such a simple training assignment."
+                        "text": "tr_core_prologue_m1_t1"
                     }
                 },
                 {
@@ -72,44 +72,44 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Ruby Dusk Commander",
+                        "name": "tr_core_prologue_actor_rd_comm",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Alarm! Amber Noon forces just entered our lands!"
+                        "text": "tr_core_prologue_m1_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry #1",
+                        "name": "tr_core_prologue_actor_inf_1",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "Um, Sir... I think we have been spotted..."
+                        "text": "tr_core_prologue_m1_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "This is all part of the excercise. Since you got caught, your next objective is to claim that HQ."
+                        "text": "tr_core_prologue_m1_t4"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Oh, and make use of these Tank and Mobile Infantry units, they may come in handy. Be careful though - if you lose them, they can not be replaced."
+                        "text": "tr_core_prologue_m1_t5"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Claim the enemy HQ."
+                        "text": "tr_core_prologue_m1_o1"
                     }
                 },
                 {
@@ -133,28 +133,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Ruby Dusk Commander",
+                        "name": "tr_core_prologue_actor_rd_comm",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Amber Noon is taking our positions. Send a message about this to King Ludwig immidiately!"
+                        "text": "tr_core_prologue_m1_t6"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry #1",
+                        "name": "tr_core_prologue_actor_inf_1",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "Enemy HQ has been captured, Sir!"
+                        "text": "tr_core_prologue_m1_t7"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Good. All is going according to plan..."
+                        "text": "tr_core_prologue_m1_t8"
                     }
                 },
                 {
@@ -198,44 +198,44 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Ruby Dusk Commander",
+                        "name": "tr_core_prologue_actor_rd_comm",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Alarm! We have lost contact with one of our Towers! Investigate immidiately!"
+                        "text": "tr_core_prologue_m1_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry #1",
+                        "name": "tr_core_prologue_actor_inf_1",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "Um, Sir... I think we have been spotted..."
+                        "text": "tr_core_prologue_m1_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "This is all part of the excercise. Since you got caught, your next objective is to claim that HQ."
+                        "text": "tr_core_prologue_m1_t4"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Oh, and make use of these Tank and Mobile Infantry units, they may come in handy. Be careful though - if you lose them, they can not be replaced."
+                        "text": "tr_core_prologue_m1_t5"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Claim the enemy HQ."
+                        "text": "tr_core_prologue_m1_o1"
                     }
                 },
                 {
@@ -259,28 +259,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry #1",
+                        "name": "tr_core_prologue_actor_inf_1",
                         "portrait": "yellow_infantry",
                         "side": "left",
-                        "text": "How long do you think we will have to stand guard? It's so hot!"
+                        "text": "tr_core_prologue_m1_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry #2",
+                        "name": "tr_core_prologue_actor_inf_2",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "Better shut up or you will get an extra turn!"
+                        "text": "tr_core_prologue_m1_t10"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry #1",
+                        "name": "tr_core_prologue_actor_inf_1",
                         "portrait": "yellow_infantry",
                         "side": "left",
-                        "text": "*sigh*"
+                        "text": "tr_core_prologue_m1_t11"
                     }
                 },
                 {
@@ -289,7 +289,7 @@
                         "name": "???",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Attention, recruits!"
+                        "text": "tr_core_prologue_m1_t12"
                     }
                 },
                 {
@@ -298,43 +298,43 @@
                         "name": "Infantry #1 and Infantry #2",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "Sir Grim! Welcome back!"
+                        "text": "tr_core_prologue_m1_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "How is your training going?"
+                        "text": "tr_core_prologue_m1_t14"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry #1",
+                        "name": "tr_core_prologue_actor_inf_1",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "No issues, Sir! A Tank and some motorbikes for Mobile Infantry arrived just in time for vehicle excercises."
+                        "text": "tr_core_prologue_m1_t15"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Excellent. Your training objective has been updated. Your performance in capturing military structures was terrible."
+                        "text": "tr_core_prologue_m1_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry #1",
+                        "name": "tr_core_prologue_actor_inf_1",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "Oh..."
+                        "text": "tr_core_prologue_m1_t17"
                     }
                 },
                 {
@@ -350,53 +350,53 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Your new assignment is to practice it some more by claiming this Tower."
+                        "text": "tr_core_prologue_m1_t18"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry #1",
+                        "name": "tr_core_prologue_actor_inf_1",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "But Sir... isn't this tower beyond the border, on the Ruby Dusk territory?"
+                        "text": "tr_core_prologue_m1_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Are you questioning my orders?"
+                        "text": "tr_core_prologue_m1_t20"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry #1",
+                        "name": "tr_core_prologue_actor_inf_1",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "No Sir! I wouldn't dare!"
+                        "text": "tr_core_prologue_m1_t21"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Then get to it."
+                        "text": "tr_core_prologue_m1_t22"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Claim the Ruby Dusk Tower."
+                        "text": "tr_core_prologue_m1_o2"
                     }
                 },
                 {
