@@ -5,7 +5,7 @@
             30
         ],
         "skip_initial_hq_cam": true,
-        "track": "soundtrack_4",
+        "track": "soundtrack_4"
     },
     "scripts": {
         "stories": {
@@ -444,7 +444,7 @@
                         "winner": "red"
                     }
                 }
-            ],
+            ]
         },
         "triggers": {
             "01_first_turn": {
