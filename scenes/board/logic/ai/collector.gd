@@ -9,6 +9,9 @@ func _init(board_object):
 func select_best_action():
     var actions = self._gather_all_actions()
 
+    if actions is GDScriptFunctionState: # Still working.
+        actions = yield(actions, "completed")
+
     if actions.size() > 0:
         actions = self._sort_actions(actions)
         return actions[0]
@@ -29,7 +32,12 @@ func _gather_all_actions():
     var enemy_units = self.board.map.model.get_enemy_units_tiles(side)
 
     var buildings_actions = self._gather_building_actions(buildings, enemy_buildings, enemy_units, buildings, units, ap)
+    if buildings_actions is GDScriptFunctionState: # Still working.
+        buildings_actions = yield(buildings_actions, "completed")
+
     var units_actions = self._gather_unit_actions(units, enemy_buildings, enemy_units, buildings, units, ap)
+    if units_actions is GDScriptFunctionState: # Still working.
+        units_actions = yield(units_actions, "completed")
 
     return buildings_actions + units_actions
 
@@ -42,6 +50,7 @@ func _gather_building_actions(buildings, enemy_buildings, enemy_units, own_build
         if brain == null:
             continue
         buildings_actions += brain.get_actions(building_tile, enemy_buildings, enemy_units, own_buildings, own_units, ap, self.board)
+        yield(self.board.get_tree().create_timer(0.01), "timeout")
 
     return buildings_actions
 
@@ -57,6 +66,7 @@ func _gather_unit_actions(units, enemy_buildings, enemy_units, own_buildings, ow
         if brain == null:
             continue
         units_actions += brain.get_actions(unit_tile, enemy_buildings, enemy_units, own_buildings, own_units, ap, self.board)
+        yield(self.board.get_tree().create_timer(0.01), "timeout")
 
     return units_actions
 

@@ -21,15 +21,22 @@ func _finish_run():
     self.board.end_turn()
 
 func _ai_tick():
+    if self._ai_abort:
+        return
+
     while self._ai_paused or self.board.map.camera.camera_in_transit or self.board.map.camera.script_operated:
-        yield(self.board.get_tree().create_timer(0.5), "timeout")
-        if self._ai_abort:
-            return
+        var timer = self.board.get_tree().create_timer(0.5)
+        timer.connect("timeout", self, "_ai_tick")
+        return
 
     if self._ai_abort:
         return
 
     var selected_action = self.collector.select_best_action()
+    if selected_action is GDScriptFunctionState: # Still working.
+        selected_action = yield(selected_action, "completed")
+
+    yield(self.board.get_tree().create_timer(0.1), "timeout")
 
     if selected_action != null and self._failsafe_counter < self.FAILSAFE:
         if self.board.map.move_camera_to_position_if_far_away(selected_action.target.position, 7):
