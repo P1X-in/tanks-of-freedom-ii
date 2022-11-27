@@ -1,144 +1,165 @@
 {
-    "name" : "core_sapphire_dawn",
-    "title" : "Business as usual",
-    "icon" : "blue_gem",
-    "prerequisite" : "core_ruby_dusk",
-    "missions" : [
+    "name": "core_sapphire_dawn",
+    "title": "tr_core_sapphire_dawn_campaign_title",
+    "icon": "blue_gem",
+    "prerequisite": "core_ruby_dusk",
+    "missions": [
         {
-            "name" : "lucrative_offer",
-            "title" : "Lucrative offer",
-            "map" : "core_sap_dawn_lucrative_offer.tofmap.json",
-            "description" : "President Gideon, unhappy with Blake's progress in dealing with Ruby Dusk, sends General Cyrus to a small outposts with a very important task.",
-            "marker" : [470, 180],
+            "name": "lucrative_offer",
+            "title": "tr_core_sapphire_dawn_m1_name",
+            "map": "core_sap_dawn_lucrative_offer.tofmap.json",
+            "description": "tr_core_sapphire_dawn_m1_desc",
+            "marker": [
+                470,
+                180
+            ],
             "players": [
                 {
-                    "side" : "blue",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "red",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "red",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "consolidation",
-            "title" : "Consolidation",
-            "map" : "core_sap_dawn_consolidation.tofmap.json",
-            "description" : "During Commando Blake's hasty attack, many units couldn't keep up, and were left behind to fend for themselves. It is up to General Cyrus to reach those soldiers before Ruby Dusk does.",
-            "marker" : [510, 140],
+            "name": "consolidation",
+            "title": "tr_core_sapphire_dawn_m2_name",
+            "map": "core_sap_dawn_consolidation.tofmap.json",
+            "description": "tr_core_sapphire_dawn_m2_desc",
+            "marker": [
+                510,
+                140
+            ],
             "players": [
                 {
-                    "side" : "blue",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "red",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "red",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "capital_offence",
-            "title" : "Capital offence",
-            "map" : "core_sap_dawn_capital_offence.tofmap.json",
-            "description" : "A key supply line of the Ruby Dusk army has been located. Sapphire Dawn must cut it off, in order to significantly weaken the occupying force, and open the path towards Amber Fortress.",
-            "marker" : [550, 130],
+            "name": "capital_offence",
+            "title": "tr_core_sapphire_dawn_m3_name",
+            "map": "core_sap_dawn_capital_offence.tofmap.json",
+            "description": "tr_core_sapphire_dawn_m3_desc",
+            "marker": [
+                550,
+                130
+            ],
             "players": [
                 {
-                    "side" : "blue",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "red",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "red",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "noble_cause",
-            "title" : "Noble cause",
-            "map" : "core_sap_dawn_noble_cause.tofmap.json",
-            "description" : "Wave after wave of Ruby Dusk attackers are being repelled by Amber Noon soldiers defending the Amber Fortress. General Cyrus commands his troops to capture the Ruby HQ, which also appears to be holding a VIP under guard.",
-            "marker" : [520, 80],
+            "name": "noble_cause",
+            "title": "tr_core_sapphire_dawn_m4_name",
+            "map": "core_sap_dawn_noble_cause.tofmap.json",
+            "description": "tr_core_sapphire_dawn_m4_desc",
+            "marker": [
+                520,
+                80
+            ],
             "players": [
                 {
-                    "side" : "blue",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "red",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "red",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "glimmer_of_jade",
-            "title" : "A glimmer of Jade",
-            "map" : "core_sap_dawn_glimmer_of_jade.tofmap.json",
-            "description" : "President Gideon orders General Cyrus to travel east, where Warlord Grim requested help in dealing with new threat. But how could have Ruby Dusk gone that deep into Amber Noon lands? Or is it something else?",
-            "marker" : [630, 110],
+            "name": "glimmer_of_jade",
+            "title": "tr_core_sapphire_dawn_m5_name",
+            "map": "core_sap_dawn_glimmer_of_jade.tofmap.json",
+            "description": "tr_core_sapphire_dawn_m5_desc",
+            "marker": [
+                630,
+                110
+            ],
             "players": [
                 {
-                    "side" : "yellow",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "ai"
                 },
                 {
-                    "side" : "blue",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "green",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "green",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "hostile_takeover",
-            "title" : "Hostile takeover",
-            "map" : "core_sap_dawn_hostile_takeover.tofmap.json",
-            "description" : "As Prince Tybalt reveals the mastermind behind the invasion, an unexpected guest arrives to crash the party.",
-            "marker" : [615, 170],
+            "name": "hostile_takeover",
+            "title": "tr_core_sapphire_dawn_m6_name",
+            "map": "core_sap_dawn_hostile_takeover.tofmap.json",
+            "description": "tr_core_sapphire_dawn_m6_desc",
+            "marker": [
+                615,
+                170
+            ],
             "players": [
                 {
-                    "side" : "blue",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "green",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "green",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         },
         {
-            "name" : "pursuit_of_greatness",
-            "title" : "In pursuit of greatness",
-            "map" : "core_sap_dawn_pursuit_of_great.tofmap.json",
-            "description" : "Just as Amber Noon Prince takes refuge in a Jade Twilight stronghold, Commando Blake plans to infiltrate it and capture Tybalt before he slips away.",
-            "marker" : [600, 230],
+            "name": "pursuit_of_greatness",
+            "title": "tr_core_sapphire_dawn_m7_name",
+            "map": "core_sap_dawn_pursuit_of_great.tofmap.json",
+            "description": "tr_core_sapphire_dawn_m7_desc",
+            "marker": [
+                600,
+                230
+            ],
             "players": [
                 {
-                    "side" : "blue",
-                    "ap" : 0,
-                    "type" : "human"
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "human"
                 },
                 {
-                    "side" : "green",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "green",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         }

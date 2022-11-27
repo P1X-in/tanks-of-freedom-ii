@@ -33,19 +33,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_scout",
                         "side": "left",
-                        "text": "Highway looks clear. There are signs of heavy equipment being moved through here recently."
+                        "text": "tr_core_sapphire_dawn_m3_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "So the reports were accurate then. They are using this route to resupply their forces near Amber Fortress."
+                        "text": "tr_core_sapphire_dawn_m3_t2"
                     }
                 },
                 {
@@ -61,19 +61,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_scout",
                         "side": "left",
-                        "text": "There is a number of towers along the road. Looks like they were abandoned by Amber Noon."
+                        "text": "tr_core_sapphire_dawn_m3_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Ah, this is great! These towers would allow us to hold the line and cut their logistics."
+                        "text": "tr_core_sapphire_dawn_m3_t4"
                     }
                 },
                 {
@@ -89,19 +89,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Any sign of Commando Blake or his troops?"
+                        "text": "tr_core_sapphire_dawn_m3_t5"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_scout",
                         "side": "left",
-                        "text": "Nothing so far. There is an opening on the other end of this valley, moving in to check it out."
+                        "text": "tr_core_sapphire_dawn_m3_t6"
                     }
                 },
                 {
@@ -141,10 +141,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_scout",
                         "side": "left",
-                        "text": "Whoa, hold on!"
+                        "text": "tr_core_sapphire_dawn_m3_t7"
                     }
                 },
                 {
@@ -160,19 +160,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_scout",
                         "side": "left",
-                        "text": "There is a huge Ruby Dusk base, just beyond the canal. It was obscured by the hills."
+                        "text": "tr_core_sapphire_dawn_m3_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_scout",
                         "side": "left",
-                        "text": "Ground is destroyed on our end, with signs of battle. Looks like Blake tried to cross the water here, but failed."
+                        "text": "tr_core_sapphire_dawn_m3_t9"
                     }
                 },
                 {
@@ -193,19 +193,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_scout",
                         "side": "left",
-                        "text": "We have been detected! We're so lucky they somehow missed us..."
+                        "text": "tr_core_sapphire_dawn_m3_t10"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "That is enough, fall back!"
+                        "text": "tr_core_sapphire_dawn_m3_t11"
                     }
                 },
                 {
@@ -244,10 +244,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_scout",
                         "side": "left",
-                        "text": "Copy that, going back."
+                        "text": "tr_core_sapphire_dawn_m3_t12"
                     }
                 },
                 {
@@ -263,10 +263,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "They will probably roll out their units soon."
+                        "text": "tr_core_sapphire_dawn_m3_t13"
                     }
                 },
                 {
@@ -309,10 +309,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Heavy equipment is very limited, we could not get more through this swamp. Luckily, we have repair crews with us."
+                        "text": "tr_core_sapphire_dawn_m3_t14"
                     }
                 },
                 {
@@ -328,31 +328,31 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "We have to capture and hold these towers ASAP."
+                        "text": "tr_core_sapphire_dawn_m3_t15"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Capture the Towers along the highway."
+                        "text": "tr_core_sapphire_dawn_m3_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Defend Sapphire Dawn HQ."
+                        "text": "tr_core_sapphire_dawn_m3_o2"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 2,
-                        "text": "General Cyrus must survive."
+                        "text": "tr_core_sapphire_dawn_m1_o5"
                     }
                 },
                 {
@@ -376,10 +376,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_scout",
                         "side": "left",
-                        "text": "We're getting some movement."
+                        "text": "tr_core_sapphire_dawn_m3_t16"
                     }
                 },
                 {
@@ -551,10 +551,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_scout",
                         "side": "left",
-                        "text": "They are clearing space!"
+                        "text": "tr_core_sapphire_dawn_m3_t17"
                     }
                 },
                 {
@@ -807,19 +807,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_scout",
                         "side": "left",
-                        "text": "Ok, that's a LOT..."
+                        "text": "tr_core_sapphire_dawn_m3_t18"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "It is, but they can't bring in many Tanks this way. Focusing on Infantry should be a good approach."
+                        "text": "tr_core_sapphire_dawn_m3_t19"
                     }
                 },
                 {
@@ -1283,10 +1283,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "I have made a tactical mistake! Fall back!"
+                        "text": "tr_core_sapphire_dawn_m1_t40"
                     }
                 },
                 {
@@ -1306,10 +1306,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Ruby Dusk captured a tower. We need all of them to secure this route."
+                        "text": "tr_core_sapphire_dawn_m3_t20"
                     }
                 },
                 {
@@ -1330,7 +1330,7 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Capture the Towers along the highway."
+                        "text": "tr_core_sapphire_dawn_m3_o1"
                     }
                 },
                 {
@@ -1344,10 +1344,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "All towers captured. Now we have to hold them."
+                        "text": "tr_core_sapphire_dawn_m3_t21"
                     }
                 },
                 {
@@ -1369,7 +1369,7 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Hold the Towers along the highway for 5 turns."
+                        "text": "tr_core_sapphire_dawn_m3_o3"
                     }
                 },
                 {
@@ -1473,28 +1473,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Our main force have arrived. I am sure they will realise they can not retake these Towers like that and stop for now. You can take it from here, Sergeant."
+                        "text": "tr_core_sapphire_dawn_m3_t22"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Yes Sir!"
+                        "text": "tr_core_sapphire_dawn_m3_t23"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "As much as I would like to see this through, I musn't waste any time. If the situation ahead is as bad as it was up till now, I have to find Blake, and fast, before he causes even more trouble."
+                        "text": "tr_core_sapphire_dawn_m3_t24"
                     }
                 },
                 {
@@ -8628,9 +8628,7 @@
         },
         "18_19": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -8717,9 +8715,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -9117,9 +9113,7 @@
         },
         "18_33": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -9391,9 +9385,7 @@
         },
         "18_6": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -13235,9 +13227,7 @@
         },
         "22_12": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -13689,9 +13679,7 @@
         },
         "22_26": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -20018,9 +20006,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -20388,9 +20374,7 @@
         },
         "2_14": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -20477,9 +20461,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_tank"
@@ -20547,9 +20529,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_rocket"
@@ -20618,9 +20598,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_scout"
@@ -20688,9 +20666,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_heli"
@@ -20728,9 +20704,7 @@
         },
         "2_24": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -21117,9 +21091,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -21542,9 +21514,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -21757,9 +21727,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -22037,9 +22005,7 @@
         },
         "32_14": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -22096,9 +22062,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -22131,9 +22095,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -22346,9 +22308,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -22381,9 +22341,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -22821,9 +22779,7 @@
         },
         "33_24": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -22970,9 +22926,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -23275,9 +23229,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -23310,9 +23262,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -23345,9 +23295,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -23686,9 +23634,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "hero_general"
@@ -23786,9 +23732,7 @@
         },
         "37_18": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -24085,9 +24029,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_infantry"
@@ -24150,9 +24092,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_infantry"
@@ -24215,9 +24155,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_infantry"
@@ -24495,9 +24433,7 @@
         },
         "4_17": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -24649,9 +24585,7 @@
         },
         "4_22": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -24798,9 +24732,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_rocket"
@@ -24833,9 +24765,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_rocket"
@@ -24868,9 +24798,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_rocket"
@@ -24903,9 +24831,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_rocket"
@@ -24938,9 +24864,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_rocket"
@@ -24973,9 +24897,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_rocket"
@@ -25008,9 +24930,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_rocket"
@@ -25043,9 +24963,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_rocket"
@@ -25078,9 +24996,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_rocket"
@@ -25113,9 +25029,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_rocket"

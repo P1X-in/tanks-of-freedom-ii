@@ -26,82 +26,82 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "So this whole conflict has been caused by Warlord Grim, so that he can take over Amber Noon?"
+                        "text": "tr_core_sapphire_dawn_m6_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "Yes. And he's been hunting me ever since the initial attack."
+                        "text": "tr_core_sapphire_dawn_m6_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "What happened with King Ludwig then? Is he a prisoner?"
+                        "text": "tr_core_sapphire_dawn_m6_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "I do not know. No one seen or heard from the King for weeks, even me. Grim says, that all of his orders come directly from my father, but I doubt that."
+                        "text": "tr_core_sapphire_dawn_m6_t4"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "I have to contact President immidietally. This is not what Sapphire Dawn signed up for."
+                        "text": "tr_core_sapphire_dawn_m6_t5"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "So what is your plan, Prince?"
+                        "text": "tr_core_sapphire_dawn_m6_t6"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "Chancellor Irene is an old friend of my father. I will seek her council on what to do."
+                        "text": "tr_core_sapphire_dawn_m6_t7"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "A wise choice. I wish you good luck on your journey. Excuse me now, I have a lot of work ahead of me if we are to fix this situation."
+                        "text": "tr_core_sapphire_dawn_m6_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "Thank you, General. Good luck to you as well."
+                        "text": "tr_core_sapphire_dawn_m6_t9"
                     }
                 },
                 {
@@ -169,46 +169,46 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Sergeant, send this encrypted message to President Gideon immidietally."
+                        "text": "tr_core_sapphire_dawn_m6_t10"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "There is an incoming call for you, Sir."
+                        "text": "tr_core_sapphire_dawn_m6_t11"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "Ah, General. I've got reports you have encountered Prince Tybalt. I have some terrible news: Tybalt is a traitor, conspiring with Ruby Dusk to overthrow King Ludwig. Your orders are to arrest him at once!"
+                        "text": "tr_core_sapphire_dawn_m6_t12"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "I don't think so. I know that it is you, who is the traitor here. I no longer take orders from you."
+                        "text": "tr_core_sapphire_dawn_m6_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "What a shame. Well, in that case..."
+                        "text": "tr_core_sapphire_dawn_m6_t14"
                     }
                 },
                 {
@@ -227,46 +227,46 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Stand down, General. You are being relieved of your command. Sergeant, I will be taking over from here."
+                        "text": "tr_core_sapphire_dawn_m6_t15"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Is this a joke? You do not have the authority!"
+                        "text": "tr_core_sapphire_dawn_m6_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Oh, but I do. Here it is, signed by Gideon himself. Sergeant, take him away."
+                        "text": "tr_core_sapphire_dawn_m6_t17"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "..."
+                        "text": "tr_core_sapphire_dawn_m4_t17"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "You will pay for this, Blake!"
+                        "text": "tr_core_sapphire_dawn_m6_t18"
                     }
                 },
                 {
@@ -321,19 +321,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "right",
-                        "text": "That Grim is getting on my nerves."
+                        "text": "tr_core_sapphire_dawn_m6_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Knight",
+                        "name": "TR_ACT_KNIGHT",
                         "portrait": "yellow_infantry",
                         "side": "left",
-                        "text": "Go on, my Prince. We will buy you some time."
+                        "text": "tr_core_sapphire_dawn_m6_t20"
                     }
                 },
                 {
@@ -349,10 +349,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Soldier",
+                        "name": "TR_ACT_SOLDIER",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "These are our lands. We will not let them in."
+                        "text": "tr_core_sapphire_dawn_m6_t21"
                     }
                 },
                 {
@@ -403,10 +403,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "I hate this so much. I promise you, next time will be different!"
+                        "text": "tr_core_sapphire_dawn_m6_t22"
                     }
                 },
                 {
@@ -454,24 +454,24 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "I can't let him get away. I must reach that road as quickly as possible."
+                        "text": "tr_core_sapphire_dawn_m6_t23"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Bring Commando Blake to the end of the road."
+                        "text": "tr_core_sapphire_dawn_m6_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Commando Blake must survive."
+                        "text": "tr_core_sapphire_dawn_m6_o2"
                     }
                 },
                 {
@@ -485,10 +485,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "I wasn't... fast... enough..."
+                        "text": "tr_core_sapphire_dawn_m6_t24"
                     }
                 },
                 {
@@ -508,28 +508,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "This is it. All units, follow me!"
+                        "text": "tr_core_sapphire_dawn_m6_t25"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Sir! Most of our forces are tired, and not able to keep up. We have to slow down."
+                        "text": "tr_core_sapphire_dawn_m6_t26"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "And let the Prince slip away? Fat chance! Now go!"
+                        "text": "tr_core_sapphire_dawn_m6_t27"
                     }
                 },
                 {
@@ -1453,9 +1453,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "yellow_infantry"
@@ -1518,9 +1516,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "yellow_tank"
@@ -1613,9 +1609,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "yellow_rocket"
@@ -2253,9 +2247,7 @@
         },
         "12_28": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "feudal_tower"
@@ -4892,9 +4884,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -6762,9 +6752,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -7612,9 +7600,7 @@
         },
         "18_5": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -7826,9 +7812,7 @@
         },
         "19_12": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -8125,9 +8109,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "hero_prince"
@@ -8766,9 +8748,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -8861,9 +8841,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -9106,9 +9084,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "hero_general"
@@ -9206,9 +9182,7 @@
         },
         "20_24": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -9780,9 +9754,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -11980,9 +11952,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -12710,9 +12680,7 @@
         },
         "23_5": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -13909,9 +13877,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -16734,9 +16700,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_tank"
@@ -16799,9 +16763,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_infantry"
@@ -17524,9 +17486,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_rocket"
@@ -18639,9 +18599,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_infantry"
@@ -18649,9 +18607,7 @@
         },
         "31_28": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -19043,9 +18999,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "green_tank"
@@ -19318,9 +19272,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_scout"
@@ -19658,9 +19610,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_infantry"
@@ -19973,9 +19923,7 @@
         },
         "35_28": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -20152,9 +20100,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "green_infantry"
@@ -20312,9 +20258,7 @@
         },
         "37_25": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -21061,9 +21005,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "yellow_heli"
@@ -21131,9 +21073,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "yellow_infantry"
@@ -21141,9 +21081,7 @@
         },
         "6_26": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "feudal_tower"
@@ -21775,9 +21713,7 @@
         },
         "8_21": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "feudal_tower"
@@ -21899,9 +21835,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "yellow_infantry"
@@ -22384,9 +22318,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "yellow_tank"

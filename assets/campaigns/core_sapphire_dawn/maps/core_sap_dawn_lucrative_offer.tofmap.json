@@ -33,10 +33,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "This desert heat is starting to get to me. I'm getting too old for this."
+                        "text": "tr_core_sapphire_dawn_m1_t1"
                     }
                 },
                 {
@@ -75,10 +75,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Orders said to get here as soon as possible. I wonder what this is all about?"
+                        "text": "tr_core_sapphire_dawn_m1_t2"
                     }
                 },
                 {
@@ -94,10 +94,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "So this is the outpost I'm supposed to command. Does not look like much."
+                        "text": "tr_core_sapphire_dawn_m1_t3"
                     }
                 },
                 {
@@ -123,109 +123,109 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Hello, private. I'm here to take command."
+                        "text": "tr_core_sapphire_dawn_m1_t4"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Guard",
+                        "name": "TR_ACT_GUARD",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Sir! We've been expecting you. There is a message waiting for you."
+                        "text": "tr_core_sapphire_dawn_m1_t5"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Let's hear it then."
+                        "text": "tr_core_sapphire_dawn_m1_t6"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "President Gideon",
+                        "name": "TR_PREZ_GIDEON",
                         "portrait": "npc_president",
                         "side": "left",
-                        "text": "General Cyrus, I hope your trip went fine. Sorry for dispatching you on such a short notice, but the situation is getting out of hand and we need your experience."
+                        "text": "tr_core_sapphire_dawn_m1_t7"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "President Gideon",
+                        "name": "TR_PREZ_GIDEON",
                         "portrait": "npc_president",
                         "side": "left",
-                        "text": "You must have heard by now that a war broke out in the Amber Noon kingdom, with Ruby Dusk invading, and some of our forces got involved."
+                        "text": "tr_core_sapphire_dawn_m1_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "President Gideon",
+                        "name": "TR_PREZ_GIDEON",
                         "portrait": "npc_president",
                         "side": "left",
-                        "text": "Warlord Grim of the Amber Noon contacted us, asking for help. Ruby Dusk attacked them without notice nor reason, driving their army deep into King Ludwig's domain."
+                        "text": "tr_core_sapphire_dawn_m1_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "President Gideon",
+                        "name": "TR_PREZ_GIDEON",
                         "portrait": "npc_president",
                         "side": "left",
-                        "text": "Prince Tybalt is nowhere to be found. Warlord Grim asked us to intervene, and I agreed. It is a great opportunity to both weaken Ruby Dusk and get some favours from Amber Dusk, as Warlord Grim assured me, that King Ludwig is a generous man."
+                        "text": "tr_core_sapphire_dawn_m1_t10"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "President Gideon",
+                        "name": "TR_PREZ_GIDEON",
                         "portrait": "npc_president",
                         "side": "left",
-                        "text": "Or so it seemed... I have ordered Commando Blake to take a large chunk of our forces and deal with the invasion. It didn't work out so well. He tried to make a push towards Rubyport and failed."
+                        "text": "tr_core_sapphire_dawn_m1_t11"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "He did what? That's was so foolish of him."
+                        "text": "tr_core_sapphire_dawn_m1_t12"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "President Gideon",
+                        "name": "TR_PREZ_GIDEON",
                         "portrait": "npc_president",
                         "side": "left",
-                        "text": "This is where you come in. We still have to assist Amber Noon, and reinforce Blake. But before we can do this, we have to rebuild some of our forces. I assign that task to you. Commanding officer of the outpost knows the details."
+                        "text": "tr_core_sapphire_dawn_m1_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "As usual, Blake rushed forward without much consideration, and now needs help."
+                        "text": "tr_core_sapphire_dawn_m1_t14"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Sir! I have a list of requirements for you, sent by president's advisor. Our forces here are lacking in all regards, I'm afraid."
+                        "text": "tr_core_sapphire_dawn_m1_t15"
                     }
                 },
                 {
@@ -241,10 +241,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Mechanised forces were taken by Blake on his initial expedition. Only bare minimum left."
+                        "text": "tr_core_sapphire_dawn_m1_t16"
                     }
                 },
                 {
@@ -260,26 +260,26 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Infantry has been reduced to only this guard unit, and another one up north, near damaged bridge. Reinforcing them will be our first objective."
+                        "text": "tr_core_sapphire_dawn_m1_t17"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "We have to recruit more infantry in the Barracks, so that we have at least 5 units in the field, including current ones."
+                        "text": "tr_core_sapphire_dawn_m1_t18"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Recruit Infantry units."
+                        "text": "tr_core_sapphire_dawn_m1_o1"
                     }
                 },
                 {
@@ -293,28 +293,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "I just noticed, that my active ability is not available. Looks like air support is lacking in this area."
+                        "text": "tr_core_sapphire_dawn_m1_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "I still have my passive ability, and it should come in handy. It allows me to recruit Infantry and Mobile Infantry with less AP."
+                        "text": "tr_core_sapphire_dawn_m1_t20"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Resources are limited here, recruitment will take a couple of turns."
+                        "text": "tr_core_sapphire_dawn_m1_t21"
                     }
                 },
                 {
@@ -337,19 +337,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "New soldiers are ready and eager. We can move on to the next item on the list."
+                        "text": "tr_core_sapphire_dawn_m1_t22"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "We need at least three teams of Mobile Infantry. They are now available for recruitment in the Barracks."
+                        "text": "tr_core_sapphire_dawn_m1_t23"
                     }
                 },
                 {
@@ -367,7 +367,7 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Recruit Mobile Infantry units."
+                        "text": "tr_core_sapphire_dawn_m1_o2"
                     }
                 },
                 {
@@ -390,10 +390,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Another one done. These units should cover your scouting and support needs."
+                        "text": "tr_core_sapphire_dawn_m1_t24"
                     }
                 },
                 {
@@ -408,10 +408,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Only one more to go. Orders are to have at least two Tanks in the field. Factory is waiting for your request."
+                        "text": "tr_core_sapphire_dawn_m1_t25"
                     }
                 },
                 {
@@ -429,7 +429,7 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Deploy more Tanks."
+                        "text": "tr_core_sapphire_dawn_m1_o3"
                     }
                 },
                 {
@@ -452,28 +452,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "That should do it."
+                        "text": "tr_core_sapphire_dawn_m1_t26"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Do we have further instructions from high command?"
+                        "text": "tr_core_sapphire_dawn_m1_t27"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Yes Sir, we do. You are to take these newly formed forces and proceed to cross the border and provide assitance to any Amber Noon army you encounter."
+                        "text": "tr_core_sapphire_dawn_m1_t28"
                     }
                 },
                 {
@@ -488,16 +488,52 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Bridge over the river has been repaired and should be safe to use."
+                        "text": "tr_core_sapphire_dawn_m1_t29"
                     }
                 },
-                {"action" : "terrain_remove", "details" : {"where" : [17, 19], "type" : "terrain"}},
-                {"action" : "terrain_remove", "details" : {"where" : [19, 19], "type" : "terrain"}},
-                {"action" : "terrain_remove", "details" : {"where" : [18, 18], "type" : "terrain"}},
-                {"action" : "terrain_remove", "details" : {"where" : [18, 20], "type" : "terrain"}},
+                {
+                    "action": "terrain_remove",
+                    "details": {
+                        "where": [
+                            17,
+                            19
+                        ],
+                        "type": "terrain"
+                    }
+                },
+                {
+                    "action": "terrain_remove",
+                    "details": {
+                        "where": [
+                            19,
+                            19
+                        ],
+                        "type": "terrain"
+                    }
+                },
+                {
+                    "action": "terrain_remove",
+                    "details": {
+                        "where": [
+                            18,
+                            18
+                        ],
+                        "type": "terrain"
+                    }
+                },
+                {
+                    "action": "terrain_remove",
+                    "details": {
+                        "where": [
+                            18,
+                            20
+                        ],
+                        "type": "terrain"
+                    }
+                },
                 {
                     "action": "trigger",
                     "details": {
@@ -515,10 +551,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Send in a scouting party first. I have a bad feeling about this..."
+                        "text": "tr_core_sapphire_dawn_m1_t30"
                     }
                 },
                 {
@@ -536,10 +572,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_m_inf",
                         "side": "left",
-                        "text": "Roger."
+                        "text": "tr_core_sapphire_dawn_m1_t31"
                     }
                 },
                 {
@@ -575,28 +611,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "blue_m_inf",
                         "side": "left",
-                        "text": "Sir! We have reached the border tower, but it has Ruby Dusk colours! Ruby army is in the area."
+                        "text": "tr_core_sapphire_dawn_m1_t32"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Ruby Dusk is already here? They must be controlling Amber lands all the way to the capital. This complicates things."
+                        "text": "tr_core_sapphire_dawn_m1_t33"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Scout! Fall back before they spot you."
+                        "text": "tr_core_sapphire_dawn_m1_t34"
                     }
                 },
                 {
@@ -633,10 +669,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "I think we don't have a choice here. Let's take them head on."
+                        "text": "tr_core_sapphire_dawn_m1_t35"
                     }
                 },
                 {
@@ -651,10 +687,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "We should retake this tower and forward Barracks. It will reduce their already limited AP supply. "
+                        "text": "tr_core_sapphire_dawn_m1_t36"
                     }
                 },
                 {
@@ -669,10 +705,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "Our main goal is to take the local HQ."
+                        "text": "tr_core_sapphire_dawn_m1_t37"
                     }
                 },
                 {
@@ -688,14 +724,14 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Capture the Ruby Dusk HQ."
+                        "text": "tr_core_sapphire_dawn_m1_o4"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "General Cyrus must survive."
+                        "text": "tr_core_sapphire_dawn_m1_o5"
                     }
                 },
                 {
@@ -719,19 +755,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Sergeant",
+                        "name": "TR_ACT_SERGEANT",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Objective captured, Sir."
+                        "text": "tr_core_sapphire_dawn_m1_t38"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "All units! Regroup at the captured HQ. We will proceed along that road as soon as possible."
+                        "text": "tr_core_sapphire_dawn_m1_t39"
                     }
                 },
                 {
@@ -751,10 +787,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "General Cyrus",
+                        "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "I have made a tactical mistake! Fall back!"
+                        "text": "tr_core_sapphire_dawn_m1_t40"
                     }
                 },
                 {
@@ -1902,9 +1938,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -1967,9 +2001,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_tank"
@@ -2547,9 +2579,7 @@
         },
         "16_15": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "feudal_tower"
@@ -2606,9 +2636,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -4056,9 +4084,7 @@
         },
         "19_25": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -4415,9 +4441,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -4840,9 +4864,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "hero_general"
@@ -5365,9 +5387,7 @@
         },
         "22_18": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -5544,9 +5564,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -6154,9 +6172,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -7089,9 +7105,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -7249,9 +7263,7 @@
         },
         "28_21": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -8064,9 +8076,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_infantry"
@@ -8249,9 +8259,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_tank"
@@ -8439,9 +8447,7 @@
         },
         "6_14": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "feudal_tower"
@@ -8738,9 +8744,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_infantry"

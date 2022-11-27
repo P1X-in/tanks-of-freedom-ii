@@ -26,10 +26,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Finally, I have almost caught up with my target."
+                        "text": "tr_core_sapphire_dawn_m7_t1"
                     }
                 },
                 {
@@ -45,10 +45,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "The armored corps is here, but those wimpy infantry units didn't manage to keep the pace."
+                        "text": "tr_core_sapphire_dawn_m7_t2"
                     }
                 },
                 {
@@ -64,10 +64,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "This might prove to be an issue, so deep behind enemy lines, they actually do have quite a lot of troops and buildings."
+                        "text": "tr_core_sapphire_dawn_m7_t3"
                     }
                 },
                 {
@@ -83,10 +83,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "It seems that a lot of Jade Twilight forces are standing down. They do have radar towers, though. I'm sure, that as soon as me, or any of my units, get's too close, they will sound an alarm."
+                        "text": "tr_core_sapphire_dawn_m7_t4"
                     }
                 },
                 {
@@ -124,10 +124,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Even if I would manage to push through all these defensive lines with my armoured force, I wouldn't be able to hold these positions."
+                        "text": "tr_core_sapphire_dawn_m7_t5"
                     }
                 },
                 {
@@ -143,10 +143,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Luckily, I don't have to. All I need to do is to use my awesome Commando abilities, get close to the Prince, and get him out."
+                        "text": "tr_core_sapphire_dawn_m7_t6"
                     }
                 },
                 {
@@ -162,10 +162,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Some of the foliage in this area is very dense. I should be able to use it to my advantage. Tall grass will protect me from being detected, as long as the alarm hasn't been activated."
+                        "text": "tr_core_sapphire_dawn_m7_t7"
                     }
                 },
                 {
@@ -190,10 +190,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "A Rocket Artillery found some old, forgotten route through the wilderness. Normally, it wouldn't do me much good, but thanks to their long range, they can assist from afar."
+                        "text": "tr_core_sapphire_dawn_m7_t8"
                     }
                 },
                 {
@@ -209,47 +209,47 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "In the meantime, Jade Twilight might send some units to my encampment. I have to defend it, as it is my only way out."
+                        "text": "tr_core_sapphire_dawn_m7_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Tybalt is not going to slip away this time!"
+                        "text": "tr_core_sapphire_dawn_m7_t10"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Infiltrate Jade Twilight base."
+                        "text": "tr_core_sapphire_dawn_m7_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Defend Sapphire Dawn camp."
+                        "text": "tr_core_sapphire_dawn_m7_o2"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 2,
-                        "text": "Commando Blake must survive."
+                        "text": "tr_core_sapphire_dawn_m6_o2"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 3,
-                        "text": "(Optional) Do not raise an alarm."
+                        "text": "tr_core_sapphire_dawn_m7_o3"
                     }
                 },
                 {
@@ -375,10 +375,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Alarm! Enemy infiltration detected!"
+                        "text": "tr_core_sapphire_dawn_m7_t11"
                     }
                 },
                 {
@@ -700,7 +700,7 @@
                     "action": "objective",
                     "details": {
                         "slot": 3,
-                        "text": "(Failed) Do not raise an alarm."
+                        "text": "tr_core_sapphire_dawn_m7_o4"
                     }
                 },
                 {
@@ -714,10 +714,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "No! With that route closed, there is no way for me to get Prince Tybalt out of here! This operation is a bust."
+                        "text": "tr_core_sapphire_dawn_m7_t12"
                     }
                 },
                 {
@@ -737,10 +737,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "I wasn't... fast... enough..."
+                        "text": "tr_core_sapphire_dawn_m6_t24"
                     }
                 },
                 {
@@ -770,17 +770,17 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Almost there. All I have to do is to approach the target and grab him!"
+                        "text": "tr_core_sapphire_dawn_m7_t13"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Capture Prince Tybalt."
+                        "text": "tr_core_sapphire_dawn_m7_o5"
                     }
                 },
                 {
@@ -804,10 +804,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "There is a guard ahead. They will spot me if I just try to sneak around the tree line"
+                        "text": "tr_core_sapphire_dawn_m7_t14"
                     }
                 },
                 {
@@ -823,10 +823,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "I have to take them out somehow. Or I could just wait a bit and use my skill to get across those trees undetected."
+                        "text": "tr_core_sapphire_dawn_m7_t15"
                     }
                 },
                 {
@@ -866,19 +866,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Treeline is thinner here. I should be able to get through it using my Infiltration skill."
+                        "text": "tr_core_sapphire_dawn_m7_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "I'm pretty sure they will still spot me though. Enemy units might go after me into the tall grass to investigate, but should not raise an alarm just yet. In that case I should just keep going."
+                        "text": "tr_core_sapphire_dawn_m7_t17"
                     }
                 },
                 {
@@ -902,10 +902,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "I've got you now!"
+                        "text": "tr_core_sapphire_dawn_m7_t18"
                     }
                 },
                 {
@@ -914,7 +914,7 @@
                         "name": "???",
                         "portrait": "hero_captain",
                         "side": "left",
-                        "text": "Ah, Blake. Hot-headed as always."
+                        "text": "tr_core_sapphire_dawn_m7_t19"
                     }
                 },
                 {
@@ -1014,28 +1014,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "left",
-                        "text": "Surrender, you have nowhere to run now."
+                        "text": "tr_core_sapphire_dawn_m7_t20"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "I warned you, that next time we meet it would be different. I won't run away anymore."
+                        "text": "tr_core_sapphire_dawn_m7_t21"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Oh you... !!!"
+                        "text": "tr_core_sapphire_dawn_m7_t22"
                     }
                 },
                 {
@@ -1105,28 +1105,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "He slipped away!"
+                        "text": "tr_core_sapphire_dawn_m7_t23"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "left",
-                        "text": "Blake is a master infiltrator. We probably wouldn't be able to catch him anyway. Just let him run, he won't be able to pester you anymore."
+                        "text": "tr_core_sapphire_dawn_m7_t24"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "left",
-                        "text": "Our transport to the Jade Oasis is waiting. Let's go."
+                        "text": "tr_core_sapphire_dawn_m7_t25"
                     }
                 },
                 {
@@ -1156,10 +1156,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "right",
-                        "text": "Another guard, this time on patrol. They could be taken out, or I could just wait for them to get around the corner and run."
+                        "text": "tr_core_sapphire_dawn_m7_t26"
                     }
                 },
                 {
@@ -2314,9 +2314,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "green_infantry"
@@ -3289,9 +3287,7 @@
         },
         "12_3": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -3558,9 +3554,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_infantry"
@@ -3833,9 +3827,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "green_tank"
@@ -5133,9 +5125,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_tank"
@@ -7868,9 +7858,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_rocket"
@@ -8533,9 +8521,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_rocket"
@@ -8543,9 +8529,7 @@
         },
         "18_11": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -8722,9 +8706,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_infantry"
@@ -8847,9 +8829,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_tank"
@@ -8882,9 +8862,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_tank"
@@ -8952,9 +8930,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_tank"
@@ -9077,9 +9053,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_tank"
@@ -9442,9 +9416,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_tank"
@@ -9542,9 +9514,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_rocket"
@@ -9942,9 +9912,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_tank"
@@ -10067,9 +10035,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_tank"
@@ -10137,9 +10103,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_rocket"
@@ -10232,9 +10196,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_tank"
@@ -10507,9 +10469,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_tank"
@@ -10607,9 +10567,7 @@
         },
         "1_3": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -10666,9 +10624,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "hero_commando"
@@ -11186,9 +11142,7 @@
         },
         "20_2": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -11250,9 +11204,7 @@
         },
         "20_21": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -11429,9 +11381,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_tank"
@@ -11439,9 +11389,7 @@
         },
         "20_27": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -13568,9 +13516,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_infantry"
@@ -18403,9 +18349,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_infantry"
@@ -19818,9 +19762,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "green_tank"
@@ -20273,9 +20215,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "green_tank"
@@ -20343,9 +20283,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "green_tank"
@@ -20798,9 +20736,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "green_rocket"
@@ -20808,9 +20744,7 @@
         },
         "33_27": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -21443,9 +21377,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "hero_prince"
@@ -22473,9 +22405,7 @@
         },
         "3_1": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -22562,9 +22492,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -22632,9 +22560,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -22642,9 +22568,7 @@
         },
         "3_5": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -22946,9 +22870,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -22981,9 +22903,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -23016,9 +22936,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -24401,9 +24319,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_rocket"
