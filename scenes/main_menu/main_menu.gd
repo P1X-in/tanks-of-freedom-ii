@@ -6,6 +6,7 @@ onready var audio = $"/root/SimpleAudioLibrary"
 onready var switcher = $"/root/SceneSwitcher"
 onready var gamepad_adapter = $"/root/GamepadAdapter"
 onready var match_setup = $"/root/MatchSetup"
+onready var campaign = $"/root/Campaign"
 
 const MENU_TIMEOUT = 0.2
 
@@ -101,7 +102,11 @@ func reopen_campaign_mission_selection_after_win():
     self.ui.hide_menu()
     self.ui.campaign_selection.show_first_page()
     yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
-    self.ui.show_campaign_mission_selection(self.match_setup.campaign_name)
+    if self.campaign.is_campaign_complete(self.match_setup.campaign_name):
+        self.ui.show_campaign_mission_selection(self.match_setup.campaign_name)
+    else:
+        self.ui.campaign_mission_selection.load_campaign(self.match_setup.campaign_name)
+        self.ui.show_campaign_mission(self.match_setup.campaign_name, self.match_setup.mission_no + 1)
 
 func open_controls():
     self.ui.hide_menu()

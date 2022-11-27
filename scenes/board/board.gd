@@ -641,8 +641,9 @@ func destroy_explosion_with_delay(explosion_object, delay):
     explosion_object.queue_free()
 
 func _signal_winner(winning_side):
-    if self.state.is_player_human(winning_side):
+    if self.match_setup.campaign_win and self.state.is_player_human(winning_side):
         self.campaign.update_campaign_progress(self.match_setup.campaign_name, self.match_setup.mission_no)
+        self.match_setup.has_won = true
 
 func shoot_projectile(source_tile, destination_tile, tween_time=0.5):
     var new_projectile = self._spawn_temporary_projectile_instance_on_tile(source_tile)

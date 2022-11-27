@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/ui/board/summary_view.gd" type="Script" id=1]
-[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/fonts/courier_30.tres" type="DynamicFont" id=2]
 
 [node name="summary_view" type="Node2D"]
 script = ExtResource( 1 )
@@ -89,7 +89,7 @@ __meta__ = {
 [node name="menu_button" type="Button" parent="."]
 margin_left = -300.0
 margin_top = 60.0
-margin_right = -200.0
+margin_right = -185.0
 margin_bottom = 90.0
 text = "TR_MAIN_MENU"
 __meta__ = {
@@ -97,7 +97,7 @@ __meta__ = {
 }
 
 [node name="restart_button" type="Button" parent="."]
-margin_left = 200.0
+margin_left = 185.0
 margin_top = 60.0
 margin_right = 300.0
 margin_bottom = 90.0
@@ -106,5 +106,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="next_mission_button" type="Button" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -125.0
+margin_top = 60.0
+margin_right = 125.0
+margin_bottom = 135.0
+custom_fonts/font = ExtResource( 2 )
+text = "TR_NEXT_MISS"
+__meta__ = {
+"_editor_description_": ""
+}
+
 [connection signal="pressed" from="menu_button" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="next_mission_button" to="." method="_on_next_mission_button_pressed"]

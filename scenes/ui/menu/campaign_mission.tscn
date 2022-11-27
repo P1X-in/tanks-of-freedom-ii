@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/ui/menu/base_menu_panel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ui/menu/campaign_mission.gd" type="Script" id=2]
 [ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/fonts/courier_30.tres" type="DynamicFont" id=5]
 
 [node name="campaign_mission" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -13,7 +14,7 @@ margin_left = 40.0
 margin_top = 40.0
 margin_right = 1160.0
 margin_bottom = 105.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 5 )
 text = "Mission Title"
 align = 1
 valign = 1
