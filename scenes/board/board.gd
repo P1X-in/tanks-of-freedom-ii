@@ -289,9 +289,10 @@ func toggle_radial_menu(context_object=null):
 func setup_radial_menu(context_object=null):
     self.ui.radial.clear_fields()
     if context_object == null:
+        self.ui.radial.set_field(self.ui.icons.back.instance(), "TR_RES_MISS", 0, self, "_restart_board")
         self.ui.radial.set_field(self.ui.icons.disk.instance(), "TR_SAVE_LOAD", 2)
         self.ui.radial.set_field(self.ui.icons.quit.instance(), "TR_MAIN_MENU", 4, self, "main_menu")
-        self.ui.radial.set_field(self.ui.icons.back.instance(), "TR_BACK", 6, self, "toggle_radial_menu")
+        self.ui.radial.set_field(self.ui.icons.cross.instance(), "TR_CLOSE", 6, self, "toggle_radial_menu")
         self.ui.show_objectives()
     else:
         self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
@@ -680,3 +681,8 @@ func _should_perform_hq_cam():
             return false
         return true
     return false
+
+func _restart_board():
+    self.match_setup.has_won = false
+    self.switcher.board()
+    self.audio.play("menu_click")

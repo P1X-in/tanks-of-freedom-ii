@@ -272,7 +272,7 @@ func setup_radial_menu(context_object=null):
             self.ui.radial.set_field(self.ui.icons.quicksave.instance(), "TR_QUICKSAVE", 1, self, "quicksave")
         self.ui.radial.set_field(self.ui.icons.disk.instance(), "TR_SAVE_LOAD_MAP", 2, self, "open_picker")
         self.ui.radial.set_field(self.ui.icons.quit.instance(), "TR_MAIN_MENU", 4, self.switcher, "main_menu")
-        self.ui.radial.set_field(self.ui.icons.back.instance(), "TR_BACK", 6, self, "toggle_radial_menu")
+        self.ui.radial.set_field(self.ui.icons.cross.instance(), "TR_CLOSE", 6, self, "toggle_radial_menu")
     else:
         self.radial_abilities.fill_radial_with_ability_bans(self, self.ui.radial, context_object)
 

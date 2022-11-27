@@ -18,7 +18,6 @@ onready var campaign = $"/root/Campaign"
 
 func configure_winner(winner):
 	self.gamepad_adapter.enable()
-	self.menu_button.grab_focus()
 
 	match winner:
 		"blue":
@@ -34,6 +33,10 @@ func configure_winner(winner):
 
 	if self.match_setup.has_won:
 		self._setup_next_mission()
+		self.next_mission_button.grab_focus()
+	else:
+		self.menu_button.grab_focus()
+
 
 func _setup_next_mission():
 	self.next_mission_button.show()

@@ -8,6 +8,7 @@ var tick = preload("res://scenes/ui/icons/tick.tscn")
 var star = preload("res://scenes/ui/icons/star.tscn")
 var info = preload("res://scenes/ui/icons/info.tscn")
 var book = preload("res://scenes/ui/icons/book.tscn")
+var cross = preload("res://scenes/ui/icons/cross.tscn")
 var arrow_left = preload("res://scenes/ui/icons/arrow_left.tscn")
 var arrow_right = preload("res://scenes/ui/icons/arrow_right.tscn")
 
@@ -46,6 +47,7 @@ var named_icons = {
     "star" : self.star,
     "info" : self.info,
     "book" : self.book,
+    "cross" : self.cross,
     "arrow_left" : self.arrow_left,
     "arrow_right" : self.arrow_right,
 

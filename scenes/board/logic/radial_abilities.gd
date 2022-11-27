@@ -31,7 +31,7 @@ func fill_radial_with_abilities(board, radial, context_object):
 
 
 func fill_radial_with_building_abilities(board, radial, building):
-    radial.set_field(board.ui.icons.back.instance(), "TR_BACK", 6, board, "toggle_radial_menu")
+    radial.set_field(board.ui.icons.cross.instance(), "TR_CLOSE", 6, board, "toggle_radial_menu")
 
     var icon
     var label
@@ -54,7 +54,7 @@ func fill_radial_with_building_abilities(board, radial, building):
             radial.set_field(icon, label, ability.index, board, "activate_production_ability", [ability])
 
 func fill_radial_with_unit_abilities(board, radial, unit):
-    radial.set_field(board.ui.icons.back.instance(), "TR_BACK", 6, board, "toggle_radial_menu")
+    radial.set_field(board.ui.icons.cross.instance(), "TR_CLOSE", 6, board, "toggle_radial_menu")
     var label
 
     for ability in unit.active_abilities:
@@ -72,7 +72,7 @@ func fill_radial_with_ability_bans(editor, radial, context_object):
         self.fill_radial_with_building_abilities_bans(editor, radial, context_object)
 
 func fill_radial_with_building_abilities_bans(editor, radial, building):
-    radial.set_field(editor.ui.icons.back.instance(), "TR_BACK", 6, editor, "toggle_radial_menu")
+    radial.set_field(editor.ui.icons.cross.instance(), "TR_CLOSE", 6, editor, "toggle_radial_menu")
 
     var icon
     var label
