@@ -15,7 +15,7 @@ var settings = {
     "vol_music" : 7,
     "sound" : true,
     "music" : true,
-    "hq_cam" : true,
+    "hq_cam" : false,
     "cam_shake" : true,
     "def_cam_st" : "TOF",
     "shadows" : true,
@@ -24,8 +24,8 @@ var settings = {
     "msaa": 0.0,
     "fxaa": false,
     "vsync": false,
-    "fps": 144.0,
-    "ips": 144.0,
+    "fps": 60.0,
+    "ips": 60.0,
     "locale": "en",
 }
 
