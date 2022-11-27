@@ -2,6 +2,7 @@ extends Control
 
 onready var audio = $"/root/SimpleAudioLibrary"
 onready var campaign = $"/root/Campaign"
+onready var match_setup = $"/root/MatchSetup"
 
 onready var animations = $"animations"
 onready var back_button = $"widgets/back_button"
@@ -86,7 +87,12 @@ func load_campaign(campaign_name):
     self._select_latest_mission()
 
     if self.campaign.is_campaign_complete(manifest["name"]):
-        self.medal.show()
+        if self.match_setup.animate_medal:
+            self.match_setup.animate_medal = false
+            yield(self.get_tree().create_timer(0.1), "timeout")
+            self.animations.play("medal")
+        else:
+            self.medal.show()
     else:
         self.medal.hide()
 

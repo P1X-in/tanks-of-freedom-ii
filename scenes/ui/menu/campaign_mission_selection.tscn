@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/ui/menu/campaign_mission_selection.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/ui/icons/arrow_right.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=6]
 [ext_resource path="res://scenes/ui/icons/medal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/gui/icons/medal_whiteout.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -33,6 +34,54 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("widgets/medal:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("widgets/medal:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("widgets/medal_whiteout:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("widgets/medal_whiteout:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=1]
@@ -73,6 +122,46 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "medal"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("widgets/medal:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("widgets/medal_whiteout:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("widgets/medal_whiteout:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -239,10 +328,18 @@ position = Vector2( 40, 60 )
 scale = Vector2( 2, 2 )
 offset = Vector2( 60, 53 )
 
+[node name="medal_whiteout" parent="widgets" instance=ExtResource( 7 )]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 40, 60 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+offset = Vector2( 60, 53 )
+
 [node name="animations" type="AnimationPlayer" parent="."]
 playback_speed = 4.0
 anims/RESET = SubResource( 3 )
 anims/hide = SubResource( 1 )
+anims/medal = SubResource( 4 )
 anims/show = SubResource( 2 )
 __meta__ = {
 "_editor_description_": ""
