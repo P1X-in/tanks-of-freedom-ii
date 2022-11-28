@@ -51,6 +51,10 @@ func fill_radial_with_building_abilities(board, radial, building):
             icon.set_tile(icon_model, 0)
             label = tr(ability.label)
             label += "\n" + str(ap_cost) + " " + tr("TR_AP")
+            if not board.state.can_current_player_afford(ap_cost):
+                label += "\n" + tr("TR_NOT_ENOUGH_AP")
+                radial.set_field_disabled(ability.index, "")
+                
             radial.set_field(icon, label, ability.index, board, "activate_production_ability", [ability])
 
 func fill_radial_with_unit_abilities(board, radial, unit):
@@ -62,6 +66,9 @@ func fill_radial_with_unit_abilities(board, radial, unit):
             label = tr(ability.label)
             if ability.ap_cost > 0:
                 label += "\n" + str(ability.ap_cost) + " " + tr("TR_AP")
+                if not board.state.can_current_player_afford(ability.ap_cost):
+                    label += "\n" + tr("TR_NOT_ENOUGH_AP")
+                    radial.set_field_disabled(ability.index, "")
             radial.set_field(board.ui.icons.get_named_icon(ability.named_icon), label, ability.index, board, "activate_ability", [ability])
 
             if ability.is_on_cooldown():
