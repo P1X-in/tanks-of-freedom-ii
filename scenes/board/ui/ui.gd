@@ -1,5 +1,7 @@
 extends Control
 
+onready var settings = $"/root/Settings"
+
 # Panels
 onready var radial = $"radial/radial"
 onready var resource = $"resources/coin_view"
@@ -11,6 +13,7 @@ onready var story_dialog = $"story_dialog/story_dialog"
 onready var cinematic_bars = $"cinematic_bars/cinematic_bars"
 onready var unit_stats = $"unit_stats/unit_stats"
 onready var objectives = $"objectives/objectives"
+onready var ap_depleted = $"ap_depleted/ap_depleted"
 
 # Tile highlight
 onready var tile_highlight = $"tile_highlight/tile_view"
@@ -76,6 +79,12 @@ func toggle_radial():
 
 func update_resource_value(value):
     self.resource_label.set_text(str(value))
+    if value == 0:
+        self.resource.flash()
+        if self.settings.get_option("notify_ap_spent"):
+            self.ap_depleted.flash()
+    else:
+        self.resource.stop_flash()
 
 func update_tile_highlight(tile_preview):
     self.clear_tile_highlight()
@@ -182,6 +191,7 @@ func show_summary(winner):
     self.summary.configure_winner(winner)
 
 func show_end_turn():
+    self.ap_depleted.hide()
     self.end_turn.show()
 
 func hide_end_turn():

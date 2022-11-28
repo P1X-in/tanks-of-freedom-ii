@@ -27,6 +27,7 @@ var settings = {
     "fps": 60.0,
     "ips": 60.0,
     "locale": "en",
+    "notify_ap_spent": true,
 }
 
 

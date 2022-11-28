@@ -2,10 +2,11 @@
 
 [ext_resource path="res://scenes/ui/menu/settings.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
-[ext_resource path="res://scenes/ui/menu/settings_camera.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/ui/menu/settings_gameplay.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/ui/menu/settings_video.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ui/menu/settings_audio.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/ui/menu/settings_graphics.tscn" type="PackedScene" id=6]
+
 
 [sub_resource type="Animation" id=3]
 length = 0.001

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/board/ui/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ui/radial/radial.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/gui/editor/circle.png" type="Texture" id=13]
 [ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=14]
 [ext_resource path="res://scenes/ui/board/objectives.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/ui/board/ap_depleted.tscn" type="PackedScene" id=16]
 
 [node name="ui" type="Control"]
 anchor_right = 1.0
@@ -354,3 +355,16 @@ anchor_right = 0.0
 margin_left = 0.0
 margin_right = 40.0
 margin_bottom = 40.0
+
+[node name="ap_depleted" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="ap_depleted" parent="ap_depleted" instance=ExtResource( 16 )]
+modulate = Color( 1, 1, 1, 1 )

@@ -1,5 +1,7 @@
 extends Node2D
 
+onready var animations = $"animations"
+
 export var zoom_value = 10
 
 var model = null
@@ -31,3 +33,9 @@ func clear():
 
 func hide_background():
     $"background".hide()
+
+func flash():
+    self.animations.play("flash")
+
+func stop_flash():
+    self.animations.play("RESET")
