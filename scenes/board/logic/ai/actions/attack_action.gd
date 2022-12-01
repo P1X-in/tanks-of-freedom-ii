@@ -2,7 +2,6 @@ extends "res://scenes/board/logic/ai/actions/abstract_action.gd"
 
 var unit
 var interaction
-var target
 var path_length
 
 func _init(unit_tile, interaction_tile, target_tile, path_length_val):

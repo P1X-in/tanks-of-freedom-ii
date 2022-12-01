@@ -9,13 +9,19 @@ const FAILSAFE = 4
 var _failsafe_counter = 0
 var _last_action_signature = null
 
+var _reserved_ap = 0
+
 func _init(board_object):
     self.board = board_object
     self.collector = preload("res://scenes/board/logic/ai/collector.gd").new(board_object)
 
 func run():
     self._failsafe_counter = 0
+    self._reserved_ap = 0
     self.call_deferred("_ai_tick")
+
+func reserve_ap(amount):
+    self._reserved_ap += amount
 
 func _finish_run():
     self.board.end_turn()
@@ -39,7 +45,7 @@ func _ai_tick():
     yield(self.board.get_tree().create_timer(0.1), "timeout")
 
     if selected_action != null and self._failsafe_counter < self.FAILSAFE:
-        if self.board.map.move_camera_to_position_if_far_away(selected_action.target.position, 7):
+        if selected_action.target != null and self.board.map.move_camera_to_position_if_far_away(selected_action.target.position, 7):
             yield(self.board.get_tree().create_timer(1), "timeout")
             if self._ai_abort:
                 return

@@ -1,5 +1,6 @@
 
 var value = 0
+var target = null
 
 func perform(_board):
     return

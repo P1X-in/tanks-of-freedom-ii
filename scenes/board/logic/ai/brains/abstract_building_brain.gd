@@ -5,6 +5,7 @@ const UNITS_HARD_LIMIT = 15
 const UNITS_SOFT_LIMIT = 10
 
 var action_template = preload("res://scenes/board/logic/ai/actions/use_ability_action.gd")
+var reserve_template = preload("res://scenes/board/logic/ai/actions/reserve_ap_action.gd")
 
 func get_actions(entity_tile, enemy_buildings, enemy_units, _own_buildings, own_units, ap, board):
     var spawn_points = self._get_spawn_points(entity_tile)
@@ -24,11 +25,19 @@ func get_actions(entity_tile, enemy_buildings, enemy_units, _own_buildings, own_
     var bonus = self._calculate_proximity_value_bonus(entity_tile, enemy_units, enemy_buildings)
 
     for ability in building.abilities:
+        if not ability.is_visible(self.board):
+            continue
+
+        action = null
         ability_cost = board.abilities.get_modified_cost(ability.ap_cost, ability.template_name, building)
-        if ability_cost <= ap and ability.is_visible():
+        if ability_cost <= ap:
             action = self._create_ability_action(ability, self._select_random_spawn_point(spawn_points))
             ability.active_source_tile = entity_tile
-            action.value = self._calculate_value(action, bonus, units_stats, ap)
+        elif ability_cost * 0.75 <= ap:
+            action = self._create_reserve_ap_action(int(ability_cost/2))
+
+        if action != null:
+            action.value = self._calculate_value(ability, bonus, units_stats, ap)
             actions.append(action)
 
     return actions
@@ -44,6 +53,9 @@ func _get_spawn_points(entity_tile):
 
 func _create_ability_action(ability, target):
     return self.action_template.new(ability, target)
+
+func _create_reserve_ap_action(ap_amount):
+    return self.reserve_template.new(ap_amount)
 
 func _select_random_spawn_point(spawn_points):
     spawn_points.shuffle()
@@ -67,9 +79,9 @@ func _calculate_proximity_value_bonus(entity_tile, enemy_units, enemy_buildings)
 
     return bonus
 
-func _calculate_value(action, bonus, units_stats, ap):
-    var value = action.ability.ap_cost
-    var template_name = self._map_template_name(action.ability.template_name)
+func _calculate_value(ability, bonus, units_stats, ap):
+    var value = ability.ap_cost
+    var template_name = self._map_template_name(ability.template_name)
 
     var unit_presence = 0.0
 
@@ -80,7 +92,7 @@ func _calculate_value(action, bonus, units_stats, ap):
     if unit_presence > 0.5:
         value -= 20
 
-    if float(action.ability.ap_cost) / float(ap) >= 0.8:
+    if float(ability.ap_cost) / float(ap) >= 0.8:
         value -= 20
 
     if units_stats["total"] > self.UNITS_SOFT_LIMIT:

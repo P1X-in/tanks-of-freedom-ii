@@ -1,4 +1,4 @@
-extends "res://scenes/abilities/production/unit.gd"
+extends "res://scenes/abilities/production/heroes/hero.gd"
 
 func _execute(board, position):
     ._execute(board, position)

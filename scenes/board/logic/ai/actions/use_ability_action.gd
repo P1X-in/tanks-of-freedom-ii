@@ -1,7 +1,6 @@
 extends "res://scenes/board/logic/ai/actions/abstract_action.gd"
 
 var ability
-var target
 var delay = 0
 
 func _init(abilit_object, target_object):

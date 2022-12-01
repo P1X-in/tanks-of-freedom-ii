@@ -20,9 +20,9 @@ func select_best_action():
 
 func _gather_all_actions():
     var side = self.board.state.get_current_side()
-    var ap = self.board.state.get_current_ap()
+    var ap = self.board.state.get_current_ap() - self.board.ai._reserved_ap
 
-    if ap == 0:
+    if ap <= 0:
         return []
 
     var buildings = self.board.map.model.get_player_buildings_tiles(side)
@@ -49,6 +49,7 @@ func _gather_building_actions(buildings, enemy_buildings, enemy_units, own_build
         brain = self.brains.get_brain_for_template(building_tile.building.tile.template_name)
         if brain == null:
             continue
+        brain.board = self.board
         buildings_actions += brain.get_actions(building_tile, enemy_buildings, enemy_units, own_buildings, own_units, ap, self.board)
         yield(self.board.get_tree().create_timer(0.01), "timeout")
 

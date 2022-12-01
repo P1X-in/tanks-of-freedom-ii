@@ -5,3 +5,4 @@
 
 [node name="unit_production" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+template_name = ""
