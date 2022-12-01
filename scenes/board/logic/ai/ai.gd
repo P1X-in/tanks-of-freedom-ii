@@ -45,7 +45,7 @@ func _ai_tick():
     yield(self.board.get_tree().create_timer(0.1), "timeout")
 
     if selected_action != null and self._failsafe_counter < self.FAILSAFE:
-        if selected_action.target != null and self.board.map.move_camera_to_position_if_far_away(selected_action.target.position, 7):
+        if selected_action.target != null and self.board.map.move_camera_to_position_if_far_away(selected_action.target.position):
             yield(self.board.get_tree().create_timer(1), "timeout")
             if self._ai_abort:
                 return

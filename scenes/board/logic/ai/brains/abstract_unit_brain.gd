@@ -10,6 +10,7 @@ var actions_templates = {
     'capture' : preload("res://scenes/board/logic/ai/actions/capture_action.gd"),
     'ability' : preload("res://scenes/board/logic/ai/actions/use_ability_action.gd"),
 }
+var counter_death_penalty = 20
 
 func get_actions(entity_tile, _enemy_buildings, _enemy_units, _own_buildings, _own_units, ap, _board):
     var actions = []
@@ -141,7 +142,7 @@ func _attack_action(entity_tile, interaction_tile, target_tile, path):
         if target_tile.unit.tile.can_retaliate(entity_tile.unit.tile):
             value -= 10
         if target_tile.unit.tile.can_retaliate(entity_tile.unit.tile) and target_tile.unit.tile.has_enough_power_to_kill(entity_tile.unit.tile):
-            value -= 20
+            value -= self.counter_death_penalty
 
     action.value = value
 

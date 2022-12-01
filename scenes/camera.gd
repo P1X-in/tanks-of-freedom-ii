@@ -444,3 +444,5 @@ func _mouse_shift_camera(relative_offset):
 
     self._shift_camera_translation(-relative_offset)
 
+func get_zoom_fraction():
+    return (self.camera_distance - self.camera_distance_min) / (self.camera_distance_max - self.camera_distance_min)
