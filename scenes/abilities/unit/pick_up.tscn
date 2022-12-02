@@ -6,6 +6,7 @@
 [node name="pick_up" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "TR_PICK_UP"
-named_icon = "pick_up"
 ability_range = 1
+draw_range = 1
+named_icon = "pick_up"
 marker_colour = "blue"

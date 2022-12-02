@@ -6,6 +6,9 @@ export var index = 0
 export var label = ""
 export var ap_cost = 0
 export var cooldown = 0
+export var ability_range = 0
+export var draw_range = 0
+export var in_line = false
 var source = null
 var active_source_tile = null
 var cd_turns_left = 0
@@ -55,4 +58,3 @@ func reset_cooldown():
 func cd_tick_down():
     if self.cd_turns_left > 0:
         self.cd_turns_left -= 1
-        

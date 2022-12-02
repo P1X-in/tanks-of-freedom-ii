@@ -4,8 +4,9 @@
 
 [node name="heavy_missile" instance=ExtResource( 1 )]
 label = "TR_HEAVY_MISS"
-named_icon = "heavy_missile"
 ability_range = 4
+draw_range = 4
+named_icon = "heavy_missile"
 damage = 11
 min_level = 1
 max_level = 3

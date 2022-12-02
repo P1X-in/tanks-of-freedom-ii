@@ -7,7 +7,8 @@
 script = ExtResource( 2 )
 label = "TR_HEAVY_WEAP"
 cooldown = 3
-named_icon = "heavy_weapon"
 ability_range = 1
+draw_range = 1
+named_icon = "heavy_weapon"
 marker_colour = "red"
 damage = 8

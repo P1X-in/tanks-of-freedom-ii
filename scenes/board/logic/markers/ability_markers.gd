@@ -3,6 +3,7 @@ extends Spatial
 export(NodePath) var map = null;
 
 var marker_template = preload("res://scenes/ui/markers/movement_marker.tscn")
+var range_template = preload("res://scenes/ui/markers/range_marker.tscn")
 var colour_materials = {
     "blue" : ResourceLoader.load("res://assets/materials/arne32_blue.tres"),
     "red" : ResourceLoader.load("res://assets/materials/arne32_red.tres"),
@@ -12,6 +13,7 @@ var colour_materials = {
 }
 
 var created_markers = {}
+var extra_markers = []
 var tiles_in_range = {}
 var explored_tiles_distance = {}
 
@@ -29,6 +31,10 @@ func destroy_markers():
         marker.hide()
         marker.queue_free()
     self.created_markers = {}
+    for extra_marker in self.extra_markers:
+        extra_marker.hide()
+        extra_marker.queue_free()
+    self.extra_markers = []
 
 func show_ability_markers_for_tile(ability, tile):
     self.destroy_markers()
@@ -56,6 +62,7 @@ func get_all_tiles_in_ability_range(ability, tile):
 
 func show_hero_markers_for_tile(source_tile, ability):
     self.get_all_tiles_in_ability_range(ability, source_tile)
+    self._draw_ability_range(source_tile, ability.draw_range, ability.in_line)
 
     for tile in self.tiles_in_range.values():
         if ability.is_tile_applicable(tile, source_tile):
@@ -93,3 +100,55 @@ func place_marker(position, colour="green"):
 
 func _get_key(tile):
     return str(tile.position.x) + "_" + str(tile.position.y)
+
+func _draw_ability_range(source_tile, ability_range, in_line):
+    if ability_range < 1:
+        return
+
+    var x
+    var y
+
+    for x_index in range(-ability_range, ability_range + 1):
+        for y_index in range(-ability_range, ability_range + 1):
+            x = source_tile.position.x + x_index
+            y = source_tile.position.y + y_index
+
+            if x < 0 or x >= self.map.model.SIZE or y < 0 or y >= self.map.model.SIZE:
+                continue
+
+            if not in_line and abs(x_index) + abs(y_index) == ability_range:
+                if x_index <= 0:
+                    self._place_extra_marker(Vector2(x, y), 90)
+                if x_index >= 0:
+                    self._place_extra_marker(Vector2(x, y), 270)
+                if y_index <= 0:
+                    self._place_extra_marker(Vector2(x, y), 0)
+                if y_index >= 0:
+                    self._place_extra_marker(Vector2(x, y), 180)
+
+            if in_line and (x_index == 0 or y_index == 0) and (x_index + y_index != 0):
+                if x_index == 0:
+                    self._place_extra_marker(Vector2(x, y), 90)
+                    self._place_extra_marker(Vector2(x, y), 270)
+
+                if y_index == 0:
+                    self._place_extra_marker(Vector2(x, y), 0)
+                    self._place_extra_marker(Vector2(x, y), 180)
+
+                if y_index == -ability_range:
+                    self._place_extra_marker(Vector2(x, y), 0)
+                if y_index == ability_range:
+                    self._place_extra_marker(Vector2(x, y), 180)
+                if x_index == -ability_range:
+                    self._place_extra_marker(Vector2(x, y), 90)
+                if x_index == ability_range:
+                    self._place_extra_marker(Vector2(x, y), 270)
+
+func _place_extra_marker(position, rotation):
+    var new_marker = self.range_template.instance()
+    self.add_child(new_marker)
+    var placement = self.map.map_to_world(position)
+    new_marker.set_translation(placement)
+    new_marker.set_rotation(Vector3(0, deg2rad(rotation), 0))
+
+    self.extra_markers.append(new_marker)

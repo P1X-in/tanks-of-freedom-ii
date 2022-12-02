@@ -1,7 +1,6 @@
-extends "res://scenes/abilities/hero/hero.gd"
+extends "res://scenes/abilities/ability.gd"
 
 export var named_icon = ""
-export var ability_range = 0
 export var marker_colour = "green"
 
 func _init():

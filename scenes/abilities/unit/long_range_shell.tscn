@@ -7,7 +7,9 @@
 script = ExtResource( 2 )
 label = "TR_LR_SHELL"
 cooldown = 3
-named_icon = "long_range_shell"
 ability_range = 2
+draw_range = 2
+in_line = true
+named_icon = "long_range_shell"
 marker_colour = "red"
 damage = 10

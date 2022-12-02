@@ -6,6 +6,7 @@
 [node name="infiltration" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
 label = "TR_INFILTRATION"
-named_icon = "infiltration"
 ability_range = 2
+draw_range = 2
+named_icon = "infiltration"
 marker_colour = "green"
