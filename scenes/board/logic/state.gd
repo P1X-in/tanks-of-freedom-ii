@@ -15,7 +15,7 @@ func add_player(type, side):
         "side": side,
         "ap" : 0,
         "alive" : true,
-        "hero" : null
+        "heroes" : {}
     })
 
 
@@ -37,8 +37,8 @@ func get_current_ap():
 func get_current_side():
     return self.get_current_param("side")
 
-func get_current_hero():
-    return self.get_current_param("hero")
+func get_current_heroes():
+    return self.get_current_param("heroes")
 
 func get_player_id_by_side(side):
     var index = 0
@@ -112,46 +112,50 @@ func count_alive_players():
     return amount
 
 func has_current_player_a_hero():
-    return self.get_current_hero() != null
+    return self.get_current_heroes().size() > 0
 
 func has_side_a_hero(side):
-    return self.players[self.get_player_id_by_side(side)]['hero'] != null
+    return self.players[self.get_player_id_by_side(side)]['heroes'].size() > 0
 
-func set_hero_for_player(id, hero):
-    self.players[id]["hero"] = hero
+func add_hero_for_player(id, hero):
+    self.players[id]["heroes"][hero.get_instance_id()] = hero
 
-func get_hero_for_player(id):
-    return self.players[id]["hero"]
+func get_heroes_for_player(id):
+    return self.players[id]["heroes"].values()
 
-func set_hero_for_side(side, hero):
-    self.set_hero_for_player(self.get_player_id_by_side(side), hero)
+func add_hero_for_side(side, hero):
+    self.add_hero_for_player(self.get_player_id_by_side(side), hero)
 
-func get_hero_for_side(side):
+func get_heroes_for_side(side):
     var side_id = self.get_player_id_by_side(side)
     if side_id == null:
         return null
-    return self.get_hero_for_player(side_id)
+    return self.get_heroes_for_player(side_id)
 
 func auto_set_hero(hero):
-    self.set_hero_for_side(hero.side, hero)
+    self.add_hero_for_side(hero.side, hero)
 
-func set_current_hero(hero):
-    self.set_hero_for_player(self.current_player, hero)
+func add_current_hero(hero):
+    self.add_hero_for_player(self.current_player, hero)
 
-func clear_hero_for_player(id):
-    if id == null:
+func clear_hero_for_player(id, hero):
+    if id == null or hero == null:
         return
-    self.set_hero_for_player(id, null)
 
-func clear_current_hero():
-    self.clear_hero_for_player(self.current_player)
+    self.players[id]["heroes"].erase(hero.get_instance_id())
 
-func clear_hero_for_side(side):
-    self.clear_hero_for_player(self.get_player_id_by_side(side))
+func clear_current_hero(hero):
+    self.clear_hero_for_player(self.current_player, hero)
+
+func clear_hero_for_side(side, hero):
+    self.clear_hero_for_player(self.get_player_id_by_side(side), hero)
 
 func register_heroes(model):
     var index = 0
+    var heroes = []
 
     while index < self.players.size():
-        self.players[index]['hero'] = model.get_player_hero(self.players[index]['side'])
+        heroes = model.get_player_heroes(self.players[index]['side'])
+        for hero in heroes:
+            self.add_hero_for_player(index, hero)
         index += 1

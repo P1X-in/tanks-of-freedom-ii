@@ -142,9 +142,11 @@ func get_player_hero_position(side):
 
     return null
 
-func get_player_hero(side):
+func get_player_heroes(side):
+    var heroes = []
+
     for i in self.tiles.keys():
         if self.tiles[i].has_friendly_hero(side):
-            return self.tiles[i].unit.tile
+            heroes.append(self.tiles[i].unit.tile)
 
-    return null
+    return heroes

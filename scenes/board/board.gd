@@ -427,7 +427,7 @@ func battle(attacker_tile, defender_tile):
 
 func destroy_unit_on_tile(tile, skip_explosion=false):
     if tile.unit.tile.unit_class == "hero":
-        self.state.clear_hero_for_side(tile.unit.tile.side)
+        self.state.clear_hero_for_side(tile.unit.tile.side, tile.unit.tile)
 
     if not skip_explosion:
         self.explode_a_tile(tile, true)

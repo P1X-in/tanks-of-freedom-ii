@@ -11,8 +11,8 @@ const INFANTRY_TEMPLATES = [
     "yellow_m_inf",
 ]
 
-func get_initial_level(template_name):
+func get_initial_level(initial_level, template_name):
     if template_name in self.INFANTRY_TEMPLATES:
         return 1
 
-    return 0
+    return initial_level

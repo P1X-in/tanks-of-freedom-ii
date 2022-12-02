@@ -8,66 +8,72 @@ func execute_ability(ability, context_object=null):
     ability.execute(self.board, context_object.position)
 
 func get_modified_cost(cost, template_name, source):
-    var passive_ability = self._get_passive_for_source(source)
-    
-    if passive_ability == null:
-        return cost
+    var passive_abilities = self._get_passives_for_source(source)
+    var modified_cost = cost
 
-    return passive_ability.get_modified_cost(cost, template_name)
+    for ability in passive_abilities:
+        modified_cost = ability.get_modified_cost(modified_cost, template_name)
+
+    if modified_cost < 0:
+        modified_cost = 1
+
+    return modified_cost
 
 func get_modified_cooldown(cd_value, source):
-    var passive_ability = self._get_passive_for_source(source)
-    
-    if passive_ability == null:
-        return cd_value
+    var passive_abilities = self._get_passives_for_source(source)
+    var modified_cd = cd_value
 
-    return passive_ability.get_modified_cooldown(cd_value)
+    for ability in passive_abilities:
+        modified_cd = ability.get_modified_cooldown(modified_cd)
+
+    return modified_cd
 
 
 func get_modified_ap_gain(value, source):
-    var passive_ability = self._get_passive_for_source(source)
-    
-    if passive_ability == null:
-        return value
+    var passive_abilities = self._get_passives_for_source(source)
+    var modified_value = value
 
-    return passive_ability.get_modified_ap_gain(value, source.template_name)
+    for ability in passive_abilities:
+        modified_value = ability.get_modified_ap_gain(modified_value, source.template_name)
+
+    return modified_value
 
 func get_initial_level(template_name, source):
-    var passive_ability = self._get_passive_for_source(source)
-    
-    if passive_ability == null:
-        return 0
+    var passive_abilities = self._get_passives_for_source(source)
+    var initial_level = 0
 
-    return passive_ability.get_initial_level(template_name)
+    for ability in passive_abilities:
+        initial_level = ability.get_initial_level(initial_level, template_name)
+
+    return initial_level
 
 func apply_passive_modifiers(unit):
-    var passive_ability = self._get_passive_for_source(unit)
-    
-    if passive_ability == null:
-        return
+    var passive_abilities = self._get_passives_for_source(unit)
+    var modifiers = {}
 
-    var modifiers = passive_ability.get_passive_modifiers(unit.template_name)
-    for modifier_name in modifiers:
-        unit.apply_modifier(modifier_name, modifiers[modifier_name])
+    for ability in passive_abilities:
+        modifiers = ability.get_passive_modifiers(unit.template_name)
+        for modifier_name in modifiers:
+            unit.apply_modifier(modifier_name, modifiers[modifier_name])
 
 func can_intimidate_crew(source):
-    var passive_ability = self._get_passive_for_source(source)
+    var passive_abilities = self._get_passives_for_source(source)
+
+    for ability in passive_abilities:
+        if ability.can_intimidate_crew():
+            return true
     
-    if passive_ability == null:
-        return false
+    return false
 
-    return passive_ability.can_intimidate_crew()
-
-func _get_passive_for_source(source):
+func _get_passives_for_source(source):
     if source.side == "neutral":
-        return null
+        return []
 
-    var hero = self.board.state.get_hero_for_side(source.side)
-    
-    if hero == null:
-        return null
-    
-    if not hero.has_passive_ability():
-        return null
+    var abilities = []
+    var heroes = self.board.state.get_heroes_for_side(source.side)
 
-    return hero.passive_ability
+    for hero in heroes:
+        if hero.has_passive_ability():
+            abilities.append(hero.passive_ability)
+
+    return abilities
