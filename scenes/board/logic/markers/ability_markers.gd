@@ -9,6 +9,7 @@ var colour_materials = {
     "red" : ResourceLoader.load("res://assets/materials/arne32_red.tres"),
     "green" : ResourceLoader.load("res://assets/materials/arne32_green.tres"),
     "yellow" : ResourceLoader.load("res://assets/materials/arne32_yellow.tres"),
+    "black" : ResourceLoader.load("res://assets/materials/arne32_black.tres"),
     "neutral" : ResourceLoader.load("res://assets/materials/arne32_neutral.tres"),
 }
 
