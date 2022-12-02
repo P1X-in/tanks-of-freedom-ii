@@ -129,7 +129,7 @@ func add_hero_for_side(side, hero):
 func get_heroes_for_side(side):
     var side_id = self.get_player_id_by_side(side)
     if side_id == null:
-        return null
+        return []
     return self.get_heroes_for_player(side_id)
 
 func auto_set_hero(hero):

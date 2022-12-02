@@ -187,8 +187,8 @@ func clear_tile_highlight():
     self.ability_icons = [null, null, null]
 
 func show_summary(winner):
-    self.summary.show()
     self.summary.configure_winner(winner)
+    self.summary.show()
 
 func show_end_turn():
     self.ap_depleted.hide()
