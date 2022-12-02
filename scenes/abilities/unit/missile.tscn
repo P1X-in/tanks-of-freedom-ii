@@ -6,6 +6,7 @@
 [node name="missile" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "TR_MISSILE"
+description = "TR_MISSILE_DESC"
 cooldown = 2
 ability_range = 3
 draw_range = 3

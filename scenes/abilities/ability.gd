@@ -4,6 +4,7 @@ var TYPE="undefined"
 
 export var index = 0
 export var label = ""
+export var description = ""
 export var ap_cost = 0
 export var cooldown = 0
 export var ability_range = 0

@@ -33,6 +33,7 @@ var kills = 0
 var ai_paused = false
 
 var modifiers = {}
+var passive_ability = null
 var active_abilities = []
 
 var unit_rotations = {

@@ -6,6 +6,7 @@
 [node name="hardened_armour" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "TR_HARD_ARMOUR"
+description = "TR_HARD_ARMOUR_DESC"
 draw_range = 2
 named_icon = "hardened_armour"
 marker_colour = "blue"

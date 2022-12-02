@@ -6,6 +6,7 @@
 [node name="drop_off" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "TR_DROP_OFF"
+description = "TR_DROP_OFF_DESC"
 ability_range = 1
 draw_range = 1
 named_icon = "drop_off"

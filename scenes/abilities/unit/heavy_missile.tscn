@@ -4,6 +4,7 @@
 
 [node name="heavy_missile" instance=ExtResource( 1 )]
 label = "TR_HEAVY_MISS"
+description = "TR_HEAVY_MISS_DESC"
 ability_range = 4
 draw_range = 4
 named_icon = "heavy_missile"

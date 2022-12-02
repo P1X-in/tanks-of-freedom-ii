@@ -3,9 +3,6 @@ extends "res://scenes/abilities/hero/active/active.gd"
 var tiles_in_range = {}
 var units_in_range = []
 
-func _ready():
-    self.label = "Hardened"
-    self.label += "\n" + "Armour"
 
 func _execute(board, _position):
     var source_tile = board.selected_tile

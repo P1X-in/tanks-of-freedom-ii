@@ -6,6 +6,7 @@
 [node name="precision_strike" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "TR_PREC_STRIKE"
+description = "TR_PREC_STRIKE_DESC"
 ability_range = 2
 draw_range = 2
 named_icon = "precision_strike"

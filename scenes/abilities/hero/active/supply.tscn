@@ -6,6 +6,7 @@
 [node name="supply" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "TR_SUPPLY"
+description = "TR_SUPPLY_DESC"
 draw_range = 1
 named_icon = "supply"
 marker_colour = "blue"

@@ -5,3 +5,5 @@
 
 [node name="recruitment" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+label = "TR_PASS_RECRUIT"
+description = "TR_PASS_RECRUIT_DESC"

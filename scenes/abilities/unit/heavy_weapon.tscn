@@ -6,6 +6,7 @@
 [node name="heavy_weapon" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "TR_HEAVY_WEAP"
+description = "TR_HEAVY_WEAP_DESC"
 cooldown = 3
 ability_range = 1
 draw_range = 1

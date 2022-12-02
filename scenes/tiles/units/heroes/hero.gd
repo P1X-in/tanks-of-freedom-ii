@@ -1,7 +1,5 @@
 extends "res://scenes/tiles/units/unit.gd"
 
-var passive_ability = null
-
 var disable_active_abilities = false
 
 func register_ability(ability):

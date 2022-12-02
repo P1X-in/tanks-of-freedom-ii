@@ -5,3 +5,5 @@
 
 [node name="high_morale" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+label = "TR_PASS_HIGH_MOR"
+description = "TR_PASS_HIGH_MOR_DESC"

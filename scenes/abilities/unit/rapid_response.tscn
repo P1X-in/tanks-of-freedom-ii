@@ -6,7 +6,7 @@
 [node name="rapid_response" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "TR_RAPID_RESP"
+description = "TR_RAPID_RESP_DESC"
 cooldown = 3
 named_icon = "rapid_response"
-ability_range = 0
 marker_colour = "blue"

@@ -5,3 +5,5 @@
 
 [node name="trained_specialist" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
+label = "TR_PASS_TR_SPEC"
+description = "TR_PASS_TR_SPEC_DESC"

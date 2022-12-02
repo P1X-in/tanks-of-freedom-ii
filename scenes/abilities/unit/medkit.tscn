@@ -6,6 +6,7 @@
 [node name="medkit" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "TR_MEDKIT"
+description = "TR_MEDKIT_DESC"
 ap_cost = 5
 cooldown = 3
 ability_range = 1

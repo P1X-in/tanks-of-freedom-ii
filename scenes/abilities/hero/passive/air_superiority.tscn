@@ -5,3 +5,5 @@
 
 [node name="air_superiority" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
+label = "TR_PASS_AIR_SUP"
+description = "TR_PASS_AIR_SUP_DESC"

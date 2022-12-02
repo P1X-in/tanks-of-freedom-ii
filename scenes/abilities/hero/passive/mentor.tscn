@@ -5,3 +5,5 @@
 
 [node name="mentor" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+label = "TR_PASS_MENTOR"
+description = "TR_PASS_MENTOR_DESC"

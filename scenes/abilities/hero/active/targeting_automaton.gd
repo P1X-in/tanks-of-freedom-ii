@@ -1,8 +1,5 @@
 extends "res://scenes/abilities/hero/active/active.gd"
 
-func _ready():
-    self.label = "Targeting"
-    self.label += "\n" + "Automaton"
 
 func _execute(board, _position):
     var source_tile = board.selected_tile

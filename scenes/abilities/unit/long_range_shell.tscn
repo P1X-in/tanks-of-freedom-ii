@@ -6,6 +6,7 @@
 [node name="long_range_shell" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 label = "TR_LR_SHELL"
+description = "TR_LR_SHELL_DESC"
 cooldown = 3
 ability_range = 2
 draw_range = 2

@@ -150,13 +150,14 @@ align = 1
 valign = 1
 
 [node name="label" type="Label" parent="tile_highlight/abilities/ab1"]
-margin_left = -50.0
-margin_top = 20.0
-margin_right = 150.0
-margin_bottom = 70.0
+margin_left = -25.0
+margin_top = 10.0
+margin_right = 125.0
+margin_bottom = 60.0
 text = "Heavy Weapon"
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_editor_description_": ""
 }
@@ -195,13 +196,14 @@ align = 1
 valign = 1
 
 [node name="label" type="Label" parent="tile_highlight/abilities/ab2"]
-margin_left = -50.0
-margin_top = 20.0
-margin_right = 150.0
-margin_bottom = 70.0
+margin_left = -25.0
+margin_top = 10.0
+margin_right = 125.0
+margin_bottom = 60.0
 text = "Heavy Weapon"
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_editor_description_": ""
 }
@@ -240,13 +242,14 @@ align = 1
 valign = 1
 
 [node name="label" type="Label" parent="tile_highlight/abilities/ab3"]
-margin_left = -50.0
-margin_top = 20.0
-margin_right = 150.0
-margin_bottom = 70.0
+margin_left = -25.0
+margin_top = 10.0
+margin_right = 125.0
+margin_bottom = 60.0
 text = "Heavy Weapon"
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_editor_description_": ""
 }

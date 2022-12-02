@@ -2,9 +2,6 @@ extends "res://scenes/abilities/hero/active/active.gd"
 
 var precision_strike_executor_template = preload("res://scenes/abilities/hero/active/precision_strike_executor.tscn")
 
-func _ready():
-    self.label = "Precision"
-    self.label += "\n" + "Strike"
 
 func _execute(board, position):
     var executor = self.precision_strike_executor_template.instance()

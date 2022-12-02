@@ -5,3 +5,5 @@
 
 [node name="efficient" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
+label = "TR_PASS_EFFIC"
+description = "TR_PASS_EFFIC_DESC"
