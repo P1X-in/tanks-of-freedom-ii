@@ -150,7 +150,7 @@ Ruby Dusk Noble Sidney disregards Lord Dawson orders and captures several provin
 Driven by their rivalry agains Ruby Dusk and potential gains, Sapphire Dawn President Gideon agrees to help Amber Noon in their war. General Cyrus is sent to attack Ruby Dusk lands, and fight to help free the Amber Noon capital, but then encounter Jade Twilight and Amber Noon forces led by Prince Tybalt in their way. Warlord Grim declares Prince Tybalt a traitor, who wants to overthrow King Ludwig, and asks Sapphire Dawn Commando Blake to deal with them.
 
 #### Jade Twilight Campaign
-Amber Noon Prince Tybalt visits Jade Twilight Chancelor Irene to ask for help, as his country is being attacked. Jade Twilight sends Admiral Torsten as a diplomatic envoy to Amber Noon capital, but he gets attacked by Amber Noon forces instead, as Warlord Grim fears he would discover the truth. He fights Amber Noon troops, as well as Ruby Dusk forces ocuppying the country. Near the capital, He encounters Sapphire Dawn forces allied with Warlord Grim, and fights them to gain a foothold, while Captain Claude is dispatched to return to Chancelor Irene with the news.
+Amber Noon Prince Tybalt visits Jade Twilight Chancelor Irene to ask for help, as his country is being attacked. Jade Twilight sends Admiral Torsten as a diplomatic envoy to Amber Noon capital, but he gets attacked by Amber Noon forces instead, as Warlord Grim fears he would discover the truth. He fights Amber Noon troops, as well as Ruby Dusk forces ocuppying the country. Near the capital, He encounters Sapphire Dawn forces allied with Warlord Grim, and fights them to gain a foothold, while Captain Claude is dispatched to return to Chancelor Irene with the news. On his way he is harrased by Commando Blake, and must defeat him.
 
 #### Amber Noon Campaign
 Amber Noon Prince Tybalt with a handful of loyal forces trains against Jade Twilight Captain Claude, until he is strong enough.
@@ -335,7 +335,54 @@ Each of the main campaigns should be about 10 mission long.
     - When Commando Blake reaches Prince Tybalt, a trap is revealed, and he is captured
 
 #### Jade Twilight Campaign - Hard Diplomacy
-To be designed.
+1. The Audience
+    - Prince Tybalt meets Chancelor Irene and asks for help
+    - Chancelor Irene summons Admiral Torsten
+    - Admiral Torsten is tasked with going to Amber Fortress to talk with King Ludwig
+    - Admiral Torsten takes his troops to the border
+    - Amber Noon forces at the border are ordered by Warlord Grim to attack
+    - Admiral Torsten only has few units and must defend himself
+    - Admiral Torsten rapidly expands his airforce
+
+2. The Envoy
+    - Admiral Torsten is troubled with Amber Noon aggresivness
+    - Chancelor Irene orders Admiral Torsten to find King Ludwig
+    - Admiral Torsten must fight his way through Amber forces
+
+3. Lost in translation
+    - Admiral Torsten encounters a contingent of Ruby Dusk soldiers
+    - These soldiers are cut off from their commander
+    - Admiral Torsten tries to negotiate a safe passage
+    - Ruby Dusk is suspicious and attacks
+
+4. Exchange of arguments
+    - Amber Noon set up a defensive line to stop Torsten
+    - As Torsten assaults the line with his air force, Commando Blake shows up
+    - Commando Blake is further deceived by Warlord Grim about Jade Twilight
+    - Commando Blake brings in a lot of Rocket Artillery and infantry
+    - Admiral Torsten must defeat two enemy bases
+
+5. Hard Diplomacy
+    - Admiral Torsten arrives at outskirts of Amber Fortress
+    - Ruby Dusk is at a standoff with Sapphire Dawn
+    - Noble Sidney is kept as a prisoner in the Sapphire Dawn base
+    - Amber Noon defends all entrances to the city
+    - Admiral Torsten is not able to enter the city, must set up camp.
+    - Admiral Torsten must fight Amber Noon and Sapphire Dawn for space
+    - Admiral Torsten frees Moble Sidney
+
+6. Marathon
+    - Admiral Torsten is unsure if he should assault Amber Fortress
+    - Captain Claude is dispatched to go back to Jade Oasis to consult Chancelor Irene
+    - He must fight his way through Sapphire Dawn with limited units
+    - Can not recruit new units, need to heal with Claude and Mobile Infantry
+
+7. Building Bridges
+    - Captain Claude reaches a river on the Jade-Amber border
+    - There is no way to cross, but engineering corps on the Jade side is building a bridge
+    - Captain Claude must hold his ground until bridge is repaired
+    - As the bridge is finished, Commando Blake arrives
+    - Captain Claude must defeat Commando Blake
 
 #### Amber Noon Campaign - Royal Blood
 To be designed.
