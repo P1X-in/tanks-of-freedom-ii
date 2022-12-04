@@ -5,15 +5,27 @@
     "prerequisite" : "core_sapphire_dawn",
     "missions" : [
         {
-            "name" : "the_audience",
-            "title" : "The Audience",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [700, 198]
-        },
-        {
             "name" : "the_envoy",
             "title" : "The Envoy",
+            "map" : "core_jade_twi_envoy.tofmap.json",
+            "description" : "Chancellor Irene welcomes Prince Tybalt in Jade Oasis, and listens to his plea. Even though it seems that Warlord Grim is now in full controll, she still believes in a diplomatic solution. Irene sends her most renowned commander, Admiral Torsten, as an Envoy to Amber Fotress.",
+            "marker" : [700, 198],
+            "players": [
+                {
+                    "side": "green",
+                    "ap": 0,
+                    "type": "human"
+                },
+                {
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "ai"
+                }
+            ]
+        },
+        {
+            "name" : "delegation",
+            "title" : "Delegation",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
             "marker" : [620, 165]
