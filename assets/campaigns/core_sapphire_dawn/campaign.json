@@ -54,8 +54,8 @@
             "map": "core_sap_dawn_capital_offence.tofmap.json",
             "description": "tr_core_sapphire_dawn_m3_desc",
             "marker": [
-                550,
-                130
+                520,
+                80
             ],
             "players": [
                 {
@@ -76,8 +76,8 @@
             "map": "core_sap_dawn_noble_cause.tofmap.json",
             "description": "tr_core_sapphire_dawn_m4_desc",
             "marker": [
-                520,
-                80
+                550,
+                130
             ],
             "players": [
                 {

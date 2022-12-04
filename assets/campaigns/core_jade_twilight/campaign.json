@@ -2,14 +2,56 @@
     "name" : "core_jade_twilight",
     "title" : "Hard diplomacy",
     "icon" : "green_gem",
-    "prerequisite" : "not_unlockable_at_the_moment",
+    "prerequisite" : "core_sapphire_dawn",
     "missions" : [
         {
-            "name" : "test",
-            "title" : "Test",
+            "name" : "the_audience",
+            "title" : "The Audience",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [0, 0]
+            "marker" : [700, 198]
+        },
+        {
+            "name" : "the_envoy",
+            "title" : "The Envoy",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [620, 165]
+        },
+        {
+            "name" : "exchange_arguments",
+            "title" : "Exchange of arguments",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [560, 155]
+        },
+        {
+            "name" : "lost_in_translation",
+            "title" : "Lost in translation",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [500, 135]
+        },
+        {
+            "name" : "hard_diplomacy",
+            "title" : "Hard diplomacy",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [540, 120]
+        },
+        {
+            "name" : "marathon",
+            "title" : "Marathon",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [580, 70]
+        },
+        {
+            "name" : "building_bridges",
+            "title" : "Building bridges",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [648, 93]
         }
     ]
 }

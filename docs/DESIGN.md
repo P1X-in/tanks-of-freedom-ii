@@ -349,18 +349,18 @@ Each of the main campaigns should be about 10 mission long.
     - Chancelor Irene orders Admiral Torsten to find King Ludwig
     - Admiral Torsten must fight his way through Amber forces
 
-3. Lost in translation
-    - Admiral Torsten encounters a contingent of Ruby Dusk soldiers
-    - These soldiers are cut off from their commander
-    - Admiral Torsten tries to negotiate a safe passage
-    - Ruby Dusk is suspicious and attacks
-
-4. Exchange of arguments
+3. Exchange of arguments
     - Amber Noon set up a defensive line to stop Torsten
     - As Torsten assaults the line with his air force, Commando Blake shows up
     - Commando Blake is further deceived by Warlord Grim about Jade Twilight
     - Commando Blake brings in a lot of Rocket Artillery and infantry
     - Admiral Torsten must defeat two enemy bases
+
+4. Lost in translation
+    - Admiral Torsten encounters a contingent of Ruby Dusk soldiers
+    - These soldiers are cut off from their commander
+    - Admiral Torsten tries to negotiate a safe passage
+    - Ruby Dusk is suspicious and attacks
 
 5. Hard Diplomacy
     - Admiral Torsten arrives at outskirts of Amber Fortress
