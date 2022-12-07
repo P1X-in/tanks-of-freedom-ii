@@ -26,9 +26,21 @@
         {
             "name" : "delegation",
             "title" : "Delegation",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [620, 165]
+            "map" : "core_jade_twi_delegation.tofmap.json",
+            "description" : "With Warlord Grim unwilling to let the Jade Twilight envoy through, Chancellor Irene orders a different approach. Admiral Torsten must establish a corridor, that will allow him to move forces towards Amber Fortress.",
+            "marker" : [620, 165],
+            "players": [
+                {
+                    "side": "green",
+                    "ap": 0,
+                    "type": "human"
+                },
+                {
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "ai"
+                }
+            ]
         },
         {
             "name" : "exchange_arguments",

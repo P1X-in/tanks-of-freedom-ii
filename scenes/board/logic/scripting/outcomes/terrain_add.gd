@@ -17,6 +17,11 @@ func _execute(_metadata):
     elif self.type == "terrain":
         tile.terrain.clear()
         self.board.map.builder.place_terrain(self.where, self.template_name, self.rotation)
+    elif self.type == "ground":
+        tile.ground.clear()
+        self.board.map.builder.place_ground(self.where, self.template_name, self.rotation)
+
+    tile.apply_invisibility()
 
     self.board.audio.play("menu_click")
 

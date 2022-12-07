@@ -14,6 +14,8 @@ func _execute(_metadata):
         tile.frame.clear()
     elif self.type == "terrain":
         tile.terrain.clear()
+    elif self.type == "ground":
+        tile.ground.clear()
 
     if self.explosion:
         position = tile.ground.tile.get_translation()
