@@ -1,9 +1,9 @@
+extends "res://scenes/board/logic/scripting/outcomes/base_outcome.gd"
 
 var winner = null
 var force_kill = false
-var board
 
-func execute(metadata={}):
+func _execute(metadata):
     var bunkers = self.board.map.model.get_player_bunkers(metadata['old_side'])
 
     if bunkers.size() > 0 and not self.force_kill:

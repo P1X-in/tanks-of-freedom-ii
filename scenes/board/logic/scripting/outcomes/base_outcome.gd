@@ -8,7 +8,7 @@ func execute(metadata={}):
 func _execute(_metadata):
     return
 
-func ingest_details(details):
+func ingest_details(details={}):
     self._ingest_details(details)
 
 func _ingest_details(_details):

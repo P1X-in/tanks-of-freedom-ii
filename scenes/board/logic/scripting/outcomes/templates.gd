@@ -27,6 +27,7 @@ var templates = {
     'activate_hero' : preload("res://scenes/board/logic/scripting/outcomes/activate_hero.gd"),
     'objective' : preload("res://scenes/board/logic/scripting/outcomes/objective.gd"),
 
+    'revive_player' : preload("res://scenes/board/logic/scripting/outcomes/revive_player.gd"),
     'eliminate_player' : preload("res://scenes/board/logic/scripting/outcomes/eliminate_player.gd")
 }
 

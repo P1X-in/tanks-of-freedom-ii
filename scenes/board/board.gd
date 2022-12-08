@@ -124,7 +124,7 @@ func set_up_board():
     var index = 0
     for player_setup in self.match_setup.setup:
         if player_setup["side"] != self.map.templates.PLAYER_NEUTRAL:
-            self.state.add_player(player_setup["type"], player_setup["side"])
+            self.state.add_player(player_setup["type"], player_setup["side"], player_setup["alive"])
             self.state.add_player_ap(index, player_setup["ap"])
             index += 1
 

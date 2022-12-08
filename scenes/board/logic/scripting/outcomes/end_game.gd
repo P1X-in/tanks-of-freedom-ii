@@ -2,7 +2,7 @@ extends "res://scenes/board/logic/scripting/outcomes/base_outcome.gd"
 
 var winner = null
 
-func _execute(metadata={}):
+func _execute(metadata):
     if self.winner == null:
         self.winner = metadata['new_side']
 

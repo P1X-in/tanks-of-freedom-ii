@@ -9,12 +9,12 @@ var turn = 1
 var players = []
 
 
-func add_player(type, side):
+func add_player(type, side, alive=true):
     self.players.append({
         "type": type,
         "side": side,
         "ap" : 0,
-        "alive" : true,
+        "alive" : alive,
         "heroes" : {}
     })
 
@@ -101,6 +101,12 @@ func eliminate_player(side):
             self.players[index]['alive'] = false
             return
         index += 1
+
+func revive_player(side):
+    self.revive_player_by_id(self.get_player_id_by_side(side))
+
+func revive_player_by_id(id):
+    self.players[id]['alive'] = true
 
 func count_alive_players():
     var amount = 0
