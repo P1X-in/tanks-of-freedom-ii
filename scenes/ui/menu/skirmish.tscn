@@ -151,6 +151,7 @@ margin_left = 30.0
 margin_top = 155.0
 margin_right = -520.0
 margin_bottom = -420.0
+team = 2
 index = 1
 swap_target = NodePath("../skirmish_player_0")
 
@@ -159,6 +160,7 @@ margin_left = 30.0
 margin_top = 280.0
 margin_right = -520.0
 margin_bottom = -295.0
+team = 3
 index = 2
 swap_target = NodePath("../skirmish_player_1")
 
@@ -167,6 +169,7 @@ margin_left = 30.0
 margin_top = 405.0
 margin_right = -520.0
 margin_bottom = -170.0
+team = 4
 index = 3
 swap_target = NodePath("../skirmish_player_2")
 

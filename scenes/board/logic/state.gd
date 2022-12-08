@@ -9,10 +9,11 @@ var turn = 1
 var players = []
 
 
-func add_player(type, side, alive=true):
+func add_player(type, side, alive=true, team=null):
     self.players.append({
         "type": type,
         "side": side,
+        "team": team,
         "ap" : 0,
         "alive" : alive,
         "heroes" : {}
@@ -52,6 +53,18 @@ func get_player_id_by_side(side):
 
 func get_player_side_by_id(id):
     return self.players[id]['side']
+
+func get_player_team_by_id(id):
+    if self.players[id]['team'] != null:
+        return self.players[id]['team']
+
+    return id
+
+func set_player_team(side, team):
+    self.players[self.get_player_id_by_side(side)]["team"] = team
+
+func get_player_team(side):
+    return self.get_player_team_by_id(self.get_player_id_by_side(side))
 
 func get_current_param(param_name):
     var player_data = self.get_current_player()
@@ -116,6 +129,17 @@ func count_alive_players():
             amount += 1
 
     return amount
+
+func count_alive_teams():
+    var amount = {}
+    var team
+
+    for player in self.players:
+        if player["alive"]:
+            team = self.get_player_team(player["side"])
+            amount[team] = true
+
+    return amount.size()
 
 func has_current_player_a_hero():
     return self.get_current_heroes().size() > 0

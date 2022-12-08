@@ -5,6 +5,7 @@ onready var audio = $"/root/SimpleAudioLibrary"
 onready var animations = $"animations"
 
 export var side = "neutral"
+var team = null
 
 export var require_crew = true
 
@@ -23,6 +24,9 @@ func get_dict():
 
 func set_side(new_side):
     self.side = new_side
+
+func set_team(new_team):
+    self.team = new_team
 
 func set_side_material(material):
     $"mesh".set_surface_material(0, material)

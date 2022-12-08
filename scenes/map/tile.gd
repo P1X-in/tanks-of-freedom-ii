@@ -103,15 +103,20 @@ func can_pass_through(moving_unit):
         return false
     if self.building.is_present() and not moving_unit.can_fly:
         return false
-    if self.has_enemy_unit(moving_unit.side):
+    if self.has_enemy_unit(moving_unit.side, moving_unit.team):
         return false
     if self.terrain.is_present() and not moving_unit.can_fly:
         return self.terrain.tile.unit_can_stand
 
     return true
 
-func has_enemy_unit(side):
-    if self.unit.is_present() && self.unit.tile.side != side:
+func has_enemy_unit(side, team=null):
+    if self.unit.is_present() && self.unit.tile.side != side && self.unit.tile.team != team:
+        return true
+    return false
+
+func has_allied_unit(team):
+    if self.unit.is_present() && self.unit.tile.team == team:
         return true
     return false
 
@@ -120,8 +125,13 @@ func has_friendly_unit(side):
         return true
     return false
 
-func has_enemy_building(side):
-    if self.building.is_present() && self.building.tile.side != side:
+func has_enemy_building(side, team=null):
+    if self.building.is_present() && self.building.tile.side != side && self.building.tile.team != team:
+        return true
+    return false
+
+func has_allied_building(team):
+    if self.building.is_present() && self.building.tile.team == team:
         return true
     return false
 
@@ -130,22 +140,22 @@ func has_friendly_building(side):
         return true
     return false
 
-func neighbours_enemy_unit(side):
+func neighbours_enemy_unit(side, team=null):
     for direction in self.neighbours.keys():
-        if self.neighbours[direction].has_enemy_unit(side):
+        if self.neighbours[direction].has_enemy_unit(side, team):
             return true
     return false
 
 func can_attack_neightbour_enemy_unit(attacking_unit):
     for direction in self.neighbours.keys():
-        if self.neighbours[direction].has_enemy_unit(attacking_unit.side):
+        if self.neighbours[direction].has_enemy_unit(attacking_unit.side, attacking_unit.team):
             if attacking_unit.can_attack(self.neighbours[direction].unit.tile):
                 return true
     return false
 
-func neighbours_enemy_building(side):
+func neighbours_enemy_building(side, team=null):
     for direction in self.neighbours.keys():
-        if self.neighbours[direction].has_enemy_building(side):
+        if self.neighbours[direction].has_enemy_building(side, team):
             return true
     return false
 
@@ -159,10 +169,10 @@ func can_unit_interact(interacting_unit):
     if not interacting_unit.has_moves():
         return false
 
-    if self.has_enemy_unit(interacting_unit.side) && interacting_unit.can_attack(self.unit.tile) && interacting_unit.has_attacks():
+    if self.has_enemy_unit(interacting_unit.side, interacting_unit.team) && interacting_unit.can_attack(self.unit.tile) && interacting_unit.has_attacks():
         return true
 
-    if self.has_enemy_building(interacting_unit.side) && interacting_unit.can_capture:
+    if self.has_enemy_building(interacting_unit.side, interacting_unit.team) && interacting_unit.can_capture:
         return true
 
     return false

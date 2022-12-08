@@ -124,8 +124,19 @@ func set_up_board():
     var index = 0
     for player_setup in self.match_setup.setup:
         if player_setup["side"] != self.map.templates.PLAYER_NEUTRAL:
-            self.state.add_player(player_setup["type"], player_setup["side"], player_setup["alive"])
+            self.state.add_player(player_setup["type"], player_setup["side"], player_setup["alive"], player_setup["team"])
             self.state.add_player_ap(index, player_setup["ap"])
+
+            self.state.set_player_team(player_setup["side"], self.state.get_player_team(player_setup["side"]))
+
+            var units = self.map.model.get_player_units(player_setup["side"])
+            for unit in units:
+                unit.team = self.state.get_player_team(player_setup["side"])
+
+            var buildings = self.map.model.get_player_buildings(player_setup["side"])
+            for building in buildings:
+                building.team = self.state.get_player_team(player_setup["side"])
+
             index += 1
 
     self.state.register_heroes(self.map.model)
@@ -472,7 +483,7 @@ func capture(attacker_tile, building_tile):
     var old_side = building.side
 
     attacker.use_all_moves()
-    self.map.builder.set_building_side(building_tile.position, attacker.side)
+    self.map.builder.set_building_side(building_tile.position, attacker.side, attacker.team)
     self.smoke_a_tile(building_tile)
     building.sfx_effect("capture")
 
@@ -527,6 +538,7 @@ func replenish_unit_actions():
         self.abilities.apply_passive_modifiers(unit)
         unit.replenish_moves()
         unit.ability_cd_tick_down()
+        unit.team = self.state.get_player_team(current_player["side"])
 
 func gain_building_ap():
     var ap_sum = 0
@@ -537,6 +549,8 @@ func gain_building_ap():
         ap_sum += self.abilities.get_modified_ap_gain(building.ap_gain, building)
         if building.ap_gain > 0:
             building.animate_coin()
+
+        building.team = self.state.get_player_team(current_player["side"])
 
     self.add_current_player_ap(ap_sum)
 

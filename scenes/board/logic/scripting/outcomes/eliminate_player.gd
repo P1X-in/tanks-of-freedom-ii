@@ -11,7 +11,7 @@ func _execute(metadata):
 
     self.board.state.eliminate_player(metadata['old_side'])
 
-    if self.board.state.count_alive_players() == 1:
+    if self.board.state.count_alive_players() == 1 or self.board.state.count_alive_teams() == 1:
         if self.winner == null:
             self.winner = metadata['new_side']
 

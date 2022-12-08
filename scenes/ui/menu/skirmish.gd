@@ -104,7 +104,7 @@ func _on_start_button_pressed():
 
     for player in self.player_panels:
         if player.side != null:
-            self.match_setup.add_player(player.side, player.ap, player.type)
+            self.match_setup.add_player(player.side, player.ap, player.type, true, player.team)
 
     self.switcher.board()
 

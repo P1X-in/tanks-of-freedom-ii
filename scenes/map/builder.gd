@@ -289,11 +289,12 @@ func place_tile(tile_id, tile_data):
         self.place_unit(tile.position, tile_data["unit"]["tile"], tile_data["unit"]["rotation"], tile_data["unit"]["side"], tile_data["unit"]["ai_paused"])
 
 
-func set_building_side(position, new_side):
+func set_building_side(position, new_side, new_team=null):
     var tile = self.map.model.get_tile(position)
 
     if tile.building.is_present():
         tile.building.tile.set_side(new_side)
+        tile.building.tile.set_team(new_team)
         tile.building.tile.set_side_material(self.map.templates.get_side_material(new_side))
 
 func set_unit_side(position, new_side):

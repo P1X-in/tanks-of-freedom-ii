@@ -12,6 +12,7 @@ onready var level_star = $"voxel_star"
 
 export var unit_name = ""
 export var side = "neutral"
+var team = null
 export var material_type = "normal"
 
 export var max_hp = 10

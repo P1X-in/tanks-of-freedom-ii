@@ -25,4 +25,4 @@ func _execute(board, position):
     board.explode_a_tile(tile)
 
 func is_tile_applicable(tile, _source_tile):
-    return tile.has_enemy_unit(self.source.side)
+    return tile.has_enemy_unit(self.source.side, self.source.team)

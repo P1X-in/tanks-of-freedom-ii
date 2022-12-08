@@ -38,7 +38,7 @@ func show_interaction_markers_for_tile(tile, ap_limit):
             self.mark_tile_for_capture(neighbour)
 
 func should_place_catpure_marker(tile, unit):
-    if not tile.has_enemy_building(unit.side):
+    if not tile.has_enemy_building(unit.side, unit.team):
         return false
 
     if unit.move < 1:
@@ -54,7 +54,7 @@ func mark_tile_for_capture(tile):
 
 
 func should_place_attack_marker(tile, unit):
-    if not tile.has_enemy_unit(unit.side):
+    if not tile.has_enemy_unit(unit.side, unit.team):
         return false
 
     if unit.move < 1 || not unit.has_attacks():

@@ -16,6 +16,7 @@ func _execute(board, position):
         board.select_tile(position)
 
     new_unit.replenish_moves()
+    new_unit.team = board.state.get_player_team(board.state.get_current_side())
     board.abilities.apply_passive_modifiers(new_unit)
     new_unit.sfx_effect("spawn")
 

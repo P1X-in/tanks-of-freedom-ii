@@ -6,7 +6,7 @@ var side
 func _execute(_metadata):
     var tile = self.board.map.model.get_tile(self.what)
 
-    self.board.map.builder.set_building_side(self.what, self.side)
+    self.board.map.builder.set_building_side(self.what, self.side, self.board.state.get_player_team(self.side))
     self.board.smoke_a_tile(tile)
     tile.building.tile.sfx_effect("capture")  
 

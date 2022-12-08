@@ -7,6 +7,8 @@ var enemy_units = {}
 var enemy_buildings = {}
 var own_units = {}
 var own_buildings = {}
+var allied_units = {}
+var allied_buildings = {}
 
 func reset():
     self.visited_tiles = {}
@@ -16,6 +18,8 @@ func reset():
     self.enemy_buildings = {}
     self.own_units = {}
     self.own_buildings = {}
+    self.allied_units = {}
+    self.allied_buildings = {}
 
 func explore(source_tile, distance):
     self.reset()
@@ -40,7 +44,7 @@ func expand_from_tile(tile, depth, reach_cost, unit):
     var neighbour_cost
 
     if not tile.can_acommodate_unit(unit):
-        self._scout_tile(tile, unit.side)
+        self._scout_tile(tile, unit.side, unit.team)
 
     if not tile.can_pass_through(unit):
         return
@@ -83,17 +87,23 @@ func get_path_to_tile(destination_tile):
 
     return path
 
-func _scout_tile(tile, side):
+func _scout_tile(tile, side, team):
     var key = self._get_key(tile)
-    if tile.has_enemy_unit(side):
+    if tile.has_enemy_unit(side, team):
         if not self.enemy_units.has(key):
             self.enemy_units[key] = tile
     elif tile.has_friendly_unit(side):
         if not self.own_units.has(key):
             self.own_units[key] = tile
-    elif tile.has_enemy_building(side):
+    elif tile.has_enemy_building(side, team):
         if not self.enemy_buildings.has(key):
             self.enemy_buildings[key] = tile
     elif tile.has_friendly_building(side):
         if not self.own_buildings.has(key):
             self.own_buildings[key] = tile
+    elif tile.has_allied_unit(team):
+        if not self.allied_units.has(key):
+            self.allied_units[key] = tile
+    elif tile.has_allied_building(team):
+        if not self.allied_buildings.has(key):
+            self.allied_buildings[key] = tile

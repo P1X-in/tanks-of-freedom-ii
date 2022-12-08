@@ -97,18 +97,18 @@ func get_player_buildings_tiles(side):
 
     return buildings
 
-func get_enemy_units_tiles(side):
+func get_enemy_units_tiles(side, team=null):
     var units = []
     for i in self.tiles.keys():
-        if self.tiles[i].has_enemy_unit(side):
+        if self.tiles[i].has_enemy_unit(side, team):
             units.append(self.tiles[i])
 
     return units
 
-func get_enemy_buildings_tiles(side):
+func get_enemy_buildings_tiles(side, team=null):
     var buildings = []
     for i in self.tiles.keys():
-        if self.tiles[i].has_enemy_building(side):
+        if self.tiles[i].has_enemy_building(side, team):
             buildings.append(self.tiles[i])
 
     return buildings

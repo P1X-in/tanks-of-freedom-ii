@@ -20,6 +20,7 @@ func select_best_action():
 
 func _gather_all_actions():
     var side = self.board.state.get_current_side()
+    var team = self.board.state.get_player_team(side)
     var ap = self.board.state.get_current_ap() - self.board.ai._reserved_ap
 
     if ap <= 0:
@@ -28,8 +29,8 @@ func _gather_all_actions():
     var buildings = self.board.map.model.get_player_buildings_tiles(side)
     var units = self.board.map.model.get_player_units_tiles(side)
 
-    var enemy_buildings = self.board.map.model.get_enemy_buildings_tiles(side)
-    var enemy_units = self.board.map.model.get_enemy_units_tiles(side)
+    var enemy_buildings = self.board.map.model.get_enemy_buildings_tiles(side, team)
+    var enemy_units = self.board.map.model.get_enemy_units_tiles(side, team)
 
     var buildings_actions = self._gather_building_actions(buildings, enemy_buildings, enemy_units, buildings, units, ap)
     if buildings_actions is GDScriptFunctionState: # Still working.

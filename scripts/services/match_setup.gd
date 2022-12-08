@@ -19,10 +19,11 @@ func reset():
     self.has_won = false
     self.animate_medal = false
 
-func add_player(side, ap, type, alive=true):
+func add_player(side, ap, type, alive=true, team=null):
     self.setup.append({
         "side" : side,
         "ap" : ap,
         "type": type,
-        "alive": alive
+        "alive": alive,
+        "team": team
     })

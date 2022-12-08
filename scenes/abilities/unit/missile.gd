@@ -36,4 +36,4 @@ func _is_visible(_board=null):
     return self.source.level >= self.min_level and self.source.level <= self.max_level
 
 func is_tile_applicable(tile, source_tile):
-    return tile.has_enemy_unit(self.source.side) and not tile.is_neighbour(source_tile)
+    return tile.has_enemy_unit(self.source.side, self.source.team) and not tile.is_neighbour(source_tile)

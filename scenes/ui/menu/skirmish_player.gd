@@ -22,11 +22,13 @@ onready var black_border = $"border_black"
 
 onready var type_button = $"player_type"
 onready var ap_button = $"starting_ap"
+onready var team_button = $"team"
 onready var swap_button = $"swap"
 
 var side
 var ap
 var type
+export var team = 1
 export var index = 0
 export(NodePath) var swap_target = null
 
@@ -77,6 +79,7 @@ func _reset_labels():
 
     self._update_type_label()
     self._update_ap_label()
+    self._update_team_label()
 
     if self.index == 0:
         self.swap_button.hide()
@@ -90,6 +93,8 @@ func _update_type_label():
 func _update_ap_label():
     self.ap_button.set_text(str(self.ap) + " AP")
 
+func _update_team_label():
+    self.team_button.set_text(tr("TR_TEAM") + " " + str(self.team))
 
 func _on_player_type_pressed():
     self.audio.play("menu_click")
@@ -125,3 +130,9 @@ func _on_swap_pressed():
     self.swap_target.type = own_type
     self.swap_target._update_type_label()
     self.swap_target._update_ap_label()
+
+func _on_team_pressed():
+    self.team += 1
+    if self.team > 4:
+        self.team = 1
+    self._update_team_label()

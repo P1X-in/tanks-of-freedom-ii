@@ -174,3 +174,4 @@ TR_INSPIRE_DESC,"Inspire your unit up to 2 tiles away. Restores all MP and allow
 TR_INFILTRATION_DESC,"Infiltrate enemy territory by instantly jumping to a tile, up to 2 tiles away."
 TR_HARD_ARMOUR_DESC,"Temporarily harden the armour of units up to 2 tiles away by 1 point."
 TR_DEEP_STRIKE_DESC,"Call in a paratrooper drop, up to 2 tiles away. Provides a free Infantry unit."
+TR_TEAM,"Team"
