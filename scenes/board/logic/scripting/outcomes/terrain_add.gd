@@ -3,6 +3,8 @@ extends "res://scenes/board/logic/scripting/outcomes/base_outcome.gd"
 var where
 var template_name = null
 var type
+var side
+var smoke = false
 var rotation = 0
 
 func _execute(_metadata):
@@ -20,8 +22,14 @@ func _execute(_metadata):
     elif self.type == "ground":
         tile.ground.clear()
         self.board.map.builder.place_ground(self.where, self.template_name, self.rotation)
+    elif self.type == "building":
+        tile.building.clear()
+        self.board.map.builder.place_building(self.where, self.template_name, self.rotation, self.side)
 
     tile.apply_invisibility()
+
+    if self.smoke:
+        self.board.smoke_a_tile(tile)
 
     self.board.audio.play("menu_click")
 
@@ -31,3 +39,7 @@ func _ingest_details(details):
     self.type = details['type']
     if details.has('rotation'):
         self.rotation = details['rotation']
+    if details.has('side'):
+        self.side = details['side']
+    if details.has('smoke'):
+        self.smoke = details['smoke']

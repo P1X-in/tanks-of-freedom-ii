@@ -6,7 +6,6 @@ var type
 
 func _execute(_metadata):
     var tile = self.board.map.model.get_tile(self.where)
-    var position
 
     if self.type == "decoration":
         tile.decoration.clear()
@@ -16,11 +15,11 @@ func _execute(_metadata):
         tile.terrain.clear()
     elif self.type == "ground":
         tile.ground.clear()
+    elif self.type == "building":
+        tile.building.clear()
 
     if self.explosion:
-        position = tile.ground.tile.get_translation()
-        self.board.explosion.set_translation(Vector3(position.x, 0, position.z))
-        self.board.explosion.explode()
+        self.board.explode_a_tile(tile)
         self.board.audio.play("explosion")
     else:
         self.board.audio.play("menu_click")

@@ -26,7 +26,7 @@ func _on_start_button_pressed():
     self.match_setup.mission_no = self.mission_no
 
     for player in mission_details["players"]:
-        if not "alive" in player.keys():
+        if not player.has("alive"):
             player["alive"] = true
         self.match_setup.add_player(player["side"], player["ap"], player["type"], player["alive"])
 
