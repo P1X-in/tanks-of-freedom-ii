@@ -45,9 +45,30 @@
         {
             "name" : "exchange_arguments",
             "title" : "Exchange of arguments",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [560, 155]
+            "map" : "core_jade_twi_exchange_args.tofmap.json",
+            "description" : "Jade Twilight expedition hits a roadblock when they encounter a defensive line prepared by Amber Noon. It didn't work out well for them so far. Do they have some other plan then?",
+            "marker" : [560, 155],
+            "players": [
+                {
+                    "side": "green",
+                    "ap": 0,
+                    "type": "human",
+                    "team": 0
+                },
+                {
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 1
+                },
+                {
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "ai",
+                    "alive": false,
+                    "team": 1
+                }
+            ]
         },
         {
             "name" : "lost_in_translation",
