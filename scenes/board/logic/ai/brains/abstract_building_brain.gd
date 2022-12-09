@@ -1,20 +1,20 @@
 extends "res://scenes/board/logic/ai/brains/abstract_brain.gd"
 
 const ENEMY_PROXIMITY = 4
-const UNITS_HARD_LIMIT = 15
+const UNITS_HARD_LIMIT = 5
 const UNITS_SOFT_LIMIT = 10
 
 var action_template = preload("res://scenes/board/logic/ai/actions/use_ability_action.gd")
 var reserve_template = preload("res://scenes/board/logic/ai/actions/reserve_ap_action.gd")
 
-func get_actions(entity_tile, enemy_buildings, enemy_units, _own_buildings, own_units, ap, board):
+func get_actions(entity_tile, enemy_buildings, enemy_units, own_buildings, own_units, ap, board):
     var spawn_points = self._get_spawn_points(entity_tile)
 
     if spawn_points.size() < 1:
         return []
 
     var units_stats = self._gather_unit_stats(own_units)
-    if units_stats["total"] >= self.UNITS_HARD_LIMIT:
+    if units_stats["total"] >= self.UNITS_HARD_LIMIT + own_buildings.size():
         return []
 
     var building = entity_tile.building.tile

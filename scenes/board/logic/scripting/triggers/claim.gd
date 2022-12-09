@@ -1,7 +1,7 @@
 extends "res://scenes/board/logic/scripting/triggers/base_trigger.gd"
 
 var amount = 1
-var buildings = []
+var list = []
 var player_id = null
 var player_side = null
 
@@ -31,6 +31,7 @@ func _get_outcome_metadata(event):
 
 
 func ingest_details(details):
+    self.list = details['list']
     if details.has('player'):
         self.player_id = details['player']
     if details.has('player_side'):
@@ -38,22 +39,21 @@ func ingest_details(details):
     if details.has('amount'):
         self.amount = details['amount']
 
-    for position in details['list']:
-        self.buildings.append(self.board.map.model.get_tile2(position[0], position[1]).building.tile)
-
 
 func _is_watched_building(building):
-    for watched_building in self.buildings:
-        if building == watched_building:
+    for position in self.list:
+        if building == self.board.map.model.get_tile2(position[0], position[1]).building.tile:
             return true
     return false
 
 
 func _count_buildings_for_side(side):
     var count = 0
+    var building
 
-    for watched_building in self.buildings:
-        if watched_building.side == side:
+    for position in self.list:
+        building = self.board.map.model.get_tile2(position[0], position[1]).building.tile
+        if building != null and building.side == side:
             count += 1
 
     return count
