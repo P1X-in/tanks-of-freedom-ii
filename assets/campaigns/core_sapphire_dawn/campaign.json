@@ -83,12 +83,21 @@
                 {
                     "side": "blue",
                     "ap": 0,
-                    "type": "human"
+                    "type": "human",
+                    "team": 0
                 },
                 {
                     "side": "red",
                     "ap": 0,
-                    "type": "ai"
+                    "type": "ai",
+                    "team": 1
+                },
+                {
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "ai",
+                    "alive": false,
+                    "team": 0
                 }
             ]
         },

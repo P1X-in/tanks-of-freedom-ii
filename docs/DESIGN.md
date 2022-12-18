@@ -359,7 +359,9 @@ Each of the main campaigns should be about 10 mission long.
     - Admiral Torsten encounters a contingent of Ruby Dusk soldiers
     - These soldiers are cut off from their commander
     - Admiral Torsten tries to negotiate a safe passage
-    - Ruby Dusk is suspicious and attacks
+    - Ruby Dusk commander sticks to his orders
+    - Admiral Torsten must capture towers along the road to secure passage
+    - Admiral Torsten must not capture any buildings in the Ruby Dusk base
 
 5. Hard Diplomacy
     - Admiral Torsten arrives at outskirts of Amber Fortress

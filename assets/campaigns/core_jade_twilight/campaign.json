@@ -73,9 +73,21 @@
         {
             "name" : "lost_in_translation",
             "title" : "Lost in translation",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [500, 135]
+            "map" : "core_jade_twi_lost_translation.tofmap.json",
+            "description" : "Despite his recent successes, Admiral Torsten is forced to try and find an easier route towards Amber Fortress. On his way, he finds a Ruby Dusk stronghold standing in his path. Chancellor Irene hopes to negotiate with them a safe passage.",
+            "marker" : [500, 135],
+            "players": [
+                {
+                    "side": "green",
+                    "ap": 0,
+                    "type": "human"
+                },
+                {
+                    "side": "red",
+                    "ap": 0,
+                    "type": "ai"
+                }
+            ]
         },
         {
             "name" : "hard_diplomacy",
