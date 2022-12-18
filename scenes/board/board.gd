@@ -65,6 +65,10 @@ func _input(event):
                     self.select_tile(self.map.tile_box_position)
                 self.mouse_click_position = null
 
+            if event.is_action_pressed("cheat_capture"):
+                self.audio.play("menu_click")
+                self.cheat_capture()
+
             if event.is_action_pressed("game_context"):
                 self.audio.play("menu_click")
                 self.open_context_panel()
@@ -494,6 +498,26 @@ func capture(attacker_tile, building_tile):
         self.unselect_tile()
 
     self.events.emit_building_captured(building, old_side, attacker.side)
+
+func cheat_capture():
+    if not OS.is_debug_build():
+        print("Not a debug build")
+        return
+        
+    var tile = self.map.model.get_tile(self.map.tile_box_position)
+
+    if not tile.building.is_present():
+        print("No building found")
+        return
+
+    var building = tile.building.tile
+    var old_side = building.side
+
+    self.map.builder.set_building_side(tile.position, self.state.get_current_side(), self.state.get_current_team())
+    self.smoke_a_tile(tile)
+    building.sfx_effect("capture")
+    self.events.emit_building_captured(building, old_side, self.state.get_current_side())
+    
 
 func activate_production_ability(args):
     self.toggle_radial_menu()

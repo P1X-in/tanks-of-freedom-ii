@@ -38,6 +38,9 @@ func get_current_ap():
 func get_current_side():
     return self.get_current_param("side")
 
+func get_current_team():
+    return self.get_player_team(self.get_current_param("side"))
+
 func get_current_heroes():
     return self.get_current_param("heroes")
 
