@@ -46,6 +46,9 @@ func _gather_attack_actions(entity_tile, ap):
         if not unit.can_attack(target_tile.unit.tile):
             continue
 
+        if target_tile.unit.tile.ai_paused:
+            continue
+
         if entity_tile.is_neighbour(target_tile):
             action = self._attack_action(entity_tile, null, target_tile, [])
             action.value += unit_range

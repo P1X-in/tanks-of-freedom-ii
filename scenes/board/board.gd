@@ -65,13 +65,14 @@ func _input(event):
                     self.select_tile(self.map.tile_box_position)
                 self.mouse_click_position = null
 
-            if event.is_action_pressed("cheat_capture"):
-                self.audio.play("menu_click")
-                self.cheat_capture()
-
             if event.is_action_pressed("game_context"):
                 self.audio.play("menu_click")
                 self.open_context_panel()
+
+            if OS.is_debug_build():
+                if event.is_action_pressed("cheat_capture"):
+                    self.audio.play("menu_click")
+                    self.cheat_capture()
 
         if event.is_action_pressed("editor_menu"):
             self.audio.play("menu_click")

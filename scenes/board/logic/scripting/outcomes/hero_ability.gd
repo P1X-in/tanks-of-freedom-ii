@@ -4,9 +4,9 @@ var side
 var suspended
 
 func _execute(_metadata):
-    var hero = self.board.state.get_hero_for_side(self.side)
+    var heroes = self.board.state.get_heroes_for_side(self.side)
 
-    if hero != null:
+    for hero in heroes:
         if self.suspended:
             hero.disable_abilities()
         else:

@@ -246,15 +246,19 @@ func show_explosion():
     self.explosion.explode_a_bit()
 
 func receive_damage(value):
+    if self.ai_paused:
+        return
+
     var final_damage = value - self.get_armor()
     if final_damage < 0:
         final_damage = 0
 
-    self.hp -= final_damage
-    if self.hp < 0:
-        self.hp = 0
+    self.receive_direct_damage(final_damage)
 
 func receive_direct_damage(value):
+    if self.ai_paused:
+        return
+
     self.hp -= value
     if self.hp < 0:
         self.hp = 0

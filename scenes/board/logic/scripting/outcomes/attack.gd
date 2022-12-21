@@ -13,7 +13,7 @@ func _execute(_metadata):
     attacker.rotate_unit_to_direction(attacker_tile.get_direction_to_neighbour(defender_tile))
 
     if self.damage > 0:
-        defender.receive_damage(self.damage)
+        defender.receive_direct_damage(self.damage)
 
     attacker.sfx_effect("attack")
     yield(self.board.get_tree().create_timer(self.board.RETALIATION_DELAY), "timeout")
