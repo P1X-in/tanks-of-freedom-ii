@@ -42,9 +42,9 @@ func reset():
         }
 
 func _physics_process(delta):
-    if not OS.is_window_focused():
-        return
-        
+    #if not OS.is_window_focused():
+    #    return
+
     if not self.enabled:
         return
 
@@ -67,7 +67,7 @@ func _physics_process(delta):
     else:
         self.increment_directions(self.BUTTON_INTERVAL)
         self.ticks = 0
-        
+
 
 func increment_directions(delta):
     for direction in self.state.keys():
@@ -76,7 +76,7 @@ func increment_directions(delta):
 func handle_direction(direction):
     if self.state[direction]["pressed"]:
         self.state[direction]["pressed"] = false
-        
+
         self.emit_event(direction, false)
         return
 
@@ -86,7 +86,7 @@ func handle_direction(direction):
     if self.state[direction]["delay"] > step_delay:
         self.state[direction]["pressed"] = true
         self.state[direction]["delay"] = 0
-        
+
         self.emit_event(direction, true)
         self.ticks += 1
 
@@ -100,4 +100,4 @@ func emit_event(direction, pressed):
     ev.set_action(direction)
     ev.set_pressed(pressed)
     self.get_tree().input_event(ev)
-    
+

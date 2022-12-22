@@ -33,9 +33,9 @@ func _ready():
         index += 1
 
 func _input(event):
-    if not OS.is_window_focused():
-        return
-        
+    #if not OS.is_window_focused():
+    #    return
+
     var axis_value = Vector2()
 
     axis_value.x = Input.get_joy_axis(self.device_id, self.analog_axis_x)
@@ -46,7 +46,7 @@ func _input(event):
         var angle = rad2deg(axis_value.angle()) + 112.5
         if angle < 0.0:
             angle += 360
-        
+
         angle = int(round(angle))
 
         var option = (angle - (angle % 45)) / 45
@@ -61,7 +61,7 @@ func _input(event):
             self.unfocus_field()
 
     if event.is_action_released("mouse_click"):
-        self.execute_focused_field() 
+        self.execute_focused_field()
 
 func show_menu():
     self.animations.play("show")

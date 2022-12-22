@@ -45,8 +45,8 @@ func _ready():
     self.start_turn()
 
 func _input(event):
-    if not OS.is_window_focused():
-        return
+    #if not OS.is_window_focused():
+    #    return
 
     if not self.ui.is_panel_open():
         if not self.state.is_current_player_ai():
@@ -507,7 +507,7 @@ func cheat_capture():
     if not OS.is_debug_build():
         print("Not a debug build")
         return
-        
+
     var tile = self.map.model.get_tile(self.map.tile_box_position)
 
     if not tile.building.is_present():
@@ -521,7 +521,7 @@ func cheat_capture():
     self.smoke_a_tile(tile)
     building.sfx_effect("capture")
     self.events.emit_building_captured(building, old_side, self.state.get_current_side())
-    
+
 
 func activate_production_ability(args):
     self.toggle_radial_menu()
