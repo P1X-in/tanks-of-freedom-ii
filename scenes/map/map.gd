@@ -87,7 +87,7 @@ func move_camera_to_position(destination):
 
     self.camera.move_camera_to_position(destination * self.TILE_SIZE + Vector2(0.5, 0.5) * self.TILE_SIZE)
 
-func move_camera_to_position_if_far_away(destination, tolerance=8, zoom=null):
+func move_camera_to_position_if_far_away(destination, tolerance=5, zoom=null):
     if zoom != null:
         self.camera.set_camera_zoom(zoom)
 

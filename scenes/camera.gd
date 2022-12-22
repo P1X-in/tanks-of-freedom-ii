@@ -114,6 +114,9 @@ func _ready():
     self.switch_to_camera_style(self.settings.get_option("def_cam_st"))
 
 func _input(event):
+    if not OS.is_window_focused():
+        return
+        
     if self.paused:
         return
 

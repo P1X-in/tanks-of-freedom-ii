@@ -45,6 +45,9 @@ func _ready():
     self.start_turn()
 
 func _input(event):
+    if not OS.is_window_focused():
+        return
+
     if not self.ui.is_panel_open():
         if not self.state.is_current_player_ai():
             if event.is_action_pressed("ui_accept"):

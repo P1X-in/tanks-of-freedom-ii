@@ -33,6 +33,9 @@ func _ready():
         index += 1
 
 func _input(event):
+    if not OS.is_window_focused():
+        return
+        
     var axis_value = Vector2()
 
     axis_value.x = Input.get_joy_axis(self.device_id, self.analog_axis_x)
