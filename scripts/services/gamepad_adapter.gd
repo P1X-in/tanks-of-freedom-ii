@@ -42,8 +42,8 @@ func reset():
         }
 
 func _physics_process(delta):
-    #if not OS.is_window_focused():
-    #    return
+    if not OS.is_window_focused():
+        return
 
     if not self.enabled:
         return

@@ -40,8 +40,8 @@ func update_ui_position():
 
 
 func _input(event):
-    #if not OS.is_window_focused():
-    #    return
+    if not OS.is_window_focused():
+        return
 
     if not self.ui.is_panel_open():
         if event.is_action_pressed("ui_accept"):

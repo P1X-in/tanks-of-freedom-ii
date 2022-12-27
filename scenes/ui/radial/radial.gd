@@ -33,8 +33,8 @@ func _ready():
         index += 1
 
 func _input(event):
-    #if not OS.is_window_focused():
-    #    return
+    if not OS.is_window_focused():
+        return
 
     var axis_value = Vector2()
 
