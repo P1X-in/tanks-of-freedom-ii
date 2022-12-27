@@ -365,12 +365,11 @@ Each of the main campaigns should be about 10 mission long.
 
 5. Hard Diplomacy
     - Admiral Torsten arrives at outskirts of Amber Fortress
-    - Ruby Dusk is at a standoff with Sapphire Dawn
     - Noble Sidney is kept as a prisoner in the Sapphire Dawn base
     - Amber Noon defends all entrances to the city
     - Admiral Torsten is not able to enter the city, must set up camp.
     - Admiral Torsten must fight Amber Noon and Sapphire Dawn for space
-    - Admiral Torsten frees Moble Sidney
+    - Admiral Torsten frees Noble Sidney
 
 6. Marathon
     - Admiral Torsten is unsure if he should assault Amber Fortress

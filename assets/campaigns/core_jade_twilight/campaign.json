@@ -92,9 +92,36 @@
         {
             "name" : "hard_diplomacy",
             "title" : "Hard diplomacy",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [540, 120]
+            "map" : "core_jade_twi_hard_diplomacy.tofmap.json",
+            "description" : "Driven both by his mission, and a promise made to a Ruby Dusk, Admiral Torsten is ready to face Sapphire Dawn and Amber Noon at the outskirts of the Amber Fortress. Facing two entrenched enemies is not going to be easy. Luckily, Captain Claude is already on his way with reinforcements.",
+            "marker" : [540, 120],
+            "players": [
+                {
+                    "side": "green",
+                    "ap": 0,
+                    "type": "human",
+                    "team": 0
+                },
+                {
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 1
+                },
+                {
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 1
+                },
+                {
+                    "side": "red",
+                    "ap": 0,
+                    "type": "ai",
+                    "alive": false,
+                    "team": 0
+                }
+            ]
         },
         {
             "name" : "marathon",
