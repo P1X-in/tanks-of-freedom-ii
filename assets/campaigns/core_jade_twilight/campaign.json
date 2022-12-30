@@ -126,9 +126,23 @@
         {
             "name" : "marathon",
             "title" : "Marathon",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [580, 70]
+            "map" : "core_jade_twi_marathon.tofmap.json",
+            "description" : "While the expedition to Amber Fortress fails to reach it's goal, Admiral Torsten decides to stand his ground and keep Warlord Grim busy. Captain Claude must race back to the Jade Oasis and report to Chancellor Irene, hoping that she can devise some new plan. Little does he know, that someone holding a grudge is watching him very closely...",
+            "marker" : [580, 70],
+            "players": [
+                {
+                    "side": "green",
+                    "ap": 0,
+                    "type": "human",
+                    "team": 0
+                },
+                {
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 1
+                }
+            ]
         },
         {
             "name" : "building_bridges",

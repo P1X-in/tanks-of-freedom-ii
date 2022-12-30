@@ -375,7 +375,7 @@ Each of the main campaigns should be about 10 mission long.
     - Admiral Torsten is unsure if he should assault Amber Fortress
     - Captain Claude is dispatched to go back to Jade Oasis to consult Chancellor Irene
     - He must fight his way through Sapphire Dawn with limited units
-    - Can not recruit new units, need to heal with Claude and Mobile Infantry
+    - Can only recruit Infantry, need to heal with Claude and Mobile Infantry
 
 7. Building Bridges
     - Captain Claude reaches a river on the Jade-Amber border
