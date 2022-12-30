@@ -2,6 +2,7 @@ extends "res://scenes/board/logic/ai/brains/abstract_brain.gd"
 
 const ENEMY_PROXIMITY = 4
 const UNITS_HARD_LIMIT = 5
+const HARD_LIMIT_MULTIPLIER = 1.3
 const UNITS_SOFT_LIMIT = 10
 
 var action_template = preload("res://scenes/board/logic/ai/actions/use_ability_action.gd")
@@ -14,7 +15,8 @@ func get_actions(entity_tile, enemy_buildings, enemy_units, own_buildings, own_u
         return []
 
     var units_stats = self._gather_unit_stats(own_units)
-    if units_stats["total"] >= self.UNITS_HARD_LIMIT + own_buildings.size():
+    var final_units_hard_limit = self.UNITS_HARD_LIMIT + int(own_buildings.size() * self.HARD_LIMIT_MULTIPLIER)
+    if units_stats["total"] >= final_units_hard_limit:
         return []
 
     var building = entity_tile.building.tile
@@ -68,7 +70,11 @@ func _calculate_proximity_value_bonus(entity_tile, enemy_units, enemy_buildings)
     for enemy_unit_tile in enemy_units:
         distance = entity_tile.position.distance_squared_to(enemy_unit_tile.position)
         if distance <= 16:
-            bonus += 10
+            bonus += 5
+        if distance <= 64:
+            bonus += 2
+        if distance <= 100:
+            bonus += 1
 
     for enemy_building_tile in enemy_buildings:
         distance = entity_tile.position.distance_squared_to(enemy_building_tile.position)

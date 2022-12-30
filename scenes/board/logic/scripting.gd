@@ -3,6 +3,7 @@ var board
 var scripts
 
 var triggers = {}
+var trigger_groups = {}
 
 var trigger_templates = preload("res://scenes/board/logic/scripting/triggers/templates.gd").new()
 var outcome_templates = preload("res://scenes/board/logic/scripting/outcomes/templates.gd").new()
@@ -73,3 +74,23 @@ func _build_outcome_story_step(step_definition):
 func suspend_trigger(name, state):
     if self.triggers.has(name):
         self.triggers[name].suspended = state
+
+func add_to_group(group_name, trigger_name):
+    if not self.trigger_groups.has("group_name"):
+        self.trigger_groups[group_name] = {}
+
+    self.trigger_groups[group_name][trigger_name] = true
+
+func remove_from_group(group_name, trigger_name):
+    if not self.trigger_groups.has("group_name"):
+        self.trigger_groups[group_name] = {}
+
+    self.trigger_groups[group_name][trigger_name] = false
+
+func suspend_group(group_name, state):
+    if not self.trigger_groups.has("group_name"):
+        return
+
+    for trigger_name in self.trigger_groups[group_name].keys():
+        if self.trigger_groups[group_name][trigger_name]:
+            self.suspend_trigger(trigger_name, state)

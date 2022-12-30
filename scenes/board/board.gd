@@ -76,6 +76,9 @@ func _input(event):
                 if event.is_action_pressed("cheat_capture"):
                     self.audio.play("menu_click")
                     self.cheat_capture()
+                if event.is_action_pressed("cheat_kill"):
+                    self.audio.play("menu_click")
+                    self.cheat_kill()
 
         if event.is_action_pressed("editor_menu"):
             self.audio.play("menu_click")
@@ -521,6 +524,25 @@ func cheat_capture():
     self.smoke_a_tile(tile)
     building.sfx_effect("capture")
     self.events.emit_building_captured(building, old_side, self.state.get_current_side())
+
+func cheat_kill():
+    if not OS.is_debug_build():
+        print("Not a debug build")
+        return
+
+    var tile = self.map.model.get_tile(self.map.tile_box_position)
+
+    if not tile.unit.is_present():
+        print("No unit found")
+        return
+
+    var unit = tile.unit.tile
+    var unit_id = unit.get_instance_id()
+    var unit_type = unit.template_name
+    var unit_side = unit.side
+
+    self.destroy_unit_on_tile(tile)
+    self.events.emit_unit_destroyed(null, unit_id, unit_type, unit_side)
 
 
 func activate_production_ability(args):

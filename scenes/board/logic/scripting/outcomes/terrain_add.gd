@@ -13,6 +13,9 @@ func _execute(_metadata):
     if self.type == "decoration":
         tile.decoration.clear()
         self.board.map.builder.place_decoration(self.where, self.template_name, self.rotation)
+    if self.type == "damage":
+        tile.damage.clear()
+        self.board.map.builder.place_damage(self.where, self.template_name, self.rotation)
     elif self.type == "frame":
         tile.frame.clear()
         self.board.map.builder.place_frame(self.where, self.template_name, self.rotation)

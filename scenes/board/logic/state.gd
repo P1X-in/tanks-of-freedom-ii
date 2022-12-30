@@ -82,6 +82,9 @@ func add_player_ap(id, value):
     if self.players[id]["ap"] < 0:
         self.players[id]["ap"] = 0
 
+    if self.players[id]["ap"] > 999:
+        self.players[id]["ap"] = 999
+
 func use_player_ap(id, value):
     self.players[id]["ap"] -= value
 
