@@ -28,6 +28,8 @@ func _on_start_button_pressed():
     for player in mission_details["players"]:
         if not player.has("alive"):
             player["alive"] = true
+        if not player.has("team"):
+            player["team"] = null
         self.match_setup.add_player(player["side"], player["ap"], player["type"], player["alive"], player["team"])
 
     self.switcher.board()
