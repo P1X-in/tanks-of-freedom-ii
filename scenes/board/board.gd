@@ -283,6 +283,9 @@ func update_for_current_player():
     self.map.set_tile_box_side(current_player["side"])
 
 func toggle_radial_menu(context_object=null):
+    if self.map.camera.script_operated:
+        return
+
     if self.radial_abilities.is_object_without_abilities(self, context_object):
         return
 
