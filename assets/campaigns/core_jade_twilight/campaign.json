@@ -133,23 +133,33 @@
                 {
                     "side": "green",
                     "ap": 0,
-                    "type": "human",
-                    "team": 0
+                    "type": "human"
                 },
                 {
                     "side": "blue",
                     "ap": 0,
-                    "type": "ai",
-                    "team": 1
+                    "type": "ai"
                 }
             ]
         },
         {
             "name" : "building_bridges",
             "title" : "Building bridges",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [648, 93]
+            "map" : "core_jade_twi_building_bridges.tofmap.json",
+            "description" : "With Blake still hot on his heels, Captain Claude runs himself into a corner, facing a huge river on one side, and persistent Sapphire Dawn forces on the other. Jade Twilight forces are already devising a plan to get him across, but time is running out.",
+            "marker" : [648, 93],
+            "players": [
+                {
+                    "side": "green",
+                    "ap": 0,
+                    "type": "human"
+                },
+                {
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "ai"
+                }
+            ]
         }
     ]
 }
