@@ -16,4 +16,5 @@ dest_files=[ "res://.import/barracks.obj-bd1bd0a8d5a0e5538f24fe0439f55562.mesh",
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

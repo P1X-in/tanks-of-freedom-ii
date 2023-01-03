@@ -16,4 +16,5 @@ dest_files=[ "res://.import/heli_rotor_vertical.obj-954b8ce33c851d42b03e81e61640
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

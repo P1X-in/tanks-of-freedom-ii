@@ -16,4 +16,5 @@ dest_files=[ "res://.import/mobile_infantry.obj-a6e6421a21c5b5a97747eee91dc1b200
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -16,4 +16,5 @@ dest_files=[ "res://.import/lord.obj-644977d51f048c4b2da2fa47dc359a95.mesh", "re
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286
