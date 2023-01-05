@@ -26,55 +26,55 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Sir, Chancellor on the line."
+                        "text": "tr_core_jade_twilight_m2_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Yes, madam Chancellor? I'm still assembling troops, as you requested."
+                        "text": "tr_core_jade_twilight_m2_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Chancellor Irene",
+                        "name": "TR_CHANC_IRENE",
                         "portrait": "npc_chancellor",
                         "side": "left",
-                        "text": "Good. Please keep me updated on the progress. We've got some intel, that a number of Amber Noon officers are starting to question Grim's orders. They might side with Tybalt when he returns, as he predicted."
+                        "text": "tr_core_jade_twilight_m2_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Amber Prince already shown wisdom beyond his years. He will make a fine king some day."
+                        "text": "tr_core_jade_twilight_m2_t4"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Chancellor Irene",
+                        "name": "TR_CHANC_IRENE",
                         "portrait": "npc_chancellor",
                         "side": "left",
-                        "text": "I hope so. King Ludwig is a good friend, and I intend to prepare Tybalt for the battles ahead of him."
+                        "text": "tr_core_jade_twilight_m2_t5"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "I'm sorry to interrupt you, Sir, but there is something going on on the Amber side..."
+                        "text": "tr_core_jade_twilight_m2_t6"
                     }
                 },
                 {
@@ -110,10 +110,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Rocket Artillery",
+                        "name": "TR_ROCK_ART",
                         "portrait": "yellow_rocket",
                         "side": "left",
-                        "text": "Battery ready to fire!"
+                        "text": "tr_core_jade_twilight_m2_t7"
                     }
                 },
                 {
@@ -156,37 +156,37 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Chancellor Irene",
+                        "name": "TR_CHANC_IRENE",
                         "portrait": "npc_chancellor",
                         "side": "left",
-                        "text": "What was that rumble?"
+                        "text": "tr_core_jade_twilight_m2_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Amber Noon just destroyed the bridge! They are trying to stop us from crossing the border river."
+                        "text": "tr_core_jade_twilight_m2_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Chancellor Irene",
+                        "name": "TR_CHANC_IRENE",
                         "portrait": "npc_chancellor",
                         "side": "left",
-                        "text": "That sly Warlord! Admiral! I'm afraid that you have to act quickly, with whatever forces you have on hand."
+                        "text": "tr_core_jade_twilight_m2_t10"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Agreed. But with this bridge gone..."
+                        "text": "tr_core_jade_twilight_m2_t11"
                     }
                 },
                 {
@@ -202,10 +202,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "The only other way is the bridge in the city. I hoped we wouldn't have to fight near civilians."
+                        "text": "tr_core_jade_twilight_m2_t12"
                     }
                 },
                 {
@@ -221,10 +221,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "There is a border guard garrison over there. They should be able to hold out for now, but if Amber Noon decide to attack in full force, they will need help."
+                        "text": "tr_core_jade_twilight_m2_t13"
                     }
                 },
                 {
@@ -240,24 +240,24 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Chancellor Irene",
+                        "name": "TR_CHANC_IRENE",
                         "portrait": "npc_chancellor",
                         "side": "left",
-                        "text": "That sounds like a plan, Admiral. Capture the Amber HQ as quickly as possible, King Ludwig needs our help."
+                        "text": "tr_core_jade_twilight_m2_t14"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Claim the Amber Noon HQ."
+                        "text": "tr_core_jade_twilight_m2_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Admiral Torsten must survive"
+                        "text": "tr_core_jade_twilight_m1_o2"
                     }
                 },
                 {
@@ -271,19 +271,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Amber Commander",
+                        "name": "tr_core_jade_twilight_a1",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "Looks like Jade Twilight is not going to give up. Blow it up, just in case."
+                        "text": "tr_core_jade_twilight_m2_t15"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "yellow_infantry",
                         "side": "right",
-                        "text": "Yes, Sir!"
+                        "text": "tr_core_jade_twilight_m2_t16"
                     }
                 },
                 {
@@ -334,19 +334,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Sir, the city bridge is gone as well!"
+                        "text": "tr_core_jade_twilight_m2_t17"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "They must have planted explosives before we got there. We're going to have to do this the hard way then. I need some veteran Attack Helicopters to ferry the troops."
+                        "text": "tr_core_jade_twilight_m2_t18"
                     }
                 },
                 {
@@ -370,19 +370,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Objective captured, sir. Amber Noon soldiers are falling back."
+                        "text": "tr_core_jade_twilight_m2_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Send a report to Chancellor. Captain Claude has some bridge rebuilding to do before he will be able to bring in reinforcements."
+                        "text": "tr_core_jade_twilight_m2_t20"
                     }
                 },
                 {
@@ -402,10 +402,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "I overestimated my abilities here."
+                        "text": "tr_core_jade_twilight_m2_t21"
                     }
                 },
                 {
@@ -619,9 +619,7 @@
         },
         "10_16": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -4943,9 +4941,7 @@
         },
         "17_14": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -5462,9 +5458,7 @@
         },
         "17_31": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -5761,9 +5755,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -5916,9 +5908,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_infantry"
@@ -6801,9 +6791,7 @@
         },
         "19_31": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -8335,9 +8323,7 @@
         },
         "22_17": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -10679,9 +10665,7 @@
         },
         "26_14": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -11338,9 +11322,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_rocket"
@@ -11373,9 +11355,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -11438,9 +11418,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -11993,9 +11971,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -12058,9 +12034,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_rocket"
@@ -12093,9 +12067,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_rocket"
@@ -13358,9 +13330,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -13423,9 +13393,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -13733,9 +13701,7 @@
         },
         "30_25": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -16582,9 +16548,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "green_m_inf"
@@ -16772,9 +16736,7 @@
         },
         "35_20": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -17651,9 +17613,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_infantry"
@@ -17686,9 +17646,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "hero_admiral"
@@ -17781,9 +17739,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_scout"
@@ -18091,9 +18047,7 @@
         },
         "38_10": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -18995,9 +18949,7 @@
         },
         "3_23": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -19054,9 +19006,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_rocket"
@@ -19700,9 +19650,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -20125,9 +20073,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "yellow",
                 "tile": "yellow_m_inf"
@@ -20525,9 +20471,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "yellow",
                 "tile": "yellow_tank"

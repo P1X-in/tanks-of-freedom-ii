@@ -100,10 +100,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "There they are! Alert all units!"
+                        "text": "tr_core_jade_twilight_m6_t1"
                     }
                 },
                 {
@@ -119,28 +119,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "So far so good, but it looks like we might have ran out of luck on this run."
+                        "text": "tr_core_jade_twilight_m6_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Admiral, this is Captain Claude. We've are already past half way to Jade lands, but we hit an obstacle. Lots of Sapphire Dawn soldiers stand in our way."
+                        "text": "tr_core_jade_twilight_m6_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Copy that, Captain. Let's have a look at the aerial recon."
+                        "text": "tr_core_jade_twilight_m6_t4"
                     }
                 },
                 {
@@ -156,10 +156,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "green_scout",
                         "side": "left",
-                        "text": "There are plenty of enemy Barracks ahead, but they all seem hastily set up. They are also sparsely guarded, with a few pieces of armour."
+                        "text": "tr_core_jade_twilight_m6_t5"
                     }
                 },
                 {
@@ -175,10 +175,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "green_scout",
                         "side": "left",
-                        "text": "We know of at least one facility capable of fielding new Tanks. But there may be more."
+                        "text": "tr_core_jade_twilight_m6_t6"
                     }
                 },
                 {
@@ -194,10 +194,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "green_scout",
                         "side": "left",
-                        "text": "They are using small islands to host simple Airfields, keeping them out of your reach. It does not seem they can provide Sapphire Dawn with heavier stuff, but their Scouts might still be a nuisance."
+                        "text": "tr_core_jade_twilight_m6_t7"
                     }
                 },
                 {
@@ -213,28 +213,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "green_scout",
                         "side": "left",
-                        "text": "There is a bigger concentration of forces near that town, but it looks like they have nothing beyond that point."
+                        "text": "tr_core_jade_twilight_m6_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "If you can get there, Captain, You should be able to continue on your way without further issues."
+                        "text": "tr_core_jade_twilight_m6_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Got it, Admiral. Thank you for the intel."
+                        "text": "tr_core_jade_twilight_m6_t10"
                     }
                 },
                 {
@@ -250,33 +250,33 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Focus, men. We are quite limited here. If anyone get's hurt, stay close to me or our Mobile Infantry units to get some assistance."
+                        "text": "tr_core_jade_twilight_m6_t11"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "I can't just hang in the back though, I must reach the end of that road personally."
+                        "text": "tr_core_jade_twilight_m6_t12"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Bring Captain Claude to the end of the road."
+                        "text": "tr_core_jade_twilight_m6_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Captain Claude must survive"
+                        "text": "tr_core_jade_twilight_m1_o3"
                     }
                 },
                 {
@@ -300,46 +300,46 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "We are almost in the clear. Form up and let's go as fast as we can."
+                        "text": "tr_core_jade_twilight_m6_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Don't think I'll let you go that easily. You WILL see me again!"
+                        "text": "tr_core_jade_twilight_m6_t14"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "And I can't wait. Well.. I guess I can, because I don't have time for your silly antics."
+                        "text": "tr_core_jade_twilight_m6_t15"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "green_scout",
                         "side": "left",
-                        "text": "Can't see any more of them, Captain."
+                        "text": "tr_core_jade_twilight_m6_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Full speed ahead!"
+                        "text": "tr_core_jade_twilight_m6_t17"
                     }
                 },
                 {
@@ -370,10 +370,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Looks like we can only recruit basic Infantry in these Barracks. Even so, thanks to my passive ability, these soldiers will have enough experience to use their Heavy Weapons right away, and be able to deal with anything Sapphire Dawn throws at us."
+                        "text": "tr_core_jade_twilight_m6_t18"
                     }
                 },
                 {
@@ -423,28 +423,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Well, well, well. What is a wimpy Captain doing so far away from home?"
+                        "text": "tr_core_jade_twilight_m6_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Blake! I should have expected, that such a lousy trap was your doing."
+                        "text": "tr_core_jade_twilight_m6_t20"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "You won't be so sassy when I beat you. Consider it revenge for interfering with my mission to capture Prince Tybalt."
+                        "text": "tr_core_jade_twilight_m6_t21"
                     }
                 },
                 {
@@ -522,19 +522,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "What is this? Just look at this mess!"
+                        "text": "tr_core_jade_twilight_m6_t22"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Sir! They took away or smashed all the equipment before we could fully claim the building. It's not going to be useful anymore..."
+                        "text": "tr_core_jade_twilight_m6_t23"
                     }
                 },
                 {
@@ -584,19 +584,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "You thought you got rid of me?"
+                        "text": "tr_core_jade_twilight_m6_t24"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "I certainly hoped so!"
+                        "text": "tr_core_jade_twilight_m6_t25"
                     }
                 },
                 {
@@ -687,10 +687,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "These Barracks are trashed as well. Nothing but walls."
+                        "text": "tr_core_jade_twilight_m6_t26"
                     }
                 },
                 {
@@ -740,19 +740,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "I hope you liked the fireworks. I prepared them especially for you!"
+                        "text": "tr_core_jade_twilight_m6_t27"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "You're a lost cause..."
+                        "text": "tr_core_jade_twilight_m6_t28"
                     }
                 },
                 {
@@ -830,10 +830,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Spotted a mine! Clear the building!"
+                        "text": "tr_core_jade_twilight_m6_t29"
                     }
                 },
                 {
@@ -928,19 +928,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "I hoped that last one have taken care of you..."
+                        "text": "tr_core_jade_twilight_m6_t30"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "It would take more than that to stop me!"
+                        "text": "tr_core_jade_twilight_m6_t31"
                     }
                 },
                 {
@@ -1031,10 +1031,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Nothing but dust..."
+                        "text": "tr_core_jade_twilight_m6_t32"
                     }
                 },
                 {
@@ -1093,28 +1093,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "That is enough! Why don't you give up already?"
+                        "text": "tr_core_jade_twilight_m6_t33"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Why don't you? I think you should consider a different career. Street performer perhaps?"
+                        "text": "tr_core_jade_twilight_m6_t34"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "You will regret that! I'm not holding back!"
+                        "text": "tr_core_jade_twilight_m6_t35"
                     }
                 },
                 {
@@ -1160,10 +1160,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "I'm sorry, Admiral! There were too many of them!"
+                        "text": "tr_core_jade_twilight_m1_t32"
                     }
                 },
                 {
@@ -1215,19 +1215,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Control room clear!"
+                        "text": "tr_core_jade_twilight_m6_t36"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Wait, what is that... Everyone out! It's a trap!"
+                        "text": "tr_core_jade_twilight_m6_t37"
                     }
                 },
                 {
@@ -1255,10 +1255,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "The factory is gone!"
+                        "text": "tr_core_jade_twilight_m6_t38"
                     }
                 },
                 {
@@ -1330,19 +1330,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Captain! Some of the nearby Towers were booby-trapped as well."
+                        "text": "tr_core_jade_twilight_m6_t39"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "They really don't want us having these. It's the kind of solution I would expect from Blake."
+                        "text": "tr_core_jade_twilight_m6_t40"
                     }
                 },
                 {
@@ -1377,10 +1377,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "He's going for the detonator! Quick!"
+                        "text": "tr_core_jade_twilight_m6_t41"
                     }
                 },
                 {
@@ -1430,28 +1430,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "blue_infantry",
                         "side": "left",
-                        "text": "Damn, wrong one..."
+                        "text": "tr_core_jade_twilight_m6_t42"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "That explosion still managed to knock out the power line to the Factory."
+                        "text": "tr_core_jade_twilight_m6_t43"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "And here I hoped for some more Tanks."
+                        "text": "tr_core_jade_twilight_m6_t44"
                     }
                 },
                 {
@@ -5985,9 +5985,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -5995,9 +5993,7 @@
         },
         "12_38": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -7079,9 +7075,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -7569,9 +7563,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -7699,9 +7691,7 @@
         },
         "15_14": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -8718,9 +8708,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -9783,9 +9771,7 @@
         },
         "19_25": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -9842,9 +9828,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -10087,9 +10071,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -13367,9 +13349,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -16137,9 +16117,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -16172,9 +16150,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -17317,9 +17293,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -17357,9 +17331,7 @@
         },
         "28_37": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -18021,9 +17993,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_scout"
@@ -19261,9 +19231,7 @@
         },
         "2_21": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -19505,9 +19473,7 @@
         },
         "2_29": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -19654,9 +19620,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -21189,9 +21153,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -21404,9 +21366,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -22309,9 +22269,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -23754,9 +23712,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -23939,9 +23895,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -23949,9 +23903,7 @@
         },
         "33_17": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -24518,9 +24470,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -24528,9 +24478,7 @@
         },
         "33_34": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -25037,9 +24985,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -25222,9 +25168,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -25382,9 +25326,7 @@
         },
         "34_23": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -26016,9 +25958,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -26621,9 +26561,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -26656,9 +26594,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -27201,9 +27137,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -27416,9 +27350,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -27451,9 +27383,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -27846,9 +27776,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -28066,9 +27994,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -28251,9 +28177,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -29436,9 +29360,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -30736,9 +30658,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -30746,9 +30666,7 @@
         },
         "38_38": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -32635,9 +32553,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -33305,9 +33221,7 @@
         },
         "3_7": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -34534,9 +34448,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -34959,9 +34871,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -35299,9 +35209,7 @@
         },
         "5_3": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -35418,9 +35326,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -35908,9 +35814,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -35943,9 +35847,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -36158,9 +36060,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -36228,9 +36128,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_scout"
@@ -36533,9 +36431,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -36568,9 +36464,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_m_inf"
@@ -36903,9 +36797,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_infantry"
@@ -37028,9 +36920,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -37453,9 +37343,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_rocket"
@@ -37793,9 +37681,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_m_inf"
@@ -37828,9 +37714,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_infantry"
@@ -38133,9 +38017,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "hero_captain"
@@ -38168,9 +38050,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_tank"
@@ -38683,9 +38563,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_scout"
@@ -39018,9 +38896,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_m_inf"
@@ -39353,9 +39229,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_infantry"
@@ -39873,9 +39747,7 @@
         },
         "9_2": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -40382,9 +40254,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_infantry"

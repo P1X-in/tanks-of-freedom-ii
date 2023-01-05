@@ -60,10 +60,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "That Commando is really persistent, I'll give him that."
+                        "text": "tr_core_jade_twilight_m7_t1"
                     }
                 },
                 {
@@ -110,10 +110,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Rest of my men stayed behind to block the road. I hope they are fine."
+                        "text": "tr_core_jade_twilight_m7_t2"
                     }
                 },
                 {
@@ -172,19 +172,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Soldier",
+                        "name": "TR_ACT_SOLDIER",
                         "portrait": "blue_m_inf",
                         "side": "left",
-                        "text": "There he is!"
+                        "text": "tr_core_jade_twilight_m7_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Some of them got through. I have to hurry!"
+                        "text": "tr_core_jade_twilight_m7_t4"
                     }
                 },
                 {
@@ -230,10 +230,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "They are already on the eastern side as well? But there is no other way..."
+                        "text": "tr_core_jade_twilight_m7_t5"
                     }
                 },
                 {
@@ -250,19 +250,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Squadron leader",
+                        "name": "tr_core_jade_twilight_a5",
                         "portrait": "green_heli",
                         "side": "left",
-                        "text": "Captain! Here!"
+                        "text": "tr_core_jade_twilight_m7_t6"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Air brigade! So good to see you!"
+                        "text": "tr_core_jade_twilight_m7_t7"
                     }
                 },
                 {
@@ -384,28 +384,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Squadron leader",
+                        "name": "tr_core_jade_twilight_a5",
                         "portrait": "green_heli",
                         "side": "left",
-                        "text": "Quickly, please get on board and we will ferry you to the other side."
+                        "text": "tr_core_jade_twilight_m7_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "..."
+                        "text": "tr_core_jade_twilight_m7_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "We can't leave! If we go now, those Sapphire Dawn forces in the east will flank our men covering my retreat. They would not be able to survive that!"
+                        "text": "tr_core_jade_twilight_m7_t10"
                     }
                 },
                 {
@@ -422,19 +422,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "If only we could repair that bridge."
+                        "text": "tr_core_jade_twilight_m7_t11"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Squadron leader",
+                        "name": "tr_core_jade_twilight_a5",
                         "portrait": "green_heli",
                         "side": "left",
-                        "text": "There is actually an engineering team on the other side, I think they could pull this off. But it will take time..."
+                        "text": "tr_core_jade_twilight_m7_t12"
                     }
                 },
                 {
@@ -451,19 +451,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Then we will give them time. We have to recall our forces covering the road right now. If we hold this side until the bridge is ready, they should make it."
+                        "text": "tr_core_jade_twilight_m7_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Squadron leader",
+                        "name": "tr_core_jade_twilight_a5",
                         "portrait": "green_heli",
                         "side": "left",
-                        "text": "Sounds like a plan. Let us deploy our away team."
+                        "text": "tr_core_jade_twilight_m7_t14"
                     }
                 },
                 {
@@ -481,28 +481,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Strike team is on the ground!"
+                        "text": "tr_core_jade_twilight_m7_t15"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "These abandoned Amber Noon buildings are not much, but will have to be enough to hold this place."
+                        "text": "tr_core_jade_twilight_m7_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "On it!"
+                        "text": "tr_core_jade_twilight_m7_t17"
                     }
                 },
                 {
@@ -567,10 +567,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Good job."
+                        "text": "tr_core_jade_twilight_m7_t18"
                     }
                 },
                 {
@@ -809,10 +809,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "They are setting up quickly. Just look at them go!"
+                        "text": "tr_core_jade_twilight_m7_t19"
                     }
                 },
                 {
@@ -930,24 +930,24 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Looks like they might cut us off after all. Let's prepare!"
+                        "text": "tr_core_jade_twilight_m7_t20"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Hold out near the bridge"
+                        "text": "tr_core_jade_twilight_m7_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Captain Claude must survive"
+                        "text": "tr_core_jade_twilight_m1_o3"
                     }
                 },
                 {
@@ -971,10 +971,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Engineer",
+                        "name": "TR_ACT_ENGINEER",
                         "portrait": "green_m_inf",
                         "side": "left",
-                        "text": "Ok, lets do this! One emergency bridge coming right up."
+                        "text": "tr_core_jade_twilight_m7_t21"
                     }
                 },
                 {
@@ -1458,10 +1458,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Engineer",
+                        "name": "TR_ACT_ENGINEER",
                         "portrait": "green_m_inf",
                         "side": "left",
-                        "text": "This should do it. The bridge is stable enough."
+                        "text": "tr_core_jade_twilight_m7_t22"
                     }
                 },
                 {
@@ -1480,10 +1480,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "All we have to do now is to hold out until the rear guard catches up!"
+                        "text": "tr_core_jade_twilight_m7_t23"
                     }
                 },
                 {
@@ -1525,46 +1525,46 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "You didn't think it would be that easy, didn't you Claude?"
+                        "text": "tr_core_jade_twilight_m7_t24"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "You never learn, Blake. How many times do I have to beat you?"
+                        "text": "tr_core_jade_twilight_m7_t25"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "At least one more."
+                        "text": "tr_core_jade_twilight_m7_t26"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Then let's have it your way."
+                        "text": "tr_core_jade_twilight_m7_t27"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "I just have to beat that guy, and this will be over."
+                        "text": "tr_core_jade_twilight_m7_t28"
                     }
                 },
                 {
@@ -1588,7 +1588,7 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Defeat Commando Blake"
+                        "text": "tr_core_jade_twilight_m7_o2"
                     }
                 },
                 {
@@ -1706,10 +1706,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Rear guard is here. Let's beat this clown and go home."
+                        "text": "tr_core_jade_twilight_m7_t29"
                     }
                 },
                 {
@@ -1723,28 +1723,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Argh! Why does it alwasy end like this? Don't think you won, I will be back!"
+                        "text": "tr_core_jade_twilight_m7_t30"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "I wish I had time to chase you properly. But there are more important matters."
+                        "text": "tr_core_jade_twilight_m7_t31"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Regroup, and cross the bridge!"
+                        "text": "tr_core_jade_twilight_m7_t32"
                     }
                 },
                 {
@@ -1764,10 +1764,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "I'm sorry, Admiral! There were too many of them!"
+                        "text": "tr_core_jade_twilight_m1_t32"
                     }
                 },
                 {
@@ -5508,9 +5508,7 @@
         },
         "14_0": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -6497,9 +6495,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_scout"
@@ -7497,9 +7493,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_heli"
@@ -7532,9 +7526,7 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "neutral",
                 "tile": "green_m_inf"
@@ -8587,9 +8579,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_scout"
@@ -8717,9 +8707,7 @@
         },
         "17_13": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -9561,9 +9549,7 @@
         },
         "18_0": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -15950,9 +15936,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -16980,9 +16964,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -17225,9 +17207,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -18255,9 +18235,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -18385,9 +18363,7 @@
         },
         "26_25": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -18929,9 +18905,7 @@
         },
         "27_10": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -19408,9 +19382,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -21153,9 +21125,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -21163,9 +21133,7 @@
         },
         "29_19": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -21492,9 +21460,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -22822,9 +22788,7 @@
         },
         "30_30": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -22881,9 +22845,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -23821,9 +23783,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -25356,9 +25316,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -25366,9 +25324,7 @@
         },
         "33_35": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -27405,9 +27361,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "hero_captain"

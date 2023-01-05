@@ -40,19 +40,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "I have a bad feeling about the road ahead. I need a scout here!"
+                        "text": "tr_core_jade_twilight_m3_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "green_scout",
                         "side": "left",
-                        "text": "Let me be your eyes, Sir."
+                        "text": "tr_core_jade_twilight_m3_t2"
                     }
                 },
                 {
@@ -98,10 +98,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "green_scout",
                         "side": "left",
-                        "text": "Bad news! The road is heavily fortified. They are anticipating us."
+                        "text": "tr_core_jade_twilight_m3_t3"
                     }
                 },
                 {
@@ -117,10 +117,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "green_scout",
                         "side": "left",
-                        "text": "It's hard to tell, but I'm seeing something on the radar further down that path. I think the main base is even more guarded."
+                        "text": "tr_core_jade_twilight_m3_t4"
                     }
                 },
                 {
@@ -136,10 +136,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "green_scout",
                         "side": "left",
-                        "text": "I'm getting some readings from the mountain valley to the west, but can't see anything there."
+                        "text": "tr_core_jade_twilight_m3_t5"
                     }
                 },
                 {
@@ -155,60 +155,60 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "With no more bridges to blow up, Grim resorted to a wall of armoured units. What is the status of our camp?"
+                        "text": "tr_core_jade_twilight_m3_t6"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "Almost done, Sir. The only problem is that most of the radar systems for the Towers arrived damaged. We managed to restore one to a working condition, so we have comms."
+                        "text": "tr_core_jade_twilight_m3_t7"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Damaged radars? What happened?"
+                        "text": "tr_core_jade_twilight_m3_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Infantry",
+                        "name": "TR_INFANTRY",
                         "portrait": "green_infantry",
                         "side": "left",
-                        "text": "The equipment looks smashed, we suspect it was sabotage."
+                        "text": "tr_core_jade_twilight_m3_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Someone sneaked up on us? Very worrying. We have to investigate this once we are done with Grim's roadblock. There are a few abandoned Amber Towers here, we have to capture tham ASAP."
+                        "text": "tr_core_jade_twilight_m3_t10"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Claim all Amber Noon buildings."
+                        "text": "tr_core_jade_twilight_m3_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Admiral Torsten must survive"
+                        "text": "tr_core_jade_twilight_m1_o2"
                     }
                 },
                 {
@@ -245,10 +245,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Amber Commander",
+                        "name": "tr_core_jade_twilight_a1",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "Damn those Jade invaders! Requesting assistance!"
+                        "text": "tr_core_jade_twilight_m3_t11"
                     }
                 },
                 {
@@ -277,19 +277,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Finally! I was getting bored sitting in this valley."
+                        "text": "tr_core_jade_twilight_m3_t12"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Engineering corps, move in!"
+                        "text": "tr_core_jade_twilight_m3_t13"
                     }
                 },
                 {
@@ -487,19 +487,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Engineer",
+                        "name": "TR_ACT_ENGINEER",
                         "portrait": "blue_m_inf",
                         "side": "left",
-                        "text": "Rapid deployment done!"
+                        "text": "tr_core_jade_twilight_m3_t14"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Clear out the trees!"
+                        "text": "tr_core_jade_twilight_m3_t15"
                     }
                 },
                 {
@@ -709,44 +709,44 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "All units, assault Jade Twilight positions!"
+                        "text": "tr_core_jade_twilight_m3_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Tell me, Admiral, have your radar equipment arrived yet?"
+                        "text": "tr_core_jade_twilight_m3_t17"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "I should have known it was you. It was a smart move, I must admit. Who told you to do that? Because I doubt you came up with this on your own."
+                        "text": "tr_core_jade_twilight_m3_t18"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Commando Blake",
+                        "name": "TR_COM_BLAKE",
                         "portrait": "hero_commando",
                         "side": "left",
-                        "text": "Laugh while you still can!"
+                        "text": "tr_core_jade_twilight_m3_t19"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Claim all Amber Noon and Sapphire Dawn buildings."
+                        "text": "tr_core_jade_twilight_m3_o2"
                     }
                 },
                 {
@@ -780,19 +780,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "I admire Grim's persistence, but this is not going to be enough to stop me."
+                        "text": "tr_core_jade_twilight_m3_t20"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "It is worrysome to see Sapphire Dawn still dealing with that traitor. I can only hope, that President Gideon will see that soon."
+                        "text": "tr_core_jade_twilight_m3_t21"
                     }
                 },
                 {
@@ -821,10 +821,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "I overestimated my abilities here."
+                        "text": "tr_core_jade_twilight_m2_t21"
                     }
                 },
                 {
@@ -3655,9 +3655,7 @@
         },
         "14_34": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -6359,9 +6357,7 @@
         },
         "17_3": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -6598,9 +6594,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_scout"
@@ -6878,9 +6872,7 @@
         },
         "18_0": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -7783,9 +7775,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_heli"
@@ -8993,9 +8983,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_m_inf"
@@ -9028,9 +9016,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_scout"
@@ -9068,9 +9054,7 @@
         },
         "19_38": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -10102,9 +10086,7 @@
         },
         "20_32": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -10221,9 +10203,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "hero_admiral"
@@ -11396,9 +11376,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_tank"
@@ -11466,9 +11444,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_rocket"
@@ -11656,9 +11632,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_m_inf"
@@ -11691,9 +11665,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_heli"
@@ -11761,9 +11733,7 @@
         },
         "22_0": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -12605,9 +12575,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_infantry"
@@ -12670,9 +12638,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_tank"
@@ -12915,9 +12881,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_rocket"
@@ -13850,9 +13814,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "green_infantry"
@@ -13915,9 +13877,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_m_inf"
@@ -14040,9 +14000,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_m_inf"
@@ -14135,9 +14093,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -14170,9 +14126,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -14660,9 +14614,7 @@
         },
         "24_23": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -14719,9 +14671,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -15234,9 +15184,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_heli"
@@ -15269,9 +15217,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_rocket"
@@ -15304,9 +15250,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -15819,9 +15763,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -16424,9 +16366,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -16969,9 +16909,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_m_inf"
@@ -17004,9 +16942,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -17944,9 +17880,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_heli"
@@ -17979,9 +17913,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_rocket"
@@ -18014,9 +17946,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -18294,9 +18224,7 @@
         },
         "27_35": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -18923,9 +18851,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_rocket"
@@ -18958,9 +18884,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -19748,9 +19672,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_m_inf"
@@ -19783,9 +19705,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -20988,9 +20908,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -21413,9 +21331,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -21423,9 +21339,7 @@
         },
         "32_24": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "feudal_tower"

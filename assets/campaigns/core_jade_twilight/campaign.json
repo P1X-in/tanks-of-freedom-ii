@@ -1,15 +1,18 @@
 {
-    "name" : "core_jade_twilight",
-    "title" : "Hard diplomacy",
-    "icon" : "green_gem",
-    "prerequisite" : "core_sapphire_dawn",
-    "missions" : [
+    "name": "core_jade_twilight",
+    "title": "tr_core_jade_twilight_campaign_title",
+    "icon": "green_gem",
+    "prerequisite": "core_sapphire_dawn",
+    "missions": [
         {
-            "name" : "the_envoy",
-            "title" : "The Envoy",
-            "map" : "core_jade_twi_envoy.tofmap.json",
-            "description" : "Chancellor Irene welcomes Prince Tybalt in Jade Oasis, and listens to his plea. Even though it seems that Warlord Grim is now in full controll, she still believes in a diplomatic solution. Irene sends her most renowned commander, Admiral Torsten, as an Envoy to Amber Fotress.",
-            "marker" : [700, 198],
+            "name": "the_envoy",
+            "title": "tr_core_jade_twilight_m1_name",
+            "map": "core_jade_twi_envoy.tofmap.json",
+            "description": "tr_core_jade_twilight_m1_desc",
+            "marker": [
+                700,
+                198
+            ],
             "players": [
                 {
                     "side": "green",
@@ -24,11 +27,14 @@
             ]
         },
         {
-            "name" : "delegation",
-            "title" : "Delegation",
-            "map" : "core_jade_twi_delegation.tofmap.json",
-            "description" : "With Warlord Grim unwilling to let the Jade Twilight envoy through, Chancellor Irene orders a different approach. Admiral Torsten must establish a corridor, that will allow him to move forces towards Amber Fortress.",
-            "marker" : [620, 165],
+            "name": "delegation",
+            "title": "tr_core_jade_twilight_m2_name",
+            "map": "core_jade_twi_delegation.tofmap.json",
+            "description": "tr_core_jade_twilight_m2_desc",
+            "marker": [
+                620,
+                165
+            ],
             "players": [
                 {
                     "side": "green",
@@ -43,11 +49,14 @@
             ]
         },
         {
-            "name" : "exchange_arguments",
-            "title" : "Exchange of arguments",
-            "map" : "core_jade_twi_exchange_args.tofmap.json",
-            "description" : "Jade Twilight expedition hits a roadblock when they encounter a defensive line prepared by Amber Noon. It didn't work out well for them so far. Do they have some other plan then?",
-            "marker" : [560, 155],
+            "name": "exchange_arguments",
+            "title": "tr_core_jade_twilight_m3_name",
+            "map": "core_jade_twi_exchange_args.tofmap.json",
+            "description": "tr_core_jade_twilight_m3_desc",
+            "marker": [
+                560,
+                155
+            ],
             "players": [
                 {
                     "side": "green",
@@ -71,11 +80,14 @@
             ]
         },
         {
-            "name" : "lost_in_translation",
-            "title" : "Lost in translation",
-            "map" : "core_jade_twi_lost_translation.tofmap.json",
-            "description" : "Despite his recent successes, Admiral Torsten is forced to try and find an easier route towards Amber Fortress. On his way, he finds a Ruby Dusk stronghold standing in his path. Chancellor Irene hopes to negotiate with them a safe passage.",
-            "marker" : [500, 135],
+            "name": "lost_in_translation",
+            "title": "tr_core_jade_twilight_m4_name",
+            "map": "core_jade_twi_lost_translation.tofmap.json",
+            "description": "tr_core_jade_twilight_m4_desc",
+            "marker": [
+                500,
+                135
+            ],
             "players": [
                 {
                     "side": "green",
@@ -90,11 +102,14 @@
             ]
         },
         {
-            "name" : "hard_diplomacy",
-            "title" : "Hard diplomacy",
-            "map" : "core_jade_twi_hard_diplomacy.tofmap.json",
-            "description" : "Driven both by his mission, and a promise made to a Ruby Dusk, Admiral Torsten is ready to face Sapphire Dawn and Amber Noon at the outskirts of the Amber Fortress. Facing two entrenched enemies is not going to be easy. Luckily, Captain Claude is already on his way with reinforcements.",
-            "marker" : [540, 120],
+            "name": "hard_diplomacy",
+            "title": "tr_core_jade_twilight_m5_name",
+            "map": "core_jade_twi_hard_diplomacy.tofmap.json",
+            "description": "tr_core_jade_twilight_m5_desc",
+            "marker": [
+                540,
+                120
+            ],
             "players": [
                 {
                     "side": "green",
@@ -124,11 +139,14 @@
             ]
         },
         {
-            "name" : "marathon",
-            "title" : "Marathon",
-            "map" : "core_jade_twi_marathon.tofmap.json",
-            "description" : "While the expedition to Amber Fortress fails to reach it's goal, Admiral Torsten decides to stand his ground and keep Warlord Grim busy. Captain Claude must race back to the Jade Oasis and report to Chancellor Irene, hoping that she can devise some new plan. Little does he know, that someone holding a grudge is watching him very closely...",
-            "marker" : [580, 70],
+            "name": "marathon",
+            "title": "tr_core_jade_twilight_m6_name",
+            "map": "core_jade_twi_marathon.tofmap.json",
+            "description": "tr_core_jade_twilight_m6_desc",
+            "marker": [
+                580,
+                70
+            ],
             "players": [
                 {
                     "side": "green",
@@ -143,11 +161,14 @@
             ]
         },
         {
-            "name" : "building_bridges",
-            "title" : "Building bridges",
-            "map" : "core_jade_twi_building_bridges.tofmap.json",
-            "description" : "With Blake still hot on his heels, Captain Claude runs himself into a corner, facing a huge river on one side, and persistent Sapphire Dawn forces on the other. Jade Twilight forces are already devising a plan to get him across, but time is running out.",
-            "marker" : [648, 93],
+            "name": "building_bridges",
+            "title": "tr_core_jade_twilight_m7_name",
+            "map": "core_jade_twi_building_bridges.tofmap.json",
+            "description": "tr_core_jade_twilight_m7_desc",
+            "marker": [
+                648,
+                93
+            ],
             "players": [
                 {
                     "side": "green",

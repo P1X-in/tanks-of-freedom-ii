@@ -26,91 +26,91 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "I'm very grateful for your help, Chancellor."
+                        "text": "tr_core_jade_twilight_m1_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Chancellor Irene",
+                        "name": "TR_CHANC_IRENE",
                         "portrait": "npc_chancellor",
                         "side": "right",
-                        "text": "The pleasure is all mine. Welcome in Jade Oasis. It's been a while since you've visited us."
+                        "text": "tr_core_jade_twilight_m1_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "I wish I could be here under more pleasant circumstances, but alas. I believe you have received my message about Warlord Grim keeping my father hostage?"
+                        "text": "tr_core_jade_twilight_m1_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Chancellor Irene",
+                        "name": "TR_CHANC_IRENE",
                         "portrait": "npc_chancellor",
                         "side": "right",
-                        "text": "Indeed I did. This is an unprecedented act of treachery. If not for the fact, that these news come from you, and the skirmishes reported by Jade forces, I wouldn't believe it."
+                        "text": "tr_core_jade_twilight_m1_t4"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "It's hard for me to believe it as well, my father trusted Grim."
+                        "text": "tr_core_jade_twilight_m1_t5"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "Can you help me, Chancellor? All I need is a contingent of soldiers. It is my wish to go back to Amber Fortress as quickly as possible, and deal with Warlord Grim myself. I believe, that there are still some Amber Noon commanders, who would back me up, if I confronted him directly."
+                        "text": "tr_core_jade_twilight_m1_t6"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Chancellor Irene",
+                        "name": "TR_CHANC_IRENE",
                         "portrait": "npc_chancellor",
                         "side": "right",
-                        "text": "And it might as well be the case. Still, I think we should not rush things. You are still young, and the last thing King Ludwig would want, would be to his only son charge into battle. I'm afraid you are not yet ready for such a difficult fight."
+                        "text": "tr_core_jade_twilight_m1_t7"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Chancellor Irene",
+                        "name": "TR_CHANC_IRENE",
                         "portrait": "npc_chancellor",
                         "side": "right",
-                        "text": "I still hope that some diplomatic solution is possible. I have already dispatched my most trusted advisor as a diplomatic envoy, with a mission to Amber Fortress. He should be able to handle Grim."
+                        "text": "tr_core_jade_twilight_m1_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Prince Tybalt",
+                        "name": "TR_PRI_TYBALT",
                         "portrait": "hero_prince",
                         "side": "left",
-                        "text": "Is it a good idea? Grim ordered attacks on Jade forces before."
+                        "text": "tr_core_jade_twilight_m1_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Chancellor Irene",
+                        "name": "TR_CHANC_IRENE",
                         "portrait": "npc_chancellor",
                         "side": "right",
-                        "text": "I don't know, but I want to try."
+                        "text": "tr_core_jade_twilight_m1_t10"
                     }
                 },
                 {
@@ -123,23 +123,35 @@
                         "zoom": 0.2
                     }
                 },
-                {"action" : "despawn", "details" : {"fields": [{"x1": 30, "x2": 30, "y1": 1, "y2": 2}]}},
                 {
-                    "action": "message",
+                    "action": "despawn",
                     "details": {
-                        "name": "Captain Claude",
-                        "portrait": "hero_captain",
-                        "side": "right",
-                        "text": "My name is Claude, I'm a captain of the Jade Twilight army. This is Admiral Torsten, a diplomatic envoy with a mission to Amber Fortress. We seek safe passage to your capital."
+                        "fields": [
+                            {
+                                "x1": 30,
+                                "x2": 30,
+                                "y1": 1,
+                                "y2": 2
+                            }
+                        ]
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Guard",
+                        "name": "TR_CAP_CLAUDE",
+                        "portrait": "hero_captain",
+                        "side": "right",
+                        "text": "tr_core_jade_twilight_m1_t11"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_ACT_GUARD",
                         "portrait": "yellow_infantry",
                         "side": "left",
-                        "text": "Please wait, I'll notify the commander."
+                        "text": "tr_core_jade_twilight_m1_t12"
                     }
                 },
                 {
@@ -155,37 +167,37 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Amber Commander",
+                        "name": "tr_core_jade_twilight_a1",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "...yes, Warlord. The envoy is here. Should I let him pass?"
+                        "text": "tr_core_jade_twilight_m1_t13"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "right",
-                        "text": "Absolutely not. If they get here, they might interrupt my plans. I'm afraid, that if we were to simply tell envoy to go back, they might try something else. Your orders are to arrest him."
+                        "text": "tr_core_jade_twilight_m1_t14"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Amber Commander",
+                        "name": "tr_core_jade_twilight_a1",
                         "portrait": "feudal_hq",
                         "side": "left",
-                        "text": "Arresting a diplomat is a serious incident."
+                        "text": "tr_core_jade_twilight_m1_t15"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Warlord Grim",
+                        "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "right",
-                        "text": "Do you think I don't know that? We are way too deep in this now. Arrest them."
+                        "text": "tr_core_jade_twilight_m1_t16"
                     }
                 },
                 {
@@ -201,64 +213,64 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Guard",
+                        "name": "TR_ACT_GUARD",
                         "portrait": "yellow_infantry",
                         "side": "left",
-                        "text": "Apologies for the wait. I have to ask you to politely lay down any weapons you might be carrying."
+                        "text": "tr_core_jade_twilight_m1_t17"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "What is the meaning of this?"
+                        "text": "tr_core_jade_twilight_m1_t18"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Guard",
+                        "name": "TR_ACT_GUARD",
                         "portrait": "yellow_infantry",
                         "side": "left",
-                        "text": "Lay down your weapons, you are under arrest."
+                        "text": "tr_core_jade_twilight_m1_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Uhhh... Sir?"
+                        "text": "tr_core_jade_twilight_m1_t20"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "This must be Grim's order. I'm afraid we will not comply."
+                        "text": "tr_core_jade_twilight_m1_t21"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "I don't think they will simply let us go, and we are outmatched. What now?"
+                        "text": "tr_core_jade_twilight_m1_t22"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "I have already signaled nearby Airfield, that we are in distress."
+                        "text": "tr_core_jade_twilight_m1_t23"
                     }
                 },
                 {
@@ -274,10 +286,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "They should be able to provide us with some backup. Thanks to my passive ability, I can request flying units for less AP than usual."
+                        "text": "tr_core_jade_twilight_m1_t24"
                     }
                 },
                 {
@@ -293,10 +305,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "I need you to escort me back to our side of the border."
+                        "text": "tr_core_jade_twilight_m1_t25"
                     }
                 },
                 {
@@ -312,40 +324,40 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "And if they get too close, I can drop a rather nasty surprise on them."
+                        "text": "tr_core_jade_twilight_m1_t26"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Aye aye. I'll make sure to get you out of here, sir. Let me know if you get hurt, I can heal you."
+                        "text": "tr_core_jade_twilight_m1_t27"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Evacuate Admiral Torsten to the end of the road"
+                        "text": "tr_core_jade_twilight_m1_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Admiral Torsten must survive"
+                        "text": "tr_core_jade_twilight_m1_o2"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 2,
-                        "text": "Captain Claude must survive"
+                        "text": "tr_core_jade_twilight_m1_o3"
                     }
                 },
                 {
@@ -369,37 +381,37 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Admiral has reached the extraction point."
+                        "text": "tr_core_jade_twilight_m1_t28"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Pilot",
+                        "name": "TR_ACT_PILOT",
                         "portrait": "green_heli",
                         "side": "left",
-                        "text": "Moving in for pick up."
+                        "text": "tr_core_jade_twilight_m1_t29"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Don't loiter around, Captain. We're not in the clear just yet."
+                        "text": "tr_core_jade_twilight_m1_t30"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "Don't worry, Sir. I do not intend to overstay my welcome."
+                        "text": "tr_core_jade_twilight_m1_t31"
                     }
                 },
                 {
@@ -419,10 +431,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Captain Claude",
+                        "name": "TR_CAP_CLAUDE",
                         "portrait": "hero_captain",
                         "side": "right",
-                        "text": "I'm sorry, Admiral! There were too many of them!"
+                        "text": "tr_core_jade_twilight_m1_t32"
                     }
                 },
                 {
@@ -442,10 +454,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Save yourself, Claude! There is nothing more you can do..."
+                        "text": "tr_core_jade_twilight_m1_t33"
                     }
                 },
                 {
@@ -2255,9 +2267,7 @@
         },
         "13_29": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -3154,9 +3164,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_m_inf"
@@ -6194,9 +6202,7 @@
         },
         "2_27": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -6463,9 +6469,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -6534,9 +6538,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -6659,9 +6661,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "npc_chancellor"
@@ -6694,9 +6694,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "yellow",
                 "tile": "hero_prince"
@@ -9434,9 +9432,7 @@
         },
         "3_34": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -10098,9 +10094,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -10168,9 +10162,7 @@
         },
         "5_24": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -10532,9 +10524,7 @@
         },
         "5_36": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -10806,9 +10796,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_scout"
@@ -11081,9 +11069,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "hero_captain"
@@ -11116,9 +11102,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -11571,9 +11555,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "green",
                 "tile": "hero_admiral"

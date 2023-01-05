@@ -26,100 +26,100 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Guard",
+                        "name": "TR_ACT_GUARD",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Halt! This area is under Ruby Dusk control."
+                        "text": "tr_core_jade_twilight_m4_t1"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "I am Admiral Torsten of the Jade Twilight. We have no quarrel with you, we just seek passage on our way to Amber Fortress with a diplomatic mission."
+                        "text": "tr_core_jade_twilight_m4_t2"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Guard",
+                        "name": "TR_ACT_GUARD",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "Let me contact the Commander."
+                        "text": "tr_core_jade_twilight_m4_t3"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Ruby Commander",
+                        "name": "tr_core_jade_twilight_a2",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Greetings, Admiral. It's a pleasure to meet you. I wish it was under better circumstances. I understand that you want to pass through this road."
+                        "text": "tr_core_jade_twilight_m4_t4"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Greetings, Commander. Yes, me and my forces need to get through here, and quick. I'm afraid we don't have time to waste."
+                        "text": "tr_core_jade_twilight_m4_t5"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Ruby Commander",
+                        "name": "tr_core_jade_twilight_a2",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "I wish I could help you, Admiral. But we are in quite a pickle here ourselves, and my orders forbid me from allowing you through."
+                        "text": "tr_core_jade_twilight_m4_t6"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Can I talk with someone who can grant us an exemption then?"
+                        "text": "tr_core_jade_twilight_m4_t7"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Ruby Commander",
+                        "name": "tr_core_jade_twilight_a2",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Well... I'm afraid that it is not possible at this time. We have lost all communication with central command."
+                        "text": "tr_core_jade_twilight_m4_t8"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "I understand. Still, as I said, time is of the essence. I have to pass, by any means neccessary."
+                        "text": "tr_core_jade_twilight_m4_t9"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Ruby Commander",
+                        "name": "tr_core_jade_twilight_a2",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "You have your orders, Admiral, and I have mine."
+                        "text": "tr_core_jade_twilight_m4_t10"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Indeed."
+                        "text": "tr_core_jade_twilight_m4_t11"
                     }
                 },
                 {
@@ -135,19 +135,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Tank Commander",
+                        "name": "tr_core_jade_twilight_a3",
                         "portrait": "green_tank",
                         "side": "left",
-                        "text": "What now, Admiral? Are we punching through?"
+                        "text": "tr_core_jade_twilight_m4_t12"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "I would very much rather avoid that. Any options?"
+                        "text": "tr_core_jade_twilight_m4_t13"
                     }
                 },
                 {
@@ -163,19 +163,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "green_scout",
                         "side": "left",
-                        "text": "There seems to be an old path going around the mountain range. We would be taking a long way."
+                        "text": "tr_core_jade_twilight_m4_t14"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Hmm, it still sounds better than a frontal attack."
+                        "text": "tr_core_jade_twilight_m4_t15"
                     }
                 },
                 {
@@ -191,28 +191,28 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Ruby Dusk is probably going to engage us here. I can't blame their Commander, he is following his orders after all."
+                        "text": "tr_core_jade_twilight_m4_t16"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "We have to fight them back, but only as much as is neccessary. If we avoid capturing their production buildings, maybe we can convince them to help us fight Warlord Grim."
+                        "text": "tr_core_jade_twilight_m4_t17"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "We have to claim these Towers, and hold this point, but don't go any further into Ruby Dusk base. We just have to cover our forces going around."
+                        "text": "tr_core_jade_twilight_m4_t18"
                     }
                 },
                 {
@@ -228,19 +228,19 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Scout",
+                        "name": "TR_ACT_SCOUT",
                         "portrait": "green_scout",
                         "side": "left",
-                        "text": "There are more entrances. I can see flanking Towers here as well."
+                        "text": "tr_core_jade_twilight_m4_t19"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "We have to capture all Towers along that path. Just remember to not claim any of ther production buildings!"
+                        "text": "tr_core_jade_twilight_m4_t20"
                     }
                 },
                 {
@@ -257,21 +257,21 @@
                     "action": "objective",
                     "details": {
                         "slot": 0,
-                        "text": "Claim all Towers along the alternative path"
+                        "text": "tr_core_jade_twilight_m4_o1"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 1,
-                        "text": "Do not claim any Ruby Dusk production buildings"
+                        "text": "tr_core_jade_twilight_m4_o2"
                     }
                 },
                 {
                     "action": "objective",
                     "details": {
                         "slot": 2,
-                        "text": "Admiral Torsten must survive"
+                        "text": "tr_core_jade_twilight_m1_o2"
                     }
                 },
                 {
@@ -295,64 +295,64 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Guard",
+                        "name": "TR_ACT_GUARD",
                         "portrait": "red_infantry",
                         "side": "left",
-                        "text": "They have us surrounded, Sir!"
+                        "text": "tr_core_jade_twilight_m4_t21"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Ruby Commander",
+                        "name": "tr_core_jade_twilight_a2",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "Jade Admiral truly is as powerful as they say. Let us keep our honor and finish this swiftly! It is a shame to end like this after Noble Sidney's sacrificed his freedom so that we could get away from Sapphire Dawn."
+                        "text": "tr_core_jade_twilight_m4_t22"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "When I said, that I didn't have any quarrel with you, I really meant it, Commander. We have nothing to gain by wasting your lives. We just needed a way through."
+                        "text": "tr_core_jade_twilight_m4_t23"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "Was Noble Sidney your commanding officer? He sounds like a great man. What happened to him?"
+                        "text": "tr_core_jade_twilight_m4_t24"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Ruby Commander",
+                        "name": "tr_core_jade_twilight_a2",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "We were stuck in a position near Amber Fortress when Sapphire Dawn attacked. Noble Sidney covered our retreat and was captured by General Cyrus. We owe him our lives."
+                        "text": "tr_core_jade_twilight_m4_t25"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "General Cyrus is a sensible man. If he is still there, I can negotiate the release of Noble Sidney on your behalf."
+                        "text": "tr_core_jade_twilight_m4_t26"
                     }
                 },
                 {
                     "action": "message",
                     "details": {
-                        "name": "Ruby Commander",
+                        "name": "tr_core_jade_twilight_a2",
                         "portrait": "steampunk_hq",
                         "side": "left",
-                        "text": "If you could do that, Admiral, we would be in your debt."
+                        "text": "tr_core_jade_twilight_m4_t27"
                     }
                 },
                 {
@@ -372,10 +372,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "No! This is not the way to convince them to help us!"
+                        "text": "tr_core_jade_twilight_m4_t28"
                     }
                 },
                 {
@@ -395,10 +395,10 @@
                 {
                     "action": "message",
                     "details": {
-                        "name": "Admiral Torsten",
+                        "name": "TR_ADM_TORSTEN",
                         "portrait": "hero_admiral",
                         "side": "right",
-                        "text": "I overestimated my abilities here."
+                        "text": "tr_core_jade_twilight_m2_t21"
                     }
                 },
                 {
@@ -2817,9 +2817,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_scout"
@@ -4307,9 +4305,7 @@
         },
         "14_9": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -6861,9 +6857,7 @@
         },
         "17_4": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -6980,9 +6974,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "red",
                 "tile": "red_infantry"
@@ -7945,9 +7937,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "red",
                 "tile": "red_tank"
@@ -11040,9 +11030,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_rocket"
@@ -11320,9 +11308,7 @@
         },
         "22_22": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -11804,9 +11790,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 270,
                 "side": "red",
                 "tile": "red_m_inf"
@@ -12114,9 +12098,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_m_inf"
@@ -12299,9 +12281,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -12994,9 +12974,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_heli"
@@ -13244,9 +13222,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_tank"
@@ -13764,9 +13740,7 @@
         },
         "24_5": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -15874,9 +15848,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -16394,9 +16366,7 @@
         },
         "27_20": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -17958,9 +17928,7 @@
         },
         "28_5": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -20837,9 +20805,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_scout"
@@ -21267,9 +21233,7 @@
         },
         "31_36": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -22316,9 +22280,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_scout"
@@ -22661,9 +22623,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -22941,9 +22901,7 @@
         },
         "33_15": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -23570,9 +23528,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_heli"
@@ -24085,9 +24041,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_scout"
@@ -24180,9 +24134,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -24275,9 +24227,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_infantry"
@@ -24370,9 +24320,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_rocket"
@@ -25100,9 +25048,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_rocket"
@@ -25405,9 +25351,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_tank"
@@ -25500,9 +25444,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "hero_admiral"
@@ -25595,9 +25537,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_tank"
@@ -26595,9 +26535,7 @@
         },
         "36_15": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -27254,9 +27192,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_rocket"
@@ -28254,9 +28190,7 @@
         },
         "37_29": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -28373,9 +28307,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_m_inf"
@@ -28438,9 +28370,7 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {
-
-                },
+                "modifiers": {},
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_tank"
@@ -29718,9 +29648,7 @@
         },
         "38_37": {
             "building": {
-                "abilities": {
-
-                },
+                "abilities": {},
                 "rotation": 270,
                 "side": "green",
                 "tile": "futuristic_tower"
