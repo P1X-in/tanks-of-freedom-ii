@@ -188,6 +188,8 @@ func build_rotations(templates, builder):
 		templates.FEUDAL_FACTORY,
 		templates.FEUDAL_AIRFIELD,
 		templates.FEUDAL_TOWER,
+
+		templates.NEUTRAL_LIGHTHOUSE,
 	])
 
 	self.rotations[builder.CLASS_UNIT] = self.build_from_array([

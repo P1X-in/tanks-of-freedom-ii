@@ -211,6 +211,8 @@ const FEUDAL_FACTORY = "feudal_factory"
 const FEUDAL_HQ = "feudal_hq"
 const FEUDAL_TOWER = "feudal_tower"
 
+const NEUTRAL_LIGHTHOUSE = "neutral_lighthouse"
+
 const UNIT_BLUE_INFANTRY = "blue_infantry"
 const UNIT_BLUE_TANK = "blue_tank"
 const UNIT_BLUE_HELI = "blue_heli"
@@ -475,6 +477,8 @@ var templates = {
     self.FEUDAL_FACTORY : preload("res://scenes/tiles/buildings/yellow/factory.tscn"),
     self.FEUDAL_HQ : preload("res://scenes/tiles/buildings/yellow/headquarters.tscn"),
     self.FEUDAL_TOWER : preload("res://scenes/tiles/buildings/yellow/tower.tscn"),
+
+    self.NEUTRAL_LIGHTHOUSE : preload("res://scenes/tiles/buildings/neutral/lighthouse.tscn"),
 
     self.UNIT_BLUE_INFANTRY : preload("res://scenes/tiles/units/blue/infantry.tscn"),
     self.UNIT_BLUE_TANK : preload("res://scenes/tiles/units/blue/tank.tscn"),
