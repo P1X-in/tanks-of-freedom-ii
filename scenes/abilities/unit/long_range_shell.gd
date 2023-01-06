@@ -23,6 +23,7 @@ func _execute(board, position):
             board.destroy_unit_on_tile(tile)
 
     board.explode_a_tile(tile)
+    board.refresh_tile_selection()
 
 func is_tile_applicable(tile, source_tile):
     return tile.has_enemy_unit(self.source.side, self.source.team) and self.source.can_attack(tile.unit.tile) and (tile.position.x == source_tile.position.x or tile.position.y == source_tile.position.y)

@@ -28,6 +28,7 @@ func _execute(board, position):
 
     board.explode_a_tile(tile)
     self.source.activate_all_cooldowns(board)
+    board.refresh_tile_selection()
 
 func _is_visible(_board=null):
     if self.source == null:

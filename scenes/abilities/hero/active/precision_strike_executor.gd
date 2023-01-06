@@ -39,3 +39,4 @@ func _bomb_tile(tile):
             self.board.destroy_unit_on_tile(tile)
 
     self.board.explode_a_tile(tile)
+    board.refresh_tile_selection()

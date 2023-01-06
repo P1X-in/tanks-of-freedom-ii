@@ -23,6 +23,7 @@ func _execute(board, position):
             board.destroy_unit_on_tile(tile)
 
     board.explode_a_tile(tile)
+    board.refresh_tile_selection()
 
 func is_tile_applicable(tile, _source_tile):
     return tile.has_enemy_unit(self.source.side, self.source.team)

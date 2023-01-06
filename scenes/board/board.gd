@@ -254,10 +254,16 @@ func unselect_action():
 
 
 func unselect_tile():
+    self.selected_tile = null
     self.reset_unit_markers()
     self.cancel_ability()
-    self.selected_tile = null
     self.selected_tile_marker.hide()
+
+func refresh_tile_selection():
+    if self.selected_tile != null:
+        var selected_position = self.selected_tile.position
+        self.unselect_tile()
+        self.call_deferred("select_tile", selected_position)
 
 func reset_unit_markers():
     self.movement_markers.reset()
@@ -267,6 +273,7 @@ func reset_unit_markers():
 func cancel_ability():
     self.active_ability = null
     self.ability_markers.reset()
+    self.refresh_tile_selection()
 
 
 func load_skirmish_map():
