@@ -1,28 +1,34 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
+[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=1]
 [ext_resource path="res://assets/water/water_material.tres" type="Material" id=2]
 [ext_resource path="res://scenes/ui/markers/tile_box.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/map/map.gd" type="Script" id=4]
+[ext_resource path="res://assets/gui/board/map_frame.obj" type="ArrayMesh" id=5]
 [ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=11]
 [ext_resource path="res://default_env.tres" type="Environment" id=12]
 
 [sub_resource type="PlaneMesh" id=1]
 material = ExtResource( 2 )
-size = Vector2( 1000, 1000 )
+size = Vector2( 330, 330 )
 subdivide_width = 70
 subdivide_depth = 70
 
 [sub_resource type="SpatialMaterial" id=2]
-albedo_color = Color( 0.345098, 0.447059, 1, 1 )
+flags_unshaded = true
+albedo_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="PlaneMesh" id=3]
 material = SubResource( 2 )
 size = Vector2( 1000, 1000 )
-subdivide_width = 4
-subdivide_depth = 4
 
 [node name="map" type="Spatial"]
 script = ExtResource( 4 )
+
+[node name="frame" type="MeshInstance" parent="."]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 160, -4, 160 )
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 1 )
 
 [node name="tiles" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4 )
@@ -62,14 +68,11 @@ directional_shadow_blend_splits = true
 directional_shadow_normal_bias = 0.7
 
 [node name="water" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 2, 50 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 2, 160 )
 cast_shadow = 0
 mesh = SubResource( 1 )
-material/0 = null
 
-[node name="water_simple" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 2, 50 )
-visible = false
+[node name="void" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 160, -4, 160 )
 cast_shadow = 0
 mesh = SubResource( 3 )
-material/0 = null
