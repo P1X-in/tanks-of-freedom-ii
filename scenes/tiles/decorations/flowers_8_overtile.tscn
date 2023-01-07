@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_6.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_4.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_5.tscn" type="PackedScene" id=6]
+
+[node name="flowers" instance=ExtResource( 2 )]
+main_tile_view_cam_modifier = -10
+side_tile_view_cam_modifier = -25
+
+[node name="mesh" parent="." index="0"]
+cast_shadow = 0
+
+[node name="flower_g_6_15" parent="mesh" index="0" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, -2.3 )
+
+[node name="flower_g_5_14" parent="mesh" index="1" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, 1.7 )
+
+[node name="flower_g_5_13" parent="mesh" index="2" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, 2.5 )
+
+[node name="flower_g_6_12" parent="mesh" index="3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 0, -1.8 )
+
+[node name="flower_3_11" parent="mesh" index="4" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1.5 )
+
+[node name="flower_g_4_10" parent="mesh" index="5" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0, 2.7 )
+
+[node name="flower_3_9" parent="mesh" index="6" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0, 0.8 )
+
+[node name="flower_g_5_8" parent="mesh" index="7" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 1.3 )
+
+[node name="flower_g_4_7" parent="mesh" index="8" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0.4 )
+
+[node name="flower_g_6_6" parent="mesh" index="9" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, 0, 0.6 )
+
+[node name="flower_g_5_5" parent="mesh" index="10" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 0 )
+
+[node name="flower_g_6_4" parent="mesh" index="11" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, 1.9 )
+
+[node name="flower_3_3" parent="mesh" index="12" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0, -1.8 )
+
+[node name="flower_g_6_2" parent="mesh" index="13" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0.9 )
+
+[node name="flower_g_4_1" parent="mesh" index="14" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, 1.5 )

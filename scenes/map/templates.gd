@@ -88,6 +88,11 @@ const DECO_FLOWERS4 = "deco_flower4"
 const DECO_FLOWERS5 = "deco_flower5"
 const DECO_FLOWERS6 = "deco_flower6"
 const DECO_FLOWERS7 = "deco_flower7"
+const DECO_FLOWERS8 = "deco_flower8"
+const DECO_FLOWERS9 = "deco_flower9"
+const DECO_FLOWERS10 = "deco_flower10"
+const DECO_FLOWERS11 = "deco_flower11"
+const DECO_FLOWERS12 = "deco_flower12"
 const DECO_FOUNTAIN = "deco_fountain"
 const DECO_LOG = "deco_log"
 const DECO_ROCKS1 = "deco_rocks1"
@@ -359,6 +364,11 @@ var templates = {
     self.DECO_FLOWERS5 : preload("res://scenes/tiles/decorations/flowers_5_overtile.tscn"),
     self.DECO_FLOWERS6 : preload("res://scenes/tiles/decorations/flowers_6_overtile.tscn"),
     self.DECO_FLOWERS7 : preload("res://scenes/tiles/decorations/flowers_7_overtile.tscn"),
+    self.DECO_FLOWERS8 : preload("res://scenes/tiles/decorations/flowers_8_overtile.tscn"),
+    self.DECO_FLOWERS9 : preload("res://scenes/tiles/decorations/flowers_9_overtile.tscn"),
+    self.DECO_FLOWERS10 : preload("res://scenes/tiles/decorations/flowers_10_overtile.tscn"),
+    self.DECO_FLOWERS11 : preload("res://scenes/tiles/decorations/flowers_11_overtile.tscn"),
+    self.DECO_FLOWERS12 : preload("res://scenes/tiles/decorations/flowers_12_overtile.tscn"),
     self.DECO_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_overtile.tscn"),
     self.DECO_LOG : preload("res://scenes/tiles/decorations/log_1_overtile.tscn"),
     self.DECO_ROCKS1 : preload("res://scenes/tiles/decorations/rocks_1_overtile.tscn"),
@@ -580,4 +590,4 @@ func get_side_material_desat(side, type="normal"):
         return self.side_materials_metallic_desat[side]
 
     return self.side_materials_desat[side]
-    
+

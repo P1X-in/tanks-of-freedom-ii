@@ -95,10 +95,13 @@ for mission_data in md["missions"]:
 # Dump modified files
 fp = open(campaign_folder + "translations.json", "w")
 json.dump(translations_data, fp, indent=4)
+fp.close()
 
 fp = open(campaign_folder + "campaign.json", "w")
 json.dump(md, fp, indent=4)
+fp.close()
 
 for map_path in map_files_cache:
     fp = open(map_path, "w")
     json.dump(map_files_cache[map_path], fp, indent=4)
+    fp.close()
