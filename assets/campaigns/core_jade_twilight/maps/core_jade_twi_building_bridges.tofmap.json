@@ -1625,10 +1625,10 @@
                 {
                     "action": "spawn",
                     "details": {
+                        "promote": true,
                         "rotation": 90,
                         "side": "green",
                         "template": "green_m_inf",
-                        "promote": true,
                         "where": [
                             6,
                             38
@@ -1639,10 +1639,10 @@
                     "action": "spawn",
                     "delay": 0.5,
                     "details": {
+                        "promote": true,
                         "rotation": 90,
                         "side": "green",
                         "template": "green_m_inf",
-                        "promote": true,
                         "where": [
                             6,
                             39
@@ -1652,10 +1652,10 @@
                 {
                     "action": "spawn",
                     "details": {
+                        "promote": true,
                         "rotation": 90,
                         "side": "green",
                         "template": "green_tank",
-                        "promote": true,
                         "where": [
                             5,
                             38
@@ -1666,10 +1666,10 @@
                     "action": "spawn",
                     "delay": 0.5,
                     "details": {
+                        "promote": true,
                         "rotation": 90,
                         "side": "green",
                         "template": "green_tank",
-                        "promote": true,
                         "where": [
                             5,
                             39
@@ -1679,10 +1679,10 @@
                 {
                     "action": "spawn",
                     "details": {
+                        "promote": true,
                         "rotation": 90,
                         "side": "green",
                         "template": "green_heli",
-                        "promote": true,
                         "where": [
                             4,
                             38
@@ -1693,10 +1693,10 @@
                     "action": "spawn",
                     "delay": 0.5,
                     "details": {
+                        "promote": true,
                         "rotation": 90,
                         "side": "green",
                         "template": "green_heli",
-                        "promote": true,
                         "where": [
                             4,
                             39
@@ -2426,8 +2426,8 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tile": "deco_beach2"
             },
             "frame": {
                 "rotation": 90,
@@ -3056,8 +3056,8 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tile": "deco_beach1"
             },
             "frame": {
                 "rotation": 90,
@@ -3086,8 +3086,8 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tile": "deco_beach2"
             },
             "frame": {
                 "rotation": 90,
@@ -3776,8 +3776,8 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tile": "deco_beach3"
             },
             "frame": {
                 "rotation": 90,
@@ -5508,7 +5508,9 @@
         },
         "14_0": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -6495,7 +6497,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_scout"
@@ -7493,7 +7497,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_heli"
@@ -7526,7 +7532,9 @@
             },
             "unit": {
                 "ai_paused": true,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "neutral",
                 "tile": "green_m_inf"
@@ -8579,7 +8587,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "green",
                 "tile": "green_scout"
@@ -8707,7 +8717,9 @@
         },
         "17_13": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 270,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -9549,7 +9561,9 @@
         },
         "18_0": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 270,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -15936,7 +15950,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -16964,7 +16980,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -17207,7 +17225,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -18235,7 +18255,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_rocket"
@@ -18363,7 +18385,9 @@
         },
         "26_25": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -18905,7 +18929,9 @@
         },
         "27_10": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -19382,7 +19408,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -21125,7 +21153,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -21133,7 +21163,9 @@
         },
         "29_19": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 270,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -21460,7 +21492,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -22257,7 +22291,7 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tile": "deco_beach3"
             },
             "frame": {
                 "rotation": 90,
@@ -22788,7 +22822,9 @@
         },
         "30_30": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -22845,7 +22881,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -23783,7 +23821,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "blue",
                 "tile": "blue_tank"
@@ -24070,7 +24110,7 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tile": "deco_beach3"
             },
             "frame": {
                 "rotation": 90,
@@ -24100,7 +24140,7 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tile": "deco_beach1"
             },
             "frame": {
                 "rotation": 90,
@@ -24130,7 +24170,7 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tile": "deco_beach2"
             },
             "frame": {
                 "rotation": 90,
@@ -25316,7 +25356,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "blue",
                 "tile": "blue_m_inf"
@@ -25324,7 +25366,9 @@
         },
         "33_35": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "blue",
                 "tile": "modern_tower"
@@ -27361,7 +27405,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "green",
                 "tile": "hero_captain"

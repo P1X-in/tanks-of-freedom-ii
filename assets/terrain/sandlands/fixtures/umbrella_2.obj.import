@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/umbrella_2.obj-7e4f2be18925c3183755c66a9ff9a331.mesh"
+
+[deps]
+
+files=[ "res://.import/umbrella_2.obj-7e4f2be18925c3183755c66a9ff9a331.mesh" ]
+
+source_file="res://assets/terrain/sandlands/fixtures/umbrella_2.obj"
+dest_files=[ "res://.import/umbrella_2.obj-7e4f2be18925c3183755c66a9ff9a331.mesh", "res://.import/umbrella_2.obj-7e4f2be18925c3183755c66a9ff9a331.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

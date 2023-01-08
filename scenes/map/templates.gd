@@ -104,6 +104,10 @@ const DECO_STUMPS2 = "deco_stumps2"
 const DECO_STUMPS3 = "deco_stumps3"
 const DECO_STUMPS4 = "deco_stumps4"
 
+const DECO_BEACH1 = "deco_beach1"
+const DECO_BEACH2 = "deco_beach2"
+const DECO_BEACH3 = "deco_beach3"
+
 const DECO_GROUND_DMG_1 = "deco_ground_dmg1"
 const DECO_GROUND_DMG_2 = "deco_ground_dmg2"
 const DECO_GROUND_DMG_3 = "deco_ground_dmg3"
@@ -379,6 +383,10 @@ var templates = {
     self.DECO_STUMPS2 : preload("res://scenes/tiles/decorations/stumps_2_overtile.tscn"),
     self.DECO_STUMPS3 : preload("res://scenes/tiles/decorations/stumps_3_overtile.tscn"),
     self.DECO_STUMPS4 : preload("res://scenes/tiles/decorations/stumps_4_overtile.tscn"),
+
+    self.DECO_BEACH1 : preload("res://scenes/tiles/decorations/beach_1_overtile.tscn"),
+    self.DECO_BEACH2 : preload("res://scenes/tiles/decorations/beach_2_overtile.tscn"),
+    self.DECO_BEACH3 : preload("res://scenes/tiles/decorations/beach_3_overtile.tscn"),
 
     self.DECO_GROUND_DMG_1 : preload("res://scenes/tiles/decorations/ground_damage_1.tscn"),
     self.DECO_GROUND_DMG_2 : preload("res://scenes/tiles/decorations/ground_damage_2.tscn"),

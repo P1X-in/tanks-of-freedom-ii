@@ -106,6 +106,9 @@ func build_rotations(templates, builder):
 		templates.DECO_STUMPS2,
 		templates.DECO_STUMPS3,
 		templates.DECO_STUMPS4,
+		templates.DECO_BEACH1,
+		templates.DECO_BEACH2,
+		templates.DECO_BEACH3,
 	])
 
 	self.rotations[builder.CLASS_DAMAGE] = self.build_from_array([

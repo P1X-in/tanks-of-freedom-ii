@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/deckchair_4.obj-f79d2df58772fea42f78b31f738b0b88.mesh"
+
+[deps]
+
+files=[ "res://.import/deckchair_4.obj-f79d2df58772fea42f78b31f738b0b88.mesh" ]
+
+source_file="res://assets/terrain/sandlands/fixtures/deckchair_4.obj"
+dest_files=[ "res://.import/deckchair_4.obj-f79d2df58772fea42f78b31f738b0b88.mesh", "res://.import/deckchair_4.obj-f79d2df58772fea42f78b31f738b0b88.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
