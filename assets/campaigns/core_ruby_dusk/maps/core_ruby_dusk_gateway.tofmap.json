@@ -18874,7 +18874,7 @@
             },
             "ground": {
                 "rotation": 0,
-                "tile": "ground_dirt_road3"
+                "tile": "ground_road_transition4"
             },
             "terrain": {
                 "rotation": 0,

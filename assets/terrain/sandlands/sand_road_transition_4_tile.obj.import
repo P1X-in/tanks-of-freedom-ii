@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/sand_road_transition_4_tile.obj-4a6ee7bd2d13bd4bf16d135009549691.mesh"
+
+[deps]
+
+files=[ "res://.import/sand_road_transition_4_tile.obj-4a6ee7bd2d13bd4bf16d135009549691.mesh" ]
+
+source_file="res://assets/terrain/sandlands/sand_road_transition_4_tile.obj"
+dest_files=[ "res://.import/sand_road_transition_4_tile.obj-4a6ee7bd2d13bd4bf16d135009549691.mesh", "res://.import/sand_road_transition_4_tile.obj-4a6ee7bd2d13bd4bf16d135009549691.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
