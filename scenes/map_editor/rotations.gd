@@ -216,6 +216,7 @@ func build_rotations(templates, builder):
 		templates.UNIT_BLUE_MINF,
 		templates.UNIT_BLUE_ROCKET,
 		templates.UNIT_BLUE_SCOUT,
+		templates.UNIT_BLUE_TRUCK,
 
 		templates.UNIT_RED_INFANTRY,
 		templates.UNIT_RED_TANK,
@@ -223,6 +224,7 @@ func build_rotations(templates, builder):
 		templates.UNIT_RED_MINF,
 		templates.UNIT_RED_ROCKET,
 		templates.UNIT_RED_SCOUT,
+		templates.UNIT_RED_TRUCK,
 
 		templates.UNIT_GREEN_INFANTRY,
 		templates.UNIT_GREEN_TANK,
@@ -230,6 +232,7 @@ func build_rotations(templates, builder):
 		templates.UNIT_GREEN_MINF,
 		templates.UNIT_GREEN_ROCKET,
 		templates.UNIT_GREEN_SCOUT,
+		templates.UNIT_GREEN_TRUCK,
 
 		templates.UNIT_YELLOW_INFANTRY,
 		templates.UNIT_YELLOW_TANK,
@@ -237,6 +240,7 @@ func build_rotations(templates, builder):
 		templates.UNIT_YELLOW_MINF,
 		templates.UNIT_YELLOW_ROCKET,
 		templates.UNIT_YELLOW_SCOUT,
+		templates.UNIT_YELLOW_TRUCK,
 	])
 
 	self.rotations[builder.CLASS_HERO] = self.build_from_array([

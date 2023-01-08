@@ -18,4 +18,4 @@ func disable_shadow():
 func reset_position_for_tile_view():
     .reset_position_for_tile_view()
     $"mesh_anchor/standard".hide()
-    
+

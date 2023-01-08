@@ -237,6 +237,7 @@ const UNIT_BLUE_HELI = "blue_heli"
 const UNIT_BLUE_MINF = "blue_m_inf"
 const UNIT_BLUE_ROCKET = "blue_rocket"
 const UNIT_BLUE_SCOUT = "blue_scout"
+const UNIT_BLUE_TRUCK = "blue_truck"
 
 const UNIT_RED_INFANTRY = "red_infantry"
 const UNIT_RED_TANK = "red_tank"
@@ -244,6 +245,7 @@ const UNIT_RED_HELI = "red_heli"
 const UNIT_RED_MINF = "red_m_inf"
 const UNIT_RED_ROCKET = "red_rocket"
 const UNIT_RED_SCOUT = "red_scout"
+const UNIT_RED_TRUCK = "red_truck"
 
 const UNIT_GREEN_INFANTRY = "green_infantry"
 const UNIT_GREEN_TANK = "green_tank"
@@ -251,6 +253,7 @@ const UNIT_GREEN_HELI = "green_heli"
 const UNIT_GREEN_MINF = "green_m_inf"
 const UNIT_GREEN_ROCKET = "green_rocket"
 const UNIT_GREEN_SCOUT = "green_scout"
+const UNIT_GREEN_TRUCK = "green_truck"
 
 const UNIT_YELLOW_INFANTRY = "yellow_infantry"
 const UNIT_YELLOW_TANK = "yellow_tank"
@@ -258,6 +261,7 @@ const UNIT_YELLOW_HELI = "yellow_heli"
 const UNIT_YELLOW_MINF = "yellow_m_inf"
 const UNIT_YELLOW_ROCKET = "yellow_rocket"
 const UNIT_YELLOW_SCOUT = "yellow_scout"
+const UNIT_YELLOW_TRUCK = "yellow_truck"
 
 const NPC_PRESIDENT = "npc_president"
 const NPC_LORD = "npc_lord"
@@ -522,6 +526,7 @@ var templates = {
     self.UNIT_BLUE_MINF : preload("res://scenes/tiles/units/blue/mobile_infantry.tscn"),
     self.UNIT_BLUE_ROCKET : preload("res://scenes/tiles/units/blue/rocket_artillery.tscn"),
     self.UNIT_BLUE_SCOUT : preload("res://scenes/tiles/units/blue/scout_heli.tscn"),
+    self.UNIT_BLUE_TRUCK : preload("res://scenes/tiles/units/blue/truck.tscn"),
 
     self.UNIT_RED_INFANTRY : preload("res://scenes/tiles/units/red/infantry.tscn"),
     self.UNIT_RED_TANK : preload("res://scenes/tiles/units/red/tank.tscn"),
@@ -529,6 +534,7 @@ var templates = {
     self.UNIT_RED_MINF : preload("res://scenes/tiles/units/red/mobile_infantry.tscn"),
     self.UNIT_RED_ROCKET : preload("res://scenes/tiles/units/red/rocket_artillery.tscn"),
     self.UNIT_RED_SCOUT : preload("res://scenes/tiles/units/red/scout_heli.tscn"),
+    self.UNIT_RED_TRUCK : preload("res://scenes/tiles/units/red/truck.tscn"),
 
     self.UNIT_GREEN_INFANTRY : preload("res://scenes/tiles/units/green/infantry.tscn"),
     self.UNIT_GREEN_TANK : preload("res://scenes/tiles/units/green/tank.tscn"),
@@ -536,6 +542,7 @@ var templates = {
     self.UNIT_GREEN_MINF : preload("res://scenes/tiles/units/green/mobile_infantry.tscn"),
     self.UNIT_GREEN_ROCKET : preload("res://scenes/tiles/units/green/rocket_artillery.tscn"),
     self.UNIT_GREEN_SCOUT : preload("res://scenes/tiles/units/green/scout_heli.tscn"),
+    self.UNIT_GREEN_TRUCK : preload("res://scenes/tiles/units/green/truck.tscn"),
 
     self.UNIT_YELLOW_INFANTRY : preload("res://scenes/tiles/units/yellow/infantry.tscn"),
     self.UNIT_YELLOW_TANK : preload("res://scenes/tiles/units/yellow/tank.tscn"),
@@ -543,6 +550,7 @@ var templates = {
     self.UNIT_YELLOW_MINF : preload("res://scenes/tiles/units/yellow/mobile_infantry.tscn"),
     self.UNIT_YELLOW_ROCKET : preload("res://scenes/tiles/units/yellow/rocket_artillery.tscn"),
     self.UNIT_YELLOW_SCOUT : preload("res://scenes/tiles/units/yellow/scout_heli.tscn"),
+    self.UNIT_YELLOW_TRUCK : preload("res://scenes/tiles/units/yellow/truck.tscn"),
 
     self.NPC_PRESIDENT : preload("res://scenes/tiles/units/npc/president.tscn"),
     self.NPC_LORD : preload("res://scenes/tiles/units/npc/lord.tscn"),
