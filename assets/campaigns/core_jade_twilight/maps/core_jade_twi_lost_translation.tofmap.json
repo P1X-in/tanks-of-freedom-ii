@@ -2817,7 +2817,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_scout"
@@ -4305,7 +4307,9 @@
         },
         "14_9": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -6857,7 +6861,9 @@
         },
         "17_4": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 270,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -6974,7 +6980,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "red",
                 "tile": "red_infantry"
@@ -7937,7 +7945,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "red",
                 "tile": "red_tank"
@@ -11030,7 +11040,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_rocket"
@@ -11308,7 +11320,9 @@
         },
         "22_22": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -11790,7 +11804,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "red",
                 "tile": "red_m_inf"
@@ -12098,7 +12114,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_m_inf"
@@ -12281,7 +12299,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -12974,7 +12994,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_heli"
@@ -13222,7 +13244,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_tank"
@@ -13740,7 +13764,9 @@
         },
         "24_5": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -15848,7 +15874,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -16366,7 +16394,9 @@
         },
         "27_20": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -17928,7 +17958,9 @@
         },
         "28_5": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -20805,7 +20837,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_scout"
@@ -21233,7 +21267,9 @@
         },
         "31_36": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -22280,7 +22316,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_scout"
@@ -22623,7 +22661,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -22901,7 +22941,9 @@
         },
         "33_15": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -23155,12 +23197,12 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 270,
-                "tile": "frame_grass4"
+                "rotation": 90,
+                "tile": "frame_river2"
             },
             "ground": {
-                "rotation": 0,
-                "tile": "ground_grass"
+                "rotation": 90,
+                "tile": "ground_road_transition3"
             },
             "terrain": {
                 "rotation": 0,
@@ -23528,7 +23570,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_heli"
@@ -24041,7 +24085,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_scout"
@@ -24134,7 +24180,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_infantry"
@@ -24227,7 +24275,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_infantry"
@@ -24320,7 +24370,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_rocket"
@@ -25048,7 +25100,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_rocket"
@@ -25351,7 +25405,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_tank"
@@ -25444,7 +25500,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "green",
                 "tile": "hero_admiral"
@@ -25537,7 +25595,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_tank"
@@ -26535,7 +26595,9 @@
         },
         "36_15": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 270,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -27192,7 +27254,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_rocket"
@@ -28190,7 +28254,9 @@
         },
         "37_29": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 180,
                 "side": "green",
                 "tile": "futuristic_tower"
@@ -28307,7 +28373,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_m_inf"
@@ -28370,7 +28438,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "green",
                 "tile": "green_tank"
@@ -29648,7 +29718,9 @@
         },
         "38_37": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 270,
                 "side": "green",
                 "tile": "futuristic_tower"

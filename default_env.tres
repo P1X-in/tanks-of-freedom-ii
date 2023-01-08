@@ -13,7 +13,6 @@ ambient_light_color = Color( 1, 1, 1, 1 )
 ambient_light_sky_contribution = 0.2
 tonemap_mode = 3
 tonemap_white = 4.0
-ss_reflections_enabled = true
 ssao_enabled = true
 ssao_quality = 2
 dof_blur_far_enabled = true

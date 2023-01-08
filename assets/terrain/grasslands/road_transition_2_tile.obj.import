@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road_transition_2_tile.obj-1f227aba3075b306e89c4013d446d09a.mesh"
+
+[deps]
+
+files=[ "res://.import/road_transition_2_tile.obj-1f227aba3075b306e89c4013d446d09a.mesh" ]
+
+source_file="res://assets/terrain/grasslands/road_transition_2_tile.obj"
+dest_files=[ "res://.import/road_transition_2_tile.obj-1f227aba3075b306e89c4013d446d09a.mesh", "res://.import/road_transition_2_tile.obj-1f227aba3075b306e89c4013d446d09a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

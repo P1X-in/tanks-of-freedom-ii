@@ -605,7 +605,9 @@
         },
         "10_14": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "red",
                 "tile": "steampunk_tower"
@@ -1177,7 +1179,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_tank"
@@ -1725,7 +1729,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
                 "tile": "red_heli"
@@ -2573,7 +2579,9 @@
         },
         "13_19": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -2845,7 +2853,9 @@
         },
         "13_28": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -3313,8 +3323,8 @@
                 "tile": "frame_river2"
             },
             "ground": {
-                "rotation": 0,
-                "tile": "ground_dirt_road1"
+                "rotation": 180,
+                "tile": "ground_road_transition"
             },
             "terrain": {
                 "rotation": 0,
@@ -5067,7 +5077,9 @@
         },
         "16_9": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "neutral",
                 "tile": "steampunk_tower"
@@ -5484,7 +5496,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -6122,7 +6136,9 @@
         },
         "18_19": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -6274,7 +6290,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -6912,7 +6930,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -6945,7 +6965,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -6978,7 +7000,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -9831,7 +9855,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -9864,7 +9890,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -9897,7 +9925,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -12065,7 +12095,9 @@
         },
         "26_25": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 180,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -14167,7 +14199,9 @@
         },
         "30_12": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "feudal_tower"
@@ -14306,7 +14340,7 @@
             },
             "ground": {
                 "rotation": 90,
-                "tile": "ground_dirt_road2"
+                "tile": "ground_road_transition2"
             },
             "terrain": {
                 "rotation": 0,
@@ -14865,7 +14899,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -14928,7 +14964,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "yellow",
                 "tile": "yellow_tank"
@@ -15896,7 +15934,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "tile": "yellow_infantry"
@@ -17289,7 +17329,9 @@
         },
         "37_18": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -17351,7 +17393,9 @@
         },
         "37_20": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 180,
                 "side": "neutral",
                 "tile": "feudal_tower"
@@ -18013,7 +18057,9 @@
         },
         "7_19": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "neutral",
                 "tile": "steampunk_tower"
@@ -18801,7 +18847,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "red",
                 "tile": "red_infantry"
@@ -18864,7 +18912,9 @@
             },
             "unit": {
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "red",
                 "tile": "hero_noble"
@@ -18949,7 +18999,7 @@
             },
             "ground": {
                 "rotation": 180,
-                "tile": "ground_dirt_road2"
+                "tile": "ground_road_transition2"
             },
             "terrain": {
                 "rotation": 0,
