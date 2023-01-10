@@ -268,4 +268,5 @@ func load_state_from_id(save_id):
             player["team"]
         )
 
+    self.gamepad_adapter.disable()
     self.switcher.board()
