@@ -16,6 +16,9 @@ onready var campaign = $"/root/Campaign"
 onready var saves_manager = $"/root/SavesManager"
 onready var gamepad_adapter = $"/root/GamepadAdapter"
 
+onready var switcher = $"/root/SceneSwitcher"
+onready var match_setup = $"/root/MatchSetup"
+
 onready var entry_buttons = [
     $"widgets/save_list/entry0",
     $"widgets/save_list/entry1",
@@ -213,9 +216,6 @@ func switch_to_next_page():
         if self.prev_button.is_visible():
             self.prev_button.grab_focus()
 
-func load_state_from_id(save_id):
-    return
-
 func save_state_to_id(save_id):
     var save_data = self.saves_manager.compile_save_data(self.board)
     self.saves_manager.overwrite_save(
@@ -225,3 +225,23 @@ func save_state_to_id(save_id):
         save_data["save_data"],
         save_id
     )
+
+func load_state_from_id(save_id):
+    var save_data = self.saves_manager.get_save_data(save_id)
+    self.match_setup.reset()
+
+    self.match_setup.restore_save_id = save_id
+    self.match_setup.map_name = save_data["map_name"]
+    self.match_setup.campaign_name = save_data["campaign_name"]
+    self.match_setup.mission_no = save_data["mission_no"]
+    self.match_setup.stored_setup = save_data["initial_setup"]
+    for player in save_data["players"]:
+        self.match_setup.add_player(
+            player["side"],
+            player["ap"],
+            player["type"],
+            player["alive"],
+            player["team"]
+        )
+
+    self.switcher.board()

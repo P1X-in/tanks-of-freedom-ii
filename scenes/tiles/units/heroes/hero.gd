@@ -41,3 +41,13 @@ func disable_shadow():
 func reset_position_for_tile_view():
     .reset_position_for_tile_view()
     $"mesh_anchor/standard".hide()
+
+func get_dict():
+    var new_dict = .get_dict()
+    new_dict["disable_active_abilities"] = self.disable_active_abilities
+
+    return new_dict
+
+func restore_from_state(state):
+    .restore_from_state(state)
+    self.disable_active_abilities = state["disable_active_abilities"]

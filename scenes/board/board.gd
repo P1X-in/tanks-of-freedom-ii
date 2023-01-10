@@ -10,6 +10,7 @@ onready var switcher = $"/root/SceneSwitcher"
 onready var match_setup = $"/root/MatchSetup"
 onready var settings = $"/root/Settings"
 onready var campaign = $"/root/Campaign"
+onready var saves_manager = $"/root/SavesManager"
 
 var state = preload("res://scenes/board/logic/state.gd").new()
 var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").new()
@@ -42,7 +43,12 @@ var mouse_click_position = null
 func _ready():
     self.set_up_map()
     self.set_up_board()
-    self.start_turn()
+
+    if self.match_setup.restore_save_id == null:
+        self.match_setup.store_setup()
+        self.start_turn()
+    else:
+        self.restore_saved_state()
 
 func _input(event):
     if not OS.is_window_focused():
@@ -758,6 +764,9 @@ func _should_perform_hq_cam():
     return false
 
 func _restart_board():
+    if self.match_setup.restore_save_id != null:
+        self.match_setup.restore_save_id = null
+        self.match_setup.restore_setup()
     self.match_setup.has_won = false
     self.switcher.board()
     self.audio.play("menu_click")
@@ -778,3 +787,31 @@ func close_saves():
 
     if not self.state.is_current_player_ai():
         self.map.tile_box.set_visible(true)
+
+func restore_saved_state():
+    var save_data = self.saves_manager.get_save_data(self.match_setup.restore_save_id)
+
+    # restore basic state elements
+    self.state.turn = save_data["turn"]
+    self.state.current_player = save_data["active_player"]
+    self.map.camera.restore_from_state(save_data["camera"])
+    self.ui.objectives.restore_from_state(save_data["objectives"])
+
+    # restore tiles state
+    self.map.model.wipe_all_units()
+    for tile_key in save_data["tiles"].keys():
+        self.map.builder.rebuild_tile(tile_key, save_data["tiles"][tile_key])
+    self.map.hide_invisible_tiles()
+    self.state.register_heroes(self.map.model)
+
+    # restore triggers
+    self.scripting.restore_from_state(save_data["triggers"])
+
+    # resume turn after state is loaded
+    self.update_for_current_player()
+
+    self.ui.update_resource_value(self.state.get_current_ap())
+    self.ui.flash_start_end_card(self.state.get_current_side(), self.state.turn)
+
+    self.map.camera.ai_operated = false
+    self.map.show_tile_box()

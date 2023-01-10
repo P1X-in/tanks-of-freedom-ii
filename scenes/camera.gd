@@ -449,3 +449,11 @@ func _mouse_shift_camera(relative_offset):
 
 func get_zoom_fraction():
     return (self.camera_distance - self.camera_distance_min) / (self.camera_distance_max - self.camera_distance_min)
+
+func get_position_state():
+    var position = self.get_translation()
+
+    return [position.x, position.y, position.z]
+
+func restore_from_state(state):
+    self.set_translation(Vector3(state[0], state[1], state[2]))

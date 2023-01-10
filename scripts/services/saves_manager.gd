@@ -144,7 +144,8 @@ func compile_save_data(board) -> Dictionary:
         "turn": board.state.turn,
         "active_player": board.state.current_player,
         "players": board.state.get_players_state_data(),
-        "camera": board.map.camera.get_translation(),
+        "initial_setup": board.match_setup.stored_setup,
+        "camera": board.map.camera.get_position_state(),
         "tiles": self._compile_tiles_data(board),
         "triggers": board.scripting.get_save_data(),
         "objectives": board.ui.objectives.raw_text

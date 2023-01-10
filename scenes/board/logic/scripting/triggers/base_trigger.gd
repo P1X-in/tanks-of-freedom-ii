@@ -38,3 +38,6 @@ func get_save_data():
     return {
         "suspended": self.suspended
     }
+
+func restore_from_state(state):
+    self.suspended = state["suspended"]

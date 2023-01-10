@@ -26,3 +26,8 @@ func clear_objective_slot(slot):
 func _clear_slot(slot):
     slot.set_text("")
     slot.hide()
+
+func restore_from_state(state):
+    for i in range(self.objectives.size()):
+        if state[i] != null:
+            self.set_objective_slot(i, state[i])

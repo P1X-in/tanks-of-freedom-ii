@@ -62,7 +62,7 @@ func can_intimidate_crew(source):
     for ability in passive_abilities:
         if ability.can_intimidate_crew():
             return true
-    
+
     return false
 
 func _get_passives_for_source(source):

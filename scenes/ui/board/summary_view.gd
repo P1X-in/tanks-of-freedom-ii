@@ -60,6 +60,9 @@ func _on_menu_button_pressed():
 
 func _on_restart_button_pressed():
     self.gamepad_adapter.disable()
+    if self.match_setup.restore_save_id != null:
+        self.match_setup.restore_save_id = null
+        self.match_setup.restore_setup()
     self.match_setup.has_won = false
     self.switcher.board()
     self.audio.play("menu_click")

@@ -31,3 +31,7 @@ func get_save_data():
     var save_data = .get_save_data()
     save_data["turn_no"] = self.turn_no
     return save_data
+
+func restore_from_state(state):
+    .restore_from_state(state)
+    self.turn_no = state["turn_no"]

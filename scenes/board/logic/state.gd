@@ -191,6 +191,7 @@ func register_heroes(model):
     var heroes = []
 
     while index < self.players.size():
+        self.players[index]['heroes'] = {}
         heroes = model.get_player_heroes(self.players[index]['side'])
         for hero in heroes:
             self.add_hero_for_player(index, hero)

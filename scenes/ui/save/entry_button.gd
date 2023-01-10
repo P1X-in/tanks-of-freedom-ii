@@ -27,7 +27,10 @@ func fill_data(name, map_save_id, map_turn_no, map_created_at):
 func refresh_label():
     var new_text = self.map_name + " - " + tr("TR_TURN") + " " + str(self.turn_no) + " - "
     new_text += str(self.created_at["year"]) + "-" + str(self.created_at["month"]) + "-" + str(self.created_at["day"])
-    new_text += " " + str(self.created_at["hour"]) + ":" + str(self.created_at["minute"])
+    new_text += " " + str(self.created_at["hour"]) + ":"
+    if self.created_at["minute"] < 10:
+        new_text += "0"
+    new_text += str(self.created_at["minute"])
     self.label.set_text(new_text)
 
 func bind_method(new_object, new_method):

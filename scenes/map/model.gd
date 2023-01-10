@@ -160,3 +160,11 @@ func get_unit_position(unit):
             return [self.tiles[i].position.x, self.tiles[i].position.y]
 
     return null
+
+func wipe_all_units():
+    var units = []
+    for i in self.tiles.keys():
+        if self.tiles[i].unit.is_present():
+            self.tiles[i].unit.clear()
+
+    return units

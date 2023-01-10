@@ -325,3 +325,11 @@ func _disable_shadow(tile):
         return
 
     tile.disable_shadow()
+
+func rebuild_tile(tile_id, tile_data):
+    var tile = self.map.model.tiles[tile_id]
+    tile.wipe()
+
+    self.place_tile(tile_id, tile_data)
+    if tile.unit.is_present():
+        tile.unit.tile.restore_from_state(tile_data["unit"])

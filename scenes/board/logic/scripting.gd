@@ -105,3 +105,9 @@ func get_save_data():
         "triggers": trigger_data,
         "groups": self.trigger_groups
     }
+
+func restore_from_state(state):
+    self.trigger_groups = state["groups"]
+
+    for trigger_name in state["triggers"].keys():
+        self.triggers[trigger_name].restore_from_state(state["triggers"][trigger_name])

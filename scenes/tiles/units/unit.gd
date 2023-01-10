@@ -75,6 +75,7 @@ func get_dict():
     new_dict["ai_paused"] = self.ai_paused
     new_dict["stats"] = self.get_stats_with_modifiers()
     new_dict["abilities"] = self._get_abilities_status()
+    new_dict["team"] = self.team
 
     return new_dict
 
@@ -382,3 +383,21 @@ func _get_abilities_status():
         status["ability" + str(ability.index)] = ability.disabled
 
     return status
+
+func restore_from_state(state):
+    self.scripting_tags = state["tags"]
+    self.hp = state["stats"]["hp"]
+    self.move = state["stats"]["move"]
+    self.attacks = state["stats"]["attacks"]
+    self.level = state["stats"]["level"]
+    self.experience = state["stats"]["experience"]
+    self.kills = state["stats"]["kills"]
+    self.team = state["team"]
+    self.modifiers = state["modifiers"]
+
+    if self.move < 1:
+        self.remove_highlight()
+
+    for ability in self.active_abilities:
+        if state["abilities"].has("ability" + str(ability.index)):
+            ability.disabled = state["abilities"]["ability" + str(ability.index)]

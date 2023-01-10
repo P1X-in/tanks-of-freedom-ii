@@ -35,3 +35,7 @@ func get_save_data():
     var save_data = .get_save_data()
     save_data["vip"] = self.board.map.model.get_unit_position(self.vip)
     return save_data
+
+func restore_from_state(state):
+    .restore_from_state(state)
+    self.set_vip(state["vip"][0], state["vip"][1])

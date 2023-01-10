@@ -25,6 +25,7 @@ func get_dict():
     return {
         "tile" : self.template_name,
         "rotation" : rotation.y,
+        "tags" : self.scripting_tags
     }
 
 func reset_position_for_tile_view():
