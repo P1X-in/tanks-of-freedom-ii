@@ -24,6 +24,7 @@ func damage_tile(tile):
     var random_angle = angles[randi() % angles.size()]
     var random_template = damage_templates[randi() % damage_templates.size()]
     self.board.map.builder.place_damage(tile.position, random_template, random_angle)
+    tile.is_state_modified = true
 
 func generate_collateral(tile):
     for neighbour in tile.neighbours.values():
@@ -43,3 +44,4 @@ func damage_terrain(tile):
     tile.terrain.clear()
     self.board.map.builder.place_terrain(tile.position, next_damage_stage_template, rotation.y)
     tile.terrain.tile.show_explosion()
+    tile.is_state_modified = true

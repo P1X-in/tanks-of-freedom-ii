@@ -1,0 +1,256 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/ui/save/saves.gd" type="Script" id=2]
+[ext_resource path="res://scenes/ui/save/entry_button.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="saves" type="Node2D"]
+visible = false
+script = ExtResource( 2 )
+
+[node name="background" type="ColorRect" parent="."]
+margin_left = -600.0
+margin_top = -350.0
+margin_right = 600.0
+margin_bottom = 350.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+
+[node name="widgets" type="Control" parent="."]
+margin_left = -600.0
+margin_top = -350.0
+margin_right = 600.0
+margin_bottom = 350.0
+
+[node name="cancel_button" type="Button" parent="widgets"]
+margin_left = 1070.0
+margin_top = 640.0
+margin_right = 1170.0
+margin_bottom = 670.0
+custom_fonts/font = ExtResource( 1 )
+text = "TR_CANCEL"
+
+[node name="map_list_background" type="ColorRect" parent="widgets"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 30.0
+margin_right = -30.0
+margin_bottom = -170.0
+color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+
+[node name="save_list" type="Control" parent="widgets"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 1170.0
+margin_bottom = 530.0
+
+[node name="entry0" parent="widgets/save_list" instance=ExtResource( 3 )]
+
+[node name="entry1" parent="widgets/save_list" instance=ExtResource( 3 )]
+margin_top = 50.0
+margin_bottom = 100.0
+
+[node name="entry2" parent="widgets/save_list" instance=ExtResource( 3 )]
+margin_top = 100.0
+margin_bottom = 150.0
+
+[node name="entry3" parent="widgets/save_list" instance=ExtResource( 3 )]
+margin_top = 150.0
+margin_bottom = 200.0
+
+[node name="entry4" parent="widgets/save_list" instance=ExtResource( 3 )]
+margin_top = 200.0
+margin_bottom = 250.0
+
+[node name="entry5" parent="widgets/save_list" instance=ExtResource( 3 )]
+margin_top = 250.0
+margin_bottom = 300.0
+
+[node name="entry6" parent="widgets/save_list" instance=ExtResource( 3 )]
+margin_top = 300.0
+margin_bottom = 350.0
+
+[node name="entry7" parent="widgets/save_list" instance=ExtResource( 3 )]
+margin_top = 350.0
+margin_bottom = 400.0
+
+[node name="entry8" parent="widgets/save_list" instance=ExtResource( 3 )]
+margin_top = 400.0
+margin_bottom = 450.0
+
+[node name="entry9" parent="widgets/save_list" instance=ExtResource( 3 )]
+margin_top = 450.0
+margin_bottom = 500.0
+
+[node name="list_prev" type="Button" parent="widgets"]
+margin_left = 30.0
+margin_top = 540.0
+margin_right = 130.0
+margin_bottom = 570.0
+focus_neighbour_right = NodePath("../list_next")
+custom_fonts/font = ExtResource( 1 )
+text = "TR_PREV"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="list_next" type="Button" parent="widgets"]
+margin_left = 1070.0
+margin_top = 540.0
+margin_right = 1170.0
+margin_bottom = 570.0
+focus_neighbour_left = NodePath("../list_prev")
+custom_fonts/font = ExtResource( 1 )
+text = "TR_NEXT"
+
+[node name="new_save_button" type="Button" parent="widgets"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -60.0
+margin_right = 100.0
+margin_bottom = -30.0
+custom_fonts/font = ExtResource( 1 )
+text = "TR_NEW_SAVE"
+
+[node name="load_button" type="Button" parent="widgets"]
+margin_left = 150.0
+margin_top = 640.0
+margin_right = 250.0
+margin_bottom = 670.0
+focus_neighbour_right = NodePath("../../cancel_button")
+custom_fonts/font = ExtResource( 1 )
+text = "TR_LOAD"
+
+[node name="save_button" type="Button" parent="widgets"]
+margin_left = 30.0
+margin_top = 640.0
+margin_right = 130.0
+margin_bottom = 670.0
+custom_fonts/font = ExtResource( 1 )
+text = "TR_SAVE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="animations" type="AnimationPlayer" parent="."]
+playback_speed = 4.0
+anims/RESET = SubResource( 1 )
+anims/hide = SubResource( 2 )
+anims/show = SubResource( 3 )
+
+[connection signal="pressed" from="widgets/cancel_button" to="." method="execute_cancel"]
+[connection signal="pressed" from="widgets/list_prev" to="." method="switch_to_prev_page"]
+[connection signal="pressed" from="widgets/list_next" to="." method="switch_to_next_page"]
+[connection signal="pressed" from="widgets/new_save_button" to="." method="execute_new_save"]
+[connection signal="pressed" from="widgets/load_button" to="." method="load_pressed"]
+[connection signal="pressed" from="widgets/save_button" to="." method="save_pressed"]

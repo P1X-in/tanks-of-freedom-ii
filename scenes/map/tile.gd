@@ -18,6 +18,8 @@ var fragments = []
 
 var neighbours = {}
 
+var is_state_modified = false
+
 func _init(x, y):
     self.position.x = x
     self.position.y = y

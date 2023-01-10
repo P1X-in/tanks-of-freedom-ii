@@ -35,6 +35,7 @@ SceneSwitcher="*res://scripts/services/scene_switcher.gd"
 MatchSetup="*res://scripts/services/match_setup.gd"
 Settings="*res://scripts/services/settings.gd"
 Campaign="*res://scripts/services/campaign.gd"
+SavesManager="*res://scripts/services/saves_manager.gd"
 
 [debug]
 

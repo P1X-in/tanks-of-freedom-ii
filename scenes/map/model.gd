@@ -150,3 +150,13 @@ func get_player_heroes(side):
             heroes.append(self.tiles[i].unit.tile)
 
     return heroes
+
+func get_unit_position(unit):
+    if unit == null:
+        return null
+        
+    for i in self.tiles.keys():
+        if self.tiles[i].unit.tile == unit:
+            return [self.tiles[i].position.x, self.tiles[i].position.y]
+
+    return null

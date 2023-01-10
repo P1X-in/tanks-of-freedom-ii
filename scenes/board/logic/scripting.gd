@@ -94,3 +94,14 @@ func suspend_group(group_name, state):
     for trigger_name in self.trigger_groups[group_name].keys():
         if self.trigger_groups[group_name][trigger_name]:
             self.suspend_trigger(trigger_name, state)
+
+func get_save_data():
+    var trigger_data = {}
+
+    for trigger_name in self.triggers.keys():
+        trigger_data[trigger_name] = self.triggers[trigger_name].get_save_data()
+
+    return {
+        "triggers": trigger_data,
+        "groups": self.trigger_groups
+    }

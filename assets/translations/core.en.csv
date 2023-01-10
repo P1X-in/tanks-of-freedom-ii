@@ -176,3 +176,4 @@ TR_INFILTRATION_DESC,"Infiltrate enemy territory by instantly jumping to a tile,
 TR_HARD_ARMOUR_DESC,"Temporarily harden the armour of units up to 2 tiles away by 1 point."
 TR_DEEP_STRIKE_DESC,"Call in a paratrooper drop, up to 2 tiles away. Provides a free Infantry unit."
 TR_TEAM,"Team"
+TR_NEW_SAVE,"Create new save"

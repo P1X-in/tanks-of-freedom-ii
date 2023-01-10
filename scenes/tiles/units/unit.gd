@@ -73,6 +73,8 @@ func get_dict():
     new_dict["side"] = self.side
     new_dict["modifiers"] = self.modifiers
     new_dict["ai_paused"] = self.ai_paused
+    new_dict["stats"] = self.get_stats_with_modifiers()
+    new_dict["abilities"] = self._get_abilities_status()
 
     return new_dict
 
@@ -111,6 +113,9 @@ func get_stats():
         "max_hp" : self.max_hp,
         "attacks" : self.attacks,
         "max_attacks" : self.max_attacks,
+        "level" : self.level,
+        "experience" : self.experience,
+        "kills" : self.kills,
     }
 
     return stats
@@ -369,3 +374,11 @@ func disable_shadow():
     additional_mesh = self.get_node_or_null("mesh_anchor/mesh3")
     if additional_mesh != null:
         additional_mesh.cast_shadow = 0
+
+func _get_abilities_status():
+    var status = {}
+
+    for ability in self.active_abilities:
+        status["ability" + str(ability.index)] = ability.disabled
+
+    return status

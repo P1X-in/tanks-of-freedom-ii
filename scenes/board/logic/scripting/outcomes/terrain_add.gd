@@ -33,6 +33,7 @@ func _execute(_metadata):
 
     if self.smoke:
         self.board.smoke_a_tile(tile)
+    tile.is_state_modified = true
 
     self.board.audio.play("menu_click")
 

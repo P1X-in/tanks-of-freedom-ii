@@ -14,6 +14,7 @@ onready var cinematic_bars = $"cinematic_bars/cinematic_bars"
 onready var unit_stats = $"unit_stats/unit_stats"
 onready var objectives = $"objectives/objectives"
 onready var ap_depleted = $"ap_depleted/ap_depleted"
+onready var saves = $"saves/saves"
 
 # Tile highlight
 onready var tile_highlight = $"tile_highlight/tile_view"
@@ -50,6 +51,9 @@ func is_popup_open():
         return true
 
     if self.unit_stats.is_visible():
+        return true
+
+    if self.saves.is_visible():
         return true
 
     return false
@@ -234,3 +238,9 @@ func show_objectives():
 
 func hide_objectives():
     self.objectives.hide()
+
+func show_saves():
+    self.saves.show_saves(true)
+
+func hide_saves():
+    self.saves.hide_saves()

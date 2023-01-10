@@ -8,6 +8,7 @@ onready var objectives = [
     $"objective_wrapper/obj3",
     $"objective_wrapper/obj4"
 ]
+var raw_text = [null, null, null, null]
 
 
 func clear():
@@ -15,6 +16,7 @@ func clear():
         self._clear_slot(slot)
 
 func set_objective_slot(slot, text):
+    self.raw_text[slot] = text
     self.objectives[slot].set_text(text)
     self.objectives[slot].show()
 

@@ -33,3 +33,8 @@ func activate():
 
 func deactivate():
     self.suspended = true
+
+func get_save_data():
+    return {
+        "suspended": self.suspended
+    }

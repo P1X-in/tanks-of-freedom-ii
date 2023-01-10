@@ -195,3 +195,15 @@ func register_heroes(model):
         for hero in heroes:
             self.add_hero_for_player(index, hero)
         index += 1
+
+func get_players_state_data():
+    var state_data = []
+    for player in self.players:
+        state_data.append({
+            "type": player["type"],
+            "side": player["side"],
+            "team": player["team"],
+            "ap" : player["ap"],
+            "alive" : player["alive"]
+        })
+    return state_data

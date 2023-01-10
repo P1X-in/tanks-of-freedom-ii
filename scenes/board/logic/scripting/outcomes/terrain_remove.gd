@@ -23,6 +23,7 @@ func _execute(_metadata):
         self.board.audio.play("explosion")
     else:
         self.board.audio.play("menu_click")
+    tile.is_state_modified = true
 
 func _ingest_details(details):
     self.where = Vector2(details['where'][0], details['where'][1])
