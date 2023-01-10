@@ -227,7 +227,6 @@ margin_left = 150.0
 margin_top = 640.0
 margin_right = 250.0
 margin_bottom = 670.0
-focus_neighbour_right = NodePath("../../cancel_button")
 custom_fonts/font = ExtResource( 1 )
 text = "TR_LOAD"
 

@@ -169,6 +169,9 @@ func start_music_track():
 
 
 func end_turn():
+    if not self.state.is_current_player_ai():
+        self.perform_autosave()
+
     if self.ui.radial.is_visible():
         self.toggle_radial_menu()
     self.unselect_tile()
@@ -330,6 +333,10 @@ func setup_radial_menu(context_object=null):
     if context_object == null:
         self.ui.radial.set_field(self.ui.icons.back.instance(), "TR_RES_MISS", 0, self, "_restart_board")
         self.ui.radial.set_field(self.ui.icons.disk.instance(), "TR_SAVE_LOAD", 2, self, "open_saves")
+        if self.state.is_current_player_ai():
+            self.ui.radial.set_field_disabled(2, "X")
+        else:
+            self.ui.radial.clear_field_disabled(2)
         self.ui.radial.set_field(self.ui.icons.quit.instance(), "TR_MAIN_MENU", 4, self, "main_menu")
         self.ui.radial.set_field(self.ui.icons.cross.instance(), "TR_CLOSE", 6, self, "toggle_radial_menu")
         self.ui.show_objectives()
@@ -772,13 +779,14 @@ func _restart_board():
     self.audio.play("menu_click")
 
 func open_saves():
+    if self.state.is_current_player_ai():
+        return
     self.ui.saves.board = self
     self.ui.hide_radial()
     self.ui.hide_objectives()
     self.ui.show_saves()
 
     self.ui.saves.bind_cancel(self, "close_saves")
-    #self.ui.saves.bind_success(self, "handle_saves_output")
 
 func close_saves():
     self.ui.hide_saves()
@@ -815,3 +823,7 @@ func restore_saved_state():
 
     self.map.camera.ai_operated = false
     self.map.show_tile_box()
+
+func perform_autosave():
+    self.ui.saves.board = self
+    self.ui.saves.perform_autosave()

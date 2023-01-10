@@ -117,3 +117,16 @@ func close_controls():
     self.ui.hide_controls()
     yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
     self.ui.show_menu()
+
+func open_saves():
+    self.ui.hide_menu()
+    yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.ui.show_saves()
+
+    self.ui.saves.bind_cancel(self, "close_saves")
+
+func close_saves():
+    self.ui.hide_saves()
+    self.gamepad_adapter.enable()
+    yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.ui.show_menu()

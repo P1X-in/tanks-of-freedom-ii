@@ -106,7 +106,7 @@ script = ExtResource( 1 )
 margin_left = -200.0
 margin_top = -130.0
 margin_right = 200.0
-margin_bottom = 250.0
+margin_bottom = 310.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
 "_editor_description_": ""
@@ -118,9 +118,6 @@ margin_top = -110.0
 margin_right = 150.0
 margin_bottom = -70.0
 text = "TR_CAMPAIGN"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="skirmish_button" type="Button" parent="."]
 margin_left = -150.0
@@ -129,11 +126,18 @@ margin_right = 150.0
 margin_bottom = -10.0
 text = "TR_SKIRMISH"
 
-[node name="editor_button" type="Button" parent="."]
+[node name="load_button" type="Button" parent="."]
 margin_left = -150.0
 margin_top = 10.0
 margin_right = 150.0
 margin_bottom = 50.0
+text = "TR_LOAD_GAME"
+
+[node name="editor_button" type="Button" parent="."]
+margin_left = -150.0
+margin_top = 70.0
+margin_right = 150.0
+margin_bottom = 110.0
 text = "TR_EDITOR"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -141,9 +145,9 @@ __meta__ = {
 
 [node name="settings_button" type="Button" parent="."]
 margin_left = -150.0
-margin_top = 70.0
+margin_top = 130.0
 margin_right = 150.0
-margin_bottom = 110.0
+margin_bottom = 170.0
 text = "TR_SETTINGS"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -151,9 +155,9 @@ __meta__ = {
 
 [node name="controls_button" type="Button" parent="."]
 margin_left = -150.0
-margin_top = 130.0
+margin_top = 190.0
 margin_right = 150.0
-margin_bottom = 170.0
+margin_bottom = 230.0
 text = "TR_CONTROLS"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -161,9 +165,9 @@ __meta__ = {
 
 [node name="quit_button" type="Button" parent="."]
 margin_left = -150.0
-margin_top = 190.0
+margin_top = 250.0
 margin_right = 150.0
-margin_bottom = 230.0
+margin_bottom = 290.0
 text = "TR_QUIT"
 
 [node name="animations" type="AnimationPlayer" parent="."]
@@ -177,6 +181,7 @@ __meta__ = {
 
 [connection signal="pressed" from="campaign_button" to="." method="_on_campaign_button_pressed"]
 [connection signal="pressed" from="skirmish_button" to="." method="_on_skirmish_button_pressed"]
+[connection signal="pressed" from="load_button" to="." method="_on_load_button_pressed"]
 [connection signal="pressed" from="editor_button" to="." method="_on_editor_button_pressed"]
 [connection signal="pressed" from="settings_button" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="controls_button" to="." method="_on_controls_button_pressed"]

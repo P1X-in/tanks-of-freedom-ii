@@ -52,6 +52,18 @@ func _ready():
     for button in self.entry_buttons:
         button.bind_method(self, "entry_button_pressed")
 
+func _input(event):
+    if event.is_action_pressed("ui_cancel") or event.is_action_pressed('editor_menu'):
+        self.execute_cancel()
+    if event.is_action_pressed("ui_page_down"):
+        self.switch_to_next_page()
+        if self.entry_buttons[0].is_visible():
+            self.entry_buttons[0].grab_focus()
+    if event.is_action_pressed("ui_page_up"):
+        self.switch_to_prev_page()
+        if self.entry_buttons[0].is_visible():
+            self.entry_buttons[0].grab_focus()
+
 func clear_binds():
     self.bound_success_object = null
     self.bound_success_method = null
@@ -218,12 +230,24 @@ func switch_to_next_page():
 
 func save_state_to_id(save_id):
     var save_data = self.saves_manager.compile_save_data(self.board)
+
     self.saves_manager.overwrite_save(
         save_data["map_name"],
         save_data["map_label"],
         save_data["turn_no"],
         save_data["save_data"],
         save_id
+    )
+
+func perform_autosave():
+    var save_data = self.saves_manager.compile_save_data(self.board)
+    save_data["map_label"] = tr("TR_AUTOSAVE") + " - " + save_data["map_label"]
+
+    self.saves_manager.write_autosave(
+        save_data["map_name"],
+        save_data["map_label"],
+        save_data["turn_no"],
+        save_data["save_data"]
     )
 
 func load_state_from_id(save_id):

@@ -177,3 +177,5 @@ TR_HARD_ARMOUR_DESC,"Tymczasowo utwardź pancerz swoich jednostek oddalonych o m
 TR_DEEP_STRIKE_DESC,"Wezwij spadochroniarzy, którzy wylądują w odległości do 2 pól. Zapewnia darmową jednostkę Piechoty."
 TR_TEAM,"Drużyna"
 TR_NEW_SAVE,"Utwórz nowy zapis"
+TR_LOAD_GAME,"Wczytaj grę"
+TR_AUTOSAVE,"Autozapis"

@@ -59,7 +59,7 @@ func save_list_to_file() -> void:
 
 func load_saves_from_file() -> void:
     var save_data = self.filesystem.read_json_from_file(self.LIST_FILE_PATH)
-    if save_data.has("audosave"):
+    if save_data.has("autosave"):
         self.autosave = save_data["autosave"]
     if save_data.has("saves"):
         self.saves = save_data["saves"]

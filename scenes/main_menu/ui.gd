@@ -3,6 +3,7 @@ extends Control
 onready var menu = $"options/menu"
 onready var logo = $"logo/logo_view"
 onready var picker = $"map_picker/picker"
+onready var saves = $"saves/saves"
 onready var skirmish = $"skirmish/skirmish"
 onready var settings = $"settings/settings"
 onready var controls = $"controls/controls"
@@ -78,3 +79,9 @@ func hide_campaign_mission():
 
 func set_version(value):
     $"version/version".set_text(value)
+
+func show_saves():
+    self.saves.show_saves(false)
+
+func hide_saves():
+    self.saves.hide_saves()

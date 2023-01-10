@@ -177,3 +177,5 @@ TR_HARD_ARMOUR_DESC,"Temporarily harden the armour of units up to 2 tiles away b
 TR_DEEP_STRIKE_DESC,"Call in a paratrooper drop, up to 2 tiles away. Provides a free Infantry unit."
 TR_TEAM,"Team"
 TR_NEW_SAVE,"Create new save"
+TR_LOAD_GAME,"Load game"
+TR_AUTOSAVE,"Autosave"
