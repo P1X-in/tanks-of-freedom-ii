@@ -333,6 +333,7 @@ func rebuild_tile(tile_id, tile_data):
     tile.wipe()
 
     self.place_tile(tile_id, tile_data)
+    tile.is_state_modified = true
     if tile.unit.is_present():
         tile.unit.tile.restore_from_state(tile_data["unit"])
         if tile_data["unit"].has("passenger"):
