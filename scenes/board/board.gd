@@ -115,7 +115,7 @@ func hover_tile():
     if not self.ui.is_panel_open():
         var tile = self.map.model.get_tile(self.map.tile_box_position)
 
-        if tile != self.last_hover_tile:
+        if tile != self.last_hover_tile or true:
             self.last_hover_tile = tile
 
             self.update_tile_highlight(tile)
@@ -272,7 +272,6 @@ func refresh_tile_selection():
     if self.selected_tile != null:
         var selected_position = self.selected_tile.position
         self.unselect_tile()
-        self.last_hover_tile = null
         self.call_deferred("select_tile", selected_position)
 
 func reset_unit_markers():
