@@ -3,9 +3,9 @@ extends "res://scenes/abilities/unit/active.gd"
 func _execute(board, position):
     var tile = board.map.model.get_tile(position)
     tile.unit.set_tile(self.source.passenger)
+    board.map.anchor_unit(self.source.passenger, position)
     tile.unit.tile.sfx_effect("move")
     
-    board.map.anchor_unit(self.source.passenger, position)
     self.source.passenger.remove_moves()
     self.source.passenger = null
 

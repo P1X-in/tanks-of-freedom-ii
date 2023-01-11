@@ -29,4 +29,5 @@ func get_save_data():
 
 func restore_from_state(state):
     .restore_from_state(state)
-    self.set_vip(state["unit"][0], state["unit"][1])
+    if state["unit"] != null:
+        self.set_vip(state["unit"][0], state["unit"][1])

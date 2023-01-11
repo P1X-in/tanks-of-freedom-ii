@@ -12,6 +12,7 @@ func _execute(_metadata):
     tile.unit.clear()
 
     var new_unit = self.board.map.builder.force_place_unit(self.where, self.template_name, self.rotation, self.side)
+    new_unit.team = self.board.state.get_player_team(self.side)
     new_unit.replenish_moves()
 
     if self.sound:

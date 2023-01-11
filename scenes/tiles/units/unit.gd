@@ -380,7 +380,7 @@ func _get_abilities_status():
     var status = {}
 
     for ability in self.active_abilities:
-        status["ability" + str(ability.index)] = ability.disabled
+        status["ability" + str(ability.index)] = [ability.disabled, ability.cd_turns_left]
 
     return status
 
@@ -400,4 +400,5 @@ func restore_from_state(state):
 
     for ability in self.active_abilities:
         if state["abilities"].has("ability" + str(ability.index)):
-            ability.disabled = state["abilities"]["ability" + str(ability.index)]
+            ability.disabled = state["abilities"]["ability" + str(ability.index)][0]
+            ability.cd_turns_left = state["abilities"]["ability" + str(ability.index)][1]

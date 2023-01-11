@@ -249,7 +249,7 @@ func select_tile(position):
         else:
             self.unselect_tile()
 
-    self.update_tile_highlight(tile)
+    self.hover_tile()
 
     if self.selected_tile != null:
         self.audio.play("click")
@@ -272,6 +272,7 @@ func refresh_tile_selection():
     if self.selected_tile != null:
         var selected_position = self.selected_tile.position
         self.unselect_tile()
+        self.last_hover_tile = null
         self.call_deferred("select_tile", selected_position)
 
 func reset_unit_markers():

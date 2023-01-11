@@ -12,3 +12,10 @@ func disable_shadow():
             for subchild in child.get_children():
                 if subchild is MeshInstance:
                     subchild.cast_shadow = 0
+func get_dict():
+    var new_dict = .get_dict()
+    
+    if self.passenger != null:
+        new_dict["passenger"] = self.passenger.get_dict()
+
+    return new_dict

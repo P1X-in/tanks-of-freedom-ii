@@ -299,13 +299,15 @@ func set_building_side(position, new_side, new_team=null):
 
 func set_unit_side(position, new_side):
     var tile = self.map.model.get_tile(position)
-    var material_type = self.map.templates.MATERIAL_NORMAL
-
     if tile.unit.is_present():
-        if tile.unit.tile.uses_metallic_material:
-            material_type = self.map.templates.MATERIAL_METALLIC
-        tile.unit.tile.set_side(new_side)
-        tile.unit.tile.set_side_materials(self.map.templates.get_side_material(new_side, material_type), self.map.templates.get_side_material_desat(new_side, material_type))
+        self._set_unit_side(tile.unit.tile, new_side)
+
+func _set_unit_side(unit, new_side):
+    var material_type = self.map.templates.MATERIAL_NORMAL
+    if unit.uses_metallic_material:
+        material_type = self.map.templates.MATERIAL_METALLIC
+    unit.set_side(new_side)
+    unit.set_side_materials(self.map.templates.get_side_material(new_side, material_type), self.map.templates.get_side_material_desat(new_side, material_type))
 
 func _notify_removal(tile_fragment, position, tile_class, side=null, modifiers={}, double=true):
     if self.editor != null:
@@ -333,3 +335,13 @@ func rebuild_tile(tile_id, tile_data):
     self.place_tile(tile_id, tile_data)
     if tile.unit.is_present():
         tile.unit.tile.restore_from_state(tile_data["unit"])
+        if tile_data["unit"].has("passenger"):
+            var passenger = self.map.templates.get_template(tile_data["unit"]["passenger"]["tile"])
+            passenger.set_rotation(Vector3(0, deg2rad(tile_data["unit"]["passenger"]["rotation"]), 0))
+            passenger.current_rotation = tile_data["unit"]["passenger"]["rotation"]
+            if not self.map.settings.get_option("shadows"):
+                self._disable_shadow(passenger)
+            passenger.restore_from_state(tile_data["unit"]["passenger"])
+            self._set_unit_side(passenger, passenger.side)
+
+            tile.unit.tile.passenger = passenger
