@@ -389,9 +389,9 @@ func restore_from_state(state):
     self.hp = state["stats"]["hp"]
     self.move = state["stats"]["move"]
     self.attacks = state["stats"]["attacks"]
-    self.level = state["stats"]["level"]
-    self.experience = state["stats"]["experience"]
-    self.kills = state["stats"]["kills"]
+    self.level = int(state["stats"]["level"])
+    self.experience = int(state["stats"]["experience"])
+    self.kills = int(state["stats"]["kills"])
     self.team = state["team"]
     self.modifiers = state["modifiers"]
 
