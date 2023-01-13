@@ -2,6 +2,8 @@ extends Spatial
 
 onready var map = $"map"
 onready var ui = $"ui"
+onready var cart = $"map/path/cart"
+onready var animations = $"animations"
 onready var audio = $"/root/SimpleAudioLibrary"
 onready var switcher = $"/root/SceneSwitcher"
 onready var gamepad_adapter = $"/root/GamepadAdapter"
@@ -14,12 +16,19 @@ func _ready():
     self.map.loader.load_map_file("main_menu_bg")
     self._setup_camera()
     self.map.hide_tile_box()
-    self.audio.track("menu")
+    
+    self.audio.master_switch = true
     self.gamepad_adapter.enable()
     self.ui.bind_menu(self)
 
     if self.match_setup.campaign_win:
         self.reopen_campaign_mission_selection_after_win()
+
+    if not self.switcher.intro_played:
+        self._start_intro()
+    else:
+        self._intro_finished()
+
 
 func _setup_camera():
     self.map.camera.paused = true
@@ -30,6 +39,26 @@ func _setup_camera():
     self.map.camera.camera_lens.set_translation(Vector3(0, 0, 20))
     self.map.camera.camera_pivot.set_rotation_degrees(Vector3(0, 0, 0))
     self.map.camera.camera_arm.set_rotation_degrees(Vector3(-20, 0, 0))
+
+func _start_intro():
+    self.switcher.intro_played = true
+    self.audio.track("intro")
+    self.map.remove_child(self.map.camera)
+    self.cart.add_child(self.map.camera)
+    self.map.camera.set_translation(Vector3(0, 0, 0))
+    self.animations.play("path")
+
+func _camera_arrived():
+    pass
+
+func _intro_music_finished():
+    self.audio.stop()
+
+func _intro_finished():
+    self.switcher.intro_played = true
+    $"ui/logo".show()
+    self.audio.track("menu")
+    self.ui.show_menu()
 
 func open_picker():
     self.ui.hide_menu()

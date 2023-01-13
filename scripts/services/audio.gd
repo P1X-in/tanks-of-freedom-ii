@@ -7,6 +7,7 @@ var samples = {}
 var soundtracks = {}
 var current_track = null
 
+var master_switch = false
 var sounds_enabled = true
 var music_enabled = true
 
@@ -17,6 +18,7 @@ func _ready():
     self.register_sample("explosion", preload("res://assets/audio/explosion.wav"))
 
 
+    self.register_track("intro", preload("res://assets/audio/soundtrack/grand_beats_intro.ogg"))
     self.register_track("menu", preload("res://assets/audio/soundtrack/grand_beats_menu_soundtrack.ogg"))
     self.register_track("soundtrack_1", preload("res://assets/audio/soundtrack/grand_beats_soundtrack_1_metal.ogg"))
     self.register_track("soundtrack_2", preload("res://assets/audio/soundtrack/grand_beats_110.ogg"))
@@ -27,7 +29,7 @@ func _ready():
 
 
 func play(name):
-    if not self.sounds_enabled:
+    if not self.master_switch or not self.sounds_enabled:
         return
 
     if not self.samples.has(name):
@@ -36,7 +38,7 @@ func play(name):
     self.samples[name].play()
 
 func track(name):
-    if not self.music_enabled:
+    if not self.master_switch or not self.music_enabled:
         return
 
     if not self.soundtracks.has(name):
@@ -56,6 +58,9 @@ func is_playing(name):
     return self.soundtracks[name].is_playing()
 
 func stop(name=null):
+    for track in self.soundtracks.values():
+        track.stop()
+
     if name == null and self.current_track != null:
         self.current_track.stop()
         self.current_track = null

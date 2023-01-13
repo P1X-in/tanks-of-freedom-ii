@@ -1,6 +1,7 @@
 extends Node
 
 onready var mouse_layer = $"/root/MouseLayer"
+var intro_played = false
 
 func main_menu():
     self.mouse_layer.detach()
