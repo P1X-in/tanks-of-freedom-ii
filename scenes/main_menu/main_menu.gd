@@ -22,13 +22,13 @@ func _ready():
     self.gamepad_adapter.enable()
     self.ui.bind_menu(self)
 
-    if self.match_setup.campaign_win:
-        self.reopen_campaign_mission_selection_after_win()
-
     if not self.switcher.intro_played and self.settings.get_option("show_intro"):
         self.call_deferred("_start_intro")
     else:
         self._intro_finished()
+
+    if self.match_setup.campaign_win:
+        self.reopen_campaign_mission_selection_after_win()
 
 
 func _setup_camera():
@@ -63,7 +63,8 @@ func _intro_finished():
     self.switcher.intro_played = true
     $"ui/logo".show()
     self.audio.track("menu")
-    self.ui.show_menu()
+    if not self.match_setup.campaign_win:
+        self.ui.show_menu()
 
 func open_picker():
     self.ui.hide_menu()
