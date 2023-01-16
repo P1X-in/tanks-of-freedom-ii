@@ -15,6 +15,8 @@ const MODE_FREE = "FREE"
 const MODE_TOF = "TOF"
 const MODE_AW = "AW"
 
+onready var animations = $"animations"
+
 export var device_id = 0
 export var rotate_speed = 100
 export var zoom_speed = 20

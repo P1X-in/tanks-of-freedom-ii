@@ -24,6 +24,10 @@ func _input(event):
     if event.is_action_pressed("ui_cancel"):
         self.quit_button.grab_focus()
 
+    if OS.is_debug_build():
+        if event.is_action_pressed("cheat_capture"):
+            self.main_menu._start_intro()
+
 func bind_menu(menu):
     self.main_menu = menu
 
