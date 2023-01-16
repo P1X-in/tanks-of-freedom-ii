@@ -67,7 +67,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 50 )
 projection = 1
 current = true
 size = 40.0
-far = 200.0
+far = 300.0
 
 [node name="aw_pivot" type="Spatial" parent="."]
 
@@ -78,7 +78,7 @@ transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 50 )
 projection = 1
 size = 40.0
-far = 200.0
+far = 300.0
 
 [node name="animations" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )

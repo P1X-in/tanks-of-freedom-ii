@@ -27,6 +27,7 @@ func _input(event):
 
     if OS.is_debug_build():
         if event.is_action_pressed("cheat_capture"):
+            self.main_menu.ui.hide_menu()
             self.main_menu._start_intro()
 
 func bind_menu(menu):

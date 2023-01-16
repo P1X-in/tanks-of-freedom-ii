@@ -13,6 +13,8 @@ onready var settings = $"/root/Settings"
 
 const MENU_TIMEOUT = 0.2
 
+var camera_reparented = false
+
 func _ready():
     self.map.loader.load_map_file("main_menu_bg")
     self._setup_camera()
@@ -41,14 +43,17 @@ func _setup_camera():
     self.map.camera.camera_pivot.set_rotation_degrees(Vector3(0, 0, 0))
     self.map.camera.camera_arm.set_rotation_degrees(Vector3(-20, 0, 0))
 
+
 func _start_intro():
     self.switcher.intro_played = true
     $"ui/logo".hide()
+    if not self.camera_reparented:
+        self.camera_reparented = true
+        self.map.remove_child(self.map.camera)
+        self.cart.add_child(self.map.camera)
+        self.map.camera.set_translation(Vector3(0, 0, 0))
+        self.map.camera.camera_lens.set_fov(90)
     self.audio.track("intro")
-    self.map.remove_child(self.map.camera)
-    self.cart.add_child(self.map.camera)
-    self.map.camera.set_translation(Vector3(0, 0, 0))
-    self.map.camera.camera_lens.set_fov(90)
     yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
     self.animations.play("path")
     self.map.camera.animations.play("fov")

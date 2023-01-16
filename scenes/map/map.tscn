@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/materials/arne32.tres" type="Material" id=1]
 [ext_resource path="res://assets/water/water_material.tres" type="Material" id=2]
@@ -22,9 +22,17 @@ albedo_color = Color( 0, 0, 0, 1 )
 material = SubResource( 2 )
 size = Vector2( 1000, 1000 )
 
+[sub_resource type="Gradient" id=6]
+interpolation_mode = 2
+offsets = PoolRealArray( 0.5, 0.55 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.176471, 0.898039, 0.956863, 1 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
+
 [sub_resource type="SpatialMaterial" id=4]
 flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
+albedo_texture = SubResource( 7 )
 
 [sub_resource type="PlaneMesh" id=5]
 material = SubResource( 4 )
@@ -86,21 +94,21 @@ cast_shadow = 0
 mesh = SubResource( 3 )
 
 [node name="plane1" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -30 )
+transform = Transform( 1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 0, 0, -30 )
 cast_shadow = 0
 mesh = SubResource( 5 )
 
 [node name="plane2" type="MeshInstance" parent="."]
-transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -30, 0, -30 )
+transform = Transform( 4.37114e-08, 1, -8.74228e-08, 1, -4.37114e-08, 0, -3.82137e-15, -8.74228e-08, -1, -30, 0, -30 )
 cast_shadow = 0
 mesh = SubResource( 5 )
 
 [node name="plane3" type="MeshInstance" parent="."]
-transform = Transform( -1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, -30, 0, 350 )
+transform = Transform( -5.21253e-16, -1.19249e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, 1.19249e-08, -30, 0, 350 )
 cast_shadow = 0
 mesh = SubResource( 5 )
 
 [node name="plane4" type="MeshInstance" parent="."]
-transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 330, 0, 0 )
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 350, 0, 0 )
 cast_shadow = 0
 mesh = SubResource( 5 )
