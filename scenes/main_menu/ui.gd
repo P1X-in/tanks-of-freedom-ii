@@ -10,6 +10,7 @@ onready var controls = $"controls/controls"
 onready var campaign_selection = $"campaign_selection/campaign_selection"
 onready var campaign_mission_selection = $"campaign_mission_selection/campaign_mission_selection"
 onready var campaign_mission = $"campaign_mission/campaign_mission"
+onready var online = $"online/online"
 
 func bind_menu(main_menu):
     self.menu.bind_menu(main_menu)
@@ -19,6 +20,7 @@ func bind_menu(main_menu):
     self.campaign_selection.bind_menu(main_menu)
     self.campaign_mission_selection.bind_menu(main_menu)
     self.campaign_mission.bind_menu(main_menu)
+    self.online.bind_menu(main_menu)
 
     self.set_version(self.settings.settings.os_string)
 
@@ -85,3 +87,9 @@ func show_saves():
 
 func hide_saves():
     self.saves.hide_saves()
+
+func show_online():
+    self.online.show_panel()
+
+func hide_online():
+    self.online.hide_panel()

@@ -165,3 +165,13 @@ func close_saves():
     self.gamepad_adapter.enable()
     yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
     self.ui.show_menu()
+
+func open_online():
+    self.ui.hide_menu()
+    yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.ui.show_online()
+
+func close_online():
+    self.ui.hide_online()
+    yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.ui.show_menu()

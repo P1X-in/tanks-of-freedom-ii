@@ -26,4 +26,4 @@ func show_panel():
 func hide_panel():
     self.animations.play("hide")
     self.set_process_input(false)
-    
+
