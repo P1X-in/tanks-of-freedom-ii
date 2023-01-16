@@ -11,5 +11,5 @@ dest_files=[ "res://.import/grand_beats_intro.ogg-3944a423f639bb5b870d99c4190087
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

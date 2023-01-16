@@ -9,6 +9,7 @@ onready var switcher = $"/root/SceneSwitcher"
 onready var gamepad_adapter = $"/root/GamepadAdapter"
 onready var match_setup = $"/root/MatchSetup"
 onready var campaign = $"/root/Campaign"
+onready var settings = $"/root/Settings"
 
 const MENU_TIMEOUT = 0.2
 
@@ -24,7 +25,7 @@ func _ready():
     if self.match_setup.campaign_win:
         self.reopen_campaign_mission_selection_after_win()
 
-    if not self.switcher.intro_played:
+    if not self.switcher.intro_played and self.settings.get_option("show_intro"):
         self.call_deferred("_start_intro")
     else:
         self._intro_finished()

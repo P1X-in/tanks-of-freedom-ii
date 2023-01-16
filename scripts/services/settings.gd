@@ -28,6 +28,7 @@ var settings = {
     "ips": 60.0,
     "locale": "en",
     "notify_ap_spent": true,
+    "show_intro": true,
 }
 
 

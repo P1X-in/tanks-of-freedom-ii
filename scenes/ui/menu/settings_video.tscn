@@ -33,3 +33,10 @@ margin_bottom = 270.0
 option_name = "TR_DECO_SHAD"
 option_key = "dec_shadows"
 help_tip = "TR_DECO_SHAD_DESC"
+
+[node name="intro" parent="." instance=ExtResource( 1 )]
+margin_top = 280.0
+margin_bottom = 330.0
+option_name = "TR_INTRO"
+option_key = "show_intro"
+help_tip = "TR_INTRO_DESC"
