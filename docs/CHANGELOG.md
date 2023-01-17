@@ -32,6 +32,8 @@
 - Added teams to gameplay
 - Added mission objectives
 - Added map frame
+- Added simple game intro
+- Added fake skybox
 - Added Obsidian Night faction
 - Added variety of new tiles
 - Added translations funcionality

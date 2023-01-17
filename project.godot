@@ -36,6 +36,7 @@ MatchSetup="*res://scripts/services/match_setup.gd"
 Settings="*res://scripts/services/settings.gd"
 Campaign="*res://scripts/services/campaign.gd"
 SavesManager="*res://scripts/services/saves_manager.gd"
+Online="*res://scripts/services/online.gd"
 
 [debug]
 
@@ -190,7 +191,7 @@ translations=PoolStringArray( "res://assets/translations/core.en.en.translation"
 
 [network]
 
-ssl/certificates="res://assets/dst.crt"
+ssl/certificates="res://assets/czlowiekimadlo.crt"
 
 [physics]
 

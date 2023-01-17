@@ -53,8 +53,10 @@ func _start_intro():
         self.cart.add_child(self.map.camera)
         self.map.camera.set_translation(Vector3(0, 0, 0))
         self.map.camera.camera_lens.set_fov(90)
-    self.audio.track("intro")
+    if self.settings.get_option("is_steamdeck"):
+        yield(self.get_tree().create_timer(1), "timeout")
     yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.audio.track("intro")
     self.animations.play("path")
     self.map.camera.animations.play("fov")
 

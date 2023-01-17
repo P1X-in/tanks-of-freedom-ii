@@ -7,7 +7,6 @@
 [ext_resource path="res://scenes/ui/menu/settings_audio.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/ui/menu/settings_graphics.tscn" type="PackedScene" id=6]
 
-
 [sub_resource type="Animation" id=3]
 length = 0.001
 tracks/0/type = "value"
