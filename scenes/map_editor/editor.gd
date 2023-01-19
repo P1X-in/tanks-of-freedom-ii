@@ -294,6 +294,9 @@ func handle_picker_output(args):
 
     self.close_picker()
     self.set_map_name(map_name)
+    if self.map.model.metadata.has("name"):
+        self.set_map_name(self.map.model.metadata["name"])
+
 
 func quicksave():
     if self.current_map_name != "":

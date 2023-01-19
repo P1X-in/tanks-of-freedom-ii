@@ -2,6 +2,7 @@ extends Node2D
 
 const MODE_NAME = "name"
 const MODE_SELECT = "select"
+const MODE_BROWSE = "browse"
 
 const PAGE_SIZE = 10
 
@@ -33,6 +34,8 @@ onready var map_selection_buttons = [
 ]
 onready var minimap = $"widgets/minimap"
 
+onready var tabs_bar = $"widgets/tabs"
+
 
 var bound_success_object = null
 var bound_success_method = null
@@ -43,11 +46,13 @@ var bound_cancel_method = null
 var bound_cancel_args = []
 
 var operation_mode = "name"
+var list_mode = null
 var current_page = 0
 
 func _ready():
     self.connect_buttons()
-    self.set_process_input(false)  
+    self.set_process_input(false)
+    self.list_mode = self.map_list_service.LIST_STOCK
 
 func _input(event):
     if event.is_action_pressed("ui_cancel") or event.is_action_pressed('editor_menu'):
@@ -68,6 +73,18 @@ func set_name_mode():
 func set_select_mode():
     self.operation_mode = self.MODE_SELECT
     self.name_group.hide()
+
+func set_browse_mode():
+    self.operation_mode = self.MODE_BROWSE
+    self.name_group.hide()
+
+func lock_tab_bar():
+    self.list_mode = self.map_list_service.LIST_CUSTOM
+    self.tabs_bar.hide()
+
+func unlock_tab_bar():
+    self.tabs_bar.show()
+
 
 func clear_binds():
     self.bound_success_object = null
@@ -108,7 +125,7 @@ func execute_load():
         return
 
     self.execute_success(map_name, "load")
-    
+
 
 func execute_save():
     self.audio.play("menu_click")
@@ -153,13 +170,13 @@ func set_map_name(name):
     self._on_map_name_text_changed(name)
 
 func refresh_current_maps_page():
-    var pages_count = self.map_list_service.get_pages_count(self.PAGE_SIZE)
+    var pages_count = self.map_list_service.get_pages_count(self.list_mode, self.PAGE_SIZE)
 
     if self.current_page == 0 || pages_count < 2:
         self.prev_button.hide()
     elif self.current_page > 0:
         self.prev_button.show()
-        
+
 
     if self.current_page == pages_count - 1 || pages_count < 2:
         self.next_button.hide()
@@ -169,9 +186,9 @@ func refresh_current_maps_page():
     for map_button in self.map_selection_buttons:
         map_button.hide()
 
-    var maps_page = self.map_list_service.get_maps_page(self.current_page, self.PAGE_SIZE)
+    var maps_page = self.map_list_service.get_maps_page(self.list_mode, self.current_page, self.PAGE_SIZE)
     var map_details
-        
+
     for index in range(maps_page.size()):
         map_details = self.map_list_service.get_map_details(maps_page[index])
         self.map_selection_buttons[index].fill_data(map_details["name"], map_details["online_id"])
@@ -191,7 +208,7 @@ func switch_to_prev_page():
 
 func switch_to_next_page():
     self.audio.play("menu_click")
-    var pages_count = self.map_list_service.get_pages_count(self.PAGE_SIZE)
+    var pages_count = self.map_list_service.get_pages_count(self.list_mode, self.PAGE_SIZE)
 
     if self.current_page < pages_count - 1:
         self.current_page += 1
@@ -209,6 +226,8 @@ func map_button_pressed(name):
         self.set_map_name(name)
         self.load_button.grab_focus()
     elif self.operation_mode == self.MODE_SELECT:
+        self.execute_success(name, "select")
+    elif self.operation_mode == self.MODE_BROWSE:
         self.execute_success(name, "select")
 
 func map_button_focused(name):
@@ -231,3 +250,24 @@ func connect_buttons():
 func _on_map_name_text_changed(new_text):
     self.save_button.set_disabled(self.map_list_service.is_reserved_name(new_text))
 
+
+
+func _on_stock_button_pressed():
+    self.audio.play("menu_click")
+    self.list_mode = self.map_list_service.LIST_STOCK
+    self.current_page = 0
+    self.refresh_current_maps_page()
+
+
+func _on_custom_button_pressed():
+    self.audio.play("menu_click")
+    self.list_mode = self.map_list_service.LIST_CUSTOM
+    self.current_page = 0
+    self.refresh_current_maps_page()
+
+
+func _on_downloaded_button_pressed():
+    self.audio.play("menu_click")
+    self.list_mode = self.map_list_service.LIST_DOWNLOADED
+    self.current_page = 0
+    self.refresh_current_maps_page()

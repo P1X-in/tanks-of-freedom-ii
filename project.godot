@@ -8,8 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Object",
+"class": "OnlineConnector",
+"language": "GDScript",
+"path": "res://scripts/services/online/connector.gd"
+}, {
+"base": "Object",
+"class": "OnlineMaps",
+"language": "GDScript",
+"path": "res://scripts/services/online/maps.gd"
+}, {
+"base": "Object",
+"class": "OnlinePlayer",
+"language": "GDScript",
+"path": "res://scripts/services/online/player.gd"
+} ]
 _global_script_class_icons={
+"OnlineConnector": "",
+"OnlineMaps": "",
+"OnlinePlayer": ""
 }
 
 [application]

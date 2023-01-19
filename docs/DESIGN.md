@@ -429,7 +429,7 @@ Buildings can be neutral, or belong to one of the players. Player can ocuppy a b
 There will be no Fog of War, that was present in the previous game.
 There will be no dedicated battle screen, with combat taking place direclty on the main board.
 
-Combat may cause collateral damage to the buildings and terrain around them.
+Combat may cause collateral damage to the buildings and terrain around them. Damage is cosmetic only.
 
 Resources gained from buildings will be taxed according to the amount of units deployed, to prevent unit spam.
 
@@ -531,14 +531,15 @@ Special: Medkit/Repair Kit - can restore up to 5 HP to any unit
 Specialized vehicle carrying ground-to-ground and ground-to-air missiles.
 
 Strengths:
+- strong against infantry
 - strong against flying units
 - powerful special
 
 Weaknesses:
-- low health
+- no armour
 - very expensive
 - can not fight directly
-- short range
+- can't attack on cooldown
 
 Special: Missile - can damage a unit within 4 squares, both air and ground
 
@@ -620,7 +621,7 @@ An example of possible powers:
 Each side will use the same buildings to gain resources and deploy units. Buildings have different styles that reflect the style of nation that built it. Buildings will not change style depending on controlling nation, being fixed for a particular map instead.
 Buildings can heal units that are produced in them.
 
-#### Headquarter
+#### Headquarters
 
 Main building, that need to be defended. When HQ is captured, the game is over.
 
@@ -661,6 +662,32 @@ Regular buildings, that can be garrisoned with Infantry for additional armor. Ca
 
 Units deployed: N/A
 AP gain per round: 0
+
+## Online features
+
+### Map sharing
+
+Once a custom map is created and verified (player won on it) it can be shared online via ToF Server. Server is a separate application in a different repository.
+
+#### Map preparation
+
+Once the map is done in the editor, it will be marked as unverified. Any verified map will be marked as unverified when it is modified. Player needs to win a skirmish match on this map in order for this map to be viable for upload. When map is saved, it's version iterator is incremented.
+
+#### Map upload
+
+In order to upload a map, an appropriate option from the Online menu must be selected. Then, a map from the list is picked. If a map has already been uploaded, it will not be uploaded again. This is verified by checking if the map metadata contains an online map id.
+
+Once a map is selected, it will be uploaded to a server endpoint, and it will return a new map id, that will be stored with the map. The map is then also added to the list of online enabled maps.
+
+Online map id will consistent of a randomly generated code and the maps iterator. If a map with pre-existing id is uploaded, it's code will be re-used with new iterator value. This will help with map continuity
+
+#### Map download
+
+In order to download a map, an appropriate option from the Online menu must be selected. Then, a list of latest or most downloaded maps can be seen and paged. Game client should download more pages as the player goes futher down the list. Once map is selected, it can be downloaded.
+
+Map can also be downloaded by manually inputting a map id.
+
+If that particular map already exists, it is not downloaded.
 
 ## Art Style
 

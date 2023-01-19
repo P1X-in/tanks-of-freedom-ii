@@ -182,3 +182,29 @@ func close_online():
     self.ui.hide_online()
     yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
     self.ui.show_menu()
+
+
+func open_upload_picker():
+    self.ui.hide_online()
+    yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.ui.picker.set_select_mode()
+    self.ui.picker.lock_tab_bar()
+    self.ui.show_picker()
+
+    self.ui.picker.bind_cancel(self, "close_upload_picker")
+    self.ui.picker.bind_success(self, "handle_upload_output")
+
+func close_upload_picker():
+    self.ui.hide_picker()
+    self.gamepad_adapter.enable()
+    yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.ui.picker.unlock_tab_bar()
+    self.ui.show_online()
+
+func handle_upload_output(args):
+    self.ui.hide_picker()
+    self.gamepad_adapter.enable()
+    yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.ui.picker.unlock_tab_bar()
+    self.ui.online.selected_upload_map = args[0]
+    self.ui.show_online()

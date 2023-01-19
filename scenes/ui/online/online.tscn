@@ -10,6 +10,7 @@
 script = ExtResource( 2 )
 
 [node name="register" type="Control" parent="widgets" index="0"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -43,14 +44,126 @@ margin_bottom = 550.0
 custom_fonts/font = ExtResource( 5 )
 text = "TR_REGISTER"
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
 [node name="online" type="Control" parent="widgets" index="1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="tabs" type="Control" parent="widgets/online" index="0"]
+anchor_right = 1.0
+margin_bottom = 100.0
+
+[node name="matches_button" type="Button" parent="widgets/online/tabs" index="0"]
+margin_left = 50.0
+margin_top = 20.0
+margin_right = 550.0
+margin_bottom = 100.0
+custom_fonts/font = ExtResource( 5 )
+disabled = true
+text = "TR_MATCHES"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="maps_button" type="Button" parent="widgets/online/tabs" index="1"]
+margin_left = 650.0
+margin_top = 20.0
+margin_right = 1150.0
+margin_bottom = 100.0
+custom_fonts/font = ExtResource( 5 )
+disabled = true
+text = "TR_MAPS"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="maps" type="Control" parent="widgets/online" index="1"]
+visible = false
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.8
+
+[node name="main" type="Control" parent="widgets/online/maps" index="0"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="upload_button" type="Button" parent="widgets/online/maps/main" index="0"]
+margin_left = 350.0
+margin_top = 100.0
+margin_right = 850.0
+margin_bottom = 200.0
+custom_fonts/font = ExtResource( 5 )
+text = "TR_UPLOAD_MAP"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="download_button" type="Button" parent="widgets/online/maps/main" index="1"]
+margin_left = 350.0
+margin_top = 250.0
+margin_right = 850.0
+margin_bottom = 350.0
+custom_fonts/font = ExtResource( 5 )
+text = "TR_DOWNLOAD_MAP"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="upload" type="Control" parent="widgets/online/maps" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="description" type="Label" parent="widgets/online/maps/upload" index="0"]
+anchor_left = 0.1
+anchor_top = 0.5
+anchor_right = 0.9
+anchor_bottom = 0.5
+margin_top = -150.0
+margin_bottom = -100.0
+custom_fonts/font = ExtResource( 4 )
+text = "TR_SELECTED_MAP"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="name" type="Label" parent="widgets/online/maps/upload" index="1"]
+anchor_left = 0.1
+anchor_top = 0.5
+anchor_right = 0.9
+anchor_bottom = 0.5
+margin_top = -100.0
+margin_bottom = -50.0
+custom_fonts/font = ExtResource( 4 )
+text = "name"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="confirm_upload_button" type="Button" parent="widgets/online/maps/upload" index="2"]
+margin_left = 350.0
+margin_top = 200.0
+margin_right = 850.0
+margin_bottom = 300.0
+custom_fonts/font = ExtResource( 5 )
+text = "TR_CONFIRM"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="change_button" type="Button" parent="widgets/online/maps/upload" index="3"]
+margin_left = 350.0
+margin_top = 320.0
+margin_right = 850.0
+margin_bottom = 420.0
+custom_fonts/font = ExtResource( 5 )
+text = "TR_CHANGE_MAP"
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="back_button" type="Button" parent="widgets" index="2"]
 margin_left = 550.0
@@ -65,4 +178,8 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="widgets/register/register_button" to="." method="_on_register_button_pressed"]
+[connection signal="pressed" from="widgets/online/maps/main/upload_button" to="." method="_on_upload_button_pressed"]
+[connection signal="pressed" from="widgets/online/maps/main/download_button" to="." method="_on_download_button_pressed"]
+[connection signal="pressed" from="widgets/online/maps/upload/confirm_upload_button" to="." method="_on_confirm_upload_button_pressed"]
+[connection signal="pressed" from="widgets/online/maps/upload/change_button" to="." method="_on_upload_button_pressed"]
 [connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/units/audio/tank_attack.wav" type="AudioStream" id=1]
 [ext_resource path="res://assets/units/audio/tank_die.wav" type="AudioStream" id=2]
-[ext_resource path="res://assets/units/audio/motorcycle_move.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/units/audio/tank_move.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/units/audio/tank_spawn.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/units/audio/tank_damage.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/units/audio/tank_hit.wav" type="AudioStream" id=6]

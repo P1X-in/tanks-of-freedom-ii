@@ -5,7 +5,14 @@ func _init(map_scene):
     self.map = map_scene
 
 func save_map_file(filename):
-    MapManager.save_map_to_file(filename, self.map.model.get_dict())
+    if self.map.model.metadata.has("iteration"):
+        self.map.model.metadata["iteration"] += 1
+    if not self.map.model.metadata.has("name") or self.map.model.metadata["name"] != filename:
+        self.map.model.metadata["name"] = filename
+        self.map.model.metadata["iteration"] = 0
+        self.map.model.metadata["base_code"] = null
+    var map_data = self.map.model.get_dict()
+    MapManager.save_map_to_file(filename, map_data)
 
 func load_map_file(filename):
     var content = MapManager.get_map_data(filename)
