@@ -76,11 +76,11 @@ func _intro_finished():
 func open_picker():
     self.ui.hide_menu()
     yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.ui.picker.set_select_mode()
     self.ui.show_picker()
 
     self.ui.picker.bind_cancel(self, "close_picker")
     self.ui.picker.bind_success(self, "handle_picker_output")
-    self.ui.picker.set_select_mode()
 
 func close_picker():
     self.ui.hide_picker()
@@ -207,4 +207,33 @@ func handle_upload_output(args):
     yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
     self.ui.picker.unlock_tab_bar()
     self.ui.online.selected_upload_map = args[0]
+    self.ui.show_online()
+
+func open_download_picker():
+    self.ui.hide_online()
+    yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.ui.picker.set_browse_mode()
+    self.ui.show_picker()
+
+    self.ui.picker.bind_cancel(self, "close_download_picker")
+    self.ui.picker.bind_success(self, "handle_download_output")
+
+func close_download_picker():
+    self.ui.hide_picker()
+    self.gamepad_adapter.enable()
+    yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.ui.picker.unlock_tab_bar()
+    self.ui.picker.list_mode = self.ui.picker.map_list_service.LIST_STOCK
+    self.ui.picker.current_page = 0
+    self.ui.online.selected_download_map = null
+    self.ui.show_online()
+
+func handle_download_output(args):
+    self.ui.hide_picker()
+    self.gamepad_adapter.enable()
+    yield(self.get_tree().create_timer(self.MENU_TIMEOUT), "timeout")
+    self.ui.picker.unlock_tab_bar()
+    self.ui.picker.list_mode = self.ui.picker.map_list_service.LIST_STOCK
+    self.ui.picker.current_page = 0
+    self.ui.online.selected_download_map = args[0]
     self.ui.show_online()

@@ -1,9 +1,11 @@
 extends TextureButton
 
 onready var label = $"label"
+onready var downloads_label = $"downloads"
 
 var map_name
 var online_id
+var downloads
 
 var bound_object = null
 var bound_method = null
@@ -18,9 +20,10 @@ func _ready():
     self.label.notification(NOTIFICATION_TRANSLATION_CHANGED)
 
 
-func fill_data(name, map_online_id):
+func fill_data(name, map_online_id, downloads_amount=null):
     self.map_name = name
     self.online_id = map_online_id
+    self.downloads = downloads_amount
 
     self.refresh_label()
 
@@ -29,9 +32,14 @@ func refresh_label():
     var new_text = self.map_name
 
     if self.online_id != null:
-        new_text += " (" + self.online_id + ")"
+        new_text = self.online_id + " - " + new_text
 
     self.label.set_text(new_text)
+    if self.downloads != null:
+        self.downloads_label.show()
+        self.downloads_label.set_text(str(self.downloads))
+    else:
+        self.downloads_label.hide()
 
 
 func bind_method(new_object, new_method):

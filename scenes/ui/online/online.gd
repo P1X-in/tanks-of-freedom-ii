@@ -13,20 +13,29 @@ onready var maps_panel = $"widgets/online/maps"
 onready var maps_main = $"widgets/online/maps/main"
 onready var upload_button = $"widgets/online/maps/main/upload_button"
 onready var download_button = $"widgets/online/maps/main/download_button"
+
 onready var maps_upload = $"widgets/online/maps/upload"
 onready var confirm_upload_button = $"widgets/online/maps/upload/confirm_upload_button"
 onready var change_button = $"widgets/online/maps/upload/change_button"
 onready var upload_desc = $"widgets/online/maps/upload/description"
 onready var upload_name = $"widgets/online/maps/upload/name"
 
+onready var maps_download = $"widgets/online/maps/download"
+onready var retry_download_button = $"widgets/online/maps/download/retry_button"
+onready var download_desc = $"widgets/online/maps/download/description"
+onready var download_name = $"widgets/online/maps/download/name"
+
 var working = false
 
 var selected_upload_map = null
+var selected_download_map = null
 
 func _ready():
     ._ready()
     self.upload_name.set_message_translation(false)
     self.upload_name.notification(NOTIFICATION_TRANSLATION_CHANGED)
+    self.download_name.set_message_translation(false)
+    self.download_name.notification(NOTIFICATION_TRANSLATION_CHANGED)
 
 func _on_back_button_pressed():
     if self.working:
@@ -34,6 +43,9 @@ func _on_back_button_pressed():
     self.audio.play("menu_back")
     if self.selected_upload_map != null:
         self.selected_upload_map = null
+        self._select_panel()
+    if self.selected_download_map != null:
+        self.selected_download_map = null
         self._select_panel()
     else:
         self.main_menu.close_online()
@@ -85,21 +97,24 @@ func _configure_online_panel():
 
 func _configure_maps_panel():
     self.maps_panel.show()
+    self.maps_main.hide()
+    self.maps_upload.hide()
+    self.maps_download.hide()
     if self.selected_upload_map != null:
         self._configure_maps_upload_confirm_panel()
+    elif self.selected_download_map != null:
+        self._configure_maps_download_panel()
     else:
         self._configure_maps_upload_panel()
 
 
 func _configure_maps_upload_panel():
     self.maps_main.show()
-    self.maps_upload.hide()
     yield(self.get_tree().create_timer(0.1), "timeout")
     self.upload_button.grab_focus()
 
 
 func _configure_maps_upload_confirm_panel():
-    self.maps_main.hide()
     self.maps_upload.show()
     self.change_button.show()
     self.confirm_upload_button.show()
@@ -108,6 +123,14 @@ func _configure_maps_upload_confirm_panel():
     self.confirm_upload_button.set_text(tr("TR_CONFIRM"))
     yield(self.get_tree().create_timer(0.1), "timeout")
     self.confirm_upload_button.grab_focus()
+
+
+func _configure_maps_download_panel():
+    self.maps_download.show()
+    self.download_desc.set_text(tr("TR_DOWNLOADING_MAP"))
+    self.download_name.set_text(self.selected_download_map)
+    self._on_retry_button_pressed()
+
 
 func _configure_registration_panel():
     self.online_panel.hide()
@@ -125,6 +148,7 @@ func _on_upload_button_pressed():
 
 func _on_download_button_pressed():
     self.audio.play("menu_click")
+    self.main_menu.open_download_picker()
 
 
 func _on_confirm_upload_button_pressed():
@@ -145,15 +169,42 @@ func _on_confirm_upload_button_pressed():
     self.working = false
     self.back_button.show()
     if result != "":
-        self.register_description.set_text(tr("TR_UPLOADING_SUCCESS"))
+        self.upload_desc.set_text(tr("TR_UPLOADING_SUCCESS"))
         self.upload_name.set_text(result)
         yield(self.get_tree().create_timer(0.1), "timeout")
         self.back_button.grab_focus()
     else:
-        self.back_button.show()
         self.change_button.show()
         self.confirm_upload_button.show()
         self.confirm_upload_button.set_text(tr("TR_RETRY"))
-        self.register_description.set_text(tr("TR_UPLOADING_FAIL"))
+        self.upload_desc.set_text(tr("TR_UPLOADING_FAIL"))
         yield(self.get_tree().create_timer(0.1), "timeout")
         self.confirm_upload_button.grab_focus()
+
+
+func _on_retry_button_pressed():
+    if self.working:
+        return
+
+    self.working = true
+    self.audio.play("menu_click")
+    self.download_desc.set_text(tr("TR_DOWNLOADING_MAP"))
+    self.retry_download_button.hide()
+    self.back_button.hide()
+
+    var result = self.online.download_map(self.selected_download_map)
+    if result is GDScriptFunctionState:
+        result = yield(result, "completed")
+
+    self.working = false
+    self.back_button.show()
+
+    if result:
+        self.download_desc.set_text(tr("TR_DOWNLOADING_SUCCESS"))
+        yield(self.get_tree().create_timer(0.1), "timeout")
+        self.back_button.grab_focus()
+    else:
+        self.retry_download_button.show()
+        self.download_desc.set_text(tr("TR_DOWNLOADING_FAIL"))
+        yield(self.get_tree().create_timer(0.1), "timeout")
+        self.retry_download_button.grab_focus()

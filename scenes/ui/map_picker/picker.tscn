@@ -173,6 +173,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="code" type="Control" parent="widgets"]
+visible = false
+margin_left = 25.0
+margin_top = 600.0
+margin_right = 425.0
+margin_bottom = 700.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="code" type="LineEdit" parent="widgets/code"]
+margin_right = 300.0
+margin_bottom = 30.0
+custom_fonts/font = ExtResource( 2 )
+align = 1
+max_length = 24
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="download_button" type="Button" parent="widgets/code"]
+margin_top = 40.0
+margin_right = 300.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 2 )
+text = "TR_DOWNLOAD"
+
 [node name="cancel_button" type="Button" parent="widgets"]
 margin_left = 1025.0
 margin_top = 640.0
@@ -204,6 +231,25 @@ margin_left = 800.0
 margin_right = 1150.0
 margin_bottom = 40.0
 text = "TR_DOWNLOADED"
+
+[node name="online" type="Control" parent="widgets"]
+visible = false
+margin_left = 25.0
+margin_top = 10.0
+margin_right = 1175.0
+margin_bottom = 50.0
+
+[node name="latest_button" type="Button" parent="widgets/online"]
+margin_left = 100.0
+margin_right = 450.0
+margin_bottom = 40.0
+text = "TR_LATEST"
+
+[node name="top_button" type="Button" parent="widgets/online"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 40.0
+text = "TR_TOP_DOWNLOADED"
 
 [node name="map_list" type="Control" parent="widgets"]
 margin_left = 25.0
@@ -284,6 +330,21 @@ margin_top = 300.0
 margin_right = 965.0
 margin_bottom = 340.0
 
+[node name="thumb" type="TextureRect" parent="widgets/minimap"]
+visible = false
+margin_left = -240.0
+margin_top = -240.0
+margin_right = 240.0
+margin_bottom = 240.0
+expand = true
+
+[node name="label" type="Label" parent="widgets/minimap/thumb"]
+margin_right = 480.0
+margin_bottom = 480.0
+text = "TR_FETCHING"
+align = 1
+valign = 1
+
 [node name="animations" type="AnimationPlayer" parent="."]
 playback_speed = 4.0
 anims/RESET = SubResource( 3 )
@@ -291,6 +352,9 @@ anims/hide = SubResource( 1 )
 anims/show = SubResource( 2 )
 
 [connection signal="text_changed" from="widgets/name/map_name" to="." method="_on_map_name_text_changed"]
+[connection signal="pressed" from="widgets/code/download_button" to="." method="_on_download_button_pressed"]
 [connection signal="pressed" from="widgets/tabs/stock_button" to="." method="_on_stock_button_pressed"]
 [connection signal="pressed" from="widgets/tabs/custom_button" to="." method="_on_custom_button_pressed"]
 [connection signal="pressed" from="widgets/tabs/downloaded_button" to="." method="_on_downloaded_button_pressed"]
+[connection signal="pressed" from="widgets/online/latest_button" to="." method="_on_latest_button_pressed"]
+[connection signal="pressed" from="widgets/online/top_button" to="." method="_on_top_button_pressed"]

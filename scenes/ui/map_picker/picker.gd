@@ -4,11 +4,15 @@ const MODE_NAME = "name"
 const MODE_SELECT = "select"
 const MODE_BROWSE = "browse"
 
+const LIST_LATEST = "latest"
+const LIST_DOWNLOADED = "downloaded"
+
 const PAGE_SIZE = 10
 
 onready var audio = $"/root/SimpleAudioLibrary"
 onready var animations = $"animations"
 
+onready var tabs_bar = $"widgets/tabs"
 onready var name_group = $"widgets/name"
 onready var map_name_field = $"widgets/name/map_name"
 onready var save_button = $"widgets/name/save_button"
@@ -17,8 +21,14 @@ onready var cancel_button = $"widgets/cancel_button"
 onready var next_button = $"widgets/list_next"
 onready var prev_button = $"widgets/list_prev"
 
+onready var online_bar = $"widgets/online"
+onready var code_group = $"widgets/code"
+onready var code_field = $"widgets/code/code"
+onready var download_button = $"widgets/code/download_button"
+
 onready var map_list_service = $"/root/MapManager"
 onready var gamepad_adapter = $"/root/GamepadAdapter"
+onready var online_service = $"/root/Online"
 
 onready var map_selection_buttons = [
     $"widgets/map_list/map0",
@@ -33,8 +43,9 @@ onready var map_selection_buttons = [
     $"widgets/map_list/map9",
 ]
 onready var minimap = $"widgets/minimap"
+onready var thumb = $"widgets/minimap/thumb"
+onready var thumb_label = $"widgets/minimap/thumb/label"
 
-onready var tabs_bar = $"widgets/tabs"
 
 
 var bound_success_object = null
@@ -48,6 +59,9 @@ var bound_cancel_args = []
 var operation_mode = "name"
 var list_mode = null
 var current_page = 0
+
+var last_online_id = -1
+var last_focused_code = null
 
 func _ready():
     self.connect_buttons()
@@ -69,14 +83,25 @@ func _input(event):
 func set_name_mode():
     self.operation_mode = self.MODE_NAME
     self.name_group.show()
+    self.code_group.hide()
+    self.online_bar.hide()
 
 func set_select_mode():
     self.operation_mode = self.MODE_SELECT
     self.name_group.hide()
+    self.code_group.hide()
+    self.online_bar.hide()
 
 func set_browse_mode():
     self.operation_mode = self.MODE_BROWSE
+    self.list_mode = self.LIST_LATEST
+    self.current_page = 0
+    self.manage_pagination_buttons(0)
     self.name_group.hide()
+    self.code_group.show()
+    self.online_bar.show()
+    self.tabs_bar.hide()
+    self.minimap.wipe()
 
 func lock_tab_bar():
     self.list_mode = self.map_list_service.LIST_CUSTOM
@@ -148,12 +173,22 @@ func show_picker():
     self.animations.play("show")
     self.set_process_input(true)
 
-    self.refresh_current_maps_page()
+    self.last_online_id = -1
+    self.online_service.clear_cache()
+    self.thumb.hide()
+    self.minimap.wipe()
+
+    if self.operation_mode == self.MODE_BROWSE:
+        self.refresh_online_maps_page()
+    else:
+        self.refresh_current_maps_page()
     yield(self.get_tree().create_timer(0.1), "timeout")
     if self.map_selection_buttons[0].is_visible():
         self.map_selection_buttons[0].grab_focus()
     elif self.name_group.is_visible():
         self.save_button.grab_focus()
+    elif self.operation_mode == self.MODE_BROWSE:
+        self.code_field.grab_focus()
     else:
         self.cancel_button.grab_focus()
 
@@ -169,20 +204,45 @@ func set_map_name(name):
     self.map_name_field.set_text(name)
     self._on_map_name_text_changed(name)
 
+func set_code(code):
+    self.code_field.set_text(code)
+
+func refresh_online_maps_page():
+    for map_button in self.map_selection_buttons:
+        map_button.hide()
+    self.thumb.hide()
+    var result
+
+    if self.list_mode == self.LIST_DOWNLOADED and not  self.online_service.maps.listing_end:
+        result = self.online_service.fetch_top_downloads()
+        if result is GDScriptFunctionState:
+            result = yield(result, "completed")
+
+    if self.last_online_id == -1:
+        result = self._fetch_next_online_page()
+        if result is GDScriptFunctionState:
+            result = yield(result, "completed")
+
+    var pages_count = self.online_service.get_pages_count(self.PAGE_SIZE)
+    if self.current_page == pages_count - 2:
+        result = self._fetch_next_online_page()
+        if result is GDScriptFunctionState:
+            result = yield(result, "completed")
+
+    self.manage_pagination_buttons(pages_count)
+    var maps_page = self.online_service.get_maps_page(self.current_page, self.PAGE_SIZE)
+    var map_details
+    for index in range(maps_page.size()):
+        map_details = maps_page[index]
+        self.map_selection_buttons[index].fill_data(map_details["name"], map_details["code"], map_details["downloads"])
+        self.map_selection_buttons[index].show()
+        self.online_service.fetch_thumbnail(map_details["code"])
+
+
 func refresh_current_maps_page():
     var pages_count = self.map_list_service.get_pages_count(self.list_mode, self.PAGE_SIZE)
 
-    if self.current_page == 0 || pages_count < 2:
-        self.prev_button.hide()
-    elif self.current_page > 0:
-        self.prev_button.show()
-
-
-    if self.current_page == pages_count - 1 || pages_count < 2:
-        self.next_button.hide()
-    elif self.current_page < pages_count - 1:
-        self.next_button.show()
-
+    self.manage_pagination_buttons(pages_count)
     for map_button in self.map_selection_buttons:
         map_button.hide()
 
@@ -194,12 +254,26 @@ func refresh_current_maps_page():
         self.map_selection_buttons[index].fill_data(map_details["name"], map_details["online_id"])
         self.map_selection_buttons[index].show()
 
+func manage_pagination_buttons(pages_count):
+    if self.current_page == 0 || pages_count < 2:
+        self.prev_button.hide()
+    elif self.current_page > 0:
+        self.prev_button.show()
+
+    if self.current_page == pages_count - 1 || pages_count < 2:
+        self.next_button.hide()
+    elif self.current_page < pages_count - 1:
+        self.next_button.show()
+
 func switch_to_prev_page():
     self.audio.play("menu_click")
     if self.current_page > 0:
         self.current_page -= 1
 
-    self.refresh_current_maps_page()
+    if self.operation_mode == self.MODE_BROWSE:
+        self.refresh_online_maps_page()
+    else:
+        self.refresh_current_maps_page()
 
     if self.current_page == 0:
         if self.next_button.is_visible():
@@ -208,12 +282,19 @@ func switch_to_prev_page():
 
 func switch_to_next_page():
     self.audio.play("menu_click")
-    var pages_count = self.map_list_service.get_pages_count(self.list_mode, self.PAGE_SIZE)
+    var pages_count
+    if self.operation_mode == self.MODE_BROWSE:
+        pages_count = self.online_service.get_pages_count(self.PAGE_SIZE)
+    else:
+        pages_count = self.map_list_service.get_pages_count(self.list_mode, self.PAGE_SIZE)
 
     if self.current_page < pages_count - 1:
         self.current_page += 1
 
-    self.refresh_current_maps_page()
+    if self.operation_mode == self.MODE_BROWSE:
+        self.refresh_online_maps_page()
+    else:
+        self.refresh_current_maps_page()
 
     if self.current_page == pages_count - 1:
         if self.prev_button.is_visible():
@@ -228,10 +309,23 @@ func map_button_pressed(name):
     elif self.operation_mode == self.MODE_SELECT:
         self.execute_success(name, "select")
     elif self.operation_mode == self.MODE_BROWSE:
-        self.execute_success(name, "select")
+        self.set_code(name)
+        self.download_button.grab_focus()
 
 func map_button_focused(name):
-    minimap.fill_minimap(name)
+    if self.operation_mode == self.MODE_BROWSE:
+        self.last_focused_code = name
+        self.thumb.show()
+        self.thumb_label.show()
+        var image = self.online_service.fetch_thumbnail(name)
+        if image is GDScriptFunctionState:
+            image = yield(image, "completed")
+        if self.last_focused_code == image["code"] and image["image"] != null:
+            self.thumb_label.hide()
+            self.thumb.texture = image["image"]
+    else:
+        self.thumb.hide()
+        self.minimap.fill_minimap(name)
 
 func connect_buttons():
     self.cancel_button.connect("pressed", self, "execute_cancel")
@@ -251,6 +345,15 @@ func _on_map_name_text_changed(new_text):
     self.save_button.set_disabled(self.map_list_service.is_reserved_name(new_text))
 
 
+func _fetch_next_online_page():
+    if self.online_service.maps.listing_end:
+        return
+
+    var result = self.online_service.fetch_listing_chunk(self.last_online_id)
+
+    if result is GDScriptFunctionState:
+        result = yield(result, "completed")
+    self.last_online_id = result
 
 func _on_stock_button_pressed():
     self.audio.play("menu_click")
@@ -271,3 +374,36 @@ func _on_downloaded_button_pressed():
     self.list_mode = self.map_list_service.LIST_DOWNLOADED
     self.current_page = 0
     self.refresh_current_maps_page()
+
+
+func _on_latest_button_pressed():
+    self.audio.play("menu_click")
+    if self.list_mode == self.LIST_LATEST:
+        return
+    self.list_mode = self.LIST_LATEST
+    self.current_page = 0
+    self.manage_pagination_buttons(0)
+    self.last_online_id = -1
+    self.online_service.clear_cache()
+    self.refresh_online_maps_page()
+
+
+func _on_top_button_pressed():
+    if self.list_mode == self.LIST_DOWNLOADED:
+        return
+    self.list_mode = self.LIST_DOWNLOADED
+    self.current_page = 0
+    self.manage_pagination_buttons(0)
+    self.last_online_id = -1
+    self.online_service.clear_cache()
+    self.refresh_online_maps_page()
+
+
+func _on_download_button_pressed():
+    self.audio.play("menu_click")
+    var code = self.code_field.get_text()
+
+    if code == "" || code == null:
+        return
+
+    self.execute_success(code, "download")
