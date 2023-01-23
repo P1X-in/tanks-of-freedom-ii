@@ -4,6 +4,7 @@ class_name OnlineMaps
 var BROWSER_PAGE_SIZE: int = 20
 
 var MAPS_URL: String = "/v2/maps"
+var MAPS_V1_URL: String = "/maps"
 var BROWSE_LISTING: String = "/listing"
 var BROWSE_TOP: String = "/top/downloads"
 
@@ -21,8 +22,33 @@ func clear_cache() -> void:
     self.listing_end = false
 
 
+func _base_url(api_version: int = 0) -> String:
+    var version = api_version
+
+    if version == 0:
+        version = self.online_service.api_version
+
+    if version == 1:
+        return self.MAPS_V1_URL
+    elif version == 2:
+        return self.MAPS_URL
+    return ""
+
+func _map_ext(api_version: int = 0) -> String:
+    var version = api_version
+
+    if version == 0:
+        version = self.online_service.api_version
+
+    if version == 1:
+        return ".json"
+    elif version == 2:
+        return ".tofmap.json"
+    return ""
+
+
 func fetch_listing_chunk(last_id: int) -> int:
-    var resource: String = self.MAPS_URL + self.BROWSE_LISTING
+    var resource: String = self._base_url() + self.BROWSE_LISTING
 
     if last_id > 0:
         resource += "/" + str(last_id)
@@ -47,7 +73,7 @@ func fetch_listing_chunk(last_id: int) -> int:
 
 func fetch_top_downloads() -> int:
     self.clear_cache()
-    var resource: String = self.MAPS_URL + self.BROWSE_TOP
+    var resource: String = self._base_url() + self.BROWSE_TOP
 
     var response = self.online_service.connector._get_request(resource, true)
     if response is GDScriptFunctionState:
@@ -74,7 +100,7 @@ func upload_map(map_data: Dictionary) -> Dictionary:
     message['data'] = map_data
     serialized_json = JSON.print(message)
 
-    var response = self.online_service.connector._post_request(self.MAPS_URL, serialized_json)
+    var response = self.online_service.connector._post_request(self._base_url(), serialized_json)
 
     if response is GDScriptFunctionState:
         response = yield(response, "completed")
@@ -82,8 +108,8 @@ func upload_map(map_data: Dictionary) -> Dictionary:
     return response
 
 
-func download_map(code: String) -> Dictionary:
-    var url: String = self.MAPS_URL + "/" + code + ".tofmap.json"
+func download_map(code: String, api_version: int = 0) -> Dictionary:
+    var url: String = self._base_url(api_version) + "/" + code + self._map_ext(api_version)
     var response = self.online_service.connector._get_request(url)
 
     if response is GDScriptFunctionState:

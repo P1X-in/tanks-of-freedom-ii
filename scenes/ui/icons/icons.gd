@@ -12,6 +12,8 @@ var cross = preload("res://scenes/ui/icons/cross.tscn")
 var arrow_left = preload("res://scenes/ui/icons/arrow_left.tscn")
 var arrow_right = preload("res://scenes/ui/icons/arrow_right.tscn")
 
+var tof = preload("res://scenes/ui/icons/tof.tscn")
+
 var deep_strike = preload("res://scenes/ui/icons/abilities/deep_strike.tscn")
 var infiltration = preload("res://scenes/ui/icons/abilities/infiltration.tscn")
 var targeting_automaton = preload("res://scenes/ui/icons/abilities/targeting_automaton.tscn")
@@ -50,6 +52,8 @@ var named_icons = {
     "cross" : self.cross,
     "arrow_left" : self.arrow_left,
     "arrow_right" : self.arrow_right,
+
+    "tof" : self.tof,
 
     "deep_strike" : self.deep_strike,
     "infiltration" : self.infiltration,

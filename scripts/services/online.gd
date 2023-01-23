@@ -2,12 +2,14 @@ extends Node
 
 const THUMBNAIL_LOCATION: String = "online.tof.p1x.in"
 const THUMBNAIL_URL: String = "/browser/public/thumbs/v2/"
+const THUMBNAIL_V1_URL: String = "/browser/public/thumbs/"
 
 onready var connector := OnlineConnector.new(self)
 onready var player := OnlinePlayer.new(self)
 onready var maps := OnlineMaps.new(self)
 
 var thumb_cache: Dictionary = {}
+var api_version: int = 2
 
 
 func _ready() -> void:
@@ -75,7 +77,11 @@ func fetch_thumbnail(map_code: String) -> Dictionary:
             'image' : self.thumb_cache[map_code]
         }
 
-    var url = self.THUMBNAIL_URL + map_code + ".png"
+    var url: String = ""
+    if self.api_version == 1:
+        url = self.THUMBNAIL_V1_URL + map_code + ".png" 
+    elif self.api_version == 2:
+        url = self.THUMBNAIL_URL + map_code + ".png"
     var result = self.connector._request_any(self.THUMBNAIL_LOCATION, url, HTTPClient.METHOD_GET, "", false, false)
     if result is GDScriptFunctionState:
         result = yield(result, "completed")
@@ -141,3 +147,7 @@ func download_map(map_code: String) -> bool:
         return true
 
     return false
+
+
+func set_api_version(version: int) -> void:
+    self.api_version = version

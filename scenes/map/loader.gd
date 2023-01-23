@@ -1,4 +1,6 @@
 
+var importer = preload("res://scenes/map/importer.gd").new()
+
 var map
 
 func _init(map_scene):
@@ -33,3 +35,7 @@ func _initialize_camera_position():
     if self.map.model.metadata.has("initial_cam_pos"):
         var position = Vector2(self.map.model.metadata["initial_cam_pos"][0], self.map.model.metadata["initial_cam_pos"][1])
         self.map.snap_camera_to_position(position)
+
+func load_from_v1_data(data):
+    self.map.builder.wipe_map()
+    self.importer.build_from_v1_data(self.map, data)

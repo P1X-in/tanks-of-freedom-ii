@@ -5,6 +5,7 @@ const AUTOSAVE_FILE = "__autosave__"
 onready var map = $"map"
 onready var ui = $"ui"
 onready var map_list_service = $"/root/MapManager"
+onready var online_service = $"/root/Online"
 
 onready var audio = $"/root/SimpleAudioLibrary"
 onready var switcher = $"/root/SceneSwitcher"
@@ -274,6 +275,7 @@ func setup_radial_menu(context_object=null):
         if self.current_map_name != "" and not self.map_list_service.is_reserved_name(current_map_name):
             self.ui.radial.set_field(self.ui.icons.quicksave.instance(), "TR_QUICKSAVE", 1, self, "quicksave")
         self.ui.radial.set_field(self.ui.icons.disk.instance(), "TR_SAVE_LOAD_MAP", 2, self, "open_picker")
+        self.ui.radial.set_field(self.ui.icons.tof.instance(), "TR_TOF1_IMPORT", 3, self, "open_tof_import")
         self.ui.radial.set_field(self.ui.icons.quit.instance(), "TR_MAIN_MENU", 4, self.switcher, "main_menu")
         self.ui.radial.set_field(self.ui.icons.cross.instance(), "TR_CLOSE", 6, self, "toggle_radial_menu")
     else:
@@ -323,6 +325,36 @@ func close_picker():
     self.map.tile_box.set_visible(true)
     self.ui.show_tiles()
     self.ui.show_position()
+
+func open_tof_import():
+    self.ui.hide_radial()
+    self.ui.picker.set_browse_v1_mode()
+    self.ui.show_picker()
+
+    self.ui.picker.bind_cancel(self, "close_tof_import")
+    self.ui.picker.bind_success(self, "handle_tof_import")
+
+func close_tof_import():
+    self.ui.hide_picker()
+    self.ui.picker.unlock_tab_bar()
+    self.ui.picker.list_mode = self.ui.picker.map_list_service.LIST_STOCK
+    self.ui.picker.current_page = 0
+    self.map.camera.paused = false
+    self.map.tile_box.set_visible(true)
+    self.online_service.set_api_version(2)
+    self.ui.show_tiles()
+    self.ui.show_position()
+
+func handle_tof_import(args):
+    var code = args[0]
+    self.close_tof_import()
+    var result = self.online_service.maps.download_map(code, 1)
+    if result is GDScriptFunctionState:
+        result = yield(result, "completed")
+    if result['status'] == 'ok':
+        self.ui.set_map_name(result["data"]["data"]["name"])
+        self.map.loader.load_from_v1_data(result["data"])
+    self.autosave()
 
 func wipe_editor():
     self.toggle_radial_menu()

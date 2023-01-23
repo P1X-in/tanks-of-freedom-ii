@@ -62,6 +62,7 @@ var current_page = 0
 
 var last_online_id = -1
 var last_focused_code = null
+var fetching_chunk = false
 
 func _ready():
     self.connect_buttons()
@@ -102,6 +103,11 @@ func set_browse_mode():
     self.online_bar.show()
     self.tabs_bar.hide()
     self.minimap.wipe()
+    self.online_service.set_api_version(2)
+
+func set_browse_v1_mode():
+    self.set_browse_mode()
+    self.online_service.set_api_version(1)
 
 func lock_tab_bar():
     self.list_mode = self.map_list_service.LIST_CUSTOM
@@ -224,7 +230,7 @@ func refresh_online_maps_page():
             result = yield(result, "completed")
 
     var pages_count = self.online_service.get_pages_count(self.PAGE_SIZE)
-    if self.current_page == pages_count - 2:
+    if self.current_page >= pages_count - 2:
         result = self._fetch_next_online_page()
         if result is GDScriptFunctionState:
             result = yield(result, "completed")
@@ -348,12 +354,18 @@ func _on_map_name_text_changed(new_text):
 func _fetch_next_online_page():
     if self.online_service.maps.listing_end:
         return
+    if self.fetching_chunk:
+        return
+    self.fetching_chunk = true
 
     var result = self.online_service.fetch_listing_chunk(self.last_online_id)
 
     if result is GDScriptFunctionState:
         result = yield(result, "completed")
+    self.fetching_chunk = false
     self.last_online_id = result
+    var pages_count = self.online_service.get_pages_count(self.PAGE_SIZE)
+    self.manage_pagination_buttons(pages_count)
 
 func _on_stock_button_pressed():
     self.audio.play("menu_click")
