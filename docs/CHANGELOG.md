@@ -28,7 +28,6 @@
 
 ### 0.3.0-alpha
 - Jade Twilight campaign
-- Story scripting improvements
 - Added teams to gameplay
 - Added mission objectives
 - Added map frame
@@ -40,8 +39,11 @@
 - Added Polish language
 - Added Truck units for stories
 - Added Lighthouse neutral Tower
-- AI rebalance and improvements
 - Added Saving and Loading, with autosaves
+- Added online map sharing
+- Added ToF 1 map import
+- Story scripting improvements
+- AI rebalance and improvements
 - Restart mission function
 - Various board UI improvements and notifications
 - Various main menu UI controls improvements
