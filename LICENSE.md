@@ -1,5 +1,5 @@
 # The MIT License (MIT)
-This license applies both to the code, and to all graphical assets within this repository.
+This license applies both to the code, and to all graphical assets within this repository, unless later parts of this file, or the Credits list states otherwise.
 
 Copyright (c) 2021 P1X
 

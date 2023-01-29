@@ -9,7 +9,7 @@ var os_string = ""
 var settings = {
     "steamdeck_detection": false,
     "is_steamdeck": false,
-    "fullscreen" : true,
+    "fullscreen" : false,
     "vol_master" : 10,
     "vol_sfx" : 8,
     "vol_music" : 7,
