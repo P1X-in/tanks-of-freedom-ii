@@ -5,4 +5,4 @@ var map = null
 
 func _on_mouse_collision_mouse_entered():
     if self.map != null:
-        self.map.set_tile_box_position(self.position)
+        self.map.set_mouse_box_position(self.position)

@@ -11,6 +11,7 @@ onready var settings = $"/root/Settings"
 
 var tile_box_space_size
 var tile_box_position = Vector2(0, 0)
+var tile_box_mouse = false
 
 var templates = preload("res://scenes/map/templates.gd").new()
 var model = preload("res://scenes/map/model.gd").new()
@@ -29,10 +30,23 @@ func _ready():
     if not self.settings.get_option("decorations"):
         self.tiles_frames_anchor.hide()
 
+func _input(event):
+    if event is InputEventMouseMotion:
+        if event.relative.length_squared() > 0.01:
+            self.tile_box_mouse = true
 
 func _physics_process(_delta):
+    self._manage_mouse_input()
     self.update_tile_box_position_from_camera()
     self.snap_tile_box()
+
+func _manage_mouse_input():
+    var gamepad_offset = Vector2(
+        Input.get_joy_axis(0, JOY_ANALOG_LX),
+        Input.get_joy_axis(0, JOY_ANALOG_LY)
+    )
+    if gamepad_offset.length_squared() > 0.1:
+        self.tile_box_mouse = false
 
 
 func update_tile_box_position_from_camera():
@@ -42,6 +56,10 @@ func update_tile_box_position_from_camera():
 func set_tile_box_position(position):
     self.camera.snap_tile_box_to_camera = false
     self.tile_box_position = position
+
+func set_mouse_box_position(position):
+    if self.tile_box_mouse:
+        self.set_tile_box_position(position)
 
 
 func snap_tile_box():
