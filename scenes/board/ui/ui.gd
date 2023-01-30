@@ -15,6 +15,7 @@ onready var unit_stats = $"unit_stats/unit_stats"
 onready var objectives = $"objectives/objectives"
 onready var ap_depleted = $"ap_depleted/ap_depleted"
 onready var saves = $"saves/saves"
+onready var controls = $"controls/game"
 
 # Tile highlight
 onready var tile_highlight = $"tile_highlight/tile_view"
@@ -42,6 +43,9 @@ onready var ab3_cd = $"tile_highlight/abilities/ab3/disabled/cd"
 var ability_icons = [null, null, null]
 
 var icons = preload("res://scenes/ui/icons/icons.gd").new()
+
+func _ready():
+    self.show_controls()
 
 func is_popup_open():
     if self.summary.is_visible():
@@ -219,9 +223,11 @@ func hide_story_dialog():
 func show_cinematic_bars():
     self.clear_tile_highlight()
     self.cinematic_bars.show_bars()
+    self.hide_controls()
 
 func hide_cinematic_bars():
     self.cinematic_bars.hide_bars()
+    self.show_controls()
 
 func are_cinematic_bars_visible():
     return self.cinematic_bars.is_extended
@@ -229,9 +235,11 @@ func are_cinematic_bars_visible():
 func show_unit_stats(unit, tile_preview, board):
     self.unit_stats.bind_unit(unit, tile_preview, board)
     self.unit_stats.show_panel()
+    self.hide_controls()
 
 func hide_unit_stats():
     self.unit_stats.hide()
+    self.show_controls()
 
 func show_objectives():
     self.objectives.show()
@@ -244,3 +252,10 @@ func show_saves():
 
 func hide_saves():
     self.saves.hide_saves()
+
+func show_controls():
+    if self.settings.get_option("show_controls"):
+        self.controls.show()
+
+func hide_controls():
+    self.controls.hide()

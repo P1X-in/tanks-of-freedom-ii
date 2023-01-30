@@ -10,7 +10,7 @@
 [ext_resource path="res://scenes/ui/menu/campaign_selection.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/ui/menu/campaign_mission_selection.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/ui/menu/campaign_mission.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/ui/menu/controls.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/ui/menu/controls/controls.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/ui/save/saves.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/ui/online/online.tscn" type="PackedScene" id=13]
 

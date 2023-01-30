@@ -1,7 +1,10 @@
 extends Control
 
+onready var settings = $"/root/Settings"
+
 onready var radial = $"radial/radial"
 onready var picker = $"picker/picker"
+onready var controls = $"controls/editor"
 onready var minimap = $"minimap"
 onready var minimap_animations = $"minimap/animations"
 
@@ -21,6 +24,7 @@ var icons = preload("res://scenes/ui/icons/icons.gd").new()
 func _ready():
     self.map_name_label.set_message_translation(false)
     self.map_name_label.notification(NOTIFICATION_TRANSLATION_CHANGED)
+    self.show_controls()
 
 func update_position(x, y):
     self.position_label.set_text("[" + str(x) + ", " + str(y) + "]")
@@ -56,11 +60,13 @@ func show_tiles():
     self.minimap_animations.play("show")
     if self.map_name_label.get_text() != "":
         self.map_name_wrapper.show()
+    self.show_controls()
 
 func hide_tiles():
     self.tile_animations.play("hide")
     self.minimap_animations.play("hide")
     self.map_name_wrapper.hide()
+    self.hide_controls()
 
 func show_radial():
     self.radial.show_menu()
@@ -117,3 +123,9 @@ func load_minimap(map_name):
 func wipe_minimap():
     self.minimap.wipe()
 
+func show_controls():
+    if self.settings.get_option("show_controls"):
+        self.controls.show()
+
+func hide_controls():
+    self.controls.hide()

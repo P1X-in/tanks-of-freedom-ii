@@ -5,16 +5,16 @@ onready var settings = $"/root/Settings"
 
 onready var animations = $"animations"
 
+onready var general_button = $"widgets/tabs/general"
 onready var video_button = $"widgets/tabs/video"
-onready var graphics_button = $"widgets/tabs/graphics"
 onready var audio_button = $"widgets/tabs/audio"
-onready var camera_button = $"widgets/tabs/camera"
+onready var gameplay_button = $"widgets/tabs/gameplay"
 onready var back_button = $"widgets/back_button"
 
+onready var general_panel = $"widgets/boxes/settings_general"
 onready var video_panel = $"widgets/boxes/settings_video"
-onready var graphics_panel = $"widgets/boxes/settings_graphics"
 onready var audio_panel = $"widgets/boxes/settings_audio"
-onready var camera_panel = $"widgets/boxes/settings_camera"
+onready var gameplay_panel = $"widgets/boxes/settings_gameplay"
 
 onready var help = $"help"
 onready var help_text = $"help/text"
@@ -38,46 +38,46 @@ func _on_back_button_pressed():
 
 func show_panel():
     self.hide_help()
-    self.video_panel.show()
-    self.graphics_panel.hide()
+    self.general_panel.show()
+    self.video_panel.hide()
     self.audio_panel.hide()
-    self.camera_panel.hide()
+    self.gameplay_panel.hide()
     self.animations.play("show")
     self.set_process_input(true)
     yield(self.get_tree().create_timer(0.1), "timeout")
-    self.video_button.grab_focus()
+    self.general_button.grab_focus()
 
 func hide_panel():
     self.hide_help()
     self.animations.play("hide")
     self.set_process_input(false)
 
-func _on_video_pressed():
-    self.video_panel.show()
-    self.graphics_panel.hide()
+func _on_general_pressed():
+    self.general_panel.show()
+    self.video_panel.hide()
     self.audio_panel.hide()
-    self.camera_panel.hide()
+    self.gameplay_panel.hide()
     self.audio.play("menu_click")
 
-func _on_graphics_pressed():
-    self.video_panel.hide()
-    self.graphics_panel.show()
+func _on_video_pressed():
+    self.general_panel.hide()
+    self.video_panel.show()
     self.audio_panel.hide()
-    self.camera_panel.hide()
+    self.gameplay_panel.hide()
     self.audio.play("menu_click")
 
 func _on_audio_pressed():
     self.video_panel.hide()
-    self.graphics_panel.hide()
+    self.general_panel.hide()
     self.audio_panel.show()
-    self.camera_panel.hide()
+    self.gameplay_panel.hide()
     self.audio.play("menu_click")
 
-func _on_camera_pressed():
+func _on_gameplay_pressed():
     self.video_panel.hide()
-    self.graphics_panel.hide()
+    self.general_panel.hide()
     self.audio_panel.hide()
-    self.camera_panel.show()
+    self.gameplay_panel.show()
     self.audio.play("menu_click")
 
 func show_help(text):

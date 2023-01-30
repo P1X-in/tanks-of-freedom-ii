@@ -29,17 +29,9 @@ option_key = "def_cam_st"
 help_tip = "TR_DEF_CAM_ST_DESC"
 available_values = [ "TOF", "AW", "FREE" ]
 
-[node name="locale" parent="." instance=ExtResource( 1 )]
+[node name="ap_spent" parent="." instance=ExtResource( 2 )]
 margin_top = 215.0
 margin_bottom = 265.0
-option_name = "TR_LANG"
-option_key = "locale"
-help_tip = "TR_LANG_DESC"
-available_values = [ "en", "pl" ]
-
-[node name="ap_spent" parent="." instance=ExtResource( 2 )]
-margin_top = 280.0
-margin_bottom = 330.0
 option_name = "TR_NOT_AP_SP"
 option_key = "notify_ap_spent"
 help_tip = "TR_NOT_AP_SP_DESC"

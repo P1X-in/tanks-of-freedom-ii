@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/map_editor/ui.gd" type="Script" id=1]
 [ext_resource path="res://scenes/map_editor/tile_view.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/ui/map_picker/picker.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ui/minimap/minimap.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/gui/ui_theme.tres" type="Theme" id=6]
+[ext_resource path="res://scenes/ui/menu/controls/editor.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hide"
@@ -125,9 +126,6 @@ anchor_bottom = 1.0
 mouse_filter = 2
 theme = ExtResource( 6 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="position" type="MarginContainer" parent="."]
 anchor_top = 1.0
@@ -267,6 +265,20 @@ __meta__ = {
 }
 
 [node name="picker" parent="picker" instance=ExtResource( 4 )]
+
+[node name="controls" type="MarginContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -720.0
+margin_right = 80.0
+margin_bottom = 600.0
+rect_scale = Vector2( 0.9, 0.9 )
+mouse_filter = 2
+
+[node name="editor" parent="controls" instance=ExtResource( 7 )]
+visible = false
+margin_right = 800.0
+margin_bottom = 600.0
 
 [node name="minimap" parent="." instance=ExtResource( 5 )]
 anchor_top = 1.0

@@ -29,6 +29,7 @@ var settings = {
     "locale": "en",
     "notify_ap_spent": true,
     "show_intro": true,
+    "show_controls": true,
 }
 
 

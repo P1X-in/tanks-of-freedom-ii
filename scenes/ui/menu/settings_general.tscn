@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/ui/menu/setting_option.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/ui/menu/setting_option_rotating.tscn" type="PackedScene" id=2]
+
+[node name="settings_video" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -780.0
+margin_bottom = -500.0
+
+[node name="locale" parent="." instance=ExtResource( 2 )]
+option_name = "TR_LANG"
+option_key = "locale"
+help_tip = "TR_LANG_DESC"
+available_values = [ "en", "pl" ]
+
+[node name="intro" parent="." instance=ExtResource( 1 )]
+margin_top = 85.0
+margin_bottom = 135.0
+option_name = "TR_INTRO"
+option_key = "show_intro"
+help_tip = "TR_INTRO_DESC"
+
+[node name="controls" parent="." instance=ExtResource( 1 )]
+margin_top = 150.0
+margin_bottom = 200.0
+option_name = "TR_CONTROLS_HELP"
+option_key = "show_controls"
+help_tip = "TR_CONTROLS_HELP_DESC"

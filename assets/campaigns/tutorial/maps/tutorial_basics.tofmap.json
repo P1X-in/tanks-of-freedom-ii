@@ -362,6 +362,15 @@
                         "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "left",
+                        "text": "tr_core_tutorial_m1_controls"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
                         "text": "tr_core_tutorial_m1_t24"
                     }
                 },
