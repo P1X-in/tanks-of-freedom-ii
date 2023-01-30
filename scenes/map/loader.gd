@@ -1,4 +1,6 @@
 
+var EDITOR_VERSION = "0.3.0"
+
 var importer = preload("res://scenes/map/importer.gd").new()
 
 var map
@@ -13,6 +15,7 @@ func save_map_file(filename):
         self.map.model.metadata["name"] = filename
         self.map.model.metadata["iteration"] = 0
         self.map.model.metadata["base_code"] = null
+    self.map.model.metadata["editor_version"] = self.EDITOR_VERSION
     var map_data = self.map.model.get_dict()
     MapManager.save_map_to_file(filename, map_data)
 
