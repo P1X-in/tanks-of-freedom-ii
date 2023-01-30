@@ -75,7 +75,7 @@ For ToF3D we intend to have four sides to the conflict, with each having an npc 
     - good leader
     - old fashioned
 - The Commando - Sergeant Blake
-    - patriotic
+    - reckless
     - hot headed
 
 ### Ruby Dusk (Team Red)
@@ -385,10 +385,57 @@ Each of the main campaigns should be about 10 mission long.
     - Captain Claude must defeat Commando Blake
 
 #### Amber Noon Campaign - Royal Blood
-To be designed.
+1. A King in the making
+    - Captain Claude is back in Jade Oasis and training Prince Tybalt
+    - Chancellor Irene deems Prince Tybalt the only one capable of ending the conflict by defeating Grim
+    - Tybalt commands small forces of Amber Noon Infantry and Jade Twilight vehicles
+    - Tybalt must defeat Claude in a mock battle
+    - Focus on highlighting Tybalts abilities
+
+2. Obsidian shadow
+    - Prince Tybalt leads a small group of Amber Noon Infantry back to his kingdom
+    - Captain Claude accompanies him with a small group of Jade Twilight forces
+    - A loyalist Amber Noon are fighting against Obsidian Night rebels
+    - Prince Tybalt must rescue loyalist forces
+    - Loyalist forces join Prince Tybalt to help him reach Amber Fortress
+
+3. Noble redemption
+    - Tybalt leads loyalist forces against Obsidian Night
+    - A large group of Obsidian Night units flanks him
+    - Noble Sidney arrives with Ruby Dusk forces to assist him
+    - Noble Sidney apologises and vows to help set things right
+    - Noble Sidney provides Tanks
+
+4. Cracked Sapphire
+    - General Cyrus leads a detachment of soldiers against Sapphire Dawn soldiers in Obsidian Night colours led by Commando Blake
+    - General Cyrus orders Blake to surrender
+    - Blake switched sides because Grim promised him to lead his army
+    - Prince Tybalt reunitse with General Cyrus
+    - Prince Tybalt teams up with General Cyrus to beat him
+    - Commando Blake escapes back to Amber Fortress
+
+5. Mission complete
+    - Admiral Torsten is holding out near the Amber Fortress
+    - He is being attacked from multiple sides
+    - Captain Claude arrives with reinforcements to save him
+    - Prince Tybalt moves in to defeat Obsidian Night
+
+6. In the name of the King
+    - Amber Fortress is held by Obsidian Night led by Warlord Grim himself
+    - Commando Blake is helping him
+    - City is surrounded, with all nations having small bases around it
+    - Prince Tybalt, Admiral Torsten, Captain Claude, Noble Sidney, Gentleman Archibald and General Cyrus all fight together
+    - King Ludwig is in the city as a symbolic NPC
+    - All Obsidian Night forces present in the city must be defeated
 
 #### Epilogue
-To be designed.
+1. Obsidian cloud
+    - Warlord Grim and Commando Blake are held in a prison under Amber Noon guard
+    - Some of the guards turn to Obsidian Night colours and set them free
+    - A spot where Blake's ability can be used for additional units
+    - Grim fights his way out of the prison base
+    - Grim vows to get his revenge on Tybalt and the others
+    - Resources are limited, need to focus on Grim's abilities
 
 
 ## Gameplay
