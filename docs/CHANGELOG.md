@@ -1,6 +1,9 @@
 # Tanks of Freedom 3D
 ## Changelog
 
+### 0.4.0-alpha
+- Added Amber Noon campaign
+
 ### 0.3.1-alpha
 - Cleaned-up Settings window
 - Added on-screen controls help
@@ -8,7 +11,7 @@
 - Fixed a bug with selection box jitter when using gamepad and having mouse cursor on-screen
 
 ### 0.3.0-alpha
-- Jade Twilight campaign
+- Added Jade Twilight campaign
 - Added teams to gameplay
 - Added mission objectives
 - Added map frame

@@ -75,8 +75,9 @@ For ToF3D we intend to have four sides to the conflict, with each having an npc 
     - good leader
     - old fashioned
 - The Commando - Sergeant Blake
+    - resourceful
     - reckless
-    - hot headed
+    - gullible
 
 ### Ruby Dusk (Team Red)
 - The Lord - Dawson
@@ -399,14 +400,7 @@ Each of the main campaigns should be about 10 mission long.
     - Prince Tybalt must rescue loyalist forces
     - Loyalist forces join Prince Tybalt to help him reach Amber Fortress
 
-3. Noble redemption
-    - Tybalt leads loyalist forces against Obsidian Night
-    - A large group of Obsidian Night units flanks him
-    - Noble Sidney arrives with Ruby Dusk forces to assist him
-    - Noble Sidney apologises and vows to help set things right
-    - Noble Sidney provides Tanks
-
-4. Cracked Sapphire
+3. Cracked Sapphire
     - General Cyrus leads a detachment of soldiers against Sapphire Dawn soldiers in Obsidian Night colours led by Commando Blake
     - General Cyrus orders Blake to surrender
     - Blake switched sides because Grim promised him to lead his army
@@ -414,19 +408,28 @@ Each of the main campaigns should be about 10 mission long.
     - Prince Tybalt teams up with General Cyrus to beat him
     - Commando Blake escapes back to Amber Fortress
 
+4. Noble redemption
+    - Tybalt leads loyalist forces against Obsidian Night
+    - A large group of Obsidian Night units flanks him
+    - Noble Sidney arrives with Ruby Dusk forces to assist him
+    - Noble Sidney apologises and vows to help set things right
+    - Noble Sidney provides Tanks
+
 5. Mission complete
     - Admiral Torsten is holding out near the Amber Fortress
     - He is being attacked from multiple sides
+    - King Ludwig is in the city as a symbolic NPC
     - Captain Claude arrives with reinforcements to save him
     - Prince Tybalt moves in to defeat Obsidian Night
+    - Kind is freed and Warlord Grim flees to the north
 
 6. In the name of the King
-    - Amber Fortress is held by Obsidian Night led by Warlord Grim himself
+    - Warlord Grim returns to his castle in the mountains
+    - Castle is held by Obsidian Night led by Warlord Grim himself
     - Commando Blake is helping him
-    - City is surrounded, with all nations having small bases around it
+    - Castle is surrounded, with all nations having small bases around it
     - Prince Tybalt, Admiral Torsten, Captain Claude, Noble Sidney, Gentleman Archibald and General Cyrus all fight together
-    - King Ludwig is in the city as a symbolic NPC
-    - All Obsidian Night forces present in the city must be defeated
+    - All Obsidian Night forces present in the castle must be defeated
 
 #### Epilogue
 1. Obsidian cloud

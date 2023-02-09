@@ -2,14 +2,64 @@
     "name" : "core_amber_noon",
     "title" : "Royal Blood",
     "icon" : "yellow_gem",
-    "prerequisite" : "not_unlockable_at_the_moment",
+    "prerequisite" : "core_jade_twilight",
     "missions" : [
         {
-            "name" : "test",
-            "title" : "Test",
+            "name" : "king_in_making",
+            "title" : "A King in the making",
             "map" : "crossroad.tofmap.json",
             "description" : "Lorem ipsum",
-            "marker" : [0, 0]
+            "marker" : [
+                590,
+                220
+            ],
+            "players": [
+                {
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "human"
+                },
+                {
+                    "side": "green",
+                    "ap": 0,
+                    "type": "ai"
+                }
+            ]
+        },
+        {
+            "name" : "obsidian_shadow",
+            "title" : "Obsidian shadow",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [620, 120]
+        },
+        {
+            "name" : "cracked_sapphire",
+            "title" : "Cracked Sapphire",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [490, 155]
+        },
+        {
+            "name" : "noble_redemption",
+            "title" : "Noble redemption",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [450, 100]
+        },
+        {
+            "name" : "mission_complete",
+            "title" : "Mission complete",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [540, 120]
+        },
+        {
+            "name" : "in_the_name_of_the_king",
+            "title" : "In the name of the King",
+            "map" : "crossroad.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [500, 50]
         }
     ]
 }
