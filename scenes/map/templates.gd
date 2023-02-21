@@ -144,6 +144,7 @@ const CITY_BUILDING_SMALL5 = "city_building_small5"
 const CITY_BUILDING_SMALL6 = "city_building_small6"
 const CITY_BRIDGE = "city_bridge"
 const CITY_ROADBLOCK = "city_roadblock"
+const CITY_SANDBAGS = "city_sandbags"
 
 const CITY_BRIDGE_WOOD = "city_bridge_wood"
 
@@ -429,6 +430,7 @@ var templates = {
     self.CITY_BUILDING_SMALL6 : preload("res://scenes/tiles/city/building_small_6_overtile.tscn"),
     self.CITY_BRIDGE : preload("res://scenes/tiles/city/river_bridge_overtile.tscn"),
     self.CITY_ROADBLOCK : preload("res://scenes/tiles/city/roadblock_overtile.tscn"),
+    self.CITY_SANDBAGS : preload("res://scenes/tiles/city/sandbags_overtile.tscn"),
     self.BRIDGE_SUSPENSION : preload("res://scenes/tiles/city/bridge_suspension.tscn"),
     self.BRIDGE_SUSPENSION_TILED : preload("res://scenes/tiles/city/bridge_suspension_tiled.tscn"),
     self.BRIDGE_STONE_BARRIER : preload("res://scenes/tiles/city/bridge_stone_barrier.tscn"),

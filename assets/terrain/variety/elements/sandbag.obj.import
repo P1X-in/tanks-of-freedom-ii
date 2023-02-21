@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/sandbag.obj-985bb0f0b4097e49421afbfe94faabc0.mesh"
+
+[deps]
+
+files=[ "res://.import/sandbag.obj-985bb0f0b4097e49421afbfe94faabc0.mesh" ]
+
+source_file="res://assets/terrain/variety/elements/sandbag.obj"
+dest_files=[ "res://.import/sandbag.obj-985bb0f0b4097e49421afbfe94faabc0.mesh", "res://.import/sandbag.obj-985bb0f0b4097e49421afbfe94faabc0.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

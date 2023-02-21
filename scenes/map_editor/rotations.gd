@@ -145,6 +145,7 @@ func build_rotations(templates, builder):
 		templates.CITY_BRIDGE,
 		templates.CITY_BRIDGE_WOOD,
 		templates.CITY_ROADBLOCK,
+		templates.CITY_SANDBAGS,
 		templates.BRIDGE_SUSPENSION,
 		templates.BRIDGE_SUSPENSION_TILED,
 		templates.BRIDGE_STONE_BARRIER,
