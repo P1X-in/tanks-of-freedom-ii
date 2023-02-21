@@ -7,8 +7,8 @@
         {
             "name" : "king_in_making",
             "title" : "A King in the making",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
+            "map" : "core_amb_noon_king_in_making.tofmap.json",
+            "description" : "Under Chancellor Irene's watchful eye, Prince Tybalt is undergoing intense training. Bad news brought by Captain Claude confirmed her fears: only a military action by the Prince himself can unite warring nations and put an end to Grim's plans.",
             "marker" : [
                 590,
                 220

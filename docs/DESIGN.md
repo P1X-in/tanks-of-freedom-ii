@@ -156,7 +156,7 @@ Amber Noon Prince Tybalt visits Jade Twilight Chancellor Irene to ask for help, 
 #### Amber Noon Campaign
 Amber Noon Prince Tybalt with a handful of loyal forces trains against Jade Twilight Captain Claude, until he is strong enough.
 
-Prince Tybalt leads his forces against Sapphire Dawn, who allied themselves with Warlord Grim, as well as against Ruby Dusk standing in their way. He arrives with both his and allied Jade Twilight Forces at the outskirts of Amber Noon capital. It is being defended by Sapphire Dawn forces and ex-Amber Noon troops loyal to Warlord Grim, who are now Obsidian Night, as they defend it from Ruby Dusk. Ruby Dusk led by Noble Sidney, Jade Twilight led by Admiral Torsten as well as Sapphire Dawn led by Genral Cyrus help Prince Tybalt free King Ludwig, ending the war.
+Prince Tybalt leads his forces against Obsidian Night, who allied themselves with Warlord Grim. On his way he allies himself with Sapphire Dawn and Ruby Dusk. He arrives with both his and allied Jade Twilight Forces at the outskirts of Amber Noon capital. It is being defended by ex-Amber Noon troops loyal to Warlord Grim, who are now Obsidian Night. Ruby Dusk led by Noble Sidney, Jade Twilight led by Admiral Torsten as well as Sapphire Dawn led by Genral Cyrus help Prince Tybalt free King Ludwig. Not able to hold capital, Warlord Grim escapes to his castle, but allies pursue and capture him there, ending the war.
 
 #### Epilogue
 

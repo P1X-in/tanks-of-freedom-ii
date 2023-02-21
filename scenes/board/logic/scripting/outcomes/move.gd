@@ -18,7 +18,7 @@ func _execute(_metadata):
     world_position.y = old_position.y
     unit.set_translation(world_position)
 
-    unit.animate_path(self.path)  
+    unit.animate_path(self.path)
 
 func _ingest_details(details):
     self.who = Vector2(details['who'][0], details['who'][1])
