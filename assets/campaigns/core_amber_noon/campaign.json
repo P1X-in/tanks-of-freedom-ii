@@ -29,9 +29,29 @@
         {
             "name" : "obsidian_shadow",
             "title" : "Obsidian shadow",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [620, 120]
+            "map" : "core_amb_noon_obsidian_shadow.tofmap.json",
+            "description" : "Accompanied by Captain Claude and a group of Royal Knights, Prince Tybalt begins his march to rescue his father. His first objective is one of the border bases of Amber Noon, where he hopes to enlist the help of one of the loyalist cohorts. But only when they arrive, the extent of Grim's corruption is revealed.",
+            "marker" : [620, 120],
+            "players": [
+                {
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "human",
+                    "team": 0
+                },
+                {
+                    "side": "green",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 0
+                },
+                {
+                    "side": "black",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 1
+                }
+            ]
         },
         {
             "name" : "cracked_sapphire",

@@ -51,9 +51,14 @@ func _count_buildings_for_side(side):
     var count = 0
     var building
 
+    if not side is Array:
+        side = [side]
+
     for position in self.list:
         building = self.board.map.model.get_tile2(position[0], position[1]).building.tile
-        if building != null and building.side == side:
-            count += 1
+        if building != null:
+            for s in side:
+                if building.side == s:
+                    count += 1
 
     return count
