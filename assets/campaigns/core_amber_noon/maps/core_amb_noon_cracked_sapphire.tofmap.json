@@ -1,0 +1,51 @@
+{
+    "metadata": {
+        "base_code": null,
+        "editor_version": "0.3.0",
+        "iteration": 0,
+        "name": "core_amb_noon_cracked_sapphire"
+    },
+    "scripts": {
+        "stories": {
+
+        },
+        "triggers": {
+
+        }
+    },
+    "tiles": {
+        "20_20": {
+            "building": {
+                "rotation": 0,
+                "tile": null
+            },
+            "damage": {
+                "rotation": 0,
+                "tile": null
+            },
+            "decoration": {
+                "rotation": 0,
+                "tile": null
+            },
+            "frame": {
+                "rotation": 0,
+                "tile": null
+            },
+            "ground": {
+                "rotation": 0,
+                "tags": {
+
+                },
+                "tile": "ground_grass"
+            },
+            "terrain": {
+                "rotation": 0,
+                "tile": null
+            },
+            "unit": {
+                "rotation": 0,
+                "tile": null
+            }
+        }
+    }
+}
