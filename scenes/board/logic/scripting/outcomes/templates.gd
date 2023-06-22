@@ -29,7 +29,8 @@ var templates = {
     'trigger_group' : preload("res://scenes/board/logic/scripting/outcomes/trigger_group.gd"),
 
     'revive_player' : preload("res://scenes/board/logic/scripting/outcomes/revive_player.gd"),
-    'eliminate_player' : preload("res://scenes/board/logic/scripting/outcomes/eliminate_player.gd")
+    'eliminate_player' : preload("res://scenes/board/logic/scripting/outcomes/eliminate_player.gd"),
+    'tether' : preload("res://scenes/board/logic/scripting/outcomes/tether.gd")
 }
 
 func get_outcome(name):

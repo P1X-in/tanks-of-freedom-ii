@@ -9,8 +9,10 @@ func _execute(_metadata):
     var unit_tile = self.board.map.model.get_tile(self.who)
     var ability = unit_tile.unit.tile.get_node(self.which)
 
+    self.board.selected_tile = unit_tile
     ability.active_source_tile = unit_tile
     ability._execute(self.board, self.where)
+    self.board.unselect_tile()
 
     if self.cooldown:
         ability.activate_cooldown(self.board)

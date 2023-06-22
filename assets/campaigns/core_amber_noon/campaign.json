@@ -62,13 +62,13 @@
             "players": [
                 {
                     "side": "yellow",
-                    "ap": 0,
+                    "ap": 100,
                     "type": "human",
                     "team": 0
                 },
                 {
                     "side": "blue",
-                    "ap": 0,
+                    "ap": 100,
                     "type": "ai",
                     "team": 0
                 },

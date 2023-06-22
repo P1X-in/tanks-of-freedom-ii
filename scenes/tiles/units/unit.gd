@@ -31,7 +31,12 @@ var attacks = 1
 var level = 0
 var experience = 0
 var kills = 0
+
+# AI modifiers
 var ai_paused = false
+var tether_point = Vector2(0, 0)
+var tether_length = 0
+# AI modifiers end
 
 var modifiers = {}
 var passive_ability = null

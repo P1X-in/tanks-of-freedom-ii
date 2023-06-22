@@ -75,8 +75,9 @@ func _gather_attack_actions(entity_tile, ap):
                         actions.append(action)
                 else:
                     action = self._attack_action(entity_tile, interaction_tile, target_tile, path)
-                    action.value -= path.size()
-                    actions.append(action)
+                    if action != null:
+                        action.value -= path.size()
+                        actions.append(action)
 
     return actions
 
@@ -125,9 +126,10 @@ func _gather_capture_actions(entity_tile, ap):
                         actions.append(action)
                 else:
                     action = self._capture_action(entity_tile, interaction_tile, target_tile, path)
-                    action.value = target_tile.building.tile.capture_value - (unit.get_value() - 20)
-                    action.value -= path.size()
-                    actions.append(action)
+                    if action != null:
+                        action.value = target_tile.building.tile.capture_value - (unit.get_value() - 20)
+                        action.value -= path.size()
+                        actions.append(action)
 
     return actions
 
@@ -135,6 +137,9 @@ func _gather_ability_actions(_entity_tile, _ap, _board):
     return []
 
 func _attack_action(entity_tile, interaction_tile, target_tile, path):
+    if self._is_beyond_tether(entity_tile.unit.tile, interaction_tile):
+        return null
+
     var action = self.actions_templates['attack'].new(entity_tile, interaction_tile, target_tile, path.size())
 
     var value = target_tile.unit.tile.get_value()
@@ -152,6 +157,9 @@ func _attack_action(entity_tile, interaction_tile, target_tile, path):
     return action
 
 func _capture_action(entity_tile, interaction_tile, target_tile, path):
+    if self._is_beyond_tether(entity_tile.unit.tile, interaction_tile):
+        return null
+
     return self.actions_templates['capture'].new(entity_tile, interaction_tile, target_tile, path.size())
 
 func _ability_action(ability, target):
@@ -162,6 +170,9 @@ func _approach_action(entity_tile, path, unit_range):
         return null
 
     var target_tile = self.pathfinder.visited_tiles[path[path.size() - unit_range - 1]]
+
+    if self._is_beyond_tether(entity_tile.unit.tile, target_tile):
+        return null
 
     if target_tile.can_acommodate_unit(entity_tile.unit.tile):
         return self.actions_templates['move'].new(entity_tile, target_tile, unit_range)
@@ -189,3 +200,14 @@ func _get_interaction_tiles(tile, source_tile):
         tiles.append(tile.neighbours[neighbour])
 
     return tiles
+
+func _is_beyond_tether(unit, target_tile):
+    if unit.tether_length < 1 or target_tile == null:
+        return false
+
+    var anchor_distance = abs(unit.tether_point.x - target_tile.position.x) + abs(unit.tether_point.y - target_tile.position.y)
+
+    if OS.is_debug_build():
+        print(unit.tether_point, " ", target_tile.position, " ", anchor_distance, " ", unit.tether_length)
+
+    return anchor_distance > unit.tether_length
