@@ -83,9 +83,30 @@
         {
             "name" : "noble_redemption",
             "title" : "Noble redemption",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [450, 100]
+            "map" : "core_amb_noon_noble_redemption.tofmap.json",
+            "description" : "Following advice from General Cyrus, Prince Tybalt and his loyal soldiers are pushing north, looking for a way to encircle the Amber Fortress. Narrow valleys of the mountainous region ahead should help them stay undetected.",
+            "marker" : [450, 100],
+            "players": [
+                {
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "human",
+                    "team": 0
+                },
+                {
+                    "side": "red",
+                    "ap": 100,
+                    "type": "ai",
+                    "alive": false,
+                    "team": 0
+                },
+                {
+                    "side": "black",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 1
+                }
+            ]
         },
         {
             "name" : "mission_complete",

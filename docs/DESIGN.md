@@ -409,7 +409,9 @@ Each of the main campaigns should be about 10 mission long.
     - Commando Blake escapes back to Amber Fortress
 
 4. Noble redemption
-    - Tybalt leads loyalist forces against Obsidian Night
+    - Tybalt hopes to move around Amber Fortress undetected
+    - No mechanised units due to difficult terrain
+    - Tybalt encounters Obsidian Night blocking the valley
     - A large group of Obsidian Night units flanks him
     - Noble Sidney arrives with Ruby Dusk forces to assist him
     - Noble Sidney apologises and vows to help set things right

@@ -13,6 +13,8 @@ export var ap_gain = 5
 
 export var capture_value = 70
 
+export var uses_metallic_material = false
+
 var abilities = []
 
 func get_dict():
@@ -27,6 +29,9 @@ func set_side(new_side):
 
 func set_team(new_team):
     self.team = new_team
+
+func set_side_materials(_base_material, _desaturated_material):
+    self.set_side_material(_base_material)
 
 func set_side_material(material):
     $"mesh".set_surface_material(0, material)

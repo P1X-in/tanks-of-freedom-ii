@@ -28,6 +28,7 @@ func _execute(_metadata):
     elif self.type == "building":
         tile.building.clear()
         self.board.map.builder.place_building(self.where, self.template_name, self.rotation, self.side)
+        tile.building.tile.team = self.board.state.get_player_team(self.side)
 
     tile.apply_invisibility()
 
