@@ -405,7 +405,7 @@ Each of the main campaigns should be about 10 mission long.
     - General Cyrus orders Blake to surrender
     - Blake switched sides because Grim promised him to lead his army
     - Prince Tybalt reunitse with General Cyrus
-    - Prince Tybalt teams up with General Cyrus to beat him
+    - Prince Tybalt teams up with General Cyrus to beat Blake
     - Commando Blake escapes back to Amber Fortress
 
 4. Noble redemption
