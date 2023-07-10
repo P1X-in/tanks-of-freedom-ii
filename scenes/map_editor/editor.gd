@@ -20,6 +20,7 @@ var mouse_click_position = null
 
 var current_map_name = ""
 
+const HISTORY_MAX_SIZE = 50
 var actions_history = []
 
 func _ready():
@@ -127,7 +128,7 @@ func place_tile():
     if tile == null:
         return
 
-    self.actions_history.append({
+    self.write_action_history({
         "type" : "add",
         "class" : self.selected_class,
         "position" : self.map.tile_box_position,
@@ -363,6 +364,7 @@ func wipe_editor():
     self.ui.wipe_minimap()
     self.map.model.wipe_metadata()
     self.map.model.wipe_scripts()
+    self.actions_history = []
 
 func next_alternative():
     var tile = self.map.model.get_tile(self.map.tile_box_position)
@@ -371,7 +373,7 @@ func next_alternative():
     if tile.building.is_present():
         old_side = tile.building.tile.side
         self.next_building_side(tile.building.tile)
-        self.actions_history.append({
+        self.write_action_history({
             "type" : "side",
             "class" : "building",
             "position" : self.map.tile_box_position,
@@ -382,7 +384,7 @@ func next_alternative():
     if tile.unit.is_present():
         old_side = tile.unit.tile.side
         self.next_unit_side(tile.unit.tile)
-        self.actions_history.append({
+        self.write_action_history({
             "type" : "side",
             "class" : "unit",
             "position" : self.map.tile_box_position,
@@ -422,7 +424,7 @@ func replace_terrain(tile, template_name):
     self.map.builder.place_terrain(tile.position, template_name, rotation.y)
 
 func notify_about_removal(action_details):
-    self.actions_history.append(action_details)
+    self.write_action_history(action_details)
 
 func _open_ability_ban_menu():
     var tile = self.map.model.get_tile(self.map.tile_box_position)
@@ -438,3 +440,6 @@ func toggle_unit_ai_pause():
             tile.unit.tile.remove_highlight()
         else:
             tile.unit.tile.restore_highlight()
+
+func write_action_history(action_details):
+    self.actions_history.append(action_details)

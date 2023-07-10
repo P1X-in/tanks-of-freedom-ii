@@ -111,9 +111,29 @@
         {
             "name" : "mission_complete",
             "title" : "Mission complete",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [540, 120]
+            "map" : "core_amb_noon_mission_complete.tofmap.json",
+            "description" : "Standoff between Admiral Torsten and Warlord Grim continues. Besieged on all sides, he might not be able to hold out for much longer. Prince Tybalt teams up with Captain Claude on a mission to support Jade Twilight forces under fire and free King Ludwig.",
+            "marker" : [540, 120],
+            "players": [
+                {
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "human",
+                    "team": 0
+                },
+                {
+                    "side": "green",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 0
+                },
+                {
+                    "side": "black",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 1
+                }
+            ]
         },
         {
             "name" : "in_the_name_of_the_king",
