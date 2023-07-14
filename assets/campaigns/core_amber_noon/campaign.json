@@ -138,9 +138,41 @@
         {
             "name" : "in_the_name_of_the_king",
             "title" : "In the name of the King",
-            "map" : "crossroad.tofmap.json",
-            "description" : "Lorem ipsum",
-            "marker" : [500, 50]
+            "map" : "core_amb_noon_name_of_king.tofmap.json",
+            "description" : "The final confrontation between Obsidian Night and other nations draws near. Warlord Grim returns to his castle hidden in the mountains, where his vast army awaits his command. Prince Tybalt and his allies must band together and end his madness once and for all.",
+            "marker" : [500, 50],
+            "players": [
+                {
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "human",
+                    "team": 0
+                },
+                {
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 0
+                },
+                {
+                    "side": "red",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 0
+                },
+                {
+                    "side": "green",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 0
+                },
+                {
+                    "side": "black",
+                    "ap": 0,
+                    "type": "ai",
+                    "team": 1
+                }
+            ]
         }
     ]
 }
