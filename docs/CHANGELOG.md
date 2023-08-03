@@ -3,8 +3,11 @@
 
 ### 0.4.0-alpha
 - Added Amber Noon campaign
+- Added Epilogue
 - Added new tiles
 - Improvements to story triggers
+- AI tether for units that need to stay in one area for story reasons
+- Fixed a bug where message actor would be in desat state when assigned a custom colour
 
 ### 0.3.1-alpha
 - Cleaned-up Settings window

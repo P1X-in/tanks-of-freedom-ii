@@ -1,15 +1,15 @@
 {
-    "name" : "core_amber_noon",
-    "title" : "Royal Blood",
-    "icon" : "yellow_gem",
-    "prerequisite" : "core_jade_twilight",
-    "missions" : [
+    "name": "core_amber_noon",
+    "title": "tr_core_amber_noon_campaign_title",
+    "icon": "yellow_gem",
+    "prerequisite": "core_jade_twilight",
+    "missions": [
         {
-            "name" : "king_in_making",
-            "title" : "A King in the making",
-            "map" : "core_amb_noon_king_in_making.tofmap.json",
-            "description" : "Under Chancellor Irene's watchful eye, Prince Tybalt is undergoing intense training. Bad news brought by Captain Claude confirmed her fears: only a military action by the Prince himself can unite warring nations and put an end to Grim's plans.",
-            "marker" : [
+            "name": "king_in_making",
+            "title": "tr_core_amber_noon_m1_name",
+            "map": "core_amb_noon_king_in_making.tofmap.json",
+            "description": "tr_core_amber_noon_m1_desc",
+            "marker": [
                 590,
                 220
             ],
@@ -27,11 +27,14 @@
             ]
         },
         {
-            "name" : "obsidian_shadow",
-            "title" : "Obsidian shadow",
-            "map" : "core_amb_noon_obsidian_shadow.tofmap.json",
-            "description" : "Accompanied by Captain Claude and a group of Royal Knights, Prince Tybalt begins his march to rescue his father. His first objective is one of the border bases of Amber Noon, where he hopes to enlist the help of one of the loyalist cohorts. But only when they arrive, the extent of Grim's corruption is revealed.",
-            "marker" : [620, 120],
+            "name": "obsidian_shadow",
+            "title": "tr_core_amber_noon_m2_name",
+            "map": "core_amb_noon_obsidian_shadow.tofmap.json",
+            "description": "tr_core_amber_noon_m2_desc",
+            "marker": [
+                620,
+                120
+            ],
             "players": [
                 {
                     "side": "yellow",
@@ -54,11 +57,14 @@
             ]
         },
         {
-            "name" : "cracked_sapphire",
-            "title" : "Cracked Sapphire",
-            "map" : "core_amb_noon_cracked_sapphire.tofmap.json",
-            "description" : "General Cyrus, released from unjust inprisonment, comes back for Commando Blake. But his old subordinate has a new master now. As it turns out, this particular business might not have been as good as President Gideon thought.",
-            "marker" : [490, 155],
+            "name": "cracked_sapphire",
+            "title": "tr_core_amber_noon_m3_name",
+            "map": "core_amb_noon_cracked_sapphire.tofmap.json",
+            "description": "tr_core_amber_noon_m3_desc",
+            "marker": [
+                490,
+                155
+            ],
             "players": [
                 {
                     "side": "yellow",
@@ -81,11 +87,14 @@
             ]
         },
         {
-            "name" : "noble_redemption",
-            "title" : "Noble redemption",
-            "map" : "core_amb_noon_noble_redemption.tofmap.json",
-            "description" : "Following advice from General Cyrus, Prince Tybalt and his loyal soldiers are pushing north, looking for a way to encircle the Amber Fortress. Narrow valleys of the mountainous region ahead should help them stay undetected.",
-            "marker" : [450, 100],
+            "name": "noble_redemption",
+            "title": "tr_core_amber_noon_m4_name",
+            "map": "core_amb_noon_noble_redemption.tofmap.json",
+            "description": "tr_core_amber_noon_m4_desc",
+            "marker": [
+                450,
+                100
+            ],
             "players": [
                 {
                     "side": "yellow",
@@ -109,11 +118,14 @@
             ]
         },
         {
-            "name" : "mission_complete",
-            "title" : "Mission complete",
-            "map" : "core_amb_noon_mission_complete.tofmap.json",
-            "description" : "Standoff between Admiral Torsten and Warlord Grim continues. Besieged on all sides, he might not be able to hold out for much longer. Prince Tybalt teams up with Captain Claude on a mission to support Jade Twilight forces under fire and free King Ludwig.",
-            "marker" : [540, 120],
+            "name": "mission_complete",
+            "title": "tr_core_amber_noon_m5_name",
+            "map": "core_amb_noon_mission_complete.tofmap.json",
+            "description": "tr_core_amber_noon_m5_desc",
+            "marker": [
+                540,
+                120
+            ],
             "players": [
                 {
                     "side": "yellow",
@@ -136,11 +148,14 @@
             ]
         },
         {
-            "name" : "in_the_name_of_the_king",
-            "title" : "In the name of the King",
-            "map" : "core_amb_noon_name_of_king.tofmap.json",
-            "description" : "The final confrontation between Obsidian Night and other nations draws near. Warlord Grim returns to his castle hidden in the mountains, where his vast army awaits his command. Prince Tybalt and his allies must band together and end his madness once and for all.",
-            "marker" : [500, 50],
+            "name": "in_the_name_of_the_king",
+            "title": "tr_core_amber_noon_m6_name",
+            "map": "core_amb_noon_name_of_king.tofmap.json",
+            "description": "tr_core_amber_noon_m6_desc",
+            "marker": [
+                500,
+                50
+            ],
             "players": [
                 {
                     "side": "yellow",
