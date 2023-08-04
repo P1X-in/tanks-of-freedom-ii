@@ -16,6 +16,7 @@ var registered_core_campaign_names = [
     "core_sapphire_dawn",
     "core_jade_twilight",
     "core_amber_noon",
+    "core_epilogue"
 ]
 
 var core_campaigns = []

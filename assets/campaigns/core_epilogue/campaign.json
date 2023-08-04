@@ -1,0 +1,27 @@
+{
+    "name" : "core_epilogue",
+    "title" : "Epilogue",
+    "icon" : "black_gem",
+    "prerequisite": "core_amber_noon",
+    "missions" : [
+        {
+            "name" : "grim_reminder",
+            "title" : "A Grim reminder",
+            "map" : "core_epilogue_grim_reminder.tofmap.json",
+            "description" : "Lorem ipsum",
+            "marker" : [520, 20],
+            "players": [
+                {
+                    "side" : "black",
+                    "ap" : 0,
+                    "type" : "human"
+                },
+                {
+                    "side" : "yellow",
+                    "ap" : 0,
+                    "type" : "ai"
+                }
+            ]
+        }
+    ]
+}
