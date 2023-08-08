@@ -436,11 +436,13 @@ Each of the main campaigns should be about 10 mission long.
 #### Epilogue
 1. Obsidian cloud
     - Warlord Grim and Commando Blake are held in a prison under Amber Noon guard
-    - Some of the guards turn to Obsidian Night colours and set them free
+    - Some of the guards turn to Obsidian Night colours and set Grim free
+    - Grim has to get to Blake's cell and free him
     - A spot where Blake's ability can be used for additional units
+    - Part of the base only accessible to Blake, need to clear to open a gate
     - Grim fights his way out of the prison base
     - Grim vows to get his revenge on Tybalt and the others
-    - Resources are limited, need to focus on Grim's abilities
+    - Resources are limited, need to focus on combination of Grim's and Blake's abilities
 
 
 ## Gameplay
