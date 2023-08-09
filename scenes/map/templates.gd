@@ -149,6 +149,7 @@ const CITY_SANDBAGS = "city_sandbags"
 const CITY_BRIDGE_WOOD = "city_bridge_wood"
 
 const CASTLE_WALL_STRAIGHT = "castle_wall_straight"
+const CASTLE_WALL_STRAIGHT2 = "castle_wall_straight2"
 const CASTLE_WALL_CORNER = "castle_wall_corner"
 const CASTLE_WALL_CROSS = "castle_wall_cross"
 const CASTLE_WALL_T = "castle_wall_t"
@@ -446,6 +447,7 @@ var templates = {
 	self.CITY_BRIDGE_WOOD : preload("res://scenes/tiles/city/wooden_bridge_overtile.tscn"),
 
 	self.CASTLE_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall_straight.tscn"),
+	self.CASTLE_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall_straight2.tscn"),
 	self.CASTLE_WALL_CORNER : preload("res://scenes/tiles/city/wall_corner.tscn"),
 	self.CASTLE_WALL_CROSS : preload("res://scenes/tiles/city/wall_cross.tscn"),
 	self.CASTLE_WALL_T : preload("res://scenes/tiles/city/wall_t.tscn"),

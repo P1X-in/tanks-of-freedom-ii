@@ -147,6 +147,7 @@ func build_rotations(templates, builder):
 		templates.CITY_ROADBLOCK,
 		templates.CITY_SANDBAGS,
 		templates.CASTLE_WALL_STRAIGHT,
+		templates.CASTLE_WALL_STRAIGHT2,
 		templates.CASTLE_WALL_CORNER,
 		templates.CASTLE_WALL_CROSS,
 		templates.CASTLE_WALL_T,

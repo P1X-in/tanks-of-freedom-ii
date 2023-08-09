@@ -94,6 +94,7 @@ var city_tiles = [
     "destroyed_statue",
     "destroyed_fountain",
     "castle_wall_straight",
+    "castle_wall_straight2",
     "castle_wall_corner",
     "castle_wall_cross",
     "castle_wall_t",
