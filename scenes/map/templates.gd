@@ -148,6 +148,13 @@ const CITY_SANDBAGS = "city_sandbags"
 
 const CITY_BRIDGE_WOOD = "city_bridge_wood"
 
+const CASTLE_WALL_STRAIGHT = "castle_wall_straight"
+const CASTLE_WALL_CORNER = "castle_wall_corner"
+const CASTLE_WALL_CROSS = "castle_wall_cross"
+const CASTLE_WALL_T = "castle_wall_t"
+const CASTLE_WALL_GATE = "castle_wall_gate"
+const CASTLE_WALL_GATE_CLOSED = "castle_wall_gate_closed"
+
 const DAMAGED_STATUE = "damaged_statue"
 const DAMAGED_FOUNTAIN = "damaged_fountain"
 const DAMAGED_BUILDING_SMALL1 = "damaged_building_small1"
@@ -437,6 +444,13 @@ var templates = {
 	self.BRIDGE_STONE_BARRIER_TILED : preload("res://scenes/tiles/city/bridge_stone_barrier_tiled.tscn"),
 
 	self.CITY_BRIDGE_WOOD : preload("res://scenes/tiles/city/wooden_bridge_overtile.tscn"),
+
+	self.CASTLE_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall_straight.tscn"),
+	self.CASTLE_WALL_CORNER : preload("res://scenes/tiles/city/wall_corner.tscn"),
+	self.CASTLE_WALL_CROSS : preload("res://scenes/tiles/city/wall_cross.tscn"),
+	self.CASTLE_WALL_T : preload("res://scenes/tiles/city/wall_t.tscn"),
+	self.CASTLE_WALL_GATE : preload("res://scenes/tiles/city/wall_gate.tscn"),
+	self.CASTLE_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall_gate_closed.tscn"),
 
 	self.DAMAGED_STATUE : preload("res://scenes/tiles/decorations/statue_damaged.tscn"),
 	self.DAMAGED_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_damaged.tscn"),

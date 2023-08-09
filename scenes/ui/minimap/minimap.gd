@@ -93,6 +93,12 @@ var city_tiles = [
     "destroyed_building_big4",
     "destroyed_statue",
     "destroyed_fountain",
+    "castle_wall_straight",
+    "castle_wall_corner",
+    "castle_wall_cross",
+    "castle_wall_t",
+    "castle_wall_gate",
+    "castle_wall_gate_closed",
 ]
 var mountain_tiles = [
     "nature_big_rocks1",
