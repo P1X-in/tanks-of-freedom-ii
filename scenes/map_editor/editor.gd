@@ -149,6 +149,8 @@ func _place_tile(tile_class, position, tile_type, _tile_rotation):
         self.map.builder.place_damage(position, tile_type, _tile_rotation)
     if tile_class == self.map.builder.CLASS_TERRAIN:
         self.map.builder.place_terrain(position, tile_type, _tile_rotation)
+    if tile_class == self.map.builder.SUB_CLASS_CONSTRUCTION:
+        self.map.builder.place_terrain(position, tile_type, _tile_rotation)
     if tile_class == self.map.builder.CLASS_BUILDING:
         self.map.builder.place_building(position, tile_type, _tile_rotation)
     if tile_class == self.map.builder.CLASS_UNIT or tile_class == self.map.builder.CLASS_HERO:

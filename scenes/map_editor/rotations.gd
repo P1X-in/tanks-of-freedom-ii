@@ -129,7 +129,7 @@ func build_rotations(templates, builder):
 		templates.DECO_GROUND_DMG_6,
 	])
 
-	self.rotations[builder.CLASS_TERRAIN] = self.build_from_array([
+	self.rotations[builder.SUB_CLASS_CONSTRUCTION] = self.build_from_array([
 		templates.CITY_BUILDING_BIG1,
 		templates.CITY_BUILDING_BIG2,
 		templates.CITY_BUILDING_BIG3,
@@ -157,6 +157,9 @@ func build_rotations(templates, builder):
 		templates.BRIDGE_SUSPENSION_TILED,
 		templates.BRIDGE_STONE_BARRIER,
 		templates.BRIDGE_STONE_BARRIER_TILED,
+	])
+
+	self.rotations[builder.CLASS_TERRAIN] = self.build_from_array([
 		templates.NATURE_BIG_ROCKS1,
 		templates.NATURE_BIG_ROCKS2,
 		templates.NATURE_BIG_ROCKS3,
@@ -272,6 +275,7 @@ func build_rotations(templates, builder):
 		builder.CLASS_DECORATION,
 		builder.CLASS_DAMAGE,
 		builder.CLASS_TERRAIN,
+		builder.SUB_CLASS_CONSTRUCTION,
 		builder.CLASS_BUILDING,
 		builder.CLASS_UNIT,
 		builder.CLASS_HERO,
