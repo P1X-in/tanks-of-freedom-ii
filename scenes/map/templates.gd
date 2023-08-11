@@ -153,6 +153,7 @@ const CASTLE_WALL_STRAIGHT2 = "castle_wall_straight2"
 const CASTLE_WALL_CORNER = "castle_wall_corner"
 const CASTLE_WALL_CROSS = "castle_wall_cross"
 const CASTLE_WALL_T = "castle_wall_t"
+const CASTLE_WALL_T2 = "castle_wall_t2"
 const CASTLE_WALL_GATE = "castle_wall_gate"
 const CASTLE_WALL_GATE_CLOSED = "castle_wall_gate_closed"
 
@@ -451,6 +452,7 @@ var templates = {
 	self.CASTLE_WALL_CORNER : preload("res://scenes/tiles/city/wall_corner.tscn"),
 	self.CASTLE_WALL_CROSS : preload("res://scenes/tiles/city/wall_cross.tscn"),
 	self.CASTLE_WALL_T : preload("res://scenes/tiles/city/wall_t.tscn"),
+	self.CASTLE_WALL_T2 : preload("res://scenes/tiles/city/wall_t2.tscn"),
 	self.CASTLE_WALL_GATE : preload("res://scenes/tiles/city/wall_gate.tscn"),
 	self.CASTLE_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall_gate_closed.tscn"),
 

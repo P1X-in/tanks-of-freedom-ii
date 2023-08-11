@@ -98,6 +98,7 @@ var city_tiles = [
     "castle_wall_corner",
     "castle_wall_cross",
     "castle_wall_t",
+    "castle_wall_t2",
     "castle_wall_gate",
     "castle_wall_gate_closed",
 ]

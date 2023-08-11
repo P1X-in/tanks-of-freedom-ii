@@ -151,6 +151,7 @@ func build_rotations(templates, builder):
 		templates.CASTLE_WALL_CORNER,
 		templates.CASTLE_WALL_CROSS,
 		templates.CASTLE_WALL_T,
+		templates.CASTLE_WALL_T2,
 		templates.CASTLE_WALL_GATE,
 		templates.CASTLE_WALL_GATE_CLOSED,
 		templates.BRIDGE_SUSPENSION,
