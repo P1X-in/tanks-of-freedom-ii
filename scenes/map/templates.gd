@@ -215,6 +215,8 @@ const NATURE_SAND_PALMS2 = "nature_sand_palms2"
 const NATURE_SAND_PALMS3 = "nature_sand_palms3"
 const NATURE_SAND_PALMS4 = "nature_sand_palms4"
 
+const SPECIAL_KEY = "special_key"
+
 const MODERN_AIRFIELD = "modern_airfield"
 const MODERN_BARRACKS = "modern_barracks"
 const MODERN_FACTORY = "modern_factory"
@@ -513,6 +515,8 @@ var templates = {
 	self.NATURE_SAND_PALMS2 : preload("res://scenes/tiles/nature/sand/palms_2_overtile.tscn"),
 	self.NATURE_SAND_PALMS3 : preload("res://scenes/tiles/nature/sand/palms_3_overtile.tscn"),
 	self.NATURE_SAND_PALMS4 : preload("res://scenes/tiles/nature/sand/palms_4_overtile.tscn"),
+
+	self.SPECIAL_KEY : preload("res://scenes/tiles/special/key.tscn"),
 
 	self.MODERN_AIRFIELD : preload("res://scenes/tiles/buildings/blue/airfield.tscn"),
 	self.MODERN_BARRACKS : preload("res://scenes/tiles/buildings/blue/barracks.tscn"),
