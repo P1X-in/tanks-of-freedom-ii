@@ -60,7 +60,7 @@ A rebel group splintered from Amber Noon, led by Warlord Grim.
 Style: Feudal/Knights
 Biome: N/A
 Capital: None
-Theme: not selected yet
+Theme: _Grand Beats 110_ (soundtrack_2)
 
 
 ## Characters

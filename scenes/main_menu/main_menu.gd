@@ -148,7 +148,10 @@ func reopen_campaign_mission_selection_after_win():
         self.ui.show_campaign_mission_selection(self.match_setup.campaign_name)
     else:
         self.ui.campaign_mission_selection.load_campaign(self.match_setup.campaign_name)
-        self.ui.show_campaign_mission(self.match_setup.campaign_name, self.match_setup.mission_no + 1)
+        if self.match_setup.has_won:
+            self.ui.show_campaign_mission(self.match_setup.campaign_name, self.match_setup.mission_no + 1)
+        else:
+            self.ui.show_campaign_mission(self.match_setup.campaign_name, self.match_setup.mission_no)
 
 func open_controls():
     self.ui.hide_menu()

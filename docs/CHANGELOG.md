@@ -8,8 +8,9 @@
 - Added castle wall tiles
 - Improvements to story triggers
 - AI tether for units that need to stay in one area for story reasons
-- Fixed a bug where message actor would be in desat state when assigned a custom colour
 - Split editor terrain category into nature and construction
+- Fixed a bug where message actor would be in desat state when assigned a custom colour
+- Fixed a crash that would occure when player quits a last mission in a campaign without winning it
 
 ### 0.3.1-alpha
 - Cleaned-up Settings window

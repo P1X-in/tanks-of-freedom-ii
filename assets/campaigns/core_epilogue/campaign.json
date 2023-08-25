@@ -8,12 +8,12 @@
             "name" : "grim_reminder",
             "title" : "A Grim reminder",
             "map" : "core_epilogue_grim_reminder.tofmap.json",
-            "description" : "Lorem ipsum",
+            "description" : "As the people of Amber Noon celebrate the defeat of Obsidian Night, Warlord Grim finds himself imprisoned and awaiting trial. At least until some unexpected visitors barge in...",
             "marker" : [520, 20],
             "players": [
                 {
                     "side" : "black",
-                    "ap" : 0,
+                    "ap" : 50,
                     "type" : "human"
                 },
                 {

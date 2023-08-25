@@ -7,6 +7,7 @@
 script = ExtResource( 1 )
 label = "TR_INFILTRATION"
 description = "TR_INFILTRATION_DESC"
+cooldown = 1
 ability_range = 2
 draw_range = 2
 named_icon = "infiltration"

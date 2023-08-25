@@ -131,7 +131,7 @@ func place_building(position, name, rotation, side=null):
     if tile.damage.is_present():
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
-    
+
     var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_buildings_anchor, tile.building)
     if not self.map.settings.get_option("shadows"):
         self._disable_shadow(new_element)
@@ -160,7 +160,7 @@ func force_place_unit(position, name, rotation, side=null, ai_paused=false):
         self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
         tile.terrain.clear()
 
-    
+
     var new_unit = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_units_anchor, tile.unit)
     if not self.map.settings.get_option("shadows"):
         self._disable_shadow(new_unit)

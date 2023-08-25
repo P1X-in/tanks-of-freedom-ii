@@ -19,7 +19,7 @@ func _on_back_button_pressed():
 func _on_start_button_pressed():
     self.audio.play("menu_click")
 
-    var mission_details = self.manifest["missions"][self.mission_no] 
+    var mission_details = self.manifest["missions"][self.mission_no]
 
     self.match_setup.reset()
     self.match_setup.campaign_name = self.manifest["name"]
@@ -46,7 +46,7 @@ func load_mission(campaign_name, _mission_no):
     if self.manifest == null:
         self.main_menu.close_campaign_mission()
         return
-    
+
     var mission_details = self.manifest["missions"][self.mission_no]
 
     self.title.set_text(mission_details["title"])

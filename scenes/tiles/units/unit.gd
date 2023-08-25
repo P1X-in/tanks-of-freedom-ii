@@ -407,3 +407,6 @@ func restore_from_state(state):
         if state["abilities"].has("ability" + str(ability.index)):
             ability.disabled = state["abilities"]["ability" + str(ability.index)][0]
             ability.cd_turns_left = state["abilities"]["ability" + str(ability.index)][1]
+
+func is_hero():
+    return false

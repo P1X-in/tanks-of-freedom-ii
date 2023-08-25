@@ -51,3 +51,6 @@ func get_dict():
 func restore_from_state(state):
     .restore_from_state(state)
     self.disable_active_abilities = state["disable_active_abilities"]
+
+func is_hero():
+    return true
