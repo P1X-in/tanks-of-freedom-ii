@@ -1861,6 +1861,13 @@
                 {
                     "action": "ap",
                     "details": {
+                        "amount": 5,
+                        "side": "black"
+                    }
+                },
+                {
+                    "action": "ap",
+                    "details": {
                         "amount": 75,
                         "cap": true,
                         "side": "black"
