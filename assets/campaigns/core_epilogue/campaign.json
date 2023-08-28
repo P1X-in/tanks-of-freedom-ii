@@ -1,25 +1,28 @@
 {
-    "name" : "core_epilogue",
-    "title" : "Epilogue",
-    "icon" : "black_gem",
+    "name": "core_epilogue",
+    "title": "tr_core_epilogue_campaign_title",
+    "icon": "black_gem",
     "prerequisite": "core_amber_noon",
-    "missions" : [
+    "missions": [
         {
-            "name" : "grim_reminder",
-            "title" : "A Grim reminder",
-            "map" : "core_epilogue_grim_reminder.tofmap.json",
-            "description" : "As the people of Amber Noon celebrate the defeat of Obsidian Night, Warlord Grim finds himself imprisoned and awaiting trial. At least until some unexpected visitors barge in...",
-            "marker" : [520, 20],
+            "name": "grim_reminder",
+            "title": "tr_core_epilogue_m1_name",
+            "map": "core_epilogue_grim_reminder.tofmap.json",
+            "description": "tr_core_epilogue_m1_desc",
+            "marker": [
+                520,
+                20
+            ],
             "players": [
                 {
-                    "side" : "black",
-                    "ap" : 50,
-                    "type" : "human"
+                    "side": "black",
+                    "ap": 50,
+                    "type": "human"
                 },
                 {
-                    "side" : "yellow",
-                    "ap" : 0,
-                    "type" : "ai"
+                    "side": "yellow",
+                    "ap": 0,
+                    "type": "ai"
                 }
             ]
         }
