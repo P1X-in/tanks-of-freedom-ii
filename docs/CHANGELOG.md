@@ -7,10 +7,12 @@
 - Added new tiles
 - Added castle wall tiles
 - Improvements to story triggers
+- AP story step can now cap at value
 - AI tether for units that need to stay in one area for story reasons
 - Split editor terrain category into nature and construction
 - Fixed a bug where message actor would be in desat state when assigned a custom colour
 - Fixed a crash that would occure when player quits a last mission in a campaign without winning it
+- Fixed an issue where hero passive effect would not be reassigned to new side when he changed sides using story step
 
 ### 0.3.1-alpha
 - Cleaned-up Settings window
