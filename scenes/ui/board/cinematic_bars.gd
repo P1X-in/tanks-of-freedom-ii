@@ -1,6 +1,6 @@
 extends Control
 
-onready var animations = $"animations"
+@onready var animations = $"animations"
 
 var is_extended = false
 

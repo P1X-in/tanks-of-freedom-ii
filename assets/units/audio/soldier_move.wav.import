@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/soldier_move.wav-f6db82a11f578dd482c43c67bb169a25.sample"
+type="AudioStreamWAV"
+uid="uid://bxpot80n08rb7"
+path="res://.godot/imported/soldier_move.wav-f6db82a11f578dd482c43c67bb169a25.sample"
 
 [deps]
 
 source_file="res://assets/units/audio/soldier_move.wav"
-dest_files=[ "res://.import/soldier_move.wav-f6db82a11f578dd482c43c67bb169a25.sample" ]
+dest_files=["res://.godot/imported/soldier_move.wav-f6db82a11f578dd482c43c67bb169a25.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

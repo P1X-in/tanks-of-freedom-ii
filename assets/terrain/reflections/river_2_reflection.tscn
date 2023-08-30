@@ -5,6 +5,6 @@
 
 
 
-[node name="river_2_reflection" type="MeshInstance"]
+[node name="river_2_reflection" type="MeshInstance3D"]
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )

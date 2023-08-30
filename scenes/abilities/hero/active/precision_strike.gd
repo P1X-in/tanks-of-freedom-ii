@@ -4,11 +4,11 @@ var precision_strike_executor_template = preload("res://scenes/abilities/hero/ac
 
 
 func _execute(board, position):
-    var executor = self.precision_strike_executor_template.instance()
+    var executor = self.precision_strike_executor_template.instantiate()
     
     executor.set_up(board, position, self.source)
     board.ability_markers.add_child(executor)
-    executor.set_translation(board.map.map_to_world(position))
+    executor.set_position(board.map.map_to_local(position))
 
 func is_tile_applicable(tile, _source_tile):
     if tile.unit.is_present():

@@ -632,7 +632,7 @@ func get_template(template):
 	if template == null:
 		return null
 
-	var new_tile = self.templates[template].instance()
+	var new_tile = self.templates[template].instantiate()
 	new_tile.template_name = template
 
 	return new_tile

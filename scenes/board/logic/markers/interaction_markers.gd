@@ -1,6 +1,6 @@
-extends Spatial
+extends Node3D
 
-export(NodePath) var map = null;
+@export var map: NodePath = null;
 
 var attack_marker_template = preload("res://scenes/ui/markers/attack_marker.tscn")
 var capture_marker_template = preload("res://scenes/ui/markers/capture_marker.tscn")
@@ -50,7 +50,7 @@ func should_place_catpure_marker(tile, unit):
     return true
 
 func mark_tile_for_capture(tile):
-    self.place_marker(self.capture_marker_template.instance(), tile)
+    self.place_marker(self.capture_marker_template.instantiate(), tile)
 
 
 func should_place_attack_marker(tile, unit):
@@ -67,12 +67,12 @@ func should_place_attack_marker(tile, unit):
 
 
 func mark_tile_for_attack(tile):
-    self.place_marker(self.attack_marker_template.instance(), tile)
+    self.place_marker(self.attack_marker_template.instantiate(), tile)
 
 
 func place_marker(new_marker, tile):
     self.add_child(new_marker)
-    var placement = self.map.map_to_world(tile.position)
-    new_marker.set_translation(placement)
+    var placement = self.map.map_to_local(tile.position)
+    new_marker.set_position(placement)
 
     self.created_markers[str(tile.position.x) + "_" + str(tile.position.y)] = new_marker

@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/pine_2.obj-9cf9c624d47c54f8781bf09f92e4ac8b.mesh"
+uid="uid://cn2ihbagkrxhq"
+path="res://.godot/imported/pine_2.obj-9cf9c624d47c54f8781bf09f92e4ac8b.mesh"
 
 [deps]
 
-files=[ "res://.import/pine_2.obj-9cf9c624d47c54f8781bf09f92e4ac8b.mesh" ]
+files=["res://.godot/imported/pine_2.obj-9cf9c624d47c54f8781bf09f92e4ac8b.mesh"]
 
 source_file="res://assets/terrain/grasslands/plants/pine_2.obj"
-dest_files=[ "res://.import/pine_2.obj-9cf9c624d47c54f8781bf09f92e4ac8b.mesh", "res://.import/pine_2.obj-9cf9c624d47c54f8781bf09f92e4ac8b.mesh" ]
+dest_files=["res://.godot/imported/pine_2.obj-9cf9c624d47c54f8781bf09f92e4ac8b.mesh", "res://.godot/imported/pine_2.obj-9cf9c624d47c54f8781bf09f92e4ac8b.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

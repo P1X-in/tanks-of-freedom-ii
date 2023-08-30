@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/tree_small_1.obj-09e430fdfc6a0e1f2a43019d2d3e0223.mesh"
+uid="uid://dryxdt1j6d2ta"
+path="res://.godot/imported/tree_small_1.obj-09e430fdfc6a0e1f2a43019d2d3e0223.mesh"
 
 [deps]
 
-files=[ "res://.import/tree_small_1.obj-09e430fdfc6a0e1f2a43019d2d3e0223.mesh" ]
+files=["res://.godot/imported/tree_small_1.obj-09e430fdfc6a0e1f2a43019d2d3e0223.mesh"]
 
 source_file="res://assets/terrain/grasslands/plants/tree_small_1.obj"
-dest_files=[ "res://.import/tree_small_1.obj-09e430fdfc6a0e1f2a43019d2d3e0223.mesh", "res://.import/tree_small_1.obj-09e430fdfc6a0e1f2a43019d2d3e0223.mesh" ]
+dest_files=["res://.godot/imported/tree_small_1.obj-09e430fdfc6a0e1f2a43019d2d3e0223.mesh", "res://.godot/imported/tree_small_1.obj-09e430fdfc6a0e1f2a43019d2d3e0223.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

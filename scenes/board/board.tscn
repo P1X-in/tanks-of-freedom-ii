@@ -10,11 +10,11 @@
 [ext_resource path="res://scenes/fx/explosion.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/board/logic/markers/ability_markers.tscn" type="PackedScene" id=9]
 
-[node name="board" type="Spatial"]
+[node name="board" type="Node3D"]
 script = ExtResource( 2 )
 
-[node name="marker_anchor" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 4 )
+[node name="marker_anchor" type="Node3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 4 )
 
 [node name="tile_marker" parent="marker_anchor" instance=ExtResource( 4 )]
 visible = false
@@ -32,7 +32,7 @@ map = NodePath("../../map")
 map = NodePath("../../map")
 
 [node name="explosion" parent="marker_anchor" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0 )
 
 [node name="map" parent="." instance=ExtResource( 1 )]
 

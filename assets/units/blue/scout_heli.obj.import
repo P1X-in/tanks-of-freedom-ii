@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/scout_heli.obj-9435e58b3812ada24612551dc5aeee8a.mesh"
+uid="uid://wugkpeue7hve"
+path="res://.godot/imported/scout_heli.obj-9435e58b3812ada24612551dc5aeee8a.mesh"
 
 [deps]
 
-files=[ "res://.import/scout_heli.obj-9435e58b3812ada24612551dc5aeee8a.mesh" ]
+files=["res://.godot/imported/scout_heli.obj-9435e58b3812ada24612551dc5aeee8a.mesh"]
 
 source_file="res://assets/units/blue/scout_heli.obj"
-dest_files=[ "res://.import/scout_heli.obj-9435e58b3812ada24612551dc5aeee8a.mesh", "res://.import/scout_heli.obj-9435e58b3812ada24612551dc5aeee8a.mesh" ]
+dest_files=["res://.godot/imported/scout_heli.obj-9435e58b3812ada24612551dc5aeee8a.mesh", "res://.godot/imported/scout_heli.obj-9435e58b3812ada24612551dc5aeee8a.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

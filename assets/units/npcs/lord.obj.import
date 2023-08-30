@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/lord.obj-644977d51f048c4b2da2fa47dc359a95.mesh"
+uid="uid://bnysab4fhiao2"
+path="res://.godot/imported/lord.obj-644977d51f048c4b2da2fa47dc359a95.mesh"
 
 [deps]
 
-files=[ "res://.import/lord.obj-644977d51f048c4b2da2fa47dc359a95.mesh" ]
+files=["res://.godot/imported/lord.obj-644977d51f048c4b2da2fa47dc359a95.mesh"]
 
 source_file="res://assets/units/npcs/lord.obj"
-dest_files=[ "res://.import/lord.obj-644977d51f048c4b2da2fa47dc359a95.mesh", "res://.import/lord.obj-644977d51f048c4b2da2fa47dc359a95.mesh" ]
+dest_files=["res://.godot/imported/lord.obj-644977d51f048c4b2da2fa47dc359a95.mesh", "res://.godot/imported/lord.obj-644977d51f048c4b2da2fa47dc359a95.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

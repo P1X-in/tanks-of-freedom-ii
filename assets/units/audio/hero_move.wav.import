@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/hero_move.wav-60fda1f3dcb7ceb520ec9d7dadf49083.sample"
+type="AudioStreamWAV"
+uid="uid://bl06h12ywj8cu"
+path="res://.godot/imported/hero_move.wav-60fda1f3dcb7ceb520ec9d7dadf49083.sample"
 
 [deps]
 
 source_file="res://assets/units/audio/hero_move.wav"
-dest_files=[ "res://.import/hero_move.wav-60fda1f3dcb7ceb520ec9d7dadf49083.sample" ]
+dest_files=["res://.godot/imported/hero_move.wav-60fda1f3dcb7ceb520ec9d7dadf49083.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

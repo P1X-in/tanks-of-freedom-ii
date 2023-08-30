@@ -1,6 +1,6 @@
-extends Spatial
+extends Node3D
 
-export(NodePath) var map = null;
+@export var map: NodePath = null;
 
 var marker_template = preload("res://scenes/ui/markers/movement_marker.tscn")
 var colour_materials = {
@@ -74,10 +74,10 @@ func marker_exists(position):
     return self.created_markers.has(str(position.x) + "_" + str(position.y))
 
 func place_movement_marker(position):
-    var new_marker = self.marker_template.instance()
+    var new_marker = self.marker_template.instantiate()
     self.add_child(new_marker)
-    var placement = self.map.map_to_world(position)
-    new_marker.set_translation(placement)
+    var placement = self.map.map_to_local(position)
+    new_marker.set_position(placement)
 
     self.created_markers[str(position.x) + "_" + str(position.y)] = new_marker
 

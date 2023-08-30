@@ -4,4 +4,4 @@
 
 [node name="tile" instance=ExtResource( 1 )]
 
-[node name="reflection" type="MeshInstance" parent="." index="1"]
+[node name="reflection" type="MeshInstance3D" parent="." index="1"]

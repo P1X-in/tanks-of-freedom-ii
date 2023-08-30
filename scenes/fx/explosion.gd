@@ -1,17 +1,17 @@
-extends Spatial
+extends Node3D
 
-onready var main = $"main"
-onready var smoke = $"main/smoke"
-onready var small_main = $"small_main"
-onready var bless = $"bless"
-onready var heal = $"heal"
+@onready var main = $"main"
+@onready var smoke = $"main/smoke"
+@onready var small_main = $"small_main"
+@onready var bless = $"bless"
+@onready var heal = $"heal"
 
 func grab_sfx_effect(unit):
     var audio_player = unit.give_sfx_effect("die")
     if audio_player == null:
         return
 
-    audio_player.connect("finished", audio_player, "queue_free")
+    audio_player.connect("finished", Callable(audio_player, "queue_free"))
     $"audio".add_child(audio_player)
     audio_player.play()
 

@@ -3,6 +3,6 @@
 [ext_resource path="res://assets/materials/arne32.tres" type="Material" id=1]
 [ext_resource path="res://assets/terrain/grasslands/plants/bush_1.obj" type="ArrayMesh" id=2]
 
-[node name="bush_1" type="MeshInstance"]
+[node name="bush_1" type="MeshInstance3D"]
 mesh = ExtResource( 2 )
 material/0 = ExtResource( 1 )

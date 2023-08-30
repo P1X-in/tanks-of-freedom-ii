@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/tank.obj-7e07be021237e8834633a912f3aedd8e.mesh"
+uid="uid://dyucdxu1ojlkd"
+path="res://.godot/imported/tank.obj-7e07be021237e8834633a912f3aedd8e.mesh"
 
 [deps]
 
-files=[ "res://.import/tank.obj-7e07be021237e8834633a912f3aedd8e.mesh" ]
+files=["res://.godot/imported/tank.obj-7e07be021237e8834633a912f3aedd8e.mesh"]
 
 source_file="res://assets/units/green/tank.obj"
-dest_files=[ "res://.import/tank.obj-7e07be021237e8834633a912f3aedd8e.mesh", "res://.import/tank.obj-7e07be021237e8834633a912f3aedd8e.mesh" ]
+dest_files=["res://.godot/imported/tank.obj-7e07be021237e8834633a912f3aedd8e.mesh", "res://.godot/imported/tank.obj-7e07be021237e8834633a912f3aedd8e.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

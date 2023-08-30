@@ -1,23 +1,23 @@
 extends Control
 
-onready var audio = $"/root/SimpleAudioLibrary"
-onready var settings = $"/root/Settings"
+@onready var audio = $"/root/SimpleAudioLibrary"
+@onready var settings = $"/root/Settings"
 
-onready var animations = $"animations"
+@onready var animations = $"animations"
 
-onready var general_button = $"widgets/tabs/general"
-onready var video_button = $"widgets/tabs/video"
-onready var audio_button = $"widgets/tabs/audio"
-onready var gameplay_button = $"widgets/tabs/gameplay"
-onready var back_button = $"widgets/back_button"
+@onready var general_button = $"widgets/tabs/general"
+@onready var video_button = $"widgets/tabs/video"
+@onready var audio_button = $"widgets/tabs/audio"
+@onready var gameplay_button = $"widgets/tabs/gameplay"
+@onready var back_button = $"widgets/back_button"
 
-onready var general_panel = $"widgets/boxes/settings_general"
-onready var video_panel = $"widgets/boxes/settings_video"
-onready var audio_panel = $"widgets/boxes/settings_audio"
-onready var gameplay_panel = $"widgets/boxes/settings_gameplay"
+@onready var general_panel = $"widgets/boxes/settings_general"
+@onready var video_panel = $"widgets/boxes/settings_video"
+@onready var audio_panel = $"widgets/boxes/settings_audio"
+@onready var gameplay_panel = $"widgets/boxes/settings_gameplay"
 
-onready var help = $"help"
-onready var help_text = $"help/text"
+@onready var help = $"help"
+@onready var help_text = $"help/text"
 
 var main_menu
 
@@ -44,7 +44,7 @@ func show_panel():
     self.gameplay_panel.hide()
     self.animations.play("show")
     self.set_process_input(true)
-    yield(self.get_tree().create_timer(0.1), "timeout")
+    await self.get_tree().create_timer(0.1).timeout
     self.general_button.grab_focus()
 
 func hide_panel():

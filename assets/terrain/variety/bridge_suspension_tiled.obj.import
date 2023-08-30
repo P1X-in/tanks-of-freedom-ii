@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/bridge_suspension_tiled.obj-560865bf9dc0c97f2fe3e6f0a2fc9afa.mesh"
+uid="uid://dowjgk8fr0n72"
+path="res://.godot/imported/bridge_suspension_tiled.obj-560865bf9dc0c97f2fe3e6f0a2fc9afa.mesh"
 
 [deps]
 
-files=[ "res://.import/bridge_suspension_tiled.obj-560865bf9dc0c97f2fe3e6f0a2fc9afa.mesh" ]
+files=["res://.godot/imported/bridge_suspension_tiled.obj-560865bf9dc0c97f2fe3e6f0a2fc9afa.mesh"]
 
 source_file="res://assets/terrain/variety/bridge_suspension_tiled.obj"
-dest_files=[ "res://.import/bridge_suspension_tiled.obj-560865bf9dc0c97f2fe3e6f0a2fc9afa.mesh", "res://.import/bridge_suspension_tiled.obj-560865bf9dc0c97f2fe3e6f0a2fc9afa.mesh" ]
+dest_files=["res://.godot/imported/bridge_suspension_tiled.obj-560865bf9dc0c97f2fe3e6f0a2fc9afa.mesh", "res://.godot/imported/bridge_suspension_tiled.obj-560865bf9dc0c97f2fe3e6f0a2fc9afa.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

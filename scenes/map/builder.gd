@@ -180,12 +180,12 @@ func force_place_unit(position, name, rotation, side=null, ai_paused=false):
 
 func place_element(position, name, rotation, vertical_offset, anchor, tile_fragment):
     var new_tile = self.map.templates.get_template(name)
-    var world_position = self.map.map_to_world(position)
+    var world_position = self.map.map_to_local(position)
 
     anchor.add_child(new_tile)
     world_position.y = vertical_offset
-    new_tile.set_translation(world_position)
-    new_tile.set_rotation(Vector3(0, deg2rad(rotation), 0))
+    new_tile.set_position(world_position)
+    new_tile.set_rotation(Vector3(0, deg_to_rad(rotation), 0))
     new_tile.current_rotation = rotation
 
     tile_fragment.set_tile(new_tile)
@@ -339,7 +339,7 @@ func rebuild_tile(tile_id, tile_data):
         tile.unit.tile.restore_from_state(tile_data["unit"])
         if tile_data["unit"].has("passenger"):
             var passenger = self.map.templates.get_template(tile_data["unit"]["passenger"]["tile"])
-            passenger.set_rotation(Vector3(0, deg2rad(tile_data["unit"]["passenger"]["rotation"]), 0))
+            passenger.set_rotation(Vector3(0, deg_to_rad(tile_data["unit"]["passenger"]["rotation"]), 0))
             passenger.current_rotation = tile_data["unit"]["passenger"]["rotation"]
             if not self.map.settings.get_option("shadows"):
                 self._disable_shadow(passenger)

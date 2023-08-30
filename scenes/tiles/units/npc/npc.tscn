@@ -28,7 +28,7 @@ uses_metallic_material = false
 unit_value = 0
 unit_class = "npc"
 
-[node name="standard" type="MeshInstance" parent="mesh_anchor" index="1"]
+[node name="standard" type="MeshInstance3D" parent="mesh_anchor" index="1"]
 mesh = ExtResource( 8 )
 
 [node name="spawn" parent="audio" index="0"]

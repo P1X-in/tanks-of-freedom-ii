@@ -5,14 +5,14 @@
 [ext_resource path="res://scenes/ui/markers/movement_marker.gd" type="Script" id=3]
 
 
-[node name="movement_marker" type="Spatial"]
+[node name="movement_marker" type="Node3D"]
 script = ExtResource( 3 )
 
-[node name="offset" type="Spatial" parent="."]
-transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.9, 3.6, 0, 3.6 )
+[node name="offset" type="Node3D" parent="."]
+transform = Transform3D( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.9, 3.6, 0, 3.6 )
 
-[node name="mesh1" type="MeshInstance" parent="offset"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -4 )
+[node name="mesh1" type="MeshInstance3D" parent="offset"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -4 )
 cast_shadow = 0
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
@@ -20,8 +20,8 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="mesh2" type="MeshInstance" parent="offset"]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -4, 0.5, -4 )
+[node name="mesh2" type="MeshInstance3D" parent="offset"]
+transform = Transform3D( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -4, 0.5, -4 )
 cast_shadow = 0
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )

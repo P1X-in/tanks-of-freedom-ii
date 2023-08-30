@@ -14,19 +14,19 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 4 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
 }
 
-[node name="voxel_star" type="Spatial"]
+[node name="voxel_star" type="Node3D"]
 
-[node name="pivot" type="Spatial" parent="."]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0 )
+[node name="pivot" type="Node3D" parent="."]
+transform = Transform3D( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0 )
 
-[node name="star" type="MeshInstance" parent="pivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0, -0.05 )
+[node name="star" type="MeshInstance3D" parent="pivot"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0, -0.05 )
 cast_shadow = 0
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )

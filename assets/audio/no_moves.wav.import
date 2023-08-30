@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/no_moves.wav-d502233a79f5525f307718c68e9f90b4.sample"
+type="AudioStreamWAV"
+uid="uid://bh3b61tg73plx"
+path="res://.godot/imported/no_moves.wav-d502233a79f5525f307718c68e9f90b4.sample"
 
 [deps]
 
 source_file="res://assets/audio/no_moves.wav"
-dest_files=[ "res://.import/no_moves.wav-d502233a79f5525f307718c68e9f90b4.sample" ]
+dest_files=["res://.godot/imported/no_moves.wav-d502233a79f5525f307718c68e9f90b4.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

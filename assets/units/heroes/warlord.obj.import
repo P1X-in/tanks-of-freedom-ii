@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/warlord.obj-d31d7a364a7a1f63cbf88195c69351ea.mesh"
+uid="uid://d0qn6xvmqn3s2"
+path="res://.godot/imported/warlord.obj-d31d7a364a7a1f63cbf88195c69351ea.mesh"
 
 [deps]
 
-files=[ "res://.import/warlord.obj-d31d7a364a7a1f63cbf88195c69351ea.mesh" ]
+files=["res://.godot/imported/warlord.obj-d31d7a364a7a1f63cbf88195c69351ea.mesh"]
 
 source_file="res://assets/units/heroes/warlord.obj"
-dest_files=[ "res://.import/warlord.obj-d31d7a364a7a1f63cbf88195c69351ea.mesh", "res://.import/warlord.obj-d31d7a364a7a1f63cbf88195c69351ea.mesh" ]
+dest_files=["res://.godot/imported/warlord.obj-d31d7a364a7a1f63cbf88195c69351ea.mesh", "res://.godot/imported/warlord.obj-d31d7a364a7a1f63cbf88195c69351ea.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

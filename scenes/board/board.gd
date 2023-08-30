@@ -1,16 +1,16 @@
-extends Spatial
+extends Node3D
 
 const RETALIATION_DELAY = 0.1
 
-onready var map = $"map"
-onready var ui = $"ui"
+@onready var map = $"map"
+@onready var ui = $"ui"
 
-onready var audio = $"/root/SimpleAudioLibrary"
-onready var switcher = $"/root/SceneSwitcher"
-onready var match_setup = $"/root/MatchSetup"
-onready var settings = $"/root/Settings"
-onready var campaign = $"/root/Campaign"
-onready var saves_manager = $"/root/SavesManager"
+@onready var audio = $"/root/SimpleAudioLibrary"
+@onready var switcher = $"/root/SceneSwitcher"
+@onready var match_setup = $"/root/MatchSetup"
+@onready var settings = $"/root/Settings"
+@onready var campaign = $"/root/Campaign"
+@onready var saves_manager = $"/root/SavesManager"
 
 var state = preload("res://scenes/board/logic/state.gd").new()
 var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").new()
@@ -25,13 +25,13 @@ var collateral = preload("res://scenes/board/logic/collateral.gd").new(self)
 var selected_tile = null
 var active_ability = null
 var last_hover_tile = null
-onready var selected_tile_marker = $"marker_anchor/tile_marker"
-onready var movement_markers = $"marker_anchor/movement_markers"
-onready var interaction_markers = $"marker_anchor/interaction_markers"
-onready var path_markers = $"marker_anchor/path_markers"
-onready var ability_markers = $"marker_anchor/ability_markers"
-onready var explosion_anchor = $"marker_anchor"
-onready var explosion = $"marker_anchor/explosion"
+@onready var selected_tile_marker = $"marker_anchor/tile_marker"
+@onready var movement_markers = $"marker_anchor/movement_markers"
+@onready var interaction_markers = $"marker_anchor/interaction_markers"
+@onready var path_markers = $"marker_anchor/path_markers"
+@onready var ability_markers = $"marker_anchor/ability_markers"
+@onready var explosion_anchor = $"marker_anchor"
+@onready var explosion = $"marker_anchor/explosion"
 
 var explosion_template = preload("res://scenes/fx/explosion.tscn")
 var projectile_template = preload("res://scenes/fx/projectile.tscn")
@@ -51,7 +51,7 @@ func _ready():
         self.restore_saved_state()
 
 func _input(event):
-    if not OS.is_window_focused():
+    if not get_window().has_focus():
         return
 
     if not self.ui.is_panel_open():
@@ -185,14 +185,14 @@ func start_turn():
     if self.state.is_current_player_ai():
         if not self.ui.cinematic_bars.is_extended:
             self.ui.show_cinematic_bars()
-            yield(self.get_tree().create_timer(0.25), "timeout")
+            await self.get_tree().create_timer(0.25).timeout
     else:
         if self.ui.cinematic_bars.is_extended:
             self.ui.hide_cinematic_bars()
 
     if self._should_perform_hq_cam():
         if self._move_camera_to_hq():
-            yield(self.get_tree().create_timer(1), "timeout")
+            await self.get_tree().create_timer(1).timeout
 
     self.replenish_unit_actions()
     self.gain_building_ap()
@@ -331,14 +331,14 @@ func toggle_radial_menu(context_object=null):
 func setup_radial_menu(context_object=null):
     self.ui.radial.clear_fields()
     if context_object == null:
-        self.ui.radial.set_field(self.ui.icons.back.instance(), "TR_RES_MISS", 0, self, "_restart_board")
-        self.ui.radial.set_field(self.ui.icons.disk.instance(), "TR_SAVE_LOAD", 2, self, "open_saves")
+        self.ui.radial.set_field(self.ui.icons.back.instantiate(), "TR_RES_MISS", 0, self, "_restart_board")
+        self.ui.radial.set_field(self.ui.icons.disk.instantiate(), "TR_SAVE_LOAD", 2, self, "open_saves")
         if self.state.is_current_player_ai():
             self.ui.radial.set_field_disabled(2, "X")
         else:
             self.ui.radial.clear_field_disabled(2)
-        self.ui.radial.set_field(self.ui.icons.quit.instance(), "TR_MAIN_MENU", 4, self, "main_menu")
-        self.ui.radial.set_field(self.ui.icons.cross.instance(), "TR_CLOSE", 6, self, "toggle_radial_menu")
+        self.ui.radial.set_field(self.ui.icons.quit.instantiate(), "TR_MAIN_MENU", 4, self, "main_menu")
+        self.ui.radial.set_field(self.ui.icons.cross.instantiate(), "TR_CLOSE", 6, self, "toggle_radial_menu")
         self.ui.show_objectives()
     else:
         self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
@@ -346,10 +346,10 @@ func setup_radial_menu(context_object=null):
 
 func place_selection_marker():
     self.selected_tile_marker.show()
-    var new_position = self.selected_tile_marker.get_translation()
-    var placement = self.map.map_to_world(self.selected_tile.position)
+    var new_position = self.selected_tile_marker.get_position()
+    var placement = self.map.map_to_local(self.selected_tile.position)
     placement.y = new_position.y
-    self.selected_tile_marker.set_translation(placement)
+    self.selected_tile_marker.set_position(placement)
 
 func show_unit_movement_markers():
     self.movement_markers.show_unit_movement_markers_for_tile(self.selected_tile, self.state.get_current_ap())
@@ -391,10 +391,10 @@ func update_unit_position(tile):
 
 func reset_unit_position(tile, unit):
     unit.stop_animations()
-    var world_position = self.map.map_to_world(tile.position)
-    var old_position = unit.get_translation()
+    var world_position = self.map.map_to_local(tile.position)
+    var old_position = unit.get_position()
     world_position.y = old_position.y
-    unit.set_translation(world_position)
+    unit.set_position(world_position)
 
 func can_move_to_tile(tile):
     var move_cost = self.movement_markers.get_tile_cost(tile)
@@ -444,7 +444,7 @@ func battle(attacker_tile, defender_tile):
         if defender.can_attack(attacker) && defender.has_moves():
             defender.use_all_moves()
             attacker.receive_damage(defender.get_attack())
-            yield(self.get_tree().create_timer(self.RETALIATION_DELAY), "timeout")
+            await self.get_tree().create_timer(self.RETALIATION_DELAY).timeout
             defender.rotate_unit_to_direction(defender_tile.get_direction_to_neighbour(attacker_tile))
 
             defender.sfx_effect("attack")
@@ -503,10 +503,10 @@ func heal_a_tile(tile):
     new_explosion.rain_heal()
 
 func _spawn_temporary_explosion_instance_on_tile(tile, free_delay=1.5):
-    var position = self.map.map_to_world(tile.position)
-    var new_explosion = self.explosion_template.instance()
+    var position = self.map.map_to_local(tile.position)
+    var new_explosion = self.explosion_template.instantiate()
     self.explosion_anchor.add_child(new_explosion)
-    new_explosion.set_translation(Vector3(position.x, 0, position.z))
+    new_explosion.set_position(Vector3(position.x, 0, position.z))
     self.destroy_explosion_with_delay(new_explosion, free_delay)
 
     return new_explosion
@@ -523,7 +523,7 @@ func capture(attacker_tile, building_tile):
     building.sfx_effect("capture")
 
     if building.require_crew and not self.abilities.can_intimidate_crew(attacker):
-        yield(self.get_tree().create_timer(self.RETALIATION_DELAY), "timeout")
+        await self.get_tree().create_timer(self.RETALIATION_DELAY).timeout
         self.smoke_a_tile(attacker_tile)
         attacker_tile.unit.clear()
         self.unselect_tile()
@@ -710,7 +710,7 @@ func start_ending_turn():
 
     while index * step_value <= step_max and self.ending_turn_in_progress:
         self.ui.update_end_turn_progress(index * step_value)
-        yield(self.get_tree().create_timer(step_delay), "timeout")
+        await self.get_tree().create_timer(step_delay).timeout
         index += 1
 
     if self.ending_turn_in_progress:
@@ -726,7 +726,7 @@ func main_menu():
     self.switcher.main_menu()
 
 func destroy_explosion_with_delay(explosion_object, delay):
-    yield(self.get_tree().create_timer(delay), "timeout")
+    await self.get_tree().create_timer(delay).timeout
     explosion_object.queue_free()
 
 func _signal_winner(winning_side):
@@ -736,19 +736,19 @@ func _signal_winner(winning_side):
 
 func shoot_projectile(source_tile, destination_tile, tween_time=0.5):
     var new_projectile = self._spawn_temporary_projectile_instance_on_tile(source_tile)
-    var position = self.map.map_to_world(destination_tile.position)
+    var position = self.map.map_to_local(destination_tile.position)
     new_projectile.shoot_at_position(Vector3(position.x, 0, position.z), tween_time)
 
 func lob_projectile(source_tile, destination_tile, tween_time=0.5):
     var new_projectile = self._spawn_temporary_projectile_instance_on_tile(source_tile)
-    var position = self.map.map_to_world(destination_tile.position)
+    var position = self.map.map_to_local(destination_tile.position)
     new_projectile.lob_at_position(Vector3(position.x, 0, position.z), tween_time)
 
 func _spawn_temporary_projectile_instance_on_tile(tile):
-    var position = self.map.map_to_world(tile.position)
-    var new_projectile = self.projectile_template.instance()
+    var position = self.map.map_to_local(tile.position)
+    var new_projectile = self.projectile_template.instantiate()
     self.explosion_anchor.add_child(new_projectile)
-    new_projectile.set_translation(Vector3(position.x, 0, position.z))
+    new_projectile.set_position(Vector3(position.x, 0, position.z))
 
     return new_projectile
 

@@ -1,7 +1,7 @@
 extends TextureButton
 
-onready var label = $"label"
-onready var downloads_label = $"downloads"
+@onready var label = $"label"
+@onready var downloads_label = $"downloads"
 
 var map_name
 var online_id
@@ -15,7 +15,7 @@ var focus_method = null
 
 
 func _ready():
-    var _error = self.connect("pressed", self, "_on_button_pressed")
+    var _error = self.connect("pressed", Callable(self, "_on_button_pressed"))
     self.label.set_message_translation(false)
     self.label.notification(NOTIFICATION_TRANSLATION_CHANGED)
 

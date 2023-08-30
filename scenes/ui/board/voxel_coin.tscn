@@ -14,15 +14,15 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 4 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
 }
 
-[node name="voxel_coin" type="Spatial"]
+[node name="voxel_coin" type="Node3D"]
 
-[node name="coin" type="MeshInstance" parent="."]
+[node name="coin" type="MeshInstance3D" parent="."]
 cast_shadow = 0
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )

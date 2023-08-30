@@ -1,8 +1,8 @@
 extends Control
 
-onready var wrapper = $"objective_wrapper"
+@onready var wrapper = $"objective_wrapper"
 
-onready var objectives = [
+@onready var objectives = [
     $"objective_wrapper/obj1",
     $"objective_wrapper/obj2",
     $"objective_wrapper/obj3",

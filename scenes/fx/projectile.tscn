@@ -15,20 +15,20 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 360 ) ]
 }
 
-[node name="projectile" type="Spatial"]
+[node name="projectile" type="Node3D"]
 script = ExtResource( 3 )
 
-[node name="pivot" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+[node name="pivot" type="Node3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
-[node name="mesh" type="MeshInstance" parent="pivot"]
-transform = Transform( 0.999999, -1.74845e-07, 0, 1.74845e-07, 0.999999, 0, 0, 0, 1, 0, 0, 0 )
+[node name="mesh" type="MeshInstance3D" parent="pivot"]
+transform = Transform3D( 0.999999, -1.74845e-07, 0, 1.74845e-07, 0.999999, 0, 0, 0, 1, 0, 0, 0 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
 

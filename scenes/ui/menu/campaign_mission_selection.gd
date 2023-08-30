@@ -1,18 +1,18 @@
 extends Control
 
-onready var audio = $"/root/SimpleAudioLibrary"
-onready var campaign = $"/root/Campaign"
-onready var match_setup = $"/root/MatchSetup"
+@onready var audio = $"/root/SimpleAudioLibrary"
+@onready var campaign = $"/root/Campaign"
+@onready var match_setup = $"/root/MatchSetup"
 
-onready var animations = $"animations"
-onready var back_button = $"widgets/back_button"
-onready var select_button = $"widgets/select_button"
-onready var prev_button = $"widgets/prev_button"
-onready var next_button = $"widgets/next_button"
-onready var medal = $"widgets/medal"
+@onready var animations = $"animations"
+@onready var back_button = $"widgets/back_button"
+@onready var select_button = $"widgets/select_button"
+@onready var prev_button = $"widgets/prev_button"
+@onready var next_button = $"widgets/next_button"
+@onready var medal = $"widgets/medal"
 
-onready var title = $"widgets/title"
-onready var mission_anchor = $"widgets/missions_anchor"
+@onready var title = $"widgets/title"
+@onready var mission_anchor = $"widgets/missions_anchor"
 
 var main_menu
 
@@ -67,7 +67,7 @@ func _on_select_button_pressed():
 func show_panel():
     self.animations.play("show")
     self.set_process_input(true)
-    yield(self.get_tree().create_timer(0.1), "timeout")
+    await self.get_tree().create_timer(0.1).timeout
     self.select_button.grab_focus()
 
 func hide_panel():
@@ -89,7 +89,7 @@ func load_campaign(campaign_name):
     if self.campaign.is_campaign_complete(manifest["name"]):
         if self.match_setup.animate_medal:
             self.match_setup.animate_medal = false
-            yield(self.get_tree().create_timer(0.1), "timeout")
+            await self.get_tree().create_timer(0.1).timeout
             self.animations.play("medal")
         else:
             self.medal.show()
@@ -110,7 +110,7 @@ func _add_mission_markers(missions):
         index += 1
 
 func _add_mission_marker(index, mission_details):
-    var mission_marker = self.mission_marker_template.instance()
+    var mission_marker = self.mission_marker_template.instantiate()
     self.mission_markers.append(mission_marker)
 
     mission_marker.set_mission_title(index, mission_details["title"])

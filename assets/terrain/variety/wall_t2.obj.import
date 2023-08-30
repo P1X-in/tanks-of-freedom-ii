@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/wall_t2.obj-68909080a3b13a88f8f88473f39187dd.mesh"
+uid="uid://cxjf1w2vy0uu4"
+path="res://.godot/imported/wall_t2.obj-68909080a3b13a88f8f88473f39187dd.mesh"
 
 [deps]
 
-files=[ "res://.import/wall_t2.obj-68909080a3b13a88f8f88473f39187dd.mesh" ]
+files=["res://.godot/imported/wall_t2.obj-68909080a3b13a88f8f88473f39187dd.mesh"]
 
 source_file="res://assets/terrain/variety/wall_t2.obj"
-dest_files=[ "res://.import/wall_t2.obj-68909080a3b13a88f8f88473f39187dd.mesh", "res://.import/wall_t2.obj-68909080a3b13a88f8f88473f39187dd.mesh" ]
+dest_files=["res://.godot/imported/wall_t2.obj-68909080a3b13a88f8f88473f39187dd.mesh", "res://.godot/imported/wall_t2.obj-68909080a3b13a88f8f88473f39187dd.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

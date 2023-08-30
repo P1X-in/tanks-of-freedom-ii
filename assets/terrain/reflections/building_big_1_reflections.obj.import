@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/building_big_1_reflections.obj-cb0a410fc35c91fb53fb7c35ef4dbe0d.mesh"
+uid="uid://nfhhwqvmf6x4"
+path="res://.godot/imported/building_big_1_reflections.obj-cb0a410fc35c91fb53fb7c35ef4dbe0d.mesh"
 
 [deps]
 
-files=[ "res://.import/building_big_1_reflections.obj-cb0a410fc35c91fb53fb7c35ef4dbe0d.mesh" ]
+files=["res://.godot/imported/building_big_1_reflections.obj-cb0a410fc35c91fb53fb7c35ef4dbe0d.mesh"]
 
 source_file="res://assets/terrain/reflections/building_big_1_reflections.obj"
-dest_files=[ "res://.import/building_big_1_reflections.obj-cb0a410fc35c91fb53fb7c35ef4dbe0d.mesh", "res://.import/building_big_1_reflections.obj-cb0a410fc35c91fb53fb7c35ef4dbe0d.mesh" ]
+dest_files=["res://.godot/imported/building_big_1_reflections.obj-cb0a410fc35c91fb53fb7c35ef4dbe0d.mesh", "res://.godot/imported/building_big_1_reflections.obj-cb0a410fc35c91fb53fb7c35ef4dbe0d.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

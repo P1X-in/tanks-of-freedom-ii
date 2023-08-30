@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/ui/map_picker/picker.gd" type="Script" id=1]
-[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/fonts/courier.tres" type="FontFile" id=2]
 [ext_resource path="res://scenes/ui/map_picker/map_button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/ui/minimap/minimap.tscn" type="PackedScene" id=4]
 
@@ -14,8 +14,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
@@ -26,8 +26,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -42,8 +42,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
@@ -54,8 +54,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = false
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
 }
@@ -66,8 +66,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
@@ -82,8 +82,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, true ]
 }
@@ -94,8 +94,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = false
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
 }
@@ -106,8 +106,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
@@ -117,34 +117,34 @@ visible = false
 script = ExtResource( 1 )
 
 [node name="background" type="ColorRect" parent="."]
-margin_left = -600.0
-margin_top = -350.0
-margin_right = 600.0
-margin_bottom = 350.0
+offset_left = -600.0
+offset_top = -350.0
+offset_right = 600.0
+offset_bottom = 350.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 
 [node name="widgets" type="Control" parent="."]
-margin_left = -600.0
-margin_top = -350.0
-margin_right = 600.0
-margin_bottom = 350.0
+offset_left = -600.0
+offset_top = -350.0
+offset_right = 600.0
+offset_bottom = 350.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="name" type="Control" parent="widgets"]
-margin_left = 25.0
-margin_top = 600.0
-margin_right = 425.0
-margin_bottom = 700.0
+offset_left = 25.0
+offset_top = 600.0
+offset_right = 425.0
+offset_bottom = 700.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="map_name" type="LineEdit" parent="widgets/name"]
-margin_right = 300.0
-margin_bottom = 30.0
-custom_fonts/font = ExtResource( 2 )
+offset_right = 300.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource( 2 )
 align = 1
 max_length = 30
 __meta__ = {
@@ -152,22 +152,22 @@ __meta__ = {
 }
 
 [node name="save_button" type="Button" parent="widgets/name"]
-margin_top = 40.0
-margin_right = 100.0
-margin_bottom = 70.0
-custom_fonts/font = ExtResource( 2 )
+offset_top = 40.0
+offset_right = 100.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "TR_SAVE"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="load_button" type="Button" parent="widgets/name"]
-margin_left = 200.0
-margin_top = 40.0
-margin_right = 300.0
-margin_bottom = 70.0
-focus_neighbour_right = NodePath("../../cancel_button")
-custom_fonts/font = ExtResource( 2 )
+offset_left = 200.0
+offset_top = 40.0
+offset_right = 300.0
+offset_bottom = 70.0
+focus_neighbor_right = NodePath("../../cancel_button")
+theme_override_fonts/font = ExtResource( 2 )
 text = "TR_LOAD"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -175,18 +175,18 @@ __meta__ = {
 
 [node name="code" type="Control" parent="widgets"]
 visible = false
-margin_left = 25.0
-margin_top = 600.0
-margin_right = 425.0
-margin_bottom = 700.0
+offset_left = 25.0
+offset_top = 600.0
+offset_right = 425.0
+offset_bottom = 700.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="code" type="LineEdit" parent="widgets/code"]
-margin_right = 300.0
-margin_bottom = 30.0
-custom_fonts/font = ExtResource( 2 )
+offset_right = 300.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource( 2 )
 align = 1
 max_length = 24
 __meta__ = {
@@ -194,68 +194,68 @@ __meta__ = {
 }
 
 [node name="download_button" type="Button" parent="widgets/code"]
-margin_top = 40.0
-margin_right = 300.0
-margin_bottom = 70.0
-custom_fonts/font = ExtResource( 2 )
+offset_top = 40.0
+offset_right = 300.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "TR_DOWNLOAD"
 
 [node name="cancel_button" type="Button" parent="widgets"]
-margin_left = 1025.0
-margin_top = 640.0
-margin_right = 1175.0
-margin_bottom = 670.0
-focus_neighbour_left = NodePath("../name/load_button")
-custom_fonts/font = ExtResource( 2 )
+offset_left = 1025.0
+offset_top = 640.0
+offset_right = 1175.0
+offset_bottom = 670.0
+focus_neighbor_left = NodePath("../name/load_button")
+theme_override_fonts/font = ExtResource( 2 )
 text = "TR_CANCEL"
 
 [node name="tabs" type="Control" parent="widgets"]
-margin_left = 25.0
-margin_top = 10.0
-margin_right = 1175.0
-margin_bottom = 50.0
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 1175.0
+offset_bottom = 50.0
 
 [node name="stock_button" type="Button" parent="widgets/tabs"]
-margin_right = 350.0
-margin_bottom = 40.0
+offset_right = 350.0
+offset_bottom = 40.0
 text = "TR_STOCK"
 
 [node name="custom_button" type="Button" parent="widgets/tabs"]
-margin_left = 400.0
-margin_right = 750.0
-margin_bottom = 40.0
+offset_left = 400.0
+offset_right = 750.0
+offset_bottom = 40.0
 text = "TR_CUSTOM"
 
 [node name="downloaded_button" type="Button" parent="widgets/tabs"]
-margin_left = 800.0
-margin_right = 1150.0
-margin_bottom = 40.0
+offset_left = 800.0
+offset_right = 1150.0
+offset_bottom = 40.0
 text = "TR_DOWNLOADED"
 
 [node name="online" type="Control" parent="widgets"]
 visible = false
-margin_left = 25.0
-margin_top = 10.0
-margin_right = 1175.0
-margin_bottom = 50.0
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 1175.0
+offset_bottom = 50.0
 
 [node name="latest_button" type="Button" parent="widgets/online"]
-margin_left = 100.0
-margin_right = 450.0
-margin_bottom = 40.0
+offset_left = 100.0
+offset_right = 450.0
+offset_bottom = 40.0
 text = "TR_LATEST"
 
 [node name="top_button" type="Button" parent="widgets/online"]
-margin_left = 700.0
-margin_right = 1050.0
-margin_bottom = 40.0
+offset_left = 700.0
+offset_right = 1050.0
+offset_bottom = 40.0
 text = "TR_TOP_DOWNLOADED"
 
 [node name="map_list" type="Control" parent="widgets"]
-margin_left = 25.0
-margin_top = 50.0
-margin_right = 675.0
-margin_bottom = 550.0
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 675.0
+offset_bottom = 550.0
 
 [node name="map_list_background" type="ColorRect" parent="widgets/map_list"]
 anchor_right = 1.0
@@ -265,82 +265,82 @@ color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 [node name="map0" parent="widgets/map_list" instance=ExtResource( 3 )]
 
 [node name="map1" parent="widgets/map_list" instance=ExtResource( 3 )]
-margin_top = 50.0
-margin_bottom = 100.0
+offset_top = 50.0
+offset_bottom = 100.0
 
 [node name="map2" parent="widgets/map_list" instance=ExtResource( 3 )]
-margin_top = 100.0
-margin_bottom = 150.0
+offset_top = 100.0
+offset_bottom = 150.0
 
 [node name="map3" parent="widgets/map_list" instance=ExtResource( 3 )]
-margin_top = 150.0
-margin_bottom = 200.0
+offset_top = 150.0
+offset_bottom = 200.0
 
 [node name="map4" parent="widgets/map_list" instance=ExtResource( 3 )]
-margin_top = 200.0
-margin_bottom = 250.0
+offset_top = 200.0
+offset_bottom = 250.0
 
 [node name="map5" parent="widgets/map_list" instance=ExtResource( 3 )]
-margin_top = 250.0
-margin_bottom = 300.0
+offset_top = 250.0
+offset_bottom = 300.0
 
 [node name="map6" parent="widgets/map_list" instance=ExtResource( 3 )]
-margin_top = 300.0
-margin_bottom = 350.0
+offset_top = 300.0
+offset_bottom = 350.0
 
 [node name="map7" parent="widgets/map_list" instance=ExtResource( 3 )]
-margin_top = 350.0
-margin_bottom = 400.0
+offset_top = 350.0
+offset_bottom = 400.0
 
 [node name="map8" parent="widgets/map_list" instance=ExtResource( 3 )]
-margin_top = 400.0
-margin_bottom = 450.0
+offset_top = 400.0
+offset_bottom = 450.0
 
 [node name="map9" parent="widgets/map_list" instance=ExtResource( 3 )]
-margin_top = 450.0
-margin_bottom = 500.0
+offset_top = 450.0
+offset_bottom = 500.0
 
 [node name="list_prev" type="Button" parent="widgets"]
-margin_left = 25.0
-margin_top = 560.0
-margin_right = 125.0
-margin_bottom = 590.0
-focus_neighbour_right = NodePath("../list_next")
-custom_fonts/font = ExtResource( 2 )
+offset_left = 25.0
+offset_top = 560.0
+offset_right = 125.0
+offset_bottom = 590.0
+focus_neighbor_right = NodePath("../list_next")
+theme_override_fonts/font = ExtResource( 2 )
 text = "TR_PREV"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="list_next" type="Button" parent="widgets"]
-margin_left = 575.0
-margin_top = 560.0
-margin_right = 675.0
-margin_bottom = 590.0
-focus_neighbour_left = NodePath("../list_prev")
-custom_fonts/font = ExtResource( 2 )
+offset_left = 575.0
+offset_top = 560.0
+offset_right = 675.0
+offset_bottom = 590.0
+focus_neighbor_left = NodePath("../list_prev")
+theme_override_fonts/font = ExtResource( 2 )
 text = "TR_NEXT"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="minimap" parent="widgets" instance=ExtResource( 4 )]
-margin_left = 925.0
-margin_top = 300.0
-margin_right = 965.0
-margin_bottom = 340.0
+offset_left = 925.0
+offset_top = 300.0
+offset_right = 965.0
+offset_bottom = 340.0
 
 [node name="thumb" type="TextureRect" parent="widgets/minimap"]
 visible = false
-margin_left = -240.0
-margin_top = -240.0
-margin_right = 240.0
-margin_bottom = 240.0
+offset_left = -240.0
+offset_top = -240.0
+offset_right = 240.0
+offset_bottom = 240.0
 expand = true
 
 [node name="label" type="Label" parent="widgets/minimap/thumb"]
-margin_right = 480.0
-margin_bottom = 480.0
+offset_right = 480.0
+offset_bottom = 480.0
 text = "TR_FETCHING"
 align = 1
 valign = 1

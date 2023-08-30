@@ -1,19 +1,19 @@
 extends "res://scenes/ui/menu/base_menu_panel.gd"
 
-onready var campaign = $"/root/Campaign"
-onready var switcher = $"/root/SceneSwitcher"
-onready var match_setup = $"/root/MatchSetup"
+@onready var campaign = $"/root/Campaign"
+@onready var switcher = $"/root/SceneSwitcher"
+@onready var match_setup = $"/root/MatchSetup"
 
-onready var back_button = $"widgets/back_button"
-onready var start_button = $"widgets/start_button"
-onready var title = $"widgets/title"
-onready var description = $"widgets/description"
+@onready var back_button = $"widgets/back_button"
+@onready var start_button = $"widgets/start_button"
+@onready var title = $"widgets/title"
+@onready var description = $"widgets/description"
 
 var manifest
 var mission_no = 0
 
 func _on_back_button_pressed():
-    ._on_back_button_pressed()
+    super._on_back_button_pressed()
     self.main_menu.close_campaign_mission()
 
 func _on_start_button_pressed():
@@ -35,8 +35,8 @@ func _on_start_button_pressed():
     self.switcher.board()
 
 func show_panel():
-    .show_panel()
-    yield(self.get_tree().create_timer(0.1), "timeout")
+    super.show_panel()
+    await self.get_tree().create_timer(0.1).timeout
     self.start_button.grab_focus()
 
 func load_mission(campaign_name, _mission_no):

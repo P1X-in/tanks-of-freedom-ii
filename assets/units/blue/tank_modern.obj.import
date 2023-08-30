@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/tank_modern.obj-f572b540078df274fb0524731b04530e.mesh"
+uid="uid://sbppjd5so36o"
+path="res://.godot/imported/tank_modern.obj-f572b540078df274fb0524731b04530e.mesh"
 
 [deps]
 
-files=[ "res://.import/tank_modern.obj-f572b540078df274fb0524731b04530e.mesh" ]
+files=["res://.godot/imported/tank_modern.obj-f572b540078df274fb0524731b04530e.mesh"]
 
 source_file="res://assets/units/blue/tank_modern.obj"
-dest_files=[ "res://.import/tank_modern.obj-f572b540078df274fb0524731b04530e.mesh", "res://.import/tank_modern.obj-f572b540078df274fb0524731b04530e.mesh" ]
+dest_files=["res://.godot/imported/tank_modern.obj-f572b540078df274fb0524731b04530e.mesh", "res://.godot/imported/tank_modern.obj-f572b540078df274fb0524731b04530e.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

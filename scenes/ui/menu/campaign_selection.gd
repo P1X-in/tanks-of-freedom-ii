@@ -2,14 +2,14 @@ extends Control
 
 const TILES_PER_PAGE = 6
 
-onready var audio = $"/root/SimpleAudioLibrary"
-onready var campaign = $"/root/Campaign"
+@onready var audio = $"/root/SimpleAudioLibrary"
+@onready var campaign = $"/root/Campaign"
 
-onready var animations = $"animations"
-onready var prev_button = $"widgets/prev_button"
-onready var next_button = $"widgets/next_button"
+@onready var animations = $"animations"
+@onready var prev_button = $"widgets/prev_button"
+@onready var next_button = $"widgets/next_button"
 
-onready var campaign_tiles = [
+@onready var campaign_tiles = [
     $"widgets/campaign1",
     $"widgets/campaign2",
     $"widgets/campaign3",
@@ -67,7 +67,7 @@ func _on_next_button_pressed():
 func show_panel():
     self.animations.play("show")
     self.set_process_input(true)
-    yield(self.get_tree().create_timer(0.1), "timeout")
+    await self.get_tree().create_timer(0.1).timeout
     self.restore_focus()
 
 func hide_panel():

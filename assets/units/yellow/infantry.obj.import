@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/infantry.obj-43679624831ee1a88c5eb9a89de7de43.mesh"
+uid="uid://6nl5ytclg5ah"
+path="res://.godot/imported/infantry.obj-43679624831ee1a88c5eb9a89de7de43.mesh"
 
 [deps]
 
-files=[ "res://.import/infantry.obj-43679624831ee1a88c5eb9a89de7de43.mesh" ]
+files=["res://.godot/imported/infantry.obj-43679624831ee1a88c5eb9a89de7de43.mesh"]
 
 source_file="res://assets/units/yellow/infantry.obj"
-dest_files=[ "res://.import/infantry.obj-43679624831ee1a88c5eb9a89de7de43.mesh", "res://.import/infantry.obj-43679624831ee1a88c5eb9a89de7de43.mesh" ]
+dest_files=["res://.godot/imported/infantry.obj-43679624831ee1a88c5eb9a89de7de43.mesh", "res://.godot/imported/infantry.obj-43679624831ee1a88c5eb9a89de7de43.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,6 +1,6 @@
-extends Spatial
+extends Node3D
 
-export(NodePath) var map = null;
+@export var map: NodePath = null;
 
 var marker_template = preload("res://scenes/ui/markers/movement_marker.tscn")
 var range_template = preload("res://scenes/ui/markers/range_marker.tscn")
@@ -91,10 +91,10 @@ func marker_exists(position):
     return self.created_markers.has(str(position.x) + "_" + str(position.y))
 
 func place_marker(position, colour="green"):
-    var new_marker = self.marker_template.instance()
+    var new_marker = self.marker_template.instantiate()
     self.add_child(new_marker)
-    var placement = self.map.map_to_world(position)
-    new_marker.set_translation(placement)
+    var placement = self.map.map_to_local(position)
+    new_marker.set_position(placement)
 
     self.created_markers[str(position.x) + "_" + str(position.y)] = new_marker
     new_marker.set_material(self.colour_materials[colour])
@@ -146,10 +146,10 @@ func _draw_ability_range(source_tile, ability_range, in_line):
                     self._place_extra_marker(Vector2(x, y), 270)
 
 func _place_extra_marker(position, rotation):
-    var new_marker = self.range_template.instance()
+    var new_marker = self.range_template.instantiate()
     self.add_child(new_marker)
-    var placement = self.map.map_to_world(position)
-    new_marker.set_translation(placement)
-    new_marker.set_rotation(Vector3(0, deg2rad(rotation), 0))
+    var placement = self.map.map_to_local(position)
+    new_marker.set_position(placement)
+    new_marker.set_rotation(Vector3(0, deg_to_rad(rotation), 0))
 
     self.extra_markers.append(new_marker)

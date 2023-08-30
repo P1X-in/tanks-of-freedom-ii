@@ -8,7 +8,7 @@ func register_ability(ability):
     if ability.TYPE == "hero_active":
         self.active_abilities.append(ability)
 
-    .register_ability(ability)
+    super.register_ability(ability)
 
 
 func has_active_ability():
@@ -30,26 +30,26 @@ func set_side_material(material):
     if material == null:
         return
 
-    .set_side_material(material)
-    $"mesh_anchor/standard".set_surface_material(0, material)
+    super.set_side_material(material)
+    $"mesh_anchor/standard".set_surface_override_material(0, material)
 
 func disable_shadow():
-    .disable_shadow()
+    super.disable_shadow()
 
     $"mesh_anchor/standard".cast_shadow = 0
 
 func reset_position_for_tile_view():
-    .reset_position_for_tile_view()
+    super.reset_position_for_tile_view()
     $"mesh_anchor/standard".hide()
 
 func get_dict():
-    var new_dict = .get_dict()
+    var new_dict = super.get_dict()
     new_dict["disable_active_abilities"] = self.disable_active_abilities
 
     return new_dict
 
 func restore_from_state(state):
-    .restore_from_state(state)
+    super.restore_from_state(state)
     self.disable_active_abilities = state["disable_active_abilities"]
 
 func is_hero():

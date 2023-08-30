@@ -1,18 +1,18 @@
 extends Node2D
 
-onready var animations = $"animations"
+@onready var animations = $"animations"
 
-export var zoom_value = 10
+@export var zoom_value = 10
 
 var model = null
 
 func _ready():
     var lens_distance = Vector3(0, 0, self.zoom_value)
-    $"Viewport/tile_cam/pivot/arm/lens".set_translation(lens_distance)
+    $"SubViewport/tile_cam/pivot/arm/lens".set_position(lens_distance)
     self.refresh()
 
 func refresh():
-    var texture = $"Viewport".get_texture()
+    var texture = $"SubViewport".get_texture()
     $"screen".texture = texture
 
 func set_model(new_model):
@@ -20,7 +20,7 @@ func set_model(new_model):
         self.clear()
 
     self.model = new_model
-    $"Viewport/tile_cam".add_child(new_model)
+    $"SubViewport/tile_cam".add_child(new_model)
 
     self.refresh()
 

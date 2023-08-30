@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/ui/menu/settings.gd" type="Script" id=1]
-[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/fonts/courier.tres" type="FontFile" id=2]
 [ext_resource path="res://scenes/ui/menu/settings_gameplay.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/ui/menu/settings_general.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ui/menu/settings_audio.tscn" type="PackedScene" id=5]
@@ -16,8 +16,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
@@ -28,8 +28,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -44,20 +44,20 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_scale")
+tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = false
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
 }
@@ -68,8 +68,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
@@ -84,20 +84,20 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_scale")
+tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = false
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
 }
@@ -108,8 +108,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
@@ -121,80 +121,80 @@ anchor_bottom = 1.0
 script = ExtResource( 1 )
 
 [node name="background" type="ColorRect" parent="."]
-margin_left = -350.0
-margin_top = -350.0
-margin_right = 350.0
-margin_bottom = 350.0
+offset_left = -350.0
+offset_top = -350.0
+offset_right = 350.0
+offset_bottom = 350.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="widgets" type="Control" parent="."]
-margin_left = -350.0
-margin_top = -350.0
-margin_right = 350.0
-margin_bottom = 350.0
+offset_left = -350.0
+offset_top = -350.0
+offset_right = 350.0
+offset_bottom = 350.0
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="tabs" type="Control" parent="widgets"]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 120.0
-margin_bottom = 320.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 120.0
+offset_bottom = 320.0
 
 [node name="general" type="Button" parent="widgets/tabs"]
-margin_right = 140.0
-margin_bottom = 30.0
-custom_fonts/font = ExtResource( 2 )
+offset_right = 140.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "TR_GENERAL"
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="video" type="Button" parent="widgets/tabs"]
-margin_top = 50.0
-margin_right = 140.0
-margin_bottom = 80.0
-custom_fonts/font = ExtResource( 2 )
+offset_top = 50.0
+offset_right = 140.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "TR_VIDEO"
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="audio" type="Button" parent="widgets/tabs"]
-margin_top = 100.0
-margin_right = 140.0
-margin_bottom = 130.0
-custom_fonts/font = ExtResource( 2 )
+offset_top = 100.0
+offset_right = 140.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "TR_AUDIO"
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="gameplay" type="Button" parent="widgets/tabs"]
-margin_top = 150.0
-margin_right = 140.0
-margin_bottom = 180.0
-custom_fonts/font = ExtResource( 2 )
+offset_top = 150.0
+offset_right = 140.0
+offset_bottom = 180.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "TR_GAMEPLAY"
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="boxes" type="Control" parent="widgets"]
-margin_left = 160.0
-margin_right = 660.0
-margin_bottom = 300.0
+offset_left = 160.0
+offset_right = 660.0
+offset_bottom = 300.0
 
 [node name="settings_general" parent="widgets/boxes" instance=ExtResource( 4 )]
 
 [node name="settings_video" parent="widgets/boxes" instance=ExtResource( 6 )]
 visible = false
-margin_right = -500.0
-margin_bottom = -300.0
+offset_right = -500.0
+offset_bottom = -300.0
 
 [node name="settings_audio" parent="widgets/boxes" instance=ExtResource( 5 )]
 visible = false
@@ -203,11 +203,11 @@ visible = false
 visible = false
 
 [node name="back_button" type="Button" parent="widgets"]
-margin_left = 300.0
-margin_top = 650.0
-margin_right = 400.0
-margin_bottom = 680.0
-custom_fonts/font = ExtResource( 2 )
+offset_left = 300.0
+offset_top = 650.0
+offset_right = 400.0
+offset_bottom = 680.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "TR_BACK"
 __meta__ = {
 "_editor_description_": ""
@@ -215,26 +215,26 @@ __meta__ = {
 
 [node name="help" type="Control" parent="."]
 visible = false
-margin_left = 350.0
-margin_top = -350.0
-margin_right = 550.0
-margin_bottom = 350.0
+offset_left = 350.0
+offset_top = -350.0
+offset_right = 550.0
+offset_bottom = 350.0
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="background" type="ColorRect" parent="help"]
-margin_right = 200.0
-margin_bottom = 700.0
+offset_right = 200.0
+offset_bottom = 700.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="text" type="Label" parent="help"]
-margin_top = 20.0
-margin_right = 180.0
-margin_bottom = 670.0
+offset_top = 20.0
+offset_right = 180.0
+offset_bottom = 670.0
 autowrap = true
 
 [node name="animations" type="AnimationPlayer" parent="."]

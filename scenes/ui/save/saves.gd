@@ -2,24 +2,24 @@ extends Node2D
 
 const PAGE_SIZE = 10
 
-onready var audio = $"/root/SimpleAudioLibrary"
-onready var animations = $"animations"
+@onready var audio = $"/root/SimpleAudioLibrary"
+@onready var animations = $"animations"
 
-onready var save_button = $"widgets/save_button"
-onready var load_button = $"widgets/load_button"
-onready var new_save_button = $"widgets/new_save_button"
-onready var cancel_button = $"widgets/cancel_button"
-onready var next_button = $"widgets/list_next"
-onready var prev_button = $"widgets/list_prev"
+@onready var save_button = $"widgets/save_button"
+@onready var load_button = $"widgets/load_button"
+@onready var new_save_button = $"widgets/new_save_button"
+@onready var cancel_button = $"widgets/cancel_button"
+@onready var next_button = $"widgets/list_next"
+@onready var prev_button = $"widgets/list_prev"
 
-onready var campaign = $"/root/Campaign"
-onready var saves_manager = $"/root/SavesManager"
-onready var gamepad_adapter = $"/root/GamepadAdapter"
+@onready var campaign = $"/root/Campaign"
+@onready var saves_manager = $"/root/SavesManager"
+@onready var gamepad_adapter = $"/root/GamepadAdapter"
 
-onready var switcher = $"/root/SceneSwitcher"
-onready var match_setup = $"/root/MatchSetup"
+@onready var switcher = $"/root/SceneSwitcher"
+@onready var match_setup = $"/root/MatchSetup"
 
-onready var entry_buttons = [
+@onready var entry_buttons = [
     $"widgets/save_list/entry0",
     $"widgets/save_list/entry1",
     $"widgets/save_list/entry2",
@@ -118,7 +118,7 @@ func entry_button_pressed(save_id, button):
     self.load_button.show()
     if self.save_mode:
         self.save_button.show()
-    yield(self.get_tree().create_timer(0.1), "timeout")
+    await self.get_tree().create_timer(0.1).timeout
     self.load_button.grab_focus()
 
 func execute_cancel():
@@ -153,7 +153,7 @@ func show_saves(set_save_mode):
         self.new_save_button.hide()
 
     self.refresh_current_entries_page()
-    yield(self.get_tree().create_timer(0.1), "timeout")
+    await self.get_tree().create_timer(0.1).timeout
     if self.entry_buttons[0].is_visible():
         self.entry_buttons[0].grab_focus()
     elif self.save_mode:

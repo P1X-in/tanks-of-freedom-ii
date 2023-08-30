@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/tree_big_autumn_3.obj-8a06ff81c7c68d9dfc28084388a8f670.mesh"
+uid="uid://b4coflc7ss5pa"
+path="res://.godot/imported/tree_big_autumn_3.obj-8a06ff81c7c68d9dfc28084388a8f670.mesh"
 
 [deps]
 
-files=[ "res://.import/tree_big_autumn_3.obj-8a06ff81c7c68d9dfc28084388a8f670.mesh" ]
+files=["res://.godot/imported/tree_big_autumn_3.obj-8a06ff81c7c68d9dfc28084388a8f670.mesh"]
 
 source_file="res://assets/terrain/grasslands/plants/tree_big_autumn_3.obj"
-dest_files=[ "res://.import/tree_big_autumn_3.obj-8a06ff81c7c68d9dfc28084388a8f670.mesh", "res://.import/tree_big_autumn_3.obj-8a06ff81c7c68d9dfc28084388a8f670.mesh" ]
+dest_files=["res://.godot/imported/tree_big_autumn_3.obj-8a06ff81c7c68d9dfc28084388a8f670.mesh", "res://.godot/imported/tree_big_autumn_3.obj-8a06ff81c7c68d9dfc28084388a8f670.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

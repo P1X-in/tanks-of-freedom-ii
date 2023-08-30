@@ -1,22 +1,22 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=1]
-[ext_resource path="res://assets/gui/icons/flag.png" type="Texture" id=2]
-[ext_resource path="res://assets/gui/icons/flag_complete.png" type="Texture" id=3]
+[ext_resource path="res://assets/fonts/courier.tres" type="FontFile" id=1]
+[ext_resource path="res://assets/gui/icons/flag.png" type="Texture2D" id=2]
+[ext_resource path="res://assets/gui/icons/flag_complete.png" type="Texture2D" id=3]
 [ext_resource path="res://scenes/ui/menu/mission_marker.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=2]
 resource_name = "hide"
 length = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("label:rect_size")
+tracks/0/path = NodePath("label:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 400, 50 ), Vector2( 0, 50 ) ]
 }
@@ -25,38 +25,38 @@ tracks/0/keys = {
 resource_name = "show"
 length = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("label:rect_size")
+tracks/0/path = NodePath("label:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 50 ), Vector2( 400, 50 ) ]
 }
 
 [node name="mission_marker" type="Control"]
-margin_right = 250.0
-margin_bottom = 50.0
+offset_right = 250.0
+offset_bottom = 50.0
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="label" type="Control" parent="."]
-margin_left = 50.0
-margin_right = 50.0
-margin_bottom = 50.0
-rect_clip_content = true
+offset_left = 50.0
+offset_right = 50.0
+offset_bottom = 50.0
+clip_contents = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="background" type="ColorRect" parent="label"]
-margin_right = 200.0
-margin_bottom = 50.0
+offset_right = 200.0
+offset_bottom = 50.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -66,7 +66,7 @@ __meta__ = {
 [node name="mission_name" type="Label" parent="label/background"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Mission name"
 align = 1
 valign = 1
@@ -74,11 +74,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="flag" type="Sprite" parent="."]
+[node name="flag" type="Sprite2D" parent="."]
 position = Vector2( 25, 25 )
 texture = ExtResource( 2 )
 
-[node name="flag_complete" type="Sprite" parent="."]
+[node name="flag_complete" type="Sprite2D" parent="."]
 visible = false
 position = Vector2( 25, 25 )
 texture = ExtResource( 3 )

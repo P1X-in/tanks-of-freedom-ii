@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/truck.obj-a868d4e4d1b5dfbc9325c23cdccc68fc.mesh"
+uid="uid://bjehmp6fkynn5"
+path="res://.godot/imported/truck.obj-a868d4e4d1b5dfbc9325c23cdccc68fc.mesh"
 
 [deps]
 
-files=[ "res://.import/truck.obj-a868d4e4d1b5dfbc9325c23cdccc68fc.mesh" ]
+files=["res://.godot/imported/truck.obj-a868d4e4d1b5dfbc9325c23cdccc68fc.mesh"]
 
 source_file="res://assets/units/blue/truck.obj"
-dest_files=[ "res://.import/truck.obj-a868d4e4d1b5dfbc9325c23cdccc68fc.mesh", "res://.import/truck.obj-a868d4e4d1b5dfbc9325c23cdccc68fc.mesh" ]
+dest_files=["res://.godot/imported/truck.obj-a868d4e4d1b5dfbc9325c23cdccc68fc.mesh", "res://.godot/imported/truck.obj-a868d4e4d1b5dfbc9325c23cdccc68fc.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

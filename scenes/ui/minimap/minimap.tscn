@@ -4,8 +4,8 @@
 [ext_resource path="res://scenes/ui/minimap/minimap.gd" type="Script" id=2]
 
 [node name="minimap" type="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -14,10 +14,10 @@ __meta__ = {
 [node name="map_list_background2" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -250.0
-margin_top = -250.0
-margin_right = 210.0
-margin_bottom = 210.0
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 210.0
+offset_bottom = 210.0
 color = Color( 0.196078, 0.196078, 0.196078, 1 )
 __meta__ = {
 "_edit_use_anchors_": false

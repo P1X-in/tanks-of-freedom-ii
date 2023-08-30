@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/captain.obj-c29fda09a1f411eec5e96727b8fd7915.mesh"
+uid="uid://crchwyrj08q3x"
+path="res://.godot/imported/captain.obj-c29fda09a1f411eec5e96727b8fd7915.mesh"
 
 [deps]
 
-files=[ "res://.import/captain.obj-c29fda09a1f411eec5e96727b8fd7915.mesh" ]
+files=["res://.godot/imported/captain.obj-c29fda09a1f411eec5e96727b8fd7915.mesh"]
 
 source_file="res://assets/units/heroes/captain.obj"
-dest_files=[ "res://.import/captain.obj-c29fda09a1f411eec5e96727b8fd7915.mesh", "res://.import/captain.obj-c29fda09a1f411eec5e96727b8fd7915.mesh" ]
+dest_files=["res://.godot/imported/captain.obj-c29fda09a1f411eec5e96727b8fd7915.mesh", "res://.godot/imported/captain.obj-c29fda09a1f411eec5e96727b8fd7915.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

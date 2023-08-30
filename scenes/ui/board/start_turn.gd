@@ -1,14 +1,14 @@
 extends Node2D
 
-onready var animations = $"animations"
+@onready var animations = $"animations"
 
-onready var blue_player = $"background/blue_player"
-onready var red_player = $"background/red_player"
-onready var yellow_player = $"background/yellow_player"
-onready var green_player = $"background/green_player"
-onready var black_player = $"background/black_player"
+@onready var blue_player = $"background/blue_player"
+@onready var red_player = $"background/red_player"
+@onready var yellow_player = $"background/yellow_player"
+@onready var green_player = $"background/green_player"
+@onready var black_player = $"background/black_player"
 
-onready var turn_label = $"background/turn"
+@onready var turn_label = $"background/turn"
 
 func flash(player, turn):
     self._reset_labels()

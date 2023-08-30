@@ -1,17 +1,17 @@
 extends Node2D
 
-onready var audio = $"/root/SimpleAudioLibrary"
+@onready var audio = $"/root/SimpleAudioLibrary"
 
-onready var text = $"background/text"
-onready var continue_button = $"background/continue"
+@onready var text = $"background/text"
+@onready var continue_button = $"background/continue"
 
-onready var left_actor = $"background/actor_left"
-onready var left_actor_portrait = $"background/actor_left/actor_view"
-onready var left_actor_name = $"background/actor_left/name"
+@onready var left_actor = $"background/actor_left"
+@onready var left_actor_portrait = $"background/actor_left/actor_view"
+@onready var left_actor_name = $"background/actor_left/name"
 
-onready var right_actor = $"background/actor_right"
-onready var right_actor_portrait = $"background/actor_right/actor_view"
-onready var right_actor_name = $"background/actor_right/name"
+@onready var right_actor = $"background/actor_right"
+@onready var right_actor_portrait = $"background/actor_right/actor_view"
+@onready var right_actor_name = $"background/actor_right/name"
 
 func show_panel():
     self.show()

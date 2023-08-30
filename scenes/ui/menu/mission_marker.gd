@@ -3,7 +3,7 @@ extends Control
 const SIZE_MARGIN = 20
 const CHAR_SIZE = 11
 
-onready var animations = $"animations"
+@onready var animations = $"animations"
 
 var main_menu
 

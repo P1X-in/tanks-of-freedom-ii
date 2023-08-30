@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/snow_road_transition_3_tile.obj-45544030b0b07ae6c7a6a1ecbc56b02e.mesh"
+uid="uid://b8wyheog788t3"
+path="res://.godot/imported/snow_road_transition_3_tile.obj-45544030b0b07ae6c7a6a1ecbc56b02e.mesh"
 
 [deps]
 
-files=[ "res://.import/snow_road_transition_3_tile.obj-45544030b0b07ae6c7a6a1ecbc56b02e.mesh" ]
+files=["res://.godot/imported/snow_road_transition_3_tile.obj-45544030b0b07ae6c7a6a1ecbc56b02e.mesh"]
 
 source_file="res://assets/terrain/snowlands/snow_road_transition_3_tile.obj"
-dest_files=[ "res://.import/snow_road_transition_3_tile.obj-45544030b0b07ae6c7a6a1ecbc56b02e.mesh", "res://.import/snow_road_transition_3_tile.obj-45544030b0b07ae6c7a6a1ecbc56b02e.mesh" ]
+dest_files=["res://.godot/imported/snow_road_transition_3_tile.obj-45544030b0b07ae6c7a6a1ecbc56b02e.mesh", "res://.godot/imported/snow_road_transition_3_tile.obj-45544030b0b07ae6c7a6a1ecbc56b02e.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,27 +1,27 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/fonts/courier.tres" type="FontFile" id=1]
 [ext_resource path="res://scenes/ui/menu/setting_option.gd" type="Script" id=2]
 
 [node name="option" type="Control"]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 470.0
-margin_bottom = 70.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 470.0
+offset_bottom = 70.0
 script = ExtResource( 2 )
 
 [node name="label" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Option
 "
 valign = 1
 
 [node name="toggle" type="Button" parent="."]
-margin_left = 350.0
-margin_right = 450.0
-margin_bottom = 50.0
+offset_left = 350.0
+offset_right = 450.0
+offset_bottom = 50.0
 text = "TR_OFF"
 __meta__ = {
 "_edit_use_anchors_": false

@@ -29,16 +29,16 @@ unit_value = 25
 unit_class = "infantry"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5 )
 
-[node name="mesh2" type="MeshInstance" parent="mesh_anchor" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1 )
+[node name="mesh2" type="MeshInstance3D" parent="mesh_anchor" index="1"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1 )
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="mesh3" type="MeshInstance" parent="mesh_anchor" index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0 )
+[node name="mesh3" type="MeshInstance3D" parent="mesh_anchor" index="2"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0 )
 __meta__ = {
 "_editor_description_": ""
 }

@@ -1,11 +1,11 @@
 extends Control
 
-onready var audio = $"/root/SimpleAudioLibrary"
+@onready var audio = $"/root/SimpleAudioLibrary"
 
-onready var button = $"button"
-onready var icon_anchor = $"icon_anchor"
-onready var label = $"label"
-onready var tick = $"tick"
+@onready var button = $"button"
+@onready var icon_anchor = $"icon_anchor"
+@onready var label = $"label"
+@onready var tick = $"tick"
 
 var main_menu
 var attached_icon = null

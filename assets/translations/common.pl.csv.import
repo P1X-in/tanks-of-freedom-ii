@@ -2,13 +2,14 @@
 
 importer="csv_translation"
 type="Translation"
+uid="uid://b3ok3iiy2j051"
 
 [deps]
 
-files=[ "res://assets/translations/common.pl.pl.translation" ]
+files=["res://assets/translations/common.pl.pl.translation"]
 
 source_file="res://assets/translations/common.pl.csv"
-dest_files=[ "res://assets/translations/common.pl.pl.translation" ]
+dest_files=["res://assets/translations/common.pl.pl.translation"]
 
 [params]
 

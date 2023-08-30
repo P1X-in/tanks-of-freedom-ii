@@ -1,7 +1,7 @@
 extends TextureButton
 
-onready var label = $"label"
-onready var stars = $"stars"
+@onready var label = $"label"
+@onready var stars = $"stars"
 
 var save_id
 var map_name

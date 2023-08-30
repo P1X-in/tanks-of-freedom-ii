@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/wall_cross.obj-3bcb3a28006caada2ee4543f6432e17b.mesh"
+uid="uid://co1nwltf7p8rd"
+path="res://.godot/imported/wall_cross.obj-3bcb3a28006caada2ee4543f6432e17b.mesh"
 
 [deps]
 
-files=[ "res://.import/wall_cross.obj-3bcb3a28006caada2ee4543f6432e17b.mesh" ]
+files=["res://.godot/imported/wall_cross.obj-3bcb3a28006caada2ee4543f6432e17b.mesh"]
 
 source_file="res://assets/terrain/variety/wall_cross.obj"
-dest_files=[ "res://.import/wall_cross.obj-3bcb3a28006caada2ee4543f6432e17b.mesh", "res://.import/wall_cross.obj-3bcb3a28006caada2ee4543f6432e17b.mesh" ]
+dest_files=["res://.godot/imported/wall_cross.obj-3bcb3a28006caada2ee4543f6432e17b.mesh", "res://.godot/imported/wall_cross.obj-3bcb3a28006caada2ee4543f6432e17b.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

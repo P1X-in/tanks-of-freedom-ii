@@ -1,8 +1,8 @@
 extends Control
 
-onready var audio = $"/root/SimpleAudioLibrary"
+@onready var audio = $"/root/SimpleAudioLibrary"
 
-onready var animations = $"animations"
+@onready var animations = $"animations"
 
 var main_menu
 

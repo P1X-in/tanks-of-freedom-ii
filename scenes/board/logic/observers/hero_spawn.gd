@@ -1,6 +1,7 @@
 extends "res://scenes/board/logic/observers/observer.gd"
 
-func _init(_board).(_board):
+func _init(_board):
+	super(_board)
     self.observed_event_type = ['unit_spawned']
 
 func _observe(event):

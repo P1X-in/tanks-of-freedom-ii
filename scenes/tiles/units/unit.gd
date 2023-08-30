@@ -3,30 +3,30 @@ extends "res://scenes/tiles/tile.gd"
 const MAX_LEVEL = 3
 const EXP_PER_LEVEL = 2
 
-onready var audio = $"/root/SimpleAudioLibrary"
+@onready var audio = $"/root/SimpleAudioLibrary"
 
-onready var animations = $"animations"
-onready var spotlight = $"mesh_anchor/activity_light"
-onready var explosion = $"explosion"
-onready var level_star = $"voxel_star"
+@onready var animations = $"animations"
+@onready var spotlight = $"mesh_anchor/activity_light"
+@onready var explosion = $"explosion"
+@onready var level_star = $"voxel_star"
 
-export var unit_name = ""
-export var side = "neutral"
+@export var unit_name = ""
+@export var side = "neutral"
 var team = null
-export var material_type = "normal"
+@export var material_type = "normal"
 
-export var max_hp = 10
+@export var max_hp = 10
 var hp = 0
-export var max_move = 4
+@export var max_move = 4
 var move = 0
-export var attack = 7
-export var armor = 2
-export var can_capture = false
-export var can_fly = false
-export var max_attacks = 1
-export var uses_metallic_material = false
-export var unit_value = 0
-export var unit_class = ""
+@export var attack = 7
+@export var armor = 2
+@export var can_capture = false
+@export var can_fly = false
+@export var max_attacks = 1
+@export var uses_metallic_material = false
+@export var unit_value = 0
+@export var unit_class = ""
 var attacks = 1
 var level = 0
 var experience = 0
@@ -74,7 +74,7 @@ func reset():
     self.attacks = stats["max_attacks"]
 
 func get_dict():
-    var new_dict = .get_dict()
+    var new_dict = super.get_dict()
     new_dict["side"] = self.side
     new_dict["modifiers"] = self.modifiers
     new_dict["ai_paused"] = self.ai_paused
@@ -96,17 +96,17 @@ func set_side_material(material):
     if material == null:
         return
 
-    $"mesh_anchor/mesh".set_surface_material(0, material)
+    $"mesh_anchor/mesh".set_surface_override_material(0, material)
 
     var additional_mesh
 
     additional_mesh = self.get_node_or_null("mesh_anchor/mesh2")
     if additional_mesh != null:
-        additional_mesh.set_surface_material(0, material)
+        additional_mesh.set_surface_override_material(0, material)
 
     additional_mesh = self.get_node_or_null("mesh_anchor/mesh3")
     if additional_mesh != null:
-        additional_mesh.set_surface_material(0, material)
+        additional_mesh.set_surface_override_material(0, material)
 
 
 func get_stats():
@@ -198,7 +198,7 @@ func rotate_unit_to_direction(direction):
         return
 
     var rotation = self.unit_rotations[direction]
-    self.set_rotation(Vector3(0, deg2rad(rotation), 0))
+    self.set_rotation(Vector3(0, deg_to_rad(rotation), 0))
     self.current_rotation = rotation
 
 func animate_path(path):
@@ -212,8 +212,8 @@ func _animate_initial_path_segment():
 
 func _animate_next_path_segment():
     var direction = self.current_path[self.current_path_index]
-    $"mesh_anchor".set_translation(Vector3(0, 0, 0))
-    self.set_translation(self.get_translation() + self.unit_translations[direction])
+    $"mesh_anchor".set_position(Vector3(0, 0, 0))
+    self.set_position(self.get_position() + self.unit_translations[direction])
     self.current_path_index += 1
     direction = self.current_path[self.current_path_index]
     self.move_in_direction(direction)
@@ -247,10 +247,10 @@ func clear_move_callback():
     self.bind_move_callback(null, "", [])
 
 func reset_position_for_tile_view():
-    var translation = $"mesh_anchor/mesh".get_translation()
-    translation.y = 0
+    var position = $"mesh_anchor/mesh".get_position()
+    position.y = 0
 
-    $"mesh_anchor/mesh".set_translation(translation)
+    $"mesh_anchor/mesh".set_position(position)
     self.remove_highlight()
 
 func show_explosion():
@@ -367,7 +367,7 @@ func get_value():
 
 
 func disable_shadow():
-    .disable_shadow()
+    super.disable_shadow()
 
     $"mesh_anchor/mesh".cast_shadow = 0
 

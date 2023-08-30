@@ -1,19 +1,19 @@
 extends Control
 
-onready var map_list_service = $"/root/MapManager"
-onready var audio = $"/root/SimpleAudioLibrary"
-onready var switcher = $"/root/SceneSwitcher"
-onready var match_setup = $"/root/MatchSetup"
-onready var start_button = $"widgets/start_button"
-onready var player_panels = [
+@onready var map_list_service = $"/root/MapManager"
+@onready var audio = $"/root/SimpleAudioLibrary"
+@onready var switcher = $"/root/SceneSwitcher"
+@onready var match_setup = $"/root/MatchSetup"
+@onready var start_button = $"widgets/start_button"
+@onready var player_panels = [
     $"widgets/skirmish_player_0",
     $"widgets/skirmish_player_1",
     $"widgets/skirmish_player_2",
     $"widgets/skirmish_player_3",
 ]
 
-onready var minimap = $"widgets/minimap"
-onready var animations = $"animations"
+@onready var minimap = $"widgets/minimap"
+@onready var animations = $"animations"
 
 var hq_templates = [
     "modern_hq",
@@ -41,7 +41,7 @@ func show_panel(selected_map_name):
     self.set_process_input(true)
     self.fill_map_data(selected_map_name)
     self.map_name = selected_map_name
-    yield(self.get_tree().create_timer(0.1), "timeout")
+    await self.get_tree().create_timer(0.1).timeout
     self.start_button.grab_focus()
 
 

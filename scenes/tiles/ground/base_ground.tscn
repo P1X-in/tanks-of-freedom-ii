@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/tiles/ground/mouse_collision.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/tiles/ground/ground.gd" type="Script" id=3]
 
-[node name="base_ground" type="Spatial"]
+[node name="base_ground" type="Node3D"]
 script = ExtResource( 3 )
 
 [node name="mouse_collision" parent="." instance=ExtResource( 2 )]

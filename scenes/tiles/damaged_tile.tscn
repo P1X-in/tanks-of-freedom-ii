@@ -5,12 +5,12 @@
 [ext_resource path="res://scenes/tiles/damaged_tile.gd" type="Script" id=3]
 
 [sub_resource type="Gradient" id=4]
-colors = PoolColorArray( 0.160784, 0.160784, 0.160784, 0.784314, 0.772549, 0.772549, 0.772549, 0.392157 )
+colors = PackedColorArray( 0.160784, 0.160784, 0.160784, 0.784314, 0.772549, 0.772549, 0.772549, 0.392157 )
 
-[sub_resource type="GradientTexture" id=5]
+[sub_resource type="GradientTexture2D" id=5]
 gradient = SubResource( 4 )
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="ParticleProcessMaterial" id=1]
 emission_shape = 2
 emission_box_extents = Vector3( 3, 0.1, 3 )
 direction = Vector3( 0, 1, 0 )
@@ -20,7 +20,7 @@ initial_velocity = 1.0
 initial_velocity_random = 0.5
 color_ramp = SubResource( 5 )
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="StandardMaterial3D" id=2]
 flags_transparent = true
 flags_unshaded = true
 vertex_color_use_as_albedo = true

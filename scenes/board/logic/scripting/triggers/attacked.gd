@@ -23,11 +23,11 @@ func ingest_details(details):
     self.set_vip(details['vip'][0], details['vip'][1])
 
 func get_save_data():
-    var save_data = .get_save_data()
+    var save_data = super.get_save_data()
     save_data["unit"] = self.board.map.model.get_unit_position(self.unit)
     return save_data
 
 func restore_from_state(state):
-    .restore_from_state(state)
+    super.restore_from_state(state)
     if state["unit"] != null:
         self.set_vip(state["unit"][0], state["unit"][1])

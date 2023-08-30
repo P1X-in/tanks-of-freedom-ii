@@ -29,7 +29,7 @@ uses_metallic_material = false
 unit_value = 150
 unit_class = "hero"
 
-[node name="standard" type="MeshInstance" parent="mesh_anchor" index="1"]
+[node name="standard" type="MeshInstance3D" parent="mesh_anchor" index="1"]
 mesh = ExtResource( 9 )
 
 [node name="spawn" parent="audio" index="0"]

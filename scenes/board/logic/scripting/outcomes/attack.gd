@@ -16,7 +16,7 @@ func _execute(_metadata):
         defender.receive_direct_damage(self.damage)
 
     attacker.sfx_effect("attack")
-    yield(self.board.get_tree().create_timer(self.board.RETALIATION_DELAY), "timeout")
+    await self.board.get_tree().create_timer(self.board.RETALIATION_DELAY).timeout
     defender.show_explosion()
     defender.sfx_effect("damage")
 

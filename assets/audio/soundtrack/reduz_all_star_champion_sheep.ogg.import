@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/reduz_all_star_champion_sheep.ogg-e4f3b05e53b4d0a7ee5320fd7c356cb1.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqf6vysshrium"
+path="res://.godot/imported/reduz_all_star_champion_sheep.ogg-e4f3b05e53b4d0a7ee5320fd7c356cb1.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/audio/soundtrack/reduz_all_star_champion_sheep.ogg"
-dest_files=[ "res://.import/reduz_all_star_champion_sheep.ogg-e4f3b05e53b4d0a7ee5320fd7c356cb1.oggstr" ]
+dest_files=["res://.godot/imported/reduz_all_star_champion_sheep.ogg-e4f3b05e53b4d0a7ee5320fd7c356cb1.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

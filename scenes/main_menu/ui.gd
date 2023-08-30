@@ -1,16 +1,16 @@
 extends Control
 
-onready var menu = $"options/menu"
-onready var logo = $"logo/logo_view"
-onready var picker = $"map_picker/picker"
-onready var saves = $"saves/saves"
-onready var skirmish = $"skirmish/skirmish"
-onready var settings = $"settings/settings"
-onready var controls = $"controls/controls"
-onready var campaign_selection = $"campaign_selection/campaign_selection"
-onready var campaign_mission_selection = $"campaign_mission_selection/campaign_mission_selection"
-onready var campaign_mission = $"campaign_mission/campaign_mission"
-onready var online = $"online/online"
+@onready var menu = $"options/menu"
+@onready var logo = $"logo/logo_view"
+@onready var picker = $"map_picker/picker"
+@onready var saves = $"saves/saves"
+@onready var skirmish = $"skirmish/skirmish"
+@onready var settings = $"settings/settings"
+@onready var controls = $"controls/controls"
+@onready var campaign_selection = $"campaign_selection/campaign_selection"
+@onready var campaign_mission_selection = $"campaign_mission_selection/campaign_mission_selection"
+@onready var campaign_mission = $"campaign_mission/campaign_mission"
+@onready var online = $"online/online"
 
 func bind_menu(main_menu):
     self.menu.bind_menu(main_menu)

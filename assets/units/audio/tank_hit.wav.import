@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/tank_hit.wav-581541423aefd7673d3a26c2f79164de.sample"
+type="AudioStreamWAV"
+uid="uid://dg5ix6u5ctkil"
+path="res://.godot/imported/tank_hit.wav-581541423aefd7673d3a26c2f79164de.sample"
 
 [deps]
 
 source_file="res://assets/units/audio/tank_hit.wav"
-dest_files=[ "res://.import/tank_hit.wav-581541423aefd7673d3a26c2f79164de.sample" ]
+dest_files=["res://.godot/imported/tank_hit.wav-581541423aefd7673d3a26c2f79164de.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

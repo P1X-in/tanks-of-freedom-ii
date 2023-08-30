@@ -1,9 +1,9 @@
 extends "res://scenes/tiles/tile.gd"
 
-onready var explosion = $"explosion"
-onready var smoke = $"smoke"
+@onready var explosion = $"explosion"
+@onready var smoke = $"smoke"
 
-export var is_smoking = false
+@export var is_smoking = false
 
 func _ready():
     if self.is_smoking:

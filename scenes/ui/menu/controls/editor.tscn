@@ -1,19 +1,19 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=1]
-[ext_resource path="res://assets/gui/icons/controls/tilemap_packed.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/courier.tres" type="FontFile" id=1]
+[ext_resource path="res://assets/gui/icons/controls/tilemap_packed.png" type="Texture2D" id=2]
 
 [node name="editor" type="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
 mouse_filter = 2
 
 [node name="label" type="Label" parent="."]
-margin_left = 400.0
-margin_top = 7.0
-margin_right = 800.0
-margin_bottom = 40.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 400.0
+offset_top = 7.0
+offset_right = 800.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_EDITOR"
 align = 1
 valign = 1
@@ -22,16 +22,16 @@ __meta__ = {
 }
 
 [node name="binds" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
 mouse_filter = 2
 
 [node name="camera" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 54.0
-margin_right = 600.0
-margin_bottom = 85.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 54.0
+offset_right = 600.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_CAMERA"
 valign = 2
 __meta__ = {
@@ -39,11 +39,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/camera"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/camera"]
+[node name="key" type="Sprite2D" parent="binds/camera"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -52,7 +52,7 @@ hframes = 34
 vframes = 24
 frame = 253
 
-[node name="key2" type="Sprite" parent="binds/camera"]
+[node name="key2" type="Sprite2D" parent="binds/camera"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -64,7 +64,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="key3" type="Sprite" parent="binds/camera"]
+[node name="key3" type="Sprite2D" parent="binds/camera"]
 position = Vector2( 280, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -77,11 +77,11 @@ __meta__ = {
 }
 
 [node name="switch_cam" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 94.0
-margin_right = 600.0
-margin_bottom = 125.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 94.0
+offset_right = 600.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_CAM_SW"
 valign = 2
 __meta__ = {
@@ -90,11 +90,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/switch_cam"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/switch_cam"]
+[node name="key" type="Sprite2D" parent="binds/switch_cam"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -103,7 +103,7 @@ hframes = 34
 vframes = 24
 frame = 650
 
-[node name="key2" type="Sprite" parent="binds/switch_cam"]
+[node name="key2" type="Sprite2D" parent="binds/switch_cam"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -112,7 +112,7 @@ hframes = 34
 vframes = 24
 frame = 123
 
-[node name="key3" type="Sprite" parent="binds/switch_cam"]
+[node name="key3" type="Sprite2D" parent="binds/switch_cam"]
 visible = false
 position = Vector2( 280, -7 )
 scale = Vector2( 2, 2 )
@@ -123,11 +123,11 @@ vframes = 24
 frame = 77
 
 [node name="zoom" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 134.0
-margin_right = 600.0
-margin_bottom = 165.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 134.0
+offset_right = 600.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_ZOOM"
 valign = 2
 __meta__ = {
@@ -136,11 +136,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/zoom"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/zoom"]
+[node name="key" type="Sprite2D" parent="binds/zoom"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -149,7 +149,7 @@ hframes = 34
 vframes = 24
 frame = 585
 
-[node name="key2" type="Sprite" parent="binds/zoom"]
+[node name="key2" type="Sprite2D" parent="binds/zoom"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -158,7 +158,7 @@ hframes = 34
 vframes = 24
 frame = 586
 
-[node name="key3" type="Sprite" parent="binds/zoom"]
+[node name="key3" type="Sprite2D" parent="binds/zoom"]
 position = Vector2( 280, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -168,11 +168,11 @@ vframes = 24
 frame = 82
 
 [node name="select" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 174.0
-margin_right = 600.0
-margin_bottom = 205.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 174.0
+offset_right = 600.0
+offset_bottom = 205.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_SELECT"
 valign = 2
 __meta__ = {
@@ -181,11 +181,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/select"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/select"]
+[node name="key" type="Sprite2D" parent="binds/select"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -194,7 +194,7 @@ hframes = 34
 vframes = 24
 frame = 47
 
-[node name="key2" type="Sprite" parent="binds/select"]
+[node name="key2" type="Sprite2D" parent="binds/select"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -203,7 +203,7 @@ hframes = 34
 vframes = 24
 frame = 77
 
-[node name="key3" type="Sprite" parent="binds/select"]
+[node name="key3" type="Sprite2D" parent="binds/select"]
 position = Vector2( 280, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -212,7 +212,7 @@ hframes = 34
 vframes = 24
 frame = 235
 
-[node name="key4" type="Sprite" parent="binds/select"]
+[node name="key4" type="Sprite2D" parent="binds/select"]
 position = Vector2( 312, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -222,11 +222,11 @@ vframes = 24
 frame = 67
 
 [node name="back" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 214.0
-margin_right = 600.0
-margin_bottom = 245.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 214.0
+offset_right = 600.0
+offset_bottom = 245.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_UNDO"
 valign = 2
 __meta__ = {
@@ -235,11 +235,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/back"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/back"]
+[node name="key" type="Sprite2D" parent="binds/back"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -248,7 +248,7 @@ hframes = 34
 vframes = 24
 frame = 48
 
-[node name="key2" type="Sprite" parent="binds/back"]
+[node name="key2" type="Sprite2D" parent="binds/back"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -257,7 +257,7 @@ hframes = 34
 vframes = 24
 frame = 78
 
-[node name="key3" type="Sprite" parent="binds/back"]
+[node name="key3" type="Sprite2D" parent="binds/back"]
 visible = false
 position = Vector2( 280, -7 )
 scale = Vector2( 2, 2 )
@@ -268,11 +268,11 @@ vframes = 24
 frame = 77
 
 [node name="tiles" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 254.0
-margin_right = 600.0
-margin_bottom = 285.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 254.0
+offset_right = 600.0
+offset_bottom = 285.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_CHANGE_TILE"
 valign = 2
 __meta__ = {
@@ -281,11 +281,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/tiles"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/tiles"]
+[node name="key" type="Sprite2D" parent="binds/tiles"]
 visible = false
 position = Vector2( 130, -7 )
 scale = Vector2( 2, 2 )
@@ -295,7 +295,7 @@ hframes = 34
 vframes = 24
 frame = 253
 
-[node name="key2" type="Sprite" parent="binds/tiles"]
+[node name="key2" type="Sprite2D" parent="binds/tiles"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -304,7 +304,7 @@ hframes = 34
 vframes = 24
 frame = 68
 
-[node name="key3" type="Sprite" parent="binds/tiles"]
+[node name="key3" type="Sprite2D" parent="binds/tiles"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -313,7 +313,7 @@ hframes = 34
 vframes = 24
 frame = 166
 
-[node name="key4" type="Sprite" parent="binds/tiles"]
+[node name="key4" type="Sprite2D" parent="binds/tiles"]
 position = Vector2( 265, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -322,7 +322,7 @@ hframes = 34
 vframes = 24
 frame = 167
 
-[node name="key5" type="Sprite" parent="binds/tiles"]
+[node name="key5" type="Sprite2D" parent="binds/tiles"]
 position = Vector2( 300, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -331,7 +331,7 @@ hframes = 34
 vframes = 24
 frame = 168
 
-[node name="key6" type="Sprite" parent="binds/tiles"]
+[node name="key6" type="Sprite2D" parent="binds/tiles"]
 position = Vector2( 335, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -341,11 +341,11 @@ vframes = 24
 frame = 169
 
 [node name="menu" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 294.0
-margin_right = 600.0
-margin_bottom = 325.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 294.0
+offset_right = 600.0
+offset_bottom = 325.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_MENU"
 valign = 2
 __meta__ = {
@@ -354,11 +354,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/menu"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/menu"]
+[node name="key" type="Sprite2D" parent="binds/menu"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -367,7 +367,7 @@ hframes = 34
 vframes = 24
 frame = 651
 
-[node name="key2" type="Sprite" parent="binds/menu"]
+[node name="key2" type="Sprite2D" parent="binds/menu"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -376,7 +376,7 @@ hframes = 34
 vframes = 24
 frame = 155
 
-[node name="key3" type="Sprite" parent="binds/menu"]
+[node name="key3" type="Sprite2D" parent="binds/menu"]
 position = Vector2( 280, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -386,11 +386,11 @@ vframes = 24
 frame = 17
 
 [node name="rotate" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 334.0
-margin_right = 600.0
-margin_bottom = 365.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 334.0
+offset_right = 600.0
+offset_bottom = 365.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_ROTATE"
 valign = 2
 __meta__ = {
@@ -399,11 +399,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/rotate"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/rotate"]
+[node name="key" type="Sprite2D" parent="binds/rotate"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -412,7 +412,7 @@ hframes = 34
 vframes = 24
 frame = 653
 
-[node name="key2" type="Sprite" parent="binds/rotate"]
+[node name="key2" type="Sprite2D" parent="binds/rotate"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -421,7 +421,7 @@ hframes = 34
 vframes = 24
 frame = 654
 
-[node name="key3" type="Sprite" parent="binds/rotate"]
+[node name="key3" type="Sprite2D" parent="binds/rotate"]
 position = Vector2( 280, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -430,7 +430,7 @@ hframes = 34
 vframes = 24
 frame = 85
 
-[node name="key4" type="Sprite" parent="binds/rotate"]
+[node name="key4" type="Sprite2D" parent="binds/rotate"]
 position = Vector2( 320, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -440,11 +440,11 @@ vframes = 24
 frame = 87
 
 [node name="clear" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 374.0
-margin_right = 600.0
-margin_bottom = 405.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 374.0
+offset_right = 600.0
+offset_bottom = 405.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_CLEAR"
 valign = 2
 __meta__ = {
@@ -452,11 +452,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/clear"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/clear"]
+[node name="key" type="Sprite2D" parent="binds/clear"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -465,7 +465,7 @@ hframes = 34
 vframes = 24
 frame = 49
 
-[node name="key2" type="Sprite" parent="binds/clear"]
+[node name="key2" type="Sprite2D" parent="binds/clear"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -474,7 +474,7 @@ hframes = 34
 vframes = 24
 frame = 156
 
-[node name="key3" type="Sprite" parent="binds/clear"]
+[node name="key3" type="Sprite2D" parent="binds/clear"]
 visible = false
 position = Vector2( 280, -7 )
 scale = Vector2( 2, 2 )
@@ -485,11 +485,11 @@ vframes = 24
 frame = 85
 
 [node name="alternative" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 414.0
-margin_right = 600.0
-margin_bottom = 445.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 414.0
+offset_right = 600.0
+offset_bottom = 445.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_ALTERNATIVE"
 valign = 2
 __meta__ = {
@@ -498,11 +498,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/alternative"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/alternative"]
+[node name="key" type="Sprite2D" parent="binds/alternative"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -511,7 +511,7 @@ hframes = 34
 vframes = 24
 frame = 50
 
-[node name="key2" type="Sprite" parent="binds/alternative"]
+[node name="key2" type="Sprite2D" parent="binds/alternative"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -520,7 +520,7 @@ hframes = 34
 vframes = 24
 frame = 88
 
-[node name="key3" type="Sprite" parent="binds/alternative"]
+[node name="key3" type="Sprite2D" parent="binds/alternative"]
 visible = false
 position = Vector2( 280, -7 )
 scale = Vector2( 2, 2 )
@@ -531,11 +531,11 @@ vframes = 24
 frame = 85
 
 [node name="ban" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 454.0
-margin_right = 600.0
-margin_bottom = 485.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 454.0
+offset_right = 600.0
+offset_bottom = 485.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_BANS"
 valign = 2
 __meta__ = {
@@ -543,11 +543,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/ban"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/ban"]
+[node name="key" type="Sprite2D" parent="binds/ban"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -556,7 +556,7 @@ hframes = 34
 vframes = 24
 frame = 322
 
-[node name="key2" type="Sprite" parent="binds/ban"]
+[node name="key2" type="Sprite2D" parent="binds/ban"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -565,7 +565,7 @@ hframes = 34
 vframes = 24
 frame = 79
 
-[node name="key3" type="Sprite" parent="binds/ban"]
+[node name="key3" type="Sprite2D" parent="binds/ban"]
 visible = false
 position = Vector2( 280, -7 )
 scale = Vector2( 2, 2 )
@@ -576,11 +576,11 @@ vframes = 24
 frame = 85
 
 [node name="ai_toggle" type="Label" parent="binds"]
-margin_left = 420.0
-margin_top = 494.0
-margin_right = 600.0
-margin_bottom = 525.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 420.0
+offset_top = 494.0
+offset_right = 600.0
+offset_bottom = 525.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "TR_AI_TOGGLE"
 valign = 2
 __meta__ = {
@@ -588,11 +588,11 @@ __meta__ = {
 }
 
 [node name="line" type="Line2D" parent="binds/ai_toggle"]
-points = PoolVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array( 0, 27, 360, 27 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
-[node name="key" type="Sprite" parent="binds/ai_toggle"]
+[node name="key" type="Sprite2D" parent="binds/ai_toggle"]
 position = Vector2( 180, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -601,7 +601,7 @@ hframes = 34
 vframes = 24
 frame = 254
 
-[node name="key2" type="Sprite" parent="binds/ai_toggle"]
+[node name="key2" type="Sprite2D" parent="binds/ai_toggle"]
 position = Vector2( 230, -7 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
@@ -610,7 +610,7 @@ hframes = 34
 vframes = 24
 frame = 92
 
-[node name="key3" type="Sprite" parent="binds/ai_toggle"]
+[node name="key3" type="Sprite2D" parent="binds/ai_toggle"]
 visible = false
 position = Vector2( 280, -7 )
 scale = Vector2( 2, 2 )

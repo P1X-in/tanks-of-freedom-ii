@@ -12,8 +12,8 @@
 [ext_resource path="res://scenes/ui/board/cinematic_bars.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/ui/icons/star.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/ui/board/unit_stats.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/gui/editor/circle.png" type="Texture" id=13]
-[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=14]
+[ext_resource path="res://assets/gui/editor/circle.png" type="Texture2D" id=13]
+[ext_resource path="res://assets/fonts/courier_big.tres" type="FontFile" id=14]
 [ext_resource path="res://scenes/ui/board/objectives.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/ui/board/ap_depleted.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/ui/save/saves.tscn" type="PackedScene" id=17]
@@ -22,8 +22,8 @@
 [node name="ui" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -0.529724
-margin_right = -0.529785
+offset_left = -0.529724
+offset_right = -0.529785
 mouse_filter = 2
 theme = ExtResource( 4 )
 script = ExtResource( 1 )
@@ -33,10 +33,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
@@ -45,10 +45,10 @@ __meta__ = {
 [node name="radial" parent="radial" instance=ExtResource( 2 )]
 
 [node name="resources" type="MarginContainer" parent="."]
-margin_left = 60.0
-margin_top = 70.0
-margin_right = 60.0
-margin_bottom = 70.0
+offset_left = 60.0
+offset_top = 70.0
+offset_right = 60.0
+offset_bottom = 70.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -57,10 +57,10 @@ __meta__ = {
 zoom_value = 5
 
 [node name="label" type="Label" parent="resources/coin_view"]
-margin_left = -30.0
-margin_top = -27.0
-margin_right = 30.0
-margin_bottom = -7.0
+offset_left = -30.0
+offset_top = -27.0
+offset_right = 30.0
+offset_bottom = -7.0
 text = "0000"
 align = 1
 valign = 1
@@ -71,17 +71,17 @@ __meta__ = {
 [node name="tile_highlight" type="MarginContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -40.0
-margin_bottom = -40.0
+offset_top = -40.0
+offset_bottom = -40.0
 
 [node name="tile_view" parent="tile_highlight" instance=ExtResource( 5 )]
 position = Vector2( 60, -20 )
 
 [node name="hp" type="Label" parent="tile_highlight/tile_view"]
-margin_left = -50.0
-margin_top = 30.0
-margin_right = 50.0
-margin_bottom = 50.0
+offset_left = -50.0
+offset_top = 30.0
+offset_right = 50.0
+offset_bottom = 50.0
 align = 1
 valign = 1
 __meta__ = {
@@ -122,7 +122,7 @@ position = Vector2( 20, -20 )
 visible = false
 position = Vector2( 120, 0 )
 
-[node name="bg" type="Sprite" parent="tile_highlight/abilities/ab1"]
+[node name="bg" type="Sprite2D" parent="tile_highlight/abilities/ab1"]
 modulate = Color( 1, 1, 1, 0.823529 )
 position = Vector2( 50, 0 )
 scale = Vector2( 0.5, 0.5 )
@@ -134,7 +134,7 @@ __meta__ = {
 [node name="anchor" type="Node2D" parent="tile_highlight/abilities/ab1"]
 position = Vector2( 50, 0 )
 
-[node name="disabled" type="Sprite" parent="tile_highlight/abilities/ab1"]
+[node name="disabled" type="Sprite2D" parent="tile_highlight/abilities/ab1"]
 visible = false
 modulate = Color( 1, 1, 1, 0.823529 )
 position = Vector2( 50, 0 )
@@ -142,20 +142,20 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 13 )
 
 [node name="cd" type="Label" parent="tile_highlight/abilities/ab1/disabled"]
-margin_left = -100.0
-margin_top = -95.0
-margin_bottom = 5.0
-rect_scale = Vector2( 2, 2 )
-custom_fonts/font = ExtResource( 14 )
+offset_left = -100.0
+offset_top = -95.0
+offset_bottom = 5.0
+scale = Vector2( 2, 2 )
+theme_override_fonts/font = ExtResource( 14 )
 text = "1"
 align = 1
 valign = 1
 
 [node name="label" type="Label" parent="tile_highlight/abilities/ab1"]
-margin_left = -25.0
-margin_top = 10.0
-margin_right = 125.0
-margin_bottom = 60.0
+offset_left = -25.0
+offset_top = 10.0
+offset_right = 125.0
+offset_bottom = 60.0
 text = "Heavy Weapon"
 align = 1
 valign = 1
@@ -168,7 +168,7 @@ __meta__ = {
 visible = false
 position = Vector2( 260, 0 )
 
-[node name="bg" type="Sprite" parent="tile_highlight/abilities/ab2"]
+[node name="bg" type="Sprite2D" parent="tile_highlight/abilities/ab2"]
 modulate = Color( 1, 1, 1, 0.823529 )
 position = Vector2( 50, 0 )
 scale = Vector2( 0.5, 0.5 )
@@ -180,7 +180,7 @@ __meta__ = {
 [node name="anchor" type="Node2D" parent="tile_highlight/abilities/ab2"]
 position = Vector2( 50, 0 )
 
-[node name="disabled" type="Sprite" parent="tile_highlight/abilities/ab2"]
+[node name="disabled" type="Sprite2D" parent="tile_highlight/abilities/ab2"]
 visible = false
 modulate = Color( 1, 1, 1, 0.823529 )
 position = Vector2( 50, 0 )
@@ -188,20 +188,20 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 13 )
 
 [node name="cd" type="Label" parent="tile_highlight/abilities/ab2/disabled"]
-margin_left = -100.0
-margin_top = -95.0
-margin_bottom = 5.0
-rect_scale = Vector2( 2, 2 )
-custom_fonts/font = ExtResource( 14 )
+offset_left = -100.0
+offset_top = -95.0
+offset_bottom = 5.0
+scale = Vector2( 2, 2 )
+theme_override_fonts/font = ExtResource( 14 )
 text = "1"
 align = 1
 valign = 1
 
 [node name="label" type="Label" parent="tile_highlight/abilities/ab2"]
-margin_left = -25.0
-margin_top = 10.0
-margin_right = 125.0
-margin_bottom = 60.0
+offset_left = -25.0
+offset_top = 10.0
+offset_right = 125.0
+offset_bottom = 60.0
 text = "Heavy Weapon"
 align = 1
 valign = 1
@@ -214,7 +214,7 @@ __meta__ = {
 visible = false
 position = Vector2( 400, 0 )
 
-[node name="bg" type="Sprite" parent="tile_highlight/abilities/ab3"]
+[node name="bg" type="Sprite2D" parent="tile_highlight/abilities/ab3"]
 modulate = Color( 1, 1, 1, 0.823529 )
 position = Vector2( 50, 0 )
 scale = Vector2( 0.5, 0.5 )
@@ -226,7 +226,7 @@ __meta__ = {
 [node name="anchor" type="Node2D" parent="tile_highlight/abilities/ab3"]
 position = Vector2( 50, 0 )
 
-[node name="disabled" type="Sprite" parent="tile_highlight/abilities/ab3"]
+[node name="disabled" type="Sprite2D" parent="tile_highlight/abilities/ab3"]
 visible = false
 modulate = Color( 1, 1, 1, 0.823529 )
 position = Vector2( 50, 0 )
@@ -234,20 +234,20 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 13 )
 
 [node name="cd" type="Label" parent="tile_highlight/abilities/ab3/disabled"]
-margin_left = -100.0
-margin_top = -95.0
-margin_bottom = 5.0
-rect_scale = Vector2( 2, 2 )
-custom_fonts/font = ExtResource( 14 )
+offset_left = -100.0
+offset_top = -95.0
+offset_bottom = 5.0
+scale = Vector2( 2, 2 )
+theme_override_fonts/font = ExtResource( 14 )
 text = "1"
 align = 1
 valign = 1
 
 [node name="label" type="Label" parent="tile_highlight/abilities/ab3"]
-margin_left = -25.0
-margin_top = 10.0
-margin_right = 125.0
-margin_bottom = 60.0
+offset_left = -25.0
+offset_top = 10.0
+offset_right = 125.0
+offset_bottom = 60.0
 text = "Heavy Weapon"
 align = 1
 valign = 1
@@ -261,10 +261,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -277,10 +277,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -293,10 +293,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -314,8 +314,8 @@ __meta__ = {
 [node name="cinematic_bars" parent="cinematic_bars" instance=ExtResource( 10 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1279.0
-margin_bottom = 800.0
+offset_right = 1279.0
+offset_bottom = 800.0
 mouse_filter = 2
 
 [node name="story_dialog" type="MarginContainer" parent="."]
@@ -323,10 +323,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 6.10352e-05
-margin_top = -180.0
-margin_right = 6.10352e-05
-margin_bottom = -180.0
+offset_left = 6.10352e-05
+offset_top = -180.0
+offset_right = 6.10352e-05
+offset_bottom = -180.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -339,10 +339,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 
 [node name="unit_stats" parent="unit_stats" instance=ExtResource( 12 )]
 visible = false
@@ -350,26 +350,26 @@ visible = false
 [node name="objectives" type="MarginContainer" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -40.0
-margin_bottom = 40.0
+offset_left = -40.0
+offset_bottom = 40.0
 
 [node name="objectives" parent="objectives" instance=ExtResource( 15 )]
 visible = false
 anchor_left = 0.0
 anchor_right = 0.0
-margin_left = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+offset_left = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="ap_depleted" type="MarginContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 
 [node name="ap_depleted" parent="ap_depleted" instance=ExtResource( 16 )]
 modulate = Color( 1, 1, 1, 1 )
@@ -379,10 +379,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 
 [node name="saves" parent="saves" instance=ExtResource( 17 )]
 
@@ -391,12 +391,12 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -400.0
-margin_top = -250.0
-margin_bottom = 250.0
+offset_left = -400.0
+offset_top = -250.0
+offset_bottom = 250.0
 mouse_filter = 2
 
 [node name="game" parent="controls" instance=ExtResource( 18 )]
 visible = false
-margin_top = 0.0
-margin_bottom = 500.0
+offset_top = 0.0
+offset_bottom = 500.0

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/ui/radial/field.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ui/radial/radial.gd" type="Script" id=2]
-[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/fonts/courier.tres" type="FontFile" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hide"
@@ -14,8 +14,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
@@ -26,8 +26,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
 }
@@ -42,8 +42,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -54,8 +54,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
 }
@@ -103,10 +103,10 @@ position = Vector2( -140, -140 )
 visible = false
 
 [node name="background" type="ColorRect" parent="label"]
-margin_left = -130.0
-margin_top = -50.0
-margin_right = 130.0
-margin_bottom = 50.0
+offset_left = -130.0
+offset_top = -50.0
+offset_right = 130.0
+offset_bottom = 50.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -115,11 +115,11 @@ __meta__ = {
 [node name="label" type="Label" parent="label"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -150.0
-margin_top = -50.0
-margin_right = 150.0
-margin_bottom = 50.0
-custom_fonts/font = ExtResource( 3 )
+offset_left = -150.0
+offset_top = -50.0
+offset_right = 150.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Lorem Ipsum"
 align = 1
 valign = 1

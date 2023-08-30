@@ -4,10 +4,10 @@ uniform vec2 amplitude = vec2(0.2, 0.1);
 uniform vec2 frequency = vec2(3.0, 2.5);
 uniform vec2 time_factor = vec2(2.0, 3.0);
 
-uniform sampler2D texturemap : hint_albedo;
+uniform sampler2D texturemap : source_color;
 uniform vec2 texture_scale = vec2(70, 70);
 
-uniform sampler2D uv_offset_texture : hint_black;
+uniform sampler2D uv_offset_texture : hint_default_black;
 uniform vec2 uv_offset_scale = vec2 (0.2, 0.2);
 uniform float uv_offset_time_scale = 0.01;
 uniform float uv_offset_amplitude = 0.05;
@@ -38,7 +38,7 @@ void fragment() {
     
     ALBEDO = texture(texturemap, texture_uv).rgb;
     
-    NORMALMAP = texture(normalmap, base_uv_offset).rgb;
+    NORMAL_MAP = texture(normalmap, base_uv_offset).rgb;
     //METALLIC = 0.0;
     //ROUGHNESS = 1.0;
 }

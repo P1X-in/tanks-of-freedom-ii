@@ -13,10 +13,10 @@ func _execute(_metadata):
     source_tile.unit.release()
 
     unit.stop_animations()
-    var world_position = self.board.map.map_to_world(source_tile.position)
-    var old_position = unit.get_translation()
+    var world_position = self.board.map.map_to_local(source_tile.position)
+    var old_position = unit.get_position()
     world_position.y = old_position.y
-    unit.set_translation(world_position)
+    unit.set_position(world_position)
 
     unit.animate_path(self.path)
 

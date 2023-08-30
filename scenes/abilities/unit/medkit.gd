@@ -7,7 +7,7 @@ const MEDKIT_UNITS = [
     "npc",
 ]
 
-export var heal = 5
+@export var heal = 5
 
 func _execute(board, position):
     var tile = board.map.model.get_tile(position)

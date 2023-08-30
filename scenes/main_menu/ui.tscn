@@ -25,8 +25,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -160.0
-margin_bottom = -120.0
+offset_top = -160.0
+offset_bottom = -120.0
 
 [node name="logo_view" parent="logo" instance=ExtResource( 2 )]
 
@@ -35,10 +35,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 6.10352e-05
-margin_top = 20.0
-margin_right = 6.10352e-05
-margin_bottom = 60.0
+offset_left = 6.10352e-05
+offset_top = 20.0
+offset_right = 6.10352e-05
+offset_bottom = 60.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -46,7 +46,7 @@ __meta__ = {
 [node name="menu" parent="options" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_bottom = 40.0
+offset_bottom = 40.0
 
 [node name="map_picker" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -64,8 +64,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -20.0
-margin_bottom = 20.0
+offset_top = -20.0
+offset_bottom = 20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -73,17 +73,17 @@ __meta__ = {
 [node name="skirmish" parent="skirmish" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_bottom = 40.0
+offset_bottom = 40.0
 
 [node name="settings" type="MarginContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 6.10352e-05
-margin_top = 20.0
-margin_right = 6.10352e-05
-margin_bottom = 60.0
+offset_left = 6.10352e-05
+offset_top = 20.0
+offset_right = 6.10352e-05
+offset_bottom = 60.0
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
@@ -92,17 +92,17 @@ __meta__ = {
 [node name="settings" parent="settings" instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_bottom = 40.0
+offset_bottom = 40.0
 
 [node name="controls" type="MarginContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 6.10352e-05
-margin_top = 20.0
-margin_right = 6.10352e-05
-margin_bottom = 60.0
+offset_left = 6.10352e-05
+offset_top = 20.0
+offset_right = 6.10352e-05
+offset_bottom = 60.0
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
@@ -111,15 +111,15 @@ __meta__ = {
 [node name="controls" parent="controls" instance=ExtResource( 11 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_bottom = 40.0
+offset_bottom = 40.0
 
 [node name="campaign_selection" type="MarginContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -20.0
-margin_bottom = 20.0
+offset_top = -20.0
+offset_bottom = 20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -127,17 +127,17 @@ __meta__ = {
 [node name="campaign_selection" parent="campaign_selection" instance=ExtResource( 8 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 0.0
-margin_right = 0.0
-margin_bottom = 40.0
+offset_left = 0.0
+offset_right = 0.0
+offset_bottom = 40.0
 
 [node name="campaign_mission_selection" type="MarginContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -20.0
-margin_bottom = 20.0
+offset_top = -20.0
+offset_bottom = 20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -145,15 +145,15 @@ __meta__ = {
 [node name="campaign_mission_selection" parent="campaign_mission_selection" instance=ExtResource( 9 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_bottom = 40.0
+offset_bottom = 40.0
 
 [node name="campaign_mission" type="MarginContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -20.0
-margin_bottom = 20.0
+offset_top = -20.0
+offset_bottom = 20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -161,29 +161,29 @@ __meta__ = {
 [node name="campaign_mission" parent="campaign_mission" instance=ExtResource( 10 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_bottom = 40.0
+offset_bottom = 40.0
 
 [node name="version" type="MarginContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = -40.0
-margin_right = 50.0
+offset_left = 10.0
+offset_top = -40.0
+offset_right = 50.0
 
 [node name="version" type="Label" parent="version"]
-margin_top = 10.0
-margin_right = 40.0
-margin_bottom = 29.0
+offset_top = 10.0
+offset_right = 40.0
+offset_bottom = 29.0
 
 [node name="saves" type="MarginContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = -20.0
-margin_bottom = -20.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -20.0
+offset_bottom = -20.0
 
 [node name="saves" parent="saves" instance=ExtResource( 12 )]
 

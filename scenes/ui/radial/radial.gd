@@ -1,13 +1,13 @@
 extends Node2D
 
-onready var audio = $"/root/SimpleAudioLibrary"
-onready var animations = $"animations"
-onready var label_node = $"label"
-onready var label_text = $"label/label"
+@onready var audio = $"/root/SimpleAudioLibrary"
+@onready var animations = $"animations"
+@onready var label_node = $"label"
+@onready var label_text = $"label/label"
 
-export var analog_axis_x = JOY_ANALOG_LX
-export var analog_axis_y = JOY_ANALOG_LY
-export var device_id = 0
+@export var analog_axis_x = JOY_ANALOG_LX
+@export var analog_axis_y = JOY_ANALOG_LY
+@export var device_id = 0
 
 var fields = []
 var focused_field = null
@@ -33,7 +33,7 @@ func _ready():
         index += 1
 
 func _input(event):
-    if not OS.is_window_focused():
+    if not get_window().has_focus():
         return
 
     var axis_value = Vector2()
@@ -43,7 +43,7 @@ func _input(event):
 
     if axis_value.length() > 0.5:
         self.mouse_mode = false
-        var angle = rad2deg(axis_value.angle()) + 112.5
+        var angle = rad_to_deg(axis_value.angle()) + 112.5
         if angle < 0.0:
             angle += 360
 

@@ -3,20 +3,20 @@
 [ext_resource path="res://assets/gui/markers/pointer.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://assets/materials/arne32.tres" type="Material" id=2]
 
-[sub_resource type="SpatialMaterial" id=1]
+[sub_resource type="StandardMaterial3D" id=1]
 flags_transparent = true
 flags_unshaded = true
 albedo_color = Color( 1, 1, 1, 0.0392157 )
 
-[node name="pointer" type="Spatial"]
+[node name="pointer" type="Node3D"]
 
-[node name="pointer" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0, -0.05 )
+[node name="pointer" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0, -0.05 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
 
-[node name="CSGCylinder" type="CSGCylinder" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
 visible = false
 cast_shadow = 0
 radius = 1.1

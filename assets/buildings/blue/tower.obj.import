@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/tower.obj-c8037d6975d6ad61ba4e123429e7d1ab.mesh"
+uid="uid://bu87skmt6004s"
+path="res://.godot/imported/tower.obj-c8037d6975d6ad61ba4e123429e7d1ab.mesh"
 
 [deps]
 
-files=[ "res://.import/tower.obj-c8037d6975d6ad61ba4e123429e7d1ab.mesh" ]
+files=["res://.godot/imported/tower.obj-c8037d6975d6ad61ba4e123429e7d1ab.mesh"]
 
 source_file="res://assets/buildings/blue/tower.obj"
-dest_files=[ "res://.import/tower.obj-c8037d6975d6ad61ba4e123429e7d1ab.mesh", "res://.import/tower.obj-c8037d6975d6ad61ba4e123429e7d1ab.mesh" ]
+dest_files=["res://.godot/imported/tower.obj-c8037d6975d6ad61ba4e123429e7d1ab.mesh", "res://.godot/imported/tower.obj-c8037d6975d6ad61ba4e123429e7d1ab.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

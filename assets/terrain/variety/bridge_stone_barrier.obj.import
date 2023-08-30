@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/bridge_stone_barrier.obj-378076ff3023db82bfb21b1075c8c961.mesh"
+uid="uid://702ofl7a2yy5"
+path="res://.godot/imported/bridge_stone_barrier.obj-378076ff3023db82bfb21b1075c8c961.mesh"
 
 [deps]
 
-files=[ "res://.import/bridge_stone_barrier.obj-378076ff3023db82bfb21b1075c8c961.mesh" ]
+files=["res://.godot/imported/bridge_stone_barrier.obj-378076ff3023db82bfb21b1075c8c961.mesh"]
 
 source_file="res://assets/terrain/variety/bridge_stone_barrier.obj"
-dest_files=[ "res://.import/bridge_stone_barrier.obj-378076ff3023db82bfb21b1075c8c961.mesh", "res://.import/bridge_stone_barrier.obj-378076ff3023db82bfb21b1075c8c961.mesh" ]
+dest_files=["res://.godot/imported/bridge_stone_barrier.obj-378076ff3023db82bfb21b1075c8c961.mesh", "res://.godot/imported/bridge_stone_barrier.obj-378076ff3023db82bfb21b1075c8c961.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

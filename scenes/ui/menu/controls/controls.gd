@@ -1,9 +1,9 @@
 extends Control
 
-onready var audio = $"/root/SimpleAudioLibrary"
+@onready var audio = $"/root/SimpleAudioLibrary"
 
-onready var animations = $"animations"
-onready var back_button = $"widgets/back_button"
+@onready var animations = $"animations"
+@onready var back_button = $"widgets/back_button"
 
 var main_menu
 
@@ -24,7 +24,7 @@ func _on_back_button_pressed():
 func show_panel():
     self.animations.play("show")
     self.set_process_input(true)
-    yield(self.get_tree().create_timer(0.1), "timeout")
+    await self.get_tree().create_timer(0.1).timeout
     self.back_button.grab_focus()
 
 func hide_panel():

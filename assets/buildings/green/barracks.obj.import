@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/barracks.obj-bd1bd0a8d5a0e5538f24fe0439f55562.mesh"
+uid="uid://bxm21ifk1gvav"
+path="res://.godot/imported/barracks.obj-bd1bd0a8d5a0e5538f24fe0439f55562.mesh"
 
 [deps]
 
-files=[ "res://.import/barracks.obj-bd1bd0a8d5a0e5538f24fe0439f55562.mesh" ]
+files=["res://.godot/imported/barracks.obj-bd1bd0a8d5a0e5538f24fe0439f55562.mesh"]
 
 source_file="res://assets/buildings/green/barracks.obj"
-dest_files=[ "res://.import/barracks.obj-bd1bd0a8d5a0e5538f24fe0439f55562.mesh", "res://.import/barracks.obj-bd1bd0a8d5a0e5538f24fe0439f55562.mesh" ]
+dest_files=["res://.godot/imported/barracks.obj-bd1bd0a8d5a0e5538f24fe0439f55562.mesh", "res://.godot/imported/barracks.obj-bd1bd0a8d5a0e5538f24fe0439f55562.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

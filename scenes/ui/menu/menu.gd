@@ -1,18 +1,18 @@
 extends Control
 
-onready var campaign_button = $"campaign_button"
-onready var skirmish_button = $"skirmish_button"
-onready var load_button = $"load_button"
-onready var editor_button = $"editor_button"
-onready var settings_button = $"settings_button"
-onready var controls_button = $"controls_button"
-onready var online_button = $"online_button"
-onready var quit_button = $"quit_button"
-onready var animations = $"animations"
-onready var gamepad_adapter = $"/root/GamepadAdapter"
+@onready var campaign_button = $"campaign_button"
+@onready var skirmish_button = $"skirmish_button"
+@onready var load_button = $"load_button"
+@onready var editor_button = $"editor_button"
+@onready var settings_button = $"settings_button"
+@onready var controls_button = $"controls_button"
+@onready var online_button = $"online_button"
+@onready var quit_button = $"quit_button"
+@onready var animations = $"animations"
+@onready var gamepad_adapter = $"/root/GamepadAdapter"
 
-onready var switcher = $"/root/SceneSwitcher"
-onready var audio = $"/root/SimpleAudioLibrary"
+@onready var switcher = $"/root/SceneSwitcher"
+@onready var audio = $"/root/SimpleAudioLibrary"
 
 var main_menu
 var recent_button_used = null
@@ -75,7 +75,7 @@ func _on_quit_button_pressed():
 func show_panel():
     self.animations.play("show")
     self.set_process_input(true)
-    yield(self.get_tree().create_timer(0.1), "timeout")
+    await self.get_tree().create_timer(0.1).timeout
 
     if self.recent_button_used != null:
         self.recent_button_used.grab_focus()

@@ -2,19 +2,19 @@
 
 [ext_resource path="res://scenes/ui/menu/base_menu_panel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ui/menu/campaign_mission.gd" type="Script" id=2]
-[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=3]
-[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=4]
-[ext_resource path="res://assets/fonts/courier_30.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/fonts/courier.tres" type="FontFile" id=3]
+[ext_resource path="res://assets/fonts/courier_big.tres" type="FontFile" id=4]
+[ext_resource path="res://assets/fonts/courier_30.tres" type="FontFile" id=5]
 
 [node name="campaign_mission" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="title" type="Label" parent="widgets" index="0"]
-margin_left = 40.0
-margin_top = 40.0
-margin_right = 1160.0
-margin_bottom = 105.0
-custom_fonts/font = ExtResource( 5 )
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 1160.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource( 5 )
 text = "Mission Title"
 align = 1
 valign = 1
@@ -23,10 +23,10 @@ __meta__ = {
 }
 
 [node name="description_background" type="ColorRect" parent="widgets" index="1"]
-margin_left = 40.0
-margin_top = 120.0
-margin_right = 1160.0
-margin_bottom = 470.0
+offset_left = 40.0
+offset_top = 120.0
+offset_right = 1160.0
+offset_bottom = 470.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.980392 )
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -34,11 +34,11 @@ __meta__ = {
 }
 
 [node name="description" type="Label" parent="widgets" index="2"]
-margin_left = 50.0
-margin_top = 120.0
-margin_right = 1150.0
-margin_bottom = 470.0
-custom_fonts/font = ExtResource( 3 )
+offset_left = 50.0
+offset_top = 120.0
+offset_right = 1150.0
+offset_bottom = 470.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Lorem Ipsum Dolor Sit Amet"
 align = 1
 valign = 1
@@ -49,11 +49,11 @@ __meta__ = {
 }
 
 [node name="back_button" type="Button" parent="widgets" index="3"]
-margin_left = 550.0
-margin_top = 650.0
-margin_right = 650.0
-margin_bottom = 680.0
-custom_fonts/font = ExtResource( 3 )
+offset_left = 550.0
+offset_top = 650.0
+offset_right = 650.0
+offset_bottom = 680.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "TR_BACK"
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -61,11 +61,11 @@ __meta__ = {
 }
 
 [node name="start_button" type="Button" parent="widgets" index="4"]
-margin_left = 475.0
-margin_top = 500.0
-margin_right = 725.0
-margin_bottom = 600.0
-custom_fonts/font = ExtResource( 4 )
+offset_left = 475.0
+offset_top = 500.0
+offset_right = 725.0
+offset_bottom = 600.0
+theme_override_fonts/font = ExtResource( 4 )
 text = "TR_START"
 __meta__ = {
 "_edit_use_anchors_": false,

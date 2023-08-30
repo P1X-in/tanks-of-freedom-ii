@@ -1,24 +1,24 @@
 extends "res://scenes/tiles/tile.gd"
 
-onready var audio = $"/root/SimpleAudioLibrary"
+@onready var audio = $"/root/SimpleAudioLibrary"
 
-onready var animations = $"animations"
+@onready var animations = $"animations"
 
-export var side = "neutral"
+@export var side = "neutral"
 var team = null
 
-export var require_crew = true
+@export var require_crew = true
 
-export var ap_gain = 5
+@export var ap_gain = 5
 
-export var capture_value = 70
+@export var capture_value = 70
 
-export var uses_metallic_material = false
+@export var uses_metallic_material = false
 
 var abilities = []
 
 func get_dict():
-    var new_dict = .get_dict()
+    var new_dict = super.get_dict()
     new_dict["side"] = self.side
     new_dict["abilities"] = self._get_abilities_status()
 
@@ -34,7 +34,7 @@ func set_side_materials(_base_material, _desaturated_material):
     self.set_side_material(_base_material)
 
 func set_side_material(material):
-    $"mesh".set_surface_material(0, material)
+    $"mesh".set_surface_override_material(0, material)
 
 func register_ability(ability):
     self.abilities.append(ability)

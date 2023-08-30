@@ -1,20 +1,20 @@
-extends Spatial
+extends Node3D
 
-export var template_name = ""
-export var unit_can_stand = false
-export var unit_can_fly = false
-export var is_invisible = false
+@export var template_name = ""
+@export var unit_can_stand = false
+@export var unit_can_fly = false
+@export var is_invisible = false
 
-export var main_tile_view_cam_modifier = 0
-export var side_tile_view_cam_modifier = 0
-export var tile_view_height_cam_modifier = 0.0
+@export var main_tile_view_cam_modifier = 0
+@export var side_tile_view_cam_modifier = 0
+@export var tile_view_height_cam_modifier = 0.0
 
-export var unit_vertical_offset = 0
+@export var unit_vertical_offset = 0
 
-export var next_damage_stage_template = ""
-export var base_stage_template = ""
+@export var next_damage_stage_template = ""
+@export var base_stage_template = ""
 
-export var shadow_override = false
+@export var shadow_override = false
 
 var scripting_tags = {}
 var current_rotation = 0
@@ -29,10 +29,10 @@ func get_dict():
     }
 
 func reset_position_for_tile_view():
-    var translation = $"mesh".get_translation()
-    translation.y = 0
+    var position = $"mesh".get_position()
+    position.y = 0
 
-    $"mesh".set_translation(translation)
+    $"mesh".set_position(position)
 
 func add_script_tag(tag):
     self.scripting_tags[tag] = true
@@ -56,12 +56,12 @@ func disable_shadow():
         reflection.cast_shadow = 0
 
     for child in $"mesh".get_children():
-        if child is MeshInstance:
+        if child is MeshInstance3D:
             child.cast_shadow = 0
 
     for child in self.get_children():
-        if child is Spatial:
+        if child is Node3D:
             for next_child in child.get_children():
-                if next_child is MeshInstance:
+                if next_child is MeshInstance3D:
                     next_child.cast_shadow = 0
                     return

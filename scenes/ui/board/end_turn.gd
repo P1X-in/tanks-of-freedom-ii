@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var progress = $"background/progress"
+@onready var progress = $"background/progress"
 
 func reset():
     self.progress.value = 0

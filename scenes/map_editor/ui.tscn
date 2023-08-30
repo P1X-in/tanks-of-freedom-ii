@@ -18,8 +18,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
@@ -30,8 +30,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
 }
@@ -46,8 +46,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, true ]
 }
@@ -58,8 +58,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
 }
@@ -74,20 +74,20 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_scale")
+tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.5, 0.5 ), Vector2( 1e-05, 1e-05 ) ]
 }
@@ -102,20 +102,20 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_scale")
+tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 0.5, 0.5 ) ]
 }
@@ -130,22 +130,22 @@ script = ExtResource( 1 )
 [node name="position" type="MarginContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 15.0
-margin_top = -290.0
-margin_right = 150.0
-margin_bottom = -265.162
-custom_constants/margin_right = 0
-custom_constants/margin_top = 0
-custom_constants/margin_left = 0
-custom_constants/margin_bottom = 0
+offset_left = 15.0
+offset_top = -290.0
+offset_right = 150.0
+offset_bottom = -265.162
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_bottom = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="label" type="Label" parent="position"]
-margin_top = 2.0
-margin_right = 135.0
-margin_bottom = 21.0
+offset_top = 2.0
+offset_right = 135.0
+offset_bottom = 21.0
 text = "[0, 0]"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -153,38 +153,38 @@ __meta__ = {
 
 [node name="map_name" type="MarginContainer" parent="."]
 visible = false
-margin_right = 30.0
-margin_bottom = 54.0
-custom_constants/margin_right = 10
-custom_constants/margin_top = 10
-custom_constants/margin_left = 10
-custom_constants/margin_bottom = 10
+offset_right = 30.0
+offset_bottom = 54.0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_bottom = 10
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="background" type="ColorRect" parent="map_name"]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 20.0
-margin_bottom = 44.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 44.0
 color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
 
 [node name="inner" type="MarginContainer" parent="map_name"]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 20.0
-margin_bottom = 44.0
-custom_constants/margin_right = 5
-custom_constants/margin_top = 0
-custom_constants/margin_left = 5
-custom_constants/margin_bottom = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 44.0
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_bottom = 0
 
 [node name="label" type="Label" parent="map_name/inner"]
-margin_left = 5.0
-margin_top = 7.0
-margin_right = 5.0
-margin_bottom = 26.0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 5.0
+offset_bottom = 26.0
 align = 1
 valign = 1
 __meta__ = {
@@ -196,14 +196,14 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -267.0
-margin_top = -236.0
-margin_right = -67.0
-margin_bottom = -36.0
-custom_constants/margin_right = 20
-custom_constants/margin_top = 20
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
+offset_left = -267.0
+offset_top = -236.0
+offset_right = -67.0
+offset_bottom = -36.0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_bottom = 20
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -244,10 +244,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 
 [node name="radial" parent="radial" instance=ExtResource( 3 )]
 
@@ -256,10 +256,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-custom_constants/margin_right = 20
-custom_constants/margin_top = 20
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_bottom = 20
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -269,25 +269,25 @@ __meta__ = {
 [node name="controls" type="MarginContainer" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -720.0
-margin_right = 80.0
-margin_bottom = 600.0
-rect_scale = Vector2( 0.9, 0.9 )
+offset_left = -720.0
+offset_right = 80.0
+offset_bottom = 600.0
+scale = Vector2( 0.9, 0.9 )
 mouse_filter = 2
 
 [node name="editor" parent="controls" instance=ExtResource( 7 )]
 visible = false
-margin_right = 800.0
-margin_bottom = 600.0
+offset_right = 800.0
+offset_bottom = 600.0
 
 [node name="minimap" parent="." instance=ExtResource( 5 )]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 140.0
-margin_top = -140.0
-margin_right = 180.0
-margin_bottom = -100.0
-rect_scale = Vector2( 0.5, 0.5 )
+offset_left = 140.0
+offset_top = -140.0
+offset_right = 180.0
+offset_bottom = -100.0
+scale = Vector2( 0.5, 0.5 )
 
 [node name="animations" type="AnimationPlayer" parent="minimap"]
 playback_speed = 4.0

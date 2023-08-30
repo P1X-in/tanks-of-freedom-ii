@@ -5,8 +5,8 @@
 [node name="settings_audio" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -780.0
-margin_bottom = -500.0
+offset_right = -780.0
+offset_bottom = -500.0
 
 [node name="master" parent="." instance=ExtResource( 2 )]
 option_name = "TR_MASTER"
@@ -14,15 +14,15 @@ option_key = "vol_master"
 help_tip = "TR_MASTER_DESC"
 
 [node name="sfx" parent="." instance=ExtResource( 2 )]
-margin_top = 85.0
-margin_bottom = 135.0
+offset_top = 85.0
+offset_bottom = 135.0
 option_name = "TR_SFX"
 option_key = "vol_sfx"
 help_tip = "TR_SFX_DESC"
 
 [node name="music" parent="." instance=ExtResource( 2 )]
-margin_top = 150.0
-margin_bottom = 200.0
+offset_top = 150.0
+offset_bottom = 200.0
 option_name = "TR_MUSIC"
 option_key = "vol_music"
 help_tip = "TR_MUSIC_DESC"

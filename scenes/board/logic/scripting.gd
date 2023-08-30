@@ -12,7 +12,7 @@ func ingest_scripts(board_object, incoming_scripts):
     self.board = board_object
     self.scripts = incoming_scripts
 
-    if self.scripts == null or self.scripts.empty() or self.scripts['triggers'].empty():
+    if self.scripts == null or self.scripts.is_empty() or self.scripts['triggers'].is_empty():
         self._setup_basic_win_condition()
     else:
         for trigger_name in self.scripts['triggers']:

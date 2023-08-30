@@ -1,15 +1,15 @@
 extends Control
 
-onready var audio = $"/root/SimpleAudioLibrary"
-onready var settings = $"/root/Settings"
+@onready var audio = $"/root/SimpleAudioLibrary"
+@onready var settings = $"/root/Settings"
 
-onready var label = $"label"
-onready var button = $"toggle"
+@onready var label = $"label"
+@onready var button = $"toggle"
 
-export var unavailable = false
-export var option_name = ""
-export var option_key = ""
-export var help_tip = ""
+@export var unavailable = false
+@export var option_name = ""
+@export var option_key = ""
+@export var help_tip = ""
 
 func _ready():
     self.label.set_text(self.option_name)

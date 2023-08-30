@@ -1,23 +1,23 @@
 extends Node2D
 
-onready var menu_button = $"menu_button"
-onready var restart_button = $"restart_button"
-onready var next_mission_button = $"next_mission_button"
+@onready var menu_button = $"menu_button"
+@onready var restart_button = $"restart_button"
+@onready var next_mission_button = $"next_mission_button"
 
-onready var mission_complete = $"background/mission_complete"
-onready var mission_failed = $"background/mission_failed"
+@onready var mission_complete = $"background/mission_complete"
+@onready var mission_failed = $"background/mission_failed"
 
-onready var blue_wins = $"background/blue_wins"
-onready var red_wins = $"background/red_wins"
-onready var green_wins = $"background/green_wins"
-onready var yellow_wins = $"background/yellow_wins"
-onready var black_wins = $"background/black_wins"
+@onready var blue_wins = $"background/blue_wins"
+@onready var red_wins = $"background/red_wins"
+@onready var green_wins = $"background/green_wins"
+@onready var yellow_wins = $"background/yellow_wins"
+@onready var black_wins = $"background/black_wins"
 
-onready var switcher = $"/root/SceneSwitcher"
-onready var gamepad_adapter = $"/root/GamepadAdapter"
-onready var audio = $"/root/SimpleAudioLibrary"
-onready var match_setup = $"/root/MatchSetup"
-onready var campaign = $"/root/Campaign"
+@onready var switcher = $"/root/SceneSwitcher"
+@onready var gamepad_adapter = $"/root/GamepadAdapter"
+@onready var audio = $"/root/SimpleAudioLibrary"
+@onready var match_setup = $"/root/MatchSetup"
+@onready var campaign = $"/root/Campaign"
 
 func configure_winner(winner):
     self.gamepad_adapter.enable()

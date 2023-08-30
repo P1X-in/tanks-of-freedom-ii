@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/map_editor/editor.gd" type="Script" id=2]
 [ext_resource path="res://scenes/map_editor/ui.tscn" type="PackedScene" id=3]
 
-[node name="editor" type="Spatial"]
+[node name="editor" type="Node3D"]
 script = ExtResource( 2 )
 
 [node name="map" parent="." instance=ExtResource( 1 )]

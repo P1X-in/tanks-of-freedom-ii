@@ -1,23 +1,23 @@
 extends Control
 
-onready var settings = $"/root/Settings"
+@onready var settings = $"/root/Settings"
 
-onready var radial = $"radial/radial"
-onready var picker = $"picker/picker"
-onready var controls = $"controls/editor"
-onready var minimap = $"minimap"
-onready var minimap_animations = $"minimap/animations"
+@onready var radial = $"radial/radial"
+@onready var picker = $"picker/picker"
+@onready var controls = $"controls/editor"
+@onready var minimap = $"minimap"
+@onready var minimap_animations = $"minimap/animations"
 
-onready var position_label = $"position/label"
-onready var map_name_wrapper = $"map_name"
-onready var map_name_label = $"map_name/inner/label"
+@onready var position_label = $"position/label"
+@onready var map_name_wrapper = $"map_name"
+@onready var map_name_label = $"map_name/inner/label"
 
-onready var tile_animations = $"tile/animations"
-onready var tile_prev = $"tile/wrapper/tile_view_prev"
-onready var tile_current = $"tile/wrapper/tile_view_current"
-onready var tile_next = $"tile/wrapper/tile_view_next"
-onready var type_prev = $"tile/wrapper/tile_type_prev"
-onready var type_next = $"tile/wrapper/tile_type_next"
+@onready var tile_animations = $"tile/animations"
+@onready var tile_prev = $"tile/wrapper/tile_view_prev"
+@onready var tile_current = $"tile/wrapper/tile_view_current"
+@onready var tile_next = $"tile/wrapper/tile_view_next"
+@onready var type_prev = $"tile/wrapper/tile_type_prev"
+@onready var type_next = $"tile/wrapper/tile_type_next"
 
 var icons = preload("res://scenes/ui/icons/icons.gd").new()
 

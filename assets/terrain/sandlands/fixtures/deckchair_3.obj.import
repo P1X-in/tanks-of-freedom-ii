@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/deckchair_3.obj-49161282e3a94949c9fd15a5d7b00321.mesh"
+uid="uid://7a3m8jbys1qr"
+path="res://.godot/imported/deckchair_3.obj-49161282e3a94949c9fd15a5d7b00321.mesh"
 
 [deps]
 
-files=[ "res://.import/deckchair_3.obj-49161282e3a94949c9fd15a5d7b00321.mesh" ]
+files=["res://.godot/imported/deckchair_3.obj-49161282e3a94949c9fd15a5d7b00321.mesh"]
 
 source_file="res://assets/terrain/sandlands/fixtures/deckchair_3.obj"
-dest_files=[ "res://.import/deckchair_3.obj-49161282e3a94949c9fd15a5d7b00321.mesh", "res://.import/deckchair_3.obj-49161282e3a94949c9fd15a5d7b00321.mesh" ]
+dest_files=["res://.godot/imported/deckchair_3.obj-49161282e3a94949c9fd15a5d7b00321.mesh", "res://.godot/imported/deckchair_3.obj-49161282e3a94949c9fd15a5d7b00321.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

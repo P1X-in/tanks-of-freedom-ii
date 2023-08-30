@@ -2,7 +2,7 @@ extends "res://scenes/abilities/unit/active.gd"
 
 const TWEEN_TIME = 0.1
 
-export var damage = 8
+@export var damage = 8
 
 func _execute(board, position):
     var tile = board.map.model.get_tile(position)
@@ -11,7 +11,7 @@ func _execute(board, position):
     self.source.sfx_effect("ab_attack")
 
     board.shoot_projectile(self.active_source_tile, tile, self.TWEEN_TIME)
-    yield(self.get_tree().create_timer(self.TWEEN_TIME), "timeout")
+    await self.get_tree().create_timer(self.TWEEN_TIME).timeout
     
     self.source.sfx_effect("ab_hit")
     if tile.unit.is_present():

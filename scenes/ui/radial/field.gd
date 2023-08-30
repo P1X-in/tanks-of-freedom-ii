@@ -1,9 +1,9 @@
 extends Node2D
 
-onready var background = $"background"
-onready var white_outline = $"white"
-onready var disabled = $"disabled"
-onready var cd_label = $"disabled/cd"
+@onready var background = $"background"
+@onready var white_outline = $"white"
+@onready var disabled = $"disabled"
+@onready var cd_label = $"disabled/cd"
 
 var default_background
 var full_background
