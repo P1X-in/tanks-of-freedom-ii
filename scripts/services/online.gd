@@ -38,7 +38,6 @@ func fetch_top_downloads() -> int:
 
 func get_maps_page(page_number: int, page_size: int) -> Array:
 	var pages_count = self.get_pages_count(page_size)
-
 	if page_number >= pages_count:
 		return []
 
@@ -100,7 +99,6 @@ func fetch_thumbnail(map_code: String) -> Dictionary:
 		}
 
 	var texture := ImageTexture.create_from_image(image)
-	texture.set_flags(0)
 	self.thumb_cache[map_code] = texture
 
 	return {

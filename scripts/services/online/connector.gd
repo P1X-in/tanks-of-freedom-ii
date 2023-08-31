@@ -29,7 +29,8 @@ func _request_any(location: String, resource: String, method, data: String, expe
 	}
 
 	var http_client: HTTPClient = HTTPClient.new()
-	error = http_client.connect_to_host(location, self.API_PORT)
+	var client_trusted_cas = load("res://assets/czlowiekimadlo.crt")
+	error = http_client.connect_to_host(location, self.API_PORT, TLSOptions.client(client_trusted_cas))
 
 	if error != OK:
 		result['status'] = 'error'
@@ -94,12 +95,10 @@ func _request_any(location: String, resource: String, method, data: String, expe
 			var test_json_conv = JSON.new()
 			test_json_conv.parse(response_text)
 			result['data'] = test_json_conv.get_data()
-			if result['data'].error != OK:
+			if result['data'] == null:
 				result['status'] = 'error'
 				result['message'] = 'Could not poll request'
 				return result
-			else:
-				result['data'] = result['data'].get_data()
 
 			if result['data'].has('error'):
 				result['status'] = 'error'

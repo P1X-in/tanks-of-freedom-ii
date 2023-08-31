@@ -219,14 +219,14 @@ func refresh_online_maps_page():
 	self.thumb.hide()
 
 	if self.list_mode == self.LIST_DOWNLOADED and not  self.online_service.maps.listing_end:
-		self.online_service.fetch_top_downloads()
+		await self.online_service.fetch_top_downloads()
 
 	if self.last_online_id == -1:
-		self._fetch_next_online_page()
+		await self._fetch_next_online_page()
 
 	var pages_count = self.online_service.get_pages_count(self.PAGE_SIZE)
 	if self.current_page >= pages_count - 2:
-		self._fetch_next_online_page()
+		await self._fetch_next_online_page()
 
 	self.manage_pagination_buttons(pages_count)
 	var maps_page = self.online_service.get_maps_page(self.current_page, self.PAGE_SIZE)
