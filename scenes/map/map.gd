@@ -53,38 +53,40 @@ func update_tile_box_position_from_camera():
 	if self.camera.snap_tile_box_to_camera:
 		self.tile_box_position = self.local_to_map(self.camera.get_position())
 
-func set_tile_box_position(position):
+func set_tile_box_position(box_position):
 	self.camera.snap_tile_box_to_camera = false
-	self.tile_box_position = position
+	self.tile_box_position = box_position
 
-func set_mouse_box_position(position):
+func set_mouse_box_position(box_position):
 	if self.tile_box_mouse:
-		self.set_tile_box_position(position)
+		self.set_tile_box_position(box_position)
 
 
 func snap_tile_box():
-	var position = self.tile_box.get_position()
+	var box_position = self.tile_box.get_position()
 	var placement = self.map_to_local(self.tile_box_position)
 
-	placement.y = position.y
+	placement.y = box_position.y
 
 	self.tile_box.set_position(placement)
 
-func map_to_local(position):
-	return Vector3(position.x * self.TILE_SIZE, 0, position.y * self.TILE_SIZE)
+func map_to_local(queried_position):
+	return Vector3(queried_position.x * self.TILE_SIZE, 0, queried_position.y * self.TILE_SIZE)
 
-func local_to_map(position):
+func local_to_map(queried_position):
 	var tile_position = Vector2(0, 0)
 
-	if position.x == self.camera.camera_space_size:
-		position.x = self.tile_box_space_size
-	if position.z == self.camera.camera_space_size:
-		position.z = self.tile_box_space_size
+	if queried_position.x == self.camera.camera_space_size:
+		queried_position.x = self.tile_box_space_size
+	if queried_position.z == self.camera.camera_space_size:
+		queried_position.z = self.tile_box_space_size
 
-	var camera_position_x = int(position.x)
-	var camera_position_z = int(position.z)
+	var camera_position_x = int(queried_position.x)
+	var camera_position_z = int(queried_position.z)
 
+	@warning_ignore("integer_division")
 	tile_position.x = (camera_position_x - (camera_position_x % self.TILE_SIZE)) / self.TILE_SIZE
+	@warning_ignore("integer_division")
 	tile_position.y = (camera_position_z - (camera_position_z % self.TILE_SIZE)) / self.TILE_SIZE
 
 	return tile_position
@@ -122,8 +124,8 @@ func move_camera_to_position_if_far_away(destination, tolerance=5, zoom=null):
 func snap_camera_to_position(destination):
 	self.camera.set_camera_position(destination * self.TILE_SIZE + Vector2(0.5, 0.5) * self.TILE_SIZE)
 
-func anchor_unit(unit, position):
-	var world_position = self.map_to_local(position)
+func anchor_unit(unit, unit_position):
+	var world_position = self.map_to_local(unit_position)
 	world_position.y = self.GROUND_HEIGHT
 	self.tiles_units_anchor.add_child(unit)
 	unit.set_position(world_position)

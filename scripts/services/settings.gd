@@ -97,9 +97,9 @@ func _apply_option(key):
 	elif key == "locale":
 		TranslationServer.set_locale(self.settings[key])
 
-func _set_bus_vol(name, key):
+func _set_bus_vol(bus_name, key):
 	var decibels = self._get_decibels(self.settings[key])
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(name), decibels)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(bus_name), decibels)
 
 func _get_decibels(value):
 	if value == 10:

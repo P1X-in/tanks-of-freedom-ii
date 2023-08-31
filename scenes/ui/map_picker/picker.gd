@@ -206,9 +206,9 @@ func hide_picker():
 	self.set_process_input(false)
 	self.gamepad_adapter.disable()
 
-func set_map_name(name):
-	self.map_name_field.set_text(name)
-	self._on_map_name_text_changed(name)
+func set_map_name(map_name):
+	self.map_name_field.set_text(map_name)
+	self._on_map_name_text_changed(map_name)
 
 func set_code(code):
 	self.code_field.set_text(code)
@@ -217,17 +217,16 @@ func refresh_online_maps_page():
 	for map_button in self.map_selection_buttons:
 		map_button.hide()
 	self.thumb.hide()
-	var result
 
 	if self.list_mode == self.LIST_DOWNLOADED and not  self.online_service.maps.listing_end:
-		result = await self.online_service.fetch_top_downloads()
+		self.online_service.fetch_top_downloads()
 
 	if self.last_online_id == -1:
-		result = await self._fetch_next_online_page()
+		self._fetch_next_online_page()
 
 	var pages_count = self.online_service.get_pages_count(self.PAGE_SIZE)
 	if self.current_page >= pages_count - 2:
-		result = await self._fetch_next_online_page()
+		self._fetch_next_online_page()
 
 	self.manage_pagination_buttons(pages_count)
 	var maps_page = self.online_service.get_maps_page(self.current_page, self.PAGE_SIZE)
@@ -301,29 +300,29 @@ func switch_to_next_page():
 			self.prev_button.grab_focus()
 
 
-func map_button_pressed(name):
+func map_button_pressed(map_name):
 	self.audio.play("menu_click")
 	if self.operation_mode == self.MODE_NAME:
-		self.set_map_name(name)
+		self.set_map_name(map_name)
 		self.load_button.grab_focus()
 	elif self.operation_mode == self.MODE_SELECT:
-		self.execute_success(name, "select")
+		self.execute_success(map_name, "select")
 	elif self.operation_mode == self.MODE_BROWSE:
-		self.set_code(name)
+		self.set_code(map_name)
 		self.download_button.grab_focus()
 
-func map_button_focused(name):
+func map_button_focused(map_name):
 	if self.operation_mode == self.MODE_BROWSE:
-		self.last_focused_code = name
+		self.last_focused_code = map_name
 		self.thumb.show()
 		self.thumb_label.show()
-		var image = await self.online_service.fetch_thumbnail(name)
+		var image = await self.online_service.fetch_thumbnail(map_name)
 		if self.last_focused_code == image["code"] and image["image"] != null:
 			self.thumb_label.hide()
 			self.thumb.texture = image["image"]
 	else:
 		self.thumb.hide()
-		self.minimap.fill_minimap(name)
+		self.minimap.fill_minimap(map_name)
 
 func connect_buttons():
 	self.cancel_button.connect("pressed", Callable(self, "execute_cancel"))

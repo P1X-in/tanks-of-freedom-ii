@@ -259,7 +259,7 @@ func set_cell_from_data(x, y, data):
 	self.set_cell(x, y, self.TILE_WATER)
 
 func set_cell(x, y, id):
-	self.minimap.set_cell(x, y, id)
+	self.minimap.set_cell(0, Vector2i(x, y), id, Vector2i(0, 0))
 
 func wipe():
 	for y in range(self.map_list_service.MAX_MAP_SIZE):

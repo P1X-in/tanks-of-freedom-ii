@@ -1,13 +1,12 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=2]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bwgevluvlcqfg"]
 
-[ext_resource path="res://assets/materials/arne32.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://b4uinqad3sgil" path="res://assets/materials/arne32.png" id="1"]
 
 [resource]
-flags_albedo_tex_force_srgb = true
-albedo_texture = ExtResource( 1 )
+albedo_texture = ExtResource("1")
 metallic = 0.5
-metallic_texture = ExtResource( 1 )
+metallic_texture = ExtResource("1")
 metallic_texture_channel = 2
 roughness = 0.1
-roughness_texture = ExtResource( 1 )
+roughness_texture = ExtResource("1")
 roughness_texture_channel = 2

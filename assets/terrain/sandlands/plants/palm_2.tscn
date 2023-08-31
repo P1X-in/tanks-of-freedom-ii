@@ -1,8 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://b36ewiq3q0f6k"]
 
-[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=1]
-[ext_resource path="res://assets/terrain/sandlands/plants/palm_2.obj" type="ArrayMesh" id=2]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://drh4v127tm31m" path="res://assets/terrain/sandlands/plants/palm_2.obj" id="2"]
 
 [node name="palm_2" type="MeshInstance3D"]
-mesh = ExtResource( 2 )
-material/0 = ExtResource( 1 )
+mesh = ExtResource("2")
+surface_material_override/0 = ExtResource("1")

@@ -82,6 +82,7 @@ func handle_direction(direction):
 
 	var step_delay = self.BUTTON_INTERVAL
 	if self.ticks > 1:
+		@warning_ignore("integer_division")
 		step_delay = step_delay / 2
 	if self.state[direction]["delay"] > step_delay:
 		self.state[direction]["pressed"] = true

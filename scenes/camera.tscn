@@ -1,69 +1,75 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://dfmdw1ysub4x1"]
 
-[ext_resource path="res://scenes/camera.gd" type="Script" id=2]
-[ext_resource path="res://assets/gui/markers/pointer.tscn" type="PackedScene" id=3]
+[ext_resource type="Script" path="res://scenes/camera.gd" id="2"]
+[ext_resource type="PackedScene" path="res://assets/gui/markers/pointer.tscn" id="3"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 length = 0.001
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("pivot/arm/lens:fov")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 50.0 ]
+"values": [50.0]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 resource_name = "fov"
 length = 5.0
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("pivot/arm/lens:fov")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ 90.0, 50.0 ]
+"values": [90.0, 50.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2gb6w"]
+_data = {
+"RESET": SubResource("1"),
+"fov": SubResource("2")
 }
 
 [node name="camera" type="Node3D"]
-script = ExtResource( 2 )
+script = ExtResource("2")
 camera_distance_min = 15
 tof_camera_distance_min = 15
 aw_camera_distance_min = 15
 
-[node name="pointer" parent="." instance=ExtResource( 3 )]
+[node name="pointer" parent="." instance=ExtResource("3")]
 visible = false
 
 [node name="pivot" type="Node3D" parent="."]
-transform = Transform3D( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0 )
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
 
 [node name="arm" type="Node3D" parent="pivot"]
-transform = Transform3D( 1, 0, 0, 0, 0.819152, 0.573577, 0, -0.573577, 0.819152, 0, 0, 0 )
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573577, 0, -0.573577, 0.819152, 0, 0, 0)
 
 [node name="lens" type="Camera3D" parent="pivot/arm"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
 current = true
 fov = 50.0
 size = 65.0
 far = 400.0
 
 [node name="tof_pivot" type="Node3D" parent="."]
-transform = Transform3D( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0 )
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
 
 [node name="tof_arm" type="Node3D" parent="tof_pivot"]
-transform = Transform3D( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0 )
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
 
 [node name="tof_style_camera" type="Camera3D" parent="tof_pivot/tof_arm"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 50 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 50)
 projection = 1
 current = true
 size = 40.0
@@ -72,14 +78,15 @@ far = 300.0
 [node name="aw_pivot" type="Node3D" parent="."]
 
 [node name="aw_arm" type="Node3D" parent="aw_pivot"]
-transform = Transform3D( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0 )
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
 
 [node name="aw_style_camera" type="Camera3D" parent="aw_pivot/aw_arm"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 50 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 50)
 projection = 1
 size = 40.0
 far = 300.0
 
 [node name="animations" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 1 )
-anims/fov = SubResource( 2 )
+libraries = {
+"": SubResource("AnimationLibrary_2gb6w")
+}

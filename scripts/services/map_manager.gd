@@ -135,7 +135,7 @@ func get_pages_count(list:String, page_size: int) -> int:
 		total_map_count = self.online.size()
 
 	var last_page_overflow := total_map_count % page_size
-	#warning-ignore:integer_division
+	@warning_ignore("integer_division")
 	var pages_count := (total_map_count - last_page_overflow) / page_size
 
 	if last_page_overflow > 0:
@@ -177,7 +177,7 @@ func _get_user_map_path(map_name: String) -> String:
 func _get_online_map_path(map_code: String) -> String:
 	return self.MAP_PATH + map_code + self.ONLINE_MAP_EXTENSION
 
-func get_map_details(map_key: String) -> String:
+func get_map_details(map_key: String) -> Dictionary:
 	if self._is_bundled(map_key):
 		return self.skirmish[map_key]
 	if self._is_special(map_key):

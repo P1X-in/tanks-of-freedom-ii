@@ -1,42 +1,40 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://ltnnrfgqasgi"]
 
-[ext_resource path="res://scenes/ui/map_picker/map_button.gd" type="Script" id=1]
-[ext_resource path="res://assets/fonts/courier.tres" type="FontFile" id=2]
-[ext_resource path="res://assets/gui/picker/picker_position_focused.png" type="Texture2D" id=3]
-[ext_resource path="res://assets/gui/picker/picker_position_pressed.png" type="Texture2D" id=4]
+[ext_resource type="Script" path="res://scenes/ui/map_picker/map_button.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bfuw0w5lh2kil" path="res://assets/gui/picker/picker_position_focused.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dij5afga02x3y" path="res://assets/gui/picker/picker_position_pressed.png" id="4"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="4_k8udo"]
 
 [node name="map0" type="TextureButton"]
 visible = false
 offset_right = 650.0
 offset_bottom = 50.0
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 3 )
-texture_focused = ExtResource( 3 )
-script = ExtResource( 1 )
+texture_pressed = ExtResource("4")
+texture_hover = ExtResource("3")
+texture_focused = ExtResource("3")
+script = ExtResource("1")
 
 [node name="label" type="Label" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme_override_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource("4_k8udo")
+theme_override_font_sizes/font_size = 18
 text = "some map name"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="downloads" type="Label" parent="."]
 visible = false
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 20.0
 offset_right = -5.0
-theme_override_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource("4_k8udo")
+theme_override_font_sizes/font_size = 18
 text = "0"
-align = 2
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+vertical_alignment = 1
 
 [connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

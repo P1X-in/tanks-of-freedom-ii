@@ -1,7 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=2]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cj2u6cis5y0wd"]
 
-[ext_resource path="res://assets/materials/arne32_green.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://bioxq31es01wy" path="res://assets/materials/arne32_green.png" id="1"]
 
 [resource]
-flags_albedo_tex_force_srgb = true
-albedo_texture = ExtResource( 1 )
+albedo_texture = ExtResource("1")

@@ -6,9 +6,9 @@ extends "res://scenes/tiles/tile.gd"
 @export var is_smoking = false
 
 func _ready():
-    if self.is_smoking:
-        self.smoke.set_emitting(true)
+	if self.is_smoking:
+		self.smoke.set_emitting(true)
 
 func show_explosion():
-    self.explosion.explode_a_bit()
-    
+	self.explosion.explode_a_bit()
+	

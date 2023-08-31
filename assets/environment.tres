@@ -1,23 +1,10 @@
-[gd_resource type="Environment" load_steps=3 format=2]
+[gd_resource type="Environment" load_steps=2 format=3 uid="uid://bbywoeh37cf3a"]
 
-[ext_resource path="res://assets/kloppenheim_03_4k.hdr" type="Texture2D" id=1]
-
-[sub_resource type="Sky" id=1]
-panorama = ExtResource( 1 )
+[sub_resource type="Sky" id="1"]
 
 [resource]
 background_mode = 2
-background_sky = SubResource( 1 )
+sky = SubResource("1")
 ambient_light_energy = 2.0
 tonemap_mode = 3
-ss_reflections_enabled = true
 ssao_enabled = true
-ssao_quality = 2
-dof_blur_far_enabled = true
-dof_blur_far_distance = 75.0
-dof_blur_far_transition = 25.0
-dof_blur_far_quality = 2
-dof_blur_near_distance = 10.0
-dof_blur_near_transition = 5.0
-dof_blur_near_quality = 2
-adjustment_enabled = true

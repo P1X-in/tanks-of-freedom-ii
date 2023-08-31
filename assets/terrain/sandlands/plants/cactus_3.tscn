@@ -1,8 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://cximluyjyfgpr"]
 
-[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=1]
-[ext_resource path="res://assets/terrain/sandlands/plants/cactus_3.obj" type="ArrayMesh" id=2]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://cepk63qg3hbu3" path="res://assets/terrain/sandlands/plants/cactus_3.obj" id="2"]
 
 [node name="cactus_3" type="MeshInstance3D"]
-mesh = ExtResource( 2 )
-material/0 = ExtResource( 1 )
+mesh = ExtResource("2")
+surface_material_override/0 = ExtResource("1")

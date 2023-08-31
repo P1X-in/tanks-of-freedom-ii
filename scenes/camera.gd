@@ -93,25 +93,25 @@ func _ready():
 	self.camera_tof = $"tof_pivot/tof_arm/tof_style_camera"
 	self.camera_aw = $"aw_pivot/aw_arm/aw_style_camera"
 
-	var rotation = self.camera_pivot.get_rotation_degrees()
-	camera_angle_y = rotation.y
-	_camera_angle_y = rotation.y
+	var pivot_rotation = self.camera_pivot.get_rotation_degrees()
+	camera_angle_y = pivot_rotation.y
+	_camera_angle_y = pivot_rotation.y
 
-	rotation = self.camera_arm.get_rotation_degrees()
-	camera_angle_x = rotation.x
-	_camera_angle_x = rotation.x
+	pivot_rotation = self.camera_arm.get_rotation_degrees()
+	camera_angle_x = pivot_rotation.x
+	_camera_angle_x = pivot_rotation.x
 
-	rotation = self.camera_lens.get_position()
-	camera_distance = rotation.z
-	_camera_distance = rotation.z
+	pivot_rotation = self.camera_lens.get_position()
+	camera_distance = pivot_rotation.z
+	_camera_distance = pivot_rotation.z
 
-	rotation = self.camera_tof.get_position()
-	tof_camera_distance = rotation.z
-	_tof_camera_distance = rotation.z
+	pivot_rotation = self.camera_tof.get_position()
+	tof_camera_distance = pivot_rotation.z
+	_tof_camera_distance = pivot_rotation.z
 
-	rotation = self.camera_aw.get_position()
-	aw_camera_distance = rotation.z
-	_aw_camera_distance = rotation.z
+	pivot_rotation = self.camera_aw.get_position()
+	aw_camera_distance = pivot_rotation.z
+	_aw_camera_distance = pivot_rotation.z
 
 	self.switch_to_camera_style(self.settings.get_option("def_cam_st"))
 
@@ -279,14 +279,14 @@ func process_movement_input(delta):
 		axis_value = axis_value.rotated(deg_to_rad(0))
 
 	if axis_value.length() > self.DEADZONE && not self.reset_stick:
-		var position = self.get_position()
-		position.x -= axis_value.x * self.move_speed * delta
-		position.z -= axis_value.y * self.move_speed * delta
+		var cam_position = self.get_position()
+		cam_position.x -= axis_value.x * self.move_speed * delta
+		cam_position.z -= axis_value.y * self.move_speed * delta
 
-		position.x = clamp(position.x, 0, self.camera_space_size)
-		position.z = clamp(position.z, 0, self.camera_space_size)
+		cam_position.x = clamp(cam_position.x, 0, self.camera_space_size)
+		cam_position.z = clamp(cam_position.z, 0, self.camera_space_size)
 
-		self.set_position(position)
+		self.set_position(cam_position)
 		self.snap_tile_box_to_camera = true
 	elif axis_value.length() < self.DEADZONE && self.reset_stick:
 		self.reset_stick = false
@@ -328,10 +328,10 @@ func move_camera_to_position(destination):
 	self.camera_transit_time = 0.0
 	self.camera_in_transit = true
 
-func set_camera_position(position):
+func set_camera_position(cam_position):
 	var current_position = self.get_position()
-	current_position.x = position.x
-	current_position.z = position.y
+	current_position.x = cam_position.x
+	current_position.z = cam_position.y
 
 	self.set_position(current_position)
 
@@ -397,10 +397,10 @@ func _perform_shake(delta):
 
 
 func _set_camera_translation(camera, offset):
-	var position = camera.get_position()
-	position.x = offset.x
-	position.y = offset.y
-	camera.set_position(position)
+	var camera_position = camera.get_position()
+	camera_position.x = offset.x
+	camera_position.y = offset.y
+	camera.set_position(camera_position)
 
 func _shift_camera_translation(offset):
 	var current_position = self.get_position()
@@ -453,9 +453,9 @@ func get_zoom_fraction():
 	return (self.camera_distance - self.camera_distance_min) / (self.camera_distance_max - self.camera_distance_min)
 
 func get_position_state():
-	var position = self.get_position()
+	var camera_position = self.get_position()
 
-	return [position.x, position.y, position.z]
+	return [camera_position.x, camera_position.y, camera_position.z]
 
 func restore_from_state(state):
 	self.set_position(Vector3(state[0], state[1], state[2]))

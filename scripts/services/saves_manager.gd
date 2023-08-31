@@ -79,9 +79,9 @@ func get_entries_page(page_number: int, page_size: int) -> Array:
 		entries_list.append(self.autosave)
 
 	if self.saves.size() > 0:
-		var duplicate := self.saves.duplicate()
-		duplicate.reverse()
-		entries_list += duplicate
+		var saves_copy := self.saves.duplicate()
+		saves_copy.reverse()
+		entries_list += saves_copy
 
 	var entries_count: int = entries_list.size()
 	if index_end > entries_count:
@@ -102,7 +102,7 @@ func get_pages_count(page_size: int) -> int:
 		total_saves_count += 1
 
 	var last_page_overflow := total_saves_count % page_size
-	#warning-ignore:integer_division
+	@warning_ignore("integer_division")
 	var pages_count := (total_saves_count - last_page_overflow) / page_size
 
 	if last_page_overflow > 0:

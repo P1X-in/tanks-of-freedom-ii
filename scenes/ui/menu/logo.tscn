@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://dgbijxxe8g7qv"]
 
-[ext_resource path="res://assets/gui/menu/logo.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=2]
-[ext_resource path="res://assets/gui/menu/logo2.obj" type="ArrayMesh" id=3]
+[ext_resource type="ArrayMesh" uid="uid://cliejenmqtm6e" path="res://assets/gui/menu/logo.obj" id="1"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="2"]
+[ext_resource type="ArrayMesh" uid="uid://21mp0m0njjj5" path="res://assets/gui/menu/logo2.obj" id="3"]
 
 [node name="logo" type="Node3D"]
 
 [node name="mesh" type="MeshInstance3D" parent="."]
 visible = false
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2")
 
 [node name="mesh2" type="MeshInstance3D" parent="."]
-transform = Transform3D( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0 )
-mesh = ExtResource( 3 )
-material/0 = ExtResource( 2 )
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("3")
+surface_material_override/0 = ExtResource("2")

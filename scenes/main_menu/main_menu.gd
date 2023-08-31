@@ -27,7 +27,7 @@ func _ready():
 	if not self.switcher.intro_played and self.settings.get_option("show_intro"):
 		self.call_deferred("_start_intro")
 	else:
-		self._intro_finished()
+		self.call_deferred("_intro_finished")
 
 	if self.match_setup.campaign_win:
 		self.reopen_campaign_mission_selection_after_win()
@@ -52,6 +52,7 @@ func _start_intro():
 		self.map.remove_child(self.map.camera)
 		self.cart.add_child(self.map.camera)
 		self.map.camera.set_position(Vector3(0, 0, 0))
+		self.map.camera.camera_pivot.set_rotation_degrees(Vector3(0, 180, 0))
 		self.map.camera.camera_lens.set_fov(90)
 	if self.settings.get_option("is_steamdeck"):
 		await self.get_tree().create_timer(1).timeout

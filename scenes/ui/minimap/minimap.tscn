@@ -1,30 +1,27 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://b68vtard4p6s3"]
 
-[ext_resource path="res://assets/gui/picker/minimap.tres" type="TileSet" id=1]
-[ext_resource path="res://scenes/ui/minimap/minimap.gd" type="Script" id=2]
+[ext_resource type="TileSet" uid="uid://1miyvu0etwgl" path="res://assets/gui/picker/minimap.tres" id="1"]
+[ext_resource type="Script" path="res://scenes/ui/minimap/minimap.gd" id="2"]
 
 [node name="minimap" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("2")
 
 [node name="map_list_background2" type="ColorRect" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -250.0
 offset_top = -250.0
 offset_right = 210.0
 offset_bottom = 210.0
-color = Color( 0.196078, 0.196078, 0.196078, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.196078, 0.196078, 0.196078, 1)
 
 [node name="minimap" type="TileMap" parent="."]
-position = Vector2( -240, -240 )
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 12, 12 )
-format = 1
+position = Vector2(-240, -240)
+tile_set = ExtResource("1")
+format = 2
+layer_0/name = "base"

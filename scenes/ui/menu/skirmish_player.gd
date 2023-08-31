@@ -129,7 +129,7 @@ func _on_swap_pressed():
 	self.swap_target_node.fill_panel(own_side)
 	self.swap_target_node.ap = own_ap
 	self.swap_target_node.type = own_type
-	self.swap_tarswap_target_nodeget._update_type_label()
+	self.swap_target_node._update_type_label()
 	self.swap_target_node._update_ap_label()
 
 func _on_team_pressed():

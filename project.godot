@@ -43,6 +43,7 @@ settings/fps/force_fps=144
 
 window/size/viewport_width=1280
 window/size/viewport_height=800
+window/size/transparent=true
 window/vsync/vsync_mode=false
 
 [input]
@@ -182,6 +183,10 @@ cheat_kill={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/translations/common.en.en.translation", "res://assets/translations/common.pl.pl.translation", "res://assets/translations/core.en.en.translation", "res://assets/translations/core.pl.pl.translation")
+
 [locale]
 
 translations=PackedStringArray("res://assets/translations/core.en.en.translation", "res://assets/translations/core.pl.pl.translation", "res://assets/translations/common.en.en.translation", "res://assets/translations/common.pl.pl.translation")
@@ -197,5 +202,10 @@ common/physics_fps=144
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
+textures/decals/filter=0
+textures/light_projectors/filter=0
+environment/volumetric_fog/use_filter=0
+environment/defaults/default_environment="res://default_env.tres"
 threads/thread_model=2
 gles3/shaders/shader_compilation_mode=2

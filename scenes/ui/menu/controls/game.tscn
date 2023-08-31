@@ -1,106 +1,97 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://crv1ageml0d4g"]
 
-[ext_resource path="res://assets/fonts/courier.tres" type="FontFile" id=1]
-[ext_resource path="res://assets/gui/icons/controls/tilemap_packed.png" type="Texture2D" id=2]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="1_ubwp4"]
+[ext_resource type="Texture2D" uid="uid://bpunwi45xf0cx" path="res://assets/gui/icons/controls/tilemap_packed.png" id="2"]
 
 [node name="game" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 offset_top = 7.0
 offset_right = 400.0
 offset_bottom = 557.0
 mouse_filter = 2
 
 [node name="label" type="Label" parent="."]
+layout_mode = 0
 offset_right = 400.0
 offset_bottom = 33.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1_ubwp4")
 text = "TR_GAME"
-align = 1
-valign = 1
-__meta__ = {
-"_editor_description_": ""
-}
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="binds" type="Control" parent="."]
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
 
 [node name="camera" type="Label" parent="binds"]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 47.0
 offset_right = 200.0
 offset_bottom = 78.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1_ubwp4")
 text = "TR_CAMERA"
-valign = 2
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="line" type="Line2D" parent="binds/camera"]
-points = PackedVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
-default_color = Color( 1, 1, 1, 1 )
 
 [node name="key" type="Sprite2D" parent="binds/camera"]
-position = Vector2( 180, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 253
 
 [node name="key2" type="Sprite2D" parent="binds/camera"]
-position = Vector2( 230, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 321
 
 [node name="key3" type="Sprite2D" parent="binds/camera"]
-position = Vector2( 280, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(280, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 77
 
 [node name="switch_cam" type="Label" parent="binds"]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 87.0
 offset_right = 200.0
 offset_bottom = 118.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1_ubwp4")
 text = "TR_CAM_SW"
-valign = 2
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="line" type="Line2D" parent="binds/switch_cam"]
-points = PackedVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
-default_color = Color( 1, 1, 1, 1 )
 
 [node name="key" type="Sprite2D" parent="binds/switch_cam"]
-position = Vector2( 180, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 650
 
 [node name="key2" type="Sprite2D" parent="binds/switch_cam"]
-position = Vector2( 230, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
@@ -108,144 +99,129 @@ frame = 123
 
 [node name="key3" type="Sprite2D" parent="binds/switch_cam"]
 visible = false
-position = Vector2( 280, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(280, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 77
 
 [node name="zoom" type="Label" parent="binds"]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 127.0
 offset_right = 200.0
 offset_bottom = 158.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1_ubwp4")
 text = "TR_ZOOM"
-valign = 2
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="line" type="Line2D" parent="binds/zoom"]
-points = PackedVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
-default_color = Color( 1, 1, 1, 1 )
 
 [node name="key" type="Sprite2D" parent="binds/zoom"]
-position = Vector2( 180, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 585
 
 [node name="key2" type="Sprite2D" parent="binds/zoom"]
-position = Vector2( 230, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 586
 
 [node name="key3" type="Sprite2D" parent="binds/zoom"]
-position = Vector2( 280, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(280, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 82
 
 [node name="select" type="Label" parent="binds"]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 167.0
 offset_right = 200.0
 offset_bottom = 198.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1_ubwp4")
 text = "TR_SELECT"
-valign = 2
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="line" type="Line2D" parent="binds/select"]
-points = PackedVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
-default_color = Color( 1, 1, 1, 1 )
 
 [node name="key" type="Sprite2D" parent="binds/select"]
-position = Vector2( 180, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 47
 
 [node name="key2" type="Sprite2D" parent="binds/select"]
-position = Vector2( 230, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 77
 
 [node name="key3" type="Sprite2D" parent="binds/select"]
-position = Vector2( 280, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(280, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 235
 
 [node name="key4" type="Sprite2D" parent="binds/select"]
-position = Vector2( 312, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(312, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 67
 
 [node name="back" type="Label" parent="binds"]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 207.0
 offset_right = 200.0
 offset_bottom = 238.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1_ubwp4")
 text = "TR_BACK"
-valign = 2
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="line" type="Line2D" parent="binds/back"]
-points = PackedVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
-default_color = Color( 1, 1, 1, 1 )
 
 [node name="key" type="Sprite2D" parent="binds/back"]
-position = Vector2( 180, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 48
 
 [node name="key2" type="Sprite2D" parent="binds/back"]
-position = Vector2( 230, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
@@ -253,207 +229,187 @@ frame = 78
 
 [node name="key3" type="Sprite2D" parent="binds/back"]
 visible = false
-position = Vector2( 280, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(280, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 77
 
 [node name="nav" type="Label" parent="binds"]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 247.0
 offset_right = 200.0
 offset_bottom = 278.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1_ubwp4")
 text = "TR_NAV"
-valign = 2
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="line" type="Line2D" parent="binds/nav"]
-points = PackedVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
-default_color = Color( 1, 1, 1, 1 )
 
 [node name="key" type="Sprite2D" parent="binds/nav"]
-position = Vector2( 130, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(130, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 253
 
 [node name="key2" type="Sprite2D" parent="binds/nav"]
-position = Vector2( 180, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 68
 
 [node name="key3" type="Sprite2D" parent="binds/nav"]
-position = Vector2( 230, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 166
 
 [node name="key4" type="Sprite2D" parent="binds/nav"]
-position = Vector2( 265, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(265, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 167
 
 [node name="key5" type="Sprite2D" parent="binds/nav"]
-position = Vector2( 300, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(300, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 168
 
 [node name="key6" type="Sprite2D" parent="binds/nav"]
-position = Vector2( 335, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(335, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 169
 
 [node name="menu" type="Label" parent="binds"]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 287.0
 offset_right = 200.0
 offset_bottom = 318.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1_ubwp4")
 text = "TR_MENU"
-valign = 2
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="line" type="Line2D" parent="binds/menu"]
-points = PackedVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
-default_color = Color( 1, 1, 1, 1 )
 
 [node name="key" type="Sprite2D" parent="binds/menu"]
-position = Vector2( 180, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 651
 
 [node name="key2" type="Sprite2D" parent="binds/menu"]
-position = Vector2( 230, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 155
 
 [node name="key3" type="Sprite2D" parent="binds/menu"]
-position = Vector2( 280, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(280, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 17
 
 [node name="end_turn" type="Label" parent="binds"]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 327.0
 offset_right = 200.0
 offset_bottom = 358.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1_ubwp4")
 text = "TR_END_TURN"
-valign = 2
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="line" type="Line2D" parent="binds/end_turn"]
-points = PackedVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
-default_color = Color( 1, 1, 1, 1 )
 
 [node name="key" type="Sprite2D" parent="binds/end_turn"]
-position = Vector2( 180, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 50
 
 [node name="key2" type="Sprite2D" parent="binds/end_turn"]
-position = Vector2( 230, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 157
 
 [node name="key3" type="Sprite2D" parent="binds/end_turn"]
-position = Vector2( 280, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(280, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 79
 
 [node name="unit_stats" type="Label" parent="binds"]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 367.0
 offset_right = 200.0
 offset_bottom = 398.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1_ubwp4")
 text = "TR_UNIT_STATS"
-valign = 2
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="line" type="Line2D" parent="binds/unit_stats"]
-points = PackedVector2Array( 0, 27, 360, 27 )
+points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
-default_color = Color( 1, 1, 1, 1 )
 
 [node name="key" type="Sprite2D" parent="binds/unit_stats"]
-position = Vector2( 180, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 49
 
 [node name="key2" type="Sprite2D" parent="binds/unit_stats"]
-position = Vector2( 230, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
@@ -461,9 +417,9 @@ frame = 156
 
 [node name="key3" type="Sprite2D" parent="binds/unit_stats"]
 visible = false
-position = Vector2( 280, -7 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+position = Vector2(280, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24

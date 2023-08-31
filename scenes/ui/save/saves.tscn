@@ -1,216 +1,238 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://4fm2h6kocq46"]
 
-[ext_resource path="res://assets/fonts/courier.tres" type="FontFile" id=1]
-[ext_resource path="res://scenes/ui/save/saves.gd" type="Script" id=2]
-[ext_resource path="res://scenes/ui/save/entry_button.tscn" type="PackedScene" id=3]
+[ext_resource type="Script" path="res://scenes/ui/save/saves.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_y0c3v"]
+[ext_resource type="PackedScene" uid="uid://c25khmnk6x2xp" path="res://scenes/ui/save/entry_button.tscn" id="3"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 length = 0.001
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ false ]
+"values": [false]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 resource_name = "hide"
 length = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ true, false ]
+"values": [true, false]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
 tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = false
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath(".:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id="3"]
 resource_name = "show"
 length = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ true, true ]
+"values": [true, true]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
 tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = false
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath(".:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ylvri"]
+_data = {
+"RESET": SubResource("1"),
+"hide": SubResource("2"),
+"show": SubResource("3")
 }
 
 [node name="saves" type="Node2D"]
 visible = false
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="background" type="ColorRect" parent="."]
 offset_left = -600.0
 offset_top = -350.0
 offset_right = 600.0
 offset_bottom = 350.0
-color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+color = Color(0.196078, 0.196078, 0.196078, 0.823529)
 
 [node name="widgets" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 offset_left = -600.0
 offset_top = -350.0
 offset_right = 600.0
 offset_bottom = 350.0
 
 [node name="cancel_button" type="Button" parent="widgets"]
+layout_mode = 0
 offset_left = 1070.0
 offset_top = 640.0
 offset_right = 1170.0
 offset_bottom = 670.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("2_y0c3v")
 text = "TR_CANCEL"
 
 [node name="map_list_background" type="ColorRect" parent="widgets"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 30.0
 offset_top = 30.0
 offset_right = -30.0
 offset_bottom = -170.0
-color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+color = Color(0.196078, 0.196078, 0.196078, 0.823529)
 
 [node name="save_list" type="Control" parent="widgets"]
+anchors_preset = 0
 offset_left = 30.0
 offset_top = 30.0
 offset_right = 1170.0
 offset_bottom = 530.0
 
-[node name="entry0" parent="widgets/save_list" instance=ExtResource( 3 )]
+[node name="entry0" parent="widgets/save_list" instance=ExtResource("3")]
+layout_mode = 0
 
-[node name="entry1" parent="widgets/save_list" instance=ExtResource( 3 )]
+[node name="entry1" parent="widgets/save_list" instance=ExtResource("3")]
+layout_mode = 0
 offset_top = 50.0
 offset_bottom = 100.0
 
-[node name="entry2" parent="widgets/save_list" instance=ExtResource( 3 )]
+[node name="entry2" parent="widgets/save_list" instance=ExtResource("3")]
+layout_mode = 0
 offset_top = 100.0
 offset_bottom = 150.0
 
-[node name="entry3" parent="widgets/save_list" instance=ExtResource( 3 )]
+[node name="entry3" parent="widgets/save_list" instance=ExtResource("3")]
+layout_mode = 0
 offset_top = 150.0
 offset_bottom = 200.0
 
-[node name="entry4" parent="widgets/save_list" instance=ExtResource( 3 )]
+[node name="entry4" parent="widgets/save_list" instance=ExtResource("3")]
+layout_mode = 0
 offset_top = 200.0
 offset_bottom = 250.0
 
-[node name="entry5" parent="widgets/save_list" instance=ExtResource( 3 )]
+[node name="entry5" parent="widgets/save_list" instance=ExtResource("3")]
+layout_mode = 0
 offset_top = 250.0
 offset_bottom = 300.0
 
-[node name="entry6" parent="widgets/save_list" instance=ExtResource( 3 )]
+[node name="entry6" parent="widgets/save_list" instance=ExtResource("3")]
+layout_mode = 0
 offset_top = 300.0
 offset_bottom = 350.0
 
-[node name="entry7" parent="widgets/save_list" instance=ExtResource( 3 )]
+[node name="entry7" parent="widgets/save_list" instance=ExtResource("3")]
+layout_mode = 0
 offset_top = 350.0
 offset_bottom = 400.0
 
-[node name="entry8" parent="widgets/save_list" instance=ExtResource( 3 )]
+[node name="entry8" parent="widgets/save_list" instance=ExtResource("3")]
+layout_mode = 0
 offset_top = 400.0
 offset_bottom = 450.0
 
-[node name="entry9" parent="widgets/save_list" instance=ExtResource( 3 )]
+[node name="entry9" parent="widgets/save_list" instance=ExtResource("3")]
+layout_mode = 0
 offset_top = 450.0
 offset_bottom = 500.0
 
 [node name="list_prev" type="Button" parent="widgets"]
+layout_mode = 0
 offset_left = 30.0
 offset_top = 540.0
 offset_right = 130.0
 offset_bottom = 570.0
 focus_neighbor_right = NodePath("../list_next")
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("2_y0c3v")
 text = "TR_PREV"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="list_next" type="Button" parent="widgets"]
+layout_mode = 0
 offset_left = 1070.0
 offset_top = 540.0
 offset_right = 1170.0
 offset_bottom = 570.0
 focus_neighbor_left = NodePath("../list_prev")
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("2_y0c3v")
 text = "TR_NEXT"
 
 [node name="new_save_button" type="Button" parent="widgets"]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -219,33 +241,32 @@ offset_left = -100.0
 offset_top = -60.0
 offset_right = 100.0
 offset_bottom = -30.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("2_y0c3v")
 text = "TR_NEW_SAVE"
 
 [node name="load_button" type="Button" parent="widgets"]
+layout_mode = 0
 offset_left = 150.0
 offset_top = 640.0
 offset_right = 250.0
 offset_bottom = 670.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("2_y0c3v")
 text = "TR_LOAD"
 
 [node name="save_button" type="Button" parent="widgets"]
+layout_mode = 0
 offset_left = 30.0
 offset_top = 640.0
 offset_right = 130.0
 offset_bottom = 670.0
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("2_y0c3v")
 text = "TR_SAVE"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="animations" type="AnimationPlayer" parent="."]
-playback_speed = 4.0
-anims/RESET = SubResource( 1 )
-anims/hide = SubResource( 2 )
-anims/show = SubResource( 3 )
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_ylvri")
+}
 
 [connection signal="pressed" from="widgets/cancel_button" to="." method="execute_cancel"]
 [connection signal="pressed" from="widgets/list_prev" to="." method="switch_to_prev_page"]
