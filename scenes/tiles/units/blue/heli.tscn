@@ -1,15 +1,84 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://cwqvkkak44hnt"]
 
-[ext_resource path="res://assets/units/blue/heli_modern.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32_metallic_blue.tres" type="Material" id=2]
-[ext_resource path="res://scenes/tiles/units/templates/heli.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/tiles/units/blue/heli_rotor.tscn" type="PackedScene" id=4]
+[ext_resource type="ArrayMesh" uid="uid://ojyaj0eq0e4r" path="res://assets/units/blue/heli_modern.obj" id="1"]
+[ext_resource type="PackedScene" uid="uid://s6g08w5ljxvm" path="res://scenes/tiles/units/templates/heli.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://c0l38miqu1l5t" path="res://scenes/tiles/units/blue/heli_rotor.tscn" id="4"]
 
-[node name="heli" instance=ExtResource( 3 )]
+[sub_resource type="Animation" id="1"]
+resource_name = "level_up"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("voxel_star:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("voxel_star:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 8, 0)]
+}
+
+[sub_resource type="Animation" id="2"]
+length = 0.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_animate_next_path_segment"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mesh_anchor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cm6lf"]
+_data = {
+"level_up": SubResource("1"),
+"move": SubResource("2")
+}
+
+[node name="heli" instance=ExtResource("3")]
 side = "blue"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+mesh = ExtResource("1")
 
-[node name="rotor" parent="mesh_anchor/mesh" index="0" instance=ExtResource( 4 )]
+[node name="rotor" parent="mesh_anchor/mesh" index="0" instance=ExtResource("4")]
+
+[node name="animations" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_cm6lf")
+}
+
+[node name="voxel_star" parent="." index="6"]
+visible = false

@@ -1,32 +1,39 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://cx4np0wc87mdy"]
 
-[ext_resource path="res://assets/gui/board/coin.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32_metallic.tres" type="Material" id=2]
+[ext_resource type="ArrayMesh" uid="uid://3k7hmvg102xa" path="res://assets/gui/board/coin.obj" id="1"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="2_q4wl7"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "rotate"
 length = 4.0
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("coin:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 4 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 360, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hhiam"]
+_data = {
+"rotate": SubResource("1")
 }
 
 [node name="voxel_coin" type="Node3D"]
 
 [node name="coin" type="MeshInstance3D" parent="."]
 cast_shadow = 0
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2_q4wl7")
 
 [node name="animations" type="AnimationPlayer" parent="."]
 autoplay = "rotate"
-anims/rotate = SubResource( 1 )
+libraries = {
+"": SubResource("AnimationLibrary_hhiam")
+}

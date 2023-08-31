@@ -1,121 +1,149 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=3 uid="uid://0a4hh4x6jhns"]
 
-[ext_resource path="res://assets/units/yellow/heli_rotor_vertical.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/units/yellow/heli_rotor_horizontal.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://assets/materials/arne32_metallic.tres" type="Material" id=3]
+[ext_resource type="ArrayMesh" uid="uid://u7otmfpwu452" path="res://assets/units/yellow/heli_rotor_vertical.obj" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://ckoqkbqpp7xrj" path="res://assets/units/yellow/heli_rotor_horizontal.obj" id="2"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="2_53vh3"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "rotate"
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 90, 0)]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "rotate"
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ) ]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a0yuq"]
+_data = {
+"rotate": SubResource("1")
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id="2"]
 resource_name = "rotate"
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 90 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 90, 0)]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mtae5"]
+_data = {
+"rotate": SubResource("2")
+}
+
+[sub_resource type="Animation" id="3"]
 resource_name = "rotate"
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 90)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wwj5f"]
+_data = {
+"rotate": SubResource("3")
+}
+
+[sub_resource type="Animation" id="4"]
+resource_name = "rotate"
+loop_mode = 1
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 90 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 90)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ypjx"]
+_data = {
+"rotate": SubResource("4")
 }
 
 [node name="rotor" type="Node3D"]
 
 [node name="rotor_pivot" type="Node3D" parent="."]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.25, 1.3, -0.25 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 1.3, -0.25)
 
 [node name="rotor" type="MeshInstance3D" parent="rotor_pivot"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0, -0.05 )
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 3 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0, -0.05)
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="rotor_pivot"]
 autoplay = "rotate"
-playback_speed = 8.0
-anims/rotate = SubResource( 1 )
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_a0yuq")
+}
 
 [node name="rotor_pivot2" type="Node3D" parent="."]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.25, 1.3, -0.25 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 1.3, -0.25)
 
 [node name="rotor" type="MeshInstance3D" parent="rotor_pivot2"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0, -0.05 )
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 3 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0, -0.05)
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="rotor_pivot2"]
 autoplay = "rotate"
-playback_speed = 8.0
-anims/rotate = SubResource( 2 )
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_mtae5")
+}
 
 [node name="h_rotor_pivot" type="Node3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 1.1, -0.6 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 1.1, -0.6)
 
 [node name="rotor" type="MeshInstance3D" parent="h_rotor_pivot"]
-mesh = ExtResource( 2 )
-material/0 = ExtResource( 3 )
+mesh = ExtResource("2")
+surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="h_rotor_pivot"]
 autoplay = "rotate"
-playback_speed = 8.0
-anims/rotate = SubResource( 3 )
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_wwj5f")
+}
 
 [node name="h_rotor_pivot2" type="Node3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 1.1, -0.6 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 1.1, -0.6)
 
 [node name="rotor" type="MeshInstance3D" parent="h_rotor_pivot2"]
-mesh = ExtResource( 2 )
-material/0 = ExtResource( 3 )
+mesh = ExtResource("2")
+surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="h_rotor_pivot2"]
 autoplay = "rotate"
-playback_speed = 8.0
-anims/rotate = SubResource( 4 )
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_6ypjx")
+}

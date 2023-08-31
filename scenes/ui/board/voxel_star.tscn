@@ -1,36 +1,42 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://birqw0e7qiovc"]
 
-[ext_resource path="res://assets/gui/board/star.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32_metallic.tres" type="Material" id=2]
+[ext_resource type="ArrayMesh" uid="uid://c7wea0ufci7d3" path="res://assets/gui/board/star.obj" id="1"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="2_0cqdi"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "rotate"
 length = 4.0
-loop = true
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("pivot:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 4 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 360, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kp3bv"]
+_data = {
+"rotate": SubResource("1")
 }
 
 [node name="voxel_star" type="Node3D"]
 
 [node name="pivot" type="Node3D" parent="."]
-transform = Transform3D( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0 )
 
 [node name="star" type="MeshInstance3D" parent="pivot"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0, -0.05 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0, -0.05)
 cast_shadow = 0
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2_0cqdi")
 
 [node name="animations" type="AnimationPlayer" parent="."]
 autoplay = "rotate"
-anims/rotate = SubResource( 1 )
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_kp3bv")
+}
