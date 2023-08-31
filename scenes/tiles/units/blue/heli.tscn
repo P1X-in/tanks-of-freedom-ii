@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwqvkkak44hnt"]
+[gd_scene load_steps=8 format=3 uid="uid://cwqvkkak44hnt"]
 
 [ext_resource type="ArrayMesh" uid="uid://ojyaj0eq0e4r" path="res://assets/units/blue/heli_modern.obj" id="1"]
 [ext_resource type="PackedScene" uid="uid://s6g08w5ljxvm" path="res://scenes/tiles/units/templates/heli.tscn" id="3"]
+[ext_resource type="Material" uid="uid://t3u388ysrjdr" path="res://assets/materials/arne32_metallic_blue.tres" id="3_ghnqs"]
 [ext_resource type="PackedScene" uid="uid://c0l38miqu1l5t" path="res://scenes/tiles/units/blue/heli_rotor.tscn" id="4"]
 
 [sub_resource type="Animation" id="1"]
@@ -72,6 +73,7 @@ side = "blue"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("3_ghnqs")
 
 [node name="rotor" parent="mesh_anchor/mesh" index="0" instance=ExtResource("4")]
 
@@ -79,6 +81,3 @@ mesh = ExtResource("1")
 libraries = {
 "": SubResource("AnimationLibrary_cm6lf")
 }
-
-[node name="voxel_star" parent="." index="6"]
-visible = false

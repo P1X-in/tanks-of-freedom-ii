@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/ui/map_picker/picker.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_sca5i"]
 [ext_resource type="PackedScene" uid="uid://ltnnrfgqasgi" path="res://scenes/ui/map_picker/map_button.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/ui/minimap/minimap.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b68vtard4p6s3" path="res://scenes/ui/minimap/minimap.tscn" id="4"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -150,6 +150,7 @@ layout_mode = 0
 offset_right = 300.0
 offset_bottom = 30.0
 theme_override_fonts/font = ExtResource("2_sca5i")
+alignment = 1
 max_length = 30
 
 [node name="save_button" type="Button" parent="widgets/name"]
@@ -183,6 +184,7 @@ layout_mode = 0
 offset_right = 300.0
 offset_bottom = 30.0
 theme_override_fonts/font = ExtResource("2_sca5i")
+alignment = 1
 max_length = 24
 
 [node name="download_button" type="Button" parent="widgets/code"]
@@ -339,7 +341,6 @@ theme_override_fonts/font = ExtResource("2_sca5i")
 text = "TR_NEXT"
 
 [node name="minimap" parent="widgets" instance=ExtResource("4")]
-anchors_preset = 0
 offset_left = 925.0
 offset_top = 300.0
 offset_right = 965.0

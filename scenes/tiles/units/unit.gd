@@ -1,4 +1,5 @@
 extends "res://scenes/tiles/tile.gd"
+class_name BaseUnit
 
 const MAX_LEVEL = 3
 const EXP_PER_LEVEL = 2

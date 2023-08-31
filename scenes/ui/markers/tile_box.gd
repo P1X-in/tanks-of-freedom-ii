@@ -4,4 +4,4 @@ extends Node3D
 
 
 func set_mesh_material(material):
-    self.mesh.set_surface_override_material(0, material)
+	self.mesh.set_surface_override_material(0, material)

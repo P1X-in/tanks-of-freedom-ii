@@ -1,103 +1,109 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://5bep6mdci41m"]
 
-[ext_resource path="res://scenes/ui/radial/field.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/ui/radial/radial.gd" type="Script" id=2]
-[ext_resource path="res://assets/fonts/courier.tres" type="FontFile" id=3]
+[ext_resource type="PackedScene" uid="uid://cxd28ehaboqeq" path="res://scenes/ui/radial/field.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/ui/radial/radial.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_1jwgk"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "hide"
 length = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ true, false ]
+"values": [true, false]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 resource_name = "show"
 length = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ true ]
+"values": [true]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_blujx"]
+_data = {
+"hide": SubResource("1"),
+"show": SubResource("2")
 }
 
 [node name="radial" type="Node2D"]
 visible = false
-scale = Vector2( 1e-05, 1e-05 )
-script = ExtResource( 2 )
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("2")
 
 [node name="fields" type="Node2D" parent="."]
 
-[node name="field1" parent="fields" instance=ExtResource( 1 )]
+[node name="field1" parent="fields" instance=ExtResource("1")]
 visible = false
-position = Vector2( 0, -200 )
+position = Vector2(0, -200)
 
-[node name="field2" parent="fields" instance=ExtResource( 1 )]
+[node name="field2" parent="fields" instance=ExtResource("1")]
 visible = false
-position = Vector2( 140, -140 )
+position = Vector2(140, -140)
 
-[node name="field3" parent="fields" instance=ExtResource( 1 )]
+[node name="field3" parent="fields" instance=ExtResource("1")]
 visible = false
-position = Vector2( 200, 0 )
+position = Vector2(200, 0)
 
-[node name="field4" parent="fields" instance=ExtResource( 1 )]
+[node name="field4" parent="fields" instance=ExtResource("1")]
 visible = false
-position = Vector2( 140, 140 )
+position = Vector2(140, 140)
 
-[node name="field5" parent="fields" instance=ExtResource( 1 )]
+[node name="field5" parent="fields" instance=ExtResource("1")]
 visible = false
-position = Vector2( 0, 200 )
+position = Vector2(0, 200)
 
-[node name="field6" parent="fields" instance=ExtResource( 1 )]
+[node name="field6" parent="fields" instance=ExtResource("1")]
 visible = false
-position = Vector2( -140, 140 )
+position = Vector2(-140, 140)
 
-[node name="field7" parent="fields" instance=ExtResource( 1 )]
+[node name="field7" parent="fields" instance=ExtResource("1")]
 visible = false
-position = Vector2( -200, 0 )
+position = Vector2(-200, 0)
 
-[node name="field8" parent="fields" instance=ExtResource( 1 )]
+[node name="field8" parent="fields" instance=ExtResource("1")]
 visible = false
-position = Vector2( -140, -140 )
+position = Vector2(-140, -140)
 
 [node name="label" type="Node2D" parent="."]
 visible = false
@@ -107,24 +113,23 @@ offset_left = -130.0
 offset_top = -50.0
 offset_right = 130.0
 offset_bottom = 50.0
-color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.196078, 0.196078, 0.196078, 0.823529)
 
 [node name="label" type="Label" parent="label"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -150.0
 offset_top = -50.0
 offset_right = 150.0
 offset_bottom = 50.0
-theme_override_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource("3_1jwgk")
 text = "Lorem Ipsum"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
-playback_speed = 4.0
-anims/hide = SubResource( 1 )
-anims/show = SubResource( 2 )
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_blujx")
+}

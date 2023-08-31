@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://vnv8ncxk4u62"]
+[gd_scene load_steps=7 format=3 uid="uid://f02wy3v3ku6b"]
 
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/tiles/tile.tscn" id="2"]
@@ -22,6 +22,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="2"]
 resource_name = "rotate"
 length = 2.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

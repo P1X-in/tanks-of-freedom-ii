@@ -1,28 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://k2hh8e6861ja"]
 
-[ext_resource path="res://scenes/map_editor/tile_cam.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/map_editor/tile_view.gd" type="Script" id=3]
+[ext_resource type="PackedScene" uid="uid://cry3kqpb8cvim" path="res://scenes/map_editor/tile_cam.tscn" id="2"]
+[ext_resource type="Script" path="res://scenes/map_editor/tile_view.gd" id="3"]
 
 [node name="tile_view" type="Node2D"]
-script = ExtResource( 3 )
+script = ExtResource("3")
 
 [node name="background" type="ColorRect" parent="."]
 offset_left = -50.0
 offset_top = -50.0
 offset_right = 50.0
 offset_bottom = 50.0
-color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.196078, 0.196078, 0.196078, 0.823529)
 
 [node name="screen" type="Sprite2D" parent="."]
-position = Vector2( 0, 10 )
-flip_v = true
+position = Vector2(0, 10)
 
 [node name="SubViewport" type="SubViewport" parent="."]
-size = Vector2( 200, 200 )
-own_world = true
+own_world_3d = true
 transparent_bg = true
+size = Vector2i(200, 200)
 
-[node name="tile_cam" parent="SubViewport" instance=ExtResource( 2 )]
+[node name="tile_cam" parent="SubViewport" instance=ExtResource("2")]

@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://dwcvbyjsjbx6f"]
 
-[ext_resource path="res://assets/units/npcs/chancellor.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://scenes/tiles/units/npc/npc.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/materials/arne32_green.tres" type="Material" id=3]
+[ext_resource type="ArrayMesh" uid="uid://qk3wcsuf25w0" path="res://assets/units/npcs/chancellor.obj" id="1"]
+[ext_resource type="PackedScene" uid="uid://dhp2upbfyqtoq" path="res://scenes/tiles/units/npc/npc.tscn" id="2"]
+[ext_resource type="Material" uid="uid://cj2u6cis5y0wd" path="res://assets/materials/arne32_green.tres" id="3"]
 
-[node name="chancellor" instance=ExtResource( 2 )]
+[node name="chancellor" instance=ExtResource("2")]
 unit_name = "TR_CHANCELLOR"
 side = "green"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 3 )
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("3")
+
+[node name="standard" parent="mesh_anchor" index="1"]
+surface_material_override/0 = ExtResource("3")

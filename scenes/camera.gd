@@ -82,6 +82,7 @@ var snap_tile_box_to_camera = true
 var mouse_drag = false
 var mouse_click_position = null
 
+var just_started_hack = true
 
 @onready var settings = $"/root/Settings"
 
@@ -116,8 +117,10 @@ func _ready():
 	self.switch_to_camera_style(self.settings.get_option("def_cam_st"))
 
 func _input(event):
-	if not get_window().has_focus():
+	if not get_window().has_focus() and not self.just_started_hack:
 		return
+	if get_window().has_focus():
+		self.just_started_hack = false
 
 	if self.paused:
 		return

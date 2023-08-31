@@ -1,103 +1,136 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://caaq4jkqycc72"]
 
-[ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/terrain/variety/elements/sandbag.tscn" type="PackedScene" id=3]
+[ext_resource type="PackedScene" path="res://scenes/tiles/tile.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://assets/terrain/variety/elements/sandbag.tscn" id="3"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_1ylln"]
 
-[node name="sandbags" instance=ExtResource( 2 )]
+[node name="sandbags" instance=ExtResource("2")]
 unit_vertical_offset = 1
 
-[node name="sandbag1" parent="mesh" index="0" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0, -2.6 )
+[node name="sandbag1" parent="mesh" index="0" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0, -2.6)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag2" parent="mesh" index="1" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -2.6 )
+[node name="sandbag2" parent="mesh" index="1" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -2.6)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag3" parent="mesh" index="2" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, -2.6 )
+[node name="sandbag3" parent="mesh" index="2" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, -2.6)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag4" parent="mesh" index="3" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, 2.4 )
+[node name="sandbag4" parent="mesh" index="3" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, 2.4)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag5" parent="mesh" index="4" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 2.4 )
+[node name="sandbag5" parent="mesh" index="4" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 2.4)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag6" parent="mesh" index="5" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, 2.2 )
+[node name="sandbag6" parent="mesh" index="5" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, 2.2)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag7" parent="mesh" index="6" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 0, 1 )
+[node name="sandbag7" parent="mesh" index="6" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 0, 1)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag8" parent="mesh" index="7" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.2, 0, -0.5 )
+[node name="sandbag8" parent="mesh" index="7" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.2, 0, -0.5)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag9" parent="mesh" index="8" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 0, -1.8 )
+[node name="sandbag9" parent="mesh" index="8" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 0, -1.8)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag10" parent="mesh" index="9" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.5, 0, -1.4 )
+[node name="sandbag10" parent="mesh" index="9" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.5, 0, -1.4)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag11" parent="mesh" index="10" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.6, 0, 0.2 )
+[node name="sandbag11" parent="mesh" index="10" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.6, 0, 0.2)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag12" parent="mesh" index="11" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.7, 0, 1.9 )
+[node name="sandbag12" parent="mesh" index="11" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.7, 0, 1.9)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag13" parent="mesh" index="12" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.4, 0.3, 1.5 )
+[node name="sandbag13" parent="mesh" index="12" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.4, 0.3, 1.5)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag14" parent="mesh" index="13" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.5, 0.3, -0.3 )
+[node name="sandbag14" parent="mesh" index="13" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.5, 0.3, -0.3)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag15" parent="mesh" index="14" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.3, 0.3, -2 )
+[node name="sandbag15" parent="mesh" index="14" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.3, 0.3, -2)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag16" parent="mesh" index="15" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.9, 0.3, -2 )
+[node name="sandbag16" parent="mesh" index="15" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.9, 0.3, -2)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag17" parent="mesh" index="16" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.4, 0.3, -0.1 )
+[node name="sandbag17" parent="mesh" index="16" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.4, 0.3, -0.1)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag18" parent="mesh" index="17" instance=ExtResource( 3 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.1, 0.3, 1.5 )
+[node name="sandbag18" parent="mesh" index="17" instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.1, 0.3, 1.5)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag19" parent="mesh" index="18" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.3, 2.2 )
+[node name="sandbag19" parent="mesh" index="18" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.3, 2.2)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag20" parent="mesh" index="19" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.3, 2.3 )
+[node name="sandbag20" parent="mesh" index="19" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.3, 2.3)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag21" parent="mesh" index="20" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.3, -2.5 )
+[node name="sandbag21" parent="mesh" index="20" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.3, -2.5)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag22" parent="mesh" index="21" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.3, -2.4 )
+[node name="sandbag22" parent="mesh" index="21" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.3, -2.4)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag23" parent="mesh" index="22" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.6, -2.4 )
+[node name="sandbag23" parent="mesh" index="22" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.6, -2.4)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag24" parent="mesh" index="23" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.6, -2.3 )
+[node name="sandbag24" parent="mesh" index="23" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.6, -2.3)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag25" parent="mesh" index="24" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0.6, -2.1 )
+[node name="sandbag25" parent="mesh" index="24" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0.6, -2.1)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag26" parent="mesh" index="25" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0.6, 2.1 )
+[node name="sandbag26" parent="mesh" index="25" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0.6, 2.1)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag27" parent="mesh" index="26" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.6, 2.3 )
+[node name="sandbag27" parent="mesh" index="26" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.6, 2.3)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag28" parent="mesh" index="27" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.6, 1.9 )
+[node name="sandbag28" parent="mesh" index="27" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.6, 1.9)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag29" parent="mesh" index="28" instance=ExtResource( 3 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.2, 0.6, 0.7 )
+[node name="sandbag29" parent="mesh" index="28" instance=ExtResource("3")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.2, 0.6, 0.7)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag30" parent="mesh" index="29" instance=ExtResource( 3 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.1, 0.6, -1 )
+[node name="sandbag30" parent="mesh" index="29" instance=ExtResource("3")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.1, 0.6, -1)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag31" parent="mesh" index="30" instance=ExtResource( 3 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 2.3, 0.6, -0.9 )
+[node name="sandbag31" parent="mesh" index="30" instance=ExtResource("3")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 2.3, 0.6, -0.9)
+surface_material_override/0 = ExtResource("3_1ylln")
 
-[node name="sandbag32" parent="mesh" index="31" instance=ExtResource( 3 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 2.2, 0.6, 0.8 )
+[node name="sandbag32" parent="mesh" index="31" instance=ExtResource("3")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 2.2, 0.6, 0.8)
+surface_material_override/0 = ExtResource("3_1ylln")

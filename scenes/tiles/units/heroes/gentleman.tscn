@@ -1,21 +1,23 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://dn787ycw0teg6"]
 
-[ext_resource path="res://assets/materials/arne32_red.tres" type="Material" id=1]
-[ext_resource path="res://assets/units/heroes/gentleman.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://scenes/tiles/units/heroes/hero.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/abilities/hero/passive/optimise.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/abilities/hero/active/targeting_automaton.tscn" type="PackedScene" id=5]
+[ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://d1opkmg1aacbg" path="res://assets/units/heroes/gentleman.obj" id="2"]
+[ext_resource type="PackedScene" uid="uid://pbf2ydgtfdt4" path="res://scenes/tiles/units/heroes/hero.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/optimise.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/hero/active/targeting_automaton.tscn" id="5"]
 
-[node name="gentleman" instance=ExtResource( 3 )]
+[node name="gentleman" instance=ExtResource("3")]
 unit_name = "TR_GENTLEMAN"
 side = "red"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-mesh = ExtResource( 2 )
-material/0 = ExtResource( 1 )
+mesh = ExtResource("2")
+surface_material_override/0 = ExtResource("1")
 
-[node name="optimise" parent="." index="3" instance=ExtResource( 4 )]
+[node name="standard" parent="mesh_anchor" index="1"]
+surface_material_override/0 = ExtResource("1")
 
-[node name="targeting_automaton" parent="." index="4" instance=ExtResource( 5 )]
+[node name="optimise" parent="." index="3" instance=ExtResource("4")]
+
+[node name="targeting_automaton" parent="." index="4" instance=ExtResource("5")]
 index = 2
-ability_range = 0

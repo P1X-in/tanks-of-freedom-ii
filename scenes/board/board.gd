@@ -40,6 +40,8 @@ var ending_turn_in_progress = false
 var initial_hq_cam_skipped = false
 var mouse_click_position = null
 
+var just_started_hack = true
+
 func _ready():
 	self.set_up_map()
 	self.set_up_board()
@@ -51,8 +53,10 @@ func _ready():
 		self.restore_saved_state()
 
 func _input(event):
-	if not get_window().has_focus():
-		return
+	if not get_window().has_focus() and not self.just_started_hack:
+        return
+    if get_window().has_focus():
+        self.just_started_hack = false
 
 	if not self.ui.is_panel_open():
 		if not self.state.is_current_player_ai():

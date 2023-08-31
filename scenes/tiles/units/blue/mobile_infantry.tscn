@@ -1,16 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://bh2w6nolbs8bq"]
 
-[ext_resource path="res://assets/units/blue/mobile_infantry.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32_blue.tres" type="Material" id=2]
-[ext_resource path="res://scenes/tiles/units/templates/mobile_infantry.tscn" type="PackedScene" id=3]
+[ext_resource type="ArrayMesh" uid="uid://dn6ck3fuoa3an" path="res://assets/units/blue/mobile_infantry.obj" id="1"]
+[ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/mobile_infantry.tscn" id="3"]
 
-[node name="mobile_infantry" instance=ExtResource( 3 )]
+[node name="mobile_infantry" instance=ExtResource("3")]
 side = "blue"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2")
 
 [node name="mesh2" parent="mesh_anchor" index="1"]
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2")

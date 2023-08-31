@@ -197,8 +197,7 @@ script = ExtResource("2")
 curve = SubResource("1")
 
 [node name="cart" type="PathFollow3D" parent="map/path"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 220, 4.05, 196)
-progress = 104.0
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 220, 4.05, 300)
 
 [node name="ui" parent="." instance=ExtResource("3")]
 

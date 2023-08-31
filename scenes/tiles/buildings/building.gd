@@ -1,4 +1,5 @@
 extends "res://scenes/tiles/tile.gd"
+class_name BaseBuilding
 
 @onready var audio = $"/root/SimpleAudioLibrary"
 

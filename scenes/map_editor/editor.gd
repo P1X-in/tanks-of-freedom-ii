@@ -23,6 +23,8 @@ var current_map_name = ""
 const HISTORY_MAX_SIZE = 50
 var actions_history = []
 
+var just_started_hack = true
+
 func _ready():
 	self.rotations.build_rotations(self.map.templates, self.map.builder)
 	self.select_tile(self.map.templates.GROUND_GRASS, self.map.builder.CLASS_GROUND)
@@ -42,8 +44,10 @@ func update_ui_position():
 
 
 func _input(event):
-	if not get_window().has_focus():
+	if not get_window().has_focus() and not self.just_started_hack:
 		return
+	if get_window().has_focus():
+		self.just_started_hack = false
 
 	if not self.ui.is_panel_open():
 		if event.is_action_pressed("ui_accept"):
@@ -138,23 +142,23 @@ func place_tile():
 	self._place_tile(self.selected_class, self.map.tile_box_position, self.selected_tile, self.tile_rotation)
 	self.autosave()
 
-func _place_tile(tile_class, position, tile_type, _tile_rotation):
+func _place_tile(tile_class, tile_position, tile_type, _tile_rotation):
 	if tile_class == self.map.builder.CLASS_GROUND:
-		self.map.builder.place_ground(position, tile_type, _tile_rotation)
+		self.map.builder.place_ground(tile_position, tile_type, _tile_rotation)
 	if tile_class == self.map.builder.CLASS_FRAME:
-		self.map.builder.place_frame(position, tile_type, _tile_rotation)
+		self.map.builder.place_frame(tile_position, tile_type, _tile_rotation)
 	if tile_class == self.map.builder.CLASS_DECORATION:
-		self.map.builder.place_decoration(position, tile_type, _tile_rotation)
+		self.map.builder.place_decoration(tile_position, tile_type, _tile_rotation)
 	if tile_class == self.map.builder.CLASS_DAMAGE:
-		self.map.builder.place_damage(position, tile_type, _tile_rotation)
+		self.map.builder.place_damage(tile_position, tile_type, _tile_rotation)
 	if tile_class == self.map.builder.CLASS_TERRAIN:
-		self.map.builder.place_terrain(position, tile_type, _tile_rotation)
+		self.map.builder.place_terrain(tile_position, tile_type, _tile_rotation)
 	if tile_class == self.map.builder.SUB_CLASS_CONSTRUCTION:
-		self.map.builder.place_terrain(position, tile_type, _tile_rotation)
+		self.map.builder.place_terrain(tile_position, tile_type, _tile_rotation)
 	if tile_class == self.map.builder.CLASS_BUILDING:
-		self.map.builder.place_building(position, tile_type, _tile_rotation)
+		self.map.builder.place_building(tile_position, tile_type, _tile_rotation)
 	if tile_class == self.map.builder.CLASS_UNIT or tile_class == self.map.builder.CLASS_HERO:
-		self.map.builder.place_unit(position, tile_type, _tile_rotation)
+		self.map.builder.place_unit(tile_position, tile_type, _tile_rotation)
 
 
 func clear_tile():
@@ -207,18 +211,18 @@ func undo_action():
 func refresh_tile():
 	self.select_tile(self.selected_tile, self.selected_class)
 
-func select_tile(name, type):
-	self.selected_tile = name
+func select_tile(tile_name, type):
+	self.selected_tile = tile_name
 	self.selected_class = type
 
-	var rotation_map = self.rotations.get_map(name, type)
+	var rotation_map = self.rotations.get_map(tile_name, type)
 	var type_map = self.rotations.get_type_map(self.selected_class)
 	var first_tile
 
-	self.rotations.store_state(type, name)
+	self.rotations.store_state(type, tile_name)
 
 	self.ui.set_tile_prev(self.map.templates.get_template(rotation_map["prev"]), self.tile_rotation)
-	self.ui.set_tile_current(self.map.templates.get_template(name), self.tile_rotation)
+	self.ui.set_tile_current(self.map.templates.get_template(tile_name), self.tile_rotation)
 	self.ui.set_tile_next(self.map.templates.get_template(rotation_map["next"]), self.tile_rotation)
 
 	first_tile = self.rotations.get_first_tile(type_map["prev"])
@@ -351,7 +355,7 @@ func close_tof_import():
 func handle_tof_import(args):
 	var code = args[0]
 	self.close_tof_import()
-	var result = self.online_service.maps.download_map(code, 1)
+	var result = await self.online_service.maps.download_map(code, 1)
 	if result['status'] == 'ok':
 		self.ui.set_map_name(result["data"]["data"]["name"])
 		self.map.loader.load_from_v1_data(result["data"])
@@ -418,10 +422,10 @@ func restore_damage_stage(tile):
 	self.replace_terrain(tile, tile.terrain.tile.base_stage_template)
 
 func replace_terrain(tile, template_name):
-	var rotation = tile.terrain.tile.get_rotation_degrees()
+	var t_rotation = tile.terrain.tile.get_rotation_degrees()
 
 	tile.terrain.clear()
-	self.map.builder.place_terrain(tile.position, template_name, rotation.y)
+	self.map.builder.place_terrain(tile.position, template_name, t_rotation.y)
 
 func notify_about_removal(action_details):
 	self.write_action_history(action_details)

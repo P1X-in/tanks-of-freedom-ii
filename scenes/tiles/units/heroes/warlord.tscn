@@ -1,20 +1,23 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://dgwc85c35p68i"]
 
-[ext_resource path="res://assets/materials/arne32_yellow.tres" type="Material" id=1]
-[ext_resource path="res://scenes/tiles/units/heroes/hero.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/units/heroes/warlord.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://scenes/abilities/hero/passive/intimidate.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/abilities/hero/active/promote.tscn" type="PackedScene" id=5]
+[ext_resource type="Material" uid="uid://cmuoryv8gy5rs" path="res://assets/materials/arne32_yellow.tres" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/tiles/units/heroes/hero.tscn" id="2"]
+[ext_resource type="ArrayMesh" uid="uid://d0qn6xvmqn3s2" path="res://assets/units/heroes/warlord.obj" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/intimidate.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/hero/active/promote.tscn" id="5"]
 
-[node name="warlord" instance=ExtResource( 2 )]
+[node name="warlord" instance=ExtResource("2")]
 unit_name = "TR_WARLORD"
 side = "yellow"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-mesh = ExtResource( 3 )
-material/0 = ExtResource( 1 )
+mesh = ExtResource("3")
+surface_material_override/0 = ExtResource("1")
 
-[node name="intimidate" parent="." index="3" instance=ExtResource( 4 )]
+[node name="standard" parent="mesh_anchor" index="1"]
+surface_material_override/0 = ExtResource("1")
 
-[node name="promote" parent="." index="4" instance=ExtResource( 5 )]
+[node name="intimidate" parent="." index="3" instance=ExtResource("4")]
+
+[node name="promote" parent="." index="4" instance=ExtResource("5")]
 index = 2
