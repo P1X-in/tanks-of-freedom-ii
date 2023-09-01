@@ -100,7 +100,7 @@ surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="rotor_pivot"]
 autoplay = "rotate"
-speed_scale = 4.0
+speed_scale = 8.0
 libraries = {
 "": SubResource("AnimationLibrary_a0yuq")
 }
@@ -115,7 +115,7 @@ surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="rotor_pivot2"]
 autoplay = "rotate"
-speed_scale = 4.0
+speed_scale = 8.0
 libraries = {
 "": SubResource("AnimationLibrary_mtae5")
 }
@@ -129,7 +129,7 @@ surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="h_rotor_pivot"]
 autoplay = "rotate"
-speed_scale = 4.0
+speed_scale = 8.0
 libraries = {
 "": SubResource("AnimationLibrary_wwj5f")
 }
@@ -143,7 +143,7 @@ surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="h_rotor_pivot2"]
 autoplay = "rotate"
-speed_scale = 4.0
+speed_scale = 8.0
 libraries = {
 "": SubResource("AnimationLibrary_6ypjx")
 }

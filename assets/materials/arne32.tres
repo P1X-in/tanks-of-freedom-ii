@@ -4,4 +4,3 @@
 
 [resource]
 albedo_texture = ExtResource("1")
-albedo_texture_force_srgb = true

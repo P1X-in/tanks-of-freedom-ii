@@ -6,6 +6,7 @@
 [sub_resource type="Animation" id="1"]
 resource_name = "rotate"
 length = 4.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -36,7 +37,6 @@ surface_material_override/0 = ExtResource("2_0cqdi")
 
 [node name="animations" type="AnimationPlayer" parent="."]
 autoplay = "rotate"
-speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_kp3bv")
 }

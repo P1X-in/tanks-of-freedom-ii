@@ -33,7 +33,7 @@ surface_material_override/0 = ExtResource("2_k24p7")
 
 [node name="animations" type="AnimationPlayer" parent="rotor"]
 autoplay = "rotation"
-speed_scale = 8.0
+speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_sp3n0")
 }
