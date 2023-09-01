@@ -14,30 +14,30 @@ extends Node2D
 @onready var right_actor_name = $"background/actor_right/name"
 
 func show_panel():
-    self.show()
-    self.call_deferred("_continue_grab_focus")
+	self.show()
+	self.call_deferred("_continue_grab_focus")
 
 func set_actor(actor_details):
-    self.left_actor.hide()
-    self.left_actor_portrait.clear()
-    self.right_actor.hide()
-    self.right_actor_portrait.clear()
-    
-    if actor_details['side'] == 'left':
-        self.left_actor.show()
-        self.left_actor_name.set_text(actor_details['name'])
-        self.left_actor_portrait.set_tile(actor_details['portrait_tile'], 90)
-    elif actor_details['side'] == 'right':
-        self.right_actor.show()
-        self.right_actor_name.set_text(actor_details['name'])
-        self.right_actor_portrait.set_tile(actor_details['portrait_tile'], 0)
+	self.left_actor.hide()
+	self.left_actor_portrait.clear()
+	self.right_actor.hide()
+	self.right_actor_portrait.clear()
+	
+	if actor_details['side'] == 'left':
+		self.left_actor.show()
+		self.left_actor_name.set_text(actor_details['name'])
+		self.left_actor_portrait.set_tile(actor_details['portrait_tile'], 90)
+	elif actor_details['side'] == 'right':
+		self.right_actor.show()
+		self.right_actor_name.set_text(actor_details['name'])
+		self.right_actor_portrait.set_tile(actor_details['portrait_tile'], 0)
 
 func set_text(dialog_text):
-    self.text.set_text(dialog_text)
+	self.text.set_text(dialog_text)
 
 func _continue_grab_focus():
-    self.continue_button.grab_focus()
+	self.continue_button.grab_focus()
 
 func _on_continue_pressed():
-    self.audio.play("menu_click")
-    self.hide()
+	self.audio.play("menu_click")
+	self.hide()

@@ -52,7 +52,7 @@ func get_player_id_by_side(side):
             return index
         index += 1
 
-    return null
+    return -1
 
 func get_player_side_by_id(id):
     return self.players[id]['side']

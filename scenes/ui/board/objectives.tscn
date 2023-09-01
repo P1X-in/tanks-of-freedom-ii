@@ -1,15 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://cxyvigb7jv67r"]
 
-[ext_resource path="res://scenes/ui/board/objectives.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://scenes/ui/board/objectives.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_ad6gj"]
 
 [node name="objectives" type="Control"]
+layout_mode = 3
+anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -1280.0
 offset_bottom = 800.0
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="objective_wrapper" type="Control" parent="."]
+anchors_preset = 0
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -60.0
@@ -19,40 +23,48 @@ offset_bottom = 50.0
 mouse_filter = 1
 
 [node name="obj1" type="Label" parent="objective_wrapper"]
+layout_mode = 0
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -1000.0
 offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("2_ad6gj")
 text = "Lorem Ipsum"
-align = 2
-valign = 1
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="obj2" type="Label" parent="objective_wrapper"]
+layout_mode = 0
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -1000.0
 offset_top = 30.0
 offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("2_ad6gj")
 text = "Lorem Ipsum"
-align = 2
-valign = 1
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="obj3" type="Label" parent="objective_wrapper"]
+layout_mode = 0
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -1000.0
 offset_top = 60.0
 offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("2_ad6gj")
 text = "Lorem Ipsum"
-align = 2
-valign = 1
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="obj4" type="Label" parent="objective_wrapper"]
+layout_mode = 0
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -1000.0
 offset_top = 90.0
 offset_bottom = 120.0
+theme_override_fonts/font = ExtResource("2_ad6gj")
 text = "Lorem Ipsum"
-align = 2
-valign = 1
+horizontal_alignment = 2
+vertical_alignment = 1

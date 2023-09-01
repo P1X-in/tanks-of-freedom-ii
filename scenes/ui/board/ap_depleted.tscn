@@ -1,92 +1,93 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://0bbskwqb2iu4"]
 
-[ext_resource path="res://assets/fonts/courier_big.tres" type="FontFile" id=1]
-[ext_resource path="res://scenes/ui/board/ap_depleted.gd" type="Script" id=2]
+[ext_resource type="Script" path="res://scenes/ui/board/ap_depleted.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_d3jya"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 length = 0.001
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ false ]
+"values": [false]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
+"values": [Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 resource_name = "flash"
 length = 1.3
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 1.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 1.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ true, false ]
+"values": [true, false]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3, 1, 1.3 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.3, 1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q6820"]
+_data = {
+"RESET": SubResource("1"),
+"flash": SubResource("2")
 }
 
 [node name="ap_depleted" type="Node2D"]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="background" type="ColorRect" parent="."]
 offset_left = -250.0
 offset_top = -50.0
 offset_right = 250.0
 offset_bottom = 50.0
-color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+color = Color(0.196078, 0.196078, 0.196078, 0.823529)
 
 [node name="label" type="Label" parent="background"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 7.0
 mouse_filter = 1
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("2_d3jya")
+theme_override_font_sizes/font_size = 42
 text = "TR_AP_SPENT"
-align = 1
-valign = 1
-__meta__ = {
-"_editor_description_": ""
-}
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 1 )
-anims/flash = SubResource( 2 )
+libraries = {
+"": SubResource("AnimationLibrary_q6820")
+}

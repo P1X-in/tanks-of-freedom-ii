@@ -54,9 +54,9 @@ func _ready():
 
 func _input(event):
 	if not get_window().has_focus() and not self.just_started_hack:
-        return
-    if get_window().has_focus():
-        self.just_started_hack = false
+		return
+	if get_window().has_focus():
+		self.just_started_hack = false
 
 	if not self.ui.is_panel_open():
 		if not self.state.is_current_player_ai():
@@ -214,11 +214,11 @@ func start_turn():
 	self.events.emit_turn_started(self.state.turn, self.state.current_player)
 
 
-func select_tile(position):
+func select_tile(tile_position):
 	if self.map.camera.camera_in_transit or self.map.camera.script_operated:
 		return
 
-	var tile = self.map.model.get_tile(position)
+	var tile = self.map.model.get_tile(tile_position)
 	if tile == null:
 		return
 
@@ -226,7 +226,7 @@ func select_tile(position):
 	var open_unit_abilities = false
 
 	if self.active_ability != null:
-		if self.ability_markers.marker_exists(position):
+		if self.ability_markers.marker_exists(tile_position):
 			self.execute_active_ability(tile)
 		else:
 			self.unselect_tile()
@@ -507,10 +507,10 @@ func heal_a_tile(tile):
 	new_explosion.rain_heal()
 
 func _spawn_temporary_explosion_instance_on_tile(tile, free_delay=1.5):
-	var position = self.map.map_to_local(tile.position)
+	var explosion_position = self.map.map_to_local(tile.position)
 	var new_explosion = self.explosion_template.instantiate()
 	self.explosion_anchor.add_child(new_explosion)
-	new_explosion.set_position(Vector3(position.x, 0, position.z))
+	new_explosion.set_position(Vector3(explosion_position.x, 0, explosion_position.z))
 	self.destroy_explosion_with_delay(new_explosion, free_delay)
 
 	return new_explosion
@@ -740,19 +740,19 @@ func _signal_winner(winning_side):
 
 func shoot_projectile(source_tile, destination_tile, tween_time=0.5):
 	var new_projectile = self._spawn_temporary_projectile_instance_on_tile(source_tile)
-	var position = self.map.map_to_local(destination_tile.position)
-	new_projectile.shoot_at_position(Vector3(position.x, 0, position.z), tween_time)
+	var tile_position = self.map.map_to_local(destination_tile.position)
+	new_projectile.shoot_at_position(Vector3(tile_position.x, 0, tile_position.z), tween_time)
 
 func lob_projectile(source_tile, destination_tile, tween_time=0.5):
 	var new_projectile = self._spawn_temporary_projectile_instance_on_tile(source_tile)
-	var position = self.map.map_to_local(destination_tile.position)
-	new_projectile.lob_at_position(Vector3(position.x, 0, position.z), tween_time)
+	var tile_position = self.map.map_to_local(destination_tile.position)
+	new_projectile.lob_at_position(Vector3(tile_position.x, 0, tile_position.z), tween_time)
 
 func _spawn_temporary_projectile_instance_on_tile(tile):
-	var position = self.map.map_to_local(tile.position)
+	var tile_position = self.map.map_to_local(tile.position)
 	var new_projectile = self.projectile_template.instantiate()
 	self.explosion_anchor.add_child(new_projectile)
-	new_projectile.set_position(Vector3(position.x, 0, position.z))
+	new_projectile.set_position(Vector3(tile_position.x, 0, tile_position.z))
 
 	return new_projectile
 
