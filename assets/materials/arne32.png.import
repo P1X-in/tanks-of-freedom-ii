@@ -1,34 +1,14 @@
 [remap]
 
-importer="texture"
-type="CompressedTexture2D"
+importer="image"
+type="Image"
 uid="uid://b4uinqad3sgil"
-path="res://.godot/imported/arne32.png-fe4a3436ece5a4690f17774a97229919.ctex"
-metadata={
-"vram_texture": false
-}
+path="res://.godot/imported/arne32.png-fe4a3436ece5a4690f17774a97229919.image"
 
 [deps]
 
 source_file="res://assets/materials/arne32.png"
-dest_files=["res://.godot/imported/arne32.png-fe4a3436ece5a4690f17774a97229919.ctex"]
+dest_files=["res://.godot/imported/arne32.png-fe4a3436ece5a4690f17774a97229919.image"]
 
 [params]
 
-compress/mode=4
-compress/high_quality=false
-compress/lossy_quality=0.7
-compress/hdr_compression=0
-compress/normal_map=0
-compress/channel_pack=0
-mipmaps/generate=false
-mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal=""
-process/fix_alpha_border=true
-process/premult_alpha=false
-process/normal_map_invert_y=false
-process/hdr_as_srgb=false
-process/hdr_clamp_exposure=false
-process/size_limit=0
-detect_3d/compress_to=0

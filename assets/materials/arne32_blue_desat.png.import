@@ -1,35 +1,14 @@
 [remap]
 
-importer="texture"
-type="CompressedTexture2D"
+importer="image"
+type="Image"
 uid="uid://dvvryx7d7h6to"
-path.s3tc="res://.godot/imported/arne32_blue_desat.png-4c9e2c53cc297536d63eb9b0411a2fd0.s3tc.ctex"
-metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
+path="res://.godot/imported/arne32_blue_desat.png-4c9e2c53cc297536d63eb9b0411a2fd0.image"
 
 [deps]
 
 source_file="res://assets/materials/arne32_blue_desat.png"
-dest_files=["res://.godot/imported/arne32_blue_desat.png-4c9e2c53cc297536d63eb9b0411a2fd0.s3tc.ctex"]
+dest_files=["res://.godot/imported/arne32_blue_desat.png-4c9e2c53cc297536d63eb9b0411a2fd0.image"]
 
 [params]
 
-compress/mode=2
-compress/high_quality=false
-compress/lossy_quality=0.7
-compress/hdr_compression=1
-compress/normal_map=0
-compress/channel_pack=0
-mipmaps/generate=false
-mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
-process/fix_alpha_border=false
-process/premult_alpha=false
-process/normal_map_invert_y=false
-process/hdr_as_srgb=false
-process/hdr_clamp_exposure=false
-process/size_limit=0
-detect_3d/compress_to=2

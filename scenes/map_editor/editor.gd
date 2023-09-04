@@ -23,8 +23,6 @@ var current_map_name = ""
 const HISTORY_MAX_SIZE = 50
 var actions_history = []
 
-var just_started_hack = true
-
 func _ready():
 	self.rotations.build_rotations(self.map.templates, self.map.builder)
 	self.select_tile(self.map.templates.GROUND_GRASS, self.map.builder.CLASS_GROUND)
@@ -44,10 +42,8 @@ func update_ui_position():
 
 
 func _input(event):
-	if not get_window().has_focus() and not self.just_started_hack:
+	if not get_window().has_focus():
 		return
-	if get_window().has_focus():
-		self.just_started_hack = false
 
 	if not self.ui.is_panel_open():
 		if event.is_action_pressed("ui_accept"):

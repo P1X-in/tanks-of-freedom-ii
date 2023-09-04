@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bew7vq515g6my" path="res://assets/terrain/grasslands/river_2_tile.glb" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://bt800syayyykk" path="res://assets/terrain/reflections/river_2_reflection.obj" id="4"]
-[ext_resource type="Material" uid="uid://c2g2gx3jr74cy" path="res://assets/materials/arne32_metallic.tres" id="4_a0o3c"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="4_5ueov"]
 [ext_resource type="PackedScene" path="res://scenes/tiles/reflective_tile.tscn" id="5"]
 
 [node name="tile" instance=ExtResource("5")]
@@ -11,4 +11,4 @@
 
 [node name="reflection" parent="." index="2"]
 mesh = ExtResource("4")
-surface_material_override/0 = ExtResource("4_a0o3c")
+surface_material_override/0 = ExtResource("4_5ueov")

@@ -26,7 +26,6 @@ func _ready():
 func enable():
 	self.enabled = true
 	self.set_physics_process(true)
-	print(self.enabled)
 
 func disable():
 	self.set_physics_process(false)
@@ -43,8 +42,8 @@ func reset():
 		}
 
 func _physics_process(delta):
-	#if not get_window().has_focus():
-	#	return
+	if not get_window().has_focus():
+		return
 
 	if not self.enabled:
 		return

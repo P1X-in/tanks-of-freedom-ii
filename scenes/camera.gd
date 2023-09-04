@@ -82,8 +82,6 @@ var snap_tile_box_to_camera = true
 var mouse_drag = false
 var mouse_click_position = null
 
-var just_started_hack = true
-
 @onready var settings = $"/root/Settings"
 
 func _ready():
@@ -117,10 +115,8 @@ func _ready():
 	self.switch_to_camera_style(self.settings.get_option("def_cam_st"))
 
 func _input(event):
-	if not get_window().has_focus() and not self.just_started_hack:
+	if not get_window().has_focus():
 		return
-	if get_window().has_focus():
-		self.just_started_hack = false
 
 	if self.paused:
 		return
@@ -439,14 +435,14 @@ func _mouse_zoom_out():
 func _mouse_shift_camera(relative_offset):
 	var camera_fraction
 	if self.camera_mode == self.MODE_TOF:
-		camera_fraction = self.tof_camera_distance / self.tof_camera_distance_max
+		camera_fraction = float(self.tof_camera_distance) / float(self.tof_camera_distance_max)
 		relative_offset = relative_offset * camera_fraction * Vector2(0.08, 0.16)
 		relative_offset = relative_offset.rotated(deg_to_rad(-45))
 	if self.camera_mode == self.MODE_AW:
-		camera_fraction = self.aw_camera_distance / self.aw_camera_distance_max
+		camera_fraction = float(self.aw_camera_distance) / float(self.aw_camera_distance_max)
 		relative_offset = relative_offset * camera_fraction * Vector2(0.08, 0.12)
 	if self.camera_mode == self.MODE_FREE:
-		camera_fraction = self.camera_distance / self.camera_distance_max
+		camera_fraction = float(self.camera_distance) / float(self.camera_distance_max)
 		relative_offset = relative_offset * camera_fraction * 0.08
 		relative_offset = relative_offset.rotated(deg_to_rad(-self.camera_angle_y))
 

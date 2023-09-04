@@ -13,7 +13,6 @@ var fields = []
 var focused_field = null
 
 var mouse_mode = false
-var just_started_hack = true
 
 func _ready():
 	self.fields = [
@@ -34,10 +33,8 @@ func _ready():
 		index += 1
 
 func _input(event):
-	if not get_window().has_focus() and not self.just_started_hack:
+	if not get_window().has_focus():
 		return
-	if get_window().has_focus():
-		self.just_started_hack = false
 
 	var axis_value = Vector2()
 
