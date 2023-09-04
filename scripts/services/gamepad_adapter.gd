@@ -26,6 +26,7 @@ func _ready():
 func enable():
 	self.enabled = true
 	self.set_physics_process(true)
+	print(self.enabled)
 
 func disable():
 	self.set_physics_process(false)
@@ -42,8 +43,8 @@ func reset():
 		}
 
 func _physics_process(delta):
-	if not get_window().has_focus():
-		return
+	#if not get_window().has_focus():
+	#	return
 
 	if not self.enabled:
 		return
@@ -100,5 +101,6 @@ func emit_event(direction, pressed):
 	var ev = InputEventAction.new()
 	ev.set_action(direction)
 	ev.set_pressed(pressed)
-	self.get_tree().input_event(ev)
+	#self.get_tree().input_event(ev)
+	Input.parse_input_event(ev)
 

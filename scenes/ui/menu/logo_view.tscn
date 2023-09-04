@@ -69,6 +69,9 @@ _data = {
 [node name="SubViewport" parent="." index="2"]
 size = Vector2i(600, 600)
 
+[node name="DirectionalLight3D" parent="SubViewport/tile_cam" index="2"]
+visible = false
+
 [node name="logo" parent="SubViewport" index="1" instance=ExtResource("1")]
 
 [node name="animations" parent="." index="3"]
