@@ -29,9 +29,6 @@ func _ready():
 	else:
 		self.call_deferred("_intro_finished")
 
-	if self.match_setup.campaign_win:
-		self.reopen_campaign_mission_selection_after_win()
-
 
 func _setup_camera():
 	self.map.camera.paused = true
@@ -73,6 +70,9 @@ func _intro_finished():
 	self.audio.track("menu")
 	if not self.match_setup.campaign_win:
 		self.ui.show_menu()
+
+	if self.match_setup.campaign_win:
+		self.reopen_campaign_mission_selection_after_win()
 
 func open_picker():
 	self.ui.hide_menu()

@@ -58,8 +58,8 @@ func get_player_side_by_id(id):
     return self.players[id]['side']
 
 func get_player_team_by_id(id):
-    if id == null:
-        return null
+    if id == null or id < 0:
+        return id
     if self.players[id]['team'] != null:
         return self.players[id]['team']
 
