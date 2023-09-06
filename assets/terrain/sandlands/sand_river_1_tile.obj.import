@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c5oueqc6vjfbe"
+path="res://.godot/imported/sand_river_1_tile.obj-29790f3093ce728dd9c1f2ba249d2352.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sand_river_1_tile.obj-29790f3093ce728dd9c1f2ba249d2352.mesh"]
+
+source_file="res://assets/terrain/sandlands/sand_river_1_tile.obj"
+dest_files=["res://.godot/imported/sand_river_1_tile.obj-29790f3093ce728dd9c1f2ba249d2352.mesh", "res://.godot/imported/sand_river_1_tile.obj-29790f3093ce728dd9c1f2ba249d2352.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
