@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0kj7vglyxr5b"
+path="res://.godot/imported/dirt_road_3_tile.obj-200d648b5f4460dcf6486a40234c2dfd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/dirt_road_3_tile.obj-200d648b5f4460dcf6486a40234c2dfd.mesh"]
+
+source_file="res://assets/terrain/grasslands/dirt_road_3_tile.obj"
+dest_files=["res://.godot/imported/dirt_road_3_tile.obj-200d648b5f4460dcf6486a40234c2dfd.mesh", "res://.godot/imported/dirt_road_3_tile.obj-200d648b5f4460dcf6486a40234c2dfd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

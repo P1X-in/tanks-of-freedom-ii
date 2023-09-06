@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://m05dxm5vpc1e"
+path="res://.godot/imported/fountain_destroyed.obj-19ea9b5a2d085656c4233ffeab5a5b89.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fountain_destroyed.obj-19ea9b5a2d085656c4233ffeab5a5b89.mesh"]
+
+source_file="res://assets/terrain/grasslands/fountain_destroyed.obj"
+dest_files=["res://.godot/imported/fountain_destroyed.obj-19ea9b5a2d085656c4233ffeab5a5b89.mesh", "res://.godot/imported/fountain_destroyed.obj-19ea9b5a2d085656c4233ffeab5a5b89.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

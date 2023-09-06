@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bt0dgqiuld656"
+path="res://.godot/imported/road_2_tile.obj-95c273f81f3df720a4e0dee5911e1b43.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_2_tile.obj-95c273f81f3df720a4e0dee5911e1b43.mesh"]
+
+source_file="res://assets/terrain/grasslands/road_2_tile.obj"
+dest_files=["res://.godot/imported/road_2_tile.obj-95c273f81f3df720a4e0dee5911e1b43.mesh", "res://.godot/imported/road_2_tile.obj-95c273f81f3df720a4e0dee5911e1b43.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

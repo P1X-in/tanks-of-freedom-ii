@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0ptg75nhgvqd"
+path="res://.godot/imported/building_big_2_overtile.obj-17b5a3e2d29acb060fe84741fe40a0be.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building_big_2_overtile.obj-17b5a3e2d29acb060fe84741fe40a0be.mesh"]
+
+source_file="res://assets/terrain/grasslands/building_big_2_overtile.obj"
+dest_files=["res://.godot/imported/building_big_2_overtile.obj-17b5a3e2d29acb060fe84741fe40a0be.mesh", "res://.godot/imported/building_big_2_overtile.obj-17b5a3e2d29acb060fe84741fe40a0be.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

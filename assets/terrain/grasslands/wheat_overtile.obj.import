@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dg7wvs7tfw22v"
+path="res://.godot/imported/wheat_overtile.obj-c0cd2f3d396d3d97c70e81f004768814.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wheat_overtile.obj-c0cd2f3d396d3d97c70e81f004768814.mesh"]
+
+source_file="res://assets/terrain/grasslands/wheat_overtile.obj"
+dest_files=["res://.godot/imported/wheat_overtile.obj-c0cd2f3d396d3d97c70e81f004768814.mesh", "res://.godot/imported/wheat_overtile.obj-c0cd2f3d396d3d97c70e81f004768814.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

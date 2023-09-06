@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://by3873yiu35cf"]
+[gd_scene load_steps=6 format=3 uid="uid://by3873yiu35cf"]
 
-[ext_resource type="PackedScene" uid="uid://chwndch8gd274" path="res://assets/terrain/grasslands/building_big_2_overtile.glb" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://c0ptg75nhgvqd" path="res://assets/terrain/grasslands/building_big_2_overtile.obj" id="2_m62uj"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_yd2gc"]
 [ext_resource type="ArrayMesh" uid="uid://70b38j2vmubn" path="res://assets/terrain/reflections/building_big_2_reflections.obj" id="4"]
 [ext_resource type="Material" uid="uid://c2g2gx3jr74cy" path="res://assets/materials/arne32_metallic.tres" id="4_cjk1r"]
 [ext_resource type="PackedScene" path="res://scenes/tiles/reflective_tile.tscn" id="5"]
@@ -8,8 +9,10 @@
 [node name="tile" instance=ExtResource("5")]
 next_damage_stage_template = "damaged_building_big2"
 
-[node name="building_big_2_overtile" parent="." index="1" instance=ExtResource("1")]
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_m62uj")
+surface_material_override/0 = ExtResource("3_yd2gc")
 
-[node name="reflection" parent="." index="2"]
+[node name="reflection" parent="." index="1"]
 mesh = ExtResource("4")
 surface_material_override/0 = ExtResource("4_cjk1r")
