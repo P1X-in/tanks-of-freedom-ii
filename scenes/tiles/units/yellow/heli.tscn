@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://da8m6k5qarb05"]
 
 [ext_resource type="PackedScene" uid="uid://0a4hh4x6jhns" path="res://scenes/tiles/units/yellow/heli_rotor.tscn" id="1"]
-[ext_resource type="Material" uid="uid://d3r52bg10517t" path="res://assets/materials/arne32_metallic_yellow.tres" id="2"]
 [ext_resource type="PackedScene" uid="uid://s6g08w5ljxvm" path="res://scenes/tiles/units/templates/heli.tscn" id="3"]
+[ext_resource type="Material" uid="uid://cmuoryv8gy5rs" path="res://assets/materials/arne32_yellow.tres" id="3_fjvjy"]
 [ext_resource type="ArrayMesh" uid="uid://cseu4ve57ckos" path="res://assets/units/yellow/heli.obj" id="4"]
 
 [node name="heli" instance=ExtResource("3")]
@@ -10,6 +10,6 @@ side = "yellow"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 mesh = ExtResource("4")
-surface_material_override/0 = ExtResource("2")
+surface_material_override/0 = ExtResource("3_fjvjy")
 
 [node name="rotor" parent="mesh_anchor/mesh" index="0" instance=ExtResource("1")]

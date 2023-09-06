@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bt6wy5ggs5y7f"]
+[gd_scene load_steps=5 format=3 uid="uid://bt6wy5ggs5y7f"]
 
 [ext_resource type="ArrayMesh" uid="uid://c5oueqc6vjfbe" path="res://assets/terrain/sandlands/sand_river_1_tile.obj" id="2_oawu8"]
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_knr31"]
 [ext_resource type="ArrayMesh" uid="uid://barsfaj5o0s3s" path="res://assets/terrain/reflections/river_1_reflection.obj" id="4"]
-[ext_resource type="Material" uid="uid://c2g2gx3jr74cy" path="res://assets/materials/arne32_metallic.tres" id="4_h8qo5"]
 [ext_resource type="PackedScene" path="res://scenes/tiles/reflective_tile.tscn" id="5"]
 
 [node name="tile" instance=ExtResource("5")]
@@ -14,4 +13,4 @@ surface_material_override/0 = ExtResource("3_knr31")
 
 [node name="reflection" parent="." index="1"]
 mesh = ExtResource("4")
-surface_material_override/0 = ExtResource("4_h8qo5")
+surface_material_override/0 = ExtResource("3_knr31")

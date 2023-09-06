@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2obnd03imerq"]
 
 [ext_resource type="PackedScene" uid="uid://p1cdmji5la3k" path="res://scenes/tiles/units/green/scout_heli_rotor.tscn" id="1"]
-[ext_resource type="Material" uid="uid://bawv41tmf72ga" path="res://assets/materials/arne32_metallic_green.tres" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/scout_heli.tscn" id="3"]
+[ext_resource type="Material" uid="uid://cj2u6cis5y0wd" path="res://assets/materials/arne32_green.tres" id="3_kx1h6"]
 [ext_resource type="ArrayMesh" uid="uid://dhts31a2atdtt" path="res://assets/units/green/scout_heli.obj" id="10"]
 
 [node name="scout" instance=ExtResource("3")]
@@ -10,6 +10,6 @@ side = "green"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 mesh = ExtResource("10")
-surface_material_override/0 = ExtResource("2")
+surface_material_override/0 = ExtResource("3_kx1h6")
 
 [node name="rotor" parent="mesh_anchor/mesh" index="0" instance=ExtResource("1")]

@@ -153,7 +153,7 @@ func _detect_steam_deck():
 
 func _apply_steam_deck_settings():
 	self.settings["fullscreen"] = true
-	self.settings["def_cam_st"] = "FREE"
+	self.settings["def_cam_st"] = "TOF"
 	self.settings["shadows"] = false
 	self.settings["decorations"] = true
 	self.settings["dec_shadows"] = false

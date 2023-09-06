@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/tank.tscn" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://cgavw8degcypd" path="res://assets/units/red/tank.obj" id="2"]
-[ext_resource type="Material" uid="uid://d4cn0neqy3yns" path="res://assets/materials/arne32_metallic_red.tres" id="3"]
+[ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="3_11psg"]
 
 [node name="tank" instance=ExtResource("1")]
 side = "red"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 mesh = ExtResource("2")
-surface_material_override/0 = ExtResource("3")
+surface_material_override/0 = ExtResource("3_11psg")

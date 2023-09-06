@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://chkllnkaq5u1d"]
 
 [ext_resource type="ArrayMesh" uid="uid://sbppjd5so36o" path="res://assets/units/blue/tank_modern.obj" id="1"]
-[ext_resource type="Material" uid="uid://t3u388ysrjdr" path="res://assets/materials/arne32_metallic_blue.tres" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/tank.tscn" id="3"]
+[ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="3_vtabv"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "level_up"
@@ -72,30 +72,9 @@ side = "blue"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 mesh = ExtResource("1")
-surface_material_override/0 = ExtResource("2")
+surface_material_override/0 = ExtResource("3_vtabv")
 
 [node name="animations" parent="." index="1"]
 libraries = {
 "": SubResource("AnimationLibrary_31jau")
 }
-
-[node name="spawn" parent="audio" index="0"]
-bus = &"Units"
-
-[node name="move" parent="audio" index="1"]
-bus = &"Units"
-
-[node name="attack" parent="audio" index="2"]
-bus = &"Attack"
-
-[node name="hit" parent="audio" index="3"]
-bus = &"Attack"
-
-[node name="damage" parent="audio" index="4"]
-bus = &"Damage"
-
-[node name="die" parent="audio" index="5"]
-bus = &"Explosion"
-
-[node name="level_up" parent="audio" index="6"]
-bus = &"Units"

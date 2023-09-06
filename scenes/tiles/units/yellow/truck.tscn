@@ -2,11 +2,11 @@
 
 [ext_resource type="ArrayMesh" uid="uid://dc3b623suj2gw" path="res://assets/units/yellow/truck.obj" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/truck.tscn" id="2"]
-[ext_resource type="Material" uid="uid://d3r52bg10517t" path="res://assets/materials/arne32_metallic_yellow.tres" id="3"]
+[ext_resource type="Material" uid="uid://cmuoryv8gy5rs" path="res://assets/materials/arne32_yellow.tres" id="3_71xre"]
 
 [node name="truck" instance=ExtResource("2")]
 side = "yellow"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 mesh = ExtResource("1")
-surface_material_override/0 = ExtResource("3")
+surface_material_override/0 = ExtResource("3_71xre")

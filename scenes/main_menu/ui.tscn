@@ -67,8 +67,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -20.0
-offset_bottom = 20.0
+offset_bottom = 40.0
 
 [node name="skirmish" parent="skirmish" instance=ExtResource("6")]
 layout_mode = 2
@@ -79,10 +78,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 6.10352e-05
-offset_top = 20.0
-offset_right = 6.10352e-05
-offset_bottom = 60.0
+offset_bottom = 40.0
 
 [node name="settings" parent="settings" instance=ExtResource("7")]
 layout_mode = 2
@@ -107,8 +103,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -20.0
-offset_bottom = 20.0
+offset_bottom = 40.0
 
 [node name="campaign_selection" parent="campaign_selection" instance=ExtResource("8")]
 layout_mode = 2
@@ -119,8 +114,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -20.0
-offset_bottom = 20.0
+offset_bottom = 40.0
 
 [node name="campaign_mission_selection" parent="campaign_mission_selection" instance=ExtResource("9")]
 layout_mode = 2
@@ -131,8 +125,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -20.0
-offset_bottom = 20.0
+offset_bottom = 40.0
 
 [node name="campaign_mission" parent="campaign_mission" instance=ExtResource("10")]
 layout_mode = 2
@@ -156,9 +149,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
-offset_top = -20.0
 offset_right = -20.0
-offset_bottom = -20.0
 
 [node name="saves" parent="saves" instance=ExtResource("12")]
 

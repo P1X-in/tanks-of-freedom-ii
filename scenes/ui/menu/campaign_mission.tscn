@@ -119,8 +119,6 @@ _data = {
 }
 
 [node name="campaign_mission" instance=ExtResource("1")]
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("2")
 
 [node name="title" type="Label" parent="widgets" index="0"]
