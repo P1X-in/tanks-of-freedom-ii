@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkaoj6bd6l58l"
-path.s3tc="res://.godot/imported/ground_hole_4_ground_hole_4CleanedTex.png-64752cf82409ce44da3987d139ddd5e6.s3tc.ctex"
+uid="uid://b1vv4aiur1dal"
+path.s3tc="res://.godot/imported/ground_hole_3.png-939141deef1958a6cf411e9790903bc4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://assets/terrain/damage/ground_hole_4_ground_hole_4CleanedTex.png"
-dest_files=["res://.godot/imported/ground_hole_4_ground_hole_4CleanedTex.png-64752cf82409ce44da3987d139ddd5e6.s3tc.ctex"]
+source_file="res://assets/terrain/damage/ground_hole_3.png"
+dest_files=["res://.godot/imported/ground_hole_3.png-939141deef1958a6cf411e9790903bc4.s3tc.ctex"]
 
 [params]
 

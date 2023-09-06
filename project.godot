@@ -37,6 +37,7 @@ Online="*res://scripts/services/online.gd"
 
 [debug]
 
+settings/stdout/print_fps=true
 settings/fps/force_fps=144
 
 [display]
@@ -219,6 +220,7 @@ textures/canvas_textures/default_texture_filter=0
 textures/decals/filter=0
 textures/light_projectors/filter=0
 environment/volumetric_fog/use_filter=0
+anti_aliasing/quality/msaa_3d=2
 environment/defaults/default_environment="res://default_env.tres"
 threads/thread_model=2
 gles3/shaders/shader_compilation_mode=2

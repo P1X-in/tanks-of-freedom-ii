@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dpy0kpts732i"
+path="res://.godot/imported/ground_hole_1.obj-5ba6e7e12edd32f130a38aed499d1410.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ground_hole_1.obj-5ba6e7e12edd32f130a38aed499d1410.mesh"]
+
+source_file="res://assets/terrain/damage/ground_hole_1.obj"
+dest_files=["res://.godot/imported/ground_hole_1.obj-5ba6e7e12edd32f130a38aed499d1410.mesh", "res://.godot/imported/ground_hole_1.obj-5ba6e7e12edd32f130a38aed499d1410.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

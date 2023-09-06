@@ -1,11 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://dwn305q28yuly"]
 
-[ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/terrain/damage/ground_hole_1.glb" type="PackedScene" id=2]
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://dpy0kpts732i" path="res://assets/terrain/damage/ground_hole_1.obj" id="2_nuu2s"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_cxg3j"]
 
-[node name="tile" instance=ExtResource( 1 )]
+[node name="tile" instance=ExtResource("1")]
 
 [node name="mesh" parent="." index="0"]
 cast_shadow = 0
-
-[node name="ground_hole_1" parent="." index="1" instance=ExtResource( 2 )]
+mesh = ExtResource("2_nuu2s")
+surface_material_override/0 = ExtResource("3_cxg3j")
