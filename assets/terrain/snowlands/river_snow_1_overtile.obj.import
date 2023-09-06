@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7g2y2xu6y51r"
+path="res://.godot/imported/river_snow_1_overtile.obj-162330a882c542f5a08aa1b1da3e46d9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/river_snow_1_overtile.obj-162330a882c542f5a08aa1b1da3e46d9.mesh"]
+
+source_file="res://assets/terrain/snowlands/river_snow_1_overtile.obj"
+dest_files=["res://.godot/imported/river_snow_1_overtile.obj-162330a882c542f5a08aa1b1da3e46d9.mesh", "res://.godot/imported/river_snow_1_overtile.obj-162330a882c542f5a08aa1b1da3e46d9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
