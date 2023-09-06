@@ -45,6 +45,10 @@ window/size/viewport_width=1280
 window/size/viewport_height=800
 window/vsync/vsync_mode=false
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 ui_accept={
@@ -220,6 +224,5 @@ textures/decals/filter=0
 textures/light_projectors/filter=0
 environment/volumetric_fog/use_filter=0
 anti_aliasing/quality/msaa_3d=2
-environment/defaults/default_environment="res://default_env.tres"
 threads/thread_model=2
 gles3/shaders/shader_compilation_mode=2

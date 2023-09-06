@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://cry3kqpb8cvim"]
 
-[ext_resource type="Texture2D" uid="uid://bieopmsruclpo" path="res://assets/kloppenheim_03_4k.hdr" id="1_gjs6k"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5umwj"]
+load_path = "res://.godot/imported/kloppenheim_03_4k.hdr-9393188a22828feb8b70131e4dd3d668.bptc.ctex"
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_i00vh"]
-panorama = ExtResource("1_gjs6k")
+panorama = SubResource("CompressedTexture2D_5umwj")
 
 [sub_resource type="Sky" id="1"]
 sky_material = SubResource("PanoramaSkyMaterial_i00vh")
