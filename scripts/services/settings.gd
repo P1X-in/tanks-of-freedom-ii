@@ -160,7 +160,7 @@ func _apply_steam_deck_settings():
 	self.settings["msaa"] = 0.0
 	self.settings["fxaa"] = false
 	self.settings["vsync"] = false
-	self.settings["fps"] = 30.0
+	self.settings["fps"] = 60.0
 	self.settings["ips"] = 60.0
 
 	if not self.filesystem.file_exists(self.SETTINGS_FILE_PATH):
