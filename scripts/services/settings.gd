@@ -21,7 +21,7 @@ var settings = {
 	"shadows" : true,
 	"decorations" : true,
 	"dec_shadows" : true,
-	"msaa": 0.0,
+	"msaa": 2.0,
 	"fxaa": false,
 	"vsync": false,
 	"fps": 60.0,
@@ -134,8 +134,8 @@ func _get_msaa(value):
 		return 2
 	elif value == 8:
 		return 3
-	elif value == 16:
-		return 4
+	#elif value == 16:
+	#	return 4
 
 func _detect_steam_deck():
 	if self.settings["steamdeck_detection"]:

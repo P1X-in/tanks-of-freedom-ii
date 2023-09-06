@@ -37,7 +37,6 @@ Online="*res://scripts/services/online.gd"
 
 [debug]
 
-settings/stdout/print_fps=true
 settings/fps/force_fps=144
 
 [display]
