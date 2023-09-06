@@ -100,6 +100,5 @@ func emit_event(direction, pressed):
 	var ev = InputEventAction.new()
 	ev.set_action(direction)
 	ev.set_pressed(pressed)
-	#self.get_tree().input_event(ev)
 	Input.parse_input_event(ev)
 
