@@ -31,7 +31,7 @@ func _ai_tick():
 		return
 
 	while self._ai_paused or self.board.map.camera.camera_in_transit or self.board.map.camera.script_operated:
-		var timer = self.board.get_tree().create_timer(0.5)
+		var timer = self.board.get_tree().create_timer(0.1)
 		timer.connect("timeout", Callable(self, "_ai_tick"))
 		return
 
