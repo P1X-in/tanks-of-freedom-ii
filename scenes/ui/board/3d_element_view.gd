@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var animations = $"animations"
 
-@export var zoom_value = 10
+@export var zoom_value: float = 10
 
 var model = null
 

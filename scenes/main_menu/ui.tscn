@@ -36,6 +36,7 @@ offset_top = -160.0
 offset_bottom = -120.0
 
 [node name="logo_view" parent="logo" instance=ExtResource("2")]
+zoom_value = 9.1
 
 [node name="options" type="MarginContainer" parent="."]
 layout_mode = 0

@@ -93,6 +93,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="lens" parent="SubViewport/tile_cam/pivot/arm" index="0"]
 projection = 0
+current = true
 
 [node name="animations" type="AnimationPlayer" parent="."]
 speed_scale = 4.0

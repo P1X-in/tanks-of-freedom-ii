@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://kxsoppflnua2"]
+[gd_scene load_steps=16 format=3 uid="uid://kxsoppflnua2"]
 
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="1"]
 [ext_resource type="Material" uid="uid://cvv3sh0uq5ynp" path="res://assets/water/water_material.tres" id="2"]
@@ -7,6 +7,11 @@
 [ext_resource type="ArrayMesh" uid="uid://cw6doarcq783m" path="res://assets/gui/board/map_frame.obj" id="5"]
 [ext_resource type="PackedScene" uid="uid://dfmdw1ysub4x1" path="res://scenes/camera.tscn" id="11"]
 [ext_resource type="Environment" uid="uid://bdfocgrybgkli" path="res://default_env.tres" id="12"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_no5qk"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 125.0
+dof_blur_far_transition = 50.0
 
 [sub_resource type="PlaneMesh" id="1"]
 material = ExtResource("2")
@@ -74,9 +79,11 @@ camera_space_size = 320
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("12")
+camera_attributes = SubResource("CameraAttributesPractical_no5qk")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, 24.8979, 28.6066, 1.54649)
+light_energy = 1.5
 shadow_enabled = true
 shadow_bias = 0.0
 directional_shadow_mode = 0

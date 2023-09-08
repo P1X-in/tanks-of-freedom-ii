@@ -20,3 +20,5 @@ tonemap_mode = 3
 tonemap_white = 4.0
 ssao_enabled = true
 ssil_enabled = true
+adjustment_enabled = true
+adjustment_saturation = 1.1
