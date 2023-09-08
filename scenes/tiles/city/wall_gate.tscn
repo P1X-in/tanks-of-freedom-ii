@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cgb1qo4gp3o7i"]
 
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/tile.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://c8bhjua04tu2k" path="res://assets/terrain/variety/wall_gate.obj" id="3"]
 
 [node name="wall_gate" instance=ExtResource("2")]
