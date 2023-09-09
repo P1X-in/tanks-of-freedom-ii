@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://ccd3i5en0t5wq"]
 
-[ext_resource path="res://scenes/tiles/damaged_tile.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/terrain/grasslands/building_big_3_destroyed.glb" type="PackedScene" id=2]
+[ext_resource type="PackedScene" uid="uid://5mya1iwby638" path="res://scenes/tiles/damaged_tile.tscn" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://cjt22q6m6wxfh" path="res://assets/terrain/grasslands/building_big_3_destroyed.obj" id="2_sa871"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_x7skq"]
 
-[node name="damaged_tile" instance=ExtResource( 1 )]
-base_stage_template = "city_building_big3"
+[node name="damaged_tile" instance=ExtResource("1")]
 is_smoking = true
+base_stage_template = "city_building_big3"
 
-[node name="building_big_3_destroyed" parent="." index="1" instance=ExtResource( 2 )]
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_sa871")
+surface_material_override/0 = ExtResource("3_x7skq")

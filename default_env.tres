@@ -1,25 +1,24 @@
-[gd_resource type="Environment" load_steps=3 format=2]
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://bdfocgrybgkli"]
 
-[ext_resource path="res://assets/kloppenheim_03_4k.hdr" type="Texture" id=1]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qq1ye"]
+load_path = "res://.godot/imported/kloppenheim_03_4k.hdr-9393188a22828feb8b70131e4dd3d668.bptc.ctex"
 
-[sub_resource type="PanoramaSky" id=1]
-panorama = ExtResource( 1 )
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_i00vh"]
+panorama = SubResource("CompressedTexture2D_qq1ye")
+
+[sub_resource type="Sky" id="1"]
+sky_material = SubResource("PanoramaSkyMaterial_i00vh")
 
 [resource]
 background_mode = 2
-background_sky = SubResource( 1 )
-background_sky_custom_fov = 70.0
-ambient_light_color = Color( 1, 1, 1, 1 )
+sky = SubResource("1")
+sky_custom_fov = 70.0
+ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_sky_contribution = 0.2
+reflected_light_source = 1
 tonemap_mode = 3
 tonemap_white = 4.0
 ssao_enabled = true
-ssao_quality = 2
-dof_blur_far_enabled = true
-dof_blur_far_distance = 125.0
-dof_blur_far_transition = 50.0
-dof_blur_far_quality = 2
-dof_blur_near_distance = 10.0
-dof_blur_near_transition = 5.0
-dof_blur_near_quality = 2
+ssil_enabled = true
 adjustment_enabled = true
+adjustment_saturation = 1.1

@@ -632,20 +632,20 @@ func get_template(template):
 	if template == null:
 		return null
 
-	var new_tile = self.templates[template].instance()
+	var new_tile = self.templates[template].instantiate()
 	new_tile.template_name = template
 
 	return new_tile
 
-func get_side_material(side, type="normal"):
-	if type == self.MATERIAL_METALLIC:
-		return self.side_materials_metallic[side]
+func get_side_material(side, _type="normal"):
+	#if type == self.MATERIAL_METALLIC:
+	#	return self.side_materials_metallic[side]
 
 	return self.side_materials[side]
 
-func get_side_material_desat(side, type="normal"):
-	if type == self.MATERIAL_METALLIC:
-		return self.side_materials_metallic_desat[side]
+func get_side_material_desat(side, _type="normal"):
+	#if type == self.MATERIAL_METALLIC:
+	#	return self.side_materials_metallic_desat[side]
 
 	return self.side_materials_desat[side]
 

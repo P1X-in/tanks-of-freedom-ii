@@ -1,21 +1,23 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://dmdsqp1x6ajk6"]
 
-[ext_resource path="res://assets/materials/arne32_blue.tres" type="Material" id=1]
-[ext_resource path="res://scenes/tiles/units/heroes/hero.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/units/heroes/general.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://scenes/abilities/hero/passive/recruitment.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/abilities/hero/active/deep_strike.tscn" type="PackedScene" id=5]
+[ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="1"]
+[ext_resource type="PackedScene" uid="uid://pbf2ydgtfdt4" path="res://scenes/tiles/units/heroes/hero.tscn" id="2"]
+[ext_resource type="ArrayMesh" uid="uid://d15da154e3432" path="res://assets/units/heroes/general.obj" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/recruitment.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/hero/active/deep_strike.tscn" id="5"]
 
-[node name="general" instance=ExtResource( 2 )]
+[node name="general" instance=ExtResource("2")]
 unit_name = "TR_GENERAL"
 side = "blue"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-mesh = ExtResource( 3 )
-material/0 = ExtResource( 1 )
+mesh = ExtResource("3")
+surface_material_override/0 = ExtResource("1")
 
-[node name="recruitment" parent="." index="3" instance=ExtResource( 4 )]
+[node name="standard" parent="mesh_anchor" index="1"]
+surface_material_override/0 = ExtResource("1")
 
-[node name="deep_strike" parent="." index="4" instance=ExtResource( 5 )]
+[node name="recruitment" parent="." index="3" instance=ExtResource("4")]
+
+[node name="deep_strike" parent="." index="4" instance=ExtResource("5")]
 index = 2
-unit_template = "blue_infantry"

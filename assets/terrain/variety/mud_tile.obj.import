@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crgq8xe2x3wln"
+path="res://.godot/imported/mud_tile.obj-cc2b915c92496275c8815fe1e3d06d31.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mud_tile.obj-cc2b915c92496275c8815fe1e3d06d31.mesh"]
+
+source_file="res://assets/terrain/variety/mud_tile.obj"
+dest_files=["res://.godot/imported/mud_tile.obj-cc2b915c92496275c8815fe1e3d06d31.mesh", "res://.godot/imported/mud_tile.obj-cc2b915c92496275c8815fe1e3d06d31.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

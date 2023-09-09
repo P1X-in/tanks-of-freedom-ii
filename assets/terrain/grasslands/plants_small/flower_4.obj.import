@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/flower_4.obj-b2339788d9fb0a3d6045166fa826f81b.mesh"
+uid="uid://dj4natvn6c3yk"
+path="res://.godot/imported/flower_4.obj-b2339788d9fb0a3d6045166fa826f81b.mesh"
 
 [deps]
 
-files=[ "res://.import/flower_4.obj-b2339788d9fb0a3d6045166fa826f81b.mesh" ]
+files=["res://.godot/imported/flower_4.obj-b2339788d9fb0a3d6045166fa826f81b.mesh"]
 
 source_file="res://assets/terrain/grasslands/plants_small/flower_4.obj"
-dest_files=[ "res://.import/flower_4.obj-b2339788d9fb0a3d6045166fa826f81b.mesh", "res://.import/flower_4.obj-b2339788d9fb0a3d6045166fa826f81b.mesh" ]
+dest_files=["res://.godot/imported/flower_4.obj-b2339788d9fb0a3d6045166fa826f81b.mesh", "res://.godot/imported/flower_4.obj-b2339788d9fb0a3d6045166fa826f81b.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -83,5 +83,5 @@ var named_icons = {
 
 func get_named_icon(name):
     if self.named_icons.has(name):
-        return self.named_icons[name].instance()
+        return self.named_icons[name].instantiate()
     return null

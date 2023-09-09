@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/palm_3.obj-4030f19d234ed0ef34306d79e2e4429d.mesh"
+uid="uid://cs6lj2vag4df"
+path="res://.godot/imported/palm_3.obj-4030f19d234ed0ef34306d79e2e4429d.mesh"
 
 [deps]
 
-files=[ "res://.import/palm_3.obj-4030f19d234ed0ef34306d79e2e4429d.mesh" ]
+files=["res://.godot/imported/palm_3.obj-4030f19d234ed0ef34306d79e2e4429d.mesh"]
 
 source_file="res://assets/terrain/sandlands/plants/palm_3.obj"
-dest_files=[ "res://.import/palm_3.obj-4030f19d234ed0ef34306d79e2e4429d.mesh", "res://.import/palm_3.obj-4030f19d234ed0ef34306d79e2e4429d.mesh" ]
+dest_files=["res://.godot/imported/palm_3.obj-4030f19d234ed0ef34306d79e2e4429d.mesh", "res://.godot/imported/palm_3.obj-4030f19d234ed0ef34306d79e2e4429d.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,356 +1,294 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://bfj36q6npgot2"]
 
-[ext_resource path="res://scenes/ui/board/unit_stats.gd" type="Script" id=1]
-[ext_resource path="res://scenes/map_editor/tile_view.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=3]
-[ext_resource path="res://scenes/ui/icons/star.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/gui/editor/circle.png" type="Texture" id=5]
+[ext_resource type="Script" path="res://scenes/ui/board/unit_stats.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://k2hh8e6861ja" path="res://scenes/map_editor/tile_view.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/icons/star.tscn" id="4"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="4_cdooe"]
+[ext_resource type="Texture2D" uid="uid://biu2u7rf4o1vh" path="res://assets/gui/editor/circle.png" id="5"]
 
 [node name="unit_stats" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="background" type="ColorRect" parent="."]
-margin_left = -400.0
-margin_top = -225.0
-margin_right = 400.0
-margin_bottom = 225.0
-color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
-__meta__ = {
-"_editor_description_": ""
-}
+offset_left = -400.0
+offset_top = -225.0
+offset_right = 400.0
+offset_bottom = 225.0
+color = Color(0.196078, 0.196078, 0.196078, 0.823529)
 
-[node name="tile_view" parent="background" instance=ExtResource( 2 )]
-position = Vector2( 80, 110 )
+[node name="tile_view" parent="background" instance=ExtResource("2")]
+position = Vector2(80, 110)
 
 [node name="level1" type="Node2D" parent="background"]
 visible = false
-position = Vector2( 20, 130 )
+position = Vector2(20, 130)
 
-[node name="star" parent="background/level1" instance=ExtResource( 4 )]
-position = Vector2( 60, -70 )
+[node name="star" parent="background/level1" instance=ExtResource("4")]
+position = Vector2(60, -70)
 
 [node name="level2" type="Node2D" parent="background"]
 visible = false
-position = Vector2( 20, 130 )
+position = Vector2(20, 130)
 
-[node name="star" parent="background/level2" instance=ExtResource( 4 )]
-position = Vector2( 50, -70 )
+[node name="star" parent="background/level2" instance=ExtResource("4")]
+position = Vector2(50, -70)
 
-[node name="star2" parent="background/level2" instance=ExtResource( 4 )]
-position = Vector2( 70, -70 )
+[node name="star2" parent="background/level2" instance=ExtResource("4")]
+position = Vector2(70, -70)
 
 [node name="level3" type="Node2D" parent="background"]
 visible = false
-position = Vector2( 20, 130 )
+position = Vector2(20, 130)
 
-[node name="star" parent="background/level3" instance=ExtResource( 4 )]
-position = Vector2( 50, -65 )
+[node name="star" parent="background/level3" instance=ExtResource("4")]
+position = Vector2(50, -65)
 
-[node name="star2" parent="background/level3" instance=ExtResource( 4 )]
-position = Vector2( 70, -65 )
+[node name="star2" parent="background/level3" instance=ExtResource("4")]
+position = Vector2(70, -65)
 
-[node name="star3" parent="background/level3" instance=ExtResource( 4 )]
-position = Vector2( 60, -80 )
+[node name="star3" parent="background/level3" instance=ExtResource("4")]
+position = Vector2(60, -80)
 
 [node name="unit_name" type="Label" parent="background"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 7.0
-margin_bottom = -393.0
-custom_fonts/font = ExtResource( 3 )
+offset_top = 7.0
+offset_bottom = -393.0
+theme_override_fonts/font = ExtResource("4_cdooe")
+theme_override_font_sizes/font_size = 42
 text = "Infantry"
-align = 1
-valign = 1
-__meta__ = {
-"_editor_description_": ""
-}
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="hp_label" type="Label" parent="background"]
-margin_left = 150.0
-margin_top = 60.0
-margin_right = 250.0
-margin_bottom = 80.0
+layout_mode = 0
+offset_left = 150.0
+offset_top = 60.0
+offset_right = 250.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "TR_HP"
-valign = 1
-__meta__ = {
-"_editor_description_": ""
-}
+vertical_alignment = 1
 
 [node name="hp_value" type="Label" parent="background/hp_label"]
-margin_left = 100.0
-margin_right = 200.0
-margin_bottom = 20.0
+layout_mode = 0
+offset_left = 100.0
+offset_right = 200.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "10/10"
-align = 2
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="armour_label" type="Label" parent="background"]
-margin_left = 150.0
-margin_top = 80.0
-margin_right = 250.0
-margin_bottom = 100.0
+layout_mode = 0
+offset_left = 150.0
+offset_top = 80.0
+offset_right = 250.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "TR_ARMOUR"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+vertical_alignment = 1
 
 [node name="armour_value" type="Label" parent="background/armour_label"]
-margin_left = 100.0
-margin_right = 200.0
-margin_bottom = 20.0
+layout_mode = 0
+offset_left = 100.0
+offset_right = 200.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "1"
-align = 2
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="ap_label" type="Label" parent="background"]
-margin_left = 150.0
-margin_top = 100.0
-margin_right = 250.0
-margin_bottom = 120.0
+layout_mode = 0
+offset_left = 150.0
+offset_top = 100.0
+offset_right = 250.0
+offset_bottom = 120.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "TR_MP"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+vertical_alignment = 1
 
 [node name="ap_value" type="Label" parent="background/ap_label"]
-margin_left = 100.0
-margin_right = 200.0
-margin_bottom = 20.0
+layout_mode = 0
+offset_left = 100.0
+offset_right = 200.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "4/4"
-align = 2
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="attack_label" type="Label" parent="background"]
-margin_left = 150.0
-margin_top = 120.0
-margin_right = 250.0
-margin_bottom = 140.0
+layout_mode = 0
+offset_left = 150.0
+offset_top = 120.0
+offset_right = 250.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "TR_ATTACK"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+vertical_alignment = 1
 
 [node name="attack_value" type="Label" parent="background/attack_label"]
-margin_left = 100.0
-margin_right = 200.0
-margin_bottom = 20.0
+layout_mode = 0
+offset_left = 100.0
+offset_right = 200.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "6"
-align = 2
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="level_label" type="Label" parent="background"]
-margin_left = 150.0
-margin_top = 140.0
-margin_right = 250.0
-margin_bottom = 160.0
+layout_mode = 0
+offset_left = 150.0
+offset_top = 140.0
+offset_right = 250.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "TR_LEVEL"
-valign = 1
-__meta__ = {
-"_editor_description_": ""
-}
+vertical_alignment = 1
 
 [node name="level_value" type="Label" parent="background/level_label"]
-margin_left = 100.0
-margin_right = 200.0
-margin_bottom = 20.0
+layout_mode = 0
+offset_left = 100.0
+offset_right = 200.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "0"
-align = 2
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="kills_label" type="Label" parent="background"]
-margin_left = 150.0
-margin_top = 160.0
-margin_right = 250.0
-margin_bottom = 180.0
+layout_mode = 0
+offset_left = 150.0
+offset_top = 160.0
+offset_right = 250.0
+offset_bottom = 180.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "TR_KILLS"
-valign = 1
-__meta__ = {
-"_editor_description_": ""
-}
+vertical_alignment = 1
 
 [node name="kills_value" type="Label" parent="background/kills_label"]
-margin_left = 100.0
-margin_right = 200.0
-margin_bottom = 20.0
+layout_mode = 0
+offset_left = 100.0
+offset_right = 200.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("4_cdooe")
 text = "0"
-align = 2
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="abilities" type="Node2D" parent="background"]
-position = Vector2( 400, 60 )
+position = Vector2(400, 60)
 
 [node name="ab1" type="Node2D" parent="background/abilities"]
-position = Vector2( 0, 45 )
+position = Vector2(0, 45)
 
-[node name="bg" type="Sprite" parent="background/abilities/ab1"]
-modulate = Color( 1, 1, 1, 0.823529 )
-position = Vector2( 50, 0 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_editor_description_": ""
-}
+[node name="bg" type="Sprite2D" parent="background/abilities/ab1"]
+modulate = Color(1, 1, 1, 0.823529)
+position = Vector2(50, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
 
 [node name="label" type="Label" parent="background/abilities/ab1"]
-margin_left = 100.0
-margin_top = -50.0
-margin_right = 400.0
-margin_bottom = -20.0
+offset_left = 100.0
+offset_top = -50.0
+offset_right = 400.0
+offset_bottom = -20.0
 text = "Heavy Weapon"
-valign = 1
-__meta__ = {
-"_editor_description_": ""
-}
+vertical_alignment = 1
 
 [node name="description" type="Label" parent="background/abilities/ab1"]
-margin_left = 110.0
-margin_top = -20.0
-margin_right = 380.0
-margin_bottom = 50.0
+offset_left = 110.0
+offset_top = -20.0
+offset_right = 380.0
+offset_bottom = 50.0
 text = "Heavy Weapon"
-autowrap = true
-__meta__ = {
-"_editor_description_": ""
-}
+autowrap_mode = 3
 
 [node name="anchor" type="Node2D" parent="background/abilities/ab1"]
-position = Vector2( 50, 0 )
+position = Vector2(50, 0)
 
 [node name="ab2" type="Node2D" parent="background/abilities"]
-position = Vector2( 0, 150 )
+position = Vector2(0, 150)
 
-[node name="bg" type="Sprite" parent="background/abilities/ab2"]
-modulate = Color( 1, 1, 1, 0.823529 )
-position = Vector2( 50, 0 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_editor_description_": ""
-}
+[node name="bg" type="Sprite2D" parent="background/abilities/ab2"]
+modulate = Color(1, 1, 1, 0.823529)
+position = Vector2(50, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
 
 [node name="label" type="Label" parent="background/abilities/ab2"]
-margin_left = 100.0
-margin_top = -50.0
-margin_right = 400.0
-margin_bottom = -20.0
+offset_left = 100.0
+offset_top = -50.0
+offset_right = 400.0
+offset_bottom = -20.0
 text = "Heavy Weapon"
-valign = 1
-__meta__ = {
-"_editor_description_": ""
-}
+vertical_alignment = 1
 
 [node name="description" type="Label" parent="background/abilities/ab2"]
-margin_left = 110.0
-margin_top = -20.0
-margin_right = 380.0
-margin_bottom = 50.0
+offset_left = 110.0
+offset_top = -20.0
+offset_right = 380.0
+offset_bottom = 50.0
 text = "Heavy Weapon"
-autowrap = true
-__meta__ = {
-"_editor_description_": ""
-}
+autowrap_mode = 3
 
 [node name="anchor" type="Node2D" parent="background/abilities/ab2"]
-position = Vector2( 50, 0 )
+position = Vector2(50, 0)
 
 [node name="ab3" type="Node2D" parent="background/abilities"]
-position = Vector2( 0, 255 )
+position = Vector2(0, 255)
 
-[node name="bg" type="Sprite" parent="background/abilities/ab3"]
-modulate = Color( 1, 1, 1, 0.823529 )
-position = Vector2( 50, 0 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_editor_description_": ""
-}
+[node name="bg" type="Sprite2D" parent="background/abilities/ab3"]
+modulate = Color(1, 1, 1, 0.823529)
+position = Vector2(50, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
 
 [node name="label" type="Label" parent="background/abilities/ab3"]
-margin_left = 100.0
-margin_top = -50.0
-margin_right = 400.0
-margin_bottom = -20.0
+offset_left = 100.0
+offset_top = -50.0
+offset_right = 400.0
+offset_bottom = -20.0
 text = "Heavy Weapon"
-valign = 1
-__meta__ = {
-"_editor_description_": ""
-}
+vertical_alignment = 1
 
 [node name="description" type="Label" parent="background/abilities/ab3"]
-margin_left = 110.0
-margin_top = -20.0
-margin_right = 380.0
-margin_bottom = 50.0
+offset_left = 110.0
+offset_top = -20.0
+offset_right = 380.0
+offset_bottom = 50.0
 text = "Heavy Weapon"
-autowrap = true
-__meta__ = {
-"_editor_description_": ""
-}
+autowrap_mode = 3
 
 [node name="anchor" type="Node2D" parent="background/abilities/ab3"]
-position = Vector2( 50, 0 )
+position = Vector2(50, 0)
 
 [node name="passive" type="Node2D" parent="background"]
-position = Vector2( 20, 200 )
+position = Vector2(20, 200)
 
 [node name="label" type="Label" parent="background/passive"]
-margin_right = 350.0
-margin_bottom = 30.0
+offset_right = 350.0
+offset_bottom = 30.0
 text = "Heavy Weapon"
-valign = 1
-__meta__ = {
-"_editor_description_": ""
-}
+vertical_alignment = 1
 
 [node name="description" type="Label" parent="background/passive"]
-margin_top = 30.0
-margin_right = 350.0
-margin_bottom = 130.0
+offset_top = 30.0
+offset_right = 350.0
+offset_bottom = 130.0
 text = "Heavy Weapon"
-autowrap = true
-__meta__ = {
-"_editor_description_": ""
-}
+autowrap_mode = 3
 
 [node name="back_button" type="Button" parent="."]
-margin_left = -50.0
-margin_top = 185.0
-margin_right = 50.0
-margin_bottom = 215.0
+offset_left = -50.0
+offset_top = 185.0
+offset_right = 50.0
+offset_bottom = 215.0
 text = "TR_BACK"
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

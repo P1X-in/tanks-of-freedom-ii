@@ -1,30 +1,23 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://d2g34lh4xlni8"]
 
-[ext_resource path="res://assets/gui/markers/tile_box.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32_neutral.tres" type="Material" id=2]
-[ext_resource path="res://scenes/ui/markers/movement_marker.gd" type="Script" id=3]
+[ext_resource type="ArrayMesh" uid="uid://cp4xylwlqbo56" path="res://assets/gui/markers/tile_box.obj" id="1"]
+[ext_resource type="Script" path="res://scenes/ui/markers/movement_marker.gd" id="3"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_ge5au"]
 
+[node name="movement_marker" type="Node3D"]
+script = ExtResource("3")
 
-[node name="movement_marker" type="Spatial"]
-script = ExtResource( 3 )
+[node name="offset" type="Node3D" parent="."]
+transform = Transform3D(0.9, 0, 0, 0, 1, 0, 0, 0, 0.9, 3.6, 0, 3.6)
 
-[node name="offset" type="Spatial" parent="."]
-transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.9, 3.6, 0, 3.6 )
-
-[node name="mesh1" type="MeshInstance" parent="offset"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -4 )
+[node name="mesh1" type="MeshInstance3D" parent="offset"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -4)
 cast_shadow = 0
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
-__meta__ = {
-"_editor_description_": ""
-}
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("3_ge5au")
 
-[node name="mesh2" type="MeshInstance" parent="offset"]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -4, 0.5, -4 )
+[node name="mesh2" type="MeshInstance3D" parent="offset"]
+transform = Transform3D(-1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -4, 0.5, -4)
 cast_shadow = 0
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
-__meta__ = {
-"_editor_description_": ""
-}
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("3_ge5au")

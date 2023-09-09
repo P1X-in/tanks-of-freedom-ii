@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/attack_marker.obj-0de7d115196d2cc01e4eafe8e5f253d8.mesh"
+uid="uid://b3y5andoavdw3"
+path="res://.godot/imported/attack_marker.obj-0de7d115196d2cc01e4eafe8e5f253d8.mesh"
 
 [deps]
 
-files=[ "res://.import/attack_marker.obj-0de7d115196d2cc01e4eafe8e5f253d8.mesh" ]
+files=["res://.godot/imported/attack_marker.obj-0de7d115196d2cc01e4eafe8e5f253d8.mesh"]
 
 source_file="res://assets/gui/markers/attack_marker.obj"
-dest_files=[ "res://.import/attack_marker.obj-0de7d115196d2cc01e4eafe8e5f253d8.mesh", "res://.import/attack_marker.obj-0de7d115196d2cc01e4eafe8e5f253d8.mesh" ]
+dest_files=["res://.godot/imported/attack_marker.obj-0de7d115196d2cc01e4eafe8e5f253d8.mesh", "res://.godot/imported/attack_marker.obj-0de7d115196d2cc01e4eafe8e5f253d8.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

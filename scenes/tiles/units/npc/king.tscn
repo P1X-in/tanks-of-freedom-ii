@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://8ifylio6a4dr"]
 
-[ext_resource path="res://assets/units/npcs/king.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32_yellow.tres" type="Material" id=2]
-[ext_resource path="res://scenes/tiles/units/npc/npc.tscn" type="PackedScene" id=3]
+[ext_resource type="ArrayMesh" uid="uid://gi2lreevpfrg" path="res://assets/units/npcs/king.obj" id="1"]
+[ext_resource type="Material" uid="uid://cmuoryv8gy5rs" path="res://assets/materials/arne32_yellow.tres" id="2"]
+[ext_resource type="PackedScene" uid="uid://dhp2upbfyqtoq" path="res://scenes/tiles/units/npc/npc.tscn" id="3"]
 
-[node name="king" instance=ExtResource( 3 )]
+[node name="king" instance=ExtResource("3")]
 unit_name = "TR_KING"
 side = "yellow"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2")
+
+[node name="standard" parent="mesh_anchor" index="1"]
+surface_material_override/0 = ExtResource("2")

@@ -1,16 +1,16 @@
 extends Node
 
-onready var mouse_layer = $"/root/MouseLayer"
+@onready var mouse_layer = $"/root/MouseLayer"
 var intro_played = false
 
 func main_menu():
     self.mouse_layer.detach()
-    return self.get_tree().change_scene("res://scenes/main_menu/main_menu.tscn")
+    return self.get_tree().change_scene_to_file("res://scenes/main_menu/main_menu.tscn")
 
 func map_editor():
     self.mouse_layer.detach()
-    return self.get_tree().change_scene("res://scenes/map_editor/editor.tscn")
+    return self.get_tree().change_scene_to_file("res://scenes/map_editor/editor.tscn")
 
 func board():
     self.mouse_layer.detach()
-    return self.get_tree().change_scene("res://scenes/board/board.tscn")
+    return self.get_tree().change_scene_to_file("res://scenes/board/board.tscn")

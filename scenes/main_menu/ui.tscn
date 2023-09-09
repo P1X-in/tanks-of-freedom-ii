@@ -1,198 +1,165 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=3 uid="uid://c2tt60y1onsj4"]
 
-[ext_resource path="res://scenes/main_menu/ui.gd" type="Script" id=1]
-[ext_resource path="res://scenes/ui/menu/logo_view.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/ui/menu/menu.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/gui/ui_theme.tres" type="Theme" id=4]
-[ext_resource path="res://scenes/ui/map_picker/picker.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/ui/menu/skirmish.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/ui/menu/settings.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/ui/menu/campaign_selection.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/ui/menu/campaign_mission_selection.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/ui/menu/campaign_mission.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/ui/menu/controls/controls.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/ui/save/saves.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/ui/online/online.tscn" type="PackedScene" id=13]
+[ext_resource type="Script" path="res://scenes/main_menu/ui.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://ejd2ser0yy34" path="res://scenes/ui/menu/logo_view.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cf7ix3pu4c806" path="res://scenes/ui/menu/menu.tscn" id="3"]
+[ext_resource type="Theme" path="res://assets/gui/ui_theme.tres" id="4"]
+[ext_resource type="PackedScene" uid="uid://b1tod34kr8cro" path="res://scenes/ui/map_picker/picker.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://bsjjhsr305hgj" path="res://scenes/ui/menu/skirmish.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://b6crhl6g0ory" path="res://scenes/ui/menu/settings.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://yrab27ll6oeh" path="res://scenes/ui/menu/campaign_selection.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://cyl32ydicrnad" path="res://scenes/ui/menu/campaign_mission_selection.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://b61jtis2h2knb" path="res://scenes/ui/menu/campaign_mission.tscn" id="10"]
+[ext_resource type="PackedScene" uid="uid://deovpfof2ipgn" path="res://scenes/ui/menu/controls/controls.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://4fm2h6kocq46" path="res://scenes/ui/save/saves.tscn" id="12"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="12_3ecm1"]
+[ext_resource type="PackedScene" uid="uid://d10shqx6iv5t7" path="res://scenes/ui/online/online.tscn" id="13"]
 
 [node name="ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( 4 )
-script = ExtResource( 1 )
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4")
+script = ExtResource("1")
 
 [node name="logo" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -160.0
-margin_bottom = -120.0
+offset_top = -160.0
+offset_bottom = -120.0
 
-[node name="logo_view" parent="logo" instance=ExtResource( 2 )]
+[node name="logo_view" parent="logo" instance=ExtResource("2")]
+zoom_value = 9.1
 
 [node name="options" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 6.10352e-05
-margin_top = 20.0
-margin_right = 6.10352e-05
-margin_bottom = 60.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = 6.10352e-05
+offset_top = 20.0
+offset_right = 6.10352e-05
+offset_bottom = 60.0
 
-[node name="menu" parent="options" instance=ExtResource( 3 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_bottom = 40.0
+[node name="menu" parent="options" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
 
 [node name="map_picker" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="picker" parent="map_picker" instance=ExtResource( 5 )]
+[node name="picker" parent="map_picker" instance=ExtResource("5")]
 
 [node name="skirmish" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -20.0
-margin_bottom = 20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_bottom = 40.0
 
-[node name="skirmish" parent="skirmish" instance=ExtResource( 6 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_bottom = 40.0
+[node name="skirmish" parent="skirmish" instance=ExtResource("6")]
+layout_mode = 2
 
 [node name="settings" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 6.10352e-05
-margin_top = 20.0
-margin_right = 6.10352e-05
-margin_bottom = 60.0
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+offset_bottom = 40.0
 
-[node name="settings" parent="settings" instance=ExtResource( 7 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_bottom = 40.0
+[node name="settings" parent="settings" instance=ExtResource("7")]
+layout_mode = 2
 
 [node name="controls" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 6.10352e-05
-margin_top = 20.0
-margin_right = 6.10352e-05
-margin_bottom = 60.0
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+offset_left = 6.10352e-05
+offset_top = 20.0
+offset_right = 6.10352e-05
+offset_bottom = 60.0
 
-[node name="controls" parent="controls" instance=ExtResource( 11 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_bottom = 40.0
+[node name="controls" parent="controls" instance=ExtResource("11")]
+layout_mode = 2
 
 [node name="campaign_selection" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -20.0
-margin_bottom = 20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_bottom = 40.0
 
-[node name="campaign_selection" parent="campaign_selection" instance=ExtResource( 8 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_right = 0.0
-margin_bottom = 40.0
+[node name="campaign_selection" parent="campaign_selection" instance=ExtResource("8")]
+layout_mode = 2
 
 [node name="campaign_mission_selection" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -20.0
-margin_bottom = 20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_bottom = 40.0
 
-[node name="campaign_mission_selection" parent="campaign_mission_selection" instance=ExtResource( 9 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_bottom = 40.0
+[node name="campaign_mission_selection" parent="campaign_mission_selection" instance=ExtResource("9")]
+layout_mode = 2
 
 [node name="campaign_mission" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -20.0
-margin_bottom = 20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_bottom = 40.0
 
-[node name="campaign_mission" parent="campaign_mission" instance=ExtResource( 10 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_bottom = 40.0
+[node name="campaign_mission" parent="campaign_mission" instance=ExtResource("10")]
+layout_mode = 2
 
 [node name="version" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = -40.0
-margin_right = 50.0
+offset_left = 10.0
+offset_top = -40.0
+offset_right = 50.0
 
 [node name="version" type="Label" parent="version"]
-margin_top = 10.0
-margin_right = 40.0
-margin_bottom = 29.0
+layout_mode = 2
+theme_override_fonts/font = ExtResource("12_3ecm1")
 
 [node name="saves" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = -20.0
-margin_bottom = -20.0
+offset_left = -20.0
+offset_right = -20.0
 
-[node name="saves" parent="saves" instance=ExtResource( 12 )]
+[node name="saves" parent="saves" instance=ExtResource("12")]
 
 [node name="online" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 
-[node name="online" parent="online" instance=ExtResource( 13 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="online" parent="online" instance=ExtResource("13")]
+layout_mode = 2

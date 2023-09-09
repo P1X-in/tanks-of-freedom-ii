@@ -1,12 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://c7kei6ns4fqac"]
 
-[ext_resource path="res://assets/units/yellow/tank.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://scenes/tiles/units/templates/tank.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/materials/arne32_metallic_yellow.tres" type="Material" id=3]
+[ext_resource type="ArrayMesh" uid="uid://cr16y5juavyp6" path="res://assets/units/yellow/tank.obj" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/tank.tscn" id="2"]
+[ext_resource type="Material" uid="uid://cmuoryv8gy5rs" path="res://assets/materials/arne32_yellow.tres" id="3_eo5hj"]
 
-[node name="tank" instance=ExtResource( 2 )]
+[node name="tank" instance=ExtResource("2")]
 side = "yellow"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 3 )
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("3_eo5hj")

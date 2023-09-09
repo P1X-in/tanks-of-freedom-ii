@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0ioawnk3cyws"
+path="res://.godot/imported/building_big_1_damaged.obj-b6b0b0a7967eec0471dcc4901739a958.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building_big_1_damaged.obj-b6b0b0a7967eec0471dcc4901739a958.mesh"]
+
+source_file="res://assets/terrain/grasslands/building_big_1_damaged.obj"
+dest_files=["res://.godot/imported/building_big_1_damaged.obj-b6b0b0a7967eec0471dcc4901739a958.mesh", "res://.godot/imported/building_big_1_damaged.obj-b6b0b0a7967eec0471dcc4901739a958.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

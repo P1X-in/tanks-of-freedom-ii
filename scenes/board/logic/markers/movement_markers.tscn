@@ -4,5 +4,5 @@
 
 
 
-[node name="movement_markers" type="Spatial"]
+[node name="movement_markers" type="Node3D"]
 script = ExtResource( 1 )

@@ -1,75 +1,180 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://b61jtis2h2knb"]
 
-[ext_resource path="res://scenes/ui/menu/base_menu_panel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/ui/menu/campaign_mission.gd" type="Script" id=2]
-[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=3]
-[ext_resource path="res://assets/fonts/courier_big.tres" type="DynamicFont" id=4]
-[ext_resource path="res://assets/fonts/courier_30.tres" type="DynamicFont" id=5]
+[ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/ui/menu/campaign_mission.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_l5xkv"]
 
-[node name="campaign_mission" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[sub_resource type="Animation" id="3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="1"]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="2"]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8lift"]
+_data = {
+"RESET": SubResource("3"),
+"hide": SubResource("1"),
+"show": SubResource("2")
+}
+
+[node name="campaign_mission" instance=ExtResource("1")]
+script = ExtResource("2")
 
 [node name="title" type="Label" parent="widgets" index="0"]
-margin_left = 40.0
-margin_top = 40.0
-margin_right = 1160.0
-margin_bottom = 105.0
-custom_fonts/font = ExtResource( 5 )
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 1160.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("3_l5xkv")
+theme_override_font_sizes/font_size = 30
 text = "Mission Title"
-align = 1
-valign = 1
-__meta__ = {
-"_editor_description_": ""
-}
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="description_background" type="ColorRect" parent="widgets" index="1"]
-margin_left = 40.0
-margin_top = 120.0
-margin_right = 1160.0
-margin_bottom = 470.0
-color = Color( 0.196078, 0.196078, 0.196078, 0.980392 )
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+layout_mode = 0
+offset_left = 40.0
+offset_top = 120.0
+offset_right = 1160.0
+offset_bottom = 470.0
+color = Color(0.196078, 0.196078, 0.196078, 0.980392)
 
 [node name="description" type="Label" parent="widgets" index="2"]
-margin_left = 50.0
-margin_top = 120.0
-margin_right = 1150.0
-margin_bottom = 470.0
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 0
+offset_left = 50.0
+offset_top = 120.0
+offset_right = 1150.0
+offset_bottom = 470.0
+theme_override_fonts/font = ExtResource("3_l5xkv")
 text = "Lorem Ipsum Dolor Sit Amet"
-align = 1
-valign = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="back_button" type="Button" parent="widgets" index="3"]
-margin_left = 550.0
-margin_top = 650.0
-margin_right = 650.0
-margin_bottom = 680.0
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 0
+offset_left = 550.0
+offset_top = 650.0
+offset_right = 650.0
+offset_bottom = 680.0
+theme_override_fonts/font = ExtResource("3_l5xkv")
 text = "TR_BACK"
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="start_button" type="Button" parent="widgets" index="4"]
-margin_left = 475.0
-margin_top = 500.0
-margin_right = 725.0
-margin_bottom = 600.0
-custom_fonts/font = ExtResource( 4 )
+layout_mode = 0
+offset_left = 475.0
+offset_top = 500.0
+offset_right = 725.0
+offset_bottom = 600.0
+theme_override_fonts/font = ExtResource("3_l5xkv")
+theme_override_font_sizes/font_size = 42
 text = "TR_START"
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
+
+[node name="animations" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_8lift")
 }
 
 [connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

@@ -1,35 +1,39 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://dfk0pnl01eotc"]
 
-[ext_resource path="res://scenes/ui/markers/tile_box.gd" type="Script" id=1]
-[ext_resource path="res://assets/gui/markers/tile_box.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://assets/materials/arne32_neutral.tres" type="Material" id=3]
+[ext_resource type="Script" path="res://scenes/ui/markers/tile_box.gd" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://cp4xylwlqbo56" path="res://assets/gui/markers/tile_box.obj" id="2"]
 
-
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "bob"
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
-tracks/0/path = NodePath("mesh:translation")
-tracks/0/interp = 2
-tracks/0/loop_wrap = false
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("mesh:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 1, 0 ), Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 1, 0), Vector3(0, 0, 0)]
 }
 
-[node name="tile_box" type="Spatial"]
-script = ExtResource( 1 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4helo"]
+_data = {
+"bob": SubResource("1")
+}
 
-[node name="mesh" type="MeshInstance" parent="."]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0.128656, 0 )
+[node name="tile_box" type="Node3D"]
+script = ExtResource("1")
+
+[node name="mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0)
 cast_shadow = 0
-mesh = ExtResource( 2 )
-material/0 = ExtResource( 3 )
+mesh = ExtResource("2")
 
 [node name="animations" type="AnimationPlayer" parent="."]
 autoplay = "bob"
-anims/bob = SubResource( 1 )
+libraries = {
+"": SubResource("AnimationLibrary_4helo")
+}

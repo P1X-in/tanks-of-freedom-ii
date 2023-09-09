@@ -1,22 +1,43 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://cry3kqpb8cvim"]
 
-[ext_resource path="res://default_env.tres" type="Environment" id=2]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5umwj"]
+load_path = "res://.godot/imported/kloppenheim_03_4k.hdr-9393188a22828feb8b70131e4dd3d668.bptc.ctex"
 
-[node name="tile_cam" type="Spatial"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_i00vh"]
+panorama = SubResource("CompressedTexture2D_5umwj")
 
-[node name="pivot" type="Spatial" parent="."]
-transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0 )
+[sub_resource type="Sky" id="1"]
+sky_material = SubResource("PanoramaSkyMaterial_i00vh")
 
-[node name="arm" type="Spatial" parent="pivot"]
-transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0 )
+[sub_resource type="Environment" id="Environment_gx6lk"]
+background_mode = 2
+sky = SubResource("1")
+sky_custom_fov = 70.0
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.2
+reflected_light_source = 1
+tonemap_mode = 3
+tonemap_white = 4.0
+ssao_enabled = true
+ssil_enabled = true
+adjustment_enabled = true
+adjustment_saturation = 1.1
 
-[node name="lens" type="Camera" parent="pivot/arm"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
+[node name="tile_cam" type="Node3D"]
+
+[node name="pivot" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="arm" type="Node3D" parent="pivot"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
+
+[node name="lens" type="Camera3D" parent="pivot/arm"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
 projection = 1
 size = 20.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource( 2 )
+environment = SubResource("Environment_gx6lk")
 
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0 )
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 50, 50)

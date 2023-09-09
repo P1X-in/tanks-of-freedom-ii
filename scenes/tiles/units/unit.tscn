@@ -1,112 +1,132 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://du53ax6xw71ai"]
 
-[ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/tiles/units/unit.gd" type="Script" id=2]
-[ext_resource path="res://scenes/fx/explosion.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/ui/board/voxel_star.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/audio/pickup_box.wav" type="AudioStream" id=5]
+[ext_resource type="PackedScene" path="res://scenes/tiles/tile.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/tiles/units/unit.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/fx/explosion.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://birqw0e7qiovc" path="res://scenes/ui/board/voxel_star.tscn" id="4"]
+[ext_resource type="AudioStream" uid="uid://d2ui51cs65ub2" path="res://assets/audio/pickup_box.wav" id="5"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "level_up"
 length = 12.0
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("voxel_star:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 12 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ true, false ]
+"values": [true, false]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("voxel_star:translation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
+tracks/1/path = NodePath("voxel_star:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 12 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 8, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 8, 0)]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 length = 0.5
 tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "_animate_next_path_segment"
-} ]
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_animate_next_path_segment"
+}]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("mesh_anchor:translation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
+tracks/1/path = NodePath("mesh_anchor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 8 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 8)]
 }
 
-[node name="unit" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aqf0r"]
+_data = {
+"level_up": SubResource("1"),
+"move": SubResource("2")
+}
 
-[node name="mesh_anchor" type="Spatial" parent="." index="0"]
+[node name="unit" instance=ExtResource("1")]
+script = ExtResource("2")
+unit_name = ""
+side = "neutral"
+material_type = "normal"
+max_hp = 10
+max_move = 4
+attack = 7
+armor = 2
+can_capture = false
+can_fly = false
+max_attacks = 1
+uses_metallic_material = false
+unit_value = 0
+unit_class = ""
 
-[node name="mesh" type="MeshInstance" parent="mesh_anchor" index="0"]
+[node name="mesh_anchor" type="Node3D" parent="." index="0"]
 
-[node name="activity_light" type="SpotLight" parent="mesh_anchor" index="1"]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 1, 0 )
+[node name="mesh" type="MeshInstance3D" parent="mesh_anchor" index="0"]
+
+[node name="activity_light" type="SpotLight3D" parent="mesh_anchor" index="1"]
+transform = Transform3D(1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 1, 0)
 visible = false
 light_energy = 80.0
 spot_range = 4.0
 spot_angle = 80.0
 
 [node name="animations" type="AnimationPlayer" parent="." index="1"]
-playback_speed = 6.0
-anims/level_up = SubResource( 1 )
-anims/move = SubResource( 2 )
+speed_scale = 6.0
+libraries = {
+"": SubResource("AnimationLibrary_aqf0r")
+}
 
-[node name="explosion" parent="." index="3" instance=ExtResource( 3 )]
+[node name="explosion" parent="." index="3" instance=ExtResource("3")]
 
-[node name="voxel_star" parent="." index="4" instance=ExtResource( 4 )]
+[node name="voxel_star" parent="." index="4" instance=ExtResource("4")]
 visible = false
 
 [node name="audio" type="Node" parent="." index="5"]
 
 [node name="spawn" type="AudioStreamPlayer" parent="audio" index="0"]
-bus = "Units"
+bus = &"Units"
 
 [node name="move" type="AudioStreamPlayer" parent="audio" index="1"]
-bus = "Units"
+bus = &"Units"
 
 [node name="attack" type="AudioStreamPlayer" parent="audio" index="2"]
-bus = "Attack"
+bus = &"Attack"
 
 [node name="hit" type="AudioStreamPlayer" parent="audio" index="3"]
-bus = "Attack"
+bus = &"Attack"
 
 [node name="damage" type="AudioStreamPlayer" parent="audio" index="4"]
-bus = "Damage"
+bus = &"Damage"
 
 [node name="die" type="AudioStreamPlayer" parent="audio" index="5"]
-bus = "Explosion"
+bus = &"Explosion"
 
 [node name="level_up" type="AudioStreamPlayer" parent="audio" index="6"]
-stream = ExtResource( 5 )
-bus = "Units"
+stream = ExtResource("5")
+bus = &"Units"

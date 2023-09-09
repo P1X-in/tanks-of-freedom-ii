@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/scout_heli_rotor.obj-1020da16dbafe94b5b50d04ed1f69104.mesh"
+uid="uid://d1fxypqw3pwec"
+path="res://.godot/imported/scout_heli_rotor.obj-1020da16dbafe94b5b50d04ed1f69104.mesh"
 
 [deps]
 
-files=[ "res://.import/scout_heli_rotor.obj-1020da16dbafe94b5b50d04ed1f69104.mesh" ]
+files=["res://.godot/imported/scout_heli_rotor.obj-1020da16dbafe94b5b50d04ed1f69104.mesh"]
 
 source_file="res://assets/units/blue/scout_heli_rotor.obj"
-dest_files=[ "res://.import/scout_heli_rotor.obj-1020da16dbafe94b5b50d04ed1f69104.mesh", "res://.import/scout_heli_rotor.obj-1020da16dbafe94b5b50d04ed1f69104.mesh" ]
+dest_files=["res://.godot/imported/scout_heli_rotor.obj-1020da16dbafe94b5b50d04ed1f69104.mesh", "res://.godot/imported/scout_heli_rotor.obj-1020da16dbafe94b5b50d04ed1f69104.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

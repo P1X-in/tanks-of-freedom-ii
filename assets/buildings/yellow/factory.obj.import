@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/factory.obj-c996543fc88954a77ec1c7e323a31740.mesh"
+uid="uid://c0ass5a6tjm7y"
+path="res://.godot/imported/factory.obj-c996543fc88954a77ec1c7e323a31740.mesh"
 
 [deps]
 
-files=[ "res://.import/factory.obj-c996543fc88954a77ec1c7e323a31740.mesh" ]
+files=["res://.godot/imported/factory.obj-c996543fc88954a77ec1c7e323a31740.mesh"]
 
 source_file="res://assets/buildings/yellow/factory.obj"
-dest_files=[ "res://.import/factory.obj-c996543fc88954a77ec1c7e323a31740.mesh", "res://.import/factory.obj-c996543fc88954a77ec1c7e323a31740.mesh" ]
+dest_files=["res://.godot/imported/factory.obj-c996543fc88954a77ec1c7e323a31740.mesh", "res://.godot/imported/factory.obj-c996543fc88954a77ec1c7e323a31740.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

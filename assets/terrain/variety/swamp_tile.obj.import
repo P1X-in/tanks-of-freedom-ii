@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cecllur4qq084"
+path="res://.godot/imported/swamp_tile.obj-b3f913d7a9b766821bdfe29d413866ef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/swamp_tile.obj-b3f913d7a9b766821bdfe29d413866ef.mesh"]
+
+source_file="res://assets/terrain/variety/swamp_tile.obj"
+dest_files=["res://.godot/imported/swamp_tile.obj-b3f913d7a9b766821bdfe29d413866ef.mesh", "res://.godot/imported/swamp_tile.obj-b3f913d7a9b766821bdfe29d413866ef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

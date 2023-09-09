@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d2dxipr02jihx"
+path="res://.godot/imported/rocks_1_overtile.obj-2ae634a6f3f4d8fbe95f72ad9e4ba4c7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rocks_1_overtile.obj-2ae634a6f3f4d8fbe95f72ad9e4ba4c7.mesh"]
+
+source_file="res://assets/terrain/grasslands/rocks_1_overtile.obj"
+dest_files=["res://.godot/imported/rocks_1_overtile.obj-2ae634a6f3f4d8fbe95f72ad9e4ba4c7.mesh", "res://.godot/imported/rocks_1_overtile.obj-2ae634a6f3f4d8fbe95f72ad9e4ba4c7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

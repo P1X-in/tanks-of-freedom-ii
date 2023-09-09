@@ -1,37 +1,43 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://bhevhm6o3i72h"]
 
-[ext_resource path="res://assets/fonts/courier.tres" type="DynamicFont" id=1]
-[ext_resource path="res://scenes/ui/menu/setting_slider.gd" type="Script" id=2]
+[ext_resource type="Script" path="res://scenes/ui/menu/setting_slider.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_3pyw3"]
 
 [node name="option" type="Control"]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 470.0
-margin_bottom = 70.0
-script = ExtResource( 2 )
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 470.0
+offset_bottom = 70.0
+script = ExtResource("2")
 
 [node name="label" type="Label" parent="."]
-margin_left = 3.0
-margin_right = 253.0
-margin_bottom = 50.0
-custom_fonts/font = ExtResource( 1 )
+layout_mode = 0
+offset_left = 3.0
+offset_right = 253.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("2_3pyw3")
 text = "Option
 "
-valign = 1
+vertical_alignment = 1
 
 [node name="slider_value" type="Label" parent="."]
-margin_left = 200.0
-margin_right = 250.0
-margin_bottom = 50.0
-custom_fonts/font = ExtResource( 1 )
+layout_mode = 0
+offset_left = 200.0
+offset_right = 250.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("2_3pyw3")
 text = "10
 "
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="slider" type="HSlider" parent="."]
-margin_left = 250.0
-margin_right = 450.0
-margin_bottom = 50.0
+layout_mode = 0
+offset_left = 250.0
+offset_right = 450.0
+offset_bottom = 50.0
 max_value = 10.0
 
 [connection signal="focus_entered" from="slider" to="." method="_show_help"]

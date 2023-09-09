@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/big_rocks_4_overtile.obj-017769ee95868ee8fadb7643ee2f3936.mesh"
+uid="uid://dadrsvlrptife"
+path="res://.godot/imported/big_rocks_4_overtile.obj-017769ee95868ee8fadb7643ee2f3936.mesh"
 
 [deps]
 
-files=[ "res://.import/big_rocks_4_overtile.obj-017769ee95868ee8fadb7643ee2f3936.mesh" ]
+files=["res://.godot/imported/big_rocks_4_overtile.obj-017769ee95868ee8fadb7643ee2f3936.mesh"]
 
 source_file="res://assets/terrain/grasslands/big_rocks_4_overtile.obj"
-dest_files=[ "res://.import/big_rocks_4_overtile.obj-017769ee95868ee8fadb7643ee2f3936.mesh", "res://.import/big_rocks_4_overtile.obj-017769ee95868ee8fadb7643ee2f3936.mesh" ]
+dest_files=["res://.godot/imported/big_rocks_4_overtile.obj-017769ee95868ee8fadb7643ee2f3936.mesh", "res://.godot/imported/big_rocks_4_overtile.obj-017769ee95868ee8fadb7643ee2f3936.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

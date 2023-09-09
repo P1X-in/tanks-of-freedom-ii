@@ -1,82 +1,96 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://3o50cgqau2vx"]
 
-[ext_resource path="res://assets/units/green/heli_rotor.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32_metallic.tres" type="Material" id=2]
+[ext_resource type="ArrayMesh" uid="uid://lxll07864mt1" path="res://assets/units/green/heli_rotor.obj" id="1"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="2_ddwm0"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "rotate"
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 90, 0)]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:translation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( -1.3, 1.4, 0.1 ), Vector3( -1.3, 1.4, 0.2 ) ]
+"values": [Vector3(-1.3, 1.4, 0.1), Vector3(-1.3, 1.4, 0.2)]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k2i6m"]
+_data = {
+"rotate": SubResource("1")
+}
+
+[sub_resource type="Animation" id="2"]
 resource_name = "rotate"
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 90, 0)]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:translation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 1.2, 1.4, 0.1 ), Vector3( 1.2, 1.4, 0.2 ) ]
+"values": [Vector3(1.2, 1.4, 0.1), Vector3(1.2, 1.4, 0.2)]
 }
 
-[node name="rotor" type="Spatial"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_njllm"]
+_data = {
+"rotate": SubResource("2")
+}
 
-[node name="rotor" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 1.4, 0.1 )
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+[node name="rotor" type="Node3D"]
+
+[node name="rotor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 1.4, 0.1)
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2_ddwm0")
 
 [node name="animations" type="AnimationPlayer" parent="rotor"]
 autoplay = "rotate"
-playback_speed = 8.0
-anims/rotate = SubResource( 1 )
+speed_scale = 8.0
+libraries = {
+"": SubResource("AnimationLibrary_k2i6m")
+}
 
-[node name="rotor2" type="MeshInstance" parent="."]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.2, 1.4, 0.2 )
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+[node name="rotor2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1.4, 0.1)
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2_ddwm0")
 
 [node name="animations" type="AnimationPlayer" parent="rotor2"]
 autoplay = "rotate"
-playback_speed = 8.0
-anims/rotate = SubResource( 2 )
+speed_scale = 8.0
+libraries = {
+"": SubResource("AnimationLibrary_njllm")
+}

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/not_dead.wav-071194a243e196f23c9431b9a92f8a91.sample"
+type="AudioStreamWAV"
+uid="uid://bi8lbeok55w1i"
+path="res://.godot/imported/not_dead.wav-071194a243e196f23c9431b9a92f8a91.sample"
 
 [deps]
 
 source_file="res://assets/audio/not_dead.wav"
-dest_files=[ "res://.import/not_dead.wav-071194a243e196f23c9431b9a92f8a91.sample" ]
+dest_files=["res://.godot/imported/not_dead.wav-071194a243e196f23c9431b9a92f8a91.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

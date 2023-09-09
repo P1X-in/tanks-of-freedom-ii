@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/river_1_reflection.obj-7b90945bbe07c7cb2eaca5441fa9ac29.mesh"
+uid="uid://barsfaj5o0s3s"
+path="res://.godot/imported/river_1_reflection.obj-7b90945bbe07c7cb2eaca5441fa9ac29.mesh"
 
 [deps]
 
-files=[ "res://.import/river_1_reflection.obj-7b90945bbe07c7cb2eaca5441fa9ac29.mesh" ]
+files=["res://.godot/imported/river_1_reflection.obj-7b90945bbe07c7cb2eaca5441fa9ac29.mesh"]
 
 source_file="res://assets/terrain/reflections/river_1_reflection.obj"
-dest_files=[ "res://.import/river_1_reflection.obj-7b90945bbe07c7cb2eaca5441fa9ac29.mesh", "res://.import/river_1_reflection.obj-7b90945bbe07c7cb2eaca5441fa9ac29.mesh" ]
+dest_files=["res://.godot/imported/river_1_reflection.obj-7b90945bbe07c7cb2eaca5441fa9ac29.mesh", "res://.godot/imported/river_1_reflection.obj-7b90945bbe07c7cb2eaca5441fa9ac29.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5e2bh0r7kc6y"
+path="res://.godot/imported/road_4_overtile.obj-78342e84e53867643ae261cc51127f32.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_4_overtile.obj-78342e84e53867643ae261cc51127f32.mesh"]
+
+source_file="res://assets/terrain/grasslands/road_4_overtile.obj"
+dest_files=["res://.godot/imported/road_4_overtile.obj-78342e84e53867643ae261cc51127f32.mesh", "res://.godot/imported/road_4_overtile.obj-78342e84e53867643ae261cc51127f32.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

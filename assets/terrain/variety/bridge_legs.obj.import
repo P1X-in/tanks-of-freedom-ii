@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dpr8pf2pr6xug"
+path="res://.godot/imported/bridge_legs.obj-86b6fddd3be0c5051acae6e802f70101.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bridge_legs.obj-86b6fddd3be0c5051acae6e802f70101.mesh"]
+
+source_file="res://assets/terrain/variety/bridge_legs.obj"
+dest_files=["res://.godot/imported/bridge_legs.obj-86b6fddd3be0c5051acae6e802f70101.mesh", "res://.godot/imported/bridge_legs.obj-86b6fddd3be0c5051acae6e802f70101.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

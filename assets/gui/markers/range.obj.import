@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/range.obj-f8c51599a9d7173b2ad40d52f5c2111b.mesh"
+uid="uid://bq621q1uwybbj"
+path="res://.godot/imported/range.obj-f8c51599a9d7173b2ad40d52f5c2111b.mesh"
 
 [deps]
 
-files=[ "res://.import/range.obj-f8c51599a9d7173b2ad40d52f5c2111b.mesh" ]
+files=["res://.godot/imported/range.obj-f8c51599a9d7173b2ad40d52f5c2111b.mesh"]
 
 source_file="res://assets/gui/markers/range.obj"
-dest_files=[ "res://.import/range.obj-f8c51599a9d7173b2ad40d52f5c2111b.mesh", "res://.import/range.obj-f8c51599a9d7173b2ad40d52f5c2111b.mesh" ]
+dest_files=["res://.godot/imported/range.obj-f8c51599a9d7173b2ad40d52f5c2111b.mesh", "res://.godot/imported/range.obj-f8c51599a9d7173b2ad40d52f5c2111b.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

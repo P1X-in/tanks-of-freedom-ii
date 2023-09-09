@@ -21,7 +21,7 @@ func save_map_file(filename):
 
 func load_map_file(filename):
     var content = MapManager.get_map_data(filename)
-    if content.empty():
+    if content.is_empty():
         return
 
     self.map.builder.wipe_map()

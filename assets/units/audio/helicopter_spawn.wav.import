@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/helicopter_spawn.wav-cc76f44be960700ea3cce45b5775b8bb.sample"
+type="AudioStreamWAV"
+uid="uid://cody2p5emhboe"
+path="res://.godot/imported/helicopter_spawn.wav-cc76f44be960700ea3cce45b5775b8bb.sample"
 
 [deps]
 
 source_file="res://assets/units/audio/helicopter_spawn.wav"
-dest_files=[ "res://.import/helicopter_spawn.wav-cc76f44be960700ea3cce45b5775b8bb.sample" ]
+dest_files=["res://.godot/imported/helicopter_spawn.wav-cc76f44be960700ea3cce45b5775b8bb.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

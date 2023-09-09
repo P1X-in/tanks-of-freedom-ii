@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/logo.obj-3165e596d62edfc08a135096ac154f8b.mesh"
+uid="uid://cliejenmqtm6e"
+path="res://.godot/imported/logo.obj-3165e596d62edfc08a135096ac154f8b.mesh"
 
 [deps]
 
-files=[ "res://.import/logo.obj-3165e596d62edfc08a135096ac154f8b.mesh" ]
+files=["res://.godot/imported/logo.obj-3165e596d62edfc08a135096ac154f8b.mesh"]
 
 source_file="res://assets/gui/menu/logo.obj"
-dest_files=[ "res://.import/logo.obj-3165e596d62edfc08a135096ac154f8b.mesh", "res://.import/logo.obj-3165e596d62edfc08a135096ac154f8b.mesh" ]
+dest_files=["res://.godot/imported/logo.obj-3165e596d62edfc08a135096ac154f8b.mesh", "res://.godot/imported/logo.obj-3165e596d62edfc08a135096ac154f8b.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

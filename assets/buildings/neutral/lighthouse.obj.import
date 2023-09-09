@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/lighthouse.obj-bf09655c9c5bc16e652174bdf320c57e.mesh"
+uid="uid://bely6vwtk66qv"
+path="res://.godot/imported/lighthouse.obj-bf09655c9c5bc16e652174bdf320c57e.mesh"
 
 [deps]
 
-files=[ "res://.import/lighthouse.obj-bf09655c9c5bc16e652174bdf320c57e.mesh" ]
+files=["res://.godot/imported/lighthouse.obj-bf09655c9c5bc16e652174bdf320c57e.mesh"]
 
 source_file="res://assets/buildings/neutral/lighthouse.obj"
-dest_files=[ "res://.import/lighthouse.obj-bf09655c9c5bc16e652174bdf320c57e.mesh", "res://.import/lighthouse.obj-bf09655c9c5bc16e652174bdf320c57e.mesh" ]
+dest_files=["res://.godot/imported/lighthouse.obj-bf09655c9c5bc16e652174bdf320c57e.mesh", "res://.godot/imported/lighthouse.obj-bf09655c9c5bc16e652174bdf320c57e.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

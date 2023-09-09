@@ -1,8 +1,8 @@
 extends Node
 
 const DEADZONE = 0.5
-const MOVEMENT_AXIS_X = JOY_ANALOG_LX
-const MOVEMENT_AXIS_Y = JOY_ANALOG_LY
+const MOVEMENT_AXIS_X = JOY_AXIS_LEFT_X
+const MOVEMENT_AXIS_Y = JOY_AXIS_LEFT_Y
 
 const UI_UP = "ui_up"
 const UI_DOWN = "ui_down"
@@ -21,83 +21,84 @@ var enabled = false
 var ticks = 0
 
 func _ready():
-    self.disable()
+	self.disable()
 
 func enable():
-    self.enabled = true
-    self.set_physics_process(true)
+	self.enabled = true
+	self.set_physics_process(true)
 
 func disable():
-    self.set_physics_process(false)
-    self.enabled = false
-    self.reset()
+	self.set_physics_process(false)
+	self.enabled = false
+	self.reset()
 
 func reset():
-    var directions = [self.UI_UP, self.UI_DOWN, self.UI_LEFT, self.UI_RIGHT]
+	var directions = [self.UI_UP, self.UI_DOWN, self.UI_LEFT, self.UI_RIGHT]
 
-    for direction in directions:
-        self.state[direction] = {
-            "pressed" : false,
-            "delay" : 0
-        }
+	for direction in directions:
+		self.state[direction] = {
+			"pressed" : false,
+			"delay" : 0
+		}
 
 func _physics_process(delta):
-    if not OS.is_window_focused():
-        return
+	if not get_window().has_focus():
+		return
 
-    if not self.enabled:
-        return
+	if not self.enabled:
+		return
 
-    self.increment_directions(delta)
-    var axis_value = Vector2()
+	self.increment_directions(delta)
+	var axis_value = Vector2()
 
-    axis_value.x = Input.get_joy_axis(self.device_id, MOVEMENT_AXIS_X)
-    axis_value.y = Input.get_joy_axis(self.device_id, MOVEMENT_AXIS_Y)
+	axis_value.x = Input.get_joy_axis(self.device_id, MOVEMENT_AXIS_X)
+	axis_value.y = Input.get_joy_axis(self.device_id, MOVEMENT_AXIS_Y)
 
-    if abs(axis_value.x) > self.DEADZONE:
-        if axis_value.x > 0:
-            self.handle_direction(self.UI_RIGHT)
-        else:
-            self.handle_direction(self.UI_LEFT)
-    elif abs(axis_value.y) > self.DEADZONE:
-        if axis_value.y > 0:
-            self.handle_direction(self.UI_DOWN)
-        else:
-            self.handle_direction(self.UI_UP)
-    else:
-        self.increment_directions(self.BUTTON_INTERVAL)
-        self.ticks = 0
+	if abs(axis_value.x) > self.DEADZONE:
+		if axis_value.x > 0:
+			self.handle_direction(self.UI_RIGHT)
+		else:
+			self.handle_direction(self.UI_LEFT)
+	elif abs(axis_value.y) > self.DEADZONE:
+		if axis_value.y > 0:
+			self.handle_direction(self.UI_DOWN)
+		else:
+			self.handle_direction(self.UI_UP)
+	else:
+		self.increment_directions(self.BUTTON_INTERVAL)
+		self.ticks = 0
 
 
 func increment_directions(delta):
-    for direction in self.state.keys():
-        self.state[direction]["delay"] += delta * 1000
+	for direction in self.state.keys():
+		self.state[direction]["delay"] += delta * 1000
 
 func handle_direction(direction):
-    if self.state[direction]["pressed"]:
-        self.state[direction]["pressed"] = false
+	if self.state[direction]["pressed"]:
+		self.state[direction]["pressed"] = false
 
-        self.emit_event(direction, false)
-        return
+		self.emit_event(direction, false)
+		return
 
-    var step_delay = self.BUTTON_INTERVAL
-    if self.ticks > 1:
-        step_delay = step_delay / 2
-    if self.state[direction]["delay"] > step_delay:
-        self.state[direction]["pressed"] = true
-        self.state[direction]["delay"] = 0
+	var step_delay = self.BUTTON_INTERVAL
+	if self.ticks > 1:
+		@warning_ignore("integer_division")
+		step_delay = step_delay / 2
+	if self.state[direction]["delay"] > step_delay:
+		self.state[direction]["pressed"] = true
+		self.state[direction]["delay"] = 0
 
-        self.emit_event(direction, true)
-        self.ticks += 1
+		self.emit_event(direction, true)
+		self.ticks += 1
 
 func emit_event(direction, pressed):
-    if pressed:
-        Input.action_press(direction)
-    else:
-        Input.action_release(direction)
+	if pressed:
+		Input.action_press(direction)
+	else:
+		Input.action_release(direction)
 
-    var ev = InputEventAction.new()
-    ev.set_action(direction)
-    ev.set_pressed(pressed)
-    self.get_tree().input_event(ev)
+	var ev = InputEventAction.new()
+	ev.set_action(direction)
+	ev.set_pressed(pressed)
+	Input.parse_input_event(ev)
 

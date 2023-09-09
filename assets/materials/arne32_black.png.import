@@ -1,37 +1,14 @@
 [remap]
 
-importer="texture"
-type="StreamTexture"
-path.s3tc="res://.import/arne32_black.png-bd80cd31c4e53f1944b18ec94f06e496.s3tc.stex"
-path.etc2="res://.import/arne32_black.png-bd80cd31c4e53f1944b18ec94f06e496.etc2.stex"
-metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
-}
+importer="image"
+type="Image"
+uid="uid://dcj0lt6m4npon"
+path="res://.godot/imported/arne32_black.png-bd80cd31c4e53f1944b18ec94f06e496.image"
 
 [deps]
 
 source_file="res://assets/materials/arne32_black.png"
-dest_files=[ "res://.import/arne32_black.png-bd80cd31c4e53f1944b18ec94f06e496.s3tc.stex", "res://.import/arne32_black.png-bd80cd31c4e53f1944b18ec94f06e496.etc2.stex" ]
+dest_files=["res://.godot/imported/arne32_black.png-bd80cd31c4e53f1944b18ec94f06e496.image"]
 
 [params]
 
-compress/mode=2
-compress/lossy_quality=0.7
-compress/hdr_mode=1
-compress/bptc_ldr=0
-compress/normal_map=0
-flags/repeat=true
-flags/filter=true
-flags/mipmaps=true
-flags/anisotropic=false
-flags/srgb=1
-process/fix_alpha_border=false
-process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
-process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=false
-svg/scale=1.0

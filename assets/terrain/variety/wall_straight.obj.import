@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/wall_straight.obj-4c9bc1e5f7efd17bcd6d50ddbffd6125.mesh"
+uid="uid://cxo4bal8afbm4"
+path="res://.godot/imported/wall_straight.obj-4c9bc1e5f7efd17bcd6d50ddbffd6125.mesh"
 
 [deps]
 
-files=[ "res://.import/wall_straight.obj-4c9bc1e5f7efd17bcd6d50ddbffd6125.mesh" ]
+files=["res://.godot/imported/wall_straight.obj-4c9bc1e5f7efd17bcd6d50ddbffd6125.mesh"]
 
 source_file="res://assets/terrain/variety/wall_straight.obj"
-dest_files=[ "res://.import/wall_straight.obj-4c9bc1e5f7efd17bcd6d50ddbffd6125.mesh", "res://.import/wall_straight.obj-4c9bc1e5f7efd17bcd6d50ddbffd6125.mesh" ]
+dest_files=["res://.godot/imported/wall_straight.obj-4c9bc1e5f7efd17bcd6d50ddbffd6125.mesh", "res://.godot/imported/wall_straight.obj-4c9bc1e5f7efd17bcd6d50ddbffd6125.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

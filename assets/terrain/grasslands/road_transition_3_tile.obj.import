@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/road_transition_3_tile.obj-cbe30f704d832f76c2510486e97b3528.mesh"
+uid="uid://dyd3ps346dc4a"
+path="res://.godot/imported/road_transition_3_tile.obj-cbe30f704d832f76c2510486e97b3528.mesh"
 
 [deps]
 
-files=[ "res://.import/road_transition_3_tile.obj-cbe30f704d832f76c2510486e97b3528.mesh" ]
+files=["res://.godot/imported/road_transition_3_tile.obj-cbe30f704d832f76c2510486e97b3528.mesh"]
 
 source_file="res://assets/terrain/grasslands/road_transition_3_tile.obj"
-dest_files=[ "res://.import/road_transition_3_tile.obj-cbe30f704d832f76c2510486e97b3528.mesh", "res://.import/road_transition_3_tile.obj-cbe30f704d832f76c2510486e97b3528.mesh" ]
+dest_files=["res://.godot/imported/road_transition_3_tile.obj-cbe30f704d832f76c2510486e97b3528.mesh", "res://.godot/imported/road_transition_3_tile.obj-cbe30f704d832f76c2510486e97b3528.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

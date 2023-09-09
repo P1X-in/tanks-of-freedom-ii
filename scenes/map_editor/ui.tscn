@@ -1,295 +1,290 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=3 uid="uid://c0go1rlnp6vju"]
 
-[ext_resource path="res://scenes/map_editor/ui.gd" type="Script" id=1]
-[ext_resource path="res://scenes/map_editor/tile_view.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/ui/radial/radial.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/ui/map_picker/picker.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/ui/minimap/minimap.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/gui/ui_theme.tres" type="Theme" id=6]
-[ext_resource path="res://scenes/ui/menu/controls/editor.tscn" type="PackedScene" id=7]
+[ext_resource type="Script" path="res://scenes/map_editor/ui.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://k2hh8e6861ja" path="res://scenes/map_editor/tile_view.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/radial/radial.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://b1tod34kr8cro" path="res://scenes/ui/map_picker/picker.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b68vtard4p6s3" path="res://scenes/ui/minimap/minimap.tscn" id="5"]
+[ext_resource type="Theme" path="res://assets/gui/ui_theme.tres" id="6"]
+[ext_resource type="PackedScene" uid="uid://bfxvqvxbfeppg" path="res://scenes/ui/menu/controls/editor.tscn" id="7"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "hide"
 length = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("wrapper:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ true, false ]
+"values": [true, false]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("wrapper:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 resource_name = "show"
 length = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("wrapper:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ true, true ]
+"values": [true, true]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("wrapper:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gsio6"]
+_data = {
+"hide": SubResource("1"),
+"show": SubResource("2")
+}
+
+[sub_resource type="Animation" id="3"]
 resource_name = "hide"
 length = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ true, false ]
+"values": [true, false]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector2( 0.5, 0.5 ), Vector2( 1e-05, 1e-05 ) ]
+"values": [Vector2(0.5, 0.5), Vector2(1e-05, 1e-05)]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id="4"]
 resource_name = "show"
 length = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ true, true ]
+"values": [true, true]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 0.5, 0.5 ) ]
+"values": [Vector2(1e-05, 1e-05), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_46jqh"]
+_data = {
+"hide": SubResource("3"),
+"show": SubResource("4")
 }
 
 [node name="ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
-theme = ExtResource( 6 )
-script = ExtResource( 1 )
+theme = ExtResource("6")
+script = ExtResource("1")
 
 [node name="position" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 15.0
-margin_top = -290.0
-margin_right = 150.0
-margin_bottom = -265.162
-custom_constants/margin_right = 0
-custom_constants/margin_top = 0
-custom_constants/margin_left = 0
-custom_constants/margin_bottom = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = 15.0
+offset_top = -290.0
+offset_right = 150.0
+offset_bottom = -265.162
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
 
 [node name="label" type="Label" parent="position"]
-margin_top = 2.0
-margin_right = 135.0
-margin_bottom = 21.0
+layout_mode = 2
 text = "[0, 0]"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="map_name" type="MarginContainer" parent="."]
 visible = false
-margin_right = 30.0
-margin_bottom = 54.0
-custom_constants/margin_right = 10
-custom_constants/margin_top = 10
-custom_constants/margin_left = 10
-custom_constants/margin_bottom = 10
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 54.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
 [node name="background" type="ColorRect" parent="map_name"]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 20.0
-margin_bottom = 44.0
-color = Color( 0.196078, 0.196078, 0.196078, 0.823529 )
+layout_mode = 2
+color = Color(0.196078, 0.196078, 0.196078, 0.823529)
 
 [node name="inner" type="MarginContainer" parent="map_name"]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 20.0
-margin_bottom = 44.0
-custom_constants/margin_right = 5
-custom_constants/margin_top = 0
-custom_constants/margin_left = 5
-custom_constants/margin_bottom = 0
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 0
 
 [node name="label" type="Label" parent="map_name/inner"]
-margin_left = 5.0
-margin_top = 7.0
-margin_right = 5.0
-margin_bottom = 26.0
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 2
 
 [node name="tile" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -267.0
-margin_top = -236.0
-margin_right = -67.0
-margin_bottom = -36.0
-custom_constants/margin_right = 20
-custom_constants/margin_top = 20
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = -267.0
+offset_top = -236.0
+offset_right = -67.0
+offset_bottom = -36.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
 [node name="wrapper" type="Node2D" parent="tile"]
-position = Vector2( 100, 100 )
+position = Vector2(100, 100)
 
-[node name="tile_view_prev" parent="tile/wrapper" instance=ExtResource( 2 )]
-position = Vector2( -100, -30 )
+[node name="tile_view_prev" parent="tile/wrapper" instance=ExtResource("2")]
+position = Vector2(-100, -30)
 viewport_size = 40
 is_side_tile = true
 
-[node name="tile_type_next" parent="tile/wrapper" instance=ExtResource( 2 )]
-position = Vector2( 0, -130 )
+[node name="tile_type_next" parent="tile/wrapper" instance=ExtResource("2")]
+position = Vector2(0, -130)
 viewport_size = 40
 is_side_tile = true
 
-[node name="tile_type_prev" parent="tile/wrapper" instance=ExtResource( 2 )]
-position = Vector2( 0, 70 )
+[node name="tile_type_prev" parent="tile/wrapper" instance=ExtResource("2")]
+position = Vector2(0, 70)
 viewport_size = 40
 is_side_tile = true
 
-[node name="tile_view_next" parent="tile/wrapper" instance=ExtResource( 2 )]
-position = Vector2( 100, -30 )
+[node name="tile_view_next" parent="tile/wrapper" instance=ExtResource("2")]
+position = Vector2(100, -30)
 viewport_size = 40
 is_side_tile = true
 
-[node name="tile_view_current" parent="tile/wrapper" instance=ExtResource( 2 )]
-position = Vector2( 0, -30 )
+[node name="tile_view_current" parent="tile/wrapper" instance=ExtResource("2")]
+position = Vector2(0, -30)
 
 [node name="animations" type="AnimationPlayer" parent="tile"]
-playback_speed = 4.0
-anims/hide = SubResource( 1 )
-anims/show = SubResource( 2 )
-
-[node name="radial" type="MarginContainer" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
-
-[node name="radial" parent="radial" instance=ExtResource( 3 )]
-
-[node name="picker" type="MarginContainer" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-custom_constants/margin_right = 20
-custom_constants/margin_top = 20
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
-__meta__ = {
-"_edit_use_anchors_": false
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_gsio6")
 }
 
-[node name="picker" parent="picker" instance=ExtResource( 4 )]
+[node name="radial" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="radial" parent="radial" instance=ExtResource("3")]
+
+[node name="picker" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="picker" parent="picker" instance=ExtResource("4")]
 
 [node name="controls" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -720.0
-margin_right = 80.0
-margin_bottom = 600.0
-rect_scale = Vector2( 0.9, 0.9 )
+offset_left = -720.0
+offset_right = 80.0
+offset_bottom = 600.0
+scale = Vector2(0.9, 0.9)
 mouse_filter = 2
 
-[node name="editor" parent="controls" instance=ExtResource( 7 )]
+[node name="editor" parent="controls" instance=ExtResource("7")]
 visible = false
-margin_right = 800.0
-margin_bottom = 600.0
+layout_mode = 2
 
-[node name="minimap" parent="." instance=ExtResource( 5 )]
+[node name="minimap" parent="." instance=ExtResource("5")]
+layout_mode = 1
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 140.0
-margin_top = -140.0
-margin_right = 180.0
-margin_bottom = -100.0
-rect_scale = Vector2( 0.5, 0.5 )
+offset_left = 140.0
+offset_top = -140.0
+offset_right = 180.0
+offset_bottom = -100.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 
 [node name="animations" type="AnimationPlayer" parent="minimap"]
-playback_speed = 4.0
-anims/hide = SubResource( 3 )
-anims/show = SubResource( 4 )
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_46jqh")
+}

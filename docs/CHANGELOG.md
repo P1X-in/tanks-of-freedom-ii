@@ -1,6 +1,11 @@
 # Tanks of Freedom 3D
 ## Changelog
 
+### 0.5.0-alpha
+- Ported game project to Godot Engine 4
+- Fixed a team designation bug that made Tutorial 2 getting stuck
+- Fixed a mouse camera drag bug
+
 ### 0.4.0-alpha
 - Added Amber Noon campaign
 - Added Epilogue

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://r34sx3ub4q52"
+path="res://.godot/imported/flyable_tile.obj-bf7900370c1810b8e5124513f78d9b6f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/flyable_tile.obj-bf7900370c1810b8e5124513f78d9b6f.mesh"]
+
+source_file="res://assets/terrain/variety/flyable_tile.obj"
+dest_files=["res://.godot/imported/flyable_tile.obj-bf7900370c1810b8e5124513f78d9b6f.mesh", "res://.godot/imported/flyable_tile.obj-bf7900370c1810b8e5124513f78d9b6f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

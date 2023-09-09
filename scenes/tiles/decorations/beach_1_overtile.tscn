@@ -13,10 +13,10 @@ side_tile_view_cam_modifier = -25
 cast_shadow = 0
 
 [node name="deckchair_1" parent="mesh" index="0" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, 1.5 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, 1.5 )
 
 [node name="deckchair_2" parent="mesh" index="1" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, 2 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, 2 )
 
 [node name="umbrella_3" parent="mesh" index="2" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.6, 0, 1.2 )
+transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.6, 0, 1.2 )

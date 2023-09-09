@@ -1,19 +1,61 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://craat6ei4htye"]
 
-[ext_resource path="res://assets/materials/arne32_neutral.tres" type="Material" id=1]
-[ext_resource path="res://scenes/tiles/buildings/building.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/buildings/neutral/lighthouse.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://assets/terrain/grasslands/plants/tree_big_1.tscn" type="PackedScene" id=4]
+[ext_resource type="Material" uid="uid://dkqg3sksh2p2c" path="res://assets/materials/arne32_neutral.tres" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/tiles/buildings/building.tscn" id="2"]
+[ext_resource type="ArrayMesh" uid="uid://bely6vwtk66qv" path="res://assets/buildings/neutral/lighthouse.obj" id="3"]
+[ext_resource type="PackedScene" path="res://assets/terrain/grasslands/plants/tree_big_1.tscn" id="4"]
 
-[node name="lighthouse" instance=ExtResource( 2 )]
+[sub_resource type="Animation" id="1"]
+resource_name = "ap_gain"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("voxel_coin:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("voxel_coin:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(0.0717939, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 8, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i2uv8"]
+_data = {
+"ap_gain": SubResource("1")
+}
+
+[node name="lighthouse" instance=ExtResource("2")]
 side = "neutral"
 require_crew = false
 ap_gain = 15
 capture_value = 70
+uses_metallic_material = false
 
 [node name="mesh" parent="." index="0"]
-mesh = ExtResource( 3 )
-material/0 = ExtResource( 1 )
+mesh = ExtResource("3")
+surface_material_override/0 = ExtResource("1")
 
-[node name="tree_big_1_5" parent="." index="4" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0, 2.3 )
+[node name="animations" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_i2uv8")
+}
+
+[node name="capture" parent="audio" index="0"]
+bus = &"Units"
+
+[node name="tree_big_1_5" parent="." index="4" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0, 2.3)

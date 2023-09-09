@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0o8qeoo8du5o"
+path="res://.godot/imported/sand_dirt_road_4_tile.obj-ba152da2de6180516e1bf6fa50d480ad.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sand_dirt_road_4_tile.obj-ba152da2de6180516e1bf6fa50d480ad.mesh"]
+
+source_file="res://assets/terrain/sandlands/sand_dirt_road_4_tile.obj"
+dest_files=["res://.godot/imported/sand_dirt_road_4_tile.obj-ba152da2de6180516e1bf6fa50d480ad.mesh", "res://.godot/imported/sand_dirt_road_4_tile.obj-ba152da2de6180516e1bf6fa50d480ad.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cqs4g7ln35arb"
+path="res://.godot/imported/river_1_tile.obj-7db31e2d2c02b6e685db3cebbf54b217.mesh"
+
+[deps]
+
+files=["res://.godot/imported/river_1_tile.obj-7db31e2d2c02b6e685db3cebbf54b217.mesh"]
+
+source_file="res://assets/terrain/grasslands/river_1_tile.obj"
+dest_files=["res://.godot/imported/river_1_tile.obj-7db31e2d2c02b6e685db3cebbf54b217.mesh", "res://.godot/imported/river_1_tile.obj-7db31e2d2c02b6e685db3cebbf54b217.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

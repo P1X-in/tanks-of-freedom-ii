@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/grass_4.obj-c6880426a7a06e659ce2520e389f67da.mesh"
+uid="uid://gl6obi7dpcd"
+path="res://.godot/imported/grass_4.obj-c6880426a7a06e659ce2520e389f67da.mesh"
 
 [deps]
 
-files=[ "res://.import/grass_4.obj-c6880426a7a06e659ce2520e389f67da.mesh" ]
+files=["res://.godot/imported/grass_4.obj-c6880426a7a06e659ce2520e389f67da.mesh"]
 
 source_file="res://assets/terrain/grasslands/plants_small/grass_4.obj"
-dest_files=[ "res://.import/grass_4.obj-c6880426a7a06e659ce2520e389f67da.mesh", "res://.import/grass_4.obj-c6880426a7a06e659ce2520e389f67da.mesh" ]
+dest_files=["res://.godot/imported/grass_4.obj-c6880426a7a06e659ce2520e389f67da.mesh", "res://.godot/imported/grass_4.obj-c6880426a7a06e659ce2520e389f67da.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

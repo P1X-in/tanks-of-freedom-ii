@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/gui/icons/arrow_left.png" type="Texture" id=1]
+[ext_resource path="res://assets/gui/icons/arrow_left.png" type="Texture2D" id=1]
 
-[node name="arrow_left" type="Sprite"]
+[node name="arrow_left" type="Sprite2D"]
 texture = ExtResource( 1 )

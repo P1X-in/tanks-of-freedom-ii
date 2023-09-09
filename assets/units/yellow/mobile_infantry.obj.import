@@ -1,20 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/mobile_infantry.obj-c25401350059eb7a7db10157c9b8ee8b.mesh"
+uid="uid://clg3xd7hcm588"
+path="res://.godot/imported/mobile_infantry.obj-c25401350059eb7a7db10157c9b8ee8b.mesh"
 
 [deps]
 
-files=[ "res://.import/mobile_infantry.obj-c25401350059eb7a7db10157c9b8ee8b.mesh" ]
+files=["res://.godot/imported/mobile_infantry.obj-c25401350059eb7a7db10157c9b8ee8b.mesh"]
 
 source_file="res://assets/units/yellow/mobile_infantry.obj"
-dest_files=[ "res://.import/mobile_infantry.obj-c25401350059eb7a7db10157c9b8ee8b.mesh", "res://.import/mobile_infantry.obj-c25401350059eb7a7db10157c9b8ee8b.mesh" ]
+dest_files=["res://.godot/imported/mobile_infantry.obj-c25401350059eb7a7db10157c9b8ee8b.mesh", "res://.godot/imported/mobile_infantry.obj-c25401350059eb7a7db10157c9b8ee8b.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

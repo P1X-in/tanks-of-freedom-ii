@@ -4,6 +4,6 @@
 [ext_resource path="res://assets/terrain/reflections/building_big_2_reflections.obj" type="ArrayMesh" id=2]
 
 
-[node name="building_big_2_reflections" type="MeshInstance"]
+[node name="building_big_2_reflections" type="MeshInstance3D"]
 mesh = ExtResource( 2 )
 material/0 = ExtResource( 1 )

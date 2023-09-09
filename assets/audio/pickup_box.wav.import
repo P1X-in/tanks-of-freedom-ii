@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/pickup_box.wav-18720c93c16cf99c20b28af2bab8b419.sample"
+type="AudioStreamWAV"
+uid="uid://d2ui51cs65ub2"
+path="res://.godot/imported/pickup_box.wav-18720c93c16cf99c20b28af2bab8b419.sample"
 
 [deps]
 
 source_file="res://assets/audio/pickup_box.wav"
-dest_files=[ "res://.import/pickup_box.wav-18720c93c16cf99c20b28af2bab8b419.sample" ]
+dest_files=["res://.godot/imported/pickup_box.wav-18720c93c16cf99c20b28af2bab8b419.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

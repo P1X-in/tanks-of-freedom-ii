@@ -1,36 +1,14 @@
 [remap]
 
-importer="texture"
-type="StreamTexture"
-path.s3tc="res://.import/arne32_yellow.png-35529f846955881daae6a4cae871c9a2.s3tc.stex"
-path.etc2="res://.import/arne32_yellow.png-35529f846955881daae6a4cae871c9a2.etc2.stex"
-metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
-}
+importer="image"
+type="Image"
+uid="uid://ba73ebj7vi23b"
+path="res://.godot/imported/arne32_yellow.png-35529f846955881daae6a4cae871c9a2.image"
 
 [deps]
 
 source_file="res://assets/materials/arne32_yellow.png"
-dest_files=[ "res://.import/arne32_yellow.png-35529f846955881daae6a4cae871c9a2.s3tc.stex", "res://.import/arne32_yellow.png-35529f846955881daae6a4cae871c9a2.etc2.stex" ]
+dest_files=["res://.godot/imported/arne32_yellow.png-35529f846955881daae6a4cae871c9a2.image"]
 
 [params]
 
-compress/mode=2
-compress/lossy_quality=0.7
-compress/hdr_mode=1
-compress/bptc_ldr=0
-compress/normal_map=0
-flags/repeat=true
-flags/filter=true
-flags/mipmaps=true
-flags/anisotropic=false
-flags/srgb=1
-process/fix_alpha_border=true
-process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
-stream=false
-size_limit=0
-detect_3d=false
-svg/scale=1.0

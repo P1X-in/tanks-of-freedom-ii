@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://besqifsd1pqmm"]
 
-[ext_resource path="res://scenes/tiles/ground/mouse_collision.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/tiles/ground/ground.gd" type="Script" id=3]
+[ext_resource type="PackedScene" uid="uid://2tj73ejmcn0s" path="res://scenes/tiles/ground/mouse_collision.tscn" id="2"]
+[ext_resource type="Script" path="res://scenes/tiles/ground/ground.gd" id="3"]
 
-[node name="base_ground" type="Spatial"]
-script = ExtResource( 3 )
+[node name="base_ground" type="Node3D"]
+script = ExtResource("3")
 
-[node name="mouse_collision" parent="." instance=ExtResource( 2 )]
+[node name="mouse_collision" parent="." instance=ExtResource("2")]

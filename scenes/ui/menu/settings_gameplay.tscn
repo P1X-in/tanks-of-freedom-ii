@@ -6,8 +6,8 @@
 [node name="settings_gameplay" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -780.0
-margin_bottom = -500.0
+offset_right = -780.0
+offset_bottom = -500.0
 
 [node name="hq_cam" parent="." instance=ExtResource( 2 )]
 option_name = "TR_HQ_CAM"
@@ -15,23 +15,23 @@ option_key = "hq_cam"
 help_tip = "TR_HQ_CAM_DESC"
 
 [node name="cam_shake" parent="." instance=ExtResource( 2 )]
-margin_top = 85.0
-margin_bottom = 135.0
+offset_top = 85.0
+offset_bottom = 135.0
 option_name = "TR_CAM_SHAKE"
 option_key = "cam_shake"
 help_tip = "TR_CAM_SHAKE_DESC"
 
 [node name="def_cam_st" parent="." instance=ExtResource( 1 )]
-margin_top = 150.0
-margin_bottom = 200.0
+offset_top = 150.0
+offset_bottom = 200.0
 option_name = "TR_DEF_CAM_ST"
 option_key = "def_cam_st"
 help_tip = "TR_DEF_CAM_ST_DESC"
 available_values = [ "TOF", "AW", "FREE" ]
 
 [node name="ap_spent" parent="." instance=ExtResource( 2 )]
-margin_top = 215.0
-margin_bottom = 265.0
+offset_top = 215.0
+offset_bottom = 265.0
 option_name = "TR_NOT_AP_SP"
 option_key = "notify_ap_spent"
 help_tip = "TR_NOT_AP_SP_DESC"

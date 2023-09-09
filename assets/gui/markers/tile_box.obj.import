@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/tile_box.obj-cba50e194fefef2c5a222b8fba4925c7.mesh"
+uid="uid://cp4xylwlqbo56"
+path="res://.godot/imported/tile_box.obj-cba50e194fefef2c5a222b8fba4925c7.mesh"
 
 [deps]
 
-files=[ "res://.import/tile_box.obj-cba50e194fefef2c5a222b8fba4925c7.mesh" ]
+files=["res://.godot/imported/tile_box.obj-cba50e194fefef2c5a222b8fba4925c7.mesh"]
 
 source_file="res://assets/gui/markers/tile_box.obj"
-dest_files=[ "res://.import/tile_box.obj-cba50e194fefef2c5a222b8fba4925c7.mesh", "res://.import/tile_box.obj-cba50e194fefef2c5a222b8fba4925c7.mesh" ]
+dest_files=["res://.godot/imported/tile_box.obj-cba50e194fefef2c5a222b8fba4925c7.mesh", "res://.godot/imported/tile_box.obj-cba50e194fefef2c5a222b8fba4925c7.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

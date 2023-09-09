@@ -1,56 +1,120 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=3 uid="uid://s6g08w5ljxvm"]
 
-[ext_resource path="res://scenes/tiles/units/templates/heli.gd" type="Script" id=1]
-[ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/units/audio/helicopter_move.wav" type="AudioStream" id=3]
-[ext_resource path="res://assets/units/audio/helicopter_damage.wav" type="AudioStream" id=4]
-[ext_resource path="res://assets/units/audio/helicopter_spawn.wav" type="AudioStream" id=5]
-[ext_resource path="res://assets/units/audio/helicopter_die.wav" type="AudioStream" id=6]
-[ext_resource path="res://assets/units/audio/helicopter_attack.wav" type="AudioStream" id=7]
-[ext_resource path="res://scenes/abilities/unit/pick_up.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/abilities/unit/drop_off.tscn" type="PackedScene" id=9]
+[ext_resource type="Script" path="res://scenes/tiles/units/templates/heli.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="2"]
+[ext_resource type="AudioStream" uid="uid://nj4o27bvq3k3" path="res://assets/units/audio/helicopter_move.wav" id="3"]
+[ext_resource type="AudioStream" uid="uid://blrcs175mat68" path="res://assets/units/audio/helicopter_damage.wav" id="4"]
+[ext_resource type="AudioStream" uid="uid://cody2p5emhboe" path="res://assets/units/audio/helicopter_spawn.wav" id="5"]
+[ext_resource type="AudioStream" uid="uid://44w75p62dvdw" path="res://assets/units/audio/helicopter_die.wav" id="6"]
+[ext_resource type="AudioStream" uid="uid://cqxawoy6jolrd" path="res://assets/units/audio/helicopter_attack.wav" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/unit/pick_up.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/unit/drop_off.tscn" id="9"]
 
-[node name="heli" instance=ExtResource( 2 )]
-script = ExtResource( 1 )
-main_tile_view_cam_modifier = -10
-side_tile_view_cam_modifier = -25
+[sub_resource type="Animation" id="1"]
+resource_name = "level_up"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("voxel_star:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("voxel_star:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 8, 0)]
+}
+
+[sub_resource type="Animation" id="2"]
+length = 0.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_animate_next_path_segment"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mesh_anchor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pu15r"]
+_data = {
+"level_up": SubResource("1"),
+"move": SubResource("2")
+}
+
+[node name="heli" instance=ExtResource("2")]
+script = ExtResource("1")
 unit_name = "TR_ATT_HELI"
-side = "neutral"
 material_type = "metallic"
-max_hp = 10
 max_move = 7
 attack = 8
 armor = 1
-can_capture = false
 can_fly = true
-max_attacks = 1
 uses_metallic_material = true
 unit_value = 70
 unit_class = "heli"
+main_tile_view_cam_modifier = -10
+side_tile_view_cam_modifier = -25
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="animations" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_pu15r")
+}
 
 [node name="explosion" parent="." index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="pick_up" parent="." index="4" instance=ExtResource( 8 )]
+[node name="pick_up" parent="." index="4" instance=ExtResource("8")]
 index = 2
 
-[node name="drop_off" parent="." index="5" instance=ExtResource( 9 )]
+[node name="drop_off" parent="." index="5" instance=ExtResource("9")]
 index = 2
 
 [node name="spawn" parent="audio" index="0"]
-stream = ExtResource( 5 )
+stream = ExtResource("5")
 
 [node name="move" parent="audio" index="1"]
-stream = ExtResource( 3 )
+stream = ExtResource("3")
 
 [node name="attack" parent="audio" index="2"]
-stream = ExtResource( 7 )
+stream = ExtResource("7")
 
 [node name="damage" parent="audio" index="4"]
-stream = ExtResource( 4 )
+stream = ExtResource("4")
 
 [node name="die" parent="audio" index="5"]
-stream = ExtResource( 6 )
+stream = ExtResource("6")

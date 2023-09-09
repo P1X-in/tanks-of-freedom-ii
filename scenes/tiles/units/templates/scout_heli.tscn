@@ -29,10 +29,10 @@ unit_value = 50
 unit_class = "scout"
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 
 [node name="explosion" parent="." index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 
 [node name="rapid_response" parent="." index="4" instance=ExtResource( 1 )]
 index = 2

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/helicopter_attack.wav-e68f60045379f7032fa11c3e3e4a0628.sample"
+type="AudioStreamWAV"
+uid="uid://cqxawoy6jolrd"
+path="res://.godot/imported/helicopter_attack.wav-e68f60045379f7032fa11c3e3e4a0628.sample"
 
 [deps]
 
 source_file="res://assets/units/audio/helicopter_attack.wav"
-dest_files=[ "res://.import/helicopter_attack.wav-e68f60045379f7032fa11c3e3e4a0628.sample" ]
+dest_files=["res://.godot/imported/helicopter_attack.wav-e68f60045379f7032fa11c3e3e4a0628.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

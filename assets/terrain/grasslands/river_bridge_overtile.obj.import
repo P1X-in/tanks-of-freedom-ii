@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c3k38h631fb3m"
+path="res://.godot/imported/river_bridge_overtile.obj-0d1d7d7f9ab04bdd6ed9619d289b499a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/river_bridge_overtile.obj-0d1d7d7f9ab04bdd6ed9619d289b499a.mesh"]
+
+source_file="res://assets/terrain/grasslands/river_bridge_overtile.obj"
+dest_files=["res://.godot/imported/river_bridge_overtile.obj-0d1d7d7f9ab04bdd6ed9619d289b499a.mesh", "res://.godot/imported/river_bridge_overtile.obj-0d1d7d7f9ab04bdd6ed9619d289b499a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

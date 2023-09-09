@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4q5rnpr37iyr"
+path="res://.godot/imported/ice_river_2_tile.obj-3bf618ed51fe34f105df9fd3a8b40187.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ice_river_2_tile.obj-3bf618ed51fe34f105df9fd3a8b40187.mesh"]
+
+source_file="res://assets/terrain/snowlands/ice_river_2_tile.obj"
+dest_files=["res://.godot/imported/ice_river_2_tile.obj-3bf618ed51fe34f105df9fd3a8b40187.mesh", "res://.godot/imported/ice_river_2_tile.obj-3bf618ed51fe34f105df9fd3a8b40187.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

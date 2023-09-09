@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cj0npc874wnq4"
+path="res://.godot/imported/snow_road_transition_tile.obj-8a33ab144177bed8169e8d2255653240.mesh"
+
+[deps]
+
+files=["res://.godot/imported/snow_road_transition_tile.obj-8a33ab144177bed8169e8d2255653240.mesh"]
+
+source_file="res://assets/terrain/snowlands/snow_road_transition_tile.obj"
+dest_files=["res://.godot/imported/snow_road_transition_tile.obj-8a33ab144177bed8169e8d2255653240.mesh", "res://.godot/imported/snow_road_transition_tile.obj-8a33ab144177bed8169e8d2255653240.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

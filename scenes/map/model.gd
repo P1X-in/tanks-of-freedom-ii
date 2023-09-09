@@ -114,7 +114,7 @@ func get_enemy_buildings_tiles(side, team=null):
     return buildings
 
 func ingest_scripts(incoming_scripts):
-    if incoming_scripts == null or incoming_scripts.empty():
+    if incoming_scripts == null or incoming_scripts.is_empty():
         return
 
     self.scripts = incoming_scripts
