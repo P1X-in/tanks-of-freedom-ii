@@ -252,7 +252,7 @@ func select_tile(tile_position):
 	self.hover_tile()
 
 	if self.selected_tile != null:
-		self.audio.play("click")
+		self.audio.play("map_click")
 
 
 func unselect_action():

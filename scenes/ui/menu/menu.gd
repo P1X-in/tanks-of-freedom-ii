@@ -13,6 +13,7 @@ extends Control
 
 @onready var switcher = $"/root/SceneSwitcher"
 @onready var audio = $"/root/SimpleAudioLibrary"
+@onready var mouse_layer = $"/root/MouseLayer"
 
 var main_menu
 var recent_button_used = null
@@ -70,6 +71,7 @@ func _on_online_button_pressed():
 	self.main_menu.open_online()
 
 func _on_quit_button_pressed():
+	self.mouse_layer.destroy()
 	self.get_tree().quit()
 
 func show_panel():

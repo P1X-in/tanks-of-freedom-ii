@@ -25,3 +25,6 @@ func detach():
 	var parent = self.mouse_layer.get_parent()
 	if parent != null:
 		parent.remove_child(self.mouse_layer)
+
+func destroy():
+	self.mouse_layer.free()
