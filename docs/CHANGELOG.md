@@ -3,6 +3,9 @@
 
 ### 0.5.0-alpha
 - Ported game project to Godot Engine 4
+- Campaign can now override mission selection map image
+- Story messages can now define font size
+- Story messages can now play audio samples
 - Fixed a team designation bug that made Tutorial 2 getting stuck
 - Fixed a mouse camera drag bug
 
