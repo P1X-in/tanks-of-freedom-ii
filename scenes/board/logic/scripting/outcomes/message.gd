@@ -6,6 +6,7 @@ var name
 var side = "left"
 var colour = null
 var font_size = 16
+var sound = null
 
 func _execute(_metadata):
 	var actor = {
@@ -26,6 +27,9 @@ func _execute(_metadata):
 
 	self.board.ui.show_story_dialog(text, actor, self.font_size)
 
+	if self.sound != null:
+		self.board.audio.play(self.sound)
+
 func _ingest_details(details):
 	self.text = details['text']
 	if details.has("portrait"):
@@ -37,3 +41,5 @@ func _ingest_details(details):
 		self.colour = details['colour']
 	if details.has("font_size"):
 		self.font_size = details['font_size']
+	if details.has("sound"):
+		self.sound = details['sound']
