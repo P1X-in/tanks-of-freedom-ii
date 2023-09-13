@@ -212,9 +212,10 @@ func update_end_turn_progress(value):
 func flash_start_end_card(player, turn):
 	self.start_turn.flash(player, turn)
 
-func show_story_dialog(text, actor):
+func show_story_dialog(text, actor, font_size=null):
 	self.story_dialog.set_text(text)
 	self.story_dialog.set_actor(actor)
+	self.story_dialog.set_font_size(font_size)
 	self.story_dialog.show_panel()
 
 func hide_story_dialog():

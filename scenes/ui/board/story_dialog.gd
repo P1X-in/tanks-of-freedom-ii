@@ -35,6 +35,9 @@ func set_actor(actor_details):
 func set_text(dialog_text):
 	self.text.set_text(dialog_text)
 
+func set_font_size(font_size):
+	self.text.label_settings.font_size = font_size
+
 func _continue_grab_focus():
 	self.continue_button.grab_focus()
 

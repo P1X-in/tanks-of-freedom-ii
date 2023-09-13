@@ -5,6 +5,7 @@ var portrait = null
 var name
 var side = "left"
 var colour = null
+var font_size = 16
 
 func _execute(_metadata):
 	var actor = {
@@ -23,7 +24,7 @@ func _execute(_metadata):
 
 		actor['portrait_tile'].set_side_materials(self.board.map.templates.get_side_material(self.colour, material_type), self.board.map.templates.get_side_material(self.colour, material_type))
 
-	self.board.ui.show_story_dialog(text, actor)
+	self.board.ui.show_story_dialog(text, actor, self.font_size)
 
 func _ingest_details(details):
 	self.text = details['text']
@@ -34,3 +35,5 @@ func _ingest_details(details):
 		self.side = details['side']
 	if details.has("colour"):
 		self.colour = details['colour']
+	if details.has("font_size"):
+		self.font_size = details['font_size']

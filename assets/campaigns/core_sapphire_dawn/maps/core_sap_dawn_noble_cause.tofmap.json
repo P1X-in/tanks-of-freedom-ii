@@ -50,7 +50,8 @@
                         "name": "TR_WAR_GRIM",
                         "portrait": "hero_warlord",
                         "side": "left",
-                        "text": "tr_core_sapphire_dawn_m4_t1"
+                        "text": "tr_core_sapphire_dawn_m4_t1",
+                        "font_size": 30
                     }
                 },
                 {
@@ -582,7 +583,8 @@
                         "name": "TR_GEN_CYRUS",
                         "portrait": "hero_general",
                         "side": "right",
-                        "text": "tr_core_sapphire_dawn_m4_t22"
+                        "text": "tr_core_sapphire_dawn_m4_t22",
+                        "font_size": 42
                     }
                 },
                 {
