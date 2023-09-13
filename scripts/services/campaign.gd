@@ -89,6 +89,8 @@ func _load_custom_campaigns():
 		for dir_name in dirs_found:
 			campaign_details = self._load_campaign_details(self.CUSTOM_CAMPAIGNS_BASE_PATH + "/" + dir_name)
 			if campaign_details != null:
+				if campaign_details.has("map"):
+					campaign_details["map"] = self.CUSTOM_CAMPAIGNS_BASE_PATH + "/" + dir_name + "/" + campaign_details["map"]
 				self.custom_campaigns.append(campaign_details)
 				self.custom_campaigns_by_name[dir_name] = campaign_details
 	else:

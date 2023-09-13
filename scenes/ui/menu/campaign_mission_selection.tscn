@@ -237,8 +237,14 @@ offset_right = 600.0
 offset_bottom = 350.0
 
 [node name="map" type="Sprite2D" parent="widgets"]
+texture_filter = 4
 position = Vector2(600, 350)
 scale = Vector2(0.5, 0.5)
+texture = ExtResource("3")
+
+[node name="map_override" type="Sprite2D" parent="widgets"]
+visible = false
+position = Vector2(600, 350)
 texture = ExtResource("3")
 
 [node name="missions_anchor" type="Control" parent="widgets"]

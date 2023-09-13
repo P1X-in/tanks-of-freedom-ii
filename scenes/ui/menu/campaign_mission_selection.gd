@@ -14,6 +14,9 @@ extends Control
 @onready var title = $"widgets/title"
 @onready var mission_anchor = $"widgets/missions_anchor"
 
+@onready var base_map = $"widgets/map"
+@onready var override_map = $"widgets/map_override"
+
 var main_menu
 
 var manifest
@@ -96,6 +99,11 @@ func load_campaign(campaign_name):
 	else:
 		self.medal.hide()
 
+	if manifest.has("map"):
+		self._load_map_override(manifest["map"])
+	else:
+		self._show_base_map()
+
 func _add_mission_markers(missions):
 	var index = 1
 	var marker
@@ -165,3 +173,14 @@ func _is_last_mission():
 	var campaign_progress = self.campaign.get_campaign_progress(self.manifest["name"])
 	return self.selected_mission == campaign_progress or self.selected_mission == self.mission_markers.size() - 1
 
+func _show_base_map():
+	self.base_map.show()
+	self.override_map.hide()
+
+func _load_map_override(filename):
+	var image = Image.load_from_file(filename)
+	var texture = ImageTexture.create_from_image(image)
+	self.override_map.texture = texture
+
+	self.base_map.hide()
+	self.override_map.show()

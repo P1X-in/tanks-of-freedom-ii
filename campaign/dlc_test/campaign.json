@@ -2,6 +2,7 @@
     "name" : "dlc_test",
     "title" : "DLC Test",
     "icon" : "info",
+    "map": "map.png",
     "missions" : [
         {
             "name" : "another_excercise",
