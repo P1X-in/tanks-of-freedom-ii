@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjltbivwyoqxb"]
+[gd_scene load_steps=7 format=3 uid="uid://bjltbivwyoqxb"]
 
 [ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/buildings/building.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://k1yw4li0a2ot" path="res://assets/buildings/red/tower.obj" id="3"]
+[ext_resource type="AudioStream" uid="uid://dkkuho3c7y47f" path="res://assets/audio/building_capture_drum.wav" id="4_qvxkq"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -41,8 +42,6 @@ _data = {
 side = "red"
 require_crew = false
 ap_gain = 15
-capture_value = 70
-uses_metallic_material = false
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("3")
@@ -54,4 +53,4 @@ libraries = {
 }
 
 [node name="capture" parent="audio" index="0"]
-bus = &"Units"
+stream = ExtResource("4_qvxkq")

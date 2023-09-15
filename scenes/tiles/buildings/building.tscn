@@ -1,52 +1,63 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://bif4f4faebcoj"]
 
-[ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/tiles/buildings/building.gd" type="Script" id=2]
-[ext_resource path="res://scenes/ui/board/voxel_coin.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/audio/occupy_building.wav" type="AudioStream" id=4]
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/tiles/buildings/building.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://cx4np0wc87mdy" path="res://scenes/ui/board/voxel_coin.tscn" id="3"]
+[ext_resource type="AudioStream" uid="uid://cgo6bkybeamd4" path="res://assets/audio/building_capture_drum_2.wav" id="4_p2fsm"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
 length = 4.0
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("voxel_coin:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 4 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ true, false ]
+"values": [true, false]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("voxel_coin:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 4 ),
-"transitions": PackedFloat32Array( 0.0717939, 1 ),
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(0.0717939, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 8, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 8, 0)]
 }
 
-[node name="tile" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jid1c"]
+_data = {
+"ap_gain": SubResource("1")
+}
 
-[node name="voxel_coin" parent="." index="1" instance=ExtResource( 3 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0 )
+[node name="tile" instance=ExtResource("1")]
+script = ExtResource("2")
+side = "neutral"
+require_crew = true
+ap_gain = 5
+capture_value = 70
+uses_metallic_material = false
+
+[node name="voxel_coin" parent="." index="1" instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
 visible = false
 
 [node name="animations" type="AnimationPlayer" parent="." index="2"]
-playback_speed = 2.0
-anims/ap_gain = SubResource( 1 )
+libraries = {
+"": SubResource("AnimationLibrary_jid1c")
+}
 
 [node name="audio" type="Node" parent="." index="3"]
 
 [node name="capture" type="AudioStreamPlayer3D" parent="audio" index="0"]
-stream = ExtResource( 4 )
+stream = ExtResource("4_p2fsm")
 volume_db = 45.0
-bus = "Units"
+bus = &"Units"
