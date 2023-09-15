@@ -27,9 +27,11 @@ func configure_winner(winner):
 			self.mission_complete.show()
 			self._setup_next_mission()
 			self.next_mission_button.grab_focus()
+			self.audio.play("fanfare")
 		else:
 			self.mission_failed.show()
 			self.restart_button.grab_focus()
+			self.audio.play("failfare")
 	else:
 		match winner:
 			"blue":
@@ -44,6 +46,7 @@ func configure_winner(winner):
 				self.black_wins.show()
 
 		self.menu_button.grab_focus()
+		self.audio.play("fanfare")
 
 
 func _setup_next_mission():

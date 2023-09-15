@@ -17,6 +17,8 @@ func _ready():
 	self.register_sample("menu_back", preload("res://assets/audio/menu_back.wav"))
 	self.register_sample("explosion", preload("res://assets/audio/explosion.wav"))
 	self.register_sample("map_click", preload("res://assets/audio/map_click.wav"))
+	self.register_sample("fanfare", preload("res://assets/audio/fanfare.wav"))
+	self.register_sample("failfare", preload("res://assets/audio/failfare.wav"))
 
 
 	self.register_track("intro", preload("res://assets/audio/soundtrack/grand_beats_intro.ogg"))
