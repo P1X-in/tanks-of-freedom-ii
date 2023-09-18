@@ -1,56 +1,48 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=3 uid="uid://dwhss6vtuek7n"]
 
-[ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/units/audio/tank_spawn.wav" type="AudioStream" id=2]
-[ext_resource path="res://assets/units/audio/tank_die.wav" type="AudioStream" id=3]
-[ext_resource path="res://assets/units/audio/tank_attack.wav" type="AudioStream" id=4]
-[ext_resource path="res://assets/units/audio/tank_move.wav" type="AudioStream" id=5]
-[ext_resource path="res://assets/units/audio/tank_damage.wav" type="AudioStream" id=6]
-[ext_resource path="res://scenes/tiles/units/templates/rocket_artillery.gd" type="Script" id=7]
-[ext_resource path="res://scenes/abilities/unit/missile.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/abilities/unit/heavy_missile.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/units/audio/missile_attack.wav" type="AudioStream" id=10]
+[ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="1"]
+[ext_resource type="AudioStream" uid="uid://cde82w3txg5pn" path="res://assets/units/audio/tank_die.wav" id="3"]
+[ext_resource type="AudioStream" uid="uid://boar0vcoegjfa" path="res://assets/units/audio/tank_attack.wav" id="4"]
+[ext_resource type="AudioStream" uid="uid://c8x4wd0406myw" path="res://assets/units/audio/tank_move.wav" id="5"]
+[ext_resource type="AudioStream" uid="uid://di5y7cgurfgrm" path="res://assets/units/audio/tank_damage.wav" id="6"]
+[ext_resource type="Script" path="res://scenes/tiles/units/templates/rocket_artillery.gd" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/unit/missile.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/unit/heavy_missile.tscn" id="9"]
+[ext_resource type="AudioStream" uid="uid://sd73vscxvto2" path="res://assets/units/audio/missile_attack.wav" id="10"]
 
-[node name="rocket_artillery" instance=ExtResource( 1 )]
-script = ExtResource( 7 )
-main_tile_view_cam_modifier = -10
-side_tile_view_cam_modifier = -25
+[node name="rocket_artillery" instance=ExtResource("1")]
+script = ExtResource("7")
 unit_name = "TR_M_R_ART"
-side = "neutral"
 material_type = "metallic"
-max_hp = 10
-max_move = 4
 attack = 0
 armor = 0
-can_capture = false
-can_fly = false
 max_attacks = 0
 uses_metallic_material = true
 unit_value = 70
 unit_class = "rocket_artillery"
+main_tile_view_cam_modifier = -10
+side_tile_view_cam_modifier = -25
 
-[node name="missile" parent="." index="4" instance=ExtResource( 8 )]
+[node name="missile" parent="." index="4" instance=ExtResource("8")]
 index = 2
-damage = 10
-min_level = 0
 
-[node name="heavy_missile" parent="." index="5" instance=ExtResource( 9 )]
+[node name="heavy_missile" parent="." index="5" instance=ExtResource("9")]
 index = 2
 
 [node name="spawn" parent="audio" index="0"]
-stream = ExtResource( 2 )
+stream = ExtResource("5")
 
 [node name="move" parent="audio" index="1"]
-stream = ExtResource( 5 )
+stream = ExtResource("5")
 
 [node name="attack" parent="audio" index="2"]
-stream = ExtResource( 10 )
+stream = ExtResource("10")
 
 [node name="hit" parent="audio" index="3"]
-stream = ExtResource( 4 )
+stream = ExtResource("4")
 
 [node name="damage" parent="audio" index="4"]
-stream = ExtResource( 6 )
+stream = ExtResource("6")
 
 [node name="die" parent="audio" index="5"]
-stream = ExtResource( 3 )
+stream = ExtResource("3")

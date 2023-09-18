@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://s6g08w5ljxvm"]
+[gd_scene load_steps=12 format=3 uid="uid://s6g08w5ljxvm"]
 
 [ext_resource type="Script" path="res://scenes/tiles/units/templates/heli.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="2"]
 [ext_resource type="AudioStream" uid="uid://nj4o27bvq3k3" path="res://assets/units/audio/helicopter_move.wav" id="3"]
 [ext_resource type="AudioStream" uid="uid://blrcs175mat68" path="res://assets/units/audio/helicopter_damage.wav" id="4"]
-[ext_resource type="AudioStream" uid="uid://cody2p5emhboe" path="res://assets/units/audio/helicopter_spawn.wav" id="5"]
 [ext_resource type="AudioStream" uid="uid://44w75p62dvdw" path="res://assets/units/audio/helicopter_die.wav" id="6"]
 [ext_resource type="AudioStream" uid="uid://cqxawoy6jolrd" path="res://assets/units/audio/helicopter_attack.wav" id="7"]
 [ext_resource type="PackedScene" path="res://scenes/abilities/unit/pick_up.tscn" id="8"]
@@ -105,7 +104,7 @@ index = 2
 index = 2
 
 [node name="spawn" parent="audio" index="0"]
-stream = ExtResource("5")
+stream = ExtResource("3")
 
 [node name="move" parent="audio" index="1"]
 stream = ExtResource("3")

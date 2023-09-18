@@ -1,63 +1,49 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://clflu83nvan3n"]
 
-[ext_resource path="res://scenes/abilities/unit/repair_kit.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/units/audio/tank_spawn.wav" type="AudioStream" id=3]
-[ext_resource path="res://assets/units/audio/motorcycle_move.wav" type="AudioStream" id=4]
-[ext_resource path="res://assets/units/audio/soldier_damage.wav" type="AudioStream" id=5]
-[ext_resource path="res://assets/units/audio/soldier_die.wav" type="AudioStream" id=6]
-[ext_resource path="res://assets/units/audio/soldier_attack.wav" type="AudioStream" id=7]
-[ext_resource path="res://scenes/abilities/unit/medkit.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/tiles/units/templates/mobile_infantry.gd" type="Script" id=9]
+[ext_resource type="PackedScene" path="res://scenes/abilities/unit/repair_kit.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="2"]
+[ext_resource type="AudioStream" uid="uid://b3wlebhgd4lb2" path="res://assets/units/audio/motorcycle_move.wav" id="4"]
+[ext_resource type="AudioStream" uid="uid://dnc4jrsp2rueh" path="res://assets/units/audio/soldier_damage.wav" id="5"]
+[ext_resource type="AudioStream" uid="uid://b0y6opij7tv8g" path="res://assets/units/audio/soldier_die.wav" id="6"]
+[ext_resource type="AudioStream" uid="uid://j4c0pv0pidvk" path="res://assets/units/audio/soldier_attack.wav" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/unit/medkit.tscn" id="8"]
+[ext_resource type="Script" path="res://scenes/tiles/units/templates/mobile_infantry.gd" id="9"]
 
-[node name="mobile_infantry" instance=ExtResource( 2 )]
-script = ExtResource( 9 )
-main_tile_view_cam_modifier = -10
-side_tile_view_cam_modifier = -25
+[node name="mobile_infantry" instance=ExtResource("2")]
+script = ExtResource("9")
 unit_name = "TR_M_INF"
-side = "neutral"
-material_type = "normal"
-max_hp = 10
 max_move = 6
 attack = 5
 armor = 0
 can_capture = true
-can_fly = false
-max_attacks = 1
-uses_metallic_material = false
 unit_value = 35
 unit_class = "mobile_infantry"
+main_tile_view_cam_modifier = -10
+side_tile_view_cam_modifier = -25
 
 [node name="mesh" parent="mesh_anchor" index="0"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
 
 [node name="mesh2" type="MeshInstance3D" parent="mesh_anchor" index="1"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1 )
-__meta__ = {
-"_editor_description_": ""
-}
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
 
-[node name="medkit" parent="." index="4" instance=ExtResource( 8 )]
+[node name="medkit" parent="." index="4" instance=ExtResource("8")]
 index = 1
-marker_colour = "green"
-heal = 5
 
-[node name="repair_kit" parent="." index="5" instance=ExtResource( 1 )]
+[node name="repair_kit" parent="." index="5" instance=ExtResource("1")]
 index = 3
-marker_colour = "green"
-heal = 5
 
 [node name="spawn" parent="audio" index="0"]
-stream = ExtResource( 3 )
+stream = ExtResource("4")
 
 [node name="move" parent="audio" index="1"]
-stream = ExtResource( 4 )
+stream = ExtResource("4")
 
 [node name="attack" parent="audio" index="2"]
-stream = ExtResource( 7 )
+stream = ExtResource("7")
 
 [node name="damage" parent="audio" index="4"]
-stream = ExtResource( 5 )
+stream = ExtResource("5")
 
 [node name="die" parent="audio" index="5"]
-stream = ExtResource( 6 )
+stream = ExtResource("6")

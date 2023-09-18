@@ -1,51 +1,43 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://bbgb5st5tw8p7"]
 
-[ext_resource path="res://scenes/tiles/units/unit.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/units/audio/tank_spawn.wav" type="AudioStream" id=2]
-[ext_resource path="res://assets/units/audio/tank_die.wav" type="AudioStream" id=3]
-[ext_resource path="res://assets/units/audio/tank_attack.wav" type="AudioStream" id=4]
-[ext_resource path="res://assets/units/audio/tank_move.wav" type="AudioStream" id=5]
-[ext_resource path="res://assets/units/audio/tank_damage.wav" type="AudioStream" id=6]
-[ext_resource path="res://scenes/abilities/unit/long_range_shell.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/units/audio/tank_hit.wav" type="AudioStream" id=8]
-[ext_resource path="res://scenes/tiles/units/templates/tank.gd" type="Script" id=9]
+[ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="1"]
+[ext_resource type="AudioStream" uid="uid://cde82w3txg5pn" path="res://assets/units/audio/tank_die.wav" id="3"]
+[ext_resource type="AudioStream" uid="uid://boar0vcoegjfa" path="res://assets/units/audio/tank_attack.wav" id="4"]
+[ext_resource type="AudioStream" uid="uid://c8x4wd0406myw" path="res://assets/units/audio/tank_move.wav" id="5"]
+[ext_resource type="AudioStream" uid="uid://di5y7cgurfgrm" path="res://assets/units/audio/tank_damage.wav" id="6"]
+[ext_resource type="PackedScene" path="res://scenes/abilities/unit/long_range_shell.tscn" id="7"]
+[ext_resource type="AudioStream" uid="uid://dg5ix6u5ctkil" path="res://assets/units/audio/tank_hit.wav" id="8"]
+[ext_resource type="Script" path="res://scenes/tiles/units/templates/tank.gd" id="9"]
 
-[node name="tank" instance=ExtResource( 1 )]
-script = ExtResource( 9 )
-main_tile_view_cam_modifier = -10
-side_tile_view_cam_modifier = -25
+[node name="tank" instance=ExtResource("1")]
+script = ExtResource("9")
 unit_name = "TR_TANK"
-side = "neutral"
 material_type = "metallic"
-max_hp = 10
 max_move = 6
 attack = 10
-armor = 2
-can_capture = false
-can_fly = false
-max_attacks = 1
 uses_metallic_material = true
 unit_value = 50
 unit_class = "tank"
+main_tile_view_cam_modifier = -10
+side_tile_view_cam_modifier = -25
 
-[node name="long_range_shell" parent="." index="4" instance=ExtResource( 7 )]
+[node name="long_range_shell" parent="." index="4" instance=ExtResource("7")]
 index = 2
-damage = 10
 
 [node name="spawn" parent="audio" index="0"]
-stream = ExtResource( 2 )
+stream = ExtResource("5")
 
 [node name="move" parent="audio" index="1"]
-stream = ExtResource( 5 )
+stream = ExtResource("5")
 
 [node name="attack" parent="audio" index="2"]
-stream = ExtResource( 4 )
+stream = ExtResource("4")
 
 [node name="hit" parent="audio" index="3"]
-stream = ExtResource( 8 )
+stream = ExtResource("8")
 
 [node name="damage" parent="audio" index="4"]
-stream = ExtResource( 6 )
+stream = ExtResource("6")
 
 [node name="die" parent="audio" index="5"]
-stream = ExtResource( 3 )
+stream = ExtResource("3")
