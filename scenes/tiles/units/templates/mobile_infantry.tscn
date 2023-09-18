@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://clflu83nvan3n"]
+[gd_scene load_steps=10 format=3 uid="uid://cqcktcidclmag"]
 
 [ext_resource type="PackedScene" path="res://scenes/abilities/unit/repair_kit.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="2"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://b0y6opij7tv8g" path="res://assets/units/audio/soldier_die.wav" id="6"]
 [ext_resource type="AudioStream" uid="uid://j4c0pv0pidvk" path="res://assets/units/audio/soldier_attack.wav" id="7"]
 [ext_resource type="PackedScene" path="res://scenes/abilities/unit/medkit.tscn" id="8"]
+[ext_resource type="AudioStream" uid="uid://dlj62w0jmeuy7" path="res://assets/units/audio/soldier_hit.wav" id="8_hcx7q"]
 [ext_resource type="Script" path="res://scenes/tiles/units/templates/mobile_infantry.gd" id="9"]
 
 [node name="mobile_infantry" instance=ExtResource("2")]
@@ -41,6 +42,9 @@ stream = ExtResource("4")
 
 [node name="attack" parent="audio" index="2"]
 stream = ExtResource("7")
+
+[node name="hit" parent="audio" index="3"]
+stream = ExtResource("8_hcx7q")
 
 [node name="damage" parent="audio" index="4"]
 stream = ExtResource("5")
