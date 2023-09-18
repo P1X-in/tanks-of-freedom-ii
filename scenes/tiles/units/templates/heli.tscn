@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://nj4o27bvq3k3" path="res://assets/units/audio/helicopter_move.wav" id="3"]
 [ext_resource type="AudioStream" uid="uid://blrcs175mat68" path="res://assets/units/audio/helicopter_damage.wav" id="4"]
 [ext_resource type="AudioStream" uid="uid://44w75p62dvdw" path="res://assets/units/audio/helicopter_die.wav" id="6"]
-[ext_resource type="AudioStream" uid="uid://cqxawoy6jolrd" path="res://assets/units/audio/helicopter_attack.wav" id="7"]
+[ext_resource type="AudioStream" uid="uid://sd73vscxvto2" path="res://assets/units/audio/missile_attack.wav" id="7_4xwxc"]
 [ext_resource type="PackedScene" path="res://scenes/abilities/unit/pick_up.tscn" id="8"]
 [ext_resource type="PackedScene" path="res://scenes/abilities/unit/drop_off.tscn" id="9"]
 
@@ -110,7 +110,7 @@ stream = ExtResource("3")
 stream = ExtResource("3")
 
 [node name="attack" parent="audio" index="2"]
-stream = ExtResource("7")
+stream = ExtResource("7_4xwxc")
 
 [node name="damage" parent="audio" index="4"]
 stream = ExtResource("4")
