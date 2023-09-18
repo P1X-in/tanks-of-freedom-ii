@@ -6,6 +6,7 @@
 - Campaign can now override mission selection map image
 - Story messages can now define font size
 - Story messages can now play audio samples
+- Updated sound effects
 - Fixed a team designation bug that made Tutorial 2 getting stuck
 - Fixed a mouse camera drag bug
 
