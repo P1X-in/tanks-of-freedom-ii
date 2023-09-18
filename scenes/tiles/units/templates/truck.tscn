@@ -2,7 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://boar0vcoegjfa" path="res://assets/units/audio/tank_attack.wav" id="1"]
 [ext_resource type="AudioStream" uid="uid://cde82w3txg5pn" path="res://assets/units/audio/tank_die.wav" id="2"]
-[ext_resource type="AudioStream" uid="uid://c8x4wd0406myw" path="res://assets/units/audio/tank_move.wav" id="3"]
+[ext_resource type="AudioStream" uid="uid://32yekf7nj3qc" path="res://assets/units/audio/truck_move.wav" id="3_mthm0"]
 [ext_resource type="AudioStream" uid="uid://di5y7cgurfgrm" path="res://assets/units/audio/tank_damage.wav" id="5"]
 [ext_resource type="AudioStream" uid="uid://dg5ix6u5ctkil" path="res://assets/units/audio/tank_hit.wav" id="6"]
 [ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="7"]
@@ -24,10 +24,10 @@ main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
 
 [node name="spawn" parent="audio" index="0"]
-stream = ExtResource("3")
+stream = ExtResource("3_mthm0")
 
 [node name="move" parent="audio" index="1"]
-stream = ExtResource("3")
+stream = ExtResource("3_mthm0")
 
 [node name="attack" parent="audio" index="2"]
 stream = ExtResource("1")
