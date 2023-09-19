@@ -7,8 +7,10 @@
 - Story messages can now define font size
 - Story messages can now play audio samples
 - Updated sound effects
+- Added dust particle effect to units
 - Fixed a team designation bug that made Tutorial 2 getting stuck
 - Fixed a mouse camera drag bug
+- Splash screen resolution matched to the game logo
 
 ### 0.4.0-alpha
 - Added Amber Noon campaign
