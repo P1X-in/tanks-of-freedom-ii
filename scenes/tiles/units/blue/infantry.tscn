@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bompu23r6jjkl"]
+[gd_scene load_steps=8 format=3 uid="uid://bompu23r6jjkl"]
 
 [ext_resource type="ArrayMesh" uid="uid://bpl0se52bqnml" path="res://assets/units/blue/infantry_modern.obj" id="1"]
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/infantry.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://sd2igkrkfl" path="res://scenes/tiles/units/templates/infantry.tscn" id="3"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "level_up"
@@ -60,9 +60,37 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 8)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("mesh_anchor/dust:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_78kat"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mesh_anchor/dust:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6kasi"]
 _data = {
+"RESET": SubResource("Animation_78kat"),
 "level_up": SubResource("1"),
 "move": SubResource("2")
 }
@@ -86,24 +114,3 @@ surface_material_override/0 = ExtResource("2")
 libraries = {
 "": SubResource("AnimationLibrary_6kasi")
 }
-
-[node name="spawn" parent="audio" index="0"]
-bus = &"Units"
-
-[node name="move" parent="audio" index="1"]
-bus = &"Units"
-
-[node name="attack" parent="audio" index="2"]
-bus = &"Attack"
-
-[node name="hit" parent="audio" index="3"]
-bus = &"Attack"
-
-[node name="damage" parent="audio" index="4"]
-bus = &"Damage"
-
-[node name="die" parent="audio" index="5"]
-bus = &"Explosion"
-
-[node name="level_up" parent="audio" index="6"]
-bus = &"Units"
