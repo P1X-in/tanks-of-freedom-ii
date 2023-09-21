@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dud4psof1q760"
+path="res://.godot/imported/building_small_8_overtile.obj-137b3e96ef643d9074aed8422a67fef5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building_small_8_overtile.obj-137b3e96ef643d9074aed8422a67fef5.mesh"]
+
+source_file="res://assets/terrain/urban/building_small_8_overtile.obj"
+dest_files=["res://.godot/imported/building_small_8_overtile.obj-137b3e96ef643d9074aed8422a67fef5.mesh", "res://.godot/imported/building_small_8_overtile.obj-137b3e96ef643d9074aed8422a67fef5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
