@@ -5,6 +5,7 @@
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_71x6b"]
 
 [node name="tile" instance=ExtResource("1_6l2sq")]
+unit_can_stand = true
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("2_klt02")

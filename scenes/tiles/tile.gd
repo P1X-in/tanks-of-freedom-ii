@@ -4,6 +4,7 @@ extends Node3D
 @export var unit_can_stand = false
 @export var unit_can_fly = false
 @export var is_invisible = false
+@export var can_share_space = false
 
 @export var main_tile_view_cam_modifier = 0
 @export var side_tile_view_cam_modifier = 0

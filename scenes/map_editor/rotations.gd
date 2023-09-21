@@ -119,11 +119,7 @@ func build_rotations(templates, builder):
 		templates.DECO_BEACH2,
 		templates.DECO_BEACH3,
 		templates.SPECIAL_KEY,
-		templates.DECO_RAIL_STRAIGHT,
-		templates.DECO_RAIL_TURN,
-		templates.DECO_RAIL_T,
-		templates.DECO_RAIL_CROSS,
-		templates.DECO_RAIL_END,
+		templates.DECO_RAIL_STOP,
 	])
 
 	self.rotations[builder.CLASS_DAMAGE] = self.build_from_array([
@@ -167,6 +163,11 @@ func build_rotations(templates, builder):
 		templates.BRIDGE_SUSPENSION_TILED,
 		templates.BRIDGE_STONE_BARRIER,
 		templates.BRIDGE_STONE_BARRIER_TILED,
+		templates.DECO_RAIL_STRAIGHT,
+		templates.DECO_RAIL_TURN,
+		templates.DECO_RAIL_T,
+		templates.DECO_RAIL_CROSS,
+		templates.DECO_RAIL_END,
 	])
 
 	self.rotations[builder.CLASS_TERRAIN] = self.build_from_array([

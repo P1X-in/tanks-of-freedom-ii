@@ -51,17 +51,19 @@ func place_decoration(position, name, rotation):
     if tile.decoration.is_present():
         self._notify_removal(tile.decoration, position, self.map.builder.CLASS_DECORATION)
         tile.decoration.clear()
-    if tile.terrain.is_present():
-        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
-        tile.terrain.clear()
-    if tile.building.is_present():
-        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side, tile.building.tile._get_abilities_status())
-        tile.building.clear()
     if tile.damage.is_present():
         self._notify_removal(tile.damage, position, self.map.builder.CLASS_DAMAGE)
         tile.damage.clear()
+    if tile.building.is_present():
+        self._notify_removal(tile.building, position, self.map.builder.CLASS_BUILDING, tile.building.tile.side, tile.building.tile._get_abilities_status())
+        tile.building.clear()
 
     var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_frames_anchor, tile.decoration)
+
+    if tile.terrain.is_present() and (not new_element.can_share_space or not tile.terrain.tile.can_share_space):
+        self._notify_removal(tile.terrain, position, self.map.builder.CLASS_TERRAIN)
+        tile.terrain.clear()
+
     if not self.map.settings.get_option("shadows") or not self.map.settings.get_option("dec_shadows"):
         self._disable_shadow(new_element)
 
@@ -91,9 +93,6 @@ func place_terrain(position, name, rotation):
 
     if not tile.ground.is_present():
         return
-    if tile.decoration.is_present():
-        self._notify_removal(tile.decoration, position, self.map.builder.CLASS_DECORATION)
-        tile.decoration.clear()
     if tile.unit.is_present():
         self._notify_removal(tile.unit, position, self.map.builder.CLASS_UNIT, tile.unit.tile.side)
         tile.unit.clear()
@@ -108,6 +107,11 @@ func place_terrain(position, name, rotation):
         tile.damage.clear()
 
     var new_element = self.place_element(position, name, rotation, self.map.GROUND_HEIGHT, self.map.tiles_terrain_anchor, tile.terrain)
+    
+    if tile.decoration.is_present() and (not new_element.can_share_space or not tile.decoration.tile.can_share_space):
+        self._notify_removal(tile.decoration, position, self.map.builder.CLASS_DECORATION)
+        tile.decoration.clear()
+
     if not self.map.settings.get_option("shadows"):
         self._disable_shadow(new_element)
 
