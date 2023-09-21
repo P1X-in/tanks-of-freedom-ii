@@ -49,7 +49,7 @@ func _start_intro():
 		self.map.remove_child(self.map.camera)
 		self.cart.add_child(self.map.camera)
 		self.map.camera.set_position(Vector3(0, 0, 0))
-		self.map.camera.camera_pivot.set_rotation_degrees(Vector3(0, 180, 0))
+		#self.map.camera.camera_pivot.set_rotation_degrees(Vector3(0, 180, 0))
 		self.map.camera.camera_lens.set_fov(90)
 	if self.settings.get_option("is_steamdeck"):
 		await self.get_tree().create_timer(1).timeout
