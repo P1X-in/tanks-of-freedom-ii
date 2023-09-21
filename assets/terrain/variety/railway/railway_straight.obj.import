@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://btslgh7d1kya0"
+path="res://.godot/imported/railway_straight.obj-c77a36e66a841f29abae9a9eb3300f20.mesh"
+
+[deps]
+
+files=["res://.godot/imported/railway_straight.obj-c77a36e66a841f29abae9a9eb3300f20.mesh"]
+
+source_file="res://assets/terrain/variety/railway/railway_straight.obj"
+dest_files=["res://.godot/imported/railway_straight.obj-c77a36e66a841f29abae9a9eb3300f20.mesh", "res://.godot/imported/railway_straight.obj-c77a36e66a841f29abae9a9eb3300f20.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

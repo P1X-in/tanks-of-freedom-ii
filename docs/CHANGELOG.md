@@ -5,6 +5,7 @@
 - Ported game project to Godot Engine 4
 - Added new tiles
   - city shops
+  - railways
 - Campaign can now override mission selection map image
 - Story messages can now define font size
 - Story messages can now play audio samples

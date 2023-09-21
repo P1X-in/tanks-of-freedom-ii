@@ -55,6 +55,11 @@ var dirt_road_tiles = [
 	"city_bridge_wood",
 	"bridge_stone",
 	"ground_mud",
+	"deco_rail_straight",
+	"deco_rail_turn",
+	"deco_rail_t",
+	"deco_rail_cross",
+	"deco_rail_end",
 ]
 var city_tiles = [
 	"city_building_big1",

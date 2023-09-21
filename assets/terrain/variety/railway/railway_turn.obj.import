@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://1jdaeqfvu3v7"
+path="res://.godot/imported/railway_turn.obj-9d0ec1dd0fb0938b29922ecd3509d578.mesh"
+
+[deps]
+
+files=["res://.godot/imported/railway_turn.obj-9d0ec1dd0fb0938b29922ecd3509d578.mesh"]
+
+source_file="res://assets/terrain/variety/railway/railway_turn.obj"
+dest_files=["res://.godot/imported/railway_turn.obj-9d0ec1dd0fb0938b29922ecd3509d578.mesh", "res://.godot/imported/railway_turn.obj-9d0ec1dd0fb0938b29922ecd3509d578.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

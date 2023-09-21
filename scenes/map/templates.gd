@@ -124,6 +124,12 @@ const DECO_GROUND_DMG_4 = "deco_ground_dmg4"
 const DECO_GROUND_DMG_5 = "deco_ground_dmg5"
 const DECO_GROUND_DMG_6 = "deco_ground_dmg6"
 
+const DECO_RAIL_STRAIGHT = "deco_rail_straight"
+const DECO_RAIL_TURN     = "deco_rail_turn"
+const DECO_RAIL_T        = "deco_rail_t"
+const DECO_RAIL_CROSS    = "deco_rail_cross"
+const DECO_RAIL_END      = "deco_rail_end"
+
 const BRIDGE_PLATE = "bridge_plate"
 const BRIDGE_LEGS = "bridge_legs"
 const BRIDGE_SUSPENSION = "bridge_suspension"
@@ -437,6 +443,13 @@ var templates = {
 	self.DECO_GROUND_DMG_4 : preload("res://scenes/tiles/decorations/ground_damage_4.tscn"),
 	self.DECO_GROUND_DMG_5 : preload("res://scenes/tiles/decorations/ground_damage_5.tscn"),
 	self.DECO_GROUND_DMG_6 : preload("res://scenes/tiles/decorations/ground_damage_6.tscn"),
+
+	self.DECO_RAIL_STRAIGHT : preload("res://scenes/tiles/decorations/railway_straight.tscn"),
+	self.DECO_RAIL_TURN     : preload("res://scenes/tiles/decorations/railway_turn.tscn"),
+	self.DECO_RAIL_T        : preload("res://scenes/tiles/decorations/railway_t.tscn"),
+	self.DECO_RAIL_CROSS    : preload("res://scenes/tiles/decorations/railway_cross.tscn"),
+	self.DECO_RAIL_END      : preload("res://scenes/tiles/decorations/railway_end.tscn"),
+
 
 	self.CITY_BUILDING_BIG1 : preload("res://scenes/tiles/city/building_big_1_overtile.tscn"),
 	self.CITY_BUILDING_BIG2 : preload("res://scenes/tiles/city/building_big_2_overtile.tscn"),

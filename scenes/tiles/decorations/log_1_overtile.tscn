@@ -9,6 +9,5 @@ main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
 
 [node name="mesh" parent="." index="0"]
-cast_shadow = 0
 mesh = ExtResource("2_ut1f2")
 surface_material_override/0 = ExtResource("3_abuv2")

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cn4d5wijlfdcb"
+path="res://.godot/imported/railway_end.obj-dc59141aa1eb1cb62854c9e053835216.mesh"
+
+[deps]
+
+files=["res://.godot/imported/railway_end.obj-dc59141aa1eb1cb62854c9e053835216.mesh"]
+
+source_file="res://assets/terrain/variety/railway/railway_end.obj"
+dest_files=["res://.godot/imported/railway_end.obj-dc59141aa1eb1cb62854c9e053835216.mesh", "res://.godot/imported/railway_end.obj-dc59141aa1eb1cb62854c9e053835216.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
