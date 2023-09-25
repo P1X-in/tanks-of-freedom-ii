@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dh84wqfa3lyhk"
+path="res://.godot/imported/rat_statue_overtile.obj-c7cf9344bca94f39bfea0900615beffc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rat_statue_overtile.obj-c7cf9344bca94f39bfea0900615beffc.mesh"]
+
+source_file="res://assets/terrain/variety/statues/rat_statue_overtile.obj"
+dest_files=["res://.godot/imported/rat_statue_overtile.obj-c7cf9344bca94f39bfea0900615beffc.mesh", "res://.godot/imported/rat_statue_overtile.obj-c7cf9344bca94f39bfea0900615beffc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

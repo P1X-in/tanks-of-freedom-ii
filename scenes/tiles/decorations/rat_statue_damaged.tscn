@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx01appda0ldc"]
+
+[ext_resource type="PackedScene" uid="uid://5mya1iwby638" path="res://scenes/tiles/damaged_tile.tscn" id="1_0hdj4"]
+[ext_resource type="ArrayMesh" uid="uid://d24hogh6fkk26" path="res://assets/terrain/variety/statues/rat_statue_damaged.obj" id="2_a8g3s"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_jhury"]
+
+[node name="damaged_tile" instance=ExtResource("1_0hdj4")]
+main_tile_view_cam_modifier = -10
+side_tile_view_cam_modifier = -25
+next_damage_stage_template = "destroyed_statue_rat"
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_a8g3s")
+surface_material_override/0 = ExtResource("3_jhury")

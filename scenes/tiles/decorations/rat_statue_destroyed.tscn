@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://hqmkcf45giaj"]
+
+[ext_resource type="PackedScene" uid="uid://5mya1iwby638" path="res://scenes/tiles/damaged_tile.tscn" id="1_sbxwu"]
+[ext_resource type="ArrayMesh" uid="uid://u3wiy1th00cd" path="res://assets/terrain/variety/statues/rat_statue_destroyed.obj" id="2_3b5um"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_drswl"]
+
+[node name="damaged_tile" instance=ExtResource("1_sbxwu")]
+is_smoking = true
+main_tile_view_cam_modifier = -10
+side_tile_view_cam_modifier = -25
+base_stage_template = "deco_statue_rat"
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_3b5um")
+surface_material_override/0 = ExtResource("3_drswl")

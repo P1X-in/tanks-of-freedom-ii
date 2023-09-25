@@ -147,6 +147,7 @@ func build_rotations(templates, builder):
 		templates.CITY_SHOP3,
 		templates.DECO_FOUNTAIN,
 		templates.DECO_STATUE,
+		templates.DECO_STATUE_RAT,
 		templates.CITY_BRIDGE,
 		templates.CITY_BRIDGE_WOOD,
 		templates.CITY_ROADBLOCK,
