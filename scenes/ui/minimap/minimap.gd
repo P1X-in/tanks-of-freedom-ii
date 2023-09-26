@@ -139,6 +139,9 @@ var forest_tiles = [
 	"nature_trees11",
 	"nature_trees12",
 	"nature_trees13",
+	"nature_trees16",
+	"nature_trees17",
+	"nature_trees18",
 ]
 
 var forest_autumn_tiles = [
