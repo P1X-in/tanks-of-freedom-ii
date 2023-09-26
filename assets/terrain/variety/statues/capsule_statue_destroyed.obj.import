@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpsv5op1cbify"
+path="res://.godot/imported/capsule_statue_destroyed.obj-1a3d09ff0b03e108ede648a08ce13650.mesh"
+
+[deps]
+
+files=["res://.godot/imported/capsule_statue_destroyed.obj-1a3d09ff0b03e108ede648a08ce13650.mesh"]
+
+source_file="res://assets/terrain/variety/statues/capsule_statue_destroyed.obj"
+dest_files=["res://.godot/imported/capsule_statue_destroyed.obj-1a3d09ff0b03e108ede648a08ce13650.mesh", "res://.godot/imported/capsule_statue_destroyed.obj-1a3d09ff0b03e108ede648a08ce13650.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

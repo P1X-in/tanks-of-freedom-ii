@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0prc4k4hrcmm"
+path="res://.godot/imported/capsule_statue_damaged.obj-fbe0642a2d6b82bc4473223c7227859e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/capsule_statue_damaged.obj-fbe0642a2d6b82bc4473223c7227859e.mesh"]
+
+source_file="res://assets/terrain/variety/statues/capsule_statue_damaged.obj"
+dest_files=["res://.godot/imported/capsule_statue_damaged.obj-fbe0642a2d6b82bc4473223c7227859e.mesh", "res://.godot/imported/capsule_statue_damaged.obj-fbe0642a2d6b82bc4473223c7227859e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
