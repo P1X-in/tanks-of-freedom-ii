@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b3ip0fjk8lsfr"
+path="res://.godot/imported/farm_2_destroyed.obj-f59adb1e3ea42cef6f882571a12426be.mesh"
+
+[deps]
+
+files=["res://.godot/imported/farm_2_destroyed.obj-f59adb1e3ea42cef6f882571a12426be.mesh"]
+
+source_file="res://assets/terrain/rural/farm_2_destroyed.obj"
+dest_files=["res://.godot/imported/farm_2_destroyed.obj-f59adb1e3ea42cef6f882571a12426be.mesh", "res://.godot/imported/farm_2_destroyed.obj-f59adb1e3ea42cef6f882571a12426be.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

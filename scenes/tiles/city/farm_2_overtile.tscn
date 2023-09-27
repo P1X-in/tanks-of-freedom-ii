@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://ycynueylodyp"]
+
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="1_jm5gq"]
+[ext_resource type="ArrayMesh" uid="uid://tf3cfiqo3qmf" path="res://assets/terrain/rural/farm_2_overtile.obj" id="2_dfg36"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_cdhik"]
+
+[node name="tile" instance=ExtResource("1_jm5gq")]
+next_damage_stage_template = "damaged_farm2"
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_dfg36")
+surface_material_override/0 = ExtResource("3_cdhik")

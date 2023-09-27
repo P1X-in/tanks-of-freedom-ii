@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://tf3cfiqo3qmf"
+path="res://.godot/imported/farm_2_overtile.obj-860e1474b726c4f2925a21721643a85f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/farm_2_overtile.obj-860e1474b726c4f2925a21721643a85f.mesh"]
+
+source_file="res://assets/terrain/rural/farm_2_overtile.obj"
+dest_files=["res://.godot/imported/farm_2_overtile.obj-860e1474b726c4f2925a21721643a85f.mesh", "res://.godot/imported/farm_2_overtile.obj-860e1474b726c4f2925a21721643a85f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

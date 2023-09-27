@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3t5x4ven0j0o"]
+
+[ext_resource type="PackedScene" uid="uid://5mya1iwby638" path="res://scenes/tiles/damaged_tile.tscn" id="1_mbdrn"]
+[ext_resource type="ArrayMesh" uid="uid://b3ip0fjk8lsfr" path="res://assets/terrain/rural/farm_2_destroyed.obj" id="2_itlhf"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_nfqx5"]
+
+[node name="damaged_tile" instance=ExtResource("1_mbdrn")]
+is_smoking = true
+main_tile_view_cam_modifier = -10
+side_tile_view_cam_modifier = -25
+base_stage_template = "city_farm2"
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_itlhf")
+surface_material_override/0 = ExtResource("3_nfqx5")
