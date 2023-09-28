@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mpmognogaalp"
+path="res://.godot/imported/building_small_10_overtile.obj-4317a653e7c98926bd73024b4234f79e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building_small_10_overtile.obj-4317a653e7c98926bd73024b4234f79e.mesh"]
+
+source_file="res://assets/terrain/rural/building_small_10_overtile.obj"
+dest_files=["res://.godot/imported/building_small_10_overtile.obj-4317a653e7c98926bd73024b4234f79e.mesh", "res://.godot/imported/building_small_10_overtile.obj-4317a653e7c98926bd73024b4234f79e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://du3jyxxbtwb8f"
+path="res://.godot/imported/building_small_10_damaged.obj-f4aeb85214decb07d8148cdef886704d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building_small_10_damaged.obj-f4aeb85214decb07d8148cdef886704d.mesh"]
+
+source_file="res://assets/terrain/rural/building_small_10_damaged.obj"
+dest_files=["res://.godot/imported/building_small_10_damaged.obj-f4aeb85214decb07d8148cdef886704d.mesh", "res://.godot/imported/building_small_10_damaged.obj-f4aeb85214decb07d8148cdef886704d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

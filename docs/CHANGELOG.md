@@ -6,6 +6,9 @@
 - Added new tiles
   - city shops
   - railways
+  - statues
+  - tree alleys
+  - city housing
 - Campaign can now override mission selection map image
 - Story messages can now define font size
 - Story messages can now play audio samples

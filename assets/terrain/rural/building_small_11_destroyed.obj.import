@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnlp2vpierc30"
+path="res://.godot/imported/building_small_11_destroyed.obj-8f415147a2ca3865a4e331be03065248.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building_small_11_destroyed.obj-8f415147a2ca3865a4e331be03065248.mesh"]
+
+source_file="res://assets/terrain/rural/building_small_11_destroyed.obj"
+dest_files=["res://.godot/imported/building_small_11_destroyed.obj-8f415147a2ca3865a4e331be03065248.mesh", "res://.godot/imported/building_small_11_destroyed.obj-8f415147a2ca3865a4e331be03065248.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

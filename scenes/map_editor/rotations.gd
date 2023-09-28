@@ -140,6 +140,8 @@ func build_rotations(templates, builder):
 		templates.CITY_BUILDING_SMALL2,
 		templates.CITY_BUILDING_SMALL3,
 		templates.CITY_BUILDING_SMALL4,
+		templates.CITY_BUILDING_SMALL10,
+		templates.CITY_BUILDING_SMALL11,
 		templates.CITY_BUILDING_SMALL5,
 		templates.CITY_BUILDING_SMALL6,
 		templates.CITY_FARM1,
