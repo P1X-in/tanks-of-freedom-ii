@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ch6pfpl1bjw6q"
+path="res://.godot/imported/building_big_5_destroyed.obj-9b43097c82716d10d01596a35f150c6a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building_big_5_destroyed.obj-9b43097c82716d10d01596a35f150c6a.mesh"]
+
+source_file="res://assets/terrain/urban/building_big_5_destroyed.obj"
+dest_files=["res://.godot/imported/building_big_5_destroyed.obj-9b43097c82716d10d01596a35f150c6a.mesh", "res://.godot/imported/building_big_5_destroyed.obj-9b43097c82716d10d01596a35f150c6a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

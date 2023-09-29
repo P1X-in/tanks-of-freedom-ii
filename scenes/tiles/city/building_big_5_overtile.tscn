@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjufva5r2hnrl"]
+
+[ext_resource type="PackedScene" path="res://scenes/tiles/reflective_tile.tscn" id="1_xxj88"]
+[ext_resource type="ArrayMesh" uid="uid://cj6vro2ydam7j" path="res://assets/terrain/urban/building_big_5_overtile.obj" id="2_40erf"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_jvs6n"]
+[ext_resource type="ArrayMesh" uid="uid://dbbcmts1gkbr1" path="res://assets/terrain/reflections/building_big_5_reflections.obj" id="4_cxety"]
+[ext_resource type="Material" uid="uid://c2g2gx3jr74cy" path="res://assets/materials/arne32_metallic.tres" id="5_o14vk"]
+
+[node name="tile" instance=ExtResource("1_xxj88")]
+next_damage_stage_template = "damaged_building_big5"
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_40erf")
+surface_material_override/0 = ExtResource("3_jvs6n")
+
+[node name="reflection" parent="." index="1"]
+mesh = ExtResource("4_cxety")
+surface_material_override/0 = ExtResource("5_o14vk")

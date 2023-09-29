@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci7yy1yh3t56r"]
+
+[ext_resource type="PackedScene" uid="uid://5mya1iwby638" path="res://scenes/tiles/damaged_tile.tscn" id="1_83ao5"]
+[ext_resource type="ArrayMesh" uid="uid://1ml2d8j0b6tb" path="res://assets/terrain/urban/building_big_5_damaged.obj" id="2_1x3s8"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_0smng"]
+
+[node name="damaged_tile" instance=ExtResource("1_83ao5")]
+next_damage_stage_template = "destroyed_building_big5"
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_1x3s8")
+surface_material_override/0 = ExtResource("3_0smng")

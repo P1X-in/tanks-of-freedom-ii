@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://8axypv5sn8kp"]
+
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="1_0wsvh"]
+[ext_resource type="ArrayMesh" uid="uid://dy7yf5w7tsvwt" path="res://assets/terrain/urban/building_medium_1_overtile.obj" id="2_bv7e6"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_njq7o"]
+
+[node name="tile" instance=ExtResource("1_0wsvh")]
+next_damage_stage_template = "damaged_building_medium1"
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_bv7e6")
+surface_material_override/0 = ExtResource("3_njq7o")
