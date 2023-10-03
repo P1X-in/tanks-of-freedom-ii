@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpstotc4l14tv"
+path="res://.godot/imported/wall4_gate_closed.obj-f6b2fa594e2a305a5b1ba4b1da7d6418.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall4_gate_closed.obj-f6b2fa594e2a305a5b1ba4b1da7d6418.mesh"]
+
+source_file="res://assets/terrain/variety/walls/wall4_gate_closed.obj"
+dest_files=["res://.godot/imported/wall4_gate_closed.obj-f6b2fa594e2a305a5b1ba4b1da7d6418.mesh", "res://.godot/imported/wall4_gate_closed.obj-f6b2fa594e2a305a5b1ba4b1da7d6418.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

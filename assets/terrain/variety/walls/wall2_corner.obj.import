@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://df6j7j0r2o1iu"
+path="res://.godot/imported/wall2_corner.obj-ff27d9b6f147e876dab86352af318292.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall2_corner.obj-ff27d9b6f147e876dab86352af318292.mesh"]
+
+source_file="res://assets/terrain/variety/walls/wall2_corner.obj"
+dest_files=["res://.godot/imported/wall2_corner.obj-ff27d9b6f147e876dab86352af318292.mesh", "res://.godot/imported/wall2_corner.obj-ff27d9b6f147e876dab86352af318292.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

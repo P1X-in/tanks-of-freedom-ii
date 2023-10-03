@@ -175,6 +175,33 @@ const CASTLE_WALL_T2 = "castle_wall_t2"
 const CASTLE_WALL_GATE = "castle_wall_gate"
 const CASTLE_WALL_GATE_CLOSED = "castle_wall_gate_closed"
 
+const BRICK_WALL_STRAIGHT = "brick_wall_straight"
+const BRICK_WALL_STRAIGHT2 = "brick_wall_straight2"
+const BRICK_WALL_CORNER = "brick_wall_corner"
+const BRICK_WALL_CROSS = "brick_wall_cross"
+const BRICK_WALL_T = "brick_wall_t"
+const BRICK_WALL_T2 = "brick_wall_t2"
+const BRICK_WALL_GATE = "brick_wall_gate"
+const BRICK_WALL_GATE_CLOSED = "brick_wall_gate_closed"
+
+const FENCE_WALL_STRAIGHT = "fence_wall_straight"
+const FENCE_WALL_STRAIGHT2 = "fence_wall_straight2"
+const FENCE_WALL_CORNER = "fence_wall_corner"
+const FENCE_WALL_CROSS = "fence_wall_cross"
+const FENCE_WALL_T = "fence_wall_t"
+const FENCE_WALL_T2 = "fence_wall_t2"
+const FENCE_WALL_GATE = "fence_wall_gate"
+const FENCE_WALL_GATE_CLOSED = "fence_wall_gate_closed"
+
+const FUTURISTIC_WALL_STRAIGHT = "futuristic_wall_straight"
+const FUTURISTIC_WALL_STRAIGHT2 = "futuristic_wall_straight2"
+const FUTURISTIC_WALL_CORNER = "futuristic_wall_corner"
+const FUTURISTIC_WALL_CROSS = "futuristic_wall_cross"
+const FUTURISTIC_WALL_T = "futuristic_wall_t"
+const FUTURISTIC_WALL_T2 = "futuristic_wall_t2"
+const FUTURISTIC_WALL_GATE = "futuristic_wall_gate"
+const FUTURISTIC_WALL_GATE_CLOSED = "futuristic_wall_gate_closed"
+
 const DAMAGED_STATUE = "damaged_statue"
 const DAMAGED_STATUE_RAT = "damaged_statue_rat"
 const DAMAGED_STATUE_CAPSULE = "damaged_statue_capsule"
@@ -519,6 +546,33 @@ var templates = {
 	self.CASTLE_WALL_T2 : preload("res://scenes/tiles/city/wall_t2.tscn"),
 	self.CASTLE_WALL_GATE : preload("res://scenes/tiles/city/wall_gate.tscn"),
 	self.CASTLE_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall_gate_closed.tscn"),
+
+	self.BRICK_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall2_straight.tscn"),
+	self.BRICK_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall2_straight2.tscn"),
+	self.BRICK_WALL_CORNER : preload("res://scenes/tiles/city/wall2_corner.tscn"),
+	self.BRICK_WALL_CROSS : preload("res://scenes/tiles/city/wall2_cross.tscn"),
+	self.BRICK_WALL_T : preload("res://scenes/tiles/city/wall2_t.tscn"),
+	self.BRICK_WALL_T2 : preload("res://scenes/tiles/city/wall2_t2.tscn"),
+	self.BRICK_WALL_GATE : preload("res://scenes/tiles/city/wall2_gate.tscn"),
+	self.BRICK_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall2_gate_closed.tscn"),
+
+	self.FENCE_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall3_straight.tscn"),
+	self.FENCE_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall3_straight2.tscn"),
+	self.FENCE_WALL_CORNER : preload("res://scenes/tiles/city/wall3_corner.tscn"),
+	self.FENCE_WALL_CROSS : preload("res://scenes/tiles/city/wall3_cross.tscn"),
+	self.FENCE_WALL_T : preload("res://scenes/tiles/city/wall3_t.tscn"),
+	self.FENCE_WALL_T2 : preload("res://scenes/tiles/city/wall3_t2.tscn"),
+	self.FENCE_WALL_GATE : preload("res://scenes/tiles/city/wall3_gate.tscn"),
+	self.FENCE_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall3_gate_closed.tscn"),
+
+	self.FUTURISTIC_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall4_straight.tscn"),
+	self.FUTURISTIC_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall4_straight2.tscn"),
+	self.FUTURISTIC_WALL_CORNER : preload("res://scenes/tiles/city/wall4_corner.tscn"),
+	self.FUTURISTIC_WALL_CROSS : preload("res://scenes/tiles/city/wall4_cross.tscn"),
+	self.FUTURISTIC_WALL_T : preload("res://scenes/tiles/city/wall4_t.tscn"),
+	self.FUTURISTIC_WALL_T2 : preload("res://scenes/tiles/city/wall4_t2.tscn"),
+	self.FUTURISTIC_WALL_GATE : preload("res://scenes/tiles/city/wall4_gate.tscn"),
+	self.FUTURISTIC_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall4_gate_closed.tscn"),
 
 	self.DAMAGED_STATUE : preload("res://scenes/tiles/decorations/statue_damaged.tscn"),
 	self.DAMAGED_STATUE_RAT : preload("res://scenes/tiles/decorations/rat_statue_damaged.tscn"),

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cv1nrwin215hi"
+path="res://.godot/imported/wall4_straight2.obj-245283641d3a2b904f0a1702133528f5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall4_straight2.obj-245283641d3a2b904f0a1702133528f5.mesh"]
+
+source_file="res://assets/terrain/variety/walls/wall4_straight2.obj"
+dest_files=["res://.godot/imported/wall4_straight2.obj-245283641d3a2b904f0a1702133528f5.mesh", "res://.godot/imported/wall4_straight2.obj-245283641d3a2b904f0a1702133528f5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

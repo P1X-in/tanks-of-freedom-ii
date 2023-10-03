@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpftkr61op4uq"
+path="res://.godot/imported/wall2_gate.obj-ce0df2003300bc209c6c7716a6a3b7e1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall2_gate.obj-ce0df2003300bc209c6c7716a6a3b7e1.mesh"]
+
+source_file="res://assets/terrain/variety/walls/wall2_gate.obj"
+dest_files=["res://.godot/imported/wall2_gate.obj-ce0df2003300bc209c6c7716a6a3b7e1.mesh", "res://.godot/imported/wall2_gate.obj-ce0df2003300bc209c6c7716a6a3b7e1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

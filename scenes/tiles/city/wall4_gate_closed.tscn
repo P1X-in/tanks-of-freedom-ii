@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://boig4wki5c303"]
+
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="1_xqqbq"]
+[ext_resource type="ArrayMesh" uid="uid://dlqiyqllnebyq" path="res://assets/terrain/variety/walls/wall4_gate.obj" id="2_cm0rt"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_pfx8r"]
+[ext_resource type="ArrayMesh" uid="uid://cpstotc4l14tv" path="res://assets/terrain/variety/walls/wall4_gate_closed.obj" id="4_huwg1"]
+
+[node name="wall_gate_closed" instance=ExtResource("1_xqqbq")]
+unit_vertical_offset = 1
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_cm0rt")
+surface_material_override/0 = ExtResource("3_pfx8r")
+
+[node name="door" type="MeshInstance3D" parent="mesh" index="0"]
+mesh = ExtResource("4_huwg1")
+surface_material_override/0 = ExtResource("3_pfx8r")

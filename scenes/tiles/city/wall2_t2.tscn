@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0f64py5aykva"]
+
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="1_4qvyx"]
+[ext_resource type="ArrayMesh" uid="uid://rw688hhxr1xg" path="res://assets/terrain/variety/walls/wall2_t2.obj" id="2_m7jib"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_vdd14"]
+
+[node name="wall_t2" instance=ExtResource("1_4qvyx")]
+unit_vertical_offset = 1
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_m7jib")
+surface_material_override/0 = ExtResource("3_vdd14")

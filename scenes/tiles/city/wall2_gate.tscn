@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg0qw5av5hnfw"]
+
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="1_1k7hv"]
+[ext_resource type="ArrayMesh" uid="uid://cpftkr61op4uq" path="res://assets/terrain/variety/walls/wall2_gate.obj" id="2_ibn2r"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_leyur"]
+
+[node name="wall_gate" instance=ExtResource("1_1k7hv")]
+unit_can_stand = true
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_ibn2r")
+surface_material_override/0 = ExtResource("3_leyur")
