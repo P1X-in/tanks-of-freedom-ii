@@ -90,6 +90,7 @@ func build_rotations(templates, builder):
 		templates.FRAME_SAND_BEACH1,
 		templates.FRAME_SAND_BEACH2,
 		templates.FRAME_SAND_BEACH3,
+		templates.FRAME_MUD1,
 		templates.FRAME_FENCE,
 		templates.FRAME_LASER,
 		templates.FRAME_WALL,

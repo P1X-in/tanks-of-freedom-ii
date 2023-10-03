@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cx23i0tlbs2nu"
+path="res://.godot/imported/mud_1_overtile.obj-51b7aaffa80cf38e16f9f21aff85eb25.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mud_1_overtile.obj-51b7aaffa80cf38e16f9f21aff85eb25.mesh"]
+
+source_file="res://assets/terrain/variety/mud_1_overtile.obj"
+dest_files=["res://.godot/imported/mud_1_overtile.obj-51b7aaffa80cf38e16f9f21aff85eb25.mesh", "res://.godot/imported/mud_1_overtile.obj-51b7aaffa80cf38e16f9f21aff85eb25.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

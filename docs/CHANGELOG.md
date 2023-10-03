@@ -9,6 +9,8 @@
   - statues
   - tree alleys
   - city housing
+  - farms
+  - walls
 - Campaign can now override mission selection map image
 - Story messages can now define font size
 - Story messages can now play audio samples
