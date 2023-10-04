@@ -13,6 +13,7 @@ var brains = {
 	"scout" : preload("res://scenes/board/logic/ai/brains/scout_brain.gd").new(),
 
 	"hero_admiral" : preload("res://scenes/board/logic/ai/brains/heroes/admiral_brain.gd").new(),
+	"hero_captain" : preload("res://scenes/board/logic/ai/brains/heroes/captain_brain.gd").new(),
 
 	"npc" : preload("res://scenes/board/logic/ai/brains/npc_brain.gd").new(),
 	"hero" : preload("res://scenes/board/logic/ai/brains/hero_brain.gd").new()

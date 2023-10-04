@@ -189,6 +189,20 @@ func _approach_action(entity_tile, path, unit_range):
 
     return null
 
+func _move_action(entity_tile, path, unit_range):
+    if unit_range < 1:
+        return null
+
+    var target_tile = self.pathfinder.visited_tiles[path[path.size() - unit_range]]
+
+    if self._is_beyond_tether(entity_tile.unit.tile, target_tile):
+        return null
+
+    if target_tile.can_acommodate_unit(entity_tile.unit.tile):
+        return self.actions_templates['move'].new(entity_tile, target_tile, unit_range)
+
+    return null
+
 func _get_interaction_tiles(tile, source_tile):
     var tiles = []
     for neighbour in tile.neighbours:
