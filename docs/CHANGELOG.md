@@ -3,6 +3,7 @@
 
 ### 0.5.0-alpha
 - Ported game project to Godot Engine 4
+- Most heroes will now use their active abilities when commanded by AI
 - Added new tiles
   - city shops
   - railways
