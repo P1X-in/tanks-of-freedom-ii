@@ -32,14 +32,15 @@ func _gather_ability_actions(entity_tile, ap, _board):
 				continue
 			path = self.pathfinder.get_path_to_tile(neighbour)
 			if path.size() - 1 < unit_range:
-				action_value = _calculate_supply_value(unit, neighbour)
-				if action_value >= 100:
+				print(path.size(), " ", unit_range)
+				action_value = _calculate_support_value(unit, neighbour)
+				if action_value >= 50:
 					action = self._move_action(entity_tile, path, unit_range - 1)
 					action.value = action_value
 					actions.append(action)
 		
-	action_value = _calculate_supply_value(unit, entity_tile)
-	if action_value >= 100:
+	action_value = _calculate_support_value(unit, entity_tile)
+	if action_value >= 50:
 		action = self._ability_action(ability, entity_tile)
 		ability.active_source_tile = entity_tile
 		action.delay = 0.5
@@ -48,13 +49,13 @@ func _gather_ability_actions(entity_tile, ap, _board):
 
 	return actions
 
-func _calculate_supply_value(source, target_tile):
+func _calculate_support_value(source, target_tile):
 	var final_value = 0
 
 	for tile in target_tile.neighbours.values():
-		if tile.has_friendly_unit(source.side):
-			if tile.unit.tile.hp < tile.unit.tile.max_hp:
-				final_value += (tile.unit.tile.max_hp - tile.unit.tile.hp) * 5
-				final_value += tile.unit.tile.get_value()
+		if tile.has_friendly_unit(source.side) and tile.neighbours_enemy_unit(source.side, source.team):
+			final_value += tile.unit.tile.get_value()
+			if tile.unit.tile.attacks > 0:
+				final_value += 20
 
 	return final_value

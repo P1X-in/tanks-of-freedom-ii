@@ -5,166 +5,166 @@ var tile_template = preload("res://scenes/map/tile.gd")
 
 var tiles = {}
 var scripts = {
-    "stories" : {},
-    "triggers" : {}
+	"stories" : {},
+	"triggers" : {}
 }
 var metadata = {}
 
 func _init():
-    for x in range(self.SIZE):
-        for y in range(self.SIZE):
-            self.tiles[str(x) + "_" + str(y)] = self.tile_template.new(x, y)
-    self.connect_neightbours()
+	for x in range(self.SIZE):
+		for y in range(self.SIZE):
+			self.tiles[str(x) + "_" + str(y)] = self.tile_template.new(x, y)
+	self.connect_neightbours()
 
 func wipe_metadata():
-    self.metadata.clear()
+	self.metadata.clear()
 
 func wipe_scripts():
-    self.scripts["stories"].clear()
-    self.scripts["triggers"].clear()
+	self.scripts["stories"].clear()
+	self.scripts["triggers"].clear()
 
 func get_tile(position):
-    var key = str(position.x) + "_" + str(position.y)
-    if self.tiles.has(key):
-        return self.tiles[key]
-    return null
+	var key = str(position.x) + "_" + str(position.y)
+	if self.tiles.has(key):
+		return self.tiles[key]
+	return null
 
 func get_tile2(x, y):
-    return self.tiles[str(x) + "_" + str(y)]
+	return self.tiles[str(x) + "_" + str(y)]
 
 func get_dict():
-    var tiles_dict = {}
-    for i in self.tiles.keys():
-        if self.tiles[i].has_content():
-          tiles_dict[i] = self.tiles[i].get_dict()
+	var tiles_dict = {}
+	for i in self.tiles.keys():
+		if self.tiles[i].has_content():
+			tiles_dict[i] = self.tiles[i].get_dict()
 
-    return {
-        "metadata" : self.metadata,
-        "tiles" : tiles_dict,
-        "scripts" : self.scripts
-    }
+	return {
+		"metadata" : self.metadata,
+		"tiles" : tiles_dict,
+		"scripts" : self.scripts
+	}
 
 func connect_neightbours():
-    var tile
+	var tile
 
-    for x in range(self.SIZE):
-        for y in range(self.SIZE):
+	for x in range(self.SIZE):
+		for y in range(self.SIZE):
 
-            tile = self.get_tile2(x, y)
+			tile = self.get_tile2(x, y)
 
-            if x > 0:
-                tile.add_neighbour(tile.WEST, self.get_tile2(x-1, y))
+			if x > 0:
+				tile.add_neighbour(tile.WEST, self.get_tile2(x-1, y))
 
-            if x < self.SIZE - 1:
-                tile.add_neighbour(tile.EAST, self.get_tile2(x+1, y))
+			if x < self.SIZE - 1:
+				tile.add_neighbour(tile.EAST, self.get_tile2(x+1, y))
 
-            if y > 0:
-                tile.add_neighbour(tile.NORTH, self.get_tile2(x, y-1))
+			if y > 0:
+				tile.add_neighbour(tile.NORTH, self.get_tile2(x, y-1))
 
-            if y < self.SIZE - 1:
-                tile.add_neighbour(tile.SOUTH, self.get_tile2(x, y+1))
+			if y < self.SIZE - 1:
+				tile.add_neighbour(tile.SOUTH, self.get_tile2(x, y+1))
 
 
 func get_player_units(side):
-    var units = []
-    for i in self.tiles.keys():
-        if self.tiles[i].has_friendly_unit(side):
-            units.append(self.tiles[i].unit.tile)
+	var units = []
+	for i in self.tiles.keys():
+		if self.tiles[i].has_friendly_unit(side):
+			units.append(self.tiles[i].unit.tile)
 
-    return units
+	return units
 
 func get_player_buildings(side):
-    var buildings = []
-    for i in self.tiles.keys():
-        if self.tiles[i].has_friendly_building(side):
-            buildings.append(self.tiles[i].building.tile)
+	var buildings = []
+	for i in self.tiles.keys():
+		if self.tiles[i].has_friendly_building(side):
+			buildings.append(self.tiles[i].building.tile)
 
-    return buildings
+	return buildings
 
 func get_player_units_tiles(side):
-    var units = []
-    for i in self.tiles.keys():
-        if self.tiles[i].has_friendly_unit(side):
-            units.append(self.tiles[i])
+	var units = []
+	for i in self.tiles.keys():
+		if self.tiles[i].has_friendly_unit(side):
+			units.append(self.tiles[i])
 
-    return units
+	return units
 
 func get_player_buildings_tiles(side):
-    var buildings = []
-    for i in self.tiles.keys():
-        if self.tiles[i].has_friendly_building(side):
-            buildings.append(self.tiles[i])
+	var buildings = []
+	for i in self.tiles.keys():
+		if self.tiles[i].has_friendly_building(side):
+			buildings.append(self.tiles[i])
 
-    return buildings
+	return buildings
 
 func get_enemy_units_tiles(side, team=null):
-    var units = []
-    for i in self.tiles.keys():
-        if self.tiles[i].has_enemy_unit(side, team):
-            units.append(self.tiles[i])
+	var units = []
+	for i in self.tiles.keys():
+		if self.tiles[i].has_enemy_unit(side, team):
+			units.append(self.tiles[i])
 
-    return units
+	return units
 
 func get_enemy_buildings_tiles(side, team=null):
-    var buildings = []
-    for i in self.tiles.keys():
-        if self.tiles[i].has_enemy_building(side, team):
-            buildings.append(self.tiles[i])
+	var buildings = []
+	for i in self.tiles.keys():
+		if self.tiles[i].has_enemy_building(side, team):
+			buildings.append(self.tiles[i])
 
-    return buildings
+	return buildings
 
 func ingest_scripts(incoming_scripts):
-    if incoming_scripts == null or incoming_scripts.is_empty():
-        return
+	if incoming_scripts == null or incoming_scripts.is_empty():
+		return
 
-    self.scripts = incoming_scripts
+	self.scripts = incoming_scripts
 
 func get_player_bunker_position(side):
-    for i in self.tiles.keys():
-        if self.tiles[i].has_friendly_hq(side):
-            return self.tiles[i].position
+	for i in self.tiles.keys():
+		if self.tiles[i].has_friendly_hq(side):
+			return self.tiles[i].position
 
-    return null
+	return null
 
 func get_player_bunkers(side):
-    var bunkers = []
+	var bunkers = []
 
-    for i in self.tiles.keys():
-        if self.tiles[i].has_friendly_hq(side):
-            bunkers.append(self.tiles[i])
+	for i in self.tiles.keys():
+		if self.tiles[i].has_friendly_hq(side):
+			bunkers.append(self.tiles[i])
 
-    return bunkers
+	return bunkers
 
 func get_player_hero_position(side):
-    for i in self.tiles.keys():
-        if self.tiles[i].has_friendly_hero(side):
-            return self.tiles[i].position
+	for i in self.tiles.keys():
+		if self.tiles[i].has_friendly_hero(side):
+			return self.tiles[i].position
 
-    return null
+	return null
 
 func get_player_heroes(side):
-    var heroes = []
+	var heroes = []
 
-    for i in self.tiles.keys():
-        if self.tiles[i].has_friendly_hero(side):
-            heroes.append(self.tiles[i].unit.tile)
+	for i in self.tiles.keys():
+		if self.tiles[i].has_friendly_hero(side):
+			heroes.append(self.tiles[i].unit.tile)
 
-    return heroes
+	return heroes
 
 func get_unit_position(unit):
-    if unit == null:
-        return null
-        
-    for i in self.tiles.keys():
-        if self.tiles[i].unit.tile == unit:
-            return [self.tiles[i].position.x, self.tiles[i].position.y]
+	if unit == null:
+		return null
+		
+	for i in self.tiles.keys():
+		if self.tiles[i].unit.tile == unit:
+			return [self.tiles[i].position.x, self.tiles[i].position.y]
 
-    return null
+	return null
 
 func wipe_all_units():
-    var units = []
-    for i in self.tiles.keys():
-        if self.tiles[i].unit.is_present():
-            self.tiles[i].unit.clear()
+	var units = []
+	for i in self.tiles.keys():
+		if self.tiles[i].unit.is_present():
+			self.tiles[i].unit.clear()
 
-    return units
+	return units

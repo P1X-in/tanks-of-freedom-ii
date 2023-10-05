@@ -4,8 +4,11 @@ var tiles_in_range = {}
 var units_in_range = []
 
 
-func _execute(board, _position):
+func _execute(board, position):
     var source_tile = board.selected_tile
+
+    if source_tile == null:
+        source_tile = board.map.model.get_tile(position)
 
     self._get_units_in_range(source_tile, self.source.side)
 
