@@ -19,6 +19,7 @@
 - Added dust particle effect to units
 - Fixed a team designation bug that made Tutorial 2 getting stuck
 - Fixed a mouse camera drag bug
+- Reduced instances AI failing to move and locking up
 - Splash screen resolution matched to the game logo
 
 ### 0.4.0-alpha

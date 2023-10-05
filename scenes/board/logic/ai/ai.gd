@@ -51,6 +51,8 @@ func _ai_tick():
 				self.call_deferred("_ai_tick")
 				return
 
+		if self._failsafe_counter > 0:
+			self.board.map.camera.camera_in_transit = false
 		await selected_action.perform(self.board)
 
 		if str(selected_action) == self._last_action_signature:

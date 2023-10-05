@@ -357,7 +357,7 @@ func pan_camera(delta):
 		self.tof_camera_distance = self.camera_tof_zoom_start + (self.tof_camera_distance_min + (self.tof_camera_distance_max - self.tof_camera_distance_min) * self.camera_zoom_fraction - self.camera_tof_zoom_start) * transit_time
 		self.aw_camera_distance = self.camera_aw_zoom_start + (self.aw_camera_distance_min + (self.aw_camera_distance_max - self.aw_camera_distance_min) * self.camera_zoom_fraction - self.camera_aw_zoom_start) * transit_time
 
-	if self.camera_transit_time >= 1.5:
+	if self.camera_transit_time >= 1.4:
 		self.camera_start = null
 		self.camera_destination = null
 		self.camera_transit_time = 0.0
