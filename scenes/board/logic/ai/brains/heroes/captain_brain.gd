@@ -24,6 +24,9 @@ func _gather_ability_actions(entity_tile, ap, _board):
 	for friendly_unit_tile in self.pathfinder.own_units:
 		target_tile = self.pathfinder.own_units[friendly_unit_tile]
 
+		if target_tile.unit.tile == self:
+			continue
+
 		for neighbour in target_tile.neighbours.values():
 			if tiles_visited.has(neighbour):
 				continue
@@ -53,8 +56,9 @@ func _calculate_supply_value(source, target_tile):
 
 	for tile in target_tile.neighbours.values():
 		if tile.has_friendly_unit(source.side):
-			if tile.unit.tile.hp < tile.unit.tile.max_hp:
-				final_value += (tile.unit.tile.max_hp - tile.unit.tile.hp) * 5
-				final_value += tile.unit.tile.get_value()
+			if tile.unit.tile != self:
+				if tile.unit.tile.hp < tile.unit.tile.max_hp:
+					final_value += (tile.unit.tile.max_hp - tile.unit.tile.hp) * 5
+					final_value += tile.unit.tile.get_value()
 
 	return final_value
