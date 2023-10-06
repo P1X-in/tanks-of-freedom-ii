@@ -18,6 +18,8 @@ var brains = {
 	"hero_general" : preload("res://scenes/board/logic/ai/brains/heroes/general_brain.gd").new(),
 	"hero_gentleman" : preload("res://scenes/board/logic/ai/brains/heroes/gentleman_brain.gd").new(),
 	"hero_noble" : preload("res://scenes/board/logic/ai/brains/heroes/noble_brain.gd").new(),
+    "hero_prince" : preload("res://scenes/board/logic/ai/brains/heroes/prince_brain.gd").new(),
+    "hero_warlord" : preload("res://scenes/board/logic/ai/brains/heroes/warlord_brain.gd").new(),
 
 	"npc" : preload("res://scenes/board/logic/ai/brains/npc_brain.gd").new(),
 	"hero" : preload("res://scenes/board/logic/ai/brains/hero_brain.gd").new()
