@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://co5xbe4c30mkx"]
+[gd_scene load_steps=9 format=3 uid="uid://co5xbe4c30mkx"]
 
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="1"]
 [ext_resource type="Texture2D" uid="uid://0lbtq8yu4pc0" path="res://assets/gui/icons/flag.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="2_u0eal"]
 [ext_resource type="Texture2D" uid="uid://bno2vmgdibxfd" path="res://assets/gui/icons/flag_complete.png" id="3"]
 [ext_resource type="Script" path="res://scenes/ui/menu/mission_marker.gd" id="4"]
 
@@ -57,11 +58,17 @@ offset_left = 50.0
 offset_right = 50.0
 offset_bottom = 50.0
 
-[node name="background" type="ColorRect" parent="label"]
+[node name="background" type="NinePatchRect" parent="label"]
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 50.0
-color = Color(0.196078, 0.196078, 0.196078, 0.823529)
+texture = ExtResource("2_u0eal")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="mission_name" type="Label" parent="label/background"]
 layout_mode = 0

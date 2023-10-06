@@ -6,7 +6,6 @@
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="4_k8udo"]
 
 [node name="map0" type="TextureButton"]
-visible = false
 offset_right = 650.0
 offset_bottom = 50.0
 texture_pressed = ExtResource("4")

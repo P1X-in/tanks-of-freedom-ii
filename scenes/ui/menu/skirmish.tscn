@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bsjjhsr305hgj"]
+[gd_scene load_steps=10 format=3 uid="uid://bsjjhsr305hgj"]
 
-[ext_resource type="PackedScene" path="res://scenes/ui/minimap/minimap.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://b68vtard4p6s3" path="res://scenes/ui/minimap/minimap.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_y8fji"]
 [ext_resource type="Script" path="res://scenes/ui/menu/skirmish.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://dl5ci1t5c1agk" path="res://scenes/ui/menu/skirmish_player.tscn" id="4"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="4_suc02"]
@@ -129,13 +130,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3")
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background" type="NinePatchRect" parent="."]
 layout_mode = 0
 offset_left = -600.0
 offset_top = -350.0
 offset_right = 600.0
 offset_bottom = 350.0
-color = Color(0.196078, 0.196078, 0.196078, 0.823529)
+texture = ExtResource("2_y8fji")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="widgets" type="Control" parent="."]
 anchors_preset = 0
@@ -150,8 +157,10 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 30.0
 offset_top = 30.0
-offset_right = -520.0
-offset_bottom = -545.0
+offset_right = 680.0
+offset_bottom = 155.0
+grow_horizontal = 1
+grow_vertical = 1
 swap_target = NodePath(".")
 
 [node name="skirmish_player_1" parent="widgets" instance=ExtResource("4")]
@@ -160,8 +169,10 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 30.0
 offset_top = 155.0
-offset_right = -520.0
-offset_bottom = -420.0
+offset_right = 680.0
+offset_bottom = 280.0
+grow_horizontal = 1
+grow_vertical = 1
 team = 2
 index = 1
 swap_target = NodePath("../skirmish_player_0")
@@ -172,8 +183,10 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 30.0
 offset_top = 280.0
-offset_right = -520.0
-offset_bottom = -295.0
+offset_right = 680.0
+offset_bottom = 405.0
+grow_horizontal = 1
+grow_vertical = 1
 team = 3
 index = 2
 swap_target = NodePath("../skirmish_player_1")
@@ -184,14 +197,15 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 30.0
 offset_top = 405.0
-offset_right = -520.0
-offset_bottom = -170.0
+offset_right = 680.0
+offset_bottom = 530.0
+grow_horizontal = 1
+grow_vertical = 1
 team = 4
 index = 3
 swap_target = NodePath("../skirmish_player_2")
 
 [node name="minimap" parent="widgets" instance=ExtResource("1")]
-anchors_preset = 0
 offset_left = 930.0
 offset_top = 280.0
 offset_right = 970.0

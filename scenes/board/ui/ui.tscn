@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://botr5y82s8y8r" path="res://scenes/ui/board/start_turn.tscn" id="8"]
 [ext_resource type="PackedScene" uid="uid://dd78km24j4hpk" path="res://scenes/ui/board/story_dialog.tscn" id="9"]
 [ext_resource type="PackedScene" uid="uid://pwpr1qj108ke" path="res://scenes/ui/board/cinematic_bars.tscn" id="10"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/star.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://b6leaqbp4x4wb" path="res://scenes/ui/icons/star.tscn" id="11"]
 [ext_resource type="PackedScene" uid="uid://bfj36q6npgot2" path="res://scenes/ui/board/unit_stats.tscn" id="12"]
 [ext_resource type="Texture2D" uid="uid://biu2u7rf4o1vh" path="res://assets/gui/editor/circle.png" id="13"]
 [ext_resource type="PackedScene" uid="uid://cxyvigb7jv67r" path="res://scenes/ui/board/objectives.tscn" id="15"]
@@ -26,6 +26,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -0.529724
 offset_right = -0.529785
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("4")
 script = ExtResource("1")
@@ -58,7 +60,10 @@ offset_left = -30.0
 offset_top = -27.0
 offset_right = 30.0
 offset_bottom = -7.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("5_m22p8")
+theme_override_font_sizes/font_size = 30
 text = "0000"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -78,6 +83,8 @@ offset_left = -50.0
 offset_top = 30.0
 offset_right = 50.0
 offset_bottom = 50.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("5_m22p8")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -117,9 +124,7 @@ visible = false
 position = Vector2(120, 0)
 
 [node name="bg" type="Sprite2D" parent="tile_highlight/abilities/ab1"]
-modulate = Color(1, 1, 1, 0.823529)
 position = Vector2(50, 0)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("13")
 
 [node name="anchor" type="Node2D" parent="tile_highlight/abilities/ab1"]
@@ -129,7 +134,6 @@ position = Vector2(50, 0)
 visible = false
 modulate = Color(1, 1, 1, 0.823529)
 position = Vector2(50, 0)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("13")
 
 [node name="cd" type="Label" parent="tile_highlight/abilities/ab1/disabled"]
@@ -137,8 +141,9 @@ offset_left = -100.0
 offset_top = -95.0
 offset_bottom = 5.0
 scale = Vector2(2, 2)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_m22p8")
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 32
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -148,6 +153,8 @@ offset_left = -25.0
 offset_top = 10.0
 offset_right = 125.0
 offset_bottom = 60.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("5_m22p8")
 text = "Heavy Weapon"
 horizontal_alignment = 1
@@ -159,9 +166,7 @@ visible = false
 position = Vector2(260, 0)
 
 [node name="bg" type="Sprite2D" parent="tile_highlight/abilities/ab2"]
-modulate = Color(1, 1, 1, 0.823529)
 position = Vector2(50, 0)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("13")
 
 [node name="anchor" type="Node2D" parent="tile_highlight/abilities/ab2"]
@@ -171,7 +176,6 @@ position = Vector2(50, 0)
 visible = false
 modulate = Color(1, 1, 1, 0.823529)
 position = Vector2(50, 0)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("13")
 
 [node name="cd" type="Label" parent="tile_highlight/abilities/ab2/disabled"]
@@ -179,8 +183,9 @@ offset_left = -100.0
 offset_top = -95.0
 offset_bottom = 5.0
 scale = Vector2(2, 2)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_m22p8")
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 32
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -190,6 +195,8 @@ offset_left = -25.0
 offset_top = 10.0
 offset_right = 125.0
 offset_bottom = 60.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("5_m22p8")
 text = "Heavy Weapon"
 horizontal_alignment = 1
@@ -201,9 +208,7 @@ visible = false
 position = Vector2(400, 0)
 
 [node name="bg" type="Sprite2D" parent="tile_highlight/abilities/ab3"]
-modulate = Color(1, 1, 1, 0.823529)
 position = Vector2(50, 0)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("13")
 
 [node name="anchor" type="Node2D" parent="tile_highlight/abilities/ab3"]
@@ -213,7 +218,6 @@ position = Vector2(50, 0)
 visible = false
 modulate = Color(1, 1, 1, 0.823529)
 position = Vector2(50, 0)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("13")
 
 [node name="cd" type="Label" parent="tile_highlight/abilities/ab3/disabled"]
@@ -221,8 +225,9 @@ offset_left = -100.0
 offset_top = -95.0
 offset_bottom = 5.0
 scale = Vector2(2, 2)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_m22p8")
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 32
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -232,6 +237,8 @@ offset_left = -25.0
 offset_top = 10.0
 offset_right = 125.0
 offset_bottom = 60.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("5_m22p8")
 text = "Heavy Weapon"
 horizontal_alignment = 1

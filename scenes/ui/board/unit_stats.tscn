@@ -1,20 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfj36q6npgot2"]
+[gd_scene load_steps=7 format=3 uid="uid://bfj36q6npgot2"]
 
 [ext_resource type="Script" path="res://scenes/ui/board/unit_stats.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://k2hh8e6861ja" path="res://scenes/map_editor/tile_view.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/star.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_hpbsf"]
+[ext_resource type="PackedScene" uid="uid://b6leaqbp4x4wb" path="res://scenes/ui/icons/star.tscn" id="4"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="4_cdooe"]
 [ext_resource type="Texture2D" uid="uid://biu2u7rf4o1vh" path="res://assets/gui/editor/circle.png" id="5"]
 
 [node name="unit_stats" type="Node2D"]
 script = ExtResource("1")
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background" type="NinePatchRect" parent="."]
 offset_left = -400.0
 offset_top = -225.0
 offset_right = 400.0
 offset_bottom = 225.0
-color = Color(0.196078, 0.196078, 0.196078, 0.823529)
+texture = ExtResource("2_hpbsf")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="tile_view" parent="background" instance=ExtResource("2")]
 position = Vector2(80, 110)
@@ -188,9 +195,7 @@ position = Vector2(400, 60)
 position = Vector2(0, 45)
 
 [node name="bg" type="Sprite2D" parent="background/abilities/ab1"]
-modulate = Color(1, 1, 1, 0.823529)
 position = Vector2(50, 0)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("5")
 
 [node name="label" type="Label" parent="background/abilities/ab1"]
@@ -216,9 +221,7 @@ position = Vector2(50, 0)
 position = Vector2(0, 150)
 
 [node name="bg" type="Sprite2D" parent="background/abilities/ab2"]
-modulate = Color(1, 1, 1, 0.823529)
 position = Vector2(50, 0)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("5")
 
 [node name="label" type="Label" parent="background/abilities/ab2"]
@@ -244,9 +247,7 @@ position = Vector2(50, 0)
 position = Vector2(0, 255)
 
 [node name="bg" type="Sprite2D" parent="background/abilities/ab3"]
-modulate = Color(1, 1, 1, 0.823529)
 position = Vector2(50, 0)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("5")
 
 [node name="label" type="Label" parent="background/abilities/ab3"]

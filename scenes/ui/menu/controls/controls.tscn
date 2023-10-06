@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://deovpfof2ipgn"]
+[gd_scene load_steps=10 format=3 uid="uid://deovpfof2ipgn"]
 
 [ext_resource type="Script" path="res://scenes/ui/menu/controls/controls.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_u5grt"]
 [ext_resource type="PackedScene" uid="uid://crv1ageml0d4g" path="res://scenes/ui/menu/controls/game.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://bfxvqvxbfeppg" path="res://scenes/ui/menu/controls/editor.tscn" id="4"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="4_67k1y"]
@@ -154,13 +155,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background" type="NinePatchRect" parent="."]
 layout_mode = 0
 offset_left = -400.0
 offset_top = -300.0
 offset_right = 400.0
 offset_bottom = 300.0
-color = Color(0.196078, 0.196078, 0.196078, 0.823529)
+texture = ExtResource("2_u5grt")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="widgets" type="Control" parent="."]
 anchors_preset = 0

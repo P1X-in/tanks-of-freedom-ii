@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://do38eoq6m2l2k" path="res://assets/gui/saves/entry_focused.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://ht8gdhbxrvtx" path="res://assets/gui/saves/entry_pressed.png" id="4"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="4_i4yor"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/star.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://b6leaqbp4x4wb" path="res://scenes/ui/icons/star.tscn" id="5"]
 
 [node name="entry" type="TextureButton"]
 offset_right = 1140.0

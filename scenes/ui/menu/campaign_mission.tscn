@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b61jtis2h2knb"]
+[gd_scene load_steps=9 format=3 uid="uid://b61jtis2h2knb"]
 
 [ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1"]
 [ext_resource type="Script" path="res://scenes/ui/menu/campaign_mission.gd" id="2"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_l5xkv"]
+[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="4_jd3a2"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -133,13 +134,19 @@ text = "Mission Title"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="description_background" type="ColorRect" parent="widgets" index="1"]
+[node name="description_background" type="NinePatchRect" parent="widgets" index="1"]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 120.0
 offset_right = 1160.0
 offset_bottom = 470.0
-color = Color(0.196078, 0.196078, 0.196078, 0.980392)
+texture = ExtResource("4_jd3a2")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="description" type="Label" parent="widgets" index="2"]
 layout_mode = 0

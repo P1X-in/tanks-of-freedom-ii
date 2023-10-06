@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://beirm1evrukrk"]
 
-[ext_resource type="Texture2D" uid="uid://df2rexoqmivrt" path="res://assets/gui/campaign/campaign_tile_frame.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://dlkd6uhej4jjt" path="res://assets/gui/campaign/campaign_tile_pressed.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="2_m0iv7"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_nb4uq"]
 [ext_resource type="Texture2D" uid="uid://dwjs5gt4qkxu2" path="res://assets/gui/campaign/campaign_tile_focused.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://bplir5a6wkccs" path="res://assets/gui/campaign/campaign_tile_disabled.png" id="4"]
@@ -17,11 +17,21 @@ offset_right = 580.0
 offset_bottom = 220.0
 script = ExtResource("6")
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background" type="NinePatchRect" parent="."]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.196078, 0.196078, 0.196078, 0.823529)
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 3.0
+texture = ExtResource("2_m0iv7")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="icon_anchor" type="Control" parent="."]
 anchors_preset = 0
@@ -47,7 +57,6 @@ vertical_alignment = 1
 layout_mode = 0
 offset_right = 540.0
 offset_bottom = 180.0
-texture_normal = ExtResource("1")
 texture_pressed = ExtResource("2")
 texture_hover = ExtResource("3")
 texture_disabled = ExtResource("4")

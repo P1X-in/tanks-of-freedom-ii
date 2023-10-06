@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://4fm2h6kocq46"]
+[gd_scene load_steps=10 format=3 uid="uid://4fm2h6kocq46"]
 
 [ext_resource type="Script" path="res://scenes/ui/save/saves.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_ehj22"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_y0c3v"]
 [ext_resource type="PackedScene" uid="uid://c25khmnk6x2xp" path="res://scenes/ui/save/entry_button.tscn" id="3"]
+[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="4_21vmm"]
 
 [sub_resource type="Animation" id="1"]
 length = 0.001
@@ -122,12 +124,18 @@ _data = {
 visible = false
 script = ExtResource("2")
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background" type="NinePatchRect" parent="."]
 offset_left = -600.0
 offset_top = -350.0
 offset_right = 600.0
 offset_bottom = 350.0
-color = Color(0.196078, 0.196078, 0.196078, 0.823529)
+texture = ExtResource("2_ehj22")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="widgets" type="Control" parent="."]
 layout_mode = 3
@@ -146,7 +154,7 @@ offset_bottom = 670.0
 theme_override_fonts/font = ExtResource("2_y0c3v")
 text = "TR_CANCEL"
 
-[node name="map_list_background" type="ColorRect" parent="widgets"]
+[node name="map_list_background" type="NinePatchRect" parent="widgets"]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -154,7 +162,13 @@ offset_left = 30.0
 offset_top = 30.0
 offset_right = -30.0
 offset_bottom = -170.0
-color = Color(0.196078, 0.196078, 0.196078, 0.823529)
+texture = ExtResource("4_21vmm")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="save_list" type="Control" parent="widgets"]
 anchors_preset = 0

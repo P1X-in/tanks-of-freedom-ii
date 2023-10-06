@@ -1,17 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdr6c4oy51qxv"]
+[gd_scene load_steps=4 format=3 uid="uid://cdr6c4oy51qxv"]
 
 [ext_resource type="PackedScene" uid="uid://cry3kqpb8cvim" path="res://scenes/map_editor/tile_cam.tscn" id="1"]
 [ext_resource type="Script" path="res://scenes/map_editor/tile_view.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://ci2opj01qhem3" path="res://assets/gui/menu/backgrounds/sub_panel2.png" id="2_1oucy"]
 
 [node name="actor_view" type="Node2D"]
 script = ExtResource("2")
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background" type="NinePatchRect" parent="."]
 offset_left = -100.0
 offset_top = -100.0
 offset_right = 100.0
 offset_bottom = 100.0
-color = Color(0.196078, 0.196078, 0.196078, 0.823529)
+texture = ExtResource("2_1oucy")
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="screen" type="Sprite2D" parent="."]
 position = Vector2(0, 30)
