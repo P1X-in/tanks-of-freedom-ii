@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cyl32ydicrnad"]
+[gd_scene load_steps=22 format=3 uid="uid://cyl32ydicrnad"]
 
 [ext_resource type="Script" path="res://scenes/ui/menu/campaign_mission_selection.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_es55k"]
@@ -7,8 +7,15 @@
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_4d13j"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_left.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_right.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_if6ob"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_64pnk"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="6_ei8ho"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/medal.tscn" id="7"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_j6s3u"]
 [ext_resource type="Texture2D" uid="uid://b1gttp6sik08" path="res://assets/gui/icons/medal_whiteout.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://pfrikdjfa7lc" path="res://assets/gui/menu/buttons/buttonSquare_brown.png" id="9_yeryd"]
+[ext_resource type="Texture2D" uid="uid://b0unbl4vx0tow" path="res://assets/gui/menu/buttons/buttonSquare_brown_pressed.png" id="10_cbjjd"]
+[ext_resource type="Texture2D" uid="uid://by1obiwt54odo" path="res://assets/gui/menu/buttons/buttonSquare_brown_hover.png" id="11_3oxor"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -246,9 +253,9 @@ offset_bottom = 350.0
 
 [node name="background" type="NinePatchRect" parent="widgets"]
 layout_mode = 0
-offset_left = 30.0
+offset_left = 110.0
 offset_top = 95.0
-offset_right = 1170.0
+offset_right = 1090.0
 offset_bottom = 603.0
 texture = ExtResource("3_1vyoc")
 patch_margin_left = 5
@@ -277,32 +284,63 @@ offset_top = 107.0
 offset_right = 1080.0
 offset_bottom = 593.0
 
-[node name="back_button" type="Button" parent="widgets"]
+[node name="back_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 450.0
-offset_top = 650.0
-offset_right = 550.0
-offset_bottom = 680.0
-theme_override_fonts/font = ExtResource("3_4d13j")
+offset_left = 380.0
+offset_top = 645.0
+offset_right = 570.0
+offset_bottom = 685.0
+texture_normal = ExtResource("5_if6ob")
+texture_pressed = ExtResource("6_64pnk")
+texture_hover = ExtResource("7_j6s3u")
+texture_focused = ExtResource("7_j6s3u")
+
+[node name="label" type="Label" parent="widgets/back_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_ei8ho")
 text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="select_button" type="Button" parent="widgets"]
+[node name="select_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 650.0
-offset_top = 650.0
-offset_right = 750.0
-offset_bottom = 680.0
-theme_override_fonts/font = ExtResource("3_4d13j")
+offset_left = 630.0
+offset_top = 645.0
+offset_right = 820.0
+offset_bottom = 685.0
+texture_normal = ExtResource("5_if6ob")
+texture_pressed = ExtResource("6_64pnk")
+texture_hover = ExtResource("7_j6s3u")
+texture_focused = ExtResource("7_j6s3u")
+
+[node name="label" type="Label" parent="widgets/select_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_ei8ho")
 text = "TR_SELECT"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="prev_button" type="Button" parent="widgets"]
+[node name="prev_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 107.0
-offset_right = 120.0
-offset_bottom = 593.0
+offset_left = 35.0
+offset_top = 308.0
+offset_right = 115.0
+offset_bottom = 392.0
 focus_neighbor_right = NodePath("../next_button")
-theme_override_fonts/font = ExtResource("3_4d13j")
+texture_normal = ExtResource("9_yeryd")
+texture_pressed = ExtResource("10_cbjjd")
+texture_hover = ExtResource("11_3oxor")
+texture_focused = ExtResource("11_3oxor")
 
 [node name="anchor" type="Control" parent="widgets/prev_button"]
 anchors_preset = 0
@@ -313,14 +351,17 @@ anchor_bottom = 0.5
 
 [node name="arrow_left" parent="widgets/prev_button/anchor" instance=ExtResource("4")]
 
-[node name="next_button" type="Button" parent="widgets"]
+[node name="next_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 1080.0
-offset_top = 107.0
-offset_right = 1160.0
-offset_bottom = 593.0
+offset_left = 1085.0
+offset_top = 308.0
+offset_right = 1165.0
+offset_bottom = 392.0
 focus_neighbor_left = NodePath("../prev_button")
-theme_override_fonts/font = ExtResource("3_4d13j")
+texture_normal = ExtResource("9_yeryd")
+texture_pressed = ExtResource("10_cbjjd")
+texture_hover = ExtResource("11_3oxor")
+texture_focused = ExtResource("11_3oxor")
 
 [node name="anchor" type="Control" parent="widgets/next_button"]
 anchors_preset = 0
@@ -345,13 +386,13 @@ vertical_alignment = 1
 
 [node name="medal" parent="widgets" instance=ExtResource("7")]
 visible = false
-position = Vector2(40, 60)
+position = Vector2(40, 50)
 scale = Vector2(2, 2)
 offset = Vector2(60, 53)
 
 [node name="medal_whiteout" parent="widgets" instance=ExtResource("7")]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(40, 60)
+position = Vector2(40, 50)
 scale = Vector2(2, 2)
 texture = ExtResource("8")
 offset = Vector2(60, 53)

@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cf7ix3pu4c806"]
+[gd_scene load_steps=11 format=3 uid="uid://cf7ix3pu4c806"]
 
 [ext_resource type="Script" path="res://scenes/ui/menu/menu.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_bjjgm"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_fcgt8"]
+[ext_resource type="Texture2D" uid="uid://bey3i1nl046fc" path="res://assets/gui/menu/buttons/buttonLong_brown.png" id="3_ao3ww"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="4_onr04"]
+[ext_resource type="Texture2D" uid="uid://2tgpj2lpm5ae" path="res://assets/gui/menu/buttons/buttonLong_brown_pressed.png" id="4_uk83y"]
+[ext_resource type="Texture2D" uid="uid://43s7leku2m4k" path="res://assets/gui/menu/buttons/buttonLong_brown_hover.png" id="5_twtay"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -129,77 +132,189 @@ patch_margin_bottom = 8
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="campaign_button" type="Button" parent="."]
+[node name="campaign_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
 offset_top = -110.0
 offset_right = 150.0
 offset_bottom = -70.0
-theme_override_fonts/font = ExtResource("2_bjjgm")
-text = "TR_CAMPAIGN"
+texture_normal = ExtResource("3_ao3ww")
+texture_pressed = ExtResource("4_uk83y")
+texture_hover = ExtResource("5_twtay")
+texture_focused = ExtResource("5_twtay")
 
-[node name="skirmish_button" type="Button" parent="."]
+[node name="label" type="Label" parent="campaign_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_onr04")
+text = "TR_CAMPAIGN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="skirmish_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
 offset_top = -60.0
 offset_right = 150.0
 offset_bottom = -20.0
-theme_override_fonts/font = ExtResource("2_bjjgm")
-text = "TR_SKIRMISH"
+texture_normal = ExtResource("3_ao3ww")
+texture_pressed = ExtResource("4_uk83y")
+texture_hover = ExtResource("5_twtay")
+texture_focused = ExtResource("5_twtay")
 
-[node name="load_button" type="Button" parent="."]
+[node name="label" type="Label" parent="skirmish_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_onr04")
+text = "TR_SKIRMISH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="load_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
 offset_top = -10.0
 offset_right = 150.0
 offset_bottom = 30.0
-theme_override_fonts/font = ExtResource("2_bjjgm")
-text = "TR_LOAD_GAME"
+texture_normal = ExtResource("3_ao3ww")
+texture_pressed = ExtResource("4_uk83y")
+texture_hover = ExtResource("5_twtay")
+texture_focused = ExtResource("5_twtay")
 
-[node name="online_button" type="Button" parent="."]
+[node name="label" type="Label" parent="load_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_onr04")
+text = "TR_LOAD_GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="online_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
 offset_top = 40.0
 offset_right = 150.0
 offset_bottom = 80.0
-theme_override_fonts/font = ExtResource("2_bjjgm")
-text = "TR_ONLINE"
+texture_normal = ExtResource("3_ao3ww")
+texture_pressed = ExtResource("4_uk83y")
+texture_hover = ExtResource("5_twtay")
+texture_focused = ExtResource("5_twtay")
 
-[node name="editor_button" type="Button" parent="."]
+[node name="label" type="Label" parent="online_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_onr04")
+text = "TR_ONLINE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="editor_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
 offset_top = 90.0
 offset_right = 150.0
 offset_bottom = 130.0
-theme_override_fonts/font = ExtResource("2_bjjgm")
-text = "TR_EDITOR"
+texture_normal = ExtResource("3_ao3ww")
+texture_pressed = ExtResource("4_uk83y")
+texture_hover = ExtResource("5_twtay")
+texture_focused = ExtResource("5_twtay")
 
-[node name="settings_button" type="Button" parent="."]
+[node name="label" type="Label" parent="editor_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_onr04")
+text = "TR_EDITOR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="settings_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
 offset_top = 140.0
 offset_right = 150.0
 offset_bottom = 180.0
-theme_override_fonts/font = ExtResource("2_bjjgm")
-text = "TR_SETTINGS"
+texture_normal = ExtResource("3_ao3ww")
+texture_pressed = ExtResource("4_uk83y")
+texture_hover = ExtResource("5_twtay")
+texture_focused = ExtResource("5_twtay")
 
-[node name="controls_button" type="Button" parent="."]
+[node name="label" type="Label" parent="settings_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_onr04")
+text = "TR_SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="controls_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
 offset_top = 190.0
 offset_right = 150.0
 offset_bottom = 230.0
-theme_override_fonts/font = ExtResource("2_bjjgm")
-text = "TR_CONTROLS"
+texture_normal = ExtResource("3_ao3ww")
+texture_pressed = ExtResource("4_uk83y")
+texture_hover = ExtResource("5_twtay")
+texture_focused = ExtResource("5_twtay")
 
-[node name="quit_button" type="Button" parent="."]
+[node name="label" type="Label" parent="controls_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_onr04")
+text = "TR_CONTROLS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="quit_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
 offset_top = 250.0
 offset_right = 150.0
 offset_bottom = 290.0
-theme_override_fonts/font = ExtResource("2_bjjgm")
+texture_normal = ExtResource("3_ao3ww")
+texture_pressed = ExtResource("4_uk83y")
+texture_hover = ExtResource("5_twtay")
+texture_focused = ExtResource("5_twtay")
+
+[node name="label" type="Label" parent="quit_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_onr04")
 text = "TR_QUIT"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
 speed_scale = 4.0

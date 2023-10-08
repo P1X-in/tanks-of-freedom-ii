@@ -1,9 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://b61jtis2h2knb"]
+[gd_scene load_steps=16 format=3 uid="uid://b61jtis2h2knb"]
 
 [ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1"]
 [ext_resource type="Script" path="res://scenes/ui/menu/campaign_mission.gd" id="2"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_l5xkv"]
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="4_jd3a2"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_ln6xn"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="5_pxre2"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_ja5ih"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_kfh8j"]
+[ext_resource type="Texture2D" uid="uid://csq1hhm0xchio" path="res://assets/gui/menu/buttons/buttonLarge_brown.png" id="9_5t3p4"]
+[ext_resource type="Texture2D" uid="uid://nove6ni5alhn" path="res://assets/gui/menu/buttons/buttonLarge_brown_pressed.png" id="10_i8o4t"]
+[ext_resource type="Texture2D" uid="uid://5jm4o80mt8a2" path="res://assets/gui/menu/buttons/buttonLarge_brown_hover.png" id="11_0xlqw"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -160,24 +167,52 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="back_button" type="Button" parent="widgets" index="3"]
+[node name="back_button" type="TextureButton" parent="widgets" index="3"]
 layout_mode = 0
-offset_left = 550.0
-offset_top = 650.0
-offset_right = 650.0
-offset_bottom = 680.0
-theme_override_fonts/font = ExtResource("3_l5xkv")
-text = "TR_BACK"
+offset_left = 505.0
+offset_top = 645.0
+offset_right = 695.0
+offset_bottom = 685.0
+texture_normal = ExtResource("5_ln6xn")
+texture_pressed = ExtResource("6_ja5ih")
+texture_hover = ExtResource("7_kfh8j")
+texture_focused = ExtResource("7_kfh8j")
 
-[node name="start_button" type="Button" parent="widgets" index="4"]
+[node name="label" type="Label" parent="widgets/back_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_pxre2")
+text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start_button" type="TextureButton" parent="widgets" index="4"]
 layout_mode = 0
-offset_left = 475.0
+offset_left = 400.0
 offset_top = 500.0
-offset_right = 725.0
+offset_right = 800.0
 offset_bottom = 600.0
-theme_override_fonts/font = ExtResource("3_l5xkv")
+texture_normal = ExtResource("9_5t3p4")
+texture_pressed = ExtResource("10_i8o4t")
+texture_hover = ExtResource("11_0xlqw")
+texture_focused = ExtResource("11_0xlqw")
+
+[node name="label" type="Label" parent="widgets/start_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_pxre2")
 theme_override_font_sizes/font_size = 42
 text = "TR_START"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="animations" parent="." index="2"]
 libraries = {

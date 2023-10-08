@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://yrab27ll6oeh"]
+[gd_scene load_steps=12 format=3 uid="uid://yrab27ll6oeh"]
 
 [ext_resource type="Script" path="res://scenes/ui/menu/campaign_selection.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://beirm1evrukrk" path="res://scenes/ui/menu/campaign_tile.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_btryb"]
-[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_vc1pd"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="4_dfath"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="5_acmon"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="5_hdbfc"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="6_yj6ym"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -177,32 +180,74 @@ offset_top = 440.0
 offset_right = 1160.0
 offset_bottom = 620.0
 
-[node name="back_button" type="Button" parent="widgets"]
+[node name="back_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 550.0
-offset_top = 650.0
-offset_right = 650.0
-offset_bottom = 680.0
-theme_override_fonts/font = ExtResource("3_vc1pd")
-text = "TR_BACK"
+offset_left = 505.0
+offset_top = 645.0
+offset_right = 695.0
+offset_bottom = 685.0
+texture_normal = ExtResource("4_dfath")
+texture_pressed = ExtResource("5_acmon")
+texture_hover = ExtResource("6_yj6ym")
+texture_focused = ExtResource("6_yj6ym")
 
-[node name="prev_button" type="Button" parent="widgets"]
+[node name="label" type="Label" parent="widgets/back_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_hdbfc")
+text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="prev_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
 offset_left = 40.0
-offset_top = 650.0
-offset_right = 140.0
-offset_bottom = 680.0
-theme_override_fonts/font = ExtResource("3_vc1pd")
-text = "TR_PREV"
+offset_top = 645.0
+offset_right = 230.0
+offset_bottom = 685.0
+texture_normal = ExtResource("4_dfath")
+texture_pressed = ExtResource("5_acmon")
+texture_hover = ExtResource("6_yj6ym")
+texture_focused = ExtResource("6_yj6ym")
 
-[node name="next_button" type="Button" parent="widgets"]
+[node name="label" type="Label" parent="widgets/prev_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_hdbfc")
+text = "TR_PREV"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="next_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 1060.0
-offset_top = 650.0
+offset_left = 970.0
+offset_top = 645.0
 offset_right = 1160.0
-offset_bottom = 680.0
-theme_override_fonts/font = ExtResource("3_vc1pd")
+offset_bottom = 685.0
+texture_normal = ExtResource("4_dfath")
+texture_pressed = ExtResource("5_acmon")
+texture_hover = ExtResource("6_yj6ym")
+texture_focused = ExtResource("6_yj6ym")
+
+[node name="label" type="Label" parent="widgets/next_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_hdbfc")
 text = "TR_NEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
 speed_scale = 4.0
