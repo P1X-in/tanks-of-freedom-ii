@@ -16,6 +16,7 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 
 @onready var maps_upload = $"widgets/online/maps/upload"
 @onready var confirm_upload_button = $"widgets/online/maps/upload/confirm_upload_button"
+@onready var confirm_upload_button_label = $"widgets/online/maps/upload/confirm_upload_button/label"
 @onready var change_button = $"widgets/online/maps/upload/change_button"
 @onready var upload_desc = $"widgets/online/maps/upload/description"
 @onready var upload_name = $"widgets/online/maps/upload/name"
@@ -118,7 +119,7 @@ func _configure_maps_upload_confirm_panel():
 	self.confirm_upload_button.show()
 	self.upload_desc.set_text(tr("TR_SELECTED_MAP"))
 	self.upload_name.set_text(self.selected_upload_map)
-	self.confirm_upload_button.set_text(tr("TR_CONFIRM"))
+	self.confirm_upload_button_label.set_text(tr("TR_CONFIRM"))
 	await self.get_tree().create_timer(0.1).timeout
 	self.confirm_upload_button.grab_focus()
 
@@ -172,7 +173,7 @@ func _on_confirm_upload_button_pressed():
 	else:
 		self.change_button.show()
 		self.confirm_upload_button.show()
-		self.confirm_upload_button.set_text(tr("TR_RETRY"))
+		self.confirm_upload_button_label.set_text(tr("TR_RETRY"))
 		self.upload_desc.set_text(tr("TR_UPLOADING_FAIL"))
 		await self.get_tree().create_timer(0.1).timeout
 		self.confirm_upload_button.grab_focus()

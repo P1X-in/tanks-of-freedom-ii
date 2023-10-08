@@ -20,9 +20,9 @@ const AP_MAX = 150
 @onready var green_border = $"border_green"
 @onready var black_border = $"border_black"
 
-@onready var type_button = $"player_type"
-@onready var ap_button = $"starting_ap"
-@onready var team_button = $"team"
+@onready var type_button = $"player_type/label"
+@onready var ap_button = $"starting_ap/label"
+@onready var team_button = $"team/label"
 @onready var swap_button = $"swap"
 
 var side

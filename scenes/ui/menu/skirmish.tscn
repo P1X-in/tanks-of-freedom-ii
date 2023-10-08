@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://bsjjhsr305hgj"]
+[gd_scene load_steps=13 format=3 uid="uid://bsjjhsr305hgj"]
 
 [ext_resource type="PackedScene" uid="uid://b68vtard4p6s3" path="res://scenes/ui/minimap/minimap.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_y8fji"]
 [ext_resource type="Script" path="res://scenes/ui/menu/skirmish.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://dl5ci1t5c1agk" path="res://scenes/ui/menu/skirmish_player.tscn" id="4"]
-[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="4_suc02"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_nw18n"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_hh8c6"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_wxskm"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="8_eqpsb"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -155,9 +158,9 @@ offset_bottom = 350.0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 30.0
+offset_left = 25.0
 offset_top = 30.0
-offset_right = 680.0
+offset_right = 675.0
 offset_bottom = 155.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -167,9 +170,9 @@ swap_target = NodePath(".")
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 30.0
+offset_left = 25.0
 offset_top = 155.0
-offset_right = 680.0
+offset_right = 675.0
 offset_bottom = 280.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -181,9 +184,9 @@ swap_target = NodePath("../skirmish_player_0")
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 30.0
+offset_left = 25.0
 offset_top = 280.0
-offset_right = 680.0
+offset_right = 675.0
 offset_bottom = 405.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -195,9 +198,9 @@ swap_target = NodePath("../skirmish_player_1")
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 30.0
+offset_left = 25.0
 offset_top = 405.0
-offset_right = 680.0
+offset_right = 675.0
 offset_bottom = 530.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -206,30 +209,56 @@ index = 3
 swap_target = NodePath("../skirmish_player_2")
 
 [node name="minimap" parent="widgets" instance=ExtResource("1")]
-offset_left = 930.0
+offset_left = 925.0
 offset_top = 280.0
-offset_right = 970.0
+offset_right = 965.0
 offset_bottom = 320.0
 
-[node name="start_button" type="Button" parent="widgets"]
+[node name="start_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 1070.0
+offset_left = 985.0
 offset_top = 640.0
-offset_right = 1170.0
-offset_bottom = 670.0
-theme_override_fonts/font = ExtResource("4_suc02")
-theme_override_font_sizes/font_size = 18
-text = "TR_START"
+offset_right = 1175.0
+offset_bottom = 680.0
+texture_normal = ExtResource("5_nw18n")
+texture_pressed = ExtResource("6_hh8c6")
+texture_hover = ExtResource("7_wxskm")
+texture_focused = ExtResource("7_wxskm")
 
-[node name="back_button" type="Button" parent="widgets"]
+[node name="label" type="Label" parent="widgets/start_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_eqpsb")
+text = "TR_START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 30.0
+offset_left = 25.0
 offset_top = 640.0
-offset_right = 130.0
-offset_bottom = 670.0
-theme_override_fonts/font = ExtResource("4_suc02")
-theme_override_font_sizes/font_size = 18
+offset_right = 215.0
+offset_bottom = 680.0
+texture_normal = ExtResource("5_nw18n")
+texture_pressed = ExtResource("6_hh8c6")
+texture_hover = ExtResource("7_wxskm")
+texture_focused = ExtResource("7_wxskm")
+
+[node name="label" type="Label" parent="widgets/back_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_eqpsb")
 text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
 speed_scale = 4.0

@@ -1,8 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://d10shqx6iv5t7"]
+[gd_scene load_steps=16 format=3 uid="uid://d10shqx6iv5t7"]
 
 [ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1"]
 [ext_resource type="Script" path="res://scenes/ui/online/online.gd" id="2"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_vc4q3"]
+[ext_resource type="Texture2D" uid="uid://csq1hhm0xchio" path="res://assets/gui/menu/buttons/buttonLarge_brown.png" id="4_s7jy4"]
+[ext_resource type="Texture2D" uid="uid://nove6ni5alhn" path="res://assets/gui/menu/buttons/buttonLarge_brown_pressed.png" id="5_bdg7k"]
+[ext_resource type="Texture2D" uid="uid://5jm4o80mt8a2" path="res://assets/gui/menu/buttons/buttonLarge_brown_hover.png" id="6_a7skv"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="7_o8rsi"]
+[ext_resource type="Texture2D" uid="uid://bik4pgknbty5s" path="res://assets/gui/menu/buttons/buttonLarge_brown_disabled.png" id="8_legj6"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="9_3rwub"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="10_60bps"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="11_s5eft"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -153,15 +161,29 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="register_button" type="Button" parent="widgets/register" index="2"]
+[node name="register_button" type="TextureButton" parent="widgets/register" index="2"]
 layout_mode = 0
-offset_left = 425.0
+offset_left = 400.0
 offset_top = 450.0
-offset_right = 775.0
+offset_right = 800.0
 offset_bottom = 550.0
-theme_override_fonts/font = ExtResource("3_vc4q3")
+texture_normal = ExtResource("4_s7jy4")
+texture_pressed = ExtResource("5_bdg7k")
+texture_hover = ExtResource("6_a7skv")
+texture_focused = ExtResource("6_a7skv")
+
+[node name="label" type="Label" parent="widgets/register/register_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_o8rsi")
 theme_override_font_sizes/font_size = 42
 text = "TR_REGISTER"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="online" type="Control" parent="widgets" index="1"]
 anchors_preset = 0
@@ -173,30 +195,59 @@ anchors_preset = 0
 anchor_right = 1.0
 offset_bottom = 100.0
 
-[node name="matches_button" type="Button" parent="widgets/online/tabs" index="0"]
+[node name="matches_button" type="TextureButton" parent="widgets/online/tabs" index="0"]
 layout_mode = 0
-offset_left = 50.0
+offset_left = 100.0
 offset_top = 20.0
-offset_right = 550.0
-offset_bottom = 100.0
-theme_override_fonts/font = ExtResource("3_vc4q3")
-theme_override_font_sizes/font_size = 42
+offset_right = 500.0
+offset_bottom = 120.0
 disabled = true
-text = "TR_MATCHES"
+texture_normal = ExtResource("4_s7jy4")
+texture_pressed = ExtResource("5_bdg7k")
+texture_hover = ExtResource("6_a7skv")
+texture_disabled = ExtResource("8_legj6")
+texture_focused = ExtResource("6_a7skv")
 
-[node name="maps_button" type="Button" parent="widgets/online/tabs" index="1"]
-layout_mode = 0
-offset_left = 650.0
-offset_top = 20.0
-offset_right = 1150.0
-offset_bottom = 100.0
-theme_override_fonts/font = ExtResource("3_vc4q3")
+[node name="label" type="Label" parent="widgets/online/tabs/matches_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_o8rsi")
 theme_override_font_sizes/font_size = 42
+text = "TR_MATCHES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="maps_button" type="TextureButton" parent="widgets/online/tabs" index="1"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 20.0
+offset_right = 1100.0
+offset_bottom = 120.0
 disabled = true
+texture_normal = ExtResource("4_s7jy4")
+texture_pressed = ExtResource("5_bdg7k")
+texture_hover = ExtResource("6_a7skv")
+texture_disabled = ExtResource("8_legj6")
+texture_focused = ExtResource("6_a7skv")
+
+[node name="label" type="Label" parent="widgets/online/tabs/maps_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_o8rsi")
+theme_override_font_sizes/font_size = 42
 text = "TR_MAPS"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="maps" type="Control" parent="widgets/online" index="1"]
-visible = false
 anchors_preset = 0
 anchor_top = 0.2
 anchor_right = 1.0
@@ -209,6 +260,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="description" type="Label" parent="widgets/online/maps/main" index="0"]
+visible = false
 layout_mode = 0
 anchor_left = 0.1
 anchor_top = 0.5
@@ -222,25 +274,53 @@ text = "HTTPS://ONLINE.TOF.P1X.IN/"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="upload_button" type="Button" parent="widgets/online/maps/main" index="1"]
+[node name="upload_button" type="TextureButton" parent="widgets/online/maps/main" index="1"]
 layout_mode = 0
-offset_left = 350.0
+offset_left = 400.0
 offset_top = 100.0
-offset_right = 850.0
+offset_right = 800.0
 offset_bottom = 200.0
-theme_override_fonts/font = ExtResource("3_vc4q3")
+texture_normal = ExtResource("4_s7jy4")
+texture_pressed = ExtResource("5_bdg7k")
+texture_hover = ExtResource("6_a7skv")
+texture_focused = ExtResource("6_a7skv")
+
+[node name="label" type="Label" parent="widgets/online/maps/main/upload_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_o8rsi")
 theme_override_font_sizes/font_size = 42
 text = "TR_UPLOAD_MAP"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="download_button" type="Button" parent="widgets/online/maps/main" index="2"]
+[node name="download_button" type="TextureButton" parent="widgets/online/maps/main" index="2"]
 layout_mode = 0
-offset_left = 350.0
+offset_left = 400.0
 offset_top = 250.0
-offset_right = 850.0
+offset_right = 800.0
 offset_bottom = 350.0
-theme_override_fonts/font = ExtResource("3_vc4q3")
+texture_normal = ExtResource("4_s7jy4")
+texture_pressed = ExtResource("5_bdg7k")
+texture_hover = ExtResource("6_a7skv")
+texture_focused = ExtResource("6_a7skv")
+
+[node name="label" type="Label" parent="widgets/online/maps/main/download_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_o8rsi")
 theme_override_font_sizes/font_size = 42
 text = "TR_DOWNLOAD_MAP"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="upload" type="Control" parent="widgets/online/maps" index="1"]
 visible = false
@@ -277,25 +357,53 @@ text = "name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="confirm_upload_button" type="Button" parent="widgets/online/maps/upload" index="2"]
+[node name="confirm_upload_button" type="TextureButton" parent="widgets/online/maps/upload" index="2"]
 layout_mode = 0
-offset_left = 350.0
+offset_left = 400.0
 offset_top = 200.0
-offset_right = 850.0
+offset_right = 800.0
 offset_bottom = 300.0
-theme_override_fonts/font = ExtResource("3_vc4q3")
+texture_normal = ExtResource("4_s7jy4")
+texture_pressed = ExtResource("5_bdg7k")
+texture_hover = ExtResource("6_a7skv")
+texture_focused = ExtResource("6_a7skv")
+
+[node name="label" type="Label" parent="widgets/online/maps/upload/confirm_upload_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_o8rsi")
 theme_override_font_sizes/font_size = 42
 text = "TR_CONFIRM"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="change_button" type="Button" parent="widgets/online/maps/upload" index="3"]
+[node name="change_button" type="TextureButton" parent="widgets/online/maps/upload" index="3"]
 layout_mode = 0
-offset_left = 350.0
+offset_left = 400.0
 offset_top = 320.0
-offset_right = 850.0
+offset_right = 800.0
 offset_bottom = 420.0
-theme_override_fonts/font = ExtResource("3_vc4q3")
+texture_normal = ExtResource("4_s7jy4")
+texture_pressed = ExtResource("5_bdg7k")
+texture_hover = ExtResource("6_a7skv")
+texture_focused = ExtResource("6_a7skv")
+
+[node name="label" type="Label" parent="widgets/online/maps/upload/change_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_o8rsi")
 theme_override_font_sizes/font_size = 42
 text = "TR_CHANGE_MAP"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="download" type="Control" parent="widgets/online/maps" index="2"]
 visible = false
@@ -331,24 +439,52 @@ text = "name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="retry_button" type="Button" parent="widgets/online/maps/download" index="2"]
+[node name="retry_button" type="TextureButton" parent="widgets/online/maps/download" index="2"]
 layout_mode = 0
-offset_left = 350.0
+offset_left = 400.0
 offset_top = 200.0
-offset_right = 850.0
+offset_right = 800.0
 offset_bottom = 300.0
-theme_override_fonts/font = ExtResource("3_vc4q3")
-theme_override_font_sizes/font_size = 42
-text = "TR_RETRY"
+texture_normal = ExtResource("4_s7jy4")
+texture_pressed = ExtResource("5_bdg7k")
+texture_hover = ExtResource("6_a7skv")
+texture_focused = ExtResource("6_a7skv")
 
-[node name="back_button" type="Button" parent="widgets" index="2"]
+[node name="label" type="Label" parent="widgets/online/maps/download/retry_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_o8rsi")
+theme_override_font_sizes/font_size = 42
+text = "TR_CONFIRM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back_button" type="TextureButton" parent="widgets" index="2"]
 layout_mode = 0
-offset_left = 550.0
-offset_top = 650.0
-offset_right = 650.0
+offset_left = 505.0
+offset_top = 640.0
+offset_right = 695.0
 offset_bottom = 680.0
-theme_override_fonts/font = ExtResource("3_vc4q3")
+texture_normal = ExtResource("9_3rwub")
+texture_pressed = ExtResource("10_60bps")
+texture_hover = ExtResource("11_s5eft")
+texture_focused = ExtResource("11_s5eft")
+
+[node name="label" type="Label" parent="widgets/back_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_o8rsi")
 text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="animations" parent="." index="2"]
 libraries = {

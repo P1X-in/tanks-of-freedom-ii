@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b1tod34kr8cro"]
+[gd_scene load_steps=18 format=3 uid="uid://b1tod34kr8cro"]
 
 [ext_resource type="Script" path="res://scenes/ui/map_picker/picker.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_aj7tb"]
@@ -6,6 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://ltnnrfgqasgi" path="res://scenes/ui/map_picker/map_button.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://b68vtard4p6s3" path="res://scenes/ui/minimap/minimap.tscn" id="4"]
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="4_5f6g3"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="4_s2yji"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="5_1cpaa"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="6_pcuoj"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="7_jj8gf"]
+[ext_resource type="Texture2D" uid="uid://bey3i1nl046fc" path="res://assets/gui/menu/buttons/buttonLong_brown.png" id="8_lmm6n"]
+[ext_resource type="Texture2D" uid="uid://2tgpj2lpm5ae" path="res://assets/gui/menu/buttons/buttonLong_brown_pressed.png" id="9_l6f2n"]
+[ext_resource type="Texture2D" uid="uid://43s7leku2m4k" path="res://assets/gui/menu/buttons/buttonLong_brown_hover.png" id="10_w1krm"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -149,43 +156,71 @@ offset_bottom = 350.0
 [node name="name" type="Control" parent="widgets"]
 anchors_preset = 0
 offset_left = 25.0
-offset_top = 600.0
+offset_top = 605.0
 offset_right = 425.0
-offset_bottom = 700.0
+offset_bottom = 705.0
 
 [node name="map_name" type="LineEdit" parent="widgets/name"]
 layout_mode = 0
-offset_right = 300.0
+offset_right = 400.0
 offset_bottom = 30.0
 theme_override_fonts/font = ExtResource("2_sca5i")
 alignment = 1
 max_length = 30
 
-[node name="save_button" type="Button" parent="widgets/name"]
+[node name="save_button" type="TextureButton" parent="widgets/name"]
 layout_mode = 0
 offset_top = 40.0
-offset_right = 100.0
-offset_bottom = 70.0
-theme_override_fonts/font = ExtResource("2_sca5i")
-text = "TR_SAVE"
+offset_right = 190.0
+offset_bottom = 80.0
+texture_normal = ExtResource("4_s2yji")
+texture_pressed = ExtResource("5_1cpaa")
+texture_hover = ExtResource("6_pcuoj")
+texture_focused = ExtResource("6_pcuoj")
 
-[node name="load_button" type="Button" parent="widgets/name"]
+[node name="label" type="Label" parent="widgets/name/save_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_jj8gf")
+text = "TR_SAVE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="load_button" type="TextureButton" parent="widgets/name"]
 layout_mode = 0
-offset_left = 200.0
+offset_left = 210.0
 offset_top = 40.0
-offset_right = 300.0
-offset_bottom = 70.0
+offset_right = 400.0
+offset_bottom = 80.0
 focus_neighbor_right = NodePath("../../cancel_button")
-theme_override_fonts/font = ExtResource("2_sca5i")
+texture_normal = ExtResource("4_s2yji")
+texture_pressed = ExtResource("5_1cpaa")
+texture_hover = ExtResource("6_pcuoj")
+texture_focused = ExtResource("6_pcuoj")
+
+[node name="label" type="Label" parent="widgets/name/load_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_jj8gf")
 text = "TR_LOAD"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="code" type="Control" parent="widgets"]
 visible = false
 anchors_preset = 0
 offset_left = 25.0
-offset_top = 600.0
+offset_top = 605.0
 offset_right = 425.0
-offset_bottom = 700.0
+offset_bottom = 705.0
 
 [node name="code" type="LineEdit" parent="widgets/code"]
 layout_mode = 0
@@ -195,23 +230,51 @@ theme_override_fonts/font = ExtResource("2_sca5i")
 alignment = 1
 max_length = 24
 
-[node name="download_button" type="Button" parent="widgets/code"]
+[node name="download_button" type="TextureButton" parent="widgets/code"]
 layout_mode = 0
 offset_top = 40.0
 offset_right = 300.0
 offset_bottom = 70.0
-theme_override_fonts/font = ExtResource("2_sca5i")
-text = "TR_DOWNLOAD"
+texture_normal = ExtResource("8_lmm6n")
+texture_pressed = ExtResource("9_l6f2n")
+texture_hover = ExtResource("10_w1krm")
+texture_focused = ExtResource("10_w1krm")
 
-[node name="cancel_button" type="Button" parent="widgets"]
+[node name="label" type="Label" parent="widgets/code/download_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_jj8gf")
+text = "TR_DOWNLOAD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cancel_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 1025.0
+offset_left = 975.0
 offset_top = 640.0
-offset_right = 1175.0
-offset_bottom = 670.0
+offset_right = 1165.0
+offset_bottom = 680.0
 focus_neighbor_left = NodePath("../name/load_button")
-theme_override_fonts/font = ExtResource("2_sca5i")
+texture_normal = ExtResource("4_s2yji")
+texture_pressed = ExtResource("5_1cpaa")
+texture_hover = ExtResource("6_pcuoj")
+texture_focused = ExtResource("6_pcuoj")
+
+[node name="label" type="Label" parent="widgets/cancel_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_jj8gf")
 text = "TR_CANCEL"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="tabs" type="Control" parent="widgets"]
 anchors_preset = 0
@@ -220,28 +283,70 @@ offset_top = 10.0
 offset_right = 1175.0
 offset_bottom = 50.0
 
-[node name="stock_button" type="Button" parent="widgets/tabs"]
+[node name="stock_button" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
-offset_right = 350.0
+offset_right = 300.0
 offset_bottom = 40.0
-theme_override_fonts/font = ExtResource("2_sca5i")
+texture_normal = ExtResource("8_lmm6n")
+texture_pressed = ExtResource("9_l6f2n")
+texture_hover = ExtResource("10_w1krm")
+texture_focused = ExtResource("10_w1krm")
+
+[node name="label" type="Label" parent="widgets/tabs/stock_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_jj8gf")
 text = "TR_STOCK"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="custom_button" type="Button" parent="widgets/tabs"]
+[node name="custom_button" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
-offset_left = 400.0
-offset_right = 750.0
+offset_left = 425.0
+offset_right = 725.0
 offset_bottom = 40.0
-theme_override_fonts/font = ExtResource("2_sca5i")
-text = "TR_CUSTOM"
+texture_normal = ExtResource("8_lmm6n")
+texture_pressed = ExtResource("9_l6f2n")
+texture_hover = ExtResource("10_w1krm")
+texture_focused = ExtResource("10_w1krm")
 
-[node name="downloaded_button" type="Button" parent="widgets/tabs"]
+[node name="label" type="Label" parent="widgets/tabs/custom_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_jj8gf")
+text = "TR_CUSTOM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="downloaded_button" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
-offset_left = 800.0
+offset_left = 850.0
 offset_right = 1150.0
 offset_bottom = 40.0
-theme_override_fonts/font = ExtResource("2_sca5i")
+texture_normal = ExtResource("8_lmm6n")
+texture_pressed = ExtResource("9_l6f2n")
+texture_hover = ExtResource("10_w1krm")
+texture_focused = ExtResource("10_w1krm")
+
+[node name="label" type="Label" parent="widgets/tabs/downloaded_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_jj8gf")
 text = "TR_DOWNLOADED"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="online" type="Control" parent="widgets"]
 visible = false
@@ -251,21 +356,49 @@ offset_top = 10.0
 offset_right = 1175.0
 offset_bottom = 50.0
 
-[node name="latest_button" type="Button" parent="widgets/online"]
+[node name="latest_button" type="TextureButton" parent="widgets/online"]
 layout_mode = 0
-offset_left = 100.0
-offset_right = 450.0
+offset_left = 125.0
+offset_right = 425.0
 offset_bottom = 40.0
-theme_override_fonts/font = ExtResource("2_sca5i")
-text = "TR_LATEST"
+texture_normal = ExtResource("8_lmm6n")
+texture_pressed = ExtResource("9_l6f2n")
+texture_hover = ExtResource("10_w1krm")
+texture_focused = ExtResource("10_w1krm")
 
-[node name="top_button" type="Button" parent="widgets/online"]
+[node name="label" type="Label" parent="widgets/online/latest_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_jj8gf")
+text = "TR_LATEST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="top_button" type="TextureButton" parent="widgets/online"]
 layout_mode = 0
-offset_left = 700.0
-offset_right = 1050.0
+offset_left = 725.0
+offset_right = 1025.0
 offset_bottom = 40.0
-theme_override_fonts/font = ExtResource("2_sca5i")
+texture_normal = ExtResource("8_lmm6n")
+texture_pressed = ExtResource("9_l6f2n")
+texture_hover = ExtResource("10_w1krm")
+texture_focused = ExtResource("10_w1krm")
+
+[node name="label" type="Label" parent="widgets/online/top_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_jj8gf")
 text = "TR_TOP_DOWNLOADED"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="map_list" type="Control" parent="widgets"]
 anchors_preset = 0
@@ -334,25 +467,53 @@ layout_mode = 0
 offset_top = 450.0
 offset_bottom = 500.0
 
-[node name="list_prev" type="Button" parent="widgets"]
+[node name="list_prev" type="TextureButton" parent="widgets"]
 layout_mode = 0
 offset_left = 25.0
-offset_top = 560.0
-offset_right = 125.0
-offset_bottom = 590.0
+offset_top = 555.0
+offset_right = 215.0
+offset_bottom = 595.0
 focus_neighbor_right = NodePath("../list_next")
-theme_override_fonts/font = ExtResource("2_sca5i")
-text = "TR_PREV"
+texture_normal = ExtResource("4_s2yji")
+texture_pressed = ExtResource("5_1cpaa")
+texture_hover = ExtResource("6_pcuoj")
+texture_focused = ExtResource("6_pcuoj")
 
-[node name="list_next" type="Button" parent="widgets"]
+[node name="label" type="Label" parent="widgets/list_prev"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_jj8gf")
+text = "TR_PREV"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="list_next" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 575.0
-offset_top = 560.0
+offset_left = 485.0
+offset_top = 555.0
 offset_right = 675.0
-offset_bottom = 590.0
+offset_bottom = 595.0
 focus_neighbor_left = NodePath("../list_prev")
-theme_override_fonts/font = ExtResource("2_sca5i")
+texture_normal = ExtResource("4_s2yji")
+texture_pressed = ExtResource("5_1cpaa")
+texture_hover = ExtResource("6_pcuoj")
+texture_focused = ExtResource("6_pcuoj")
+
+[node name="label" type="Label" parent="widgets/list_next"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_jj8gf")
 text = "TR_NEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="minimap" parent="widgets" instance=ExtResource("4")]
 offset_left = 925.0
