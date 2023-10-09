@@ -1731,6 +1731,86 @@
                     "delay": 1,
                     "details": {
                         "where": [
+                            29,
+                            23
+                        ],
+                        "zoom": 0.3
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "details": {
+                        "rotation": 270,
+                        "side": "black",
+                        "template": "yellow_heli",
+                        "where": [
+                            38,
+                            23
+                        ]
+                    }
+                },
+                {
+                    "action": "move",
+                    "details": {
+                        "path": [
+                            "w",
+                            "w",
+                            "w",
+                            "w",
+                            "w",
+                            "w",
+                            "w",
+                            "w"
+                        ],
+                        "where": [
+                            31,
+                            23
+                        ],
+                        "who": [
+                            38,
+                            23
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "tr_core_epilogue_a9",
+                        "portrait": "yellow_heli",
+                        "colour": "black",
+                        "side": "left",
+                        "text": "tr_core_epilogue_m1_t58"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "colour": "black",
+                        "name": "TR_WAR_GRIM",
+                        "portrait": "hero_warlord",
+                        "side": "right",
+                        "text": "tr_core_epilogue_m1_t54"
+                    }
+                },
+                {
+                    "action": "unlock"
+                },
+                {
+                    "action": "end_game",
+                    "details": {
+                        "winner": "black"
+                    }
+                }
+            ],
+            "13_2_grim_escapes": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "camera",
+                    "delay": 1,
+                    "details": {
+                        "where": [
                             25,
                             38
                         ],

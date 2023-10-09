@@ -76,7 +76,9 @@
         "tr_core_epilogue_m1_t54": "This is not the end! I'll be back!",
         "tr_core_epilogue_m1_t55": "Ugh... that's... unexpected...",
         "tr_core_epilogue_m1_t56": "Blake, you fool! I can't do this without him!",
-        "tr_core_epilogue_m1_t57": "How dare you! I am the mighty Warlord Grim! It can't end like that!"
+        "tr_core_epilogue_m1_t57": "How dare you! I am the mighty Warlord Grim! It can't end like that!",
+        "tr_core_epilogue_m1_t58": "Your taxi is here, everyone on board!",
+        "tr_core_epilogue_a9": "Obsidian Pilot",
     },
     "pl": {
         "tr_core_epilogue_campaign_title": "Epilog",
@@ -155,6 +157,8 @@
         "tr_core_epilogue_m1_t54": "To jeszcze nie koniec! Ja tu powrócę!",
         "tr_core_epilogue_m1_t55": "Ugh... to było... niespodziewane...",
         "tr_core_epilogue_m1_t56": "Blake, głupcze! Nie dam rady uciec bez Ciebie!",
-        "tr_core_epilogue_m1_t57": "Jak śmiesz! Jestem potężnym Wataszką Grimem! To nie może się tak skończyć!"
+        "tr_core_epilogue_m1_t57": "Jak śmiesz! Jestem potężnym Wataszką Grimem! To nie może się tak skończyć!",
+        "tr_core_epilogue_m1_t58": "Przyleciał transport, wszyscy na pokład!",
+        "tr_core_epilogue_a9": "Obsydianowy Pilot",
     }
 }
