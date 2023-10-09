@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://deovpfof2ipgn"]
+[gd_scene load_steps=13 format=3 uid="uid://deovpfof2ipgn"]
 
 [ext_resource type="Script" path="res://scenes/ui/menu/controls/controls.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_u5grt"]
 [ext_resource type="PackedScene" uid="uid://crv1ageml0d4g" path="res://scenes/ui/menu/controls/game.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://bfxvqvxbfeppg" path="res://scenes/ui/menu/controls/editor.tscn" id="4"]
-[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="4_67k1y"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_lrj5r"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_ba2wt"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_6c0av"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="8_f8qfl"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -182,14 +185,28 @@ offset_bottom = 550.0
 
 [node name="editor" parent="widgets" instance=ExtResource("4")]
 
-[node name="back_button" type="Button" parent="widgets"]
+[node name="back_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 350.0
-offset_top = 550.0
-offset_right = 450.0
-offset_bottom = 580.0
-theme_override_fonts/font = ExtResource("4_67k1y")
+offset_left = 305.0
+offset_top = 545.0
+offset_right = 495.0
+offset_bottom = 585.0
+texture_normal = ExtResource("5_lrj5r")
+texture_pressed = ExtResource("6_ba2wt")
+texture_hover = ExtResource("7_6c0av")
+texture_focused = ExtResource("7_6c0av")
+
+[node name="label" type="Label" parent="widgets/back_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_f8qfl")
 text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
 reset_on_save = false

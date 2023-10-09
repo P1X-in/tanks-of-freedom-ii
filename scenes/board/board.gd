@@ -696,6 +696,7 @@ func end_game(winner):
 	self.ai.abort()
 	self.ui.hide_resource()
 	self.ui.clear_tile_highlight()
+	self.map.tile_box.hide()
 	self._signal_winner(winner)
 	self.ui.show_summary(winner)
 

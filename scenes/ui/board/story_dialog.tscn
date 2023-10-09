@@ -1,11 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://dd78km24j4hpk"]
+[gd_scene load_steps=11 format=3 uid="uid://dd78km24j4hpk"]
 
 [ext_resource type="Script" path="res://scenes/ui/board/story_dialog.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://cdr6c4oy51qxv" path="res://scenes/ui/board/actor_view.tscn" id="2"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_54pq6"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_ofwar"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_hrwt2"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_p35sh"]
 [ext_resource type="Texture2D" uid="uid://c1upgftggmnfv" path="res://assets/gui/menu/backgrounds/sub_panel3.png" id="5_q60ry"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_gq4yq"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_q50lx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5aeok"]
 font = ExtResource("3_hrwt2")
@@ -39,14 +42,28 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="continue" type="Button" parent="background"]
+[node name="continue" type="TextureButton" parent="background"]
 layout_mode = 0
-offset_left = 650.0
-offset_top = 210.0
+offset_left = 610.0
+offset_top = 205.0
 offset_right = 800.0
-offset_bottom = 240.0
-theme_override_fonts/font = ExtResource("2_54pq6")
+offset_bottom = 245.0
+texture_normal = ExtResource("5_p35sh")
+texture_pressed = ExtResource("6_gq4yq")
+texture_hover = ExtResource("7_q50lx")
+texture_focused = ExtResource("7_q50lx")
+
+[node name="label" type="Label" parent="background/continue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_hrwt2")
 text = "TR_CONTINUE"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="actor_left" type="Node2D" parent="background"]
 

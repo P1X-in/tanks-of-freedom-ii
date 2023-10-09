@@ -5,6 +5,7 @@ extends Control
 
 @onready var label = $"label"
 @onready var button = $"toggle"
+@onready var button_label = $"toggle/label"
 
 @export var unavailable = false
 @export var option_name = ""
@@ -21,12 +22,12 @@ func _read_setting():
 
 	match value:
 		null:
-			self.button.set_text("???")
+			self.button_label.set_text("???")
 			self.button.set_disabled(true)
 		true:
-			self.button.set_text("TR_ON")
+			self.button_label.set_text("TR_ON")
 		false:
-			self.button.set_text("TR_OFF")
+			self.button_label.set_text("TR_OFF")
 
 func _on_toggle_button_pressed():
 	self.settings.set_option(self.option_key, not self.settings.get_option(self.option_key))

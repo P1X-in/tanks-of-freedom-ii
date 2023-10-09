@@ -1,13 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://b6crhl6g0ory"]
+[gd_scene load_steps=17 format=3 uid="uid://b6crhl6g0ory"]
 
 [ext_resource type="Script" path="res://scenes/ui/menu/settings.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_6psbf"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_i5u15"]
-[ext_resource type="PackedScene" path="res://scenes/ui/menu/settings_gameplay.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/ui/menu/settings_general.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/ui/menu/settings_audio.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://cocnl04cpm23o" path="res://scenes/ui/menu/settings_gameplay.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dvtv5e3to0um5" path="res://scenes/ui/menu/settings_general.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bhd3mqllw6g05" path="res://scenes/ui/menu/settings_audio.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://cjragqykjl7h2" path="res://scenes/ui/menu/settings_video.tscn" id="6"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="8_ld2fy"]
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="8_pyc6j"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="9_3yekk"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="10_o8msu"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="11_vkxpb"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -135,9 +139,9 @@ script = ExtResource("1")
 
 [node name="background" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_left = -350.0
+offset_left = -400.0
 offset_top = -350.0
-offset_right = 350.0
+offset_right = 400.0
 offset_bottom = 350.0
 texture = ExtResource("2_i5u15")
 patch_margin_left = 8
@@ -149,57 +153,117 @@ axis_stretch_vertical = 1
 
 [node name="widgets" type="Control" parent="."]
 anchors_preset = 0
-offset_left = -350.0
+offset_left = -400.0
 offset_top = -350.0
-offset_right = 350.0
+offset_right = 400.0
 offset_bottom = 350.0
 
 [node name="tabs" type="Control" parent="widgets"]
 anchors_preset = 0
 offset_left = 20.0
 offset_top = 20.0
-offset_right = 120.0
+offset_right = 210.0
 offset_bottom = 320.0
 
-[node name="general" type="Button" parent="widgets/tabs"]
+[node name="general" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
-offset_right = 140.0
-offset_bottom = 30.0
-theme_override_fonts/font = ExtResource("2_6psbf")
+offset_right = 190.0
+offset_bottom = 40.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/general"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
 text = "TR_GENERAL"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="video" type="Button" parent="widgets/tabs"]
+[node name="video" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
-offset_top = 50.0
-offset_right = 140.0
-offset_bottom = 80.0
-theme_override_fonts/font = ExtResource("2_6psbf")
+offset_top = 60.0
+offset_right = 190.0
+offset_bottom = 100.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/video"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
 text = "TR_VIDEO"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="audio" type="Button" parent="widgets/tabs"]
+[node name="audio" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
-offset_top = 100.0
-offset_right = 140.0
-offset_bottom = 130.0
-theme_override_fonts/font = ExtResource("2_6psbf")
+offset_top = 120.0
+offset_right = 190.0
+offset_bottom = 160.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/audio"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
 text = "TR_AUDIO"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="gameplay" type="Button" parent="widgets/tabs"]
+[node name="gameplay" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
-offset_top = 150.0
-offset_right = 140.0
-offset_bottom = 180.0
-theme_override_fonts/font = ExtResource("2_6psbf")
+offset_top = 180.0
+offset_right = 190.0
+offset_bottom = 220.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/gameplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
 text = "TR_GAMEPLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="boxes" type="Control" parent="widgets"]
 anchors_preset = 0
-offset_left = 160.0
-offset_right = 660.0
+offset_left = 210.0
+offset_right = 810.0
 offset_bottom = 300.0
 
 [node name="settings_general" parent="widgets/boxes" instance=ExtResource("4")]
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 
 [node name="settings_video" parent="widgets/boxes" instance=ExtResource("6")]
 visible = false
@@ -212,26 +276,48 @@ offset_bottom = -300.0
 [node name="settings_audio" parent="widgets/boxes" instance=ExtResource("5")]
 visible = false
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 
 [node name="settings_gameplay" parent="widgets/boxes" instance=ExtResource("3")]
 visible = false
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 
-[node name="back_button" type="Button" parent="widgets"]
+[node name="back_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 300.0
-offset_top = 650.0
-offset_right = 400.0
+offset_left = 305.0
+offset_top = 640.0
+offset_right = 495.0
 offset_bottom = 680.0
-theme_override_fonts/font = ExtResource("2_6psbf")
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/back_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
 text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="help" type="Control" parent="."]
 visible = false
 anchors_preset = 0
-offset_left = 350.0
+offset_left = 400.0
 offset_top = -350.0
-offset_right = 550.0
+offset_right = 600.0
 offset_bottom = 350.0
 
 [node name="background" type="NinePatchRect" parent="help"]

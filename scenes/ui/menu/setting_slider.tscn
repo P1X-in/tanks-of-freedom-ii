@@ -8,7 +8,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_left = 20.0
 offset_top = 20.0
-offset_right = 470.0
+offset_right = 570.0
 offset_bottom = 70.0
 script = ExtResource("2")
 
@@ -24,8 +24,8 @@ vertical_alignment = 1
 
 [node name="slider_value" type="Label" parent="."]
 layout_mode = 0
-offset_left = 200.0
-offset_right = 250.0
+offset_left = 300.0
+offset_right = 350.0
 offset_bottom = 50.0
 theme_override_fonts/font = ExtResource("2_3pyw3")
 text = "10
@@ -35,8 +35,8 @@ vertical_alignment = 1
 
 [node name="slider" type="HSlider" parent="."]
 layout_mode = 0
-offset_left = 250.0
-offset_right = 450.0
+offset_left = 350.0
+offset_right = 550.0
 offset_bottom = 50.0
 max_value = 10.0
 

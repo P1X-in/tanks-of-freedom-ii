@@ -3,6 +3,7 @@ extends Node2D
 @onready var menu_button = $"menu_button"
 @onready var restart_button = $"restart_button"
 @onready var next_mission_button = $"next_mission_button"
+@onready var next_mission_button_label = $"next_mission_button/label"
 
 @onready var mission_complete = $"background/mission_complete"
 @onready var mission_failed = $"background/mission_failed"
@@ -52,7 +53,7 @@ func configure_winner(winner):
 func _setup_next_mission():
 	self.next_mission_button.show()
 	if self.campaign.is_campaign_complete(self.match_setup.campaign_name):
-		self.next_mission_button.set_text("TR_FINISH")
+		self.next_mission_button_label.set_text("TR_FINISH")
 
 func _on_menu_button_pressed():
 	self.gamepad_adapter.disable()
