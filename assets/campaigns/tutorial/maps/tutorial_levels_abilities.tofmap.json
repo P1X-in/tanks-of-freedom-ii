@@ -1,13 +1,191 @@
 {
     "metadata": {
+        "base_code": null,
+        "editor_version": "0.3.0",
         "initial_cam_pos": [
             20,
             20
         ],
-        "track": "soundtrack_3",
+        "iteration": 0,
+        "name": "tutorial_levels_abilities",
+        "track": "soundtrack_3"
     },
     "scripts": {
         "stories": {
+            "drop_off_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t19"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t20"
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom": 0.5
+                    }
+                },
+                {
+                    "action": "despawn",
+                    "delay": 1,
+                    "details": {
+                        "fields": [
+                            {
+                                "x1": 18,
+                                "x2": 22,
+                                "y1": 18,
+                                "y2": 22
+                            }
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "details": {
+                        "rotation": 90,
+                        "side": "blue",
+                        "template": "blue_m_inf",
+                        "where": [
+                            20,
+                            20
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "delay": 1,
+                    "details": {
+                        "rotation": 90,
+                        "side": "blue",
+                        "template": "blue_infantry",
+                        "where": [
+                            20,
+                            19
+                        ]
+                    }
+                },
+                {
+                    "action": "level_up",
+                    "details": {
+                        "who": [
+                            20,
+                            20
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t21"
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "08_heal_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "final_infantry_destroyed": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t30"
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom": 0.5
+                    }
+                },
+                {
+                    "action": "despawn",
+                    "delay": 1,
+                    "details": {
+                        "fields": [
+                            {
+                                "x1": 18,
+                                "x2": 22,
+                                "y1": 18,
+                                "y2": 22
+                            }
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t31"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t32"
+                    }
+                },
+                {
+                    "action": "unlock"
+                },
+                {
+                    "action": "end_game",
+                    "details": {
+                        "winner": "blue"
+                    }
+                }
+            ],
+            "first_red_infantry_destroyed": [
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "03_red_infantry_destroyed",
+                        "suspended": false
+                    }
+                }
+            ],
             "give_movement_resources": [
                 {
                     "action": "ap",
@@ -16,6 +194,647 @@
                         "set": true,
                         "side": "blue"
                     }
+                }
+            ],
+            "heal_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t22"
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom": 0.5
+                    }
+                },
+                {
+                    "action": "despawn",
+                    "delay": 1,
+                    "details": {
+                        "fields": [
+                            {
+                                "x1": 18,
+                                "x2": 22,
+                                "y1": 18,
+                                "y2": 22
+                            }
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "details": {
+                        "rotation": 90,
+                        "side": "blue",
+                        "template": "blue_rocket",
+                        "where": [
+                            20,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "delay": 1,
+                    "details": {
+                        "rotation": 90,
+                        "side": "red",
+                        "template": "red_heli",
+                        "where": [
+                            20,
+                            19
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t23"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t24"
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "09_missile_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "heavy_missile_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t27"
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom": 0.5
+                    }
+                },
+                {
+                    "action": "despawn",
+                    "delay": 1,
+                    "details": {
+                        "fields": [
+                            {
+                                "x1": 18,
+                                "x2": 22,
+                                "y1": 18,
+                                "y2": 22
+                            }
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "details": {
+                        "rotation": 90,
+                        "side": "blue",
+                        "template": "blue_scout",
+                        "where": [
+                            20,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "delay": 1,
+                    "details": {
+                        "rotation": 90,
+                        "side": "red",
+                        "template": "red_infantry",
+                        "where": [
+                            20,
+                            19
+                        ]
+                    }
+                },
+                {
+                    "action": "level_up",
+                    "details": {
+                        "who": [
+                            20,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t28"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t29"
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "11_red_infantry_destroyed",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "infantry_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t13"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t14"
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom": 0.5
+                    }
+                },
+                {
+                    "action": "despawn",
+                    "delay": 1,
+                    "details": {
+                        "fields": [
+                            {
+                                "x1": 18,
+                                "x2": 22,
+                                "y1": 18,
+                                "y2": 22
+                            }
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "details": {
+                        "rotation": 90,
+                        "side": "blue",
+                        "template": "blue_tank",
+                        "where": [
+                            20,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "delay": 1,
+                    "details": {
+                        "rotation": 90,
+                        "side": "red",
+                        "template": "red_infantry",
+                        "where": [
+                            20,
+                            19
+                        ]
+                    }
+                },
+                {
+                    "action": "level_up",
+                    "details": {
+                        "who": [
+                            20,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t15"
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "05_tank_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "missile_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t25"
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom": 0.5
+                    }
+                },
+                {
+                    "action": "despawn",
+                    "delay": 1,
+                    "details": {
+                        "fields": [
+                            {
+                                "x1": 18,
+                                "x2": 22,
+                                "y1": 18,
+                                "y2": 22
+                            }
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "details": {
+                        "rotation": 90,
+                        "side": "blue",
+                        "template": "blue_rocket",
+                        "where": [
+                            20,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "delay": 1,
+                    "details": {
+                        "rotation": 90,
+                        "side": "red",
+                        "template": "red_heli",
+                        "where": [
+                            20,
+                            19
+                        ]
+                    }
+                },
+                {
+                    "action": "level_up",
+                    "details": {
+                        "who": [
+                            20,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t26"
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "10_heavy_missile_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "pick_up_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t18"
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "07_drop_off_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "second_red_infantry_destroyed": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t5"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t6"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t7"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t8"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t9"
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom": 0.5
+                    }
+                },
+                {
+                    "action": "despawn",
+                    "details": {
+                        "fields": [
+                            {
+                                "x1": 18,
+                                "x2": 22,
+                                "y1": 18,
+                                "y2": 22
+                            }
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t10"
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "details": {
+                        "rotation": 90,
+                        "side": "blue",
+                        "template": "blue_infantry",
+                        "where": [
+                            20,
+                            20
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "delay": 1,
+                    "details": {
+                        "rotation": 90,
+                        "side": "red",
+                        "template": "red_infantry",
+                        "where": [
+                            20,
+                            19
+                        ]
+                    }
+                },
+                {
+                    "action": "level_up",
+                    "details": {
+                        "who": [
+                            20,
+                            20
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t11"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t12"
+                    }
+                },
+                {
+                    "action": "objective",
+                    "details": {
+                        "slot": 0,
+                        "text": "tr_core_tutorial_m3_o2"
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
+            "tank_ability_used": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t16"
+                    }
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            20,
+                            20
+                        ],
+                        "zoom": 0.5
+                    }
+                },
+                {
+                    "action": "despawn",
+                    "delay": 1,
+                    "details": {
+                        "fields": [
+                            {
+                                "x1": 18,
+                                "x2": 22,
+                                "y1": 18,
+                                "y2": 22
+                            }
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "details": {
+                        "rotation": 90,
+                        "side": "blue",
+                        "template": "blue_heli",
+                        "where": [
+                            20,
+                            20
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "delay": 1,
+                    "details": {
+                        "rotation": 90,
+                        "side": "blue",
+                        "template": "blue_infantry",
+                        "where": [
+                            20,
+                            19
+                        ]
+                    }
+                },
+                {
+                    "action": "level_up",
+                    "details": {
+                        "who": [
+                            20,
+                            20
+                        ]
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "left",
+                        "text": "tr_core_tutorial_m3_t17"
+                    }
+                },
+                {
+                    "action": "trigger",
+                    "details": {
+                        "name": "06_pick_up_ability_used",
+                        "suspended": false
+                    }
+                },
+                {
+                    "action": "unlock"
                 }
             ],
             "welcome_message": [
@@ -98,8 +917,30 @@
                         "text": "tr_core_tutorial_m3_t3"
                     }
                 },
-                {"action" : "spawn", "details" : {"where" : [19, 21], "template" : "red_infantry", "side" : "red", "rotation" : 90}},
-                {"action" : "spawn", "details" : {"where" : [20, 21], "template" : "red_infantry", "side" : "red", "rotation" : 90}},
+                {
+                    "action": "spawn",
+                    "details": {
+                        "rotation": 90,
+                        "side": "red",
+                        "template": "red_infantry",
+                        "where": [
+                            19,
+                            21
+                        ]
+                    }
+                },
+                {
+                    "action": "spawn",
+                    "details": {
+                        "rotation": 90,
+                        "side": "red",
+                        "template": "red_infantry",
+                        "where": [
+                            20,
+                            21
+                        ]
+                    }
+                },
                 {
                     "action": "message",
                     "details": {
@@ -126,505 +967,7 @@
                 {
                     "action": "unlock"
                 }
-            ],
-            "first_red_infantry_destroyed": [
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "03_red_infantry_destroyed",
-                        "suspended": false
-                    }
-                }
-            ],
-            "second_red_infantry_destroyed": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t5"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t6"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t7"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t8"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t9"
-                    }
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            20,
-                            20
-                        ],
-                        "zoom" : 0.5
-                    }
-                },
-                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}},
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t10"
-                    }
-                },
-                {"action" : "spawn", "details" : {"where" : [20, 20], "template" : "blue_infantry", "side" : "blue", "rotation" : 90}},
-                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "red_infantry", "side" : "red", "rotation" : 90}, "delay" : 1},
-                {"action" : "level_up", "details" : {"who" : [20, 20]}},
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t11"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t12"
-                    }
-                },
-                {
-                    "action": "objective",
-                    "details": {
-                        "slot": 0,
-                        "text": "tr_core_tutorial_m3_o2"
-                    }
-                },
-                {
-                    "action": "unlock"
-                }
-            ],
-            "infantry_ability_used": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t13"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t14"
-                    }
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            20,
-                            20
-                        ],
-                        "zoom" : 0.5
-                    }
-                },
-                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
-                {"action" : "spawn", "details" : {"where" : [20, 21], "template" : "blue_tank", "side" : "blue", "rotation" : 90}},
-                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "red_infantry", "side" : "red", "rotation" : 90}, "delay" : 1},
-                {"action" : "level_up", "details" : {"who" : [20, 21]}},
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t15"
-                    }
-                },
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "05_tank_ability_used",
-                        "suspended": false
-                    }
-                },
-                {
-                    "action": "unlock"
-                }
-            ],
-            "tank_ability_used": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t16"
-                    }
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            20,
-                            20
-                        ],
-                        "zoom" : 0.5
-                    }
-                },
-                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
-                {"action" : "spawn", "details" : {"where" : [20, 20], "template" : "blue_heli", "side" : "blue", "rotation" : 90}},
-                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "blue_infantry", "side" : "blue", "rotation" : 90}, "delay" : 1},
-                {"action" : "level_up", "details" : {"who" : [20, 20]}},
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t17"
-                    }
-                },
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "06_pick_up_ability_used",
-                        "suspended": false
-                    }
-                },
-                {
-                    "action": "unlock"
-                }
-            ],
-            "pick_up_ability_used": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t18"
-                    }
-                },
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "07_drop_off_ability_used",
-                        "suspended": false
-                    }
-                },
-                {
-                    "action": "unlock"
-                }
-            ],
-            "drop_off_ability_used": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t19"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t20"
-                    }
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            20,
-                            20
-                        ],
-                        "zoom" : 0.5
-                    }
-                },
-                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
-                {"action" : "spawn", "details" : {"where" : [20, 20], "template" : "blue_m_inf", "side" : "blue", "rotation" : 90}},
-                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "blue_infantry", "side" : "blue", "rotation" : 90}, "delay" : 1},
-                {"action" : "level_up", "details" : {"who" : [20, 20]}},
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t21"
-                    }
-                },
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "08_heal_ability_used",
-                        "suspended": false
-                    }
-                },
-                {
-                    "action": "unlock"
-                }
-            ],
-            "heal_ability_used": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t22"
-                    }
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            20,
-                            20
-                        ],
-                        "zoom" : 0.5
-                    }
-                },
-                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
-                {"action" : "spawn", "details" : {"where" : [20, 21], "template" : "blue_rocket", "side" : "blue", "rotation" : 90}},
-                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "red_heli", "side" : "red", "rotation" : 90}, "delay" : 1},
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t23"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t24"
-                    }
-                },
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "09_missile_ability_used",
-                        "suspended": false
-                    }
-                },
-                {
-                    "action": "unlock"
-                }
-            ],
-            "missile_ability_used": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t25"
-                    }
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            20,
-                            20
-                        ],
-                        "zoom" : 0.5
-                    }
-                },
-                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
-                {"action" : "spawn", "details" : {"where" : [20, 21], "template" : "blue_rocket", "side" : "blue", "rotation" : 90}},
-                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "red_heli", "side" : "red", "rotation" : 90}, "delay" : 1},
-                {"action" : "level_up", "details" : {"who" : [20, 21]}},
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t26"
-                    }
-                },
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "10_heavy_missile_ability_used",
-                        "suspended": false
-                    }
-                },
-                {
-                    "action": "unlock"
-                }
-            ],
-            "heavy_missile_ability_used": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t27"
-                    }
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            20,
-                            20
-                        ],
-                        "zoom" : 0.5
-                    }
-                },
-                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
-                {"action" : "spawn", "details" : {"where" : [20, 21], "template" : "blue_scout", "side" : "blue", "rotation" : 90}},
-                {"action" : "spawn", "details" : {"where" : [20, 19], "template" : "red_infantry", "side" : "red", "rotation" : 90}, "delay" : 1},
-                {"action" : "level_up", "details" : {"who" : [20, 21]}},
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t28"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t29"
-                    }
-                },
-                {
-                    "action": "trigger",
-                    "details": {
-                        "name": "11_red_infantry_destroyed",
-                        "suspended": false
-                    }
-                },
-                {
-                    "action": "unlock"
-                }
-            ],
-            "final_infantry_destroyed": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t30"
-                    }
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            20,
-                            20
-                        ],
-                        "zoom" : 0.5
-                    }
-                },
-                {"action" : "despawn", "details" : {"fields": [{"x1": 18, "x2": 22, "y1": 18, "y2": 22}]}, "delay" : 1},
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t31"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "left",
-                        "text": "tr_core_tutorial_m3_t32"
-                    }
-                },
-                {
-                    "action": "unlock"
-                },
-                {"action" : "end_game", "details" : {"winner" : "blue"}}
-            ],
+            ]
         },
         "triggers": {
             "01_phase_one_turn_start": {
@@ -643,16 +986,86 @@
                 "story": "welcome_message",
                 "type": "turn"
             },
-            "03_red_infantry_destroyed" : {"type" : "assasination", "story" : "second_red_infantry_destroyed", "details" : { "type" : "red_infantry" }, "one_off" : true},
-            "04_red_infantry_destroyed" : {"type" : "assasination", "story" : "first_red_infantry_destroyed", "details" : { "type" : "red_infantry" }, "one_off" : true},
-            "05_infantry_ability_used" : {"type" : "ability", "story" : "infantry_ability_used", "details" : {}, "one_off" : true},
-            "05_tank_ability_used" : {"type" : "ability", "story" : "tank_ability_used", "details" : {}, "one_off" : true},
-            "06_pick_up_ability_used" : {"type" : "ability", "story" : "pick_up_ability_used", "details" : {}, "one_off" : true},
-            "07_drop_off_ability_used" : {"type" : "ability", "story" : "drop_off_ability_used", "details" : {}, "one_off" : true},
-            "08_heal_ability_used" : {"type" : "ability", "story" : "heal_ability_used", "details" : {}, "one_off" : true},
-            "09_missile_ability_used" : {"type" : "ability", "story" : "missile_ability_used", "details" : {}, "one_off" : true},
-            "10_heavy_missile_ability_used" : {"type" : "ability", "story" : "heavy_missile_ability_used", "details" : {}, "one_off" : true},
-            "11_red_infantry_destroyed" : {"type" : "assasination", "story" : "final_infantry_destroyed", "details" : { "type" : "red_infantry" }, "one_off" : true}
+            "03_red_infantry_destroyed": {
+                "details": {
+                    "type": "red_infantry"
+                },
+                "one_off": true,
+                "story": "second_red_infantry_destroyed",
+                "type": "assasination"
+            },
+            "04_red_infantry_destroyed": {
+                "details": {
+                    "type": "red_infantry"
+                },
+                "one_off": true,
+                "story": "first_red_infantry_destroyed",
+                "type": "assasination"
+            },
+            "05_infantry_ability_used": {
+                "details": {
+
+                },
+                "one_off": true,
+                "story": "infantry_ability_used",
+                "type": "ability"
+            },
+            "05_tank_ability_used": {
+                "details": {
+
+                },
+                "one_off": true,
+                "story": "tank_ability_used",
+                "type": "ability"
+            },
+            "06_pick_up_ability_used": {
+                "details": {
+
+                },
+                "one_off": true,
+                "story": "pick_up_ability_used",
+                "type": "ability"
+            },
+            "07_drop_off_ability_used": {
+                "details": {
+
+                },
+                "one_off": true,
+                "story": "drop_off_ability_used",
+                "type": "ability"
+            },
+            "08_heal_ability_used": {
+                "details": {
+
+                },
+                "one_off": true,
+                "story": "heal_ability_used",
+                "type": "ability"
+            },
+            "09_missile_ability_used": {
+                "details": {
+
+                },
+                "one_off": true,
+                "story": "missile_ability_used",
+                "type": "ability"
+            },
+            "10_heavy_missile_ability_used": {
+                "details": {
+
+                },
+                "one_off": true,
+                "story": "heavy_missile_ability_used",
+                "type": "ability"
+            },
+            "11_red_infantry_destroyed": {
+                "details": {
+                    "type": "red_infantry"
+                },
+                "one_off": true,
+                "story": "final_infantry_destroyed",
+                "type": "assasination"
+            }
         }
     },
     "tiles": {
@@ -671,10 +1084,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_road2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_road2"
             },
             "terrain": {
@@ -701,10 +1120,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -731,10 +1156,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -756,15 +1187,24 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_rail_stop"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -791,10 +1231,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_road2"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_road2"
             },
             "terrain": {
@@ -825,10 +1271,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "city_bridge"
             },
             "unit": {
@@ -851,10 +1303,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -881,10 +1339,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_river2"
             },
             "terrain": {
@@ -907,14 +1371,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_rocks2"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -941,10 +1414,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -971,10 +1450,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -997,14 +1482,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1012,11 +1506,35 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
+                "ai_paused": false,
                 "modifiers": {
 
                 },
                 "rotation": 0,
                 "side": "blue",
+                "stats": {
+                    "armor": 2,
+                    "attack": 10,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 6,
+                    "move": 6
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "blue_tank"
             }
         },
@@ -1035,10 +1553,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -1061,14 +1585,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1095,10 +1628,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1125,10 +1664,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1151,14 +1696,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1185,10 +1739,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_river2"
             },
             "terrain": {
@@ -1215,10 +1775,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -1249,10 +1815,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "city_bridge"
             },
             "unit": {
@@ -1275,10 +1847,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_road2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_road2"
             },
             "terrain": {
@@ -1305,10 +1883,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1335,10 +1919,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1365,10 +1955,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1395,10 +1991,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_road2"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road2"
             },
             "terrain": {
