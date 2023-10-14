@@ -1,9 +1,13 @@
 {
     "metadata": {
+        "base_code": null,
+        "editor_version": "0.3.0",
         "initial_cam_pos": [
             18,
             30
         ],
+        "iteration": 0,
+        "name": "core_ruby_dusk_sudden_strike",
         "skip_initial_hq_cam": true,
         "track": "soundtrack_4"
     },
@@ -266,29 +270,6 @@
                     "action": "unlock"
                 }
             ],
-            "sidney_defeated": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_NOB_SIDNEY",
-                        "portrait": "hero_noble",
-                        "side": "right",
-                        "text": "tr_core_ruby_dusk_m1_t18"
-                    }
-                },
-                {
-                    "action": "unlock"
-                },
-                {
-                    "action": "end_game",
-                    "details": {
-                        "winner": "yellow"
-                    }
-                }
-            ],
             "amber_hq_claimed": [
                 {
                     "action": "lock"
@@ -444,6 +425,29 @@
                         "winner": "red"
                     }
                 }
+            ],
+            "sidney_defeated": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_NOB_SIDNEY",
+                        "portrait": "hero_noble",
+                        "side": "right",
+                        "text": "tr_core_ruby_dusk_m1_t18"
+                    }
+                },
+                {
+                    "action": "unlock"
+                },
+                {
+                    "action": "end_game",
+                    "details": {
+                        "winner": "yellow"
+                    }
+                }
             ]
         },
         "triggers": {
@@ -504,10 +508,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "city_building_small3"
             },
             "unit": {
@@ -530,10 +540,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -560,14 +576,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks1"
             },
             "unit": {
@@ -590,14 +615,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks2"
             },
             "unit": {
@@ -624,10 +658,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "city_building_small4"
             },
             "unit": {
@@ -654,10 +694,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "city_building_small2"
             },
             "unit": {
@@ -680,10 +726,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -706,14 +758,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -740,14 +801,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks1"
             },
             "unit": {
@@ -770,14 +840,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks2"
             },
             "unit": {
@@ -804,10 +883,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "city_building_small1"
             },
             "unit": {
@@ -834,10 +919,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "city_building_small2"
             },
             "unit": {
@@ -864,11 +955,17 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": "city_building_small5"
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "city_building_small10"
             },
             "unit": {
                 "rotation": 0,
@@ -890,10 +987,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -920,10 +1023,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -946,14 +1055,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_log"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -980,14 +1098,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks3"
             },
             "unit": {
@@ -1010,14 +1137,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks1"
             },
             "unit": {
@@ -1040,10 +1176,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -1070,10 +1212,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -1081,9 +1229,35 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {},
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
+                "ai_paused": false,
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "yellow",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "yellow_infantry"
             }
         },
@@ -1106,6 +1280,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -1132,10 +1309,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -1158,14 +1341,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1188,14 +1380,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_rocks2"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1222,14 +1423,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks3"
             },
             "unit": {
@@ -1252,14 +1462,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks2"
             },
             "unit": {
@@ -1282,14 +1501,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks3"
             },
             "unit": {
@@ -1312,10 +1540,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -1342,10 +1576,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -1376,10 +1616,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "city_bridge_wood"
             },
             "unit": {
@@ -1402,10 +1648,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -1432,10 +1684,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tile": "frame_river4"
+                "tags": {
+
+                },
+                "tile": "frame_river6"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_river2"
             },
             "terrain": {
@@ -1458,14 +1716,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower7"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1488,14 +1755,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_rocks1"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1522,14 +1798,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks1"
             },
             "unit": {
@@ -1552,14 +1837,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks1"
             },
             "unit": {
@@ -1582,14 +1876,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks3"
             },
             "unit": {
@@ -1612,14 +1915,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_trees4"
             },
             "unit": {
@@ -1642,10 +1954,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_snow3"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -1672,10 +1990,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1698,14 +2022,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1732,10 +2065,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -1762,10 +2101,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1792,10 +2137,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -1809,9 +2160,14 @@
         },
         "16_23": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "yellow",
+                "tags": {
+
+                },
                 "tile": "feudal_tower"
             },
             "damage": {
@@ -1824,10 +2180,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1850,14 +2212,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1884,14 +2255,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_trees4"
             },
             "unit": {
@@ -1914,14 +2294,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_trees5"
             },
             "unit": {
@@ -1944,14 +2333,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_trees5"
             },
             "unit": {
@@ -1961,9 +2359,14 @@
         },
         "16_28": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "red",
+                "tags": {
+
+                },
                 "tile": "steampunk_tower"
             },
             "damage": {
@@ -1976,10 +2379,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -2006,10 +2415,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river3"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_snow_dirt_road2"
             },
             "terrain": {
@@ -2032,14 +2447,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_rocks2"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -2066,10 +2490,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_snow2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -2092,14 +2522,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower6"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2126,10 +2565,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2156,10 +2601,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -2182,14 +2633,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2216,10 +2676,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_river2"
             },
             "terrain": {
@@ -2246,10 +2712,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -2276,10 +2748,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_river2"
             },
             "terrain": {
@@ -2306,10 +2784,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2336,15 +2820,24 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_snow3"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "nature_trees18"
             },
             "unit": {
                 "rotation": 0,
@@ -2362,14 +2855,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_rocks1"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -2392,14 +2894,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -2426,10 +2937,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_snow_dirt_road1"
             },
             "terrain": {
@@ -2437,9 +2954,35 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {},
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
+                "ai_paused": false,
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "red",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "red_infantry"
             }
         },
@@ -2452,6 +2995,9 @@
                 },
                 "rotation": 90,
                 "side": "red",
+                "tags": {
+
+                },
                 "tile": "steampunk_hq"
             },
             "damage": {
@@ -2464,10 +3010,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -2490,14 +3042,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_snow3"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -2520,14 +3081,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_log"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -2550,14 +3120,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2580,14 +3159,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2614,10 +3202,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -2644,10 +3238,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2670,14 +3270,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2704,10 +3313,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2734,10 +3349,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_river2"
             },
             "terrain": {
@@ -2764,10 +3385,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tile": "frame_river1"
+                "tags": {
+
+                },
+                "tile": "frame_river5"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -2794,10 +3421,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river1"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_snow_river1"
             },
             "terrain": {
@@ -2824,10 +3457,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river4"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_snow_river2"
             },
             "terrain": {
@@ -2854,10 +3493,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_snow2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -2888,6 +3533,9 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow_dirt_road3"
             },
             "terrain": {
@@ -2895,9 +3543,35 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {},
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
+                "ai_paused": false,
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "red",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "red_infantry"
             }
         },
@@ -2920,6 +3594,9 @@
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_snow_dirt_road3"
             },
             "terrain": {
@@ -2927,9 +3604,36 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {},
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
+                "ai_paused": false,
+                "disable_active_abilities": false,
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "red",
+                "stats": {
+                    "armor": 2,
+                    "attack": 9,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 20,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 20,
+                    "max_move": 5,
+                    "move": 5
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "hero_noble"
             }
         },
@@ -2948,10 +3652,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river1"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_snow_dirt_road1"
             },
             "terrain": {
@@ -2978,10 +3688,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river1"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_snow_dirt_road1"
             },
             "terrain": {
@@ -3008,10 +3724,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -3038,10 +3760,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -3072,6 +3800,9 @@
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -3094,14 +3825,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_rocks1"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3128,10 +3868,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3158,10 +3904,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3169,9 +3921,35 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {},
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
+                "ai_paused": false,
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "yellow",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "yellow_infantry"
             }
         },
@@ -3186,14 +3964,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3220,10 +4007,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3250,10 +4043,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -3284,6 +4083,9 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow_river1"
             },
             "terrain": {
@@ -3306,14 +4108,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_log"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow3"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -3340,10 +4151,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow_dirt_road1"
             },
             "terrain": {
@@ -3370,10 +4187,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_snow_river2"
             },
             "terrain": {
@@ -3400,10 +4223,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river1"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_snow_river1"
             },
             "terrain": {
@@ -3430,10 +4259,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_snow_river1"
             },
             "terrain": {
@@ -3456,14 +4291,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3490,10 +4334,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3520,10 +4370,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -3550,10 +4406,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3576,14 +4438,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3610,10 +4481,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3636,14 +4513,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower6"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3666,14 +4552,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_rocks2"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3696,14 +4591,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_snow2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -3730,10 +4634,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river3"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow_river2"
             },
             "terrain": {
@@ -3760,10 +4670,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_snow_river1"
             },
             "terrain": {
@@ -3794,10 +4710,16 @@
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_snow_river1"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "city_bridge_wood"
             },
             "unit": {
@@ -3820,10 +4742,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow_river4"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_snow_river2"
             },
             "terrain": {
@@ -3846,14 +4774,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_rocks2"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -3880,10 +4817,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_snow2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -3910,10 +4853,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3936,14 +4885,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower7"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3970,10 +4928,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -3996,14 +4960,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4026,14 +4999,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4047,9 +5029,14 @@
         },
         "21_23": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "yellow",
+                "tags": {
+
+                },
                 "tile": "feudal_tower"
             },
             "damage": {
@@ -4066,6 +5053,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4088,14 +5078,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_log"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4122,14 +5121,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_trees5"
             },
             "unit": {
@@ -4152,14 +5160,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_trees5"
             },
             "unit": {
@@ -4182,14 +5199,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_trees4"
             },
             "unit": {
@@ -4205,6 +5231,9 @@
                 },
                 "rotation": 0,
                 "side": "neutral",
+                "tags": {
+
+                },
                 "tile": "steampunk_barracks"
             },
             "damage": {
@@ -4217,10 +5246,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -4251,6 +5286,9 @@
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_snow_dirt_road3"
             },
             "terrain": {
@@ -4273,14 +5311,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_rocks1"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_snow3"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -4307,10 +5354,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -4337,10 +5390,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4363,14 +5422,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4397,10 +5465,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -4427,10 +5501,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4457,10 +5537,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4483,14 +5569,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_flower7"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4513,14 +5608,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4547,14 +5651,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks2"
             },
             "unit": {
@@ -4577,14 +5690,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks3"
             },
             "unit": {
@@ -4607,14 +5729,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks1"
             },
             "unit": {
@@ -4641,10 +5772,16 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_trees4"
             },
             "unit": {
@@ -4654,9 +5791,14 @@
         },
         "22_29": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 270,
                 "side": "neutral",
+                "tags": {
+
+                },
                 "tile": "steampunk_tower"
             },
             "damage": {
@@ -4669,10 +5811,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
@@ -4699,10 +5847,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4723,6 +5877,9 @@
                 },
                 "rotation": 0,
                 "side": "yellow",
+                "tags": {
+
+                },
                 "tile": "feudal_hq"
             },
             "damage": {
@@ -4735,10 +5892,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -4765,10 +5928,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -4795,10 +5964,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4821,14 +5996,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_flower6"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4855,10 +6039,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tile": "frame_grass4"
+                "tags": {
+
+                },
+                "tile": "frame_grass5"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4885,14 +6075,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks3"
             },
             "unit": {
@@ -4915,14 +6114,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks1"
             },
             "unit": {
@@ -4945,14 +6153,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks1"
             },
             "unit": {
@@ -4975,10 +6192,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5001,14 +6224,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5016,9 +6248,35 @@
                 "tile": null
             },
             "unit": {
-                "modifiers": {},
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
+                "ai_paused": false,
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "yellow",
+                "stats": {
+                    "armor": 2,
+                    "attack": 10,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 6,
+                    "move": 6
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "yellow_tank"
             }
         },
@@ -5037,10 +6295,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5063,14 +6327,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_rocks2"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5093,14 +6366,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_stumps3"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5123,14 +6405,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_rocks1"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5157,14 +6448,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks2"
             },
             "unit": {
@@ -5187,14 +6487,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks2"
             },
             "unit": {
@@ -5217,10 +6526,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5243,14 +6558,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower7"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5277,10 +6601,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5303,14 +6633,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_log"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5337,14 +6676,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks3"
             },
             "unit": {
@@ -5367,14 +6715,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks1"
             },
             "unit": {
@@ -5393,14 +6750,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5423,14 +6789,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_rocks2"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5457,14 +6832,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks3"
             },
             "unit": {
@@ -5487,14 +6871,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_snow4"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_snow"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_big_rocks1"
             },
             "unit": {

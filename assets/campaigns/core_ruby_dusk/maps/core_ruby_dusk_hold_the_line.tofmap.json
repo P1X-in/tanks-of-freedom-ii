@@ -1,9 +1,13 @@
 {
     "metadata": {
+        "base_code": null,
+        "editor_version": "0.3.0",
         "initial_cam_pos": [
             33,
             15
         ],
+        "iteration": 0,
+        "name": "core_ruby_dusk_hold_the_line",
         "track": "soundtrack_4"
     },
     "scripts": {
@@ -2041,7 +2045,7 @@
                 "tags": {
 
                 },
-                "tile": "frame_snow3"
+                "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 0,
@@ -2051,8 +2055,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -2222,8 +2229,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 0,
@@ -2624,8 +2634,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_stumps2"
             },
             "frame": {
                 "rotation": 270,
@@ -3432,11 +3445,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 270,
-                "tags": {
-
-                },
-                "tile": "frame_snow_river2"
+                "rotation": 0,
+                "tile": null
             },
             "ground": {
                 "rotation": 180,
@@ -3446,8 +3456,11 @@
                 "tile": "ground_snow_road_transition"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "fence_wall_gate"
             },
             "unit": {
                 "rotation": 0,
@@ -3640,8 +3653,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_stumps3"
             },
             "frame": {
                 "rotation": 0,
@@ -5035,8 +5051,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "fence_wall_straight2"
             },
             "unit": {
                 "rotation": 0,
@@ -8074,7 +8093,10 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 180,
@@ -9829,8 +9851,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 0,
@@ -10955,8 +10980,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "deco_stumps3"
             },
             "frame": {
                 "rotation": 90,
@@ -11937,7 +11965,10 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_stumps1"
             },
             "frame": {
                 "rotation": 90,
@@ -13082,7 +13113,10 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_stumps2"
             },
             "frame": {
                 "rotation": 0,
@@ -17051,8 +17085,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "deco_stumps2"
             },
             "frame": {
                 "rotation": 180,
@@ -17715,8 +17752,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 180,
@@ -19037,11 +19077,11 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
+                "rotation": 90,
                 "tags": {
 
                 },
-                "tile": "frame_snow4"
+                "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 0,
@@ -19051,8 +19091,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -19219,8 +19262,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 0,
@@ -22091,8 +22137,11 @@
                 "tile": "ground_snow_dirt_road1"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "fence_wall_gate"
             },
             "unit": {
                 "rotation": 0,
@@ -22282,8 +22331,11 @@
                 "tile": "ground_snow_dirt_road1"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "fence_wall_gate"
             },
             "unit": {
                 "rotation": 0,
@@ -22318,8 +22370,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "fence_wall_straight2"
             },
             "unit": {
                 "rotation": 0,
@@ -22354,8 +22409,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "fence_wall_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -23592,7 +23650,10 @@
             },
             "terrain": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "fence_wall_corner"
             },
             "unit": {
                 "rotation": 0,
@@ -23627,8 +23688,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "fence_wall_straight2"
             },
             "unit": {
                 "rotation": 0,
@@ -23663,8 +23727,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "fence_wall_straight2"
             },
             "unit": {
                 "rotation": 0,
@@ -24191,8 +24258,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "deco_stumps2"
             },
             "frame": {
                 "rotation": 0,
@@ -24830,8 +24900,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_stumps2"
             },
             "frame": {
                 "rotation": 90,
@@ -32580,7 +32653,10 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 0,
@@ -35242,8 +35318,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 90,
@@ -35733,8 +35812,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "deco_stumps3"
             },
             "frame": {
                 "rotation": 0,
@@ -35852,7 +35934,7 @@
                 "tags": {
 
                 },
-                "tile": "frame_snow3"
+                "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 0,
@@ -35862,8 +35944,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -35920,7 +36005,10 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_stumps1"
             },
             "frame": {
                 "rotation": 270,
@@ -37222,8 +37310,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "deco_stumps3"
             },
             "frame": {
                 "rotation": 0,
@@ -37480,8 +37571,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_stumps3"
             },
             "frame": {
                 "rotation": 270,
@@ -39585,8 +39679,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_stumps1"
             },
             "frame": {
                 "rotation": 0,
@@ -44147,8 +44244,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_log"
             },
             "frame": {
                 "rotation": 0,
@@ -44955,8 +45055,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_stumps1"
             },
             "frame": {
                 "rotation": 90,
@@ -45785,11 +45888,8 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 270,
-                "tags": {
-
-                },
-                "tile": "deco_log"
+                "rotation": 0,
+                "tile": null
             },
             "frame": {
                 "rotation": 0,
@@ -47004,8 +47104,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_stumps1"
             },
             "frame": {
                 "rotation": 270,
@@ -49813,8 +49916,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 0,
@@ -50506,8 +50612,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_stumps2"
             },
             "frame": {
                 "rotation": 180,
@@ -52901,11 +53010,11 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 270,
+                "rotation": 0,
                 "tags": {
 
                 },
-                "tile": "frame_snow3"
+                "tile": "frame_snow_river4"
             },
             "ground": {
                 "rotation": 0,
@@ -52916,7 +53025,10 @@
             },
             "terrain": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_rail_turn"
             },
             "unit": {
                 "rotation": 0,
@@ -52941,7 +53053,7 @@
                 "tags": {
 
                 },
-                "tile": "frame_snow4"
+                "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 0,
@@ -52951,8 +53063,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -52977,7 +53092,7 @@
                 "tags": {
 
                 },
-                "tile": "frame_snow4"
+                "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 0,
@@ -52987,8 +53102,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -53009,11 +53127,11 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 90,
+                "rotation": 180,
                 "tags": {
 
                 },
-                "tile": "frame_snow2"
+                "tile": "frame_snow_river4"
             },
             "ground": {
                 "rotation": 0,
@@ -53023,8 +53141,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_rail_turn"
             },
             "unit": {
                 "rotation": 0,
@@ -53488,7 +53609,7 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 270,
+                "rotation": 180,
                 "tags": {
 
                 },
@@ -54427,7 +54548,7 @@
                 "tags": {
 
                 },
-                "tile": "frame_snow3"
+                "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 0,
@@ -54437,8 +54558,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -55920,10 +56044,7 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {
-
-                },
-                "tile": "frame_snow_river2"
+                "tile": null
             },
             "ground": {
                 "rotation": 0,
@@ -55933,8 +56054,11 @@
                 "tile": "ground_snow_road1"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -56596,8 +56720,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_stumps3"
             },
             "frame": {
                 "rotation": 0,
@@ -56938,7 +57065,7 @@
                 "tags": {
 
                 },
-                "tile": "frame_snow4"
+                "tile": "frame_snow_river4"
             },
             "ground": {
                 "rotation": 0,
@@ -56949,7 +57076,10 @@
             },
             "terrain": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_rail_turn"
             },
             "unit": {
                 "rotation": 0,
@@ -57345,11 +57475,11 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 270,
+                "rotation": 0,
                 "tags": {
 
                 },
-                "tile": "frame_snow2"
+                "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 0,
@@ -57359,8 +57489,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -57381,11 +57514,8 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 90,
-                "tags": {
-
-                },
-                "tile": "frame_snow_river1"
+                "rotation": 0,
+                "tile": null
             },
             "ground": {
                 "rotation": 270,
@@ -57396,7 +57526,10 @@
             },
             "terrain": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -57417,11 +57550,11 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
+                "rotation": 180,
                 "tags": {
 
                 },
-                "tile": "frame_snow4"
+                "tile": "frame_snow_river4"
             },
             "ground": {
                 "rotation": 0,
@@ -57431,8 +57564,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_rail_turn"
             },
             "unit": {
                 "rotation": 0,
@@ -57761,7 +57897,7 @@
                 "tags": {
 
                 },
-                "tile": "ground_snow_road_transition4"
+                "tile": "ground_snow_dirt_road3"
             },
             "terrain": {
                 "rotation": 0,
@@ -58461,8 +58597,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -58746,7 +58885,10 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_stumps4"
             },
             "frame": {
                 "rotation": 90,
@@ -58902,7 +59044,7 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
+                "rotation": 90,
                 "tags": {
 
                 },
@@ -59007,7 +59149,10 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_stumps3"
             },
             "frame": {
                 "rotation": 0,
@@ -59089,7 +59234,7 @@
                 "tags": {
 
                 },
-                "tile": "frame_snow4"
+                "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 0,
@@ -59099,8 +59244,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -59121,11 +59269,11 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 180,
+                "rotation": 0,
                 "tags": {
 
                 },
-                "tile": "frame_snow2"
+                "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 0,
@@ -59135,8 +59283,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -59566,7 +59717,7 @@
                 "tags": {
 
                 },
-                "tile": "frame_snow4"
+                "tile": "frame_snow_river2"
             },
             "ground": {
                 "rotation": 0,
@@ -59576,8 +59727,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_rail_straight"
             },
             "unit": {
                 "rotation": 0,
@@ -59709,8 +59863,11 @@
                 "tile": null
             },
             "decoration": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "deco_stumps1"
             },
             "frame": {
                 "rotation": 180,
@@ -59983,11 +60140,11 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 270,
+                "rotation": 180,
                 "tags": {
 
                 },
-                "tile": "frame_snow3"
+                "tile": "frame_snow_river4"
             },
             "ground": {
                 "rotation": 0,
@@ -59997,8 +60154,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 180,
+                "tags": {
+
+                },
+                "tile": "deco_rail_turn"
             },
             "unit": {
                 "rotation": 0,
@@ -60433,7 +60593,7 @@
                 "tile": null
             },
             "frame": {
-                "rotation": 0,
+                "rotation": 90,
                 "tags": {
 
                 },
@@ -60483,8 +60643,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 90,
+                "tags": {
+
+                },
+                "tile": "fence_wall_corner"
             },
             "unit": {
                 "rotation": 0,
@@ -60519,8 +60682,11 @@
                 "tile": "ground_snow"
             },
             "terrain": {
-                "rotation": 0,
-                "tile": null
+                "rotation": 270,
+                "tags": {
+
+                },
+                "tile": "fence_wall_straight2"
             },
             "unit": {
                 "rotation": 0,
@@ -61766,7 +61932,10 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "deco_stumps3"
             },
             "frame": {
                 "rotation": 90,
@@ -62009,7 +62178,10 @@
             },
             "terrain": {
                 "rotation": 0,
-                "tile": null
+                "tags": {
+
+                },
+                "tile": "fence_wall_straight2"
             },
             "unit": {
                 "rotation": 0,
