@@ -1,9 +1,13 @@
 {
     "metadata": {
+        "base_code": null,
+        "editor_version": "0.3.0",
         "initial_cam_pos": [
             20,
             33
         ],
+        "iteration": 0,
+        "name": "core_sap_dawn_lucrative_offer",
         "skip_initial_hq_cam": true,
         "track": "soundtrack_3"
     },
@@ -321,6 +325,81 @@
                     "action": "unlock"
                 }
             ],
+            "cap_resources": [
+                {
+                    "action": "ap",
+                    "details": {
+                        "amount": 55,
+                        "set": true,
+                        "side": "blue"
+                    }
+                }
+            ],
+            "cyrus_defeated": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "right",
+                        "text": "tr_core_sapphire_dawn_m1_t40"
+                    }
+                },
+                {
+                    "action": "unlock"
+                },
+                {
+                    "action": "end_game",
+                    "details": {
+                        "winner": "red"
+                    }
+                }
+            ],
+            "hq_claimed": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "camera",
+                    "details": {
+                        "where": [
+                            4,
+                            10
+                        ],
+                        "zoom": 0.2
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_ACT_SERGEANT",
+                        "portrait": "blue_infantry",
+                        "side": "left",
+                        "text": "tr_core_sapphire_dawn_m1_t38"
+                    }
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_GEN_CYRUS",
+                        "portrait": "hero_general",
+                        "side": "right",
+                        "text": "tr_core_sapphire_dawn_m1_t39"
+                    }
+                },
+                {
+                    "action": "unlock"
+                },
+                {
+                    "action": "end_game",
+                    "details": {
+                        "winner": "blue"
+                    }
+                }
+            ],
             "infantry_recruited": [
                 {
                     "action": "lock"
@@ -356,11 +435,11 @@
                     "action": "ban_unit",
                     "details": {
                         "ability_id": 0,
+                        "ban": false,
                         "where": [
                             21,
                             23
-                        ],
-                        "ban": false
+                        ]
                     }
                 },
                 {
@@ -418,11 +497,11 @@
                     "action": "ban_unit",
                     "details": {
                         "ability_id": 2,
+                        "ban": false,
                         "where": [
                             23,
                             20
-                        ],
-                        "ban": false
+                        ]
                     }
                 },
                 {
@@ -497,41 +576,41 @@
                 {
                     "action": "terrain_remove",
                     "details": {
+                        "type": "terrain",
                         "where": [
                             17,
                             19
-                        ],
-                        "type": "terrain"
+                        ]
                     }
                 },
                 {
                     "action": "terrain_remove",
                     "details": {
+                        "type": "terrain",
                         "where": [
                             19,
                             19
-                        ],
-                        "type": "terrain"
+                        ]
                     }
                 },
                 {
                     "action": "terrain_remove",
                     "details": {
+                        "type": "terrain",
                         "where": [
                             18,
                             18
-                        ],
-                        "type": "terrain"
+                        ]
                     }
                 },
                 {
                     "action": "terrain_remove",
                     "details": {
+                        "type": "terrain",
                         "where": [
                             18,
                             20
-                        ],
-                        "type": "terrain"
+                        ]
                     }
                 },
                 {
@@ -738,71 +817,6 @@
                     "action": "unlock"
                 }
             ],
-            "hq_claimed": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "camera",
-                    "details": {
-                        "where": [
-                            4,
-                            10
-                        ],
-                        "zoom": 0.2
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_ACT_SERGEANT",
-                        "portrait": "blue_infantry",
-                        "side": "left",
-                        "text": "tr_core_sapphire_dawn_m1_t38"
-                    }
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "right",
-                        "text": "tr_core_sapphire_dawn_m1_t39"
-                    }
-                },
-                {
-                    "action": "unlock"
-                },
-                {
-                    "action": "end_game",
-                    "details": {
-                        "winner": "blue"
-                    }
-                }
-            ],
-            "cyrus_defeated": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_GEN_CYRUS",
-                        "portrait": "hero_general",
-                        "side": "right",
-                        "text": "tr_core_sapphire_dawn_m1_t40"
-                    }
-                },
-                {
-                    "action": "unlock"
-                },
-                {
-                    "action": "end_game",
-                    "details": {
-                        "winner": "red"
-                    }
-                }
-            ],
             "wipe_resources": [
                 {
                     "action": "ap",
@@ -810,16 +824,6 @@
                         "amount": 0,
                         "set": true,
                         "side": "red"
-                    }
-                }
-            ],
-            "cap_resources": [
-                {
-                    "action": "ap",
-                    "details": {
-                        "amount": 55,
-                        "set": true,
-                        "side": "blue"
                     }
                 }
             ]
@@ -834,18 +838,18 @@
                 "story": "01_task",
                 "type": "turn"
             },
-            "01_phase_one_wipe": {
-                "details": {
-                    "player": 1
-                },
-                "story": "wipe_resources",
-                "type": "turn"
-            },
             "01_phase_one_cap_resources": {
                 "details": {
                     "player": 0
                 },
                 "story": "cap_resources",
+                "type": "turn"
+            },
+            "01_phase_one_wipe": {
+                "details": {
+                    "player": 1
+                },
+                "story": "wipe_resources",
                 "type": "turn"
             },
             "02_second_turn": {
@@ -857,38 +861,18 @@
                 "story": "02_ability",
                 "type": "turn"
             },
-            "infantry_recruited": {
-                "type": "deploy",
-                "story": "infantry_recruited",
+            "cyrus_defeated": {
                 "details": {
-                    "amount": 5,
-                    "player_side": "blue",
-                    "type": "blue_infantry"
+                    "vip": [
+                        20,
+                        33
+                    ]
                 },
-                "one_off": true
-            },
-            "mobile_infantry_recruited": {
-                "type": "deploy",
-                "story": "mobile_infantry_recruited",
-                "details": {
-                    "amount": 3,
-                    "player_side": "blue",
-                    "type": "blue_m_inf"
-                },
-                "one_off": true
-            },
-            "tanks_recruited": {
-                "type": "deploy",
-                "story": "tanks_recruited",
-                "details": {
-                    "amount": 2,
-                    "player_side": "blue",
-                    "type": "blue_tank"
-                },
-                "one_off": true
+                "one_off": true,
+                "story": "cyrus_defeated",
+                "type": "assasination"
             },
             "hq_captured": {
-                "type": "claim",
                 "details": {
                     "amount": 1,
                     "list": [
@@ -900,18 +884,38 @@
                     "player_side": "blue"
                 },
                 "one_off": true,
-                "story": "hq_claimed"
+                "story": "hq_claimed",
+                "type": "claim"
             },
-            "cyrus_defeated": {
+            "infantry_recruited": {
                 "details": {
-                    "vip": [
-                        20,
-                        33
-                    ]
+                    "amount": 5,
+                    "player_side": "blue",
+                    "type": "blue_infantry"
                 },
                 "one_off": true,
-                "story": "cyrus_defeated",
-                "type": "assasination"
+                "story": "infantry_recruited",
+                "type": "deploy"
+            },
+            "mobile_infantry_recruited": {
+                "details": {
+                    "amount": 3,
+                    "player_side": "blue",
+                    "type": "blue_m_inf"
+                },
+                "one_off": true,
+                "story": "mobile_infantry_recruited",
+                "type": "deploy"
+            },
+            "tanks_recruited": {
+                "details": {
+                    "amount": 2,
+                    "player_side": "blue",
+                    "type": "blue_tank"
+                },
+                "one_off": true,
+                "story": "tanks_recruited",
+                "type": "deploy"
             }
         }
     },
@@ -927,14 +931,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -961,10 +974,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -991,10 +1010,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1025,10 +1050,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "city_building_small2"
             },
             "unit": {
@@ -1055,10 +1086,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "city_building_small3"
             },
             "unit": {
@@ -1081,10 +1118,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1111,10 +1154,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1141,10 +1190,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1167,14 +1222,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1205,6 +1269,9 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -1235,6 +1302,9 @@
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -1261,14 +1331,23 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_trees3"
             },
             "unit": {
@@ -1291,10 +1370,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1317,14 +1402,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1351,10 +1445,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1381,10 +1481,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1411,10 +1517,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1445,6 +1557,9 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -1475,6 +1590,9 @@
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -1501,14 +1619,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_trees11"
             },
             "unit": {
@@ -1531,14 +1658,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_trees1"
             },
             "unit": {
@@ -1557,14 +1693,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_log"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1591,10 +1736,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1621,10 +1772,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1651,10 +1808,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1677,14 +1840,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1711,10 +1883,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1745,6 +1923,9 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -1775,11 +1956,17 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tile": "city_building_small1"
+                "tags": {
+
+                },
+                "tile": "city_farm1"
             },
             "unit": {
                 "rotation": 0,
@@ -1801,14 +1988,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_trees1"
             },
             "unit": {
@@ -1831,14 +2027,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_trees11"
             },
             "unit": {
@@ -1861,10 +2066,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1884,6 +2095,9 @@
                 },
                 "rotation": 0,
                 "side": "red",
+                "tags": {
+
+                },
                 "tile": "feudal_barracks"
             },
             "damage": {
@@ -1896,10 +2110,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1926,10 +2146,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road3"
             },
             "terrain": {
@@ -1937,10 +2163,35 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "red_infantry"
             }
         },
@@ -1959,10 +2210,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1989,10 +2246,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_road2"
             },
             "terrain": {
@@ -2000,10 +2263,35 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "red",
+                "stats": {
+                    "armor": 2,
+                    "attack": 10,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 6,
+                    "move": 6
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "red_tank"
             }
         },
@@ -2022,10 +2310,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2048,14 +2342,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2082,10 +2385,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_wheat"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2112,14 +2421,23 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_trees10"
             },
             "unit": {
@@ -2142,14 +2460,23 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_trees3"
             },
             "unit": {
@@ -2172,10 +2499,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2198,6 +2531,9 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower6"
             },
             "frame": {
@@ -2206,6 +2542,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2228,14 +2567,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2262,10 +2610,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2292,10 +2646,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -2318,14 +2678,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2352,10 +2721,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2378,14 +2753,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_log"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2412,14 +2796,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_trees3"
             },
             "unit": {
@@ -2442,14 +2835,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_trees10"
             },
             "unit": {
@@ -2472,14 +2874,23 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_trees10"
             },
             "unit": {
@@ -2498,14 +2909,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_rocks2"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2532,10 +2952,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2558,14 +2984,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2579,9 +3014,14 @@
         },
         "16_15": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "red",
+                "tags": {
+
+                },
                 "tile": "feudal_tower"
             },
             "damage": {
@@ -2594,10 +3034,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2624,10 +3070,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road3"
             },
             "terrain": {
@@ -2635,10 +3087,35 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "red_infantry"
             }
         },
@@ -2657,10 +3134,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -2687,10 +3170,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -2717,10 +3206,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_road2"
             },
             "terrain": {
@@ -2747,14 +3242,23 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_trees11"
             },
             "unit": {
@@ -2777,14 +3281,23 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_trees3"
             },
             "unit": {
@@ -2807,14 +3320,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -2837,14 +3359,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -2871,6 +3402,9 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_sand_river1"
             },
             "terrain": {
@@ -2897,10 +3431,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -2927,10 +3467,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -2957,10 +3503,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_river2"
             },
             "terrain": {
@@ -2983,14 +3535,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3017,10 +3578,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3047,10 +3614,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3073,14 +3646,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3111,10 +3693,16 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "city_roadblock"
             },
             "unit": {
@@ -3137,14 +3725,23 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_trees1"
             },
             "unit": {
@@ -3167,14 +3764,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -3201,6 +3807,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_river2"
             },
             "terrain": {
@@ -3231,6 +3840,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_river1"
             },
             "terrain": {
@@ -3261,6 +3873,9 @@
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_sand_river2"
             },
             "terrain": {
@@ -3287,10 +3902,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -3317,14 +3938,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_trees1"
             },
             "unit": {
@@ -3347,10 +3977,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_river2"
             },
             "terrain": {
@@ -3377,10 +4013,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -3407,10 +4049,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -3437,10 +4085,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -3471,10 +4125,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "city_roadblock"
             },
             "unit": {
@@ -3501,10 +4161,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_river1"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "city_bridge"
             },
             "unit": {
@@ -3531,10 +4197,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_river1"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "city_roadblock"
             },
             "unit": {
@@ -3561,6 +4233,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_river1"
             },
             "terrain": {
@@ -3591,6 +4266,9 @@
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_sand_river2"
             },
             "terrain": {
@@ -3617,10 +4295,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -3647,10 +4331,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -3677,10 +4367,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -3707,10 +4403,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -3737,10 +4439,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -3767,14 +4475,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_trees3"
             },
             "unit": {
@@ -3797,14 +4514,23 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_trees1"
             },
             "unit": {
@@ -3827,14 +4553,23 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_trees11"
             },
             "unit": {
@@ -3853,14 +4588,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3887,10 +4631,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3921,10 +4671,16 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "city_roadblock"
             },
             "unit": {
@@ -3947,10 +4703,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -3977,10 +4739,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4007,10 +4775,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4037,10 +4811,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4067,10 +4847,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4084,9 +4870,14 @@
         },
         "19_25": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "blue",
+                "tags": {
+
+                },
                 "tile": "modern_tower"
             },
             "damage": {
@@ -4099,10 +4890,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -4129,10 +4926,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4159,10 +4962,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4189,10 +4998,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4219,10 +5034,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4249,10 +5070,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4279,14 +5106,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_sand_cacti1"
             },
             "unit": {
@@ -4309,10 +5145,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4339,14 +5181,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_trees10"
             },
             "unit": {
@@ -4369,14 +5220,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_trees3"
             },
             "unit": {
@@ -4399,14 +5259,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -4433,6 +5302,9 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -4440,10 +5312,35 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "blue",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "blue_infantry"
             }
         },
@@ -4462,10 +5359,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4492,10 +5395,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4522,10 +5431,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4552,10 +5467,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4582,10 +5503,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4616,6 +5543,9 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road3"
             },
             "terrain": {
@@ -4646,6 +5576,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -4676,6 +5609,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -4706,6 +5642,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -4736,6 +5675,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -4766,6 +5708,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -4796,6 +5741,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -4826,6 +5774,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -4856,6 +5807,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -4863,10 +5817,36 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
-                "modifiers": {},
+                "disable_active_abilities": false,
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "blue",
+                "stats": {
+                    "armor": 2,
+                    "attack": 9,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 20,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 20,
+                    "max_move": 5,
+                    "move": 5
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "hero_general"
             }
         },
@@ -4885,14 +5865,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -4915,10 +5904,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4949,6 +5944,9 @@
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -4975,10 +5973,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5005,10 +6009,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5035,10 +6045,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5058,6 +6074,9 @@
                 },
                 "rotation": 90,
                 "side": "blue",
+                "tags": {
+
+                },
                 "tile": "modern_barracks"
             },
             "damage": {
@@ -5070,10 +6089,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -5104,6 +6129,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road2"
             },
             "terrain": {
@@ -5134,6 +6162,9 @@
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road2"
             },
             "terrain": {
@@ -5160,10 +6191,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5190,10 +6227,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5220,10 +6263,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5250,14 +6299,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_cacti2"
             },
             "unit": {
@@ -5280,10 +6338,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5310,10 +6374,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5340,10 +6410,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5370,10 +6446,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5387,9 +6469,14 @@
         },
         "22_18": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "blue",
+                "tags": {
+
+                },
                 "tile": "modern_tower"
             },
             "damage": {
@@ -5402,10 +6489,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -5436,6 +6529,9 @@
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road3"
             },
             "terrain": {
@@ -5466,6 +6562,9 @@
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -5496,6 +6595,9 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road3"
             },
             "terrain": {
@@ -5526,6 +6628,9 @@
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road1"
             },
             "terrain": {
@@ -5556,6 +6661,9 @@
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road3"
             },
             "terrain": {
@@ -5563,10 +6671,35 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "blue",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "blue_infantry"
             }
         },
@@ -5589,6 +6722,9 @@
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road2"
             },
             "terrain": {
@@ -5615,10 +6751,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5645,10 +6787,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5675,10 +6823,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5709,10 +6863,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_dunes4"
             },
             "unit": {
@@ -5735,10 +6895,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5765,10 +6931,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5795,10 +6967,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5818,6 +6996,9 @@
                 },
                 "rotation": 0,
                 "side": "blue",
+                "tags": {
+
+                },
                 "tile": "modern_factory"
             },
             "damage": {
@@ -5830,10 +7011,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -5864,6 +7051,9 @@
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road4"
             },
             "terrain": {
@@ -5890,10 +7080,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -5920,10 +7116,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5950,10 +7152,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -5980,10 +7188,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6010,14 +7224,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_cacti1"
             },
             "unit": {
@@ -6044,10 +7267,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_dunes4"
             },
             "unit": {
@@ -6070,10 +7299,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6100,10 +7335,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6130,10 +7371,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6160,10 +7407,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -6171,10 +7424,35 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "blue",
+                "stats": {
+                    "armor": 2,
+                    "attack": 10,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 6,
+                    "move": 6
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "blue_tank"
             }
         },
@@ -6197,6 +7475,9 @@
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road4"
             },
             "terrain": {
@@ -6223,10 +7504,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -6253,10 +7540,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6283,10 +7576,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6313,14 +7612,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_cacti2"
             },
             "unit": {
@@ -6347,10 +7655,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_dunes4"
             },
             "unit": {
@@ -6373,10 +7687,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6403,10 +7723,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6433,10 +7759,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6463,10 +7795,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -6497,6 +7835,9 @@
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road4"
             },
             "terrain": {
@@ -6523,10 +7864,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -6553,10 +7900,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6583,10 +7936,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6613,14 +7972,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_cacti3"
             },
             "unit": {
@@ -6647,10 +8015,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_dunes4"
             },
             "unit": {
@@ -6677,10 +8051,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_dunes4"
             },
             "unit": {
@@ -6703,10 +8083,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6733,10 +8119,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6763,10 +8155,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -6797,6 +8195,9 @@
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road4"
             },
             "terrain": {
@@ -6823,10 +8224,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -6853,10 +8260,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6883,10 +8296,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -6913,14 +8332,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -6947,10 +8375,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_dunes4"
             },
             "unit": {
@@ -6977,10 +8411,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_dunes4"
             },
             "unit": {
@@ -7003,10 +8443,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -7033,10 +8479,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -7067,6 +8519,9 @@
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_sand_road4"
             },
             "terrain": {
@@ -7093,10 +8548,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -7104,10 +8565,39 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability1": [
+                        false,
+                        0
+                    ],
+                    "ability3": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 180,
                 "side": "blue",
+                "stats": {
+                    "armor": 0,
+                    "attack": 5,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 6,
+                    "move": 6
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "blue_m_inf"
             }
         },
@@ -7126,10 +8616,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -7156,10 +8652,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -7190,10 +8692,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_dunes4"
             },
             "unit": {
@@ -7216,10 +8724,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -7246,10 +8760,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -7263,9 +8783,14 @@
         },
         "28_21": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 270,
                 "side": "blue",
+                "tags": {
+
+                },
                 "tile": "modern_tower"
             },
             "damage": {
@@ -7278,10 +8803,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_fence"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_concrete"
             },
             "terrain": {
@@ -7308,10 +8839,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -7338,10 +8875,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -7372,10 +8915,16 @@
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_sand_dunes4"
             },
             "unit": {
@@ -7398,10 +8947,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -7428,10 +8983,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -7458,10 +9019,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -7488,14 +9055,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_trees3"
             },
             "unit": {
@@ -7518,14 +9094,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_trees10"
             },
             "unit": {
@@ -7544,14 +9129,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower7"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7578,14 +9172,23 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_trees1"
             },
             "unit": {
@@ -7604,14 +9207,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_log"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7634,14 +9246,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7668,10 +9289,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7694,14 +9321,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7728,10 +9364,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7758,14 +9400,23 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_trees1"
             },
             "unit": {
@@ -7788,14 +9439,23 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_trees11"
             },
             "unit": {
@@ -7812,6 +9472,9 @@
                 },
                 "rotation": 90,
                 "side": "red",
+                "tags": {
+
+                },
                 "tile": "feudal_hq"
             },
             "damage": {
@@ -7824,10 +9487,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7854,10 +9523,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7880,14 +9555,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7914,10 +9598,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7940,14 +9630,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_rocks2"
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7974,14 +9673,23 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "nature_trees3"
             },
             "unit": {
@@ -8000,14 +9708,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8030,14 +9747,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8064,10 +9790,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road3"
             },
             "terrain": {
@@ -8075,10 +9807,35 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "red",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "red_infantry"
             }
         },
@@ -8097,10 +9854,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -8127,10 +9890,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -8157,10 +9926,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_road2"
             },
             "terrain": {
@@ -8187,10 +9962,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8217,14 +9998,23 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "nature_trees10"
             },
             "unit": {
@@ -8247,10 +10037,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -8258,10 +10054,35 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "red",
+                "stats": {
+                    "armor": 2,
+                    "attack": 10,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 6,
+                    "move": 6
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "red_tank"
             }
         },
@@ -8280,10 +10101,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -8310,10 +10137,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -8340,10 +10173,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8366,14 +10205,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8400,10 +10248,16 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8430,10 +10284,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -8447,9 +10307,14 @@
         },
         "6_14": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "red",
+                "tags": {
+
+                },
                 "tile": "feudal_tower"
             },
             "damage": {
@@ -8462,10 +10327,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8488,14 +10359,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8522,14 +10402,23 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_trees1"
             },
             "unit": {
@@ -8552,10 +10441,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8578,14 +10473,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8608,14 +10512,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_rocks1"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8642,10 +10555,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8668,14 +10587,23 @@
             },
             "decoration": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8702,10 +10630,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_road2"
             },
             "terrain": {
@@ -8732,10 +10666,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "ground_road3"
             },
             "terrain": {
@@ -8743,10 +10683,35 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "red",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "tags": {
+
+                },
+                "team": null,
                 "tile": "red_infantry"
             }
         },
@@ -8761,14 +10726,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8795,14 +10769,23 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_trees11"
             },
             "unit": {
@@ -8825,10 +10808,16 @@
             },
             "frame": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8851,14 +10840,23 @@
             },
             "decoration": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8885,10 +10883,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -8911,14 +10915,23 @@
             },
             "decoration": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "deco_log"
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8945,14 +10958,23 @@
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
+                "tags": {
+
+                },
                 "tile": "nature_trees10"
             },
             "unit": {
@@ -8975,10 +10997,16 @@
             },
             "frame": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -9005,10 +11033,16 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -9031,14 +11065,23 @@
             },
             "decoration": {
                 "rotation": 90,
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -9065,14 +11108,23 @@
             },
             "frame": {
                 "rotation": 270,
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
+                "tags": {
+
+                },
                 "tile": "nature_trees3"
             },
             "unit": {
