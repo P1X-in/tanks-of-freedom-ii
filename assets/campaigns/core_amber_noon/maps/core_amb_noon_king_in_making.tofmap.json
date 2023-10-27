@@ -2,12 +2,12 @@
     "metadata": {
         "base_code": null,
         "editor_version": "0.3.0",
-        "iteration": 0,
-        "name": "core_amb_noon_king_in_making",
         "initial_cam_pos": [
             20,
             20
         ],
+        "iteration": 1,
+        "name": "core_amb_noon_king_in_making",
         "skip_initial_hq_cam": true,
         "track": "soundtrack_5"
     },
@@ -590,6 +590,23 @@
                     "action": "unlock"
                 }
             ],
+            "captain_defeated": [
+                {
+                    "action": "lock"
+                },
+                {
+                    "action": "message",
+                    "details": {
+                        "name": "TR_CAP_CLAUDE",
+                        "portrait": "hero_captain",
+                        "side": "right",
+                        "text": "tr_core_amber_noon_m1_t36"
+                    }
+                },
+                {
+                    "action": "unlock"
+                }
+            ],
             "hq_claimed": [
                 {
                     "action": "lock"
@@ -649,23 +666,6 @@
                     }
                 }
             ],
-            "captain_defeated": [
-                {
-                    "action": "lock"
-                },
-                {
-                    "action": "message",
-                    "details": {
-                        "name": "TR_CAP_CLAUDE",
-                        "portrait": "hero_captain",
-                        "side": "right",
-                        "text": "tr_core_amber_noon_m1_t36"
-                    }
-                },
-                {
-                    "action": "unlock"
-                }
-            ],
             "prince_defeated": [
                 {
                     "action": "lock"
@@ -700,6 +700,17 @@
                 "story": "01_first_turn",
                 "type": "turn"
             },
+            "captain_defeated": {
+                "details": {
+                    "vip": [
+                        18,
+                        20
+                    ]
+                },
+                "one_off": true,
+                "story": "captain_defeated",
+                "type": "assasination"
+            },
             "hq_claimed": {
                 "details": {
                     "amount": 1,
@@ -714,17 +725,6 @@
                 "one_off": true,
                 "story": "hq_claimed",
                 "type": "claim"
-            },
-            "captain_defeated": {
-                "details": {
-                    "vip": [
-                        18,
-                        20
-                    ]
-                },
-                "one_off": true,
-                "story": "captain_defeated",
-                "type": "assasination"
             },
             "prince_defeated": {
                 "details": {
@@ -755,17 +755,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -784,17 +790,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -821,12 +833,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -841,7 +857,9 @@
                     ]
                 },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "green",
                 "stats": {
@@ -857,7 +875,9 @@
                     "max_move": 4,
                     "move": 4
                 },
-                "tags": {},
+                "tags": {
+
+                },
                 "team": null,
                 "tile": "green_infantry"
             }
@@ -877,12 +897,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -909,12 +933,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -929,7 +957,9 @@
                     ]
                 },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "green",
                 "stats": {
@@ -945,7 +975,9 @@
                     "max_move": 4,
                     "move": 4
                 },
-                "tags": {},
+                "tags": {
+
+                },
                 "team": null,
                 "tile": "green_infantry"
             }
@@ -961,17 +993,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -998,17 +1036,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -1031,17 +1075,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -1060,17 +1110,23 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1097,17 +1153,23 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -1130,17 +1192,23 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -1163,17 +1231,23 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -1192,17 +1266,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower8"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1229,17 +1309,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -1262,17 +1348,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -1295,12 +1387,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1327,12 +1423,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -1355,17 +1455,23 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1392,12 +1498,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -1420,17 +1530,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower6"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1457,17 +1573,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -1490,17 +1612,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -1523,17 +1651,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -1560,7 +1694,9 @@
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -1591,7 +1727,9 @@
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -1622,7 +1760,9 @@
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -1653,12 +1793,16 @@
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -1681,17 +1825,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -1714,17 +1864,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -1747,12 +1903,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1779,12 +1939,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -1798,10 +1962,14 @@
         },
         "14_20": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "neutral",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "futuristic_tower"
             },
             "damage": {
@@ -1814,12 +1982,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_laser"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1846,12 +2018,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -1878,12 +2054,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1910,17 +2090,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -1943,17 +2129,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -1976,17 +2168,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -2005,17 +2203,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass5"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2042,12 +2246,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -2070,17 +2278,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2107,12 +2321,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -2139,12 +2357,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2171,17 +2393,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -2204,17 +2432,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -2237,17 +2471,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -2270,17 +2510,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -2303,12 +2549,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2335,12 +2585,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -2367,17 +2621,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -2396,7 +2656,9 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower8"
             },
             "frame": {
@@ -2405,7 +2667,9 @@
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2432,17 +2696,23 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -2465,12 +2735,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -2497,12 +2771,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass5"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2529,17 +2807,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -2562,17 +2846,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -2595,17 +2885,23 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach3"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -2628,17 +2924,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -2657,17 +2959,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower7"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2694,12 +3002,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -2726,12 +3038,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -2754,17 +3070,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower9"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2791,12 +3113,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2819,17 +3145,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2856,12 +3188,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -2888,12 +3224,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -2916,17 +3256,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -2953,17 +3299,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -2986,17 +3338,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -3019,17 +3377,23 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach3"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -3052,12 +3416,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass6"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3080,17 +3448,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3117,12 +3491,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -3149,12 +3527,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -3177,17 +3559,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3210,17 +3598,23 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower10"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3243,17 +3637,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower7"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3269,7 +3669,9 @@
                 },
                 "ai_paused": false,
                 "disable_active_abilities": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 90,
                 "side": "green",
                 "stats": {
@@ -3285,7 +3687,9 @@
                     "max_move": 5,
                     "move": 5
                 },
-                "tags": {},
+                "tags": {
+
+                },
                 "team": null,
                 "tile": "hero_captain"
             }
@@ -3305,12 +3709,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3333,17 +3741,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3370,12 +3784,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -3402,17 +3820,23 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -3431,17 +3855,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower8"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3468,17 +3898,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -3501,17 +3937,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -3534,12 +3976,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -3566,12 +4012,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -3598,12 +4048,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -3630,12 +4084,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -3658,17 +4116,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower6"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3695,17 +4159,23 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -3728,12 +4198,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -3756,17 +4230,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower11"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3793,12 +4273,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -3825,12 +4309,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -3857,12 +4345,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -3889,12 +4381,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -3921,12 +4417,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -3953,12 +4453,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -3985,12 +4489,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -4013,17 +4521,23 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4046,17 +4560,23 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower6"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass5"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4083,17 +4603,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -4116,12 +4642,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4135,10 +4665,14 @@
         },
         "20_11": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 0,
                 "side": "neutral",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "neutral_lighthouse"
             },
             "damage": {
@@ -4151,12 +4685,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4183,12 +4721,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -4215,12 +4757,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -4247,12 +4793,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -4283,12 +4833,16 @@
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -4307,17 +4861,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower12"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4340,17 +4900,23 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower6"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4377,12 +4943,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -4409,17 +4979,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -4429,10 +5005,14 @@
         },
         "20_20": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "neutral",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "futuristic_tower"
             },
             "damage": {
@@ -4445,12 +5025,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4477,17 +5061,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -4510,12 +5100,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -4542,17 +5136,23 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -4579,7 +5179,9 @@
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -4599,7 +5201,9 @@
                 },
                 "rotation": 180,
                 "side": "neutral",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "futuristic_airfield"
             },
             "damage": {
@@ -4612,12 +5216,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_laser"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4644,12 +5252,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4676,17 +5288,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -4709,12 +5327,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4741,12 +5363,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4773,12 +5399,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4805,12 +5435,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
@@ -4837,12 +5471,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4869,17 +5507,23 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -4902,12 +5546,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -4934,12 +5582,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -4966,12 +5618,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -4998,12 +5654,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -5030,12 +5690,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -5051,7 +5715,9 @@
                 },
                 "ai_paused": false,
                 "disable_active_abilities": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 0,
                 "side": "yellow",
                 "stats": {
@@ -5067,7 +5733,9 @@
                     "max_move": 5,
                     "move": 5
                 },
-                "tags": {},
+                "tags": {
+
+                },
                 "team": null,
                 "tile": "hero_prince"
             }
@@ -5087,12 +5755,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -5119,12 +5791,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -5147,17 +5823,23 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5184,12 +5866,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -5212,17 +5898,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower9"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5245,17 +5937,23 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5282,17 +5980,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -5315,17 +6019,23 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach3"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -5348,12 +6058,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass6"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5380,12 +6094,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5412,12 +6130,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -5444,12 +6166,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -5472,17 +6198,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower7"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5505,17 +6237,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5542,12 +6280,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5570,17 +6312,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5607,12 +6355,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5639,12 +6391,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -5671,17 +6427,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -5700,17 +6462,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_log"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5737,17 +6505,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -5770,17 +6544,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -5803,17 +6583,23 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_sand_beach3"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_sand"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -5836,17 +6622,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -5869,12 +6661,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5901,12 +6697,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -5933,12 +6733,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -5965,12 +6769,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -5997,12 +6805,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -6025,17 +6837,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower8"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -6062,12 +6880,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -6094,12 +6916,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -6126,12 +6952,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass6"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -6158,17 +6988,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -6191,17 +7027,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -6224,17 +7066,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -6257,17 +7105,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -6286,17 +7140,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -6323,12 +7183,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -6355,17 +7219,23 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -6384,17 +7254,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower9"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -6421,17 +7297,23 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -6454,12 +7336,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -6482,17 +7368,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower6"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -6519,17 +7411,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -6552,17 +7450,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -6585,17 +7489,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -6618,17 +7528,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -6651,12 +7567,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -6683,12 +7603,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -6711,17 +7635,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -6748,12 +7678,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -6776,17 +7710,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -6813,17 +7753,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -6846,17 +7792,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -6879,17 +7831,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -6908,17 +7866,23 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower7"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass5"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -6945,12 +7909,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -6964,10 +7932,14 @@
         },
         "26_20": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "neutral",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "feudal_tower"
             },
             "damage": {
@@ -6980,12 +7952,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7012,12 +7988,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -7044,12 +8024,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7076,17 +8060,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -7109,17 +8099,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -7142,17 +8138,23 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -7179,7 +8181,9 @@
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -7210,7 +8214,9 @@
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -7241,7 +8247,9 @@
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -7268,17 +8276,23 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -7301,17 +8315,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -7334,17 +8354,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -7363,17 +8389,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7400,12 +8432,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -7432,12 +8468,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7464,12 +8504,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -7492,17 +8536,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7529,17 +8579,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -7562,17 +8618,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -7591,17 +8653,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7628,17 +8696,23 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -7661,17 +8735,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -7694,17 +8774,23 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "city_sandbags"
             },
             "unit": {
@@ -7727,12 +8813,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7759,17 +8849,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -7792,17 +8888,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -7821,17 +8923,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower8"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7858,12 +8966,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -7878,7 +8990,9 @@
                     ]
                 },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "stats": {
@@ -7894,7 +9008,9 @@
                     "max_move": 4,
                     "move": 4
                 },
-                "tags": {},
+                "tags": {
+
+                },
                 "team": null,
                 "tile": "yellow_infantry"
             }
@@ -7914,12 +9030,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -7946,12 +9066,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road1"
             },
             "terrain": {
@@ -7966,7 +9090,9 @@
                     ]
                 },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "stats": {
@@ -7982,7 +9108,9 @@
                     "max_move": 4,
                     "move": 4
                 },
-                "tags": {},
+                "tags": {
+
+                },
                 "team": null,
                 "tile": "yellow_infantry"
             }
@@ -7998,17 +9126,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8035,17 +9169,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -8068,17 +9208,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -8094,7 +9240,9 @@
                 },
                 "rotation": 270,
                 "side": "yellow",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "feudal_factory"
             },
             "damage": {
@@ -8107,12 +9255,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8143,7 +9295,9 @@
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -8166,17 +9320,23 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8207,7 +9367,9 @@
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -8227,7 +9389,9 @@
                 },
                 "rotation": 180,
                 "side": "yellow",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "feudal_barracks"
             },
             "damage": {
@@ -8240,12 +9404,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8272,17 +9440,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -8305,17 +9479,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -8338,12 +9518,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -8374,7 +9558,9 @@
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -8405,7 +9591,9 @@
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -8424,7 +9612,9 @@
                     ]
                 },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "stats": {
@@ -8440,7 +9630,9 @@
                     "max_move": 6,
                     "move": 6
                 },
-                "tags": {},
+                "tags": {
+
+                },
                 "team": null,
                 "tile": "yellow_m_inf"
             }
@@ -8464,7 +9656,9 @@
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -8491,12 +9685,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -8515,7 +9713,9 @@
                     ]
                 },
                 "ai_paused": false,
-                "modifiers": {},
+                "modifiers": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
                 "stats": {
@@ -8531,7 +9731,9 @@
                     "max_move": 6,
                     "move": 6
                 },
-                "tags": {},
+                "tags": {
+
+                },
                 "team": null,
                 "tile": "yellow_m_inf"
             }
@@ -8551,17 +9753,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -8584,17 +9792,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -8604,10 +9818,14 @@
         },
         "33_18": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "feudal_tower"
             },
             "damage": {
@@ -8620,12 +9838,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8648,17 +9870,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8672,10 +9900,14 @@
         },
         "33_20": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "feudal_tower"
             },
             "damage": {
@@ -8688,12 +9920,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8716,17 +9952,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower6"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8740,10 +9982,14 @@
         },
         "33_22": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 270,
                 "side": "yellow",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "feudal_tower"
             },
             "damage": {
@@ -8756,12 +10002,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_wall"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8788,17 +10038,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -8821,17 +10077,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -8854,17 +10116,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -8887,12 +10155,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass5"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8915,17 +10187,23 @@
             },
             "decoration": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8952,12 +10230,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -8984,17 +10266,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -9017,17 +10305,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -9050,17 +10344,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -9083,17 +10383,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -9116,17 +10422,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -9149,17 +10461,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -9182,17 +10500,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -9215,17 +10539,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -9248,17 +10578,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -9281,17 +10617,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -9314,17 +10656,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -9347,17 +10695,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -9380,17 +10734,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -9413,17 +10773,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -9442,17 +10808,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -9475,17 +10847,23 @@
             },
             "decoration": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -9512,12 +10890,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -9544,17 +10926,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -9577,17 +10965,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -9610,17 +11004,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms2"
             },
             "unit": {
@@ -9630,10 +11030,14 @@
         },
         "7_18": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "green",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "futuristic_tower"
             },
             "damage": {
@@ -9646,12 +11050,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_laser"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -9674,17 +11082,23 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower4"
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -9705,7 +11119,9 @@
                 },
                 "rotation": 90,
                 "side": "green",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "futuristic_hq"
             },
             "damage": {
@@ -9718,12 +11134,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_laser"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -9746,17 +11166,23 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "deco_flower1"
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -9770,10 +11196,14 @@
         },
         "7_22": {
             "building": {
-                "abilities": {},
+                "abilities": {
+
+                },
                 "rotation": 90,
                 "side": "green",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "futuristic_tower"
             },
             "damage": {
@@ -9786,12 +11216,16 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_laser"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -9818,17 +11252,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -9851,17 +11291,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
@@ -9884,12 +11330,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -9920,7 +11370,9 @@
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -9951,7 +11403,9 @@
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -9982,7 +11436,9 @@
             },
             "ground": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -10009,12 +11465,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road2"
             },
             "terrain": {
@@ -10041,17 +11501,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms4"
             },
             "unit": {
@@ -10074,17 +11540,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms1"
             },
             "unit": {
@@ -10100,7 +11572,9 @@
                 },
                 "rotation": 90,
                 "side": "green",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "futuristic_barracks"
             },
             "damage": {
@@ -10113,12 +11587,16 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_laser"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -10149,7 +11627,9 @@
             },
             "ground": {
                 "rotation": 90,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -10176,12 +11656,16 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -10212,7 +11696,9 @@
             },
             "ground": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_dirt_road3"
             },
             "terrain": {
@@ -10232,7 +11718,9 @@
                 },
                 "rotation": 90,
                 "side": "green",
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "futuristic_factory"
             },
             "damage": {
@@ -10245,12 +11733,16 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_laser"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -10277,17 +11769,23 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "ground_grass"
             },
             "terrain": {
                 "rotation": 270,
-                "tags": {},
+                "tags": {
+
+                },
                 "tile": "nature_sand_palms3"
             },
             "unit": {
