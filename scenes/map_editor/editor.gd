@@ -178,6 +178,8 @@ func undo_action():
 					tile.damage.clear()
 				"terrain":
 					tile.terrain.clear()
+				"construction":
+					tile.terrain.clear()
 				"building":
 					tile.building.clear()
 				"unit":
