@@ -167,7 +167,7 @@
         "tr_core_tutorial_m4_o3": "Destroy enemy unit.",
         "tr_core_tutorial_m4_o4": "Deploy General from HQ.",
         "tr_core_tutorial_m4_o5": "Deploy Infantry unit from HQ.",
-        "tr_core_tutorial_m4_o6": "Deploy an Infantry unit using General's ability.",
+        "tr_core_tutorial_m4_o6": "Deploy an Infantry unit using General's ability."
     },
     "pl": {
         "tr_core_tutorial_campaign_title": "Samouczek",
@@ -337,6 +337,6 @@
         "tr_core_tutorial_m4_o3": "Zniszcz jednostkę przeciwnika.",
         "tr_core_tutorial_m4_o4": "Zrekrutuj Generała w KG.",
         "tr_core_tutorial_m4_o5": "Zrekrutuj Piechotę w KG.",
-        "tr_core_tutorial_m4_o6": "Przywołaj Piechotę używając umiejętności Generała.",
-    },
+        "tr_core_tutorial_m4_o6": "Przywołaj Piechotę używając umiejętności Generała."
+    }
 }

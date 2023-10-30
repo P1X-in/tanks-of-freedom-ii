@@ -82,7 +82,7 @@
         "tr_core_prologue_m2_o2": "Prince Tybalt must escape.",
         "tr_core_prologue_m2_o3": "Move Prince Tybalt to Amber Noon HQ.",
         "tr_core_prologue_m2_o4": "Prince Tybalt must survive.",
-        "tr_core_prologue_m2_o5": "Defend Amber Noon HQ.",
+        "tr_core_prologue_m2_o5": "Defend Amber Noon HQ."
     },
     "pl": {
         "tr_core_prologue_campaign_title": "Prolog",
@@ -167,6 +167,6 @@
         "tr_core_prologue_m2_o2": "Książe Tybalt musi uciec.",
         "tr_core_prologue_m2_o3": "Przesuń Księcia Tybalta w okolice KG Bursztynowego Południa.",
         "tr_core_prologue_m2_o4": "Książe Tybalt musi przetrwać.",
-        "tr_core_prologue_m2_o5": "Utrzymaj KG Bursztynowego Południa.",
-    },
+        "tr_core_prologue_m2_o5": "Utrzymaj KG Bursztynowego Południa."
+    }
 }
