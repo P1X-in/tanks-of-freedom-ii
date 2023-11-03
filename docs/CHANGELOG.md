@@ -13,6 +13,7 @@
   - city housing
   - farms
   - walls
+- Various cosmetic updates to all campaigns using new tiles
 - Campaign can now override mission selection map image
 - Story messages can now define font size
 - Story messages can now play audio samples
