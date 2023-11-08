@@ -277,6 +277,7 @@ func handle_multiplayer_picker_output(args):
 	var error = self.multiplayer_srv.create_game(args[0])
 	if error:
 		self.ui.show_multiplayer()
+		return
 	self.ui.show_multiplayer_lobby()
 
 func open_multiplayer_lobby():

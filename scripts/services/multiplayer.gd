@@ -2,6 +2,8 @@ extends Node
 
 const PORT: int = 3939
 
+signal connection_failed
+signal connection_success
 signal player_connected(peer_id, player_info)
 signal player_disconnected(peer_id)
 signal server_disconnected
@@ -22,7 +24,6 @@ func _ready() -> void:
 
 func create_game(map_name) -> Error:
 	self.players.clear()
-
 	var peer = ENetMultiplayerPeer.new()
 	var error = peer.create_server(self.PORT, _get_player_count(map_name))
 	if error:
@@ -78,10 +79,12 @@ func _on_player_disconnected(id) -> void:
 func _on_connected_ok() -> void:
 	var peer_id = multiplayer.get_unique_id()
 	self.players[peer_id] = self._get_player_info()
+	connection_success.emit()
 	player_connected.emit(peer_id, self._get_player_info())
 
 func _on_connected_fail() -> void:
 	self.close_game()
+	connection_failed.emit()
 
 func _on_server_disconnected() -> void:
 	self.close_game()

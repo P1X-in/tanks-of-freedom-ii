@@ -17,6 +17,9 @@ var connection_busy = false
 func _ready():
 	super._ready()
 	self.nickname_input.set_text(self.settings.get_option("nickname"))
+
+	self.multiplayer_srv.connection_failed.connect(_on_connection_failed)
+	self.multiplayer_srv.connection_success.connect(_on_connection_success)
 	
 func _on_back_button_pressed():
 	super._on_back_button_pressed()
@@ -34,6 +37,8 @@ func _switch_to_main_panel():
 	self.main_panel.show()
 
 func _switch_to_connect_panel():
+	self.connect_message.set_text("")
+
 	self.main_panel.hide()
 	self.address_panel.show()
 
@@ -57,13 +62,18 @@ func _on_connect_button_pressed():
 		return
 
 	self.connection_busy = true
-	self.connect_message = tr("TR_CONNECTING")
+	self.connect_message.set_text(tr("TR_CONNECTING"))
 	var error = self.multiplayer_srv.connect_server(self.connect_input.get_text())
-	self.connection_busy = false
-
 	if error:
-		self.connect_message = tr("TR_CONNECTION_ERROR")
-		return
+		self.connection_busy = false
+		self.connect_message.set_text(tr("TR_CONNECTION_ERROR"))
 
+
+func _on_connection_success():
+	self.connection_busy = false
 	_switch_to_main_panel()
 	self.main_menu.open_multiplayer_lobby()
+
+func _on_connection_failed():
+	self.connection_busy = false
+	self.connect_message.set_text(tr("TR_CONNECTION_ERROR"))
