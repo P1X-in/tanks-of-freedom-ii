@@ -14,6 +14,8 @@ signal server_disconnected
 var players: Dictionary = {}
 var players_loaded: int = 0
 
+var selected_map: String = ""
+
 func _ready() -> void:
 	multiplayer.peer_connected.connect(_on_player_connected)
 	multiplayer.peer_disconnected.connect(_on_player_disconnected)
@@ -22,7 +24,7 @@ func _ready() -> void:
 	multiplayer.server_disconnected.connect(_on_server_disconnected)
 
 
-func create_game(map_name) -> Error:
+func create_game(map_name: String) -> Error:
 	self.players.clear()
 	var peer = ENetMultiplayerPeer.new()
 	var error = peer.create_server(self.PORT, _get_player_count(map_name))
@@ -32,9 +34,10 @@ func create_game(map_name) -> Error:
 	self.multiplayer.multiplayer_peer = peer
 	players[1] = self._get_player_info()
 	player_connected.emit(1, self._get_player_info())
+	self.selected_map = map_name
 	return OK
 
-func connect_server(ip_address) -> Error:
+func connect_server(ip_address: String) -> Error:
 	var peer = ENetMultiplayerPeer.new()
 	var error = peer.create_client(ip_address, self.PORT)
 	if error:
@@ -62,16 +65,16 @@ func player_loaded() -> void:
 			players_loaded = 0
 
 
-func _on_player_connected(id) -> void:
+func _on_player_connected(id: int) -> void:
 	_register_player.rpc_id(id, self._get_player_info())
 
 @rpc("any_peer", "reliable")
-func _register_player(new_player_info) -> void:
+func _register_player(new_player_info: Dictionary) -> void:
 	var new_player_id = multiplayer.get_remote_sender_id()
 	players[new_player_id] = new_player_info
 	player_connected.emit(new_player_id, new_player_info)
 
-func _on_player_disconnected(id) -> void:
+func _on_player_disconnected(id: int) -> void:
 	self.players.erase(id)
 	player_disconnected.emit(id)
 
@@ -104,7 +107,7 @@ func _get_player_info() -> Dictionary:
 		"name": self.settings.get_option("nickname")
 	}
 
-func _get_player_count(map_name) -> int:
+func _get_player_count(map_name: String) -> int:
 	var map_data = self.map_list_service.get_map_data(map_name)
 
 	var sides = {}
@@ -121,7 +124,7 @@ func _get_player_count(map_name) -> int:
 					sides[side] = side
 	return clampi(sides.size() - 1, 1, 3)
 
-func _lookup_side(data) -> String:
+func _lookup_side(data: Dictionary) -> String:
 	var hq_templates = [
 		"modern_hq",
 		"steampunk_hq",

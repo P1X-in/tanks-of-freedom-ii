@@ -38,7 +38,6 @@ func _switch_to_main_panel():
 
 func _switch_to_connect_panel():
 	self.connect_message.set_text("")
-
 	self.main_panel.hide()
 	self.address_panel.show()
 
