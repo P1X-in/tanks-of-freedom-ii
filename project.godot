@@ -34,6 +34,7 @@ Settings="*res://scripts/services/settings.gd"
 Campaign="*res://scripts/services/campaign.gd"
 SavesManager="*res://scripts/services/saves_manager.gd"
 Online="*res://scripts/services/online.gd"
+Multiplayer="*res://scripts/services/multiplayer.gd"
 
 [debug]
 

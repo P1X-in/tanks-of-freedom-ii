@@ -10,6 +10,7 @@ extends Node3D
 @onready var match_setup = $"/root/MatchSetup"
 @onready var campaign = $"/root/Campaign"
 @onready var settings = $"/root/Settings"
+@onready var multiplayer_srv = $"/root/Multiplayer"
 
 const MENU_TIMEOUT = 0.2
 
@@ -273,7 +274,10 @@ func handle_multiplayer_picker_output(args):
 	self.ui.hide_picker()
 	self.gamepad_adapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
-	self.ui.show_multiplayer_lobby(args[0])
+	var error = self.multiplayer_srv.create_game(args[0])
+	if error:
+		self.ui.show_multiplayer()
+	self.ui.show_multiplayer_lobby()
 
 func open_multiplayer_lobby():
 	self.ui.hide_multiplayer()

@@ -4,7 +4,15 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 @onready var address_panel = $"widgets/address"
 @onready var nickname_input = $"widgets/main/nickname"
 
+@onready var back_button = $"widgets/back_button"
+@onready var connect_button = $"widgets/address/connect_button"
+@onready var connect_input = $"widgets/address/address"
+@onready var connect_message = $"widgets/address/message"
+
 @onready var settings = $"/root/Settings"
+@onready var multiplayer_srv = $"/root/Multiplayer"
+
+var connection_busy = false
 
 func _ready():
 	super._ready()
@@ -12,13 +20,22 @@ func _ready():
 	
 func _on_back_button_pressed():
 	super._on_back_button_pressed()
+
+	if self.connection_busy:
+		return
 	
 	if self.address_panel.is_visible():
-		self.address_panel.hide()
-		self.main_panel.show()
+		_switch_to_main_panel()
 	else:
 		self.main_menu.close_multiplayer()
 
+func _switch_to_main_panel():
+	self.address_panel.hide()
+	self.main_panel.show()
+
+func _switch_to_connect_panel():
+	self.main_panel.hide()
+	self.address_panel.show()
 
 func _on_create_button_pressed():
 	self.audio.play("menu_click")
@@ -26,8 +43,7 @@ func _on_create_button_pressed():
 
 
 func _on_join_button_pressed():
-	self.main_panel.hide()
-	self.address_panel.show()
+	_switch_to_connect_panel()
 
 
 func _on_nickname_focus_exited():
@@ -35,4 +51,19 @@ func _on_nickname_focus_exited():
 
 
 func _on_connect_button_pressed():
-	pass # Replace with function body.
+	self.audio.play("menu_click")
+
+	if self.connection_busy:
+		return
+
+	self.connection_busy = true
+	self.connect_message = tr("TR_CONNECTING")
+	var error = self.multiplayer_srv.connect_server(self.connect_input.get_text())
+	self.connection_busy = false
+
+	if error:
+		self.connect_message = tr("TR_CONNECTION_ERROR")
+		return
+
+	_switch_to_main_panel()
+	self.main_menu.open_multiplayer_lobby()

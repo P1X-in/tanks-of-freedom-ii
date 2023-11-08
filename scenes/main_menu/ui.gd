@@ -104,7 +104,7 @@ func show_multiplayer():
 func hide_multiplayer():
 	self.multiplayer_panel.hide_panel()
 
-func show_multiplayer_lobby(map_name=null):
+func show_multiplayer_lobby():
 	self.multiplayer_lobby_panel.show_panel()
 
 func hide_multiplayer_lobby():
