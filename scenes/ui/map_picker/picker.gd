@@ -109,9 +109,15 @@ func set_browse_v1_mode():
 	self.set_browse_mode()
 	self.online_service.set_api_version(1)
 
-func lock_tab_bar():
-	self.list_mode = self.map_list_service.LIST_CUSTOM
+func lock_tab_bar(select_mode=null):
+	if select_mode != null:
+		self.list_mode = select_mode
+	else:
+		self.list_mode = self.map_list_service.LIST_CUSTOM
 	self.tabs_bar.hide()
+
+func lock_tab_bar_downloaded():
+	self.lock_tab_bar(self.map_list_service.LIST_DOWNLOADED)
 
 func unlock_tab_bar():
 	self.tabs_bar.show()

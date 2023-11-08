@@ -123,7 +123,7 @@ layout_mode = 0
 offset_left = -200.0
 offset_top = -130.0
 offset_right = 200.0
-offset_bottom = 310.0
+offset_bottom = 360.0
 texture = ExtResource("2_fcgt8")
 patch_margin_left = 8
 patch_margin_top = 8
@@ -178,12 +178,35 @@ text = "TR_SKIRMISH"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="load_button" type="TextureButton" parent="."]
+[node name="multiplayer_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
 offset_top = -10.0
 offset_right = 150.0
 offset_bottom = 30.0
+texture_normal = ExtResource("3_ao3ww")
+texture_pressed = ExtResource("4_uk83y")
+texture_hover = ExtResource("5_twtay")
+texture_focused = ExtResource("5_twtay")
+
+[node name="label" type="Label" parent="multiplayer_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_onr04")
+text = "TR_MULTIPLAYER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="load_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 40.0
+offset_right = 150.0
+offset_bottom = 80.0
 texture_normal = ExtResource("3_ao3ww")
 texture_pressed = ExtResource("4_uk83y")
 texture_hover = ExtResource("5_twtay")
@@ -204,9 +227,9 @@ vertical_alignment = 1
 [node name="online_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
-offset_top = 40.0
+offset_top = 90.0
 offset_right = 150.0
-offset_bottom = 80.0
+offset_bottom = 130.0
 texture_normal = ExtResource("3_ao3ww")
 texture_pressed = ExtResource("4_uk83y")
 texture_hover = ExtResource("5_twtay")
@@ -227,9 +250,9 @@ vertical_alignment = 1
 [node name="editor_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
-offset_top = 90.0
+offset_top = 140.0
 offset_right = 150.0
-offset_bottom = 130.0
+offset_bottom = 180.0
 texture_normal = ExtResource("3_ao3ww")
 texture_pressed = ExtResource("4_uk83y")
 texture_hover = ExtResource("5_twtay")
@@ -250,9 +273,9 @@ vertical_alignment = 1
 [node name="settings_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
-offset_top = 140.0
+offset_top = 190.0
 offset_right = 150.0
-offset_bottom = 180.0
+offset_bottom = 230.0
 texture_normal = ExtResource("3_ao3ww")
 texture_pressed = ExtResource("4_uk83y")
 texture_hover = ExtResource("5_twtay")
@@ -273,9 +296,9 @@ vertical_alignment = 1
 [node name="controls_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
-offset_top = 190.0
+offset_top = 240.0
 offset_right = 150.0
-offset_bottom = 230.0
+offset_bottom = 280.0
 texture_normal = ExtResource("3_ao3ww")
 texture_pressed = ExtResource("4_uk83y")
 texture_hover = ExtResource("5_twtay")
@@ -296,9 +319,9 @@ vertical_alignment = 1
 [node name="quit_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -150.0
-offset_top = 250.0
+offset_top = 300.0
 offset_right = 150.0
-offset_bottom = 290.0
+offset_bottom = 340.0
 texture_normal = ExtResource("3_ao3ww")
 texture_pressed = ExtResource("4_uk83y")
 texture_hover = ExtResource("5_twtay")
@@ -324,6 +347,7 @@ libraries = {
 
 [connection signal="pressed" from="campaign_button" to="." method="_on_campaign_button_pressed"]
 [connection signal="pressed" from="skirmish_button" to="." method="_on_skirmish_button_pressed"]
+[connection signal="pressed" from="multiplayer_button" to="." method="_on_multiplayer_button_pressed"]
 [connection signal="pressed" from="load_button" to="." method="_on_load_button_pressed"]
 [connection signal="pressed" from="online_button" to="." method="_on_online_button_pressed"]
 [connection signal="pressed" from="editor_button" to="." method="_on_editor_button_pressed"]

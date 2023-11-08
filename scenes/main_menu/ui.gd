@@ -11,6 +11,8 @@ extends Control
 @onready var campaign_mission_selection = $"campaign_mission_selection/campaign_mission_selection"
 @onready var campaign_mission = $"campaign_mission/campaign_mission"
 @onready var online = $"online/online"
+@onready var multiplayer_panel = $"multiplayer/multiplayer"
+@onready var multiplayer_lobby_panel = $"multiplayer_lobby/lobby"
 
 func bind_menu(main_menu):
 	self.menu.bind_menu(main_menu)
@@ -21,6 +23,8 @@ func bind_menu(main_menu):
 	self.campaign_mission_selection.bind_menu(main_menu)
 	self.campaign_mission.bind_menu(main_menu)
 	self.online.bind_menu(main_menu)
+	self.multiplayer_panel.bind_menu(main_menu)
+	self.multiplayer_lobby_panel.bind_menu(main_menu)
 
 	self.set_version(self.settings.settings.os_string)
 
@@ -93,3 +97,15 @@ func show_online():
 
 func hide_online():
 	self.online.hide_panel()
+
+func show_multiplayer():
+	self.multiplayer_panel.show_panel()
+
+func hide_multiplayer():
+	self.multiplayer_panel.hide_panel()
+
+func show_multiplayer_lobby(map_name=null):
+	self.multiplayer_lobby_panel.show_panel()
+
+func hide_multiplayer_lobby():
+	self.multiplayer_lobby_panel.hide_panel()
