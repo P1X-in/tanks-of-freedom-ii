@@ -163,4 +163,5 @@ autowrap_mode = 3
 [connection signal="pressed" from="widgets/main/create_button" to="." method="_on_create_button_pressed"]
 [connection signal="pressed" from="widgets/main/join_button" to="." method="_on_join_button_pressed"]
 [connection signal="focus_exited" from="widgets/main/nickname" to="." method="_on_nickname_focus_exited"]
+[connection signal="focus_exited" from="widgets/address/address" to="." method="_on_address_focus_exited"]
 [connection signal="pressed" from="widgets/address/connect_button" to="." method="_on_connect_button_pressed"]

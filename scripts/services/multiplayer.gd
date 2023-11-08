@@ -74,6 +74,9 @@ func _register_player(new_player_info: Dictionary) -> void:
 	players[new_player_id] = new_player_info
 	player_connected.emit(new_player_id, new_player_info)
 
+	if not multiplayer.is_server() and new_player_id == 1:
+		self.selected_map = new_player_info["map"]
+
 func _on_player_disconnected(id: int) -> void:
 	self.players.erase(id)
 	player_disconnected.emit(id)
@@ -104,7 +107,8 @@ func _on_server_disconnected() -> void:
 
 func _get_player_info() -> Dictionary:
 	return {
-		"name": self.settings.get_option("nickname")
+		"name": self.settings.get_option("nickname"),
+		"map": self.selected_map
 	}
 
 func _get_player_count(map_name: String) -> int:

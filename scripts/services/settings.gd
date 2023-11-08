@@ -31,6 +31,7 @@ var settings = {
 	"show_intro": true,
 	"show_controls": true,
 	"nickname": "",
+	"last_used_ip": "",
 }
 
 

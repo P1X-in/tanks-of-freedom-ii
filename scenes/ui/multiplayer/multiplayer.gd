@@ -17,6 +17,7 @@ var connection_busy = false
 func _ready():
 	super._ready()
 	self.nickname_input.set_text(self.settings.get_option("nickname"))
+	self.connect_input.set_text(self.settings.get_option("last_used_ip"))
 
 	self.multiplayer_srv.connection_failed.connect(_on_connection_failed)
 	self.multiplayer_srv.connection_success.connect(_on_connection_success)
@@ -47,11 +48,15 @@ func _on_create_button_pressed():
 
 
 func _on_join_button_pressed():
+	self.audio.play("menu_click")
 	_switch_to_connect_panel()
 
 
 func _on_nickname_focus_exited():
 	self.settings.set_option("nickname", self.nickname_input.get_text())
+
+func _on_address_focus_exited():
+	self.settings.set_option("last_used_ip", self.connect_input.get_text())
 
 
 func _on_connect_button_pressed():
