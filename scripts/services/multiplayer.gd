@@ -46,6 +46,7 @@ func connect_server(ip_address: String) -> Error:
 	return OK
 
 func close_game() -> void:
+	self.players.clear()
 	if multiplayer.multiplayer_peer != null:
 		multiplayer.multiplayer_peer.close()
 	multiplayer.multiplayer_peer = null

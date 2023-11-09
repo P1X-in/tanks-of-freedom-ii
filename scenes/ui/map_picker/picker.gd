@@ -26,6 +26,8 @@ const PAGE_SIZE = 10
 @onready var code_field = $"widgets/code/code"
 @onready var download_button = $"widgets/code/download_button"
 
+@onready var custom_maps_button = $"widgets/tabs/custom_button"
+
 @onready var map_list_service = $"/root/MapManager"
 @onready var gamepad_adapter = $"/root/GamepadAdapter"
 @onready var online_service = $"/root/Online"
@@ -116,10 +118,15 @@ func lock_tab_bar(select_mode=null):
 		self.list_mode = self.map_list_service.LIST_CUSTOM
 	self.tabs_bar.hide()
 
+func lock_custom_maps():
+	self.list_mode = self.map_list_service.LIST_STOCK
+	self.custom_maps_button.hide()
+
 func lock_tab_bar_downloaded():
 	self.lock_tab_bar(self.map_list_service.LIST_DOWNLOADED)
 
 func unlock_tab_bar():
+	self.custom_maps_button.show()
 	self.tabs_bar.show()
 
 

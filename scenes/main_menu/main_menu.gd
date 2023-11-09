@@ -257,7 +257,7 @@ func open_multiplayer_picker():
 	self.ui.hide_multiplayer()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.picker.set_select_mode()
-	self.ui.picker.lock_tab_bar_downloaded()
+	self.ui.picker.lock_custom_maps()
 	self.ui.show_picker()
 
 	self.ui.picker.bind_cancel(self, "close_multiplayer_picker")
