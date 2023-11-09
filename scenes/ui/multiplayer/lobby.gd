@@ -29,6 +29,7 @@ var hq_templates = [
 	"futuristic_hq",
 	"feudal_hq",
 ]
+var server_state = null
 
 func _ready():
 	super._ready()
@@ -36,12 +37,16 @@ func _ready():
 	self.multiplayer_srv.player_disconnected.connect(_on_player_disconnected)
 	self.multiplayer_srv.server_disconnected.connect(_on_server_disconnected)
 
+	for panel in self.player_panels:
+		panel.player_joined.connect(_on_player_joined_side)
+		panel.player_left.connect(_on_player_left_side)
 
 func show_panel():
 	super.show_panel()
 
 	if self.map_list_service._is_bundled(self.multiplayer_srv.selected_map) or self.map_list_service._is_online(self.multiplayer_srv.selected_map):
 		self._fill_map_data(self.multiplayer_srv.selected_map)
+		self._apply_server_state()
 		await self.get_tree().create_timer(0.1).timeout
 		self.start_button.grab_focus()
 	else:
@@ -58,6 +63,7 @@ func _download_map_data(map_name):
 
 	if result:
 		self._fill_map_data(map_name)
+		self._apply_server_state()
 		await self.get_tree().create_timer(0.1).timeout
 		self.start_button.grab_focus()
 	else:
@@ -131,11 +137,21 @@ func _on_back_button_pressed():
 	self.multiplayer_srv.close_game()
 	self.main_menu.close_multiplayer_lobby()
 
-func _on_player_connected(_peer_id, _player_info):
+func _on_player_connected(peer_id, _player_info):
 	_fill_player_labels()
+	if multiplayer.is_server() and peer_id != multiplayer.get_unique_id():
+		var state = {}
+		for panel in self.player_panels:
+			state[panel.index] = panel.player_peer_id
+		_set_lobby_state.rpc_id(peer_id, state)
+	for panel in self.player_panels:
+		panel._update_join_label()
 
-func _on_player_disconnected(_peer_id):
+func _on_player_disconnected(peer_id):
 	_fill_player_labels()
+	for panel in self.player_panels:
+		if panel.player_peer_id == peer_id:
+			panel._set_peer_id(null)
 
 func _on_server_disconnected():
 	_on_back_button_pressed()
@@ -143,3 +159,38 @@ func _on_server_disconnected():
 
 func _on_start_button_pressed():
 	self.audio.play("menu_click")
+
+func _on_player_joined_side(index):
+	for panel in self.player_panels:
+		if panel.index != index:
+			panel.lock_side()
+	for peer_id in self.multiplayer_srv.players:
+		if peer_id != multiplayer.get_unique_id():
+			_player_joined_a_side.rpc_id(peer_id, multiplayer.get_unique_id(), index)
+
+func _on_player_left_side(index):
+	for panel in self.player_panels:
+		if panel.index != index:
+			panel.unlock_side()
+	for peer_id in self.multiplayer_srv.players:
+		if peer_id != multiplayer.get_unique_id():
+			_player_left_a_side.rpc_id(peer_id, index)
+
+@rpc("any_peer", "reliable")
+func _player_joined_a_side(peer_id, index):
+	self.player_panels[index]._set_peer_id(peer_id)
+
+@rpc("any_peer", "reliable")
+func _player_left_a_side(index):
+	self.player_panels[index]._set_peer_id(null)
+
+@rpc("any_peer", "reliable")
+func _set_lobby_state(state):
+	self.server_state = state
+
+func _apply_server_state():
+	if self.server_state != null:
+		for index in self.server_state:
+			self.player_panels[index]._set_peer_id(self.server_state[index])
+	self.server_state = null
+
