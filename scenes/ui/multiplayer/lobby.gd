@@ -66,6 +66,7 @@ func _download_map_data(map_name):
 
 func _fill_map_data(fill_name):
 	self.minimap.fill_minimap(fill_name)
+	$"widgets/minimap/map_name/label".set_text(fill_name)
 	self._fill_player_panels(fill_name)
 
 func _fill_player_labels():
