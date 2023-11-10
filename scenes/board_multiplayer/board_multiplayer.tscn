@@ -1,5 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dg583v0vs343i"]
+[gd_scene load_steps=3 format=3 uid="uid://dg583v0vs343i"]
 
 [ext_resource type="PackedScene" path="res://scenes/board/board.tscn" id="1_e3c4i"]
+[ext_resource type="Script" path="res://scenes/board_multiplayer/board_multiplayer.gd" id="2_m5syu"]
 
 [node name="board" instance=ExtResource("1_e3c4i")]
+script = ExtResource("2_m5syu")

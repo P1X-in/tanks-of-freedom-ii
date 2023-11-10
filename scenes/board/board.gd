@@ -55,7 +55,7 @@ func _input(event):
 		return
 
 	if not self.ui.is_panel_open():
-		if not self.state.is_current_player_ai():
+		if _can_current_player_perform_actions():
 			if event.is_action_pressed("ui_accept"):
 				self.select_tile(self.map.tile_box_position)
 
@@ -104,12 +104,14 @@ func _input(event):
 				self.audio.play("menu_back")
 				self.ui.hide_unit_stats()
 
+func _can_current_player_perform_actions():
+	return not self.state.is_current_player_ai()
 
 func _physics_process(_delta):
 	self.hover_tile()
 
 func hover_tile():
-	if self.state.is_current_player_ai():
+	if not _can_current_player_perform_actions():
 		return
 
 	if not self.ui.is_panel_open():
@@ -141,7 +143,7 @@ func set_up_board():
 	var index = 0
 	for player_setup in self.match_setup.setup:
 		if player_setup["side"] != self.map.templates.PLAYER_NEUTRAL:
-			self.state.add_player(player_setup["type"], player_setup["side"], player_setup["alive"], player_setup["team"])
+			_add_player_to_state(player_setup)
 			self.state.add_player_ap(index, player_setup["ap"])
 
 			self.state.set_player_team(player_setup["side"], self.state.get_player_team(player_setup["side"]))
@@ -157,6 +159,9 @@ func set_up_board():
 			index += 1
 
 	self.state.register_heroes(self.map.model)
+
+func _add_player_to_state(data):
+	self.state.add_player(data["type"], data["side"], data["alive"], data["team"])
 
 func start_music_track():
 	var tracks = 6
@@ -182,13 +187,7 @@ func end_turn():
 func start_turn():
 	self.update_for_current_player()
 
-	if self.state.is_current_player_ai():
-		if not self.ui.cinematic_bars.is_extended:
-			self.ui.show_cinematic_bars()
-			await self.get_tree().create_timer(0.25).timeout
-	else:
-		if self.ui.cinematic_bars.is_extended:
-			self.ui.hide_cinematic_bars()
+	await _manage_cinematic_bars()
 
 	if self._should_perform_hq_cam():
 		if self._move_camera_to_hq():
@@ -199,6 +198,20 @@ func start_turn():
 	self.ui.update_resource_value(self.state.get_current_ap())
 	self.ui.flash_start_end_card(self.state.get_current_side(), self.state.turn)
 
+	_manage_ai_start()
+
+	self.events.emit_turn_started(self.state.turn, self.state.current_player)
+
+func _manage_cinematic_bars():
+	if self.state.is_current_player_ai():
+		if not self.ui.cinematic_bars.is_extended:
+			self.ui.show_cinematic_bars()
+			await self.get_tree().create_timer(0.25).timeout
+	else:
+		if self.ui.cinematic_bars.is_extended:
+			self.ui.hide_cinematic_bars()
+
+func _manage_ai_start():
 	if self.state.is_current_player_ai():
 		self.map.camera.ai_operated = true
 		self.map.hide_tile_box()
@@ -206,8 +219,6 @@ func start_turn():
 	else:
 		self.map.camera.ai_operated = false
 		self.map.show_tile_box()
-
-	self.events.emit_turn_started(self.state.turn, self.state.current_player)
 
 
 func select_tile(tile_position):
@@ -325,7 +336,7 @@ func toggle_radial_menu(context_object=null):
 
 	self.ui.toggle_radial()
 
-	if not self.state.is_current_player_ai():
+	if _can_current_player_perform_actions():
 		self.map.tile_box.set_visible(not self.map.tile_box.is_visible())
 
 func setup_radial_menu(context_object=null):
@@ -642,7 +653,7 @@ func update_tile_highlight(tile):
 		self.ui.clear_tile_highlight()
 		return
 
-	if self.state.is_current_player_ai() or self.map.camera.ai_operated:
+	if not _can_current_player_perform_actions() or self.map.camera.ai_operated:
 		return
 
 	var template_name

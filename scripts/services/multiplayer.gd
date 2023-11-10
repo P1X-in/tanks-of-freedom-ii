@@ -7,6 +7,7 @@ signal connection_success
 signal player_connected(peer_id, player_info)
 signal player_disconnected(peer_id)
 signal server_disconnected
+signal all_players_loaded
 
 @onready var map_list_service: Node = $"/root/MapManager"
 @onready var settings: Node = $"/root/Settings"
@@ -47,6 +48,7 @@ func connect_server(ip_address: String) -> Error:
 
 func close_game() -> void:
 	self.players.clear()
+	self.players_loaded = 0
 	if multiplayer.multiplayer_peer != null:
 		multiplayer.multiplayer_peer.close()
 	multiplayer.multiplayer_peer = null
@@ -62,6 +64,7 @@ func player_loaded() -> void:
 	if multiplayer.is_server():
 		players_loaded += 1
 		if players_loaded == players.size():
+			all_players_loaded.emit()
 			#$/root/Game.start_game()
 			players_loaded = 0
 

@@ -85,6 +85,9 @@ func clear_fields():
 	for field in self.fields:
 		field.clear()
 
+func clear_field(index):
+	self.fields[index].clear()
+
 func focus_field(index):
 	if index >= self.fields.size():
 		return
