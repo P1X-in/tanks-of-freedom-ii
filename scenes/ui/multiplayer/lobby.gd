@@ -42,6 +42,7 @@ func _ready():
 		panel.player_joined.connect(_on_player_joined_side)
 		panel.player_left.connect(_on_player_left_side)
 		panel.state_changed.connect(_on_panel_state_changed)
+		panel.swap_happened.connect(_on_panel_swap)
 
 func show_panel():
 	super.show_panel()
@@ -186,6 +187,20 @@ func _on_server_disconnected():
 
 func _on_start_button_pressed():
 	self.audio.play("menu_click")
+	_load_multiplayer_game.rpc()
+
+
+@rpc("call_local", "reliable")
+func _load_multiplayer_game():
+	self.match_setup.reset()
+	self.match_setup.map_name = self.multiplayer_srv.selected_map
+	self.match_setup.is_multiplayer = true
+
+	for player in self.player_panels:
+		if player.player_peer_id != null:
+			self.match_setup.add_player(player.side, player.ap, "human", true, player.team, player.player_peer_id)
+
+	self.switcher.board_multiplayer()
 
 func _on_player_joined_side(index):
 	for panel in self.player_panels:
@@ -209,6 +224,11 @@ func _on_panel_state_changed(index):
 	for peer_id in self.multiplayer_srv.players:
 		if peer_id != multiplayer.get_unique_id():
 			_update_panel_state.rpc_id(peer_id, index, self.player_panels[index].ap, self.player_panels[index].team)
+
+func _on_panel_swap(index):
+	for peer_id in self.multiplayer_srv.players:
+		if peer_id != multiplayer.get_unique_id():
+			_swap_panel.rpc_id(peer_id, index)
 
 @rpc("any_peer", "reliable")
 func _player_joined_a_side(peer_id, index):
@@ -236,3 +256,7 @@ func _apply_server_state():
 func _update_panel_state(index, ap, team):
 	self.player_panels[index]._set_ap(ap)
 	self.player_panels[index]._set_team(team)
+
+@rpc("any_peer", "reliable")
+func _swap_panel(index):
+	self.player_panels[index]._perform_panel_swap()

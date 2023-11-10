@@ -3,6 +3,7 @@ extends Control
 signal player_joined(index)
 signal player_left(index)
 signal state_changed(index)
+signal swap_happened(index)
 
 const AP_STEP = 50
 const AP_MAX = 150
@@ -132,6 +133,10 @@ func _on_starting_ap_pressed():
 
 func _on_swap_pressed():
 	self.audio.play("menu_click")
+	_perform_panel_swap()
+	swap_happened.emit(self.index)
+
+func _perform_panel_swap():
 	var own_side = self.side
 	var own_ap = self.ap
 	var own_team = self.team
