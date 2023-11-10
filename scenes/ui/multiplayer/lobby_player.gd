@@ -2,6 +2,7 @@ extends Control
 
 signal player_joined(index)
 signal player_left(index)
+signal state_changed(index)
 
 const AP_STEP = 50
 const AP_MAX = 150
@@ -126,6 +127,7 @@ func _on_starting_ap_pressed():
 	if self.ap > self.AP_MAX:
 		self.ap = 0
 	self._update_ap_label()
+	state_changed.emit(self.index)
 
 
 func _on_swap_pressed():
@@ -159,6 +161,7 @@ func _on_team_pressed():
 	if self.team > 4:
 		self.team = 1
 	self._update_team_label()
+	state_changed.emit(self.index)
 
 
 func _on_join_pressed():
@@ -172,3 +175,11 @@ func _on_join_pressed():
 func _set_peer_id(peer_id):
 	self.player_peer_id = peer_id
 	_update_join_label()
+
+func _set_ap(new_ap):
+	self.ap = new_ap
+	_update_ap_label()
+
+func _set_team(new_team):
+	self.team = new_team
+	_update_team_label()

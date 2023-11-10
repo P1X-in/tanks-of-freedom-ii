@@ -6,6 +6,7 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 @onready var switcher = $"/root/SceneSwitcher"
 @onready var match_setup = $"/root/MatchSetup"
 @onready var start_button = $"widgets/start_button"
+@onready var back_button = $"widgets/back_button"
 @onready var minimap = $"widgets/minimap"
 
 @onready var widgets = $"widgets"
@@ -40,15 +41,14 @@ func _ready():
 	for panel in self.player_panels:
 		panel.player_joined.connect(_on_player_joined_side)
 		panel.player_left.connect(_on_player_left_side)
+		panel.state_changed.connect(_on_panel_state_changed)
 
 func show_panel():
 	super.show_panel()
 
 	if self.map_list_service._is_bundled(self.multiplayer_srv.selected_map) or self.map_list_service._is_online(self.multiplayer_srv.selected_map):
-		self._fill_map_data(self.multiplayer_srv.selected_map)
-		self._apply_server_state()
-		await self.get_tree().create_timer(0.1).timeout
-		self.start_button.grab_focus()
+		
+		_prepare_initial_panel_state(self.multiplayer_srv.selected_map)
 	else:
 		self._download_map_data(self.multiplayer_srv.selected_map)
 
@@ -62,12 +62,34 @@ func _download_map_data(map_name):
 	self.widgets.show()
 
 	if result:
-		self._fill_map_data(map_name)
-		self._apply_server_state()
-		await self.get_tree().create_timer(0.1).timeout
-		self.start_button.grab_focus()
+		_prepare_initial_panel_state(map_name)
 	else:
 		_on_back_button_pressed()
+
+
+func _prepare_initial_panel_state(map_name):
+	self._fill_map_data(map_name)
+	self._apply_server_state()
+	await self.get_tree().create_timer(0.1).timeout
+	_manage_start_button(true)
+
+
+func _manage_start_button(grab):
+	if multiplayer.is_server() and _is_ready_to_start():
+		self.start_button.show()
+		if grab:
+			self.start_button.grab_focus()
+	else:
+		self.start_button.hide()
+		if grab:
+			self.back_button.grab_focus()
+
+func _is_ready_to_start():
+	for panel in self.player_panels:
+		if panel.is_visible() and panel.player_peer_id == null:
+			return false
+
+	return true
 
 
 func _fill_map_data(fill_name):
@@ -142,7 +164,11 @@ func _on_player_connected(peer_id, _player_info):
 	if multiplayer.is_server() and peer_id != multiplayer.get_unique_id():
 		var state = {}
 		for panel in self.player_panels:
-			state[panel.index] = panel.player_peer_id
+			state[panel.index] = {
+				"peer_id": panel.player_peer_id,
+				"ap": panel.ap,
+				"team": panel.team
+			}
 		_set_lobby_state.rpc_id(peer_id, state)
 	for panel in self.player_panels:
 		panel._update_join_label()
@@ -152,6 +178,7 @@ func _on_player_disconnected(peer_id):
 	for panel in self.player_panels:
 		if panel.player_peer_id == peer_id:
 			panel._set_peer_id(null)
+	_manage_start_button(false)
 
 func _on_server_disconnected():
 	_on_back_button_pressed()
@@ -167,6 +194,7 @@ func _on_player_joined_side(index):
 	for peer_id in self.multiplayer_srv.players:
 		if peer_id != multiplayer.get_unique_id():
 			_player_joined_a_side.rpc_id(peer_id, multiplayer.get_unique_id(), index)
+	_manage_start_button(false)
 
 func _on_player_left_side(index):
 	for panel in self.player_panels:
@@ -175,14 +203,22 @@ func _on_player_left_side(index):
 	for peer_id in self.multiplayer_srv.players:
 		if peer_id != multiplayer.get_unique_id():
 			_player_left_a_side.rpc_id(peer_id, index)
+	_manage_start_button(false)
+
+func _on_panel_state_changed(index):
+	for peer_id in self.multiplayer_srv.players:
+		if peer_id != multiplayer.get_unique_id():
+			_update_panel_state.rpc_id(peer_id, index, self.player_panels[index].ap, self.player_panels[index].team)
 
 @rpc("any_peer", "reliable")
 func _player_joined_a_side(peer_id, index):
 	self.player_panels[index]._set_peer_id(peer_id)
+	_manage_start_button(false)
 
 @rpc("any_peer", "reliable")
 func _player_left_a_side(index):
 	self.player_panels[index]._set_peer_id(null)
+	_manage_start_button(false)
 
 @rpc("any_peer", "reliable")
 func _set_lobby_state(state):
@@ -191,6 +227,12 @@ func _set_lobby_state(state):
 func _apply_server_state():
 	if self.server_state != null:
 		for index in self.server_state:
-			self.player_panels[index]._set_peer_id(self.server_state[index])
+			self.player_panels[index]._set_peer_id(self.server_state[index]["peer_id"])
+			self.player_panels[index]._set_ap(self.server_state[index]["ap"])
+			self.player_panels[index]._set_team(self.server_state[index]["team"])
 	self.server_state = null
 
+@rpc("any_peer", "reliable")
+func _update_panel_state(index, ap, team):
+	self.player_panels[index]._set_ap(ap)
+	self.player_panels[index]._set_team(team)
