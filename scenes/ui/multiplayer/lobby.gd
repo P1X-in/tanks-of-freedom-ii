@@ -166,6 +166,7 @@ func _on_player_connected(peer_id, _player_info):
 		var state = {}
 		for panel in self.player_panels:
 			state[panel.index] = {
+				"side": panel.side,
 				"peer_id": panel.player_peer_id,
 				"ap": panel.ap,
 				"team": panel.team
@@ -247,9 +248,11 @@ func _set_lobby_state(state):
 func _apply_server_state():
 	if self.server_state != null:
 		for index in self.server_state:
-			self.player_panels[index]._set_peer_id(self.server_state[index]["peer_id"])
-			self.player_panels[index]._set_ap(self.server_state[index]["ap"])
-			self.player_panels[index]._set_team(self.server_state[index]["team"])
+			if self.player_panels[index].is_visible():
+				self.player_panels[index].fill_panel(self.server_state[index]["side"])
+				self.player_panels[index]._set_peer_id(self.server_state[index]["peer_id"])
+				self.player_panels[index]._set_ap(self.server_state[index]["ap"])
+				self.player_panels[index]._set_team(self.server_state[index]["team"])
 	self.server_state = null
 
 @rpc("any_peer", "reliable")

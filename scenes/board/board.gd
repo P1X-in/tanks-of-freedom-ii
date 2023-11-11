@@ -283,7 +283,10 @@ func refresh_tile_selection():
 	if self.selected_tile != null:
 		var selected_position = self.selected_tile.position
 		self.unselect_tile()
-		self.call_deferred("select_tile", selected_position)
+		self.call_deferred("_reselect_tile", selected_position)
+
+func _reselect_tile(tile_position):
+	self.select_tile(tile_position)
 
 func reset_unit_markers():
 	self.movement_markers.reset()
@@ -352,7 +355,10 @@ func setup_radial_menu(context_object=null):
 		self.ui.radial.set_field(self.ui.icons.cross.instantiate(), "TR_CLOSE", 6, self, "toggle_radial_menu")
 		self.ui.show_objectives()
 	else:
-		self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
+		_setup_radial_menu_with_abilities(context_object)
+
+func _setup_radial_menu_with_abilities(context_object):
+	self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
 
 
 func place_selection_marker():
@@ -376,6 +382,10 @@ func show_contextual_select(open_unit_abilities=false):
 	if self.selected_tile.unit.is_present():
 		self.show_unit_movement_markers()
 		self.show_unit_interaction_markers()
+	_show_contextual_select_radial(open_unit_abilities)
+
+func _show_contextual_select_radial(open_unit_abilities):
+	if self.selected_tile.unit.is_present():
 		if open_unit_abilities and self.selected_tile.unit.tile.has_active_ability():
 			self.toggle_radial_menu(self.selected_tile.unit.tile)
 	if self.selected_tile.building.is_present():
@@ -582,9 +592,9 @@ func cheat_kill():
 
 func activate_production_ability(args):
 	self.toggle_radial_menu()
+	_activate_production_ability(args[0])
 
-	var ability = args[0]
-
+func _activate_production_ability(ability):
 	var cost = ability.ap_cost
 	cost = self.abilities.get_modified_cost(cost, ability.template_name, ability.source)
 
@@ -596,10 +606,13 @@ func activate_ability(args):
 	var ability = args[0]
 	if self.state.can_current_player_afford(ability.ap_cost) and not ability.is_on_cooldown():
 		self.toggle_radial_menu()
-		self.reset_unit_markers()
-		self.active_ability = ability
-		self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
-		ability.active_source_tile = self.selected_tile
+		_activate_ability(ability)
+
+func _activate_ability(ability):
+	self.reset_unit_markers()
+	self.active_ability = ability
+	self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
+	ability.active_source_tile = self.selected_tile
 
 func execute_active_ability(tile):
 	self.abilities.execute_ability(self.active_ability, tile)
