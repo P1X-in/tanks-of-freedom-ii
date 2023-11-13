@@ -179,8 +179,10 @@ func end_turn():
 
 	if self.ui.radial.is_visible():
 		self.toggle_radial_menu()
+	_end_turn()
+
+func _end_turn():
 	self.unselect_tile()
-	#self.remove_unit_hightlights()
 	self.state.switch_to_next_player()
 	self.call_deferred("start_turn")
 
@@ -498,12 +500,16 @@ func destroy_unit_on_tile(tile, skip_explosion=false):
 
 	if not skip_explosion:
 		self.explode_a_tile(tile, true)
-		self.collateral.generate_collateral(tile)
-		self.collateral.damage_tile(tile)
-
+		_generate_collateral_damage(tile)
 		if self.settings.get_option("cam_shake"):
 			self.map.camera.shake()
 	tile.unit.clear()
+
+func _generate_collateral_damage(tile):
+	return {
+		"collateral": self.collateral.generate_collateral(tile),
+		"damage": self.collateral.damage_tile(tile)
+	}
 
 func explode_a_tile(tile, grab_sfx=false):
 	var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile, 0.5)
