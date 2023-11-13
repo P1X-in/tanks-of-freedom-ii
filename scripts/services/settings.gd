@@ -32,6 +32,9 @@ var settings = {
 	"show_controls": true,
 	"nickname": "",
 	"last_used_ip": "",
+	"last_used_port": "3939",
+	"game_port": 3939,
+	"discovery_port": 3940,
 }
 
 

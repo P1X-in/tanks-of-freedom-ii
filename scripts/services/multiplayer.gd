@@ -1,7 +1,5 @@
 extends Node
 
-const PORT: int = 3939
-
 signal connection_failed
 signal connection_success
 signal player_connected(peer_id, player_info)
@@ -31,7 +29,7 @@ func _ready() -> void:
 func create_game(map_name: String) -> Error:
 	self.players.clear()
 	var peer = ENetMultiplayerPeer.new()
-	var error = peer.create_server(self.PORT, _get_player_count(map_name))
+	var error = peer.create_server(self.settings.get_option("game_port"), _get_player_count(map_name))
 	if error:
 		return error
 
@@ -41,9 +39,9 @@ func create_game(map_name: String) -> Error:
 	self.selected_map = map_name
 	return OK
 
-func connect_server(ip_address: String) -> Error:
+func connect_server(ip_address: String, port: int) -> Error:
 	var peer = ENetMultiplayerPeer.new()
-	var error = peer.create_client(ip_address, self.PORT)
+	var error = peer.create_client(ip_address, port)
 	if error:
 		return error
 	multiplayer.multiplayer_peer = peer
