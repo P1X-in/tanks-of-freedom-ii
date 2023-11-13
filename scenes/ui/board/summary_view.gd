@@ -19,9 +19,11 @@ extends Node2D
 @onready var audio = $"/root/SimpleAudioLibrary"
 @onready var match_setup = $"/root/MatchSetup"
 @onready var campaign = $"/root/Campaign"
+@onready var multiplayer_srv = $"/root/Multiplayer"
 
 func configure_winner(winner):
 	self.gamepad_adapter.enable()
+	self.restart_button.show()
 
 	if self.match_setup.campaign_win:
 		if self.match_setup.has_won:
@@ -49,6 +51,9 @@ func configure_winner(winner):
 		self.menu_button.grab_focus()
 		self.audio.play("fanfare")
 
+func disable_restart():
+	self.restart_button.hide()
+	self.menu_button.grab_focus()
 
 func _setup_next_mission():
 	self.next_mission_button.show()
@@ -58,6 +63,7 @@ func _setup_next_mission():
 func _on_menu_button_pressed():
 	self.gamepad_adapter.disable()
 	self.match_setup.reset()
+	self.multiplayer_srv.close_game()
 	self.switcher.main_menu()
 	self.audio.play("menu_click")
 

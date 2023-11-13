@@ -119,18 +119,23 @@ func _on_swap_pressed():
 	var own_side = self.side
 	var own_ap = self.ap
 	var own_type = self.type
+	var own_team = self.team
 
 	self.fill_panel(self.swap_target_node.side)
 	self.ap = self.swap_target_node.ap
 	self.type = self.swap_target_node.type
+	self.team = self.swap_target_node.team
 	self._update_type_label()
 	self._update_ap_label()
+	self._update_team_label()
 
 	self.swap_target_node.fill_panel(own_side)
 	self.swap_target_node.ap = own_ap
 	self.swap_target_node.type = own_type
+	self.swap_target_node.team = own_team
 	self.swap_target_node._update_type_label()
 	self.swap_target_node._update_ap_label()
+	self.swap_target_node._update_team_label()
 
 func _on_team_pressed():
 	self.team += 1

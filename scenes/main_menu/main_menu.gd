@@ -10,6 +10,7 @@ extends Node3D
 @onready var match_setup = $"/root/MatchSetup"
 @onready var campaign = $"/root/Campaign"
 @onready var settings = $"/root/Settings"
+@onready var multiplayer_srv = $"/root/Multiplayer"
 
 const MENU_TIMEOUT = 0.2
 
@@ -241,3 +242,50 @@ func handle_download_output(args):
 	self.ui.picker.current_page = 0
 	self.ui.online.selected_download_map = args[0]
 	self.ui.show_online()
+
+func open_multiplayer():
+	self.ui.hide_menu()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.show_multiplayer()
+
+func close_multiplayer():
+	self.ui.hide_multiplayer()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.show_menu()
+
+func open_multiplayer_picker():
+	self.ui.hide_multiplayer()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.picker.set_select_mode()
+	self.ui.picker.lock_custom_maps()
+	self.ui.show_picker()
+
+	self.ui.picker.bind_cancel(self, "close_multiplayer_picker")
+	self.ui.picker.bind_success(self, "handle_multiplayer_picker_output")
+
+func close_multiplayer_picker():
+	self.ui.hide_picker()
+	self.gamepad_adapter.enable()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.picker.unlock_tab_bar()
+	self.ui.show_multiplayer()
+
+func handle_multiplayer_picker_output(args):
+	self.ui.hide_picker()
+	self.gamepad_adapter.enable()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	var error = self.multiplayer_srv.create_game(args[0])
+	if error:
+		self.ui.show_multiplayer()
+		return
+	self.ui.show_multiplayer_lobby()
+
+func open_multiplayer_lobby():
+	self.ui.hide_multiplayer()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.show_multiplayer_lobby()
+
+func close_multiplayer_lobby():
+	self.ui.hide_multiplayer_lobby()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.show_multiplayer()

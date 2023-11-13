@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://ofwuqskwc7ah"]
+
+[ext_resource type="Script" path="res://scenes/ui/menu/setting_text.gd" id="1_ybx0s"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_tteh7"]
+
+[node name="option" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 570.0
+offset_bottom = 70.0
+script = ExtResource("1_ybx0s")
+
+[node name="label" type="Label" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_fonts/font = ExtResource("2_tteh7")
+text = "Option
+"
+vertical_alignment = 1
+
+[node name="text" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 5.0
+offset_right = 550.0
+offset_bottom = 45.0
+mouse_default_cursor_shape = 0
+alignment = 1
+
+[connection signal="text_changed" from="text" to="." method="_on_text_text_changed"]

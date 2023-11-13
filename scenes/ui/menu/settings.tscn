@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b6crhl6g0ory"]
+[gd_scene load_steps=18 format=3 uid="uid://b6crhl6g0ory"]
 
 [ext_resource type="Script" path="res://scenes/ui/menu/settings.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_6psbf"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="8_pyc6j"]
 [ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="9_3yekk"]
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="10_o8msu"]
+[ext_resource type="PackedScene" uid="uid://o1l3w0lursuf" path="res://scenes/ui/menu/settings_multi.tscn" id="11_ettfb"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="11_vkxpb"]
 
 [sub_resource type="Animation" id="3"]
@@ -252,6 +253,28 @@ text = "TR_GAMEPLAY"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="multiplayer" type="TextureButton" parent="widgets/tabs"]
+layout_mode = 0
+offset_top = 180.0
+offset_right = 190.0
+offset_bottom = 220.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/multiplayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
+text = "TR_MULTIPLAYER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="boxes" type="Control" parent="widgets"]
 anchors_preset = 0
 offset_left = 210.0
@@ -264,6 +287,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="settings_video" parent="widgets/boxes" instance=ExtResource("6")]
 visible = false
@@ -272,6 +297,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = -500.0
 offset_bottom = -300.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="settings_audio" parent="widgets/boxes" instance=ExtResource("5")]
 visible = false
@@ -280,6 +307,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="settings_gameplay" parent="widgets/boxes" instance=ExtResource("3")]
 visible = false
@@ -288,6 +317,18 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="settings_multi" parent="widgets/boxes" instance=ExtResource("11_ettfb")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="back_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
@@ -355,5 +396,7 @@ libraries = {
 [connection signal="pressed" from="widgets/tabs/audio" to="." method="_on_audio_pressed"]
 [connection signal="focus_entered" from="widgets/tabs/gameplay" to="." method="hide_help"]
 [connection signal="pressed" from="widgets/tabs/gameplay" to="." method="_on_gameplay_pressed"]
+[connection signal="focus_entered" from="widgets/tabs/multiplayer" to="." method="hide_help"]
+[connection signal="pressed" from="widgets/tabs/multiplayer" to="." method="_on_multiplayer_pressed"]
 [connection signal="focus_entered" from="widgets/back_button" to="." method="hide_help"]
 [connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

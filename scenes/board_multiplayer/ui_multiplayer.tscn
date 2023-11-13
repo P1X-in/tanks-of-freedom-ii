@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlmv2mhpe26s3"]
+
+[ext_resource type="Theme" path="res://assets/gui/ui_theme.tres" id="1_7qiku"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_j18ja"]
+
+[node name="ui_multiplayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_7qiku")
+
+[node name="announcement" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_j18ja")
+theme_override_font_sizes/font_size = 30
+text = "0000"
+horizontal_alignment = 1
+vertical_alignment = 1

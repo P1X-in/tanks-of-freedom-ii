@@ -1,0 +1,228 @@
+[gd_scene load_steps=12 format=3 uid="uid://b8donvamyojma"]
+
+[ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1_sivly"]
+[ext_resource type="Script" path="res://scenes/ui/multiplayer/multiplayer.gd" id="2_32yey"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="3_vshnt"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="4_0d4sl"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="5_niph2"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="6_gt8bi"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="7_oh20u"]
+[ext_resource type="Texture2D" uid="uid://csq1hhm0xchio" path="res://assets/gui/menu/buttons/buttonLarge_brown.png" id="8_yjxqj"]
+[ext_resource type="Texture2D" uid="uid://nove6ni5alhn" path="res://assets/gui/menu/buttons/buttonLarge_brown_pressed.png" id="9_14r63"]
+[ext_resource type="Texture2D" uid="uid://5jm4o80mt8a2" path="res://assets/gui/menu/buttons/buttonLarge_brown_hover.png" id="10_sjovo"]
+[ext_resource type="PackedScene" uid="uid://cxxtuldmnlg48" path="res://scenes/ui/multiplayer/server_panel.tscn" id="11_5wyi2"]
+
+[node name="multiplayer" instance=ExtResource("1_sivly")]
+script = ExtResource("2_32yey")
+
+[node name="back_button" type="TextureButton" parent="widgets" index="0"]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 640.0
+offset_right = 695.0
+offset_bottom = 680.0
+texture_normal = ExtResource("3_vshnt")
+texture_pressed = ExtResource("4_0d4sl")
+texture_hover = ExtResource("5_niph2")
+texture_focused = ExtResource("5_niph2")
+
+[node name="label" type="Label" parent="widgets/back_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_gt8bi")
+text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="main" type="Control" parent="widgets" index="1"]
+anchors_preset = 0
+offset_right = 1200.0
+offset_bottom = 600.0
+
+[node name="create_button" type="TextureButton" parent="widgets/main" index="0"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 250.0
+offset_right = 800.0
+offset_bottom = 350.0
+texture_normal = ExtResource("8_yjxqj")
+texture_pressed = ExtResource("9_14r63")
+texture_hover = ExtResource("10_sjovo")
+texture_focused = ExtResource("10_sjovo")
+
+[node name="label" type="Label" parent="widgets/main/create_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_gt8bi")
+theme_override_font_sizes/font_size = 42
+text = "TR_CREATE_GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="join_button" type="TextureButton" parent="widgets/main" index="1"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 400.0
+offset_right = 800.0
+offset_bottom = 500.0
+texture_normal = ExtResource("8_yjxqj")
+texture_pressed = ExtResource("9_14r63")
+texture_hover = ExtResource("10_sjovo")
+texture_focused = ExtResource("10_sjovo")
+
+[node name="label" type="Label" parent="widgets/main/join_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_gt8bi")
+theme_override_font_sizes/font_size = 42
+text = "TR_JOIN_GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="nickname" type="LineEdit" parent="widgets/main" index="2"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 150.0
+offset_right = 800.0
+offset_bottom = 190.0
+theme_override_fonts/font = ExtResource("7_oh20u")
+theme_override_font_sizes/font_size = 30
+placeholder_text = "TR_NICKNAME"
+alignment = 1
+max_length = 20
+
+[node name="address" type="Control" parent="widgets" index="2"]
+visible = false
+anchors_preset = 0
+offset_right = 1200.0
+offset_bottom = 600.0
+
+[node name="server_panel_0" parent="widgets/address" index="0" instance=ExtResource("11_5wyi2")]
+visible = false
+layout_mode = 1
+offset_left = 100.0
+offset_top = 30.0
+offset_right = -100.0
+offset_bottom = -510.0
+
+[node name="server_panel_1" parent="widgets/address" index="1" instance=ExtResource("11_5wyi2")]
+visible = false
+layout_mode = 1
+offset_left = 100.0
+offset_top = 100.0
+offset_right = -100.0
+offset_bottom = -440.0
+
+[node name="server_panel_2" parent="widgets/address" index="2" instance=ExtResource("11_5wyi2")]
+visible = false
+layout_mode = 1
+offset_left = 100.0
+offset_top = 170.0
+offset_right = -100.0
+offset_bottom = -370.0
+
+[node name="server_panel_3" parent="widgets/address" index="3" instance=ExtResource("11_5wyi2")]
+visible = false
+layout_mode = 1
+offset_left = 100.0
+offset_top = 240.0
+offset_right = -100.0
+offset_bottom = -300.0
+
+[node name="address" type="LineEdit" parent="widgets/address" index="4"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 400.0
+offset_right = 550.0
+offset_bottom = 440.0
+theme_override_fonts/font = ExtResource("7_oh20u")
+theme_override_font_sizes/font_size = 30
+placeholder_text = "TR_IP_ADDRESS"
+alignment = 1
+max_length = 32
+
+[node name="port" type="LineEdit" parent="widgets/address" index="5"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 460.0
+offset_right = 550.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("7_oh20u")
+theme_override_font_sizes/font_size = 30
+placeholder_text = "TR_GAME_PORT"
+alignment = 1
+max_length = 32
+
+[node name="connect_button" type="TextureButton" parent="widgets/address" index="6"]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 400.0
+offset_right = 1050.0
+offset_bottom = 500.0
+texture_normal = ExtResource("8_yjxqj")
+texture_pressed = ExtResource("9_14r63")
+texture_hover = ExtResource("10_sjovo")
+texture_focused = ExtResource("10_sjovo")
+
+[node name="label" type="Label" parent="widgets/address/connect_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_gt8bi")
+theme_override_font_sizes/font_size = 42
+text = "TR_CONNECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="message" type="Label" parent="widgets/address" index="7"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.5
+anchor_right = 0.9
+anchor_bottom = 0.5
+offset_top = 250.0
+offset_bottom = 300.0
+theme_override_fonts/font = ExtResource("7_oh20u")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="searching" type="Label" parent="widgets/address" index="8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.5
+anchor_right = 0.9
+anchor_bottom = 0.5
+offset_top = -260.0
+offset_bottom = -210.0
+theme_override_fonts/font = ExtResource("7_oh20u")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="widgets/main/create_button" to="." method="_on_create_button_pressed"]
+[connection signal="pressed" from="widgets/main/join_button" to="." method="_on_join_button_pressed"]
+[connection signal="focus_exited" from="widgets/main/nickname" to="." method="_on_nickname_focus_exited"]
+[connection signal="focus_exited" from="widgets/address/address" to="." method="_on_address_focus_exited"]
+[connection signal="focus_exited" from="widgets/address/port" to="." method="_on_port_focus_exited"]
+[connection signal="pressed" from="widgets/address/connect_button" to="." method="_on_connect_button_pressed"]

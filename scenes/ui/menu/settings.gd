@@ -15,6 +15,7 @@ extends Control
 @onready var video_panel = $"widgets/boxes/settings_video"
 @onready var audio_panel = $"widgets/boxes/settings_audio"
 @onready var gameplay_panel = $"widgets/boxes/settings_gameplay"
+@onready var multiplayer_panel = $"widgets/boxes/settings_multi"
 
 @onready var help = $"help"
 @onready var help_text = $"help/text"
@@ -42,6 +43,7 @@ func show_panel():
 	self.video_panel.hide()
 	self.audio_panel.hide()
 	self.gameplay_panel.hide()
+	self.multiplayer_panel.hide()
 	self.animations.play("show")
 	self.set_process_input(true)
 	await self.get_tree().create_timer(0.1).timeout
@@ -57,6 +59,7 @@ func _on_general_pressed():
 	self.video_panel.hide()
 	self.audio_panel.hide()
 	self.gameplay_panel.hide()
+	self.multiplayer_panel.hide()
 	self.audio.play("menu_click")
 
 func _on_video_pressed():
@@ -64,6 +67,7 @@ func _on_video_pressed():
 	self.video_panel.show()
 	self.audio_panel.hide()
 	self.gameplay_panel.hide()
+	self.multiplayer_panel.hide()
 	self.audio.play("menu_click")
 
 func _on_audio_pressed():
@@ -71,6 +75,7 @@ func _on_audio_pressed():
 	self.general_panel.hide()
 	self.audio_panel.show()
 	self.gameplay_panel.hide()
+	self.multiplayer_panel.hide()
 	self.audio.play("menu_click")
 
 func _on_gameplay_pressed():
@@ -78,6 +83,15 @@ func _on_gameplay_pressed():
 	self.general_panel.hide()
 	self.audio_panel.hide()
 	self.gameplay_panel.show()
+	self.multiplayer_panel.hide()
+	self.audio.play("menu_click")
+
+func _on_multiplayer_pressed():
+	self.video_panel.hide()
+	self.general_panel.hide()
+	self.audio_panel.hide()
+	self.gameplay_panel.hide()
+	self.multiplayer_panel.show()
 	self.audio.play("menu_click")
 
 func show_help(text):
@@ -86,3 +100,4 @@ func show_help(text):
 
 func hide_help():
 	self.help.hide()
+

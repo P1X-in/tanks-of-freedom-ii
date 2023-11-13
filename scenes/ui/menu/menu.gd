@@ -2,6 +2,7 @@ extends Control
 
 @onready var campaign_button = $"campaign_button"
 @onready var skirmish_button = $"skirmish_button"
+@onready var multiplayer_button = $"multiplayer_button"
 @onready var load_button = $"load_button"
 @onready var editor_button = $"editor_button"
 @onready var settings_button = $"settings_button"
@@ -38,6 +39,12 @@ func _on_skirmish_button_pressed():
 	self.recent_button_used = self.skirmish_button
 	self.audio.play("menu_click")
 	self.main_menu.open_picker()
+
+func _on_multiplayer_button_pressed():
+	self.recent_button_used = self.multiplayer_button
+	self.audio.play("menu_click")
+	self.main_menu.open_multiplayer()
+
 
 func _on_load_button_pressed():
 	self.recent_button_used = self.load_button

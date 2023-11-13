@@ -78,6 +78,9 @@ func is_assigned():
 	return self.label != ""
 
 func execute_bound_method():
+	if self.disabled.is_visible():
+		return
+
 	if self.bound_object != null:
 		if self.bound_args.size() > 0:
 			self.bound_object.call_deferred(self.bound_method, self.bound_args)

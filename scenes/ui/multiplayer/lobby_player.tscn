@@ -1,0 +1,180 @@
+[gd_scene load_steps=8 format=3 uid="uid://b784hcbwfshhc"]
+
+[ext_resource type="Script" path="res://scenes/ui/multiplayer/lobby_player.gd" id="1_4yq5k"]
+[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="2_tnnia"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_2svv4"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="9_vqjkj"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="10_vvr84"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="11_82ixr"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="12_svnh1"]
+
+[node name="skirmish_player" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -630.0
+offset_bottom = -675.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4yq5k")
+
+[node name="background" type="NinePatchRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_tnnia")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="player" type="Label" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_right = 450.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource("3_2svv4")
+theme_override_font_sizes/font_size = 30
+text = "TR_UNASSIGNED"
+vertical_alignment = 1
+
+[node name="icon" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 55.0
+offset_top = 60.0
+offset_right = 55.0
+offset_bottom = 60.0
+
+[node name="join" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 3.0
+offset_right = 640.0
+offset_bottom = 43.0
+texture_normal = ExtResource("9_vqjkj")
+texture_pressed = ExtResource("10_vvr84")
+texture_hover = ExtResource("11_82ixr")
+texture_focused = ExtResource("11_82ixr")
+
+[node name="label" type="Label" parent="join"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_svnh1")
+text = "TR_JOIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="starting_ap" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 43.0
+offset_right = 640.0
+offset_bottom = 83.0
+texture_normal = ExtResource("9_vqjkj")
+texture_pressed = ExtResource("10_vvr84")
+texture_hover = ExtResource("11_82ixr")
+texture_focused = ExtResource("11_82ixr")
+
+[node name="label" type="Label" parent="starting_ap"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_svnh1")
+text = "50 AP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="starting_ap_label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 450.0
+offset_top = 43.0
+offset_right = -10.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_svnh1")
+text = "50 AP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="team" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 83.0
+offset_right = 640.0
+offset_bottom = 123.0
+texture_normal = ExtResource("9_vqjkj")
+texture_pressed = ExtResource("10_vvr84")
+texture_hover = ExtResource("11_82ixr")
+texture_focused = ExtResource("11_82ixr")
+
+[node name="label" type="Label" parent="team"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_svnh1")
+text = "Team 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="team_label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 450.0
+offset_top = 83.0
+offset_right = -10.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_svnh1")
+text = "Team 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="swap" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = -20.0
+offset_right = 290.0
+offset_bottom = 20.0
+texture_normal = ExtResource("9_vqjkj")
+texture_pressed = ExtResource("10_vvr84")
+texture_hover = ExtResource("11_82ixr")
+texture_focused = ExtResource("11_82ixr")
+
+[node name="label" type="Label" parent="swap"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_svnh1")
+text = "TR_SWAP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="starting_ap" to="." method="_on_starting_ap_pressed"]
+[connection signal="pressed" from="team" to="." method="_on_team_pressed"]
+[connection signal="pressed" from="swap" to="." method="_on_swap_pressed"]

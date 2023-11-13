@@ -12,6 +12,7 @@ var has_won = false
 var animate_medal = false
 
 var restore_save_id = null
+var is_multiplayer = false
 
 func reset():
     self.setup = []
@@ -22,17 +23,19 @@ func reset():
     self.has_won = false
     self.animate_medal = false
     self.restore_save_id = null
+    self.is_multiplayer = false
 
 func store_setup():
     self.stored_setup = self.setup
 func restore_setup():
     self.setup = self.stored_setup
 
-func add_player(side, ap, type, alive=true, team=null):
+func add_player(side, ap, type, alive=true, team=null, peer_id=null):
     self.setup.append({
         "side" : side,
         "ap" : ap,
         "type": type,
         "alive": alive,
-        "team": team
+        "team": team,
+        "peer_id": peer_id
     })
