@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dg583v0vs343i"]
+[gd_scene load_steps=5 format=3 uid="uid://dg583v0vs343i"]
 
 [ext_resource type="PackedScene" path="res://scenes/board/board.tscn" id="1_e3c4i"]
 [ext_resource type="Script" path="res://scenes/board_multiplayer/board_multiplayer.gd" id="2_m5syu"]
+[ext_resource type="PackedScene" uid="uid://dlmv2mhpe26s3" path="res://scenes/board_multiplayer/ui_multiplayer.tscn" id="3_ci457"]
+[ext_resource type="Script" path="res://scenes/board_multiplayer/ui_multiplayer.gd" id="4_34utl"]
 
 [node name="board" instance=ExtResource("1_e3c4i")]
 script = ExtResource("2_m5syu")
+
+[node name="ui_multiplayer" parent="." index="3" instance=ExtResource("3_ci457")]
+script = ExtResource("4_34utl")

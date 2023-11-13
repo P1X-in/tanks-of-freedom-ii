@@ -16,6 +16,9 @@ var players: Dictionary = {}
 var players_loaded: int = 0
 
 var selected_map: String = ""
+var match_in_progress: bool = false
+var match_state: Dictionary = {}
+var match_state_available: bool = false
 
 func _ready() -> void:
 	multiplayer.peer_connected.connect(_on_player_connected)
@@ -49,15 +52,20 @@ func connect_server(ip_address: String) -> Error:
 func close_game() -> void:
 	self.players.clear()
 	self.players_loaded = 0
+	self.match_in_progress = false
+	self.match_state.clear()
+	self.match_state_available = false
 	if multiplayer.multiplayer_peer != null:
 		multiplayer.multiplayer_peer.close()
 	multiplayer.multiplayer_peer = null
 
 
 
-@rpc("call_local", "reliable")
-func load_game() -> void:
-	return
+@rpc("any_peer", "reliable")
+func _set_match_state(state: Dictionary) -> void:
+	self.match_state = state
+	self.match_state_available = true
+
 
 @rpc("any_peer", "call_local", "reliable")
 func player_loaded() -> void:
@@ -112,7 +120,8 @@ func _on_server_disconnected() -> void:
 func _get_player_info() -> Dictionary:
 	return {
 		"name": self.settings.get_option("nickname"),
-		"map": self.selected_map
+		"map": self.selected_map,
+		"in_progress": self.match_in_progress
 	}
 
 func _get_player_count(map_name: String) -> int:

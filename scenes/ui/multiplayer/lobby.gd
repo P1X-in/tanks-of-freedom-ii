@@ -69,6 +69,13 @@ func _download_map_data(map_name):
 
 
 func _prepare_initial_panel_state(map_name):
+	if self.multiplayer_srv.players[1]["in_progress"]:
+		self.widgets.hide()
+		while not self.multiplayer_srv.match_state_available:
+			await self.get_tree().create_timer(0.1).timeout
+		self.load_game_from_state(self.multiplayer_srv.match_state)
+		return
+
 	self._fill_map_data(map_name)
 	self._apply_server_state()
 	await self.get_tree().create_timer(0.1).timeout
@@ -263,3 +270,26 @@ func _update_panel_state(index, ap, team):
 @rpc("any_peer", "reliable")
 func _swap_panel(index):
 	self.player_panels[index]._perform_panel_swap()
+
+
+
+
+
+
+func load_game_from_state(state):
+	self.match_setup.reset()
+
+	self.match_setup.map_name = state["map_name"]
+	self.match_setup.restore_save_id = "multiplayer"
+	self.match_setup.is_multiplayer = true
+	for player in state["players"]:
+		self.match_setup.add_player(
+			player["side"],
+			player["ap"],
+			player["type"],
+			player["alive"],
+			player["team"],
+			player["peer_id"]
+		)
+
+	self.switcher.board_multiplayer()

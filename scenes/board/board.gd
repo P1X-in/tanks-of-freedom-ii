@@ -829,7 +829,9 @@ func close_saves():
 
 func restore_saved_state():
 	var save_data = self.saves_manager.get_save_data(self.match_setup.restore_save_id)
+	_restore_saved_state(save_data)
 
+func _restore_saved_state(save_data):
 	# restore basic state elements
 	self.state.turn = save_data["turn"]
 	self.state.current_player = save_data["active_player"]

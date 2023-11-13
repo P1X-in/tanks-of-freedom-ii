@@ -2,6 +2,8 @@ extends "res://scenes/board/board.gd"
 
 @onready var multiplayer_srv = $"/root/Multiplayer"
 
+@onready var ui_multiplayer = $"ui_multiplayer"
+
 var all_players_loaded = false
 var lock_multicall = 0
 var match_ended = false
@@ -21,15 +23,25 @@ func _all_players_loaded():
 @rpc("call_local", "reliable")
 func _start_game():
 	self.all_players_loaded = true
+	self.multiplayer_srv.match_in_progress = true
 	_manage_cinematic_bars()
 	_manage_ai_start()
 
 
-func _on_player_connected(_peer_id, _player_info):
-	return
+func _on_player_connected(peer_id, _player_info):
+	self.state.assign_free_peer(peer_id)
+	var current_state = self.saves_manager.compile_save_data(self)["save_data"]
+	self.multiplayer_srv._set_match_state.rpc_id(peer_id, current_state)
 
-func _on_player_disconnected(_peer_id):
-	return
+func _on_player_disconnected(peer_id):
+	if self.match_ended:
+		return
+
+	self.all_players_loaded = false
+	self.state.clear_peer_id(peer_id)
+	_manage_cinematic_bars()
+	_manage_ai_start()
+	self.ui_multiplayer.set_announcement(tr("TR_WAITING_FOR_PLAYER_RECONNECTED"))
 
 func _on_server_disconnected():
 	if not self.match_ended:
@@ -39,8 +51,6 @@ func _on_server_disconnected():
 # disable save/load for multiplayer
 func perform_autosave():
 	return
-func restore_saved_state():
-	return
 func cheat_capture():
 	return
 func cheat_kill():
@@ -49,14 +59,21 @@ func cheat_kill():
 func _should_perform_hq_cam():
 	return false
 
+func restore_saved_state():
+	_restore_saved_state(self.multiplayer_srv.match_state)
+	_notify_player_reconnected.rpc()
+
 func _manage_cinematic_bars():
 	if _can_current_player_perform_actions():
 		if self.ui.cinematic_bars.is_extended:
 			self.ui.hide_cinematic_bars()
+			self.ui_multiplayer.clear_announcement()
 	else:
 		if not self.ui.cinematic_bars.is_extended:
 			self.ui.show_cinematic_bars()
 			await self.get_tree().create_timer(0.25).timeout
+		if self.all_players_loaded:
+			self.ui_multiplayer.set_announcement(self.multiplayer_srv.players[self.state.get_current_param("peer_id")]["name"])
 
 func _manage_ai_start():
 	if _can_current_player_perform_actions():
@@ -197,3 +214,10 @@ func end_game(winner):
 	super.end_game(winner)
 	self.ui.summary.disable_restart()
 	self.match_ended = true
+
+
+@rpc("any_peer", "call_local", "reliable")
+func _notify_player_reconnected():
+	self.all_players_loaded = self.state.are_all_peers_present()
+	_manage_cinematic_bars()
+	_manage_ai_start()
