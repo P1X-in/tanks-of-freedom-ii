@@ -7,12 +7,14 @@ signal player_disconnected(peer_id)
 signal server_disconnected
 signal all_players_loaded
 
+@onready var autodiscovery = $"/root/Autodiscovery"
 @onready var map_list_service: Node = $"/root/MapManager"
 @onready var settings: Node = $"/root/Settings"
 
 var players: Dictionary = {}
 var players_loaded: int = 0
 
+var player_limit: int = 0
 var selected_map: String = ""
 var match_in_progress: bool = false
 var match_state: Dictionary = {}
@@ -28,8 +30,9 @@ func _ready() -> void:
 
 func create_game(map_name: String) -> Error:
 	self.players.clear()
+	self.player_limit = _get_player_count(map_name)
 	var peer = ENetMultiplayerPeer.new()
-	var error = peer.create_server(self.settings.get_option("game_port"), _get_player_count(map_name))
+	var error = peer.create_server(self.settings.get_option("game_port"), self.player_limit)
 	if error:
 		return error
 
@@ -37,6 +40,9 @@ func create_game(map_name: String) -> Error:
 	players[1] = self._get_player_info()
 	player_connected.emit(1, self._get_player_info())
 	self.selected_map = map_name
+
+	self.autodiscovery.start_autodiscovery_server()
+
 	return OK
 
 func connect_server(ip_address: String, port: int) -> Error:
@@ -56,6 +62,7 @@ func close_game() -> void:
 	if multiplayer.multiplayer_peer != null:
 		multiplayer.multiplayer_peer.close()
 	multiplayer.multiplayer_peer = null
+	self.autodiscovery.stop_autodiscovery_server()
 
 
 

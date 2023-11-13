@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8donvamyojma"]
+[gd_scene load_steps=12 format=3 uid="uid://b8donvamyojma"]
 
 [ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1_sivly"]
 [ext_resource type="Script" path="res://scenes/ui/multiplayer/multiplayer.gd" id="2_32yey"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://csq1hhm0xchio" path="res://assets/gui/menu/buttons/buttonLarge_brown.png" id="8_yjxqj"]
 [ext_resource type="Texture2D" uid="uid://nove6ni5alhn" path="res://assets/gui/menu/buttons/buttonLarge_brown_pressed.png" id="9_14r63"]
 [ext_resource type="Texture2D" uid="uid://5jm4o80mt8a2" path="res://assets/gui/menu/buttons/buttonLarge_brown_hover.png" id="10_sjovo"]
+[ext_resource type="PackedScene" uid="uid://cxxtuldmnlg48" path="res://scenes/ui/multiplayer/server_panel.tscn" id="11_5wyi2"]
 
 [node name="multiplayer" instance=ExtResource("1_sivly")]
 script = ExtResource("2_32yey")
@@ -108,7 +109,39 @@ anchors_preset = 0
 offset_right = 1200.0
 offset_bottom = 600.0
 
-[node name="address" type="LineEdit" parent="widgets/address" index="0"]
+[node name="server_panel_0" parent="widgets/address" index="0" instance=ExtResource("11_5wyi2")]
+visible = false
+layout_mode = 1
+offset_left = 100.0
+offset_top = 30.0
+offset_right = -100.0
+offset_bottom = -510.0
+
+[node name="server_panel_1" parent="widgets/address" index="1" instance=ExtResource("11_5wyi2")]
+visible = false
+layout_mode = 1
+offset_left = 100.0
+offset_top = 100.0
+offset_right = -100.0
+offset_bottom = -440.0
+
+[node name="server_panel_2" parent="widgets/address" index="2" instance=ExtResource("11_5wyi2")]
+visible = false
+layout_mode = 1
+offset_left = 100.0
+offset_top = 170.0
+offset_right = -100.0
+offset_bottom = -370.0
+
+[node name="server_panel_3" parent="widgets/address" index="3" instance=ExtResource("11_5wyi2")]
+visible = false
+layout_mode = 1
+offset_left = 100.0
+offset_top = 240.0
+offset_right = -100.0
+offset_bottom = -300.0
+
+[node name="address" type="LineEdit" parent="widgets/address" index="4"]
 layout_mode = 0
 offset_left = 150.0
 offset_top = 400.0
@@ -120,7 +153,7 @@ placeholder_text = "TR_IP_ADDRESS"
 alignment = 1
 max_length = 32
 
-[node name="port" type="LineEdit" parent="widgets/address" index="1"]
+[node name="port" type="LineEdit" parent="widgets/address" index="5"]
 layout_mode = 0
 offset_left = 150.0
 offset_top = 460.0
@@ -132,7 +165,7 @@ placeholder_text = "TR_GAME_PORT"
 alignment = 1
 max_length = 32
 
-[node name="connect_button" type="TextureButton" parent="widgets/address" index="2"]
+[node name="connect_button" type="TextureButton" parent="widgets/address" index="6"]
 layout_mode = 0
 offset_left = 650.0
 offset_top = 400.0
@@ -156,7 +189,7 @@ text = "TR_CONNECT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="message" type="Label" parent="widgets/address" index="3"]
+[node name="message" type="Label" parent="widgets/address" index="7"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -171,7 +204,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="searching" type="Label" parent="widgets/address" index="4"]
+[node name="searching" type="Label" parent="widgets/address" index="8"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1

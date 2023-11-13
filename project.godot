@@ -35,6 +35,7 @@ Campaign="*res://scripts/services/campaign.gd"
 SavesManager="*res://scripts/services/saves_manager.gd"
 Online="*res://scripts/services/online.gd"
 Multiplayer="*res://scripts/services/multiplayer.gd"
+Autodiscovery="*res://scripts/services/autodiscovery.gd"
 
 [debug]
 
