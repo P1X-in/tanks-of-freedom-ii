@@ -454,7 +454,12 @@ func get_zoom_fraction():
 func get_position_state():
 	var camera_position = self.get_position()
 
-	return [camera_position.x, camera_position.y, camera_position.z]
+	return [camera_position.x, camera_position.y, camera_position.z, self.camera_distance, self.tof_camera_distance, self.aw_camera_distance]
 
 func restore_from_state(state):
 	self.set_position(Vector3(state[0], state[1], state[2]))
+	if state.size() > 3:
+		self.camera_distance = state[3]
+		self.tof_camera_distance = state[4]
+		self.aw_camera_distance = state[5]
+
