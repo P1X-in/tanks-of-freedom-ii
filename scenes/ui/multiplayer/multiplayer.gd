@@ -58,6 +58,7 @@ func _on_back_button_pressed():
 func _switch_to_main_panel():
 	self.address_panel.hide()
 	self.main_panel.show()
+	await self.get_tree().create_timer(0.1).timeout
 	self.create_button.grab_focus()
 
 func _switch_to_connect_panel():
@@ -67,6 +68,7 @@ func _switch_to_connect_panel():
 	for panel in self.server_panels:
 		panel.hide()
 	self.autodiscovery.scan_lan_servers()
+	await self.get_tree().create_timer(0.1).timeout
 	self.connect_button.grab_focus()
 
 func _on_create_button_pressed():
