@@ -101,3 +101,6 @@ func show_help(text):
 func hide_help():
 	self.help.hide()
 
+func _on_controls_pressed():
+	self.audio.play("menu_click")
+	self.main_menu.open_controls()

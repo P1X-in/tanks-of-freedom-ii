@@ -4,6 +4,8 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 @onready var address_panel = $"widgets/address"
 @onready var nickname_input = $"widgets/main/nickname"
 
+@onready var create_button = $"widgets/main/create_button"
+
 @onready var back_button = $"widgets/back_button"
 @onready var connect_button = $"widgets/address/connect_button"
 @onready var connect_input = $"widgets/address/address"
@@ -35,6 +37,10 @@ func _ready():
 
 	for panel in self.server_panels:
 		panel.server_selected.connect(_connect_to_server)
+
+func show_panel():
+	super.show_panel()
+	_switch_to_main_panel()
 	
 func _on_back_button_pressed():
 	super._on_back_button_pressed()
@@ -52,6 +58,7 @@ func _on_back_button_pressed():
 func _switch_to_main_panel():
 	self.address_panel.hide()
 	self.main_panel.show()
+	self.create_button.grab_focus()
 
 func _switch_to_connect_panel():
 	self.connect_message.set_text("")
@@ -60,6 +67,7 @@ func _switch_to_connect_panel():
 	for panel in self.server_panels:
 		panel.hide()
 	self.autodiscovery.scan_lan_servers()
+	self.connect_button.grab_focus()
 
 func _on_create_button_pressed():
 	self.audio.play("menu_click")

@@ -164,7 +164,7 @@ anchors_preset = 0
 offset_left = 20.0
 offset_top = 20.0
 offset_right = 210.0
-offset_bottom = 320.0
+offset_bottom = 620.0
 
 [node name="general" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
@@ -272,6 +272,28 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("11_vkxpb")
 text = "TR_MULTIPLAYER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="controls" type="TextureButton" parent="widgets/tabs"]
+layout_mode = 0
+offset_top = 500.0
+offset_right = 190.0
+offset_bottom = 540.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/controls"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
+text = "TR_CONTROLS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -398,5 +420,7 @@ libraries = {
 [connection signal="pressed" from="widgets/tabs/gameplay" to="." method="_on_gameplay_pressed"]
 [connection signal="focus_entered" from="widgets/tabs/multiplayer" to="." method="hide_help"]
 [connection signal="pressed" from="widgets/tabs/multiplayer" to="." method="_on_multiplayer_pressed"]
+[connection signal="focus_entered" from="widgets/tabs/controls" to="." method="hide_help"]
+[connection signal="pressed" from="widgets/tabs/controls" to="." method="_on_controls_pressed"]
 [connection signal="focus_entered" from="widgets/back_button" to="." method="hide_help"]
 [connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

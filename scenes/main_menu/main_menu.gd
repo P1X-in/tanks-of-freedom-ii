@@ -156,14 +156,14 @@ func reopen_campaign_mission_selection_after_win():
 			self.ui.show_campaign_mission(self.match_setup.campaign_name, self.match_setup.mission_no)
 
 func open_controls():
-	self.ui.hide_menu()
+	self.ui.hide_settings()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.show_controls()
 
 func close_controls():
 	self.ui.hide_controls()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
-	self.ui.show_menu()
+	self.ui.show_settings()
 
 func open_saves():
 	self.ui.hide_menu()
