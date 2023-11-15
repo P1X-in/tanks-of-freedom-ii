@@ -60,4 +60,6 @@ func _process(_delta):
 
 func abort_lan_scan():
 	self.is_scanning = false
-	self.client.close()
+	if self.client != null:
+		self.client.close()
+	self.client = null
