@@ -92,7 +92,7 @@ func load_campaign(campaign_name):
 	if self.campaign.is_campaign_complete(manifest["name"]):
 		if self.match_setup.animate_medal:
 			self.match_setup.animate_medal = false
-			await self.get_tree().create_timer(0.1).timeout
+			await self.get_tree().create_timer(0.2).timeout
 			self.animations.play("medal")
 		else:
 			self.medal.show()
