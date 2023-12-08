@@ -67,7 +67,7 @@ offset_bottom = 525.0
 option_name = "TR_FPS_L"
 option_key = "fps"
 help_tip = "TR_FPS_L_DESC"
-available_values = [30.0, 60.0, 120.0, 144.0]
+available_values = [30.0, 60.0, 90.0, 120.0, 144.0]
 
 [node name="ips" parent="." instance=ExtResource("2")]
 offset_top = 540.0
@@ -75,4 +75,4 @@ offset_bottom = 590.0
 option_name = "TR_IPS_L"
 option_key = "ips"
 help_tip = "TR_IPS_L_DESC"
-available_values = [30.0, 60.0, 120.0, 144.0]
+available_values = [30.0, 60.0, 90.0, 120.0, 144.0]
