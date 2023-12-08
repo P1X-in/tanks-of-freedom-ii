@@ -13,7 +13,7 @@ ToF II follows in the footsteps of the original [Tanks of Freedom](https://githu
 Each voxel model was handcrafted in gorgeous, 32 colour pallete. Sound effects were made on real GameBoy hardware. The game is open-source and runs smoothly thanks to Godot Engine.
 
 ## Open Source Engine
-Game is made using [Godot Engine 4.1+](https://godotengine.org).
+Game is made using [Godot Engine 4.2+](https://godotengine.org).
 
 ## Official pages:
 - Previous game available at: [w84death.itch.io/tanks-of-freedom](https://w84death.itch.io/tanks-of-freedom)
@@ -28,7 +28,7 @@ Development progress can be tracked at [the trello board](https://trello.com/b/R
 ## Build from sources
 To get the latest version of the game, you'll need to use the source code and Godot Engine.
 
-- download & install [Godot Engine](https://godotengine.org/download) version 4.1.3 or newer
+- download & install [Godot Engine](https://godotengine.org/download) version 4.2 or newer
 - download our sources
   - download [master.zip](https://github.com/P1X-in/Tanks-of-Freedom-3-D/archive/refs/heads/master.zip) and unzip
   - or clone the repository using git
