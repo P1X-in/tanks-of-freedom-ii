@@ -243,10 +243,10 @@ func hide_unit_stats():
 	self.show_controls()
 
 func show_objectives():
-	self.objectives.show()
+	self.objectives.fade_in()
 
 func hide_objectives():
-	self.objectives.hide()
+	self.objectives.fade_out()
 
 func show_saves():
 	self.saves.show_saves(true)

@@ -12,6 +12,7 @@ func _execute(_metadata):
             self.board.ui.objectives.clear()
     else:
         self.board.ui.objectives.set_objective_slot(self.slot, self.text)
+        self.board.ui.objectives.flash()
 
 func _ingest_details(details):
     if details.has('slot'):

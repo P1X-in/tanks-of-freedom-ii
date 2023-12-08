@@ -332,7 +332,6 @@ offset_left = -40.0
 offset_bottom = 40.0
 
 [node name="objectives" parent="objectives" instance=ExtResource("15")]
-visible = false
 layout_mode = 2
 
 [node name="ap_depleted" type="MarginContainer" parent="."]
