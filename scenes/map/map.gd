@@ -27,6 +27,11 @@ var loader = preload("res://scenes/map/loader.gd").new(self)
 func _ready():
 	self.tile_box_space_size = self.camera.camera_space_size - self.TILE_SIZE
 
+	self.settings.changed.connect(_settings_changed)
+	for i in self.model.tiles.keys():
+		self.model.tiles[i].settings = self.settings
+		self.settings.changed.connect(self.model.tiles[i]._settings_changed)
+
 	if not self.settings.get_option("decorations"):
 		self.tiles_frames_anchor.hide()
 
@@ -137,3 +142,11 @@ func detach_unit(unit):
 func hide_invisible_tiles():
 	for i in self.model.tiles.keys():
 		self.model.tiles[i].apply_invisibility()
+
+
+func _settings_changed(key, new_value):
+	if key == "decorations":
+		if new_value:
+			self.tiles_frames_anchor.show()
+		else:
+			self.tiles_frames_anchor.hide()

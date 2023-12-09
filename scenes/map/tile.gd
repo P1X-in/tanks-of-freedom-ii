@@ -1,4 +1,6 @@
 
+var settings
+
 const EAST = "e"
 const WEST = "w"
 const NORTH = "n"
@@ -213,3 +215,52 @@ func apply_invisibility():
 	for fragment in self.fragments:
 		if fragment.is_present() and fragment.tile.is_invisible:
 			fragment.tile.hide_mesh() 
+
+
+func _settings_changed(key, _new_value):
+	var shadows = self.settings.get_option("shadows")
+	var dec_shadows = self.settings.get_option("dec_shadows")
+
+	if key == "shadows" or key == "dec_shadows":
+		if shadows:
+			if self.ground.is_present():
+				self.ground.tile.enable_shadow()
+
+			if self.terrain.is_present():
+				self.terrain.tile.enable_shadow()
+
+			if self.building.is_present():
+				self.building.tile.enable_shadow()
+
+			if self.unit.is_present():
+				self.unit.tile.enable_shadow()
+
+			if dec_shadows:
+				if self.frame.is_present():
+					self.frame.tile.enable_shadow()
+				if self.decoration.is_present():
+					self.decoration.tile.enable_shadow()
+			else:
+				if self.frame.is_present():
+					_disable_shadow(self.frame.tile, shadows)
+				if self.decoration.is_present():
+					_disable_shadow(self.decoration.tile, shadows)
+		else:
+			if self.ground.is_present():
+				_disable_shadow(self.ground.tile, shadows)
+			if self.frame.is_present():
+				_disable_shadow(self.frame.tile, shadows)
+			if self.decoration.is_present():
+				_disable_shadow(self.decoration.tile, shadows)
+			if self.terrain.is_present():
+				_disable_shadow(self.terrain.tile, shadows)
+			if self.building.is_present():
+				_disable_shadow(self.building.tile, shadows)
+			if self.unit.is_present():
+				_disable_shadow(self.unit.tile, shadows)
+
+func _disable_shadow(tile, shadow_setting):
+	if tile.shadow_override and shadow_setting:
+		return
+
+	tile.disable_shadow()

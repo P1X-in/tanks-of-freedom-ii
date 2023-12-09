@@ -2,6 +2,8 @@ extends Node
 
 const SETTINGS_FILE_PATH = "user://settings.json"
 
+signal changed(key, new_value)
+
 @onready var audio = $"/root/SimpleAudioLibrary"
 var filesystem = preload("res://scripts/services/filesystem.gd").new()
 var os_string = ""
@@ -62,6 +64,7 @@ func set_option(key, value):
 	self.save_settings_to_file()
 
 	self._apply_option(key)
+	self.changed.emit(key, value)
 
 func _apply_option(key):
 	if key == "fullscreen":
