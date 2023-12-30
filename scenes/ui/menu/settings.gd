@@ -9,6 +9,7 @@ extends Control
 @onready var video_button = $"widgets/tabs/video"
 @onready var audio_button = $"widgets/tabs/audio"
 @onready var gameplay_button = $"widgets/tabs/gameplay"
+@onready var controls_button = $"widgets/tabs/controls"
 @onready var back_button = $"widgets/back_button"
 
 @onready var general_panel = $"widgets/boxes/settings_general"
@@ -44,6 +45,7 @@ func show_panel():
 	self.audio_panel.hide()
 	self.gameplay_panel.hide()
 	self.multiplayer_panel.hide()
+	self.controls_button.show()
 	self.animations.play("show")
 	self.set_process_input(true)
 	await self.get_tree().create_timer(0.1).timeout
@@ -53,6 +55,9 @@ func hide_panel():
 	self.hide_help()
 	self.animations.play("hide")
 	self.set_process_input(false)
+	
+func hide_controls_button():
+	self.controls_button.hide()
 
 func _on_general_pressed():
 	self.general_panel.show()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dg2dljfus8ij1"]
+[gd_scene load_steps=20 format=3 uid="uid://dg2dljfus8ij1"]
 
 [ext_resource type="Script" path="res://scenes/board/ui/ui.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://5bep6mdci41m" path="res://scenes/ui/radial/radial.tscn" id="2"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://0bbskwqb2iu4" path="res://scenes/ui/board/ap_depleted.tscn" id="16"]
 [ext_resource type="PackedScene" uid="uid://4fm2h6kocq46" path="res://scenes/ui/save/saves.tscn" id="17"]
 [ext_resource type="PackedScene" uid="uid://crv1ageml0d4g" path="res://scenes/ui/menu/controls/game.tscn" id="18"]
+[ext_resource type="PackedScene" uid="uid://b6crhl6g0ory" path="res://scenes/ui/menu/settings.tscn" id="19_xcys2"]
 
 [node name="ui" type="Control"]
 layout_mode = 3
@@ -373,4 +374,21 @@ mouse_filter = 2
 
 [node name="game" parent="controls" instance=ExtResource("18")]
 visible = false
+layout_mode = 2
+
+[node name="settings" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="settings" parent="settings" instance=ExtResource("19_xcys2")]
 layout_mode = 2

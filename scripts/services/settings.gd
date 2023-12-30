@@ -74,10 +74,7 @@ func _apply_option(key):
 	elif key == "music":
 		self.audio.music_enabled = self.settings[key]
 		if self.settings[key]:
-			if self.audio.is_playing("menu") or self.audio.is_playing("intro"):
-				pass
-			else:
-				self.audio.track("menu")
+			self.audio.restart_track()
 		else:
 			self.audio.stop()
 	elif key == "vol_master":

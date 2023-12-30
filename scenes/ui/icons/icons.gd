@@ -11,6 +11,7 @@ var book = preload("res://scenes/ui/icons/book.tscn")
 var cross = preload("res://scenes/ui/icons/cross.tscn")
 var arrow_left = preload("res://scenes/ui/icons/arrow_left.tscn")
 var arrow_right = preload("res://scenes/ui/icons/arrow_right.tscn")
+var cog = preload("res://scenes/ui/icons/cog.tscn")
 
 var tof = preload("res://scenes/ui/icons/tof.tscn")
 

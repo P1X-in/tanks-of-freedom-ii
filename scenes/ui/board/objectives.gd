@@ -41,9 +41,6 @@ func flash():
 func fade_in():
 	if not self.background.is_visible():
 		self.animations.play("show")
-		print("not working?")
-	else:
-		print("what")
 
 func fade_out():
 	if self.background.is_visible():

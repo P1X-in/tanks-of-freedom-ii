@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/gui/icons/cog.png" type="Texture2D" id=1]
+
+[node name="cog" type="Sprite2D"]
+texture = ExtResource( 1 )

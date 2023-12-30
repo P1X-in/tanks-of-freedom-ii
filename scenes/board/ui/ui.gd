@@ -15,6 +15,7 @@ extends Control
 @onready var objectives = $"objectives/objectives"
 @onready var ap_depleted = $"ap_depleted/ap_depleted"
 @onready var saves = $"saves/saves"
+@onready var settings_panel = $"settings/settings"
 @onready var controls = $"controls/game"
 
 # Tile highlight
@@ -46,6 +47,7 @@ var icons = preload("res://scenes/ui/icons/icons.gd").new()
 
 func _ready():
 	self.show_controls()
+	self.settings.changed.connect(self._on_settings_changed)
 
 func is_popup_open():
 	if self.summary.is_visible():
@@ -58,6 +60,9 @@ func is_popup_open():
 		return true
 
 	if self.saves.is_visible():
+		return true
+
+	if self.settings_panel.is_visible():
 		return true
 
 	return false
@@ -260,3 +265,17 @@ func show_controls():
 
 func hide_controls():
 	self.controls.hide()
+
+func show_settings():
+	self.settings_panel.show_panel()
+	self.settings_panel.hide_controls_button()
+
+func hide_settings():
+	self.settings_panel.hide_panel()
+
+func _on_settings_changed(key, new_value):
+	if key == "show_controls":
+		if new_value:
+			self.show_controls()
+		else:
+			self.hide_controls()

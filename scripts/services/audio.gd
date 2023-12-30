@@ -6,6 +6,7 @@ const BUS_MUSIC = "Music"
 var samples = {}
 var soundtracks = {}
 var current_track = null
+var _last_requested_track = null
 
 var master_switch = false
 var sounds_enabled = true
@@ -41,10 +42,12 @@ func play(sample_name):
 	self.samples[sample_name].play()
 
 func track(track_name):
-	if not self.master_switch or not self.music_enabled:
+	if not self.soundtracks.has(track_name):
 		return
 
-	if not self.soundtracks.has(track_name):
+	self._last_requested_track = self.soundtracks[track_name]
+
+	if not self.master_switch or not self.music_enabled:
 		return
 
 	self.stop()
@@ -105,3 +108,11 @@ func register_track(track_name, stream):
 	new_track.set_bus(self.BUS_MUSIC)
 
 	self.soundtracks[track_name] = new_track
+
+func restart_track():
+	if not self.master_switch or not self.music_enabled:
+		return
+
+	if self._last_requested_track != null and not self._last_requested_track.is_playing():
+		self.current_track = self._last_requested_track
+		self._last_requested_track.play()

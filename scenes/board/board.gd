@@ -41,6 +41,7 @@ var initial_hq_cam_skipped = false
 var mouse_click_position = null
 
 func _ready():
+	self.ui.settings_panel.bind_menu(self)
 	self.set_up_map()
 	self.set_up_board()
 
@@ -355,6 +356,7 @@ func setup_radial_menu(context_object=null):
 			self.ui.radial.clear_field_disabled(2)
 		self.ui.radial.set_field(self.ui.icons.quit.instantiate(), "TR_MAIN_MENU", 4, self, "main_menu")
 		self.ui.radial.set_field(self.ui.icons.cross.instantiate(), "TR_CLOSE", 6, self, "toggle_radial_menu")
+		self.ui.radial.set_field(self.ui.icons.cog.instantiate(), "TR_SETTINGS", 7, self, "open_settings")
 		self.ui.show_objectives()
 	else:
 		_setup_radial_menu_with_abilities(context_object)
@@ -860,3 +862,16 @@ func _restore_saved_state(save_data):
 func perform_autosave():
 	self.ui.saves.board = self
 	self.ui.saves.perform_autosave()
+
+func open_settings():
+	self.ui.hide_radial()
+	self.ui.hide_objectives()
+	self.ui.show_settings()
+
+func close_settings():
+	self.ui.hide_settings()
+	self.map.camera.paused = false
+	self.ai._ai_paused = false
+
+	if not self.state.is_current_player_ai():
+		self.map.tile_box.set_visible(true)
