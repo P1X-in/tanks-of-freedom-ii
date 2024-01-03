@@ -37,6 +37,7 @@ var settings = {
 	"last_used_port": "3939",
 	"game_port": 3939,
 	"discovery_port": 3940,
+	"edge_pan": true
 }
 
 

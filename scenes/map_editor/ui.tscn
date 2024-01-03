@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/map_editor/ui.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://k2hh8e6861ja" path="res://scenes/map_editor/tile_view.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/ui/radial/radial.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://5bep6mdci41m" path="res://scenes/ui/radial/radial.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://b1tod34kr8cro" path="res://scenes/ui/map_picker/picker.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://b68vtard4p6s3" path="res://scenes/ui/minimap/minimap.tscn" id="5"]
 [ext_resource type="Theme" path="res://assets/gui/ui_theme.tres" id="6"]
@@ -184,6 +184,56 @@ theme_override_constants/margin_bottom = 0
 [node name="label" type="Label" parent="map_name/inner"]
 layout_mode = 2
 
+[node name="edge_pan" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="left" type="Control" parent="edge_pan"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 30.0
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="right" type="Control" parent="edge_pan"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -29.9999
+offset_right = 0.00012207
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="top" type="Control" parent="edge_pan"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = 0.00012207
+offset_bottom = 30.0
+grow_horizontal = 2
+mouse_filter = 1
+
+[node name="bottom" type="Control" parent="edge_pan"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 0.00012207
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+
 [node name="tile" type="MarginContainer" parent="."]
 layout_mode = 0
 anchor_left = 1.0
@@ -226,10 +276,10 @@ is_side_tile = true
 position = Vector2(0, -30)
 
 [node name="animations" type="AnimationPlayer" parent="tile"]
-speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_gsio6")
 }
+speed_scale = 4.0
 
 [node name="radial" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -284,7 +334,7 @@ grow_vertical = 0
 scale = Vector2(0.5, 0.5)
 
 [node name="animations" type="AnimationPlayer" parent="minimap"]
-speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_46jqh")
 }
+speed_scale = 4.0

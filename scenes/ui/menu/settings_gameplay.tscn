@@ -39,3 +39,10 @@ offset_bottom = 265.0
 option_name = "TR_NOT_AP_SP"
 option_key = "notify_ap_spent"
 help_tip = "TR_NOT_AP_SP_DESC"
+
+[node name="edge_pan" parent="." instance=ExtResource("2")]
+offset_top = 280.0
+offset_bottom = 330.0
+option_name = "TR_EDGE_PAN"
+option_key = "edge_pan"
+help_tip = "TR_EDGE_PAN_DESC"

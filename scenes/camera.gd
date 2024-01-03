@@ -82,6 +82,8 @@ var snap_tile_box_to_camera = true
 var mouse_drag = false
 var mouse_click_position = null
 
+var camera_pan = Vector2(0, 0)
+
 @onready var settings = $"/root/Settings"
 
 func _ready():
@@ -269,6 +271,11 @@ func process_movement_input(delta):
 
 	axis_value.x = -Input.get_joy_axis(self.device_id, MOVEMENT_AXIS_X)
 	axis_value.y = -Input.get_joy_axis(self.device_id, MOVEMENT_AXIS_Y)
+
+	if self.camera_pan.x != 0:
+		axis_value.x = camera_pan.x
+	if self.camera_pan.y != 0:
+		axis_value.y = camera_pan.y
 
 	if self.camera_mode == self.MODE_FREE:
 		axis_value = axis_value.rotated(deg_to_rad(-self.camera_angle_y))
@@ -462,4 +469,16 @@ func restore_from_state(state):
 		self.camera_distance = state[3]
 		self.tof_camera_distance = state[4]
 		self.aw_camera_distance = state[5]
+
+func _on_edge_pan(direction_vector):
+	if self.mouse_drag:
+		return
+
+	if not self.settings.get_option("edge_pan"):
+		return
+
+	if direction_vector[0] != null:
+		self.camera_pan.x = direction_vector[0]
+	if direction_vector[1] != null:
+		self.camera_pan.y = direction_vector[1]
 

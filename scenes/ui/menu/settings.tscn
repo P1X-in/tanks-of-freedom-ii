@@ -189,9 +189,9 @@ vertical_alignment = 1
 
 [node name="video" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
-offset_top = 60.0
+offset_top = 180.0
 offset_right = 190.0
-offset_bottom = 100.0
+offset_bottom = 220.0
 texture_normal = ExtResource("8_ld2fy")
 texture_pressed = ExtResource("9_3yekk")
 texture_hover = ExtResource("10_o8msu")
@@ -211,9 +211,9 @@ vertical_alignment = 1
 
 [node name="audio" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
-offset_top = 120.0
+offset_top = 240.0
 offset_right = 190.0
-offset_bottom = 160.0
+offset_bottom = 280.0
 texture_normal = ExtResource("8_ld2fy")
 texture_pressed = ExtResource("9_3yekk")
 texture_hover = ExtResource("10_o8msu")
@@ -233,9 +233,9 @@ vertical_alignment = 1
 
 [node name="gameplay" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
-offset_top = 180.0
+offset_top = 60.0
 offset_right = 190.0
-offset_bottom = 220.0
+offset_bottom = 100.0
 texture_normal = ExtResource("8_ld2fy")
 texture_pressed = ExtResource("9_3yekk")
 texture_hover = ExtResource("10_o8msu")
@@ -255,9 +255,9 @@ vertical_alignment = 1
 
 [node name="multiplayer" type="TextureButton" parent="widgets/tabs"]
 layout_mode = 0
-offset_top = 180.0
+offset_top = 120.0
 offset_right = 190.0
-offset_bottom = 220.0
+offset_bottom = 160.0
 texture_normal = ExtResource("8_ld2fy")
 texture_pressed = ExtResource("9_3yekk")
 texture_hover = ExtResource("10_o8msu")
@@ -405,10 +405,10 @@ theme_override_fonts/font = ExtResource("2_6psbf")
 autowrap_mode = 3
 
 [node name="animations" type="AnimationPlayer" parent="."]
-speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_rhn4h")
 }
+speed_scale = 4.0
 
 [connection signal="focus_entered" from="widgets/tabs/general" to="." method="hide_help"]
 [connection signal="pressed" from="widgets/tabs/general" to="." method="_on_general_pressed"]

@@ -43,6 +43,13 @@ extends Control
 @onready var ab3_cd = $"tile_highlight/abilities/ab3/disabled/cd"
 var ability_icons = [null, null, null]
 
+# Edge pan
+@onready var edge_pan_left = $"edge_pan/left"
+@onready var edge_pan_right = $"edge_pan/right"
+@onready var edge_pan_top = $"edge_pan/top"
+@onready var edge_pan_bottom = $"edge_pan/bottom"
+
+
 var icons = preload("res://scenes/ui/icons/icons.gd").new()
 
 func _ready():

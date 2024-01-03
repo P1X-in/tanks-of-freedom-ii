@@ -32,6 +32,18 @@ func _ready():
 	self.map.builder.editor = self
 	self.map.tiles_frames_anchor.show()
 
+	self.ui.edge_pan_left.mouse_entered.connect(self.map.camera._on_edge_pan.bind([1, null]))
+	self.ui.edge_pan_left.mouse_exited.connect(self.map.camera._on_edge_pan.bind([0, null]))
+
+	self.ui.edge_pan_right.mouse_entered.connect(self.map.camera._on_edge_pan.bind([-1, null]))
+	self.ui.edge_pan_right.mouse_exited.connect(self.map.camera._on_edge_pan.bind([0, null]))
+
+	self.ui.edge_pan_top.mouse_entered.connect(self.map.camera._on_edge_pan.bind([null, 1]))
+	self.ui.edge_pan_top.mouse_exited.connect(self.map.camera._on_edge_pan.bind([null, 0]))
+
+	self.ui.edge_pan_bottom.mouse_entered.connect(self.map.camera._on_edge_pan.bind([null, -1]))
+	self.ui.edge_pan_bottom.mouse_exited.connect(self.map.camera._on_edge_pan.bind([null, 0]))
+
 
 func _physics_process(_delta):
 	self.update_ui_position()

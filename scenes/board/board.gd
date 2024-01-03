@@ -41,7 +41,7 @@ var initial_hq_cam_skipped = false
 var mouse_click_position = null
 
 func _ready():
-	self.ui.settings_panel.bind_menu(self)
+	self.set_up_ui()
 	self.set_up_map()
 	self.set_up_board()
 
@@ -104,6 +104,7 @@ func _input(event):
 			if event.is_action_pressed("ui_cancel") or event.is_action_pressed("editor_menu") or event.is_action_pressed("game_context"):
 				self.audio.play("menu_back")
 				self.ui.hide_unit_stats()
+				self.map.camera.paused = false
 
 func _can_current_player_perform_actions():
 	return not self.state.is_current_player_ai()
@@ -127,6 +128,21 @@ func hover_tile():
 			if self.should_draw_move_path(tile):
 				var path = self.movement_markers.get_path_to_tile(tile)
 				self.path_markers.draw_path(path)
+
+func set_up_ui():
+	self.ui.settings_panel.bind_menu(self)
+
+	self.ui.edge_pan_left.mouse_entered.connect(self.map.camera._on_edge_pan.bind([1, null]))
+	self.ui.edge_pan_left.mouse_exited.connect(self.map.camera._on_edge_pan.bind([0, null]))
+
+	self.ui.edge_pan_right.mouse_entered.connect(self.map.camera._on_edge_pan.bind([-1, null]))
+	self.ui.edge_pan_right.mouse_exited.connect(self.map.camera._on_edge_pan.bind([0, null]))
+
+	self.ui.edge_pan_top.mouse_entered.connect(self.map.camera._on_edge_pan.bind([null, 1]))
+	self.ui.edge_pan_top.mouse_exited.connect(self.map.camera._on_edge_pan.bind([null, 0]))
+
+	self.ui.edge_pan_bottom.mouse_entered.connect(self.map.camera._on_edge_pan.bind([null, -1]))
+	self.ui.edge_pan_bottom.mouse_exited.connect(self.map.camera._on_edge_pan.bind([null, 0]))
 
 
 func set_up_map():
@@ -721,6 +737,7 @@ func open_context_panel():
 		tile_preview.set_side_material(self.map.templates.get_side_material(new_side, material_type))
 
 		self.ui.show_unit_stats(tile.unit.tile, tile_preview, self)
+		self.map.camera.paused = true
 
 
 func end_game(winner):
