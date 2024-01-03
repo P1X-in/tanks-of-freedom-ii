@@ -32,6 +32,8 @@ func _ready():
 	self.map.builder.editor = self
 	self.map.tiles_frames_anchor.show()
 
+	self.ui.radial.close_requested.connect(self.toggle_radial_menu)
+
 	self.ui.edge_pan_left.mouse_entered.connect(self.map.camera._on_edge_pan.bind([1, null]))
 	self.ui.edge_pan_left.mouse_exited.connect(self.map.camera._on_edge_pan.bind([0, null]))
 
@@ -278,7 +280,7 @@ func switch_to_next_type():
 
 
 func toggle_radial_menu(context_object=null):
-	if self.radial_abilities.is_object_without_abilities(self, context_object):
+	if self.radial_abilities.is_object_without_abilities(self, context_object, true):
 		return
 
 	if not self.ui.is_radial_open():

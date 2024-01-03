@@ -98,7 +98,7 @@ func fill_radial_with_building_abilities_bans(editor, radial, building):
 			label += "\n" + str(ability.ap_cost) + " " + tr("TR_AP")
 			radial.set_field(icon, label, ability.index, self, "_ban_ability", [ability, radial])
 			if ability.disabled:
-				radial.set_field_disabled(ability.index, "X")
+				radial.set_field_disabled(ability.index, "X", true)
 
 func _ban_ability(args):
 	var ability = args[0]
@@ -107,6 +107,6 @@ func _ban_ability(args):
 	ability.disabled = not ability.disabled
 
 	if ability.disabled:
-		radial.set_field_disabled(ability.index, "X")
+		radial.set_field_disabled(ability.index, "X", true)
 	else:
 		radial.clear_field_disabled(ability.index)

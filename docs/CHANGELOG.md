@@ -8,6 +8,8 @@
 - Added screen edge camera pan
 - Added camera drag with righ mouse button
 - Added 90 FPS option for Deck OLED
+- Radial menu now closes when clicked away
+- Fixed a bug preventing units from being unbanned in buildings
 
 ### 0.5.0-alpha
 - Ported game project to Godot Engine 4

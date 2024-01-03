@@ -16,6 +16,7 @@ var focused = false
 var bound_object = null
 var bound_method = null
 var bound_args = []
+var ignore_disabled = false
 
 var radial
 var index
@@ -63,6 +64,7 @@ func clear():
 	self.bound_object = null
 	self.bound_method = null
 	self.bound_args = []
+	self.ignore_disabled = false
 
 func focus():
 	self.background.set_modulate(self.full_background)
@@ -78,7 +80,7 @@ func is_assigned():
 	return self.label != ""
 
 func execute_bound_method():
-	if self.disabled.is_visible():
+	if self.disabled.is_visible() and not self.ignore_disabled:
 		return
 
 	if self.bound_object != null:

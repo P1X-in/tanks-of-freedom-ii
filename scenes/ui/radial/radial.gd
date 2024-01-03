@@ -1,5 +1,7 @@
 extends Node2D
 
+signal close_requested
+
 @onready var audio = $"/root/SimpleAudioLibrary"
 @onready var animations = $"animations"
 @onready var label_node = $"label"
@@ -61,7 +63,10 @@ func _input(event):
 			self.unfocus_field()
 
 	if event.is_action_released("mouse_click"):
-		self.execute_focused_field()
+		if self.is_field_focused():
+			self.execute_focused_field()
+		else:
+			self.close_requested.emit()
 
 func show_menu():
 	self.animations.play("show")
@@ -75,8 +80,9 @@ func hide_menu():
 func set_field(icon, new_label, index, new_bound_object=null, new_bound_method=null, new_bound_args=[]):
 	self.fields[index].set_field(icon, new_label, new_bound_object, new_bound_method, new_bound_args)
 
-func set_field_disabled(index, cooldown=null):
+func set_field_disabled(index, cooldown=null, ignore_disabled_state=false):
 	self.fields[index].set_disabled(cooldown)
+	self.fields[index].ignore_disabled = ignore_disabled_state
 
 func clear_field_disabled(index):
 	self.fields[index].clear_disabled()
@@ -116,9 +122,11 @@ func show_label(new_label):
 func hide_label():
 	self.label_node.hide()
 
+func is_field_focused():
+	return self.focused_field != null
 
 func execute_focused_field():
-	if self.focused_field == null:
+	if not self.is_field_focused():
 		return
 
 	self.audio.play("menu_click")

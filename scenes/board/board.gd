@@ -138,6 +138,7 @@ func hover_tile():
 
 func set_up_ui():
 	self.ui.settings_panel.bind_menu(self)
+	self.ui.radial.close_requested.connect(self.toggle_radial_menu)
 
 	self.ui.edge_pan_left.mouse_entered.connect(self.map.camera._on_edge_pan.bind([1, null]))
 	self.ui.edge_pan_left.mouse_exited.connect(self.map.camera._on_edge_pan.bind([0, null]))
