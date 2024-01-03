@@ -1,6 +1,14 @@
 # Tanks of Freedom 3D
 ## Changelog
 
+### 0.6.0-alpha
+- Updated Godot Engine to 4.2
+- Settings are now available during gameplay
+  - Some settings that required map load to apply now apply instantly
+- Added screen edge camera pan
+- Added camera drag with righ mouse button
+- Added 90 FPS option for Deck OLED
+
 ### 0.5.0-alpha
 - Ported game project to Godot Engine 4
 - New menus and UI look

@@ -61,7 +61,13 @@ func _input(event):
 				self.select_tile(self.map.tile_box_position)
 
 			if event.is_action_pressed("ui_cancel"):
-				self.unselect_action()
+				if event is InputEventMouseButton:
+					self.mouse_click_position = event.position
+
+			if event.is_action_released("ui_cancel"):
+				if (self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD) or not event is InputEventMouseButton:
+					self.unselect_action()
+				self.mouse_click_position = null
 
 			if event.is_action_pressed("end_turn"):
 				self.start_ending_turn()
@@ -70,6 +76,7 @@ func _input(event):
 
 			if event.is_action_pressed("mouse_click"):
 				self.mouse_click_position = event.position
+
 			if event.is_action_released("mouse_click"):
 				if self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD:
 					self.select_tile(self.map.tile_box_position)
