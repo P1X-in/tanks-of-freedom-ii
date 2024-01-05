@@ -6,12 +6,15 @@ var quit = preload("res://scenes/ui/icons/quit.tscn")
 var trash = preload("res://scenes/ui/icons/trash.tscn")
 var tick = preload("res://scenes/ui/icons/tick.tscn")
 var star = preload("res://scenes/ui/icons/star.tscn")
+var star2 = preload("res://scenes/ui/icons/star2.tscn")
 var info = preload("res://scenes/ui/icons/info.tscn")
 var book = preload("res://scenes/ui/icons/book.tscn")
 var cross = preload("res://scenes/ui/icons/cross.tscn")
 var arrow_left = preload("res://scenes/ui/icons/arrow_left.tscn")
 var arrow_right = preload("res://scenes/ui/icons/arrow_right.tscn")
 var cog = preload("res://scenes/ui/icons/cog.tscn")
+var hourglass = preload("res://scenes/ui/icons/hourglass.tscn")
+var coin = preload("res://scenes/ui/icons/coin.tscn")
 
 var tof = preload("res://scenes/ui/icons/tof.tscn")
 
@@ -48,11 +51,15 @@ var named_icons = {
     "trash" : self.trash,
     "tick" : self.tick,
     "star" : self.star,
+    "star2" : self.star2,
     "info" : self.info,
     "book" : self.book,
     "cross" : self.cross,
     "arrow_left" : self.arrow_left,
     "arrow_right" : self.arrow_right,
+    "cog" : self.cog,
+    "hourglass" : self.hourglass,
+    "coin" : self.coin,
 
     "tof" : self.tof,
 

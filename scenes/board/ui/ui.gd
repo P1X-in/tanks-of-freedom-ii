@@ -49,6 +49,8 @@ var ability_icons = [null, null, null]
 @onready var edge_pan_top = $"edge_pan/top"
 @onready var edge_pan_bottom = $"edge_pan/bottom"
 
+@onready var hover_menu = $"buttons/hover_menu"
+
 
 var icons = preload("res://scenes/ui/icons/icons.gd").new()
 

@@ -109,9 +109,7 @@ func _input(event):
 
 		if self.ui.unit_stats.is_visible():
 			if event.is_action_pressed("ui_cancel") or event.is_action_pressed("editor_menu") or event.is_action_pressed("game_context"):
-				self.audio.play("menu_back")
-				self.ui.hide_unit_stats()
-				self.map.camera.paused = false
+				self.close_context_panel()
 
 func _can_current_player_perform_actions():
 	return not self.state.is_current_player_ai()
@@ -138,6 +136,8 @@ func hover_tile():
 
 func set_up_ui():
 	self.ui.settings_panel.bind_menu(self)
+	self.ui.hover_menu.board = self
+	self.ui.unit_stats.board = self
 	self.ui.radial.close_requested.connect(self.toggle_radial_menu)
 
 	self.ui.edge_pan_left.mouse_entered.connect(self.map.camera._on_edge_pan.bind([1, null]))
@@ -250,6 +250,9 @@ func _manage_ai_start():
 
 func select_tile(tile_position):
 	if self.map.camera.camera_in_transit or self.map.camera.script_operated:
+		return
+
+	if self.ui.hover_menu.hover_stack > 0:
 		return
 
 	var tile = self.map.model.get_tile(tile_position)
@@ -405,6 +408,7 @@ func show_unit_interaction_markers():
 func show_contextual_select(open_unit_abilities=false):
 	self.place_selection_marker()
 	self.movement_markers.reset()
+	self.interaction_markers.reset()
 	self.path_markers.reset()
 
 	if self.selected_tile.unit.is_present():
@@ -728,6 +732,9 @@ func update_tile_highlight(tile):
 
 func open_context_panel():
 	var tile = self.map.model.get_tile(self.map.tile_box_position)
+	self._open_context_panel_for_tile(tile)
+
+func _open_context_panel_for_tile(tile):
 	if tile != null:
 		if not tile.unit.is_present():
 			return
@@ -746,6 +753,15 @@ func open_context_panel():
 
 		self.ui.show_unit_stats(tile.unit.tile, tile_preview, self)
 		self.map.camera.paused = true
+
+func _open_context_panel_for_active_tile():
+	if self.selected_tile != null:
+		self._open_context_panel_for_tile(self.selected_tile)
+
+func close_context_panel():
+	self.audio.play("menu_back")
+	self.ui.hide_unit_stats()
+	self.map.camera.paused = false
 
 
 func end_game(winner):

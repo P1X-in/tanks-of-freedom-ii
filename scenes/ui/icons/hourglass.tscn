@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://brl2hwxvkhpsm"]
+
+[ext_resource type="Texture2D" uid="uid://d0b5aqyxxpkse" path="res://assets/gui/icons/hourglass.png" id="1_ect1x"]
+
+[node name="hourglass" type="Sprite2D"]
+texture = ExtResource("1_ect1x")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dg2dljfus8ij1"]
+[gd_scene load_steps=21 format=3 uid="uid://dg2dljfus8ij1"]
 
 [ext_resource type="Script" path="res://scenes/board/ui/ui.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://5bep6mdci41m" path="res://scenes/ui/radial/radial.tscn" id="2"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://4fm2h6kocq46" path="res://scenes/ui/save/saves.tscn" id="17"]
 [ext_resource type="PackedScene" uid="uid://crv1ageml0d4g" path="res://scenes/ui/menu/controls/game.tscn" id="18"]
 [ext_resource type="PackedScene" uid="uid://b6crhl6g0ory" path="res://scenes/ui/menu/settings.tscn" id="19_xcys2"]
+[ext_resource type="PackedScene" uid="uid://ce08h2jnhhsh4" path="res://scenes/ui/board/hover_menu.tscn" id="20_f08si"]
 
 [node name="ui" type="Control"]
 layout_mode = 3
@@ -441,4 +442,20 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="settings" parent="settings" instance=ExtResource("19_xcys2")]
+layout_mode = 2
+
+[node name="buttons" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -120.0
+offset_right = 0.00012207
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="hover_menu" parent="buttons" instance=ExtResource("20_f08si")]
 layout_mode = 2

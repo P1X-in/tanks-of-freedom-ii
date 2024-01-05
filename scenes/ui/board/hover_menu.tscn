@@ -1,0 +1,234 @@
+[gd_scene load_steps=13 format=3 uid="uid://ce08h2jnhhsh4"]
+
+[ext_resource type="Script" path="res://scenes/ui/board/hover_menu.gd" id="1_j6ss3"]
+[ext_resource type="Texture2D" uid="uid://b5k32hj4wy5tb" path="res://assets/gui/editor/circle_white.png" id="2_0uiag"]
+[ext_resource type="Texture2D" uid="uid://biu2u7rf4o1vh" path="res://assets/gui/editor/circle.png" id="3_nd642"]
+[ext_resource type="PackedScene" uid="uid://npd40qtkohuq" path="res://scenes/ui/icons/coin.tscn" id="4_5ny1k"]
+[ext_resource type="PackedScene" uid="uid://brl2hwxvkhpsm" path="res://scenes/ui/icons/hourglass.tscn" id="4_d3xti"]
+[ext_resource type="PackedScene" uid="uid://cpeera0162bio" path="res://scenes/ui/icons/star2.tscn" id="5_m6cda"]
+[ext_resource type="PackedScene" path="res://scenes/ui/icons/info.tscn" id="5_ocuec"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t03pp"]
+radius = 50.0
+
+[sub_resource type="Animation" id="Animation_xciiy"]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2xg8h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ic3ke"]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kefv0"]
+_data = {
+"RESET": SubResource("Animation_2xg8h"),
+"hide": SubResource("Animation_ic3ke"),
+"show": SubResource("Animation_xciiy")
+}
+
+[node name="hover_menu" type="Control"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+mouse_filter = 1
+script = ExtResource("1_j6ss3")
+
+[node name="turn_button" type="Node2D" parent="."]
+position = Vector2(60, 60)
+
+[node name="white" type="Sprite2D" parent="turn_button"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_0uiag")
+
+[node name="background" type="Sprite2D" parent="turn_button"]
+texture = ExtResource("3_nd642")
+
+[node name="icon_anchor" type="Node2D" parent="turn_button"]
+
+[node name="hourglass" parent="turn_button/icon_anchor" instance=ExtResource("4_d3xti")]
+
+[node name="mouse_click" type="Area2D" parent="turn_button"]
+
+[node name="collision" type="CollisionShape2D" parent="turn_button/mouse_click"]
+shape = SubResource("CircleShape2D_t03pp")
+
+[node name="build_button" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -120.0
+offset_bottom = 120.0
+mouse_filter = 1
+
+[node name="button_anchor" type="Node2D" parent="build_button"]
+position = Vector2(60, 60)
+
+[node name="white" type="Sprite2D" parent="build_button/button_anchor"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_0uiag")
+
+[node name="background" type="Sprite2D" parent="build_button/button_anchor"]
+texture = ExtResource("3_nd642")
+
+[node name="icon_anchor" type="Node2D" parent="build_button/button_anchor"]
+
+[node name="coin" parent="build_button/button_anchor/icon_anchor" instance=ExtResource("4_5ny1k")]
+
+[node name="mouse_click" type="Area2D" parent="build_button/button_anchor"]
+
+[node name="collision" type="CollisionShape2D" parent="build_button/button_anchor/mouse_click"]
+shape = SubResource("CircleShape2D_t03pp")
+
+[node name="stats_button" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -120.0
+offset_bottom = 120.0
+mouse_filter = 1
+
+[node name="button_anchor" type="Node2D" parent="stats_button"]
+position = Vector2(60, 60)
+
+[node name="white" type="Sprite2D" parent="stats_button/button_anchor"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_0uiag")
+
+[node name="background" type="Sprite2D" parent="stats_button/button_anchor"]
+texture = ExtResource("3_nd642")
+
+[node name="icon_anchor" type="Node2D" parent="stats_button/button_anchor"]
+
+[node name="info" parent="stats_button/button_anchor/icon_anchor" instance=ExtResource("5_ocuec")]
+
+[node name="mouse_click" type="Area2D" parent="stats_button/button_anchor"]
+
+[node name="collision" type="CollisionShape2D" parent="stats_button/button_anchor/mouse_click"]
+shape = SubResource("CircleShape2D_t03pp")
+
+[node name="skills_button" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -240.0
+offset_right = -120.0
+offset_bottom = 120.0
+mouse_filter = 1
+
+[node name="button_anchor" type="Node2D" parent="skills_button"]
+position = Vector2(60, 60)
+
+[node name="white" type="Sprite2D" parent="skills_button/button_anchor"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_0uiag")
+
+[node name="background" type="Sprite2D" parent="skills_button/button_anchor"]
+texture = ExtResource("3_nd642")
+
+[node name="icon_anchor" type="Node2D" parent="skills_button/button_anchor"]
+
+[node name="star" parent="skills_button/button_anchor/icon_anchor" instance=ExtResource("5_m6cda")]
+
+[node name="mouse_click" type="Area2D" parent="skills_button/button_anchor"]
+
+[node name="collision" type="CollisionShape2D" parent="skills_button/button_anchor/mouse_click"]
+shape = SubResource("CircleShape2D_t03pp")
+
+[node name="animations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kefv0")
+}
+speed_scale = 4.0
+
+[connection signal="mouse_entered" from="turn_button/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["turn"]]
+[connection signal="mouse_exited" from="turn_button/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["turn"]]
+[connection signal="mouse_entered" from="build_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["build"]]
+[connection signal="mouse_exited" from="build_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["build"]]
+[connection signal="mouse_entered" from="stats_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["stats"]]
+[connection signal="mouse_exited" from="stats_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["stats"]]
+[connection signal="mouse_entered" from="skills_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["skills"]]
+[connection signal="mouse_exited" from="skills_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["skills"]]

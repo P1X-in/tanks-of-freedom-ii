@@ -34,6 +34,8 @@ extends Node2D
 
 @onready var audio = $"/root/SimpleAudioLibrary"
 
+var board = null
+
 var icons = [null, null, null]
 
 func show_panel():
@@ -59,7 +61,7 @@ func reset_view():
 	self.icons = [null, null, null]
 
 
-func bind_unit(unit, tile_preview, board):
+func bind_unit(unit, tile_preview, board_object):
 	self.reset_view()
 
 	var stats = unit.get_stats_with_modifiers()
@@ -80,23 +82,23 @@ func bind_unit(unit, tile_preview, board):
 			self.level2.show()
 		3:
 			self.level3.show()
-	self.show_active_abilities(unit, board)
+	self.show_active_abilities(unit, board_object)
 	self.show_passive_ability(unit)
 
-func show_active_abilities(unit, board):
+func show_active_abilities(unit, board_object):
 	if not unit.has_active_ability():
 		return
 
 	var index = 0
 
 	for ability in unit.active_abilities:
-		if ability.is_visible(board):
+		if ability.is_visible(board_object):
 			if index > 2:
 				return
-			self.bind_ability(index, ability, board)
+			self.bind_ability(index, ability, board_object)
 			index += 1
 
-func bind_ability(index, ability, board):
+func bind_ability(index, ability, board_object):
 	var boxes = [
 		self.ab1,
 		self.ab2,
@@ -119,7 +121,7 @@ func bind_ability(index, ability, board):
 	]
 
 	boxes[index].show()
-	var icon = board.ui.icons.get_named_icon(ability.named_icon)
+	var icon = board_object.ui.icons.get_named_icon(ability.named_icon)
 	if icon != null:
 		anchors[index].add_child(icon)
 	self.icons[index] = icon
@@ -136,5 +138,5 @@ func _back_grab_focus():
 	self.back_button.grab_focus()
 
 func _on_back_button_pressed():
-	self.hide()
-	self.audio.play("menu_back")
+	if self.board != null:
+		self.board.close_context_panel()

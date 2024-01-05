@@ -149,7 +149,7 @@ offset_right = 600.0
 offset_bottom = 350.0
 
 [node name="animations" type="AnimationPlayer" parent="."]
-speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_e0gpw")
 }
+speed_scale = 4.0

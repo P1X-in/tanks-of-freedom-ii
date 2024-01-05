@@ -15,6 +15,7 @@ var fields = []
 var focused_field = null
 
 var mouse_mode = false
+var opening = false
 
 func _ready():
 	self.fields = [
@@ -69,8 +70,14 @@ func _input(event):
 			self.close_requested.emit()
 
 func show_menu():
+	self.opening = true
 	self.animations.play("show")
 	self.set_process_input(true)
+
+func _show_menu_done():
+	self.opening = false
+	self.set_process_input(true)
+	
 
 func hide_menu():
 	self.animations.play("hide")
@@ -127,6 +134,9 @@ func is_field_focused():
 
 func execute_focused_field():
 	if not self.is_field_focused():
+		return
+
+	if not self.is_visible():
 		return
 
 	self.audio.play("menu_click")

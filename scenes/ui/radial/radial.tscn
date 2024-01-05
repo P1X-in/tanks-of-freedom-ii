@@ -60,6 +60,20 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_show_menu_done"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_blujx"]
 _data = {
@@ -136,7 +150,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
-speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_blujx")
 }
+speed_scale = 4.0
