@@ -443,14 +443,14 @@ func _mouse_shift_camera(relative_offset):
 	var camera_fraction
 	if self.camera_mode == self.MODE_TOF:
 		camera_fraction = float(self.tof_camera_distance) / float(self.tof_camera_distance_max)
-		relative_offset = relative_offset * camera_fraction * Vector2(0.08, 0.16)
+		relative_offset = relative_offset * camera_fraction * Vector2(0.11, 0.22)
 		relative_offset = relative_offset.rotated(deg_to_rad(-45))
 	if self.camera_mode == self.MODE_AW:
 		camera_fraction = float(self.aw_camera_distance) / float(self.aw_camera_distance_max)
-		relative_offset = relative_offset * camera_fraction * Vector2(0.08, 0.12)
+		relative_offset = relative_offset * camera_fraction * Vector2(0.11, 0.155)
 	if self.camera_mode == self.MODE_FREE:
 		camera_fraction = float(self.camera_distance) / float(self.camera_distance_max)
-		relative_offset = relative_offset * camera_fraction * 0.08
+		relative_offset = relative_offset * camera_fraction * 0.06
 		relative_offset = relative_offset.rotated(deg_to_rad(-self.camera_angle_y))
 
 	self._shift_camera_translation(-relative_offset)

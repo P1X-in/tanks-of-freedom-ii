@@ -7,13 +7,16 @@
   - Some settings that required map load to apply now apply instantly
 - Added screen edge camera pan
 - Added camera drag with righ mouse button
+  - Camera mouse drag teaks to match it better to cursor movement
 - Added new hover menu for mouse controls
   - end turn button
   - show unit stats button
   - open unit skills button
+  - open building button
 - Added 90 FPS option for Deck OLED
 - Radial menu now closes when clicked away
 - Fixed a bug preventing units from being unbanned in buildings
+- Fixed a camera mouse drag bug when closing unit stats popup by clikcing the button
 
 ### 0.5.0-alpha
 - Ported game project to Godot Engine 4
