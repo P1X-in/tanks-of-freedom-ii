@@ -166,10 +166,10 @@ process_material = SubResource("ParticleProcessMaterial_1cvum")
 draw_pass_1 = SubResource("BoxMesh_2lsco")
 
 [node name="animations" type="AnimationPlayer" parent="." index="1"]
-speed_scale = 6.0
 libraries = {
 "": SubResource("AnimationLibrary_aqf0r")
 }
+speed_scale = 6.0
 
 [node name="explosion" parent="." index="3" instance=ExtResource("3")]
 

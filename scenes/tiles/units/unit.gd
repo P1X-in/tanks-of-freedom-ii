@@ -73,6 +73,7 @@ func reset():
 	self.hp = stats["max_hp"]
 	self.move = stats["max_move"]
 	self.attacks = stats["max_attacks"]
+	_reset_anchor_position()
 
 func get_dict():
 	var new_dict = super.get_dict()
@@ -201,6 +202,7 @@ func rotate_unit_to_direction(direction):
 	var unit_rotation = self.unit_rotations[direction]
 	self.set_rotation(Vector3(0, deg_to_rad(unit_rotation), 0))
 	self.current_rotation = unit_rotation
+	_reset_anchor_position()
 
 func animate_path(path):
 	self.current_path = path
@@ -229,7 +231,11 @@ func move_in_direction(direction):
 
 func stop_animations():
 	self.animations.stop()
+	_reset_anchor_position()
 	self.level_star.hide()
+
+func _reset_anchor_position():
+	$"mesh_anchor".set_position(Vector3(0, 0, 0))
 
 func execute_move_callback():
 	if self.move_finished_object != null:
@@ -238,6 +244,7 @@ func execute_move_callback():
 		else:
 			self.move_finished_object.call_deferred(self.move_finished_method)
 		self.clear_move_callback()
+	_reset_anchor_position()
 
 func bind_move_callback(bound_object, bound_method, bound_args=[]):
 	self.move_finished_object = bound_object
@@ -352,6 +359,7 @@ func level_up():
 	if not self.is_max_level():
 		self.level += 1
 		self.animations.play("level_up")
+		_reset_anchor_position()
 		self.sfx_effect("level_up")
 
 func is_max_level():

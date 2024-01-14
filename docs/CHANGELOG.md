@@ -19,6 +19,7 @@
 - Fixed a bug preventing units from being unbanned in buildings
 - Fixed a camera mouse drag bug when closing unit stats popup by clikcing the button
 - Fixed an AI camera bug that would sometimes cause it to fail to show actions
+- Attempted fix for units getting visually misaligned when moved
 
 ### 0.5.0-alpha
 - Ported game project to Godot Engine 4
