@@ -236,6 +236,6 @@ func get_players_state_data():
 
 func are_all_peers_present():
 	for player in self.players:
-		if player["peer_id"] == null:
+		if player["type"] == "human" and player["peer_id"] == null:
 			return false
 	return true

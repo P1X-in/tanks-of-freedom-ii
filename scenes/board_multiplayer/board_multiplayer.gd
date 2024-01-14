@@ -73,7 +73,10 @@ func _manage_cinematic_bars():
 			self.ui.show_cinematic_bars()
 			await self.get_tree().create_timer(0.25).timeout
 		if self.all_players_loaded:
-			self.ui_multiplayer.set_announcement(self.multiplayer_srv.players[self.state.get_current_param("peer_id")]["name"])
+			if self.state.is_current_player_ai():
+				self.ui_multiplayer.set_announcement(tr("TR_AI"))
+			else:
+				self.ui_multiplayer.set_announcement(self.multiplayer_srv.players[self.state.get_current_param("peer_id")]["name"])
 
 func _manage_ai_start():
 	if _can_current_player_perform_actions():
@@ -83,11 +86,17 @@ func _manage_ai_start():
 		self.map.camera.ai_operated = true
 		self.map.hide_tile_box()
 
+		if self.multiplayer.is_server() and self.state.are_all_peers_present() and self.state.is_current_player_ai():
+			self.ai.run()
+
 func _can_current_player_perform_actions():
 	if multiplayer.multiplayer_peer == null:
 		return false
 
 	return self.all_players_loaded and self.state.is_current_player_active_peer(multiplayer.get_unique_id())
+
+func _can_broadcast_moves():
+	return _can_current_player_perform_actions() or (self.multiplayer.is_server() and self.state.are_all_peers_present() and self.state.is_current_player_ai())
 
 func setup_radial_menu(context_object=null):
 	if context_object != null and not _can_current_player_perform_actions():
@@ -113,7 +122,7 @@ func main_menu():
 func _physics_process(_delta):
 	super._physics_process(_delta)
 
-	if _can_current_player_perform_actions():
+	if _can_broadcast_moves():
 		_update_camera_position.rpc(self.map.camera.get_position_state())
 
 @rpc("any_peer", "call_remote", "unreliable_ordered")
@@ -126,7 +135,7 @@ func select_tile(tile_position):
 	super.select_tile(tile_position)
 	self.lock_multicall -= 1
 
-	if _can_current_player_perform_actions() and self.lock_multicall == 0:
+	if _can_broadcast_moves() and self.lock_multicall == 0:
 		_update_tile_select.rpc(tile_position)
 
 func _reselect_tile(tile_position):
@@ -142,7 +151,7 @@ func _update_tile_select(tile_position):
 
 func _activate_production_ability(ability):
 	super._activate_production_ability(ability)
-	if _can_current_player_perform_actions():
+	if _can_broadcast_moves():
 		_notify_activate_production_ability.rpc(self.selected_tile.position, ability.index)
 
 @rpc("any_peer", "call_remote", "reliable")
@@ -154,19 +163,21 @@ func _notify_activate_production_ability(tile_position, ability_index):
 
 func _activate_ability(ability):
 	super._activate_ability(ability)
-	if _can_current_player_perform_actions():
+	if _can_broadcast_moves():
 		_notify_activate_ability.rpc(self.selected_tile.position, ability.index)
 
 @rpc("any_peer", "call_remote", "reliable")
 func _notify_activate_ability(tile_position, ability_index):
-	for ability in self.map.model.get_tile(tile_position).unit.tile.active_abilities:
+	var unit_tile = self.map.model.get_tile(tile_position)
+	for ability in unit_tile.unit.tile.active_abilities:
 		if ability.index == ability_index:
+			ability.active_source_tile = unit_tile
 			_activate_ability(ability)
 			return
 			
 func cancel_ability():
 	super.cancel_ability()
-	if _can_current_player_perform_actions() and self.lock_multicall == 0:
+	if _can_broadcast_moves() and self.lock_multicall == 0:
 		_notify_cancel_ability.rpc()
 
 @rpc("any_peer", "call_remote", "reliable")
@@ -177,7 +188,7 @@ func unselect_tile():
 	self.lock_multicall += 1
 	super.unselect_tile()
 	self.lock_multicall -= 1
-	if _can_current_player_perform_actions() and self.lock_multicall == 0:
+	if _can_broadcast_moves() and self.lock_multicall == 0:
 		_notify_unselect_tile.rpc()
 
 @rpc("any_peer", "call_remote", "reliable")
@@ -186,7 +197,7 @@ func _notify_unselect_tile():
 
 
 func _generate_collateral_damage(tile):
-	if _can_current_player_perform_actions():
+	if _can_broadcast_moves():
 		var damage = super._generate_collateral_damage(tile)
 		_notify_collateral_damage.rpc(damage)
 
@@ -200,7 +211,7 @@ func _notify_collateral_damage(damage):
 		self.collateral.damage_terrain(self.map.model.get_tile(neighbour))
 
 func _end_turn():
-	if _can_current_player_perform_actions():
+	if _can_broadcast_moves():
 		super._end_turn()
 		_notify_end_turn.rpc()
 	else:

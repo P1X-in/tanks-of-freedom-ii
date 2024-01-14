@@ -78,7 +78,6 @@ func player_loaded() -> void:
 		players_loaded += 1
 		if players_loaded == players.size():
 			all_players_loaded.emit()
-			#$/root/Game.start_game()
 			players_loaded = 0
 
 

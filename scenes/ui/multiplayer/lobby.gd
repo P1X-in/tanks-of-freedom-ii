@@ -93,11 +93,24 @@ func _manage_start_button(grab):
 			self.back_button.grab_focus()
 
 func _is_ready_to_start():
-	for panel in self.player_panels:
-		if panel.is_visible() and panel.player_peer_id == null:
-			return false
+	var player_spots = 0
+	var human_players = self.multiplayer_srv.players.size()
+	var players_assigned = 0
+	var ai_assigned = 0
 
-	return true
+	for panel in self.player_panels:
+		if panel.is_visible():
+			player_spots += 1
+			if panel.type == "human":
+				if panel.player_peer_id != null:
+					players_assigned += 1
+			else:
+				ai_assigned += 1
+
+	if human_players > players_assigned:
+		return false
+
+	return players_assigned + ai_assigned == player_spots
 
 
 func _fill_map_data(fill_name):
@@ -173,6 +186,7 @@ func _on_player_connected(peer_id, _player_info):
 		var state = {}
 		for panel in self.player_panels:
 			state[panel.index] = {
+				"type": panel.type,
 				"side": panel.side,
 				"peer_id": panel.player_peer_id,
 				"ap": panel.ap,
@@ -205,15 +219,18 @@ func _load_multiplayer_game():
 	self.match_setup.is_multiplayer = true
 
 	for player in self.player_panels:
-		if player.player_peer_id != null:
-			self.match_setup.add_player(player.side, player.ap, "human", true, player.team, player.player_peer_id)
+		if player.player_peer_id != null or player.type == "ai":
+			self.match_setup.add_player(player.side, player.ap, player.type, true, player.team, player.player_peer_id)
 
 	self.switcher.board_multiplayer()
 
 func _on_player_joined_side(index):
 	for panel in self.player_panels:
 		if panel.index != index:
-			panel.lock_side()
+			if multiplayer.is_server():
+				panel.switch_to_ai()
+			else:
+				panel.lock_side()
 	for peer_id in self.multiplayer_srv.players:
 		if peer_id != multiplayer.get_unique_id():
 			_player_joined_a_side.rpc_id(peer_id, multiplayer.get_unique_id(), index)
@@ -231,7 +248,8 @@ func _on_player_left_side(index):
 func _on_panel_state_changed(index):
 	for peer_id in self.multiplayer_srv.players:
 		if peer_id != multiplayer.get_unique_id():
-			_update_panel_state.rpc_id(peer_id, index, self.player_panels[index].ap, self.player_panels[index].team)
+			_update_panel_state.rpc_id(peer_id, index, self.player_panels[index].ap, self.player_panels[index].team, self.player_panels[index].type)
+	_manage_start_button(false)
 
 func _on_panel_swap(index):
 	for peer_id in self.multiplayer_srv.players:
@@ -260,12 +278,14 @@ func _apply_server_state():
 				self.player_panels[index]._set_peer_id(self.server_state[index]["peer_id"])
 				self.player_panels[index]._set_ap(self.server_state[index]["ap"])
 				self.player_panels[index]._set_team(self.server_state[index]["team"])
+				self.player_panels[index]._set_type(self.server_state[index]["type"])
 	self.server_state = null
 
 @rpc("any_peer", "reliable")
-func _update_panel_state(index, ap, team):
+func _update_panel_state(index, ap, team, type):
 	self.player_panels[index]._set_ap(ap)
 	self.player_panels[index]._set_team(team)
+	self.player_panels[index]._set_type(type)
 
 @rpc("any_peer", "reliable")
 func _swap_panel(index):

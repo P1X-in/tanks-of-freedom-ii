@@ -3,6 +3,7 @@
 
 ### 0.6.0-alpha
 - Updated Godot Engine to 4.2
+- LAN multiplayer can now have AI players
 - Settings are now available during gameplay
   - Some settings that required map load to apply now apply instantly
 - Added screen edge camera pan
@@ -17,6 +18,7 @@
 - Radial menu now closes when clicked away
 - Fixed a bug preventing units from being unbanned in buildings
 - Fixed a camera mouse drag bug when closing unit stats popup by clikcing the button
+- Fixed an AI camera bug that would sometimes cause it to fail to show actions
 
 ### 0.5.0-alpha
 - Ported game project to Godot Engine 4

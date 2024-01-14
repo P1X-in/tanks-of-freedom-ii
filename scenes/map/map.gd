@@ -119,6 +119,7 @@ func move_camera_to_position_if_far_away(destination, tolerance=5, zoom=null):
 	if destination == null:
 		return false
 
+	self.camera.snap_tile_box_to_camera = true
 	self.update_tile_box_position_from_camera()
 	var adj_tol = tolerance * self.camera.get_zoom_fraction()
 	if self.tile_box_position.distance_squared_to(destination) > (adj_tol * adj_tol) or zoom != null:

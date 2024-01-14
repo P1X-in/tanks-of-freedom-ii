@@ -263,7 +263,7 @@ func select_tile(tile_position):
 	var open_unit_abilities = false
 
 	if self.active_ability != null:
-		if self.ability_markers.marker_exists(tile_position):
+		if self.ability_markers.marker_exists(tile_position) or self.state.is_current_player_ai():
 			self.execute_active_ability(tile)
 		else:
 			self.unselect_tile()
@@ -636,7 +636,8 @@ func _activate_production_ability(ability):
 
 	if self.state.can_current_player_afford(cost):
 		self.active_ability = ability
-		self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
+		if self.selected_tile != null:
+			self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
 
 func activate_ability(args):
 	var ability = args[0]
@@ -647,8 +648,9 @@ func activate_ability(args):
 func _activate_ability(ability):
 	self.reset_unit_markers()
 	self.active_ability = ability
-	self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
-	ability.active_source_tile = self.selected_tile
+	if self.selected_tile != null:
+		self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
+		ability.active_source_tile = self.selected_tile
 
 func execute_active_ability(tile):
 	self.abilities.execute_ability(self.active_ability, tile)

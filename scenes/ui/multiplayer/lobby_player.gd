@@ -22,6 +22,7 @@ const AP_MAX = 150
 @onready var team_button_label2 = $"team_label"
 @onready var swap_button = $"swap"
 
+var type = "human"
 var side
 var ap
 
@@ -34,6 +35,7 @@ var original_team
 var swap_target_node: Node
 var attached_icon
 var locked_out = false
+var ai_mode = false
 
 @onready var audio = $"/root/SimpleAudioLibrary"
 @onready var multiplayer_srv = $"/root/Multiplayer"
@@ -64,8 +66,10 @@ func _reset_labels():
 	self.ap = self.AP_STEP
 	self.side = null
 	self.team = self.original_team
+	self.type = "human"
 	self.player_peer_id = null
 	self.locked_out = false
+	self.ai_mode = false
 
 	self._update_join_label()
 	self._update_ap_label()
@@ -92,16 +96,25 @@ func _set_icon(new_icon):
 func _update_join_label():
 	self.join_button.show()
 	if self.player_peer_id == null:
-		self.join_button_label.set_text(tr("TR_JOIN"))
+		if self.ai_mode:
+			if self.type == "human":
+				self.join_button_label.set_text(tr("TR_HUMAN"))
+			else:
+				self.join_button_label.set_text(tr("TR_AI"))
+		else:
+			self.join_button_label.set_text(tr("TR_JOIN"))
 	else:
 		self.join_button_label.set_text(tr("TR_LEAVE"))
 		if self.player_peer_id != multiplayer.get_unique_id():
 			self.join_button.hide()
-	if self.locked_out:
+	if self.locked_out or (self.type == "ai" and not self.multiplayer.is_server()):
 		self.join_button.hide()
 
 	if self.player_peer_id == null:
-		self.player.set_text(tr("TR_UNASSIGNED"))
+		if self.type == "human":
+			self.player.set_text(tr("TR_UNASSIGNED"))
+		else:
+			self.player.set_text(tr("TR_AI"))
 	else:
 		if self.multiplayer_srv.players.has(self.player_peer_id):
 			self.player.set_text(self.multiplayer_srv.players[self.player_peer_id]["name"])
@@ -112,6 +125,11 @@ func lock_side():
 
 func unlock_side():
 	self.locked_out = false
+	self.ai_mode = false
+	_update_join_label()
+
+func switch_to_ai():
+	self.ai_mode = true
 	_update_join_label()
 
 func _update_ap_label():
@@ -137,26 +155,32 @@ func _on_swap_pressed():
 	swap_happened.emit(self.index)
 
 func _perform_panel_swap():
+	var own_type = self.type
 	var own_side = self.side
 	var own_ap = self.ap
 	var own_team = self.team
 	var own_peer_id = self.player_peer_id
 	var own_lock = self.locked_out
+	var own_ai = self.ai_mode
 
 	self.fill_panel(self.swap_target_node.side)
+	self.type = self.swap_target_node.type
 	self.ap = self.swap_target_node.ap
 	self.team = self.swap_target_node.team
 	self.player_peer_id = self.swap_target_node.player_peer_id
 	self.locked_out = self.swap_target_node.locked_out
+	self.ai_mode = self.swap_target_node.ai_mode
 	self._update_join_label()
 	self._update_ap_label()
 	self._update_team_label()
 
 	self.swap_target_node.fill_panel(own_side)
+	self.swap_target_node.type = own_type
 	self.swap_target_node.ap = own_ap
 	self.swap_target_node.team = own_team
 	self.swap_target_node.player_peer_id = own_peer_id
 	self.swap_target_node.locked_out = own_lock
+	self.swap_target_node.ai_mode = own_ai
 	self.swap_target_node._update_join_label()
 	self.swap_target_node._update_ap_label()
 	self.swap_target_node._update_team_label()
@@ -171,13 +195,21 @@ func _on_team_pressed():
 
 func _on_join_pressed():
 	if self.player_peer_id == null:
-		_set_peer_id(multiplayer.get_unique_id())
-		player_joined.emit(self.index)
+		if self.ai_mode:
+			if self.type == "human":
+				_set_type("ai")
+			else:
+				_set_type("human")
+			state_changed.emit(self.index)
+		else:
+			_set_peer_id(multiplayer.get_unique_id())
+			player_joined.emit(self.index)
 	else:
 		_set_peer_id(null)
 		player_left.emit(self.index)
 
 func _set_peer_id(peer_id):
+	self.type = "human"
 	self.player_peer_id = peer_id
 	_update_join_label()
 
@@ -188,3 +220,7 @@ func _set_ap(new_ap):
 func _set_team(new_team):
 	self.team = new_team
 	_update_team_label()
+
+func _set_type(new_type):
+	self.type = new_type
+	_update_join_label()
