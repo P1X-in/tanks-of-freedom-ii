@@ -90,7 +90,7 @@ func fetch_top_downloads() -> int:
 
 func upload_map(map_data: Dictionary) -> Dictionary:
 	var message: Dictionary = self.online_service.player.get_basic_auth_json()
-	var serialized_json = ""
+	var serialized_json: String = ""
 
 	message['data'] = map_data
 	serialized_json = JSON.stringify(message)

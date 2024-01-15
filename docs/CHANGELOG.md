@@ -16,6 +16,7 @@
   - open building button
 - Added 90 FPS option for Deck OLED
 - Radial menu now closes when clicked away
+- Fixed a bug that would lock out custom maps in Skirmish mode after a map in multiplayer mode has been picked
 - Fixed a bug preventing units from being unbanned in buildings
 - Fixed a camera mouse drag bug when closing unit stats popup by clikcing the button
 - Fixed an AI camera bug that would sometimes cause it to fail to show actions

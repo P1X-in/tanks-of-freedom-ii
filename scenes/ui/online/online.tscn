@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d10shqx6iv5t7"]
+[gd_scene load_steps=15 format=3 uid="uid://d10shqx6iv5t7"]
 
 [ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1"]
 [ext_resource type="Script" path="res://scenes/ui/online/online.gd" id="2"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://nove6ni5alhn" path="res://assets/gui/menu/buttons/buttonLarge_brown_pressed.png" id="5_bdg7k"]
 [ext_resource type="Texture2D" uid="uid://5jm4o80mt8a2" path="res://assets/gui/menu/buttons/buttonLarge_brown_hover.png" id="6_a7skv"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="7_o8rsi"]
-[ext_resource type="Texture2D" uid="uid://bik4pgknbty5s" path="res://assets/gui/menu/buttons/buttonLarge_brown_disabled.png" id="8_legj6"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="9_3rwub"]
 [ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="10_60bps"]
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="11_s5eft"]
@@ -190,64 +189,7 @@ anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="tabs" type="Control" parent="widgets/online" index="0"]
-anchors_preset = 0
-anchor_right = 1.0
-offset_bottom = 100.0
-
-[node name="matches_button" type="TextureButton" parent="widgets/online/tabs" index="0"]
-layout_mode = 0
-offset_left = 100.0
-offset_top = 20.0
-offset_right = 500.0
-offset_bottom = 120.0
-disabled = true
-texture_normal = ExtResource("4_s7jy4")
-texture_pressed = ExtResource("5_bdg7k")
-texture_hover = ExtResource("6_a7skv")
-texture_disabled = ExtResource("8_legj6")
-texture_focused = ExtResource("6_a7skv")
-
-[node name="label" type="Label" parent="widgets/online/tabs/matches_button" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("7_o8rsi")
-theme_override_font_sizes/font_size = 42
-text = "TR_MATCHES"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="maps_button" type="TextureButton" parent="widgets/online/tabs" index="1"]
-layout_mode = 0
-offset_left = 700.0
-offset_top = 20.0
-offset_right = 1100.0
-offset_bottom = 120.0
-disabled = true
-texture_normal = ExtResource("4_s7jy4")
-texture_pressed = ExtResource("5_bdg7k")
-texture_hover = ExtResource("6_a7skv")
-texture_disabled = ExtResource("8_legj6")
-texture_focused = ExtResource("6_a7skv")
-
-[node name="label" type="Label" parent="widgets/online/tabs/maps_button" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("7_o8rsi")
-theme_override_font_sizes/font_size = 42
-text = "TR_MAPS"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="maps" type="Control" parent="widgets/online" index="1"]
+[node name="maps" type="Control" parent="widgets/online" index="0"]
 anchors_preset = 0
 anchor_top = 0.2
 anchor_right = 1.0
@@ -259,26 +201,11 @@ anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="description" type="Label" parent="widgets/online/maps/main" index="0"]
-visible = false
+[node name="upload_button" type="TextureButton" parent="widgets/online/maps/main" index="0"]
 layout_mode = 0
-anchor_left = 0.1
-anchor_top = 0.5
-anchor_right = 0.9
-anchor_bottom = 0.5
-offset_top = -180.0
-offset_bottom = -130.0
-theme_override_fonts/font = ExtResource("3_vc4q3")
-theme_override_font_sizes/font_size = 30
-text = "HTTPS://ONLINE.TOF.P1X.IN/"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="upload_button" type="TextureButton" parent="widgets/online/maps/main" index="1"]
-layout_mode = 0
-offset_left = 400.0
+offset_left = 100.0
 offset_top = 100.0
-offset_right = 800.0
+offset_right = 500.0
 offset_bottom = 200.0
 texture_normal = ExtResource("4_s7jy4")
 texture_pressed = ExtResource("5_bdg7k")
@@ -298,11 +225,11 @@ text = "TR_UPLOAD_MAP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="download_button" type="TextureButton" parent="widgets/online/maps/main" index="2"]
+[node name="download_button" type="TextureButton" parent="widgets/online/maps/main" index="1"]
 layout_mode = 0
-offset_left = 400.0
+offset_left = 100.0
 offset_top = 250.0
-offset_right = 800.0
+offset_right = 500.0
 offset_bottom = 350.0
 texture_normal = ExtResource("4_s7jy4")
 texture_pressed = ExtResource("5_bdg7k")
@@ -319,6 +246,73 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("7_o8rsi")
 theme_override_font_sizes/font_size = 42
 text = "TR_DOWNLOAD_MAP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="nickname" type="LineEdit" parent="widgets/online/maps/main" index="2"]
+offset_left = 700.0
+offset_right = 1100.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("3_vc4q3")
+theme_override_font_sizes/font_size = 30
+placeholder_text = "TR_NICKNAME"
+alignment = 1
+max_length = 20
+
+[node name="create_button" type="TextureButton" parent="widgets/online/maps/main" index="3"]
+offset_left = 700.0
+offset_top = 50.0
+offset_right = 1100.0
+offset_bottom = 150.0
+texture_normal = ExtResource("4_s7jy4")
+texture_pressed = ExtResource("5_bdg7k")
+texture_hover = ExtResource("6_a7skv")
+texture_focused = ExtResource("6_a7skv")
+
+[node name="label" type="Label" parent="widgets/online/maps/main/create_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_o8rsi")
+theme_override_font_sizes/font_size = 42
+text = "TR_CREATE_GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="join_code" type="LineEdit" parent="widgets/online/maps/main" index="4"]
+offset_left = 700.0
+offset_top = 250.0
+offset_right = 1100.0
+offset_bottom = 290.0
+theme_override_fonts/font = ExtResource("3_vc4q3")
+theme_override_font_sizes/font_size = 30
+placeholder_text = "TR_JOIN_CODE"
+alignment = 1
+max_length = 20
+
+[node name="join_button" type="TextureButton" parent="widgets/online/maps/main" index="5"]
+offset_left = 700.0
+offset_top = 300.0
+offset_right = 1100.0
+offset_bottom = 400.0
+texture_normal = ExtResource("4_s7jy4")
+texture_pressed = ExtResource("5_bdg7k")
+texture_hover = ExtResource("6_a7skv")
+texture_focused = ExtResource("6_a7skv")
+
+[node name="label" type="Label" parent="widgets/online/maps/main/join_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_o8rsi")
+theme_override_font_sizes/font_size = 42
+text = "TR_JOIN_GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -463,6 +457,26 @@ text = "TR_CONFIRM"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="busy" type="Control" parent="widgets/online/maps" index="3"]
+visible = false
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="message" type="Label" parent="widgets/online/maps/busy" index="0"]
+layout_mode = 0
+anchor_left = 0.1
+anchor_top = 0.5
+anchor_right = 0.9
+anchor_bottom = 0.5
+offset_top = -80.0
+offset_bottom = -30.0
+theme_override_fonts/font = ExtResource("3_vc4q3")
+theme_override_font_sizes/font_size = 30
+text = "TR_CONNECTING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="back_button" type="TextureButton" parent="widgets" index="2"]
 layout_mode = 0
 offset_left = 505.0
@@ -494,6 +508,9 @@ libraries = {
 [connection signal="pressed" from="widgets/register/register_button" to="." method="_on_register_button_pressed"]
 [connection signal="pressed" from="widgets/online/maps/main/upload_button" to="." method="_on_upload_button_pressed"]
 [connection signal="pressed" from="widgets/online/maps/main/download_button" to="." method="_on_download_button_pressed"]
+[connection signal="focus_exited" from="widgets/online/maps/main/nickname" to="." method="_on_nickname_focus_exited"]
+[connection signal="pressed" from="widgets/online/maps/main/create_button" to="." method="_on_create_button_pressed"]
+[connection signal="pressed" from="widgets/online/maps/main/join_button" to="." method="_on_join_button_pressed"]
 [connection signal="pressed" from="widgets/online/maps/upload/confirm_upload_button" to="." method="_on_confirm_upload_button_pressed"]
 [connection signal="pressed" from="widgets/online/maps/upload/change_button" to="." method="_on_upload_button_pressed"]
 [connection signal="pressed" from="widgets/online/maps/download/retry_button" to="." method="_on_retry_button_pressed"]
