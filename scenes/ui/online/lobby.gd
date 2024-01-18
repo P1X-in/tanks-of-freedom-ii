@@ -8,6 +8,7 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 @onready var start_button = $"widgets/start_button"
 @onready var back_button = $"widgets/back_button"
 @onready var minimap = $"widgets/minimap"
+@onready var join_code_label = $"widgets/join_code/label"
 
 @onready var widgets = $"widgets"
 @onready var downloading_label = $"downloading"
@@ -79,6 +80,7 @@ func _prepare_initial_panel_state(map_name):
 		return
 
 	self._fill_map_data(map_name)
+	self.join_code_label.set_text(tr("TR_JOIN_CODE") + " " +self.relay.join_code)
 	_fill_player_labels()
 	self._apply_server_state()
 	await self.get_tree().create_timer(0.1).timeout

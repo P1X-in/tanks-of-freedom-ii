@@ -248,6 +248,10 @@ func _on_create_button_pressed():
 
 func _on_join_button_pressed():
 	self.audio.play("menu_click")
+
+	if self.online_match_join_code_input.get_text() == "":
+		return
+
 	self.working = true
 	self.relay.connect_game(self.online_match_join_code_input.get_text())
 	self._show_online_connecting_panel()

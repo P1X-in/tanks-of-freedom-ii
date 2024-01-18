@@ -115,9 +115,10 @@ func _process(_delta) -> void:
 	elif state == WebSocketPeer.STATE_CLOSING:
 		pass # Keep polling to achieve proper close.
 	elif state == WebSocketPeer.STATE_CLOSED:
-		var code: int = socket.get_close_code()
-		var reason: String = socket.get_close_reason()
-		print("WebSocket closed with code: %d, reason %s. Clean: %s" % [code, reason, code != -1])
+		if OS.is_debug_build():
+			var code: int = socket.get_close_code()
+			var reason: String = socket.get_close_reason()
+			print("WebSocket closed with code: %d, reason %s. Clean: %s" % [code, reason, code != -1])
 		self.set_process(false)
 		_on_server_disconnected()
 

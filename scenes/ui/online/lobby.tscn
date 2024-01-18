@@ -44,6 +44,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("6_yotih")
@@ -130,6 +132,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("6_yotih")
@@ -162,6 +166,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("6_yotih")
@@ -194,6 +200,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("6_yotih")
@@ -226,6 +234,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("6_yotih")
@@ -234,7 +244,41 @@ text = "dummy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="start_button" type="TextureButton" parent="widgets" index="9"]
+[node name="join_code" type="NinePatchRect" parent="widgets" index="9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 350.0
+offset_top = 625.0
+offset_right = -350.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_8ywfm")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="label" type="Label" parent="widgets/join_code" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_yotih")
+theme_override_font_sizes/font_size = 20
+text = "dummy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start_button" type="TextureButton" parent="widgets" index="10"]
 layout_mode = 0
 offset_left = 985.0
 offset_top = 640.0
@@ -257,7 +301,7 @@ text = "TR_START"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="back_button" type="TextureButton" parent="widgets" index="10"]
+[node name="back_button" type="TextureButton" parent="widgets" index="11"]
 layout_mode = 0
 offset_left = 25.0
 offset_top = 640.0
