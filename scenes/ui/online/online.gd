@@ -54,6 +54,8 @@ func _ready():
 	self.download_name.notification(NOTIFICATION_TRANSLATION_CHANGED)
 	
 	self.online_match_nickname_input.set_text(self.settings.get_option("nickname"))
+	self.relay.session_success.connect(self._on_session_success)
+	self.relay.connection_failed.connect(self._on_connection_failed)
 
 func _on_back_button_pressed():
 	if self.working:
@@ -66,6 +68,7 @@ func _on_back_button_pressed():
 		self.selected_download_map = null
 		self._select_panel()
 	elif self.online_match_connecting_panel.is_visible():
+		self.back_button.show()
 		self._select_panel()
 	else:
 		self.main_menu.close_online()
@@ -165,6 +168,7 @@ func _configure_registration_panel():
 func _show_online_connecting_panel():
 	self._hide_all_subpanels()
 	self.online_match_connecting_panel.show()
+	self.back_button.hide()
 
 
 func _on_upload_button_pressed():
@@ -244,9 +248,20 @@ func _on_create_button_pressed():
 
 func _on_join_button_pressed():
 	self.audio.play("menu_click")
+	self.working = true
+	self.relay.connect_game(self.online_match_join_code_input.get_text())
 	self._show_online_connecting_panel()
 
 func init_match(map_name):
 	self._show_online_connecting_panel()
 	self.working = true
 	self.relay.create_game(map_name)
+
+func _on_session_success():
+	self.working = false
+	self.main_menu.open_online_lobby()
+
+func _on_connection_failed():
+	self.working = false
+	self.back_button.show()
+	self._select_panel()

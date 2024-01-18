@@ -316,3 +316,13 @@ func handle_online_match_map_picker_output(args):
 	self.ui.picker.unlock_tab_bar()
 	self.ui.show_online()
 	self.ui.online.init_match(args[0])
+
+func open_online_lobby():
+	self.ui.hide_online()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.show_online_lobby()
+
+func close_online_lobby():
+	self.ui.hide_online_lobby()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.show_online()

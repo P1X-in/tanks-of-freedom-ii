@@ -250,6 +250,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="nickname" type="LineEdit" parent="widgets/online/maps/main" index="2"]
+layout_mode = 0
 offset_left = 700.0
 offset_right = 1100.0
 offset_bottom = 40.0
@@ -260,6 +261,7 @@ alignment = 1
 max_length = 20
 
 [node name="create_button" type="TextureButton" parent="widgets/online/maps/main" index="3"]
+layout_mode = 0
 offset_left = 700.0
 offset_top = 50.0
 offset_right = 1100.0
@@ -283,6 +285,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="join_code" type="LineEdit" parent="widgets/online/maps/main" index="4"]
+layout_mode = 0
 offset_left = 700.0
 offset_top = 250.0
 offset_right = 1100.0
@@ -294,6 +297,7 @@ alignment = 1
 max_length = 20
 
 [node name="join_button" type="TextureButton" parent="widgets/online/maps/main" index="5"]
+layout_mode = 0
 offset_left = 700.0
 offset_top = 300.0
 offset_right = 1100.0

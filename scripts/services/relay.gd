@@ -4,6 +4,7 @@ const RELAY_PORT: int = 9939
 
 signal connection_failed
 signal connection_success
+signal session_success
 signal player_connected(peer_id: int, player_info: Dictionary)
 signal player_disconnected(peer_id: int)
 signal server_disconnected
@@ -31,6 +32,9 @@ func _ready() -> void:
 	self.set_process(false)
 	self.message_received.connect(self._message_received)
 
+func is_server():
+	return self.peer_id == 1
+
 func create_game(map_name: String) -> Error:
 	self.players.clear()
 	self.player_limit = _get_player_count(map_name)
@@ -40,10 +44,22 @@ func create_game(map_name: String) -> Error:
 	self.set_process(true)
 	await self.connection_success
 
+	self.selected_map = map_name
 	self._send_message("host", {
 		"map_name": map_name,
 		"max_players": self.player_limit,
 	})
+
+	return OK
+
+func connect_game(server_join_code: String) -> Error:
+	self.connecting = true
+	self.socket.connect_to_url("ws://192.168.1.100:" + str(self.RELAY_PORT))
+	self.set_process(true)
+	await self.connection_success
+
+	self.join_code = server_join_code
+	self._join_session(server_join_code)
 
 	return OK
 
@@ -72,6 +88,9 @@ func message_broadcast(payload: Dictionary) -> Error:
 		"message": payload
 	})
 
+func game_start() -> Error:
+	return _send_message("game_start", {})
+
 func _send_message(action: String, payload: Dictionary) -> Error:
 	var message_data: Dictionary = {
 		"action": action,
@@ -81,7 +100,7 @@ func _send_message(action: String, payload: Dictionary) -> Error:
 	return self.socket.send_text(JSON.stringify(message_data))
 
 
-func _process(_delta):
+func _process(_delta) -> void:
 	self.socket.poll()
 	var state = socket.get_ready_state()
 	if state == WebSocketPeer.STATE_OPEN:
@@ -100,6 +119,7 @@ func _process(_delta):
 		var reason: String = socket.get_close_reason()
 		print("WebSocket closed with code: %d, reason %s. Clean: %s" % [code, reason, code != -1])
 		self.set_process(false)
+		_on_server_disconnected()
 
 
 func _message_received(message: Dictionary) -> void:
@@ -112,14 +132,19 @@ func _message_received(message: Dictionary) -> void:
 		if message["payload"]["peer_id"] == 0:
 			self._on_connection_failed()
 		else:
+			self.peer_id = int(message["payload"]["peer_id"])
+			if self.peer_id > 1:
+				self.match_in_progress = message["payload"]["in_progress"]
+				self.selected_map = message["payload"]["map_name"]
 			self._on_player_connected({
 				"peer_id": message["payload"]["peer_id"],
 				"player_data" : self._get_player_info()
 			})
+			self.session_success.emit()
 	if message["action"] == "player_joined":
 		self._on_player_connected(message["payload"])
 	if message["action"] == "player_disconnected":
-		self._on_player_disconnected(message["payload"]["peer_id"])
+		self._on_player_disconnected(int(message["payload"]["peer_id"]))
 	if message["action"] == "session_closed":
 		self._on_server_disconnected()
 
@@ -131,12 +156,13 @@ func _join_session(session_code: String) -> void:
 	})
 
 func _on_player_connected(payload: Dictionary) -> void:
-	var new_player_id = payload["peer_id"]
+	var new_player_id = int(payload["peer_id"])
 	players[new_player_id] = payload["player_data"]
 	player_connected.emit(new_player_id, payload["player_data"])
 
 func _on_player_disconnected(disconnected_peer_id: int) -> void:
 	self.players.erase(disconnected_peer_id)
+	print(self.players)
 	player_disconnected.emit(disconnected_peer_id)
 
 func _on_server_disconnected() -> void:
@@ -164,7 +190,7 @@ func _get_player_count(map_name: String) -> int:
 			key = str(x) + "_" + str(y)
 			if map_data["tiles"].has(key):
 				side = self._lookup_side(map_data["tiles"][key])
-				
+
 				if side != "":
 					sides[side] = side
 	return clampi(sides.size() - 1, 1, 3)
