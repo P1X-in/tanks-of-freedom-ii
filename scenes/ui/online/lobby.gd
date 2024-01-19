@@ -86,7 +86,6 @@ func _prepare_initial_panel_state(map_name):
 	await self.get_tree().create_timer(0.1).timeout
 	_manage_start_button(true)
 
-
 func _manage_start_button(grab):
 	if relay.is_server() and _is_ready_to_start():
 		self.start_button.show()
@@ -249,6 +248,8 @@ func _handle_message(message):
 		self._update_panel_state(message["index"], message["ap"], message["team"], message["ptype"])
 	if message["type"] == "player_panel_swap":
 		self._swap_panel(message["index"])
+	if message["type"] == "match_state":
+		self.relay._set_match_state(message["state"])
 
 
 #@rpc("call_local", "reliable")
@@ -261,6 +262,7 @@ func _load_multiplayer_game():
 		if player.player_peer_id != null or player.type == "ai":
 			self.match_setup.add_player(player.side, player.ap, player.type, true, player.team, player.player_peer_id)
 
+	self.hide()
 	self.switcher.board_online()
 
 func _on_player_joined_side(index):
@@ -365,13 +367,16 @@ func load_game_from_state(state):
 	self.match_setup.restore_save_id = "multiplayer"
 	self.match_setup.is_multiplayer = true
 	for player in state["players"]:
+		var int_peer_id = player["peer_id"]
+		if int_peer_id != null:
+			int_peer_id = int(int_peer_id)
 		self.match_setup.add_player(
 			player["side"],
 			player["ap"],
 			player["type"],
 			player["alive"],
 			player["team"],
-			player["peer_id"]
+			int_peer_id
 		)
 
 	self.switcher.board_online()

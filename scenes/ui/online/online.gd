@@ -253,8 +253,8 @@ func _on_join_button_pressed():
 		return
 
 	self.working = true
-	self.relay.connect_game(self.online_match_join_code_input.get_text())
 	self._show_online_connecting_panel()
+	self.relay.connect_game(self.online_match_join_code_input.get_text())
 
 func init_match(map_name):
 	self._show_online_connecting_panel()

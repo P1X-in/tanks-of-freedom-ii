@@ -89,7 +89,23 @@ func message_broadcast(payload: Dictionary) -> Error:
 	})
 
 func game_start() -> Error:
-	return _send_message("game_start", {})
+	return _send_message("game_start", {
+		"join_code" : self.join_code
+	})
+
+func player_loaded() -> void:
+	if self.is_server():
+		mark_player_loaded()
+	else:
+		self.message_direct(1, {
+			"type": "player_loaded"
+		})
+
+func mark_player_loaded() -> void:
+	players_loaded += 1
+	if players_loaded == players.size():
+		all_players_loaded.emit()
+		players_loaded = 0
 
 func _send_message(action: String, payload: Dictionary) -> Error:
 	var message_data: Dictionary = {
@@ -194,7 +210,7 @@ func _get_player_count(map_name: String) -> int:
 
 				if side != "":
 					sides[side] = side
-	return clampi(sides.size() - 1, 1, 3)
+	return clampi(sides.size(), 1, 4)
 
 func _lookup_side(data: Dictionary) -> String:
 	var hq_templates = [
@@ -210,3 +226,7 @@ func _lookup_side(data: Dictionary) -> String:
 
 	return ""
 
+
+func _set_match_state(state: Dictionary) -> void:
+	self.match_state = state
+	self.match_state_available = true
