@@ -1,6 +1,7 @@
 extends Node
 
 const RELAY_PORT: int = 9939
+const RELAY_URL: String = "ws://online.tof.p1x.in"
 
 signal connection_failed
 signal connection_success
@@ -40,7 +41,7 @@ func create_game(map_name: String) -> Error:
 	self.player_limit = _get_player_count(map_name)
 
 	self.connecting = true
-	self.socket.connect_to_url("ws://192.168.1.100:" + str(self.RELAY_PORT))
+	self.socket.connect_to_url(self.RELAY_URL + ":" + str(self.RELAY_PORT))
 	self.set_process(true)
 	await self.connection_success
 
@@ -54,7 +55,7 @@ func create_game(map_name: String) -> Error:
 
 func connect_game(server_join_code: String) -> Error:
 	self.connecting = true
-	self.socket.connect_to_url("ws://192.168.1.100:" + str(self.RELAY_PORT))
+	self.socket.connect_to_url(self.RELAY_URL + ":" + str(self.RELAY_PORT))
 	self.set_process(true)
 	await self.connection_success
 
