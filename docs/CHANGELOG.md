@@ -16,6 +16,8 @@
   - show unit stats button
   - open unit skills button
   - open building button
+- Added ending turn speed option in Settings
+- Added end turn confirmation when player made no moves
 - Added 90 FPS option for Deck OLED
 - Radial menu now closes when clicked away
 - Fixed missing option descriptions in Settings

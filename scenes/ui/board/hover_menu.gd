@@ -117,7 +117,7 @@ func _perform_action():
 		return
 
 	if self.hovered_button == "turn":
-		self.board.end_turn()
+		self.board.check_end_turn()
 		self._fade_out()
 	elif self.hovered_button == "build":
 		self.board._show_contextual_select_radial(true)

@@ -111,6 +111,9 @@ func _input(event):
 		if self.ui.unit_stats.is_visible():
 			if event.is_action_pressed("ui_cancel") or event.is_action_pressed("editor_menu") or event.is_action_pressed("game_context"):
 				self.close_context_panel()
+		if self.ui.end_turn_confirm.is_visible():
+			if event.is_action_pressed("ui_cancel"):
+				self.close_end_turn_confirm_panel()
 
 func _can_current_player_perform_actions():
 	return not self.state.is_current_player_ai()
@@ -139,6 +142,7 @@ func set_up_ui():
 	self.ui.settings_panel.bind_menu(self)
 	self.ui.hover_menu.board = self
 	self.ui.unit_stats.board = self
+	self.ui.end_turn_confirm.board = self
 	self.ui.radial.close_requested.connect(self.toggle_radial_menu)
 
 	self.ui.edge_pan_left.mouse_entered.connect(self.map.camera._on_edge_pan.bind([1, null]))
@@ -197,6 +201,12 @@ func start_music_track():
 	else:
 		self.audio.track("soundtrack_" + str((randi() % tracks) + 1))
 
+
+func check_end_turn():
+	if self.state.has_player_moved:
+		self.end_turn()
+	else:
+		self.show_end_turn_confirm_panel()
 
 
 func end_turn():
@@ -767,6 +777,16 @@ func close_context_panel():
 	self.map.camera.paused = false
 
 
+func show_end_turn_confirm_panel():
+	self.map.camera.paused = true
+	self.ui.end_turn_confirm.show_panel()
+
+
+func close_end_turn_confirm_panel():
+	self.map.camera.paused = false
+	self.ui.end_turn_confirm.hide()
+
+
 func end_game(winner):
 	self.map.camera.paused = true
 	self.ai.abort()
@@ -799,7 +819,7 @@ func start_ending_turn():
 
 	if self.ending_turn_in_progress:
 		self.abort_ending_turn()
-		self.call_deferred("end_turn")
+		self.call_deferred("check_end_turn")
 
 func abort_ending_turn():
 	self.ending_turn_in_progress = false

@@ -8,6 +8,7 @@ extends Control
 @onready var resource_label = $"resources/coin_view/label"
 @onready var summary = $"summary/summary_view"
 @onready var end_turn = $"end_turn/end_turn"
+@onready var end_turn_confirm = $"end_turn_confirm/end_turn_confirm"
 @onready var start_turn = $"start_turn/start_turn"
 @onready var story_dialog = $"story_dialog/story_dialog"
 @onready var cinematic_bars = $"cinematic_bars/cinematic_bars"
@@ -63,6 +64,9 @@ func is_popup_open():
 		return true
 
 	if self.story_dialog.is_visible():
+		return true
+
+	if self.end_turn_confirm.is_visible():
 		return true
 
 	if self.unit_stats.is_visible():

@@ -5,6 +5,7 @@ const PLAYER_AI = "ai"
 
 var current_player = 0
 var turn = 1
+var has_player_moved = false
 
 var players = []
 
@@ -23,6 +24,7 @@ func add_player(type, side, alive=true, team=null, peer_id=null):
 
 func switch_to_next_player():
 	self.current_player += 1
+	self.has_player_moved = false
 	if self.current_player >= self.players.size():
 		self.current_player = 0
 		self.turn += 1
@@ -89,6 +91,7 @@ func add_player_ap(id, value):
 		self.players[id]["ap"] = 999
 
 func use_player_ap(id, value):
+	self.has_player_moved = true
 	self.players[id]["ap"] -= value
 
 	if self.players[id]["ap"] < 0:

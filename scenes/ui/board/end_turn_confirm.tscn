@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://cq83jcig537yk"]
+
+[ext_resource type="Script" path="res://scenes/ui/board/end_turn_confirm.gd" id="1_raiom"]
+[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="2_rhv7c"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_x13yu"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="4_jf8mh"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="5_saqf6"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="6_8tda7"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="7_gqwxx"]
+
+[node name="end_turn_confirm" type="Node2D"]
+script = ExtResource("1_raiom")
+
+[node name="background" type="NinePatchRect" parent="."]
+offset_left = -400.0
+offset_top = -50.0
+offset_right = 400.0
+offset_bottom = 50.0
+texture = ExtResource("2_rhv7c")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="warning" type="Label" parent="background"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 7.0
+theme_override_fonts/font = ExtResource("3_x13yu")
+theme_override_font_sizes/font_size = 30
+text = "TR_NO_MOVES_YOU_SURE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="no_button" type="TextureButton" parent="."]
+offset_left = -400.0
+offset_top = 60.0
+offset_right = -210.0
+offset_bottom = 100.0
+texture_normal = ExtResource("4_jf8mh")
+texture_pressed = ExtResource("5_saqf6")
+texture_hover = ExtResource("6_8tda7")
+texture_focused = ExtResource("6_8tda7")
+
+[node name="label" type="Label" parent="no_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_gqwxx")
+text = "TR_NO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="yes_button" type="TextureButton" parent="."]
+offset_left = 210.0
+offset_top = 60.0
+offset_right = 400.0
+offset_bottom = 100.0
+texture_normal = ExtResource("4_jf8mh")
+texture_pressed = ExtResource("5_saqf6")
+texture_hover = ExtResource("6_8tda7")
+texture_focused = ExtResource("6_8tda7")
+
+[node name="label" type="Label" parent="yes_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_gqwxx")
+text = "TR_YES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="no_button" to="." method="_on_no_button_pressed"]
+[connection signal="pressed" from="yes_button" to="." method="_on_yes_button_pressed"]
