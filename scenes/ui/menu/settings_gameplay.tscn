@@ -46,3 +46,11 @@ offset_bottom = 330.0
 option_name = "TR_EDGE_PAN"
 option_key = "edge_pan"
 help_tip = "TR_EDGE_PAN_DESC"
+
+[node name="end_turn_speed" parent="." instance=ExtResource("1")]
+offset_top = 345.0
+offset_bottom = 395.0
+option_name = "TR_END_TURN_SPEED"
+option_key = "end_turn_speed"
+help_tip = "TR_END_TURN_SPEED_DESC"
+available_values = ["x1", "x2", "x4"]

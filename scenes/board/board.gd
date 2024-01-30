@@ -37,6 +37,7 @@ var explosion_template = preload("res://scenes/fx/explosion.tscn")
 var projectile_template = preload("res://scenes/fx/projectile.tscn")
 
 var ending_turn_in_progress = false
+var ending_turn_multiplier = 1
 var initial_hq_cam_skipped = false
 var mouse_click_position = null
 
@@ -782,12 +783,19 @@ func start_ending_turn():
 	self.ending_turn_in_progress = true
 	self.ui.show_end_turn()
 
+	self.ending_turn_multiplier = 1
+	var ending_multiplier_setting = self.settings.get_option("end_turn_speed")
+	if ending_multiplier_setting == "x2":
+		self.ending_turn_multiplier = 2
+	if ending_multiplier_setting == "x4":
+		self.ending_turn_multiplier = 4
+
 	var index = 0
 
 	while index * step_value <= step_max and self.ending_turn_in_progress:
 		self.ui.update_end_turn_progress(index * step_value)
 		await self.get_tree().create_timer(step_delay).timeout
-		index += 1
+		index += self.ending_turn_multiplier
 
 	if self.ending_turn_in_progress:
 		self.abort_ending_turn()
