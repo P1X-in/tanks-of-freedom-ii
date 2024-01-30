@@ -1,7 +1,7 @@
 extends Node
 
-const RELAY_PORT: int = 9939
-const RELAY_URL: String = "ws://online.tof.p1x.in"
+var RELAY_PORT: int = 9939
+var RELAY_URL: String = "api.tof.p1x.in"
 
 signal connection_failed
 signal connection_success
@@ -30,8 +30,20 @@ var join_code: String = ""
 var connecting: bool = false
 
 func _ready() -> void:
+	self._read_settings()
+	self.settings.changed.connect(self._on_settings_changed)
 	self.set_process(false)
 	self.message_received.connect(self._message_received)
+
+
+func _on_settings_changed(key: String, _value) -> void:
+	if key == "relay_port" or key == "relay_domain":
+		self._read_settings()
+
+
+func _read_settings() -> void:
+	self.RELAY_PORT = int(self.settings.get_option("relay_port"))
+	self.RELAY_URL = self.settings.get_option("relay_domain")
 
 func is_server():
 	return self.peer_id == 1
@@ -41,7 +53,7 @@ func create_game(map_name: String) -> Error:
 	self.player_limit = _get_player_count(map_name)
 
 	self.connecting = true
-	self.socket.connect_to_url(self.RELAY_URL + ":" + str(self.RELAY_PORT))
+	self.socket.connect_to_url("ws://" + self.RELAY_URL + ":" + str(self.RELAY_PORT))
 	self.set_process(true)
 	await self.connection_success
 

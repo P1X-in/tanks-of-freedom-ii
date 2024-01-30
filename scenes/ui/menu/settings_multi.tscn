@@ -23,3 +23,35 @@ offset_bottom = 135.0
 option_name = "TR_DISCOVERY_PORT"
 option_key = "discovery_port"
 help_tip = "TR_DISCOVERY_PORT_DESC"
+
+[node name="online_domain" parent="." instance=ExtResource("1_0q3q6")]
+offset_top = 150.0
+offset_bottom = 200.0
+option_name = "TR_ONLINE_DOMAIN"
+option_key = "online_domain"
+help_tip = "TR_ONLINE_DOMAIN_DESC"
+placeholder = "api.tof.p1x.in"
+
+[node name="online_port" parent="." instance=ExtResource("1_0q3q6")]
+offset_top = 215.0
+offset_bottom = 265.0
+option_name = "TR_ONLINE_PORT"
+option_key = "online_port"
+help_tip = "TR_ONLINE_PORT_DESC"
+placeholder = "443"
+
+[node name="relay_domain" parent="." instance=ExtResource("1_0q3q6")]
+offset_top = 280.0
+offset_bottom = 330.0
+option_name = "TR_RELAY_DOMAIN"
+option_key = "relay_domain"
+help_tip = "TR_RELAY_DOMAIN_DESC"
+placeholder = "api.tof.p1x.in"
+
+[node name="relay_port" parent="." instance=ExtResource("1_0q3q6")]
+offset_top = 345.0
+offset_bottom = 395.0
+option_name = "TR_RELAY_PORT"
+option_key = "relay_port"
+help_tip = "TR_RELAY_PORT_DESC"
+placeholder = "9939"
