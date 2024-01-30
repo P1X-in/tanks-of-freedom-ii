@@ -10,11 +10,13 @@ extends Control
 @export var option_name = ""
 @export var option_key = ""
 @export var help_tip = ""
+@export var placeholder = ""
 
 func _ready():
 	self.label.set_text(self.option_name)
 	self._read_setting()
 	self.text_input.set_editable(not self.unavailable)
+	self.text_input.set_placeholder(self.placeholder)
 
 func _read_setting():
 	var value = self.settings.get_option(self.option_key)

@@ -274,6 +274,7 @@ func handle_multiplayer_picker_output(args):
 	self.ui.hide_picker()
 	self.gamepad_adapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.picker.unlock_tab_bar()
 	var error = self.multiplayer_srv.create_game(args[0])
 	if error:
 		self.ui.show_multiplayer()
@@ -289,3 +290,39 @@ func close_multiplayer_lobby():
 	self.ui.hide_multiplayer_lobby()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.show_multiplayer()
+
+
+func open_online_match_map_picker():
+	self.ui.hide_online()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.picker.set_select_mode()
+	self.ui.picker.lock_custom_maps()
+	self.ui.show_picker()
+
+	self.ui.picker.bind_cancel(self, "close_online_match_map_picker")
+	self.ui.picker.bind_success(self, "handle_online_match_map_picker_output")
+
+func close_online_match_map_picker():
+	self.ui.hide_picker()
+	self.gamepad_adapter.enable()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.picker.unlock_tab_bar()
+	self.ui.show_online()
+
+func handle_online_match_map_picker_output(args):
+	self.ui.hide_picker()
+	self.gamepad_adapter.enable()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.picker.unlock_tab_bar()
+	self.ui.show_online()
+	self.ui.online.init_match(args[0])
+
+func open_online_lobby():
+	self.ui.hide_online()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.show_online_lobby()
+
+func close_online_lobby():
+	self.ui.hide_online_lobby()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.show_online()

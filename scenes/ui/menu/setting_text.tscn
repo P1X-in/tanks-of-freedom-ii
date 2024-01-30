@@ -30,4 +30,7 @@ offset_bottom = 45.0
 mouse_default_cursor_shape = 0
 alignment = 1
 
+[connection signal="focus_entered" from="text" to="." method="_show_help"]
+[connection signal="mouse_entered" from="text" to="." method="_show_help"]
+[connection signal="mouse_exited" from="text" to="." method="_clear_help"]
 [connection signal="text_changed" from="text" to="." method="_on_text_text_changed"]

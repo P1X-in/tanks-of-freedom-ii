@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="11_82ixr"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="12_svnh1"]
 
-[node name="skirmish_player" type="Control"]
+[node name="lan_player" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

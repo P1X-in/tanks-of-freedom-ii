@@ -1,6 +1,8 @@
 extends "res://scenes/ui/menu/base_menu_panel.gd"
 
 @onready var online = $"/root/Online"
+@onready var settings = $"/root/Settings"
+@onready var relay = $"/root/Relay"
 
 @onready var back_button = $"widgets/back_button"
 
@@ -26,6 +28,19 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 @onready var download_desc = $"widgets/online/maps/download/description"
 @onready var download_name = $"widgets/online/maps/download/name"
 
+
+
+
+@onready var online_match_nickname_input = $"widgets/online/maps/main/nickname"
+@onready var online_match_create_button = $"widgets/online/maps/main/create_button"
+@onready var online_match_join_code_input = $"widgets/online/maps/main/join_code"
+@onready var online_match_join_button = $"widgets/online/maps/main/join_button"
+
+@onready var online_match_connecting_panel = $"widgets/online/maps/busy"
+
+
+
+
 var working = false
 
 var selected_upload_map = null
@@ -37,6 +52,10 @@ func _ready():
 	self.upload_name.notification(NOTIFICATION_TRANSLATION_CHANGED)
 	self.download_name.set_message_translation(false)
 	self.download_name.notification(NOTIFICATION_TRANSLATION_CHANGED)
+	
+	self.online_match_nickname_input.set_text(self.settings.get_option("nickname"))
+	self.relay.session_success.connect(self._on_session_success)
+	self.relay.connection_failed.connect(self._on_connection_failed)
 
 func _on_back_button_pressed():
 	if self.working:
@@ -45,8 +64,11 @@ func _on_back_button_pressed():
 	if self.selected_upload_map != null:
 		self.selected_upload_map = null
 		self._select_panel()
-	if self.selected_download_map != null:
+	elif self.selected_download_map != null:
 		self.selected_download_map = null
+		self._select_panel()
+	elif self.online_match_connecting_panel.is_visible():
+		self.back_button.show()
 		self._select_panel()
 	else:
 		self.main_menu.close_online()
@@ -94,11 +116,14 @@ func _configure_online_panel():
 	self.register_panel.hide()
 	self._configure_maps_panel()
 
-func _configure_maps_panel():
-	self.maps_panel.show()
+func _hide_all_subpanels():
 	self.maps_main.hide()
 	self.maps_upload.hide()
 	self.maps_download.hide()
+	self.online_match_connecting_panel.hide()
+
+func _configure_maps_panel():
+	self._hide_all_subpanels()
 	if self.selected_upload_map != null:
 		self._configure_maps_upload_confirm_panel()
 	elif self.selected_download_map != null:
@@ -140,6 +165,12 @@ func _configure_registration_panel():
 	await self.get_tree().create_timer(0.1).timeout
 	self.register_button.grab_focus()
 
+func _show_online_connecting_panel():
+	self._hide_all_subpanels()
+	self.online_match_connecting_panel.show()
+	self.back_button.hide()
+
+
 func _on_upload_button_pressed():
 	self.audio.play("menu_click")
 	self.main_menu.open_upload_picker()
@@ -148,6 +179,7 @@ func _on_upload_button_pressed():
 func _on_download_button_pressed():
 	self.audio.play("menu_click")
 	self.main_menu.open_download_picker()
+	self.back_button.hide()
 
 
 func _on_confirm_upload_button_pressed():
@@ -203,3 +235,37 @@ func _on_retry_button_pressed():
 		self.download_desc.set_text(tr("TR_DOWNLOADING_FAIL"))
 		await self.get_tree().create_timer(0.1).timeout
 		self.retry_download_button.grab_focus()
+
+
+func _on_nickname_focus_exited():
+	self.settings.set_option("nickname", self.online_match_nickname_input.get_text())
+
+
+func _on_create_button_pressed():
+	self.audio.play("menu_click")
+	self.main_menu.open_online_match_map_picker()
+
+
+func _on_join_button_pressed():
+	self.audio.play("menu_click")
+
+	if self.online_match_join_code_input.get_text() == "":
+		return
+
+	self.working = true
+	self._show_online_connecting_panel()
+	self.relay.connect_game(self.online_match_join_code_input.get_text())
+
+func init_match(map_name):
+	self._show_online_connecting_panel()
+	self.working = true
+	self.relay.create_game(map_name)
+
+func _on_session_success():
+	self.working = false
+	self.main_menu.open_online_lobby()
+
+func _on_connection_failed():
+	self.working = false
+	self.back_button.show()
+	self._select_panel()

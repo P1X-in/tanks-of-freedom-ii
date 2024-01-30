@@ -37,7 +37,11 @@ var settings = {
 	"last_used_port": "3939",
 	"game_port": 3939,
 	"discovery_port": 3940,
-	"edge_pan": true
+	"edge_pan": true,
+	"online_domain": "api.tof.p1x.in",
+	"online_port": 443,
+	"relay_domain": "api.tof.p1x.in",
+	"relay_port": 9939
 }
 
 

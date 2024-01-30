@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c2tt60y1onsj4"]
+[gd_scene load_steps=18 format=3 uid="uid://c2tt60y1onsj4"]
 
 [ext_resource type="Script" path="res://scenes/main_menu/ui.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://ejd2ser0yy34" path="res://scenes/ui/menu/logo_view.tscn" id="2"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://4fm2h6kocq46" path="res://scenes/ui/save/saves.tscn" id="12"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="12_3ecm1"]
 [ext_resource type="PackedScene" uid="uid://d10shqx6iv5t7" path="res://scenes/ui/online/online.tscn" id="13"]
+[ext_resource type="PackedScene" uid="uid://guehs06rsfa1" path="res://scenes/ui/online/lobby.tscn" id="15_de4w4"]
 [ext_resource type="PackedScene" uid="uid://b8donvamyojma" path="res://scenes/ui/multiplayer/multiplayer.tscn" id="15_tnnbm"]
 [ext_resource type="PackedScene" uid="uid://gv5orbc5avp5" path="res://scenes/ui/multiplayer/lobby.tscn" id="16_xn36n"]
 
@@ -164,6 +165,19 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 
 [node name="online" parent="online" instance=ExtResource("13")]
+layout_mode = 2
+
+[node name="online_lobby" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="lobby" parent="online_lobby" instance=ExtResource("15_de4w4")]
 layout_mode = 2
 
 [node name="multiplayer" type="MarginContainer" parent="."]
