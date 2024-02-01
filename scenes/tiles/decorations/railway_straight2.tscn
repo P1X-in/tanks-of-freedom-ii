@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://3ddje8ps6ceq"]
+
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="1_iluru"]
+[ext_resource type="ArrayMesh" uid="uid://k60r865d04mi" path="res://assets/terrain/variety/railway/railway_straight2.obj" id="2_lgj7c"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_jccw2"]
+
+[node name="tile" instance=ExtResource("1_iluru")]
+unit_can_stand = true
+can_share_space = true
+
+[node name="mesh" parent="." index="0"]
+mesh = ExtResource("2_lgj7c")
+surface_material_override/0 = ExtResource("3_jccw2")

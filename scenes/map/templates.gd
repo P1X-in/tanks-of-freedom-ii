@@ -128,6 +128,7 @@ const DECO_GROUND_DMG_5 = "deco_ground_dmg5"
 const DECO_GROUND_DMG_6 = "deco_ground_dmg6"
 
 const DECO_RAIL_STRAIGHT = "deco_rail_straight"
+const DECO_RAIL_STRAIGHT2 = "deco_rail_straight2"
 const DECO_RAIL_TURN     = "deco_rail_turn"
 const DECO_RAIL_T        = "deco_rail_t"
 const DECO_RAIL_CROSS    = "deco_rail_cross"
@@ -135,10 +136,13 @@ const DECO_RAIL_END      = "deco_rail_end"
 const DECO_RAIL_STOP     = "deco_rail_stop"
 
 const BRIDGE_PLATE = "bridge_plate"
+const BRIDGE2_PLATE = "bridge2_plate"
 const BRIDGE_LEGS = "bridge_legs"
+const BRIDGE2_LEGS = "bridge2_legs"
 const BRIDGE_SUSPENSION = "bridge_suspension"
 const BRIDGE_SUSPENSION_TILED = "bridge_suspension_tiled"
 const BRIDGE_STONE = "bridge_stone"
+const BRIDGE2_STONE = "bridge2_stone"
 const BRIDGE_STONE_BARRIER = "bridge_stone_barrier"
 const BRIDGE_STONE_BARRIER_TILED = "bridge_stone_barrier_tiled"
 
@@ -431,6 +435,9 @@ var templates = {
 	self.BRIDGE_PLATE : preload("res://scenes/tiles/ground/bridge_plate.tscn"),
 	self.BRIDGE_LEGS : preload("res://scenes/tiles/ground/bridge_legs.tscn"),
 	self.BRIDGE_STONE : preload("res://scenes/tiles/ground/bridge_stone.tscn"),
+	self.BRIDGE2_PLATE : preload("res://scenes/tiles/ground/bridge2_plate.tscn"),
+	self.BRIDGE2_LEGS : preload("res://scenes/tiles/ground/bridge2_legs.tscn"),
+	self.BRIDGE2_STONE : preload("res://scenes/tiles/ground/bridge2_stone.tscn"),
 
 	self.FRAME_GRASS1 : preload("res://scenes/tiles/frames/grass_1_overtile.tscn"),
 	self.FRAME_GRASS2 : preload("res://scenes/tiles/frames/grass_2_overtile.tscn"),
@@ -504,6 +511,7 @@ var templates = {
 	self.DECO_GROUND_DMG_6 : preload("res://scenes/tiles/decorations/ground_damage_6.tscn"),
 
 	self.DECO_RAIL_STRAIGHT : preload("res://scenes/tiles/decorations/railway_straight.tscn"),
+	self.DECO_RAIL_STRAIGHT2 : preload("res://scenes/tiles/decorations/railway_straight2.tscn"),
 	self.DECO_RAIL_TURN     : preload("res://scenes/tiles/decorations/railway_turn.tscn"),
 	self.DECO_RAIL_T        : preload("res://scenes/tiles/decorations/railway_t.tscn"),
 	self.DECO_RAIL_CROSS    : preload("res://scenes/tiles/decorations/railway_cross.tscn"),

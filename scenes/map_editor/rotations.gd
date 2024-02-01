@@ -57,8 +57,11 @@ func build_rotations(templates, builder):
 		templates.GROUND_SAND_DIRT_ROAD3,
 		templates.GROUND_SAND_DIRT_ROAD4,
 		templates.BRIDGE_PLATE,
+		templates.BRIDGE2_PLATE,
 		templates.BRIDGE_LEGS,
+		templates.BRIDGE2_LEGS,
 		templates.BRIDGE_STONE,
+		templates.BRIDGE2_STONE,
 		templates.GROUND_FLYABLE,
 	])
 
@@ -197,6 +200,7 @@ func build_rotations(templates, builder):
 		templates.BRIDGE_STONE_BARRIER,
 		templates.BRIDGE_STONE_BARRIER_TILED,
 		templates.DECO_RAIL_STRAIGHT,
+		templates.DECO_RAIL_STRAIGHT2,
 		templates.DECO_RAIL_TURN,
 		templates.DECO_RAIL_T,
 		templates.DECO_RAIL_CROSS,
