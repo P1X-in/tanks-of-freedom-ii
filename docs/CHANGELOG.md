@@ -20,6 +20,7 @@
 - Added end turn confirmation when player made no moves
 - Added 90 FPS option for Deck OLED
 - Radial menu now closes when clicked away
+- Added new tiles to editor
 - Fixed missing option descriptions in Settings
 - Fixed a bug that would lock out custom maps in Skirmish mode after a map in multiplayer mode has been picked
 - Fixed a bug preventing units from being unbanned in buildings
