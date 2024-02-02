@@ -28,7 +28,7 @@ func bind_menu(main_menu):
 	self.multiplayer_panel.bind_menu(main_menu)
 	self.multiplayer_lobby_panel.bind_menu(main_menu)
 
-	self.set_version(self.settings.settings.os_string)
+	self.set_version(tr("TR_VERSION") + " v" + ProjectSettings.get_setting("application/config/version"))
 
 func hide_menu():
 	self.menu.hide_panel()
