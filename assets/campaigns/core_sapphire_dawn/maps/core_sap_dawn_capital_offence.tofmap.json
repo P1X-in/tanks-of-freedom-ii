@@ -579,6 +579,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_heli",
+                        "sound": false,
                         "where": [
                             6,
                             12
@@ -591,6 +592,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_heli",
+                        "sound": false,
                         "where": [
                             6,
                             20
@@ -604,6 +606,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_heli",
+                        "sound": false,
                         "where": [
                             6,
                             19
@@ -717,6 +720,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             10,
                             13
@@ -729,6 +733,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             10,
                             18
@@ -753,6 +758,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_m_inf",
+                        "sound": false,
                         "where": [
                             10,
                             20
@@ -765,6 +771,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             10,
                             21
@@ -777,6 +784,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             10,
                             26
@@ -789,6 +797,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_m_inf",
+                        "sound": false,
                         "where": [
                             10,
                             27
@@ -802,6 +811,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             10,
                             28
@@ -1029,6 +1039,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_heli",
+                        "sound": false,
                         "where": [
                             6,
                             12
@@ -1041,6 +1052,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_heli",
+                        "sound": false,
                         "where": [
                             6,
                             20
@@ -1054,6 +1066,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_heli",
+                        "sound": false,
                         "where": [
                             6,
                             19
@@ -1167,6 +1180,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             10,
                             13
@@ -1179,6 +1193,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             10,
                             18
@@ -1203,6 +1218,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_m_inf",
+                        "sound": false,
                         "where": [
                             10,
                             20
@@ -1215,6 +1231,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             10,
                             21
@@ -1227,6 +1244,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             10,
                             26
@@ -1239,6 +1257,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_m_inf",
+                        "sound": false,
                         "where": [
                             10,
                             27
@@ -1252,6 +1271,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             10,
                             28
@@ -1456,6 +1476,7 @@
                         "rotation": 180,
                         "side": "blue",
                         "template": "blue_tank",
+                        "sound": false,
                         "where": [
                             21,
                             39
@@ -1468,6 +1489,7 @@
                         "rotation": 180,
                         "side": "blue",
                         "template": "blue_heli",
+                        "sound": false,
                         "where": [
                             22,
                             39

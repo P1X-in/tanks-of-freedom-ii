@@ -4,7 +4,7 @@ var where
 var template_name = null
 var side
 var rotation = 0
-var sound = false
+var sound = true
 var promote = false
 
 func _execute(_metadata):

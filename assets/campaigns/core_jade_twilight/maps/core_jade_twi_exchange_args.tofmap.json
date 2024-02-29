@@ -325,6 +325,7 @@
                         "rotation": 90,
                         "side": "blue",
                         "template": "blue_m_inf",
+                        "sound": false,
                         "where": [
                             7,
                             19

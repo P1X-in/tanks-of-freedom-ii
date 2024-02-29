@@ -250,6 +250,7 @@
                         "rotation": 90,
                         "side": "black",
                         "template": "yellow_rocket",
+                        "sound": false,
                         "where": [
                             29,
                             13
@@ -263,6 +264,7 @@
                         "rotation": 90,
                         "side": "black",
                         "template": "yellow_rocket",
+                        "sound": false,
                         "where": [
                             28,
                             11
@@ -576,6 +578,7 @@
                         "rotation": 90,
                         "side": "black",
                         "template": "yellow_rocket",
+                        "sound": false,
                         "where": [
                             11,
                             18
@@ -588,6 +591,7 @@
                         "rotation": 90,
                         "side": "black",
                         "template": "yellow_rocket",
+                        "sound": false,
                         "where": [
                             11,
                             17
@@ -612,6 +616,7 @@
                         "rotation": 90,
                         "side": "black",
                         "template": "yellow_infantry",
+                        "sound": false,
                         "where": [
                             12,
                             19
@@ -624,6 +629,7 @@
                         "rotation": 90,
                         "side": "black",
                         "template": "yellow_infantry",
+                        "sound": false,
                         "where": [
                             12,
                             18
@@ -636,6 +642,7 @@
                         "rotation": 90,
                         "side": "black",
                         "template": "yellow_infantry",
+                        "sound": false,
                         "where": [
                             12,
                             17
@@ -648,6 +655,7 @@
                         "rotation": 90,
                         "side": "black",
                         "template": "yellow_infantry",
+                        "sound": false,
                         "where": [
                             12,
                             16
@@ -660,6 +668,7 @@
                         "rotation": 90,
                         "side": "black",
                         "template": "yellow_infantry",
+                        "sound": false,
                         "where": [
                             13,
                             19
@@ -672,6 +681,7 @@
                         "rotation": 90,
                         "side": "black",
                         "template": "yellow_infantry",
+                        "sound": false,
                         "where": [
                             13,
                             18
@@ -684,6 +694,7 @@
                         "rotation": 90,
                         "side": "black",
                         "template": "yellow_infantry",
+                        "sound": false,
                         "where": [
                             13,
                             17
@@ -837,6 +848,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_tank",
+                        "sound": false,
                         "where": [
                             8,
                             21
@@ -873,6 +885,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_m_inf",
+                        "sound": false,
                         "where": [
                             0,
                             21
@@ -885,6 +898,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_m_inf",
+                        "sound": false,
                         "where": [
                             0,
                             20

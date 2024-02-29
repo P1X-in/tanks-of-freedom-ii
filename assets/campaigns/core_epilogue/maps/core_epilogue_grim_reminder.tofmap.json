@@ -1558,6 +1558,7 @@
                         "rotation": 180,
                         "side": "yellow",
                         "template": "yellow_heli",
+                        "sound": false,
                         "where": [
                             27,
                             37
@@ -1582,6 +1583,7 @@
                         "rotation": 180,
                         "side": "yellow",
                         "template": "yellow_tank",
+                        "sound": false,
                         "where": [
                             25,
                             38
@@ -1594,6 +1596,7 @@
                         "rotation": 180,
                         "side": "yellow",
                         "template": "yellow_tank",
+                        "sound": false,
                         "where": [
                             26,
                             38
@@ -1618,6 +1621,7 @@
                         "rotation": 180,
                         "side": "yellow",
                         "template": "yellow_rocket",
+                        "sound": false,
                         "where": [
                             25,
                             39
@@ -1631,6 +1635,7 @@
                         "rotation": 180,
                         "side": "yellow",
                         "template": "yellow_rocket",
+                        "sound": false,
                         "where": [
                             26,
                             39

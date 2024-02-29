@@ -342,6 +342,7 @@
                         "rotation": 0,
                         "side": "red",
                         "template": "red_m_inf",
+                        "sound": false,
                         "where": [
                             13,
                             4

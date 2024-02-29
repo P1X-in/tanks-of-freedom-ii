@@ -158,6 +158,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_tank",
+                        "sound": false,
                         "where": [
                             5,
                             20

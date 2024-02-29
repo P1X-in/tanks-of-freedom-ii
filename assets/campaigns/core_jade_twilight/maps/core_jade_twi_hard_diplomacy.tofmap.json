@@ -483,6 +483,7 @@
                         "rotation": 0,
                         "side": "green",
                         "template": "green_infantry",
+                        "sound": false,
                         "where": [
                             35,
                             1
@@ -521,6 +522,7 @@
                         "rotation": 0,
                         "side": "green",
                         "template": "green_tank",
+                        "sound": false,
                         "where": [
                             35,
                             0

@@ -702,6 +702,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             20,
                             19
@@ -935,6 +936,7 @@
                         "rotation": 90,
                         "side": "red",
                         "template": "red_infantry",
+                        "sound": false,
                         "where": [
                             20,
                             21

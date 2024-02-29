@@ -139,6 +139,7 @@
                         "rotation": 180,
                         "side": "blue",
                         "template": "blue_m_inf",
+                        "sound": false,
                         "where": [
                             16,
                             39
@@ -1647,6 +1648,7 @@
                         "rotation": 90,
                         "side": "green",
                         "template": "green_m_inf",
+                        "sound": false,
                         "where": [
                             6,
                             39
@@ -1674,6 +1676,7 @@
                         "rotation": 90,
                         "side": "green",
                         "template": "green_tank",
+                        "sound": false,
                         "where": [
                             5,
                             39
@@ -1701,6 +1704,7 @@
                         "rotation": 90,
                         "side": "green",
                         "template": "green_heli",
+                        "sound": false,
                         "where": [
                             4,
                             39

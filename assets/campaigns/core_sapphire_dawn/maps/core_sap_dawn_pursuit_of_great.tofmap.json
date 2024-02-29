@@ -949,6 +949,7 @@
                         "rotation": 180,
                         "side": "green",
                         "template": "green_tank",
+                        "sound": false,
                         "where": [
                             31,
                             37
@@ -961,6 +962,7 @@
                         "rotation": 90,
                         "side": "green",
                         "template": "green_tank",
+                        "sound": false,
                         "where": [
                             31,
                             33
@@ -973,6 +975,7 @@
                         "rotation": 90,
                         "side": "green",
                         "template": "green_tank",
+                        "sound": false,
                         "where": [
                             31,
                             30
@@ -985,6 +988,7 @@
                         "rotation": 270,
                         "side": "green",
                         "template": "green_tank",
+                        "sound": false,
                         "where": [
                             37,
                             31
@@ -997,6 +1001,7 @@
                         "rotation": 270,
                         "side": "green",
                         "template": "green_tank",
+                        "sound": false,
                         "where": [
                             37,
                             33
