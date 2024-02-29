@@ -1,6 +1,8 @@
 extends "res://scenes/tiles/tile.gd"
 class_name BaseUnit
 
+signal move_finished
+
 const MAX_LEVEL = 3
 const EXP_PER_LEVEL = 2
 
@@ -214,8 +216,11 @@ func _animate_initial_path_segment():
 	self.move_in_direction(direction)
 
 func _animate_next_path_segment():
+	if self.current_path.size() == 0:
+		return
+
 	var direction = self.current_path[self.current_path_index]
-	$"mesh_anchor".set_position(Vector3(0, 0, 0))
+	_reset_anchor_position()
 	self.set_position(self.get_position() + self.unit_translations[direction])
 	self.current_path_index += 1
 	direction = self.current_path[self.current_path_index]
@@ -227,10 +232,13 @@ func move_in_direction(direction):
 		self.animations.play("move")
 		self.sfx_effect("move")
 	else:
+		self.move_finished.emit()
 		self.execute_move_callback()
 
 func stop_animations():
 	self.animations.stop()
+	self.current_path = []
+	self.current_path_index = 0
 	_reset_anchor_position()
 	self.level_star.hide()
 

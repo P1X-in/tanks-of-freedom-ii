@@ -451,7 +451,12 @@ func update_unit_position(tile):
 	var movement_path = self.path_markers.convert_path_to_directions(path)
 	var unit = tile.unit.tile
 
+	unit.bind_move_callback(self, "_reset_unit_position_array", [tile, unit])
+
 	unit.animate_path(movement_path)
+
+func _reset_unit_position_array(args_array):
+	self.reset_unit_position(args_array[0], args_array[1])
 
 func reset_unit_position(tile, unit):
 	unit.stop_animations()
