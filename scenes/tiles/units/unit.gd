@@ -236,23 +236,24 @@ func move_in_direction(direction):
 		self.execute_move_callback()
 
 func stop_animations():
-	self.animations.stop()
 	self.current_path = []
 	self.current_path_index = 0
+	self.animations.stop()
 	_reset_anchor_position()
 	self.level_star.hide()
+	self.move_finished.emit()
 
 func _reset_anchor_position():
 	$"mesh_anchor".set_position(Vector3(0, 0, 0))
 
 func execute_move_callback():
+	_reset_anchor_position()
 	if self.move_finished_object != null:
 		if self.move_finished_args.size() > 0:
 			self.move_finished_object.call_deferred(self.move_finished_method, self.move_finished_args)
 		else:
 			self.move_finished_object.call_deferred(self.move_finished_method)
 		self.clear_move_callback()
-	_reset_anchor_position()
 
 func bind_move_callback(bound_object, bound_method, bound_args=[]):
 	self.move_finished_object = bound_object

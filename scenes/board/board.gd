@@ -232,6 +232,7 @@ func start_turn():
 			await self.get_tree().create_timer(1).timeout
 
 	self.replenish_unit_actions()
+	#self.reset_all_unit_positions()
 	self.gain_building_ap()
 	self.ui.update_resource_value(self.state.get_current_ap())
 	self.ui.flash_start_end_card(self.state.get_current_side(), self.state.turn)
@@ -303,7 +304,7 @@ func select_tile(tile_position):
 
 	self.hover_tile()
 
-	if self.selected_tile != null:
+	if self.selected_tile != null and not self.state.is_current_player_ai():
 		self.audio.play("map_click")
 
 
@@ -465,6 +466,11 @@ func reset_unit_position(tile, unit):
 	world_position.y = old_position.y
 	unit.set_position(world_position)
 
+func reset_all_unit_positions():
+	var all_unit_tiles = self.map.model.get_all_units_tiles()
+	for tile in all_unit_tiles:
+		self.reset_unit_position(tile, tile.unit.tile)
+
 func can_move_to_tile(tile):
 	var move_cost = self.movement_markers.get_tile_cost(tile)
 	if move_cost != null and move_cost > 0 and tile.can_acommodate_unit(self.selected_tile.unit.tile):
@@ -497,6 +503,8 @@ func handle_interaction(tile):
 func battle(attacker_tile, defender_tile):
 	var attacker = attacker_tile.unit.tile
 	var defender = defender_tile.unit.tile
+
+	self.reset_unit_position(attacker_tile, attacker)
 
 	attacker.use_move(1)
 	attacker.use_attack()

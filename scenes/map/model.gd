@@ -73,6 +73,15 @@ func get_player_units(side):
 
 	return units
 
+func get_all_units_tiles():
+	var units_tiles = []
+	for i in self.tiles.keys():
+		if self.tiles[i].unit.is_present():
+			units_tiles.append(self.tiles[i])
+
+	return units_tiles
+
+
 func get_player_buildings(side):
 	var buildings = []
 	for i in self.tiles.keys():
