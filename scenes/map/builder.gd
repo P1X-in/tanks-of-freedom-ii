@@ -348,6 +348,6 @@ func rebuild_tile(tile_id, tile_data):
             if not self.map.settings.get_option("shadows"):
                 self._disable_shadow(passenger)
             passenger.restore_from_state(tile_data["unit"]["passenger"])
-            self._set_unit_side(passenger, passenger.side)
+            self._set_unit_side(passenger, tile_data["unit"]["passenger"]["side"])
 
             tile.unit.tile.passenger = passenger
