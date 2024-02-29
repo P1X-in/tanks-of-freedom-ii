@@ -16,7 +16,6 @@ func perform(board):
 	board.unselect_tile()
 
 	await unit_object.move_finished
-	#await board.get_tree().create_timer(self.path_length * 0.1).timeout
 
 func _to_string():
 	return str(self.unit.position) + " moves to " + str(self.target.position)

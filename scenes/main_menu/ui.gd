@@ -28,7 +28,12 @@ func bind_menu(main_menu):
 	self.multiplayer_panel.bind_menu(main_menu)
 	self.multiplayer_lobby_panel.bind_menu(main_menu)
 
-	self.set_version(tr("TR_VERSION") + " v" + ProjectSettings.get_setting("application/config/version"))
+	var version_string = tr("TR_VERSION") + " v" + ProjectSettings.get_setting("application/config/version")
+	if main_menu.settings._is_steam_deck():
+		version_string += " SteamOS"
+	else:
+		version_string += " " + OS.get_name()
+	self.set_version(version_string)
 
 func hide_menu():
 	self.menu.hide_panel()

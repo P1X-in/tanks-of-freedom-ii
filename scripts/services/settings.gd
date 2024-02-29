@@ -154,13 +154,12 @@ func _detect_steam_deck():
 
 	self.settings["steamdeck_detection"] = true
 
-	if OS.get_name() == "X11":
-		var output = []
-		var exit_code = OS.execute("lsb_release", ["-si"], output, true, false)
+	if _is_steam_deck():
+		self.settings["is_steamdeck"] = true
+		self._apply_steam_deck_settings()
 
-		if exit_code == 0 and output.size() > 0 and output[0].strip_edges() == "SteamOS":
-			self.settings["is_steamdeck"] = true
-			self._apply_steam_deck_settings()
+func _is_steam_deck():
+	return OS.get_distribution_name() == "SteamOS"
 
 func _apply_steam_deck_settings():
 	self.settings["fullscreen"] = true

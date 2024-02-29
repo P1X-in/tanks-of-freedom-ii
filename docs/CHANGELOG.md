@@ -5,6 +5,7 @@
 - Fixed Infantry unit having wrong side when dropped from Attack Helicopter
 - Attempted fix for units getting visually misaligned when moved (again)
 - Fixed missing unit spawn sounds in campaign cutscenes
+- Fixed SteamOS detection
 
 ### 0.6.0-alpha
 - Updated Godot Engine to 4.2
