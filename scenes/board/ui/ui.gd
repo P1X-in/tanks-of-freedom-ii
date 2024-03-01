@@ -107,8 +107,6 @@ func update_resource_value(value):
 	self.resource_label.set_text(str(value))
 	if value == 0:
 		self.resource.flash()
-		if self.settings.get_option("notify_ap_spent"):
-			self.ap_depleted.flash()
 	else:
 		self.resource.stop_flash()
 

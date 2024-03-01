@@ -18,7 +18,6 @@ func _execute(_metadata):
     world_position.y = old_position.y
     unit.set_position(world_position)
 
-    unit.bind_move_callback(self.board, "_reset_unit_position_array", [destination_tile, unit])
     unit.animate_path(self.path)
 
 func _ingest_details(details):

@@ -60,14 +60,12 @@ var unit_translations = {
 var current_path = []
 var current_path_index = 0
 
-var move_finished_object = null
-var move_finished_method = ""
-var move_finished_args = []
-
 
 var base_material
 var desaturated_material
 
+func _ready():
+	self.animations.animation_finished.connect(_on_animation_finished)
 
 func reset():
 	var stats = self.get_stats_with_modifiers()
@@ -75,7 +73,6 @@ func reset():
 	self.hp = stats["max_hp"]
 	self.move = stats["max_move"]
 	self.attacks = stats["max_attacks"]
-	_reset_anchor_position()
 
 func get_dict():
 	var new_dict = super.get_dict()
@@ -204,7 +201,6 @@ func rotate_unit_to_direction(direction):
 	var unit_rotation = self.unit_rotations[direction]
 	self.set_rotation(Vector3(0, deg_to_rad(unit_rotation), 0))
 	self.current_rotation = unit_rotation
-	_reset_anchor_position()
 
 func animate_path(path):
 	self.current_path = path
@@ -226,6 +222,10 @@ func _animate_next_path_segment():
 	direction = self.current_path[self.current_path_index]
 	self.move_in_direction(direction)
 
+func _on_animation_finished(anim_name):
+	if anim_name == "move":
+		_animate_next_path_segment()
+
 func move_in_direction(direction):
 	self.rotate_unit_to_direction(direction)
 	if self.current_path_index < self.current_path.size() - 1:
@@ -233,7 +233,6 @@ func move_in_direction(direction):
 		self.sfx_effect("move")
 	else:
 		self.move_finished.emit()
-		self.execute_move_callback()
 
 func stop_animations():
 	self.current_path = []
@@ -245,23 +244,6 @@ func stop_animations():
 
 func _reset_anchor_position():
 	$"mesh_anchor".set_position(Vector3(0, 0, 0))
-
-func execute_move_callback():
-	_reset_anchor_position()
-	if self.move_finished_object != null:
-		if self.move_finished_args.size() > 0:
-			self.move_finished_object.call_deferred(self.move_finished_method, self.move_finished_args)
-		else:
-			self.move_finished_object.call_deferred(self.move_finished_method)
-		self.clear_move_callback()
-
-func bind_move_callback(bound_object, bound_method, bound_args=[]):
-	self.move_finished_object = bound_object
-	self.move_finished_method = bound_method
-	self.move_finished_args = bound_args
-
-func clear_move_callback():
-	self.bind_move_callback(null, "", [])
 
 func reset_position_for_tile_view():
 	var mesh_position = $"mesh_anchor/mesh".get_position()
@@ -368,7 +350,6 @@ func level_up():
 	if not self.is_max_level():
 		self.level += 1
 		self.animations.play("level_up")
-		_reset_anchor_position()
 		self.sfx_effect("level_up")
 
 func is_max_level():

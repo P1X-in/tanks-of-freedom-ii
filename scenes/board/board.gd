@@ -232,7 +232,6 @@ func start_turn():
 			await self.get_tree().create_timer(1).timeout
 
 	self.replenish_unit_actions()
-	#self.reset_all_unit_positions()
 	self.gain_building_ap()
 	self.ui.update_resource_value(self.state.get_current_ap())
 	self.ui.flash_start_end_card(self.state.get_current_side(), self.state.turn)
@@ -452,12 +451,7 @@ func update_unit_position(tile):
 	var movement_path = self.path_markers.convert_path_to_directions(path)
 	var unit = tile.unit.tile
 
-	unit.bind_move_callback(self, "_reset_unit_position_array", [tile, unit])
-
 	unit.animate_path(movement_path)
-
-func _reset_unit_position_array(args_array):
-	self.reset_unit_position(args_array[0], args_array[1])
 
 func reset_unit_position(tile, unit):
 	unit.stop_animations()
@@ -465,11 +459,6 @@ func reset_unit_position(tile, unit):
 	var old_position = unit.get_position()
 	world_position.y = old_position.y
 	unit.set_position(world_position)
-
-func reset_all_unit_positions():
-	var all_unit_tiles = self.map.model.get_all_units_tiles()
-	for tile in all_unit_tiles:
-		self.reset_unit_position(tile, tile.unit.tile)
 
 func can_move_to_tile(tile):
 	var move_cost = self.movement_markers.get_tile_cost(tile)
@@ -503,8 +492,6 @@ func handle_interaction(tile):
 func battle(attacker_tile, defender_tile):
 	var attacker = attacker_tile.unit.tile
 	var defender = defender_tile.unit.tile
-
-	self.reset_unit_position(attacker_tile, attacker)
 
 	attacker.use_move(1)
 	attacker.use_attack()
@@ -721,6 +708,8 @@ func add_current_player_ap(ap_sum):
 func use_current_player_ap(value):
 	self.state.use_current_player_ap(value)
 	self.ui.update_resource_value(self.state.get_current_ap())
+	if self.state.get_current_ap() == 0 and self.settings.get_option("notify_ap_spent") and not self.state.is_current_player_ai():
+		self.ui.ap_depleted.flash()
 
 
 func update_tile_highlight(tile):

@@ -14,7 +14,7 @@ func disable_shadow():
 					subchild.cast_shadow = 0
 func get_dict():
 	var new_dict = super.get_dict()
-	
+
 	if self.passenger != null:
 		new_dict["passenger"] = self.passenger.get_dict()
 
