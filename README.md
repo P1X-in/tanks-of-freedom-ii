@@ -16,6 +16,7 @@ Each voxel model was handcrafted in gorgeous, 32 colour pallete. Sound effects w
 Game is made using [Godot Engine 4.2+](https://godotengine.org).
 
 ## Official pages:
+- Official game page: [czlowiekimadlo.itch.io/tanks-of-freedom-ii](https://czlowiekimadlo.itch.io/tanks-of-freedom-ii)
 - Previous game available at: [w84death.itch.io/tanks-of-freedom](https://w84death.itch.io/tanks-of-freedom)
 - Official game page for ToF1: [tof.p1x.in](https://tof.p1x.in)
 - Official P1X page: [p1x.in](https://p1x.in)
@@ -49,7 +50,7 @@ Follow [official documentation](https://docs.godotengine.org/en/stable/getting_s
 
 ### music
    - QmYaan (Grand Beats) http://www.grandbeats.com/ licensed under CC BY-SA 4.0
-   - Juan "reduz" Linietsky licensed under CC BY 4.0
+   - Juan "reduz" Linietsky https://soundcloud.com/reduz licensed under CC BY 4.0
 
 ### sfx
    - QmYaan (Grand Beats) http://www.grandbeats.com/ licensed under CC BY-SA 4.0

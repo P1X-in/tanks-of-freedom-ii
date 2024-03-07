@@ -26,7 +26,7 @@ SOFTWARE.
 ## Fonts
 A Free font Courier Prime used in this project can be found here:
 http://www.quoteunquoteapps.com/courierprime/
-This font is licensed under OFL license.
+This font is licensed under [OFL license](https://openfontlicense.org/).
 
 NotoSans font used in this project has been sourced from this repository:
 [https://github.com/nowri/sample-noto](https://github.com/nowri/sample-noto)
@@ -35,11 +35,11 @@ It is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE
 ## Music & SFX License
 Original copyrights of all audio assets belong to their respective authors. Audio files have been converted into OGG format from their original files.
  - QmYaan (Grand Beats) http://www.grandbeats.com/
- - Juan "reduz" Linietsky
+ - Juan "reduz" Linietsky https://soundcloud.com/reduz
 
 All sfx and music assets in this repository made by QmYaan are licensed under Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0).
 
-All sfx and music assets in this repository made by reduz are licensed under Creative Commons Attribution 4.0 license (CC BY-SA 4.0).
+All sfx and music assets in this repository made by reduz are licensed under Creative Commons Attribution 4.0 license (CC BY 4.0).
 
 [Full text of the CC BY-SA 4.0 license provided by Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/legalcode)
 [Full text of the CC BY 4.0 license provided by Creative Commons](http://creativecommons.org/licenses/by/4.0/legalcode)
