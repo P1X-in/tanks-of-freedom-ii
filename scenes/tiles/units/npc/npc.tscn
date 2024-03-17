@@ -24,6 +24,10 @@ tile_view_height_cam_modifier = -0.5
 mesh = ExtResource("8")
 surface_material_override/0 = ExtResource("4_hf6oi")
 
+[node name="bar" parent="mesh_anchor/healthbar/SubViewport" index="0"]
+max_value = 15.0
+value = 15.0
+
 [node name="spawn" parent="audio" index="0"]
 stream = ExtResource("5")
 

@@ -42,7 +42,8 @@ var settings = {
 	"online_port": 443,
 	"relay_domain": "api.tof.p1x.in",
 	"relay_port": 9939,
-	"end_turn_speed": "x1"
+	"end_turn_speed": "x1",
+	"show_health": true
 }
 
 

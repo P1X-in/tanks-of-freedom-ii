@@ -258,6 +258,13 @@ func _settings_changed(key, _new_value):
 				_disable_shadow(self.building.tile, shadows)
 			if self.unit.is_present():
 				_disable_shadow(self.unit.tile, shadows)
+	if key == "show_health":
+		if _new_value:
+			if self.unit.is_present():
+				self.unit.tile.show_health()
+		else:
+			if self.unit.is_present():
+				self.unit.tile.hide_health()
 
 func _disable_shadow(tile, shadow_setting):
 	if tile.shadow_override and shadow_setting:

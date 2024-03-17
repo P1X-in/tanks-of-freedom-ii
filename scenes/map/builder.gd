@@ -12,6 +12,7 @@ const CLASS_HERO = "hero"
 var map
 
 var editor = null
+var enable_health = false
 
 func _init(map_scene):
     self.map = map_scene
@@ -182,6 +183,8 @@ func force_place_unit(position, name, rotation, side=null, ai_paused=false):
         tile.unit.tile.remove_highlight()
 
     new_unit.disable_dlc_abilities(self.map.model.metadata["editor_version"])
+    if self.enable_health and self.map.settings.get_option("show_health"):
+        new_unit.enable_health()
 
     return new_unit
 

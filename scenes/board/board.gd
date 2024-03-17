@@ -159,6 +159,7 @@ func set_up_ui():
 
 
 func set_up_map():
+	self.map.builder.enable_health = true
 	if self.match_setup.campaign_name != null:
 		self.load_campaign_map()
 	else:

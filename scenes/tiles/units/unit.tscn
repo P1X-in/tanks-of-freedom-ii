@@ -1,10 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://du53ax6xw71ai"]
+[gd_scene load_steps=20 format=3 uid="uid://du53ax6xw71ai"]
 
 [ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="1"]
 [ext_resource type="Script" path="res://scenes/tiles/units/unit.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://siiihsh6wb0p" path="res://scenes/fx/explosion.tscn" id="3"]
+[ext_resource type="Texture2D" uid="uid://m81x4smw4a2u" path="res://assets/gui/board/healthbar/healthbar.png" id="3_4v477"]
+[ext_resource type="Texture2D" uid="uid://c6wfohsbmqdbc" path="res://assets/gui/board/healthbar/healthbar_bg.png" id="3_887dj"]
 [ext_resource type="PackedScene" uid="uid://birqw0e7qiovc" path="res://scenes/ui/board/voxel_star.tscn" id="4"]
 [ext_resource type="AudioStream" uid="uid://d2ui51cs65ub2" path="res://assets/audio/pickup_box.wav" id="5"]
+[ext_resource type="PackedScene" uid="uid://b6leaqbp4x4wb" path="res://scenes/ui/icons/star.tscn" id="5_dwvvw"]
 
 [sub_resource type="Gradient" id="10"]
 offsets = PackedFloat32Array(0.259259, 0.866667)
@@ -164,6 +167,66 @@ randomness = 1.0
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_1cvum")
 draw_pass_1 = SubResource("BoxMesh_2lsco")
+
+[node name="healthbar" type="Sprite3D" parent="mesh_anchor" index="3"]
+visible = false
+offset = Vector2(0, 300)
+billboard = 1
+no_depth_test = true
+
+[node name="SubViewport" type="SubViewport" parent="mesh_anchor/healthbar" index="0"]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(300, 40)
+
+[node name="bar" type="TextureProgressBar" parent="mesh_anchor/healthbar/SubViewport" index="0"]
+texture_filter = 1
+offset_right = 10.0
+offset_bottom = 2.0
+scale = Vector2(30, 20)
+max_value = 10.0
+value = 10.0
+texture_under = ExtResource("3_887dj")
+texture_progress = ExtResource("3_4v477")
+
+[node name="level1" type="Node2D" parent="mesh_anchor/healthbar/SubViewport" index="1"]
+visible = false
+
+[node name="star" parent="mesh_anchor/healthbar/SubViewport/level1" index="0" instance=ExtResource("5_dwvvw")]
+texture_filter = 1
+position = Vector2(150, 20)
+scale = Vector2(2, 2)
+
+[node name="level2" type="Node2D" parent="mesh_anchor/healthbar/SubViewport" index="2"]
+visible = false
+
+[node name="star" parent="mesh_anchor/healthbar/SubViewport/level2" index="0" instance=ExtResource("5_dwvvw")]
+texture_filter = 1
+position = Vector2(125, 20)
+scale = Vector2(2, 2)
+
+[node name="star2" parent="mesh_anchor/healthbar/SubViewport/level2" index="1" instance=ExtResource("5_dwvvw")]
+texture_filter = 1
+position = Vector2(175, 20)
+scale = Vector2(2, 2)
+
+[node name="level3" type="Node2D" parent="mesh_anchor/healthbar/SubViewport" index="3"]
+visible = false
+
+[node name="star" parent="mesh_anchor/healthbar/SubViewport/level3" index="0" instance=ExtResource("5_dwvvw")]
+texture_filter = 1
+position = Vector2(150, 20)
+scale = Vector2(2, 2)
+
+[node name="star2" parent="mesh_anchor/healthbar/SubViewport/level3" index="1" instance=ExtResource("5_dwvvw")]
+texture_filter = 1
+position = Vector2(100, 20)
+scale = Vector2(2, 2)
+
+[node name="star3" parent="mesh_anchor/healthbar/SubViewport/level3" index="2" instance=ExtResource("5_dwvvw")]
+texture_filter = 1
+position = Vector2(200, 20)
+scale = Vector2(2, 2)
 
 [node name="animations" type="AnimationPlayer" parent="." index="1"]
 libraries = {

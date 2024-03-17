@@ -13,6 +13,13 @@ const EXP_PER_LEVEL = 2
 @onready var explosion = $"explosion"
 @onready var level_star = $"voxel_star"
 
+var enable_healthbar = false
+@onready var healthbar_sprite = $"mesh_anchor/healthbar"
+@onready var healthbar = $"mesh_anchor/healthbar/SubViewport/bar"
+@onready var healthbar_lv1 = $"mesh_anchor/healthbar/SubViewport/level1"
+@onready var healthbar_lv2 = $"mesh_anchor/healthbar/SubViewport/level2"
+@onready var healthbar_lv3 = $"mesh_anchor/healthbar/SubViewport/level3"
+
 @export var unit_name = ""
 @export var side = "neutral"
 var team = null
@@ -66,6 +73,7 @@ var desaturated_material
 
 func _ready():
 	self.animations.animation_finished.connect(_on_animation_finished)
+	$"mesh_anchor/healthbar".texture = $"mesh_anchor/healthbar/SubViewport".get_texture()
 
 func reset():
 	var stats = self.get_stats_with_modifiers()
@@ -73,6 +81,8 @@ func reset():
 	self.hp = stats["max_hp"]
 	self.move = stats["max_move"]
 	self.attacks = stats["max_attacks"]
+	self._update_healthbar()
+	self._update_level()
 
 func get_dict():
 	var new_dict = super.get_dict()
@@ -272,6 +282,7 @@ func receive_direct_damage(value):
 	self.hp -= value
 	if self.hp < 0:
 		self.hp = 0
+	self._update_healthbar()
 
 func is_alive():
 	return self.hp > 0
@@ -351,6 +362,7 @@ func level_up():
 		self.level += 1
 		self.animations.play("level_up")
 		self.sfx_effect("level_up")
+		self._update_level()
 
 func is_max_level():
 	return self.level >= self.MAX_LEVEL
@@ -360,6 +372,7 @@ func heal(value):
 	self.hp += value
 	if self.hp > stats["max_hp"]:
 		self.hp = stats["max_hp"]
+	self._update_healthbar()
 
 func get_value():
 	return self.unit_value + self.level * 10
@@ -399,6 +412,9 @@ func restore_from_state(state):
 	self.team = state["team"]
 	self.modifiers = state["modifiers"]
 
+	self._update_healthbar()
+	self._update_level()
+
 	if self.move < 1:
 		self.remove_highlight()
 
@@ -414,3 +430,27 @@ func disable_dlc_abilities(editor_version):
 
 func is_hero():
 	return false
+
+func _update_healthbar():
+	self.healthbar.value = self.hp
+
+func _update_level():
+	self.healthbar_lv1.hide()
+	self.healthbar_lv2.hide()
+	self.healthbar_lv3.hide()
+	if self.level == 1:
+		self.healthbar_lv1.show()
+	if self.level == 2:
+		self.healthbar_lv2.show()
+	if self.level == 3:
+		self.healthbar_lv3.show()
+
+func enable_health():
+	self.enable_healthbar = true
+	self.show_health()
+func show_health():
+	if not self.enable_healthbar:
+		return
+	self.healthbar_sprite.show()
+func hide_health():
+	self.healthbar_sprite.hide()

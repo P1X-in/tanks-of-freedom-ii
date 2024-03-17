@@ -29,6 +29,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 [node name="dust" parent="mesh_anchor" index="2"]
 visible = false
 
+[node name="healthbar" parent="mesh_anchor" index="3"]
+offset = Vector2(0, 450)
+
 [node name="explosion" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
