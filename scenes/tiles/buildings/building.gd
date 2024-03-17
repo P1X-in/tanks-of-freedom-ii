@@ -65,3 +65,8 @@ func restore_abilities_status(status):
 		key = "ability" + str(ability.index)
 		if status.has(key):
 			ability.disabled = status[key]
+
+func disable_dlc_abilities(editor_version):
+	for ability in self.abilities:
+		if ability.dlc_version > editor_version:
+			ability.disabled = true

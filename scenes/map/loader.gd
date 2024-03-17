@@ -1,5 +1,5 @@
 
-var EDITOR_VERSION = "0.3.0"
+var EDITOR_VERSION = 1
 
 var importer = preload("res://scenes/map/importer.gd").new()
 
@@ -24,12 +24,14 @@ func load_map_file(filename):
     if content.is_empty():
         return
 
+    content["metadata"] = self._fill_missing_metadata(content)
     self.map.builder.wipe_map()
     self.map.builder.fill_map_from_data(content)
     self._initialize_camera_position()
 
 func load_campaign_map(campaign_name, mission_no):
     var content = self.map.campaign.get_campaign_mission_map(campaign_name, mission_no)
+    content["metadata"] = self._fill_missing_metadata(content)
     self.map.builder.wipe_map()
     self.map.builder.fill_map_from_data(content)
     self._initialize_camera_position()
@@ -42,3 +44,21 @@ func _initialize_camera_position():
 func load_from_v1_data(data):
     self.map.builder.wipe_map()
     self.importer.build_from_v1_data(self.map, data)
+
+func _fill_missing_metadata(data):
+    var metadata = {}
+    if data.has("metadata"):
+        metadata = data["metadata"]
+
+    if not metadata.has("iteration"):
+        metadata["iteration"] = 0
+    if not metadata.has("name"):
+        metadata["name"] = ""
+        metadata["base_code"] = null
+    if metadata.has("editor_version"):
+        if metadata["editor_version"] is String:
+            metadata["editor_version"] = 1
+    else:
+        metadata["editor_version"] = self.EDITOR_VERSION
+
+    return metadata

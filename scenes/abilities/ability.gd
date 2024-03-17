@@ -2,6 +2,7 @@ extends Node
 
 var TYPE="undefined"
 
+@export var dlc_version = 1
 @export var index = 0
 @export var label = ""
 @export var description = ""

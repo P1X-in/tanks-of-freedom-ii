@@ -407,5 +407,10 @@ func restore_from_state(state):
 			ability.disabled = state["abilities"]["ability" + str(ability.index)][0]
 			ability.cd_turns_left = state["abilities"]["ability" + str(ability.index)][1]
 
+func disable_dlc_abilities(editor_version):
+	for ability in self.active_abilities:
+		if ability.dlc_version > editor_version:
+			ability.disabled = true
+
 func is_hero():
 	return false

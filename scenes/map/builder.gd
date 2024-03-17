@@ -143,6 +143,8 @@ func place_building(position, name, rotation, side=null):
     if side != null:
         self.set_building_side(position, side)
 
+    new_element.disable_dlc_abilities(self.map.model.metadata["editor_version"])
+
 func place_unit(position, name, rotation, side=null, ai_paused=false):
     var tile = self.map.model.get_tile(position)
 
@@ -178,6 +180,8 @@ func force_place_unit(position, name, rotation, side=null, ai_paused=false):
 
     if ai_paused:
         tile.unit.tile.remove_highlight()
+
+    new_unit.disable_dlc_abilities(self.map.model.metadata["editor_version"])
 
     return new_unit
 

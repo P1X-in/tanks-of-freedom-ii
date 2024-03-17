@@ -2,6 +2,8 @@
 ## Changelog
 
 ### 0.7.0-alpha
+- Added new content suppression for maps created with older editor version
+  - New abilities need to be marked with proper dlc version
 - Fixed a bug preventing online maps from being downloaded
 
 
