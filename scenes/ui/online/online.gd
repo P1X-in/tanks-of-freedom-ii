@@ -221,7 +221,7 @@ func _on_retry_button_pressed():
 	self.retry_download_button.hide()
 	self.back_button.hide()
 
-	var result = self.online.download_map(self.selected_download_map)
+	var result = await self.online.download_map(self.selected_download_map)
 
 	self.working = false
 	self.back_button.show()

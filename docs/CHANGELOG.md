@@ -1,6 +1,10 @@
 # Tanks of Freedom 3D
 ## Changelog
 
+### 0.7.0-alpha
+- Fixed a bug preventing online maps from being downloaded
+
+
 ### 0.6.1-alpha
 - Fixed Infantry unit having wrong side when dropped from Attack Helicopter
 - Attempted fix for units getting visually misaligned when moved (again)
