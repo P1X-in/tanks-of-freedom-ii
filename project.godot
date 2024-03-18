@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Tanks of Freedom II"
 config/description="Turn-based strategy game."
-config/version="0.6.1"
+config/version="0.7.0"
 run/main_scene="res://scenes/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.2")
 boot_splash/bg_color=Color(0, 0, 0, 1)
@@ -41,6 +41,8 @@ Relay="*res://scripts/services/relay.gd"
 
 [debug]
 
+gdscript/warnings/untyped_declaration=1
+gdscript/warnings/inferred_declaration=1
 settings/fps/force_fps=144
 
 [display]
