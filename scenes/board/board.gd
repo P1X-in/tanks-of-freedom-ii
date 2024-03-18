@@ -1,4 +1,5 @@
 extends Node3D
+class_name GameBoard
 
 const RETALIATION_DELAY = 0.1
 

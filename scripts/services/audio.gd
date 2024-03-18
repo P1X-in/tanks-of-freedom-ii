@@ -1,18 +1,19 @@
 extends Node
+class_name AudioLibrary
 
-const BUS_SFX = "SFX"
-const BUS_MUSIC = "Music"
+const BUS_SFX: String = "SFX"
+const BUS_MUSIC: String = "Music"
 
-var samples = {}
-var soundtracks = {}
-var current_track = null
-var _last_requested_track = null
+var samples: Dictionary = {}
+var soundtracks: Dictionary = {}
+var current_track: AudioStreamPlayer = null
+var _last_requested_track: AudioStreamPlayer = null
 
-var master_switch = false
-var sounds_enabled = true
-var music_enabled = true
+var master_switch: bool = false
+var sounds_enabled: bool = true
+var music_enabled: bool = true
 
-func _ready():
+func _ready() -> void:
 	self.register_sample("click", preload("res://assets/audio/menu.wav"))
 	self.register_sample("menu_click", preload("res://assets/audio/menu_click.wav"))
 	self.register_sample("menu_back", preload("res://assets/audio/menu_back.wav"))
@@ -32,7 +33,7 @@ func _ready():
 	self.register_track("soundtrack_6", preload("res://assets/audio/soundtrack/reduz_capybara_love.ogg"))
 
 
-func play(sample_name):
+func play(sample_name: String) -> void:
 	if not self.master_switch or not self.sounds_enabled:
 		return
 
@@ -41,7 +42,7 @@ func play(sample_name):
 
 	self.samples[sample_name].play()
 
-func track(track_name):
+func track(track_name: String) -> void:
 	if not self.soundtracks.has(track_name):
 		return
 
@@ -54,7 +55,7 @@ func track(track_name):
 	self.soundtracks[track_name].play()
 	self.current_track = self.soundtracks[track_name]
 
-func is_playing(track_name):
+func is_playing(track_name: String) -> bool:
 	if not self.music_enabled:
 		return false
 
@@ -63,34 +64,34 @@ func is_playing(track_name):
 
 	return self.soundtracks[track_name].is_playing()
 
-func stop(track_name=null):
-	for registered_track in self.soundtracks.values():
+func stop(track_name: String = "") -> void:
+	for registered_track: AudioStreamPlayer in self.soundtracks.values():
 		registered_track.stop()
 
-	if track_name == null and self.current_track != null:
+	if track_name == "" and self.current_track != null:
 		self.current_track.stop()
 		self.current_track = null
 	elif self.soundtracks.has(track_name):
 		self.soundtracks[track_name].stop()
 
-func pause(track_name=null):
-	if track_name == null and self.current_track != null:
+func pause(track_name: String = "") -> void:
+	if track_name == "" and self.current_track != null:
 		self.current_track.set_stream_paused(true)
 	elif self.soundtracks.has(track_name):
 		self.soundtracks[track_name].set_stream_paused(true)
 
-func unpause(track_name=null):
-	if track_name == null and self.current_track != null:
+func unpause(track_name: String = "") -> void:
+	if track_name == "" and self.current_track != null:
 		self.current_track.set_stream_paused(false)
 	elif self.soundtracks.has(track_name):
 		self.soundtracks[track_name].set_stream_paused(false)
 
 
-func register_sample(sample_name, stream):
+func register_sample(sample_name: String, stream: AudioStream) -> void:
 	if stream == null:
 		return
 
-	var sfx = AudioStreamPlayer.new()
+	var sfx: AudioStreamPlayer = AudioStreamPlayer.new()
 	self.get_tree().get_root().call_deferred("add_child", sfx)
 	sfx.set_stream(stream)
 	sfx.set_bus(self.BUS_SFX)
@@ -98,18 +99,18 @@ func register_sample(sample_name, stream):
 	self.samples[sample_name] = sfx
 
 
-func register_track(track_name, stream):
+func register_track(track_name: String, stream: AudioStream) -> void:
 	if stream == null:
 		return
 
-	var new_track = AudioStreamPlayer.new()
+	var new_track: AudioStreamPlayer = AudioStreamPlayer.new()
 	self.get_tree().get_root().call_deferred("add_child", new_track)
 	new_track.set_stream(stream)
 	new_track.set_bus(self.BUS_MUSIC)
 
 	self.soundtracks[track_name] = new_track
 
-func restart_track():
+func restart_track() -> void:
 	if not self.master_switch or not self.music_enabled:
 		return
 

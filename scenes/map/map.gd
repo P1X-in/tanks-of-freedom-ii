@@ -1,4 +1,5 @@
 extends Node3D
+class_name Map
 
 const TILE_SIZE = 8
 const GROUND_HEIGHT = 4

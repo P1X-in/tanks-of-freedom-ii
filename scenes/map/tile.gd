@@ -1,3 +1,4 @@
+class_name ModelTile
 
 var settings
 

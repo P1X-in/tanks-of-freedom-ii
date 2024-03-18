@@ -1,82 +1,82 @@
-extends "res://scenes/tiles/tile.gd"
+extends MapTile
 class_name BaseUnit
 
 signal move_finished
 
-const MAX_LEVEL = 3
-const EXP_PER_LEVEL = 2
+const MAX_LEVEL: int = 3
+const EXP_PER_LEVEL: int = 2
 
-@onready var audio = $"/root/SimpleAudioLibrary"
+@onready var audio: AudioLibrary = $"/root/SimpleAudioLibrary"
 
-@onready var animations = $"animations"
-@onready var spotlight = $"mesh_anchor/activity_light"
-@onready var explosion = $"explosion"
-@onready var level_star = $"voxel_star"
+@onready var animations: AnimationPlayer = $"animations"
+@onready var spotlight: SpotLight3D = $"mesh_anchor/activity_light"
+@onready var explosion: Explosion = $"explosion"
+@onready var level_star: Node3D = $"voxel_star"
 
-var enable_healthbar = false
-@onready var healthbar_sprite = $"mesh_anchor/healthbar"
-@onready var healthbar = $"mesh_anchor/healthbar/SubViewport/bar"
-@onready var healthbar_lv1 = $"mesh_anchor/healthbar/SubViewport/level1"
-@onready var healthbar_lv2 = $"mesh_anchor/healthbar/SubViewport/level2"
-@onready var healthbar_lv3 = $"mesh_anchor/healthbar/SubViewport/level3"
+var enable_healthbar: bool = false
+@onready var healthbar_sprite: Sprite3D = $"mesh_anchor/healthbar"
+@onready var healthbar: TextureProgressBar = $"mesh_anchor/healthbar/SubViewport/bar"
+@onready var healthbar_lv1: Node2D = $"mesh_anchor/healthbar/SubViewport/level1"
+@onready var healthbar_lv2: Node2D = $"mesh_anchor/healthbar/SubViewport/level2"
+@onready var healthbar_lv3: Node2D = $"mesh_anchor/healthbar/SubViewport/level3"
 
-@export var unit_name = ""
-@export var side = "neutral"
-var team = null
-@export var material_type = "normal"
+@export var unit_name: String = ""
+@export var side: String = "neutral"
+var team: int = 0
+@export var material_type: String = "normal"
 
-@export var max_hp = 10
-var hp = 0
-@export var max_move = 4
-var move = 0
-@export var attack = 7
-@export var armor = 2
-@export var can_capture = false
-@export var can_fly = false
-@export var max_attacks = 1
-@export var uses_metallic_material = false
-@export var unit_value = 0
-@export var unit_class = ""
-var attacks = 1
-var level = 0
-var experience = 0
-var kills = 0
+@export var max_hp: int = 10
+var hp: int = 0
+@export var max_move: int = 4
+var move: int = 0
+@export var attack: int = 7
+@export var armor: int = 2
+@export var can_capture: bool = false
+@export var can_fly: bool = false
+@export var max_attacks: int = 1
+@export var uses_metallic_material: bool = false
+@export var unit_value: int = 0
+@export var unit_class: String = ""
+var attacks: int = 1
+var level: int = 0
+var experience: int = 0
+var kills: int = 0
 
 # AI modifiers
-var ai_paused = false
-var tether_point = Vector2(0, 0)
-var tether_length = 0
+var ai_paused: bool = false
+var tether_point: Vector2 = Vector2(0, 0)
+var tether_length: int = 0
 # AI modifiers end
 
-var modifiers = {}
-var passive_ability = null
-var active_abilities = []
+var modifiers: Dictionary = {}
+var passive_ability: PassiveAbility = null
+var active_abilities: Array = []
 
-var unit_rotations = {
+var unit_rotations: Dictionary = {
 	"s" : 0,
 	"n" : 180,
 	"e" : 90,
 	"w" : 270,
 }
-var unit_translations = {
+var unit_translations: Dictionary = {
 	"n" : Vector3(0, 0, -8),
 	"s" : Vector3(0, 0, 8),
 	"e" : Vector3(8, 0, 0),
 	"w" : Vector3(-8, 0, 0),
 }
-var current_path = []
-var current_path_index = 0
+var current_path: Array = []
+var current_path_index: int = 0
 
 
-var base_material
-var desaturated_material
+var base_material: Material
+var desaturated_material: Material
 
-func _ready():
+func _ready() -> void:
 	self.animations.animation_finished.connect(_on_animation_finished)
 	$"mesh_anchor/healthbar".texture = $"mesh_anchor/healthbar/SubViewport".get_texture()
 
-func reset():
-	var stats = self.get_stats_with_modifiers()
+func reset() -> void:
+	var stats: Dictionary = self.get_stats_with_modifiers()
 
 	self.hp = stats["max_hp"]
 	self.move = stats["max_move"]
@@ -84,8 +84,8 @@ func reset():
 	self._update_healthbar()
 	self._update_level()
 
-func get_dict():
-	var new_dict = super.get_dict()
+func get_dict() -> Dictionary:
+	var new_dict: Dictionary = super.get_dict()
 	new_dict["side"] = self.side
 	new_dict["modifiers"] = self.modifiers
 	new_dict["ai_paused"] = self.ai_paused
@@ -95,21 +95,21 @@ func get_dict():
 
 	return new_dict
 
-func set_side(new_side):
+func set_side(new_side: String) -> void:
 	self.side = new_side
 
-func set_side_materials(_base_material, _desaturated_material):
+func set_side_materials(_base_material: Material, _desaturated_material: Material) -> void:
 	self.base_material = _base_material
 	self.desaturated_material = _desaturated_material
 	self.set_side_material(self.base_material)
 
-func set_side_material(material):
+func set_side_material(material: Material) -> void:
 	if material == null:
 		return
 
 	$"mesh_anchor/mesh".set_surface_override_material(0, material)
 
-	var additional_mesh
+	var additional_mesh: MeshInstance3D
 
 	additional_mesh = self.get_node_or_null("mesh_anchor/mesh2")
 	if additional_mesh != null:
@@ -120,8 +120,8 @@ func set_side_material(material):
 		additional_mesh.set_surface_override_material(0, material)
 
 
-func get_stats():
-	var stats = {
+func get_stats() -> Dictionary:
+	return {
 		"hp" : self.hp,
 		"move" : self.move,
 		"attack" : self.attack,
@@ -135,12 +135,10 @@ func get_stats():
 		"kills" : self.kills,
 	}
 
-	return stats
+func get_stats_with_modifiers() -> Dictionary:
+	var stats: Dictionary = self.get_stats()
 
-func get_stats_with_modifiers():
-	var stats = self.get_stats()
-
-	for stat_key in stats:
+	for stat_key: String in stats:
 		if self.modifiers.has(stat_key):
 			stats[stat_key] += self.modifiers[stat_key]
 
@@ -151,92 +149,92 @@ func get_stats_with_modifiers():
 
 	return stats
 
-func get_move():
-	var stats = self.get_stats_with_modifiers()
+func get_move() -> int:
+	var stats: Dictionary = self.get_stats_with_modifiers()
 	return stats["move"]
 
-func has_moves():
+func has_moves() -> bool:
 	return self.move > 0
 
-func use_move(value):
+func use_move(value: int) -> void:
 	self.move -= value
 	if self.move < 1:
 		self.remove_highlight()
 
-func use_all_moves():
+func use_all_moves() -> void:
 	self.use_move(self.move)
 
-func reset_move():
-	var stats = self.get_stats_with_modifiers()
+func reset_move() -> void:
+	var stats: Dictionary = self.get_stats_with_modifiers()
 	self.move = stats["max_move"]
 	self.restore_highlight()
 
-func replenish_moves():
+func replenish_moves() -> void:
 	self.reset_move()
-	var stats = self.get_stats_with_modifiers()
+	var stats: Dictionary = self.get_stats_with_modifiers()
 	self.attacks = stats["max_attacks"]
 
-func remove_moves():
+func remove_moves() -> void:
 	self.attacks = 0
 	self.use_all_moves()
 
-func can_attack(_unit):
+func can_attack(_unit: BaseUnit) -> bool:
 	return true
 
-func can_kill(unit):
+func can_kill(unit: BaseUnit) -> bool:
 	if not self.has_attacks() or not self.has_moves() or not self.can_attack(unit):
 		return false
 
 	return self.has_enough_power_to_kill(unit)
 
-func can_retaliate(unit):
+func can_retaliate(unit: BaseUnit) -> bool:
 	if not self.has_moves() or not self.can_attack(unit):
 		return false
 
 	return true
 
-func has_enough_power_to_kill(unit):
+func has_enough_power_to_kill(unit: BaseUnit) -> bool:
 	return self.get_attack() >= unit.hp + unit.get_armor()
 
-func has_attacks():
+func has_attacks() -> bool:
 	return self.attacks > 0
 
-func use_attack():
+func use_attack() -> void:
 	self.attacks -= 1
 
-func rotate_unit_to_direction(direction):
+func rotate_unit_to_direction(direction: String) -> void:
 	if not self.unit_rotations.has(direction):
 		return
 
-	var unit_rotation = self.unit_rotations[direction]
+	var unit_rotation: int = self.unit_rotations[direction]
 	self.set_rotation(Vector3(0, deg_to_rad(unit_rotation), 0))
 	self.current_rotation = unit_rotation
 
-func animate_path(path):
+func animate_path(path: Array) -> void:
 	self.current_path = path
 	self.current_path_index = 0
 	self._animate_initial_path_segment()
 
-func _animate_initial_path_segment():
-	var direction = self.current_path[self.current_path_index]
+func _animate_initial_path_segment() -> void:
+	var direction: String = self.current_path[self.current_path_index]
 	self.move_in_direction(direction)
 
-func _animate_next_path_segment():
+func _animate_next_path_segment() -> void:
 	if self.current_path.size() == 0:
 		return
 
-	var direction = self.current_path[self.current_path_index]
+	var direction: String = self.current_path[self.current_path_index]
 	_reset_anchor_position()
 	self.set_position(self.get_position() + self.unit_translations[direction])
 	self.current_path_index += 1
 	direction = self.current_path[self.current_path_index]
 	self.move_in_direction(direction)
 
-func _on_animation_finished(anim_name):
+func _on_animation_finished(anim_name: String) -> void:
 	if anim_name == "move":
 		_animate_next_path_segment()
 
-func move_in_direction(direction):
+func move_in_direction(direction: String) -> void:
 	self.rotate_unit_to_direction(direction)
 	if self.current_path_index < self.current_path.size() - 1:
 		self.animations.play("move")
@@ -244,7 +242,7 @@ func move_in_direction(direction):
 	else:
 		self.move_finished.emit()
 
-func stop_animations():
+func stop_animations() -> void:
 	self.current_path = []
 	self.current_path_index = 0
 	self.animations.stop()
@@ -252,30 +250,30 @@ func stop_animations():
 	self.level_star.hide()
 	self.move_finished.emit()
 
-func _reset_anchor_position():
+func _reset_anchor_position() -> void:
 	$"mesh_anchor".set_position(Vector3(0, 0, 0))
 
-func reset_position_for_tile_view():
-	var mesh_position = $"mesh_anchor/mesh".get_position()
+func reset_position_for_tile_view() -> void:
+	var mesh_position: Vector3 = $"mesh_anchor/mesh".get_position()
 	mesh_position.y = 0
 
 	$"mesh_anchor/mesh".set_position(mesh_position)
 	self.remove_highlight()
 
-func show_explosion():
+func show_explosion() -> void:
 	self.explosion.explode_a_bit()
 
-func receive_damage(value):
+func receive_damage(value: int) -> void:
 	if self.ai_paused:
 		return
 
-	var final_damage = value - self.get_armor()
+	var final_damage: int = value - self.get_armor()
 	if final_damage < 0:
 		final_damage = 0
 
 	self.receive_direct_damage(final_damage)
 
-func receive_direct_damage(value):
+func receive_direct_damage(value: int) -> void:
 	if self.ai_paused:
 		return
 
@@ -284,71 +282,71 @@ func receive_direct_damage(value):
 		self.hp = 0
 	self._update_healthbar()
 
-func is_alive():
+func is_alive() -> bool:
 	return self.hp > 0
 
-func get_attack():
-	var stats = self.get_stats_with_modifiers()
+func get_attack() -> int:
+	var stats: Dictionary = self.get_stats_with_modifiers()
 	return stats["attack"]
 
-func get_armor():
-	var stats = self.get_stats_with_modifiers()
+func get_armor() -> int:
+	var stats: Dictionary = self.get_stats_with_modifiers()
 	return stats["armor"]
 
-func remove_highlight():
+func remove_highlight() -> void:
 	self.set_side_material(self.desaturated_material)
 	#$"mesh_anchor/activity_light".hide()
 
-func restore_highlight():
+func restore_highlight() -> void:
 	if self.ai_paused:
 		return
 	self.set_side_material(self.base_material)
 	#self.spotlight.show()
 
-func sfx_effect(sfx_name):
+func sfx_effect(sfx_name: String) -> void:
 	if not self.audio.sounds_enabled:
 		return
 
-	var audio_player = self.get_node_or_null("audio/" + sfx_name)
+	var audio_player: AudioStreamPlayer = self.get_node_or_null("audio/" + sfx_name)
 	if audio_player != null:
 		audio_player.play()
 
-func give_sfx_effect(sfx_name):
+func give_sfx_effect(sfx_name: String) -> AudioStreamPlayer:
 	if not self.audio.sounds_enabled:
 		return null
 
-	var audio_player = self.get_node_or_null("audio/" + sfx_name)
+	var audio_player: AudioStreamPlayer = self.get_node_or_null("audio/" + sfx_name)
 	if audio_player != null:
 		$"audio".remove_child(audio_player)
 		return audio_player
 	return null
 
-func register_ability(ability):
+func register_ability(ability: Ability) -> void:
 	if ability.TYPE == "active":
 		self.active_abilities.append(ability)
 
-func has_active_ability():
+func has_active_ability()-> bool:
 	return self.active_abilities.size() > 0 and self.level > 0
 
-func ability_cd_tick_down():
-	for ability in self.active_abilities:
+func ability_cd_tick_down() -> void:
+	for ability: Ability in self.active_abilities:
 		ability.cd_tick_down()
 
-func reset_cooldown():
-	for ability in self.active_abilities:
+func reset_cooldown() -> void:
+	for ability: Ability in self.active_abilities:
 		ability.reset_cooldown()
 
-func activate_all_cooldowns(board):
-	for ability in self.active_abilities:
+func activate_all_cooldowns(board: GameBoard) -> void:
+	for ability: Ability in self.active_abilities:
 		ability.activate_cooldown(board)
 
-func apply_modifier(modifier_name, value):
+func apply_modifier(modifier_name: String, value: int) -> void:
 	self.modifiers[modifier_name] = value
 
-func clear_modifiers():
+func clear_modifiers() -> void:
 	self.modifiers.clear()
 
-func gain_exp():
+func gain_exp() -> void:
 	self.kills += 1
 	if not self.is_max_level():
 		self.experience += 1
@@ -357,51 +355,51 @@ func gain_exp():
 			self.experience = 0
 			self.level_up()
 
-func level_up():
+func level_up() -> void:
 	if not self.is_max_level():
 		self.level += 1
 		self.animations.play("level_up")
 		self.sfx_effect("level_up")
 		self._update_level()
 
-func is_max_level():
+func is_max_level() -> bool:
 	return self.level >= self.MAX_LEVEL
 
-func heal(value):
-	var stats = self.get_stats_with_modifiers()
+func heal(value: int) -> void:
+	var stats: Dictionary = self.get_stats_with_modifiers()
 	self.hp += value
 	if self.hp > stats["max_hp"]:
 		self.hp = stats["max_hp"]
 	self._update_healthbar()
 
-func get_value():
+func get_value() -> int:
 	return self.unit_value + self.level * 10
 
 
-func disable_shadow():
+func disable_shadow() -> void:
 	super.disable_shadow()
 
 	$"mesh_anchor/mesh".cast_shadow = 0
 
-	var additional_mesh
+	var additional_mesh: MeshInstance3D
 
 	additional_mesh = self.get_node_or_null("mesh_anchor/mesh2")
 	if additional_mesh != null:
-		additional_mesh.cast_shadow = 0
+		additional_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 
 	additional_mesh = self.get_node_or_null("mesh_anchor/mesh3")
 	if additional_mesh != null:
-		additional_mesh.cast_shadow = 0
+		additional_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 
-func _get_abilities_status():
-	var status = {}
+func _get_abilities_status() -> Dictionary:
+	var status: Dictionary = {}
 
-	for ability in self.active_abilities:
+	for ability: Ability in self.active_abilities:
 		status["ability" + str(ability.index)] = [ability.disabled, ability.cd_turns_left]
 
 	return status
 
-func restore_from_state(state):
+func restore_from_state(state: Dictionary) -> void:
 	self.scripting_tags = state["tags"]
 	self.hp = state["stats"]["hp"]
 	self.move = state["stats"]["move"]
@@ -418,23 +416,23 @@ func restore_from_state(state):
 	if self.move < 1:
 		self.remove_highlight()
 
-	for ability in self.active_abilities:
+	for ability: Ability in self.active_abilities:
 		if state["abilities"].has("ability" + str(ability.index)):
 			ability.disabled = state["abilities"]["ability" + str(ability.index)][0]
 			ability.cd_turns_left = state["abilities"]["ability" + str(ability.index)][1]
 
-func disable_dlc_abilities(editor_version):
-	for ability in self.active_abilities:
+func disable_dlc_abilities(editor_version: int) -> void:
+	for ability: Ability in self.active_abilities:
 		if ability.dlc_version > editor_version:
 			ability.disabled = true
 
-func is_hero():
+func is_hero() -> bool:
 	return false
 
-func _update_healthbar():
+func _update_healthbar() -> void:
 	self.healthbar.value = self.hp
 
-func _update_level():
+func _update_level() -> void:
 	self.healthbar_lv1.hide()
 	self.healthbar_lv2.hide()
 	self.healthbar_lv3.hide()
@@ -445,12 +443,12 @@ func _update_level():
 	if self.level == 3:
 		self.healthbar_lv3.show()
 
-func enable_health():
+func enable_health() -> void:
 	self.enable_healthbar = true
 	self.show_health()
-func show_health():
+func show_health() -> void:
 	if not self.enable_healthbar:
 		return
 	self.healthbar_sprite.show()
-func hide_health():
+func hide_health() -> void:
 	self.healthbar_sprite.hide()
