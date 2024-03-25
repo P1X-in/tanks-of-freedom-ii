@@ -7,7 +7,7 @@ class_name Explosion
 @onready var bless: GPUParticles3D = $"bless"
 @onready var heal: GPUParticles3D = $"heal"
 
-func grab_sfx_effect(unit: BaseUnit) -> void:
+func grab_sfx_effect(unit: MapTile) -> void:
 	var audio_player: AudioStreamPlayer = unit.give_sfx_effect("die")
 	if audio_player == null:
 		return

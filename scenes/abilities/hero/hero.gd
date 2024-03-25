@@ -1,5 +1,6 @@
-extends "res://scenes/abilities/ability.gd"
+extends Ability
+class_name HeroAbility
 
-func _init():
+func _init() -> void:
 	self.TYPE = "hero"
 
