@@ -28,7 +28,9 @@ func _ready():
 	self.select_tile(self.map.templates.GROUND_GRASS, self.map.builder.CLASS_GROUND)
 	self.map.loader.load_map_file(self.AUTOSAVE_FILE)
 	self.ui.load_minimap(self.AUTOSAVE_FILE)
+	_load_map_settings()
 	self.setup_radial_menu()
+	self.ui.story.editor = self
 	self.map.builder.editor = self
 	self.map.tiles_frames_anchor.show()
 
@@ -136,8 +138,18 @@ func _input(event):
 				self.toggle_radial_menu()
 				self.audio.play("menu_click")
 
+		if self.ui.story.is_visible():
+			if event.is_action_pressed("ui_cancel"):
+				self.ui.story._on_back_button_pressed()
+				self.audio.play("menu_click")
+
+			if event.is_action_pressed("editor_menu"):
+				self.ui.story._on_back_button_pressed()
+				self.audio.play("menu_click")
+
 
 func autosave():
+	_apply_map_settings()
 	self.map.loader.save_map_file(self.AUTOSAVE_FILE)
 	self.ui.load_minimap(self.AUTOSAVE_FILE)
 
@@ -301,6 +313,7 @@ func setup_radial_menu(context_object=null):
 		self.ui.radial.set_field(self.ui.icons.disk.instantiate(), "TR_SAVE_LOAD_MAP", 2, self, "open_picker")
 		self.ui.radial.set_field(self.ui.icons.tof.instantiate(), "TR_TOF1_IMPORT", 3, self, "open_tof_import")
 		self.ui.radial.set_field(self.ui.icons.quit.instantiate(), "TR_MAIN_MENU", 4, self.switcher, "main_menu")
+		self.ui.radial.set_field(self.ui.icons.cog.instantiate(), "TR_MAP_SETTINGS", 5, self, "open_story")
 		self.ui.radial.set_field(self.ui.icons.cross.instantiate(), "TR_CLOSE", 6, self, "toggle_radial_menu")
 	else:
 		self.radial_abilities.fill_radial_with_ability_bans(self, self.ui.radial, context_object)
@@ -310,6 +323,7 @@ func handle_picker_output(args):
 	var context = args[1]
 
 	if context == "save":
+		_apply_map_settings()
 		self.map.loader.save_map_file(map_name)
 		self.map_list_service.add_map_to_list(map_name)
 		self.ui.picker.minimap.remove_from_cache(map_name)
@@ -317,6 +331,7 @@ func handle_picker_output(args):
 		self.map.loader.load_map_file(map_name)
 		self.ui.load_minimap(map_name)
 		self.actions_history = []
+		_load_map_settings()
 
 	self.close_picker()
 	self.set_map_name(map_name)
@@ -326,9 +341,17 @@ func handle_picker_output(args):
 
 func quicksave():
 	if self.current_map_name != "":
+		_apply_map_settings()
 		self.map.loader.save_map_file(self.current_map_name)
 	self.toggle_radial_menu()
 
+func _load_map_settings():
+	self.ui.story.ingest_map_data(self.map.model.metadata, self.map.model.scripts["triggers"], self.map.model.scripts["stories"])
+
+func _apply_map_settings():
+	self.map.model.metadata = self.ui.story.fill_metadata(self.map.model.metadata)
+	self.map.model.scripts["triggers"] = self.ui.story.fill_triggers(self.map.model.scripts["triggers"])
+	self.map.model.scripts["stories"] = self.ui.story.fill_stories(self.map.model.scripts["stories"])
 
 func set_map_name(map_name):
 	self.current_map_name = map_name
@@ -377,6 +400,17 @@ func handle_tof_import(args):
 		self.ui.set_map_name(result["data"]["data"]["name"])
 		self.map.loader.load_from_v1_data(result["data"])
 	self.autosave()
+
+func open_story():
+	self.ui.hide_radial()
+	self.ui.show_story()
+
+func close_story():
+	self.ui.hide_story()
+	self.map.camera.paused = false
+	self.map.tile_box.set_visible(true)
+	self.ui.show_tiles()
+	self.ui.show_position()
 
 func wipe_editor():
 	self.toggle_radial_menu()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c0go1rlnp6vju"]
+[gd_scene load_steps=15 format=3 uid="uid://c0go1rlnp6vju"]
 
 [ext_resource type="Script" path="res://scenes/map_editor/ui.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://k2hh8e6861ja" path="res://scenes/map_editor/tile_view.tscn" id="2"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b1tod34kr8cro" path="res://scenes/ui/map_picker/picker.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://b68vtard4p6s3" path="res://scenes/ui/minimap/minimap.tscn" id="5"]
 [ext_resource type="Theme" path="res://assets/gui/ui_theme.tres" id="6"]
+[ext_resource type="PackedScene" uid="uid://cbg465a8j5ejh" path="res://scenes/map_editor/story/story_editor.tscn" id="6_n424n"]
 [ext_resource type="PackedScene" uid="uid://bfxvqvxbfeppg" path="res://scenes/ui/menu/controls/editor.tscn" id="7"]
 
 [sub_resource type="Animation" id="1"]
@@ -306,6 +307,28 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="picker" parent="picker" instance=ExtResource("4")]
+
+[node name="story" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="StoryEditor" parent="story" instance=ExtResource("6_n424n")]
+visible = false
+position = Vector2(20, 20)
 
 [node name="controls" type="MarginContainer" parent="."]
 layout_mode = 0
