@@ -350,7 +350,7 @@ func _load_map_settings():
 
 func _apply_map_settings():
 	self.map.model.metadata = self.ui.story.fill_metadata(self.map.model.metadata)
-	self.map.model.scripts["triggers"] = self.ui.story.fill_triggers(self.map.model.scripts["triggers"])
+	self.map.model.scripts["triggers"] = self.ui.story.compile_triggers()
 	self.map.model.scripts["stories"] = self.ui.story.fill_stories(self.map.model.scripts["stories"])
 
 func set_map_name(map_name):

@@ -1,0 +1,171 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7dectldayttw"]
+
+[ext_resource type="PackedScene" uid="uid://dc4vyffm4fyvi" path="res://scenes/map_editor/story/triggers/types/base_edit_type.tscn" id="1_l2n5y"]
+[ext_resource type="Script" path="res://scenes/map_editor/story/triggers/types/claim.gd" id="2_dlx4k"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_ay6ts"]
+[ext_resource type="Texture2D" uid="uid://pfrikdjfa7lc" path="res://assets/gui/menu/buttons/buttonSquare_brown.png" id="4_swpvy"]
+[ext_resource type="Texture2D" uid="uid://b0unbl4vx0tow" path="res://assets/gui/menu/buttons/buttonSquare_brown_pressed.png" id="5_18b48"]
+[ext_resource type="Texture2D" uid="uid://by1obiwt54odo" path="res://assets/gui/menu/buttons/buttonSquare_brown_hover.png" id="6_ehopr"]
+[ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_left.tscn" id="7_g6a5k"]
+[ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_right.tscn" id="8_3v7sm"]
+
+[node name="Claim" instance=ExtResource("1_l2n5y")]
+script = ExtResource("2_dlx4k")
+
+[node name="player_id" type="Label" parent="." index="8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 200.0
+offset_right = -250.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ay6ts")
+text = "TR_PLAYER_ID"
+vertical_alignment = 1
+
+[node name="id" type="LineEdit" parent="player_id" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+max_length = 1
+
+[node name="player_side" type="Label" parent="." index="9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 250.0
+offset_right = -250.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ay6ts")
+text = "TR_PLAYER_SIDE"
+vertical_alignment = 1
+
+[node name="side" type="LineEdit" parent="player_side" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="amount" type="Label" parent="." index="10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 300.0
+offset_right = -250.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ay6ts")
+text = "TR_AMOUNT"
+vertical_alignment = 1
+
+[node name="amount" type="LineEdit" parent="amount" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+text = "1"
+alignment = 1
+
+[node name="list" type="Label" parent="." index="11"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 350.0
+offset_right = -250.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ay6ts")
+text = "TR_LIST"
+vertical_alignment = 1
+
+[node name="prev_button" type="TextureButton" parent="list" index="0"]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 280.0
+offset_bottom = 84.0
+scale = Vector2(0.5, 0.5)
+focus_neighbor_right = NodePath("../next_button")
+texture_normal = ExtResource("4_swpvy")
+texture_pressed = ExtResource("5_18b48")
+texture_hover = ExtResource("6_ehopr")
+texture_focused = ExtResource("6_ehopr")
+
+[node name="anchor" type="Control" parent="list/prev_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="arrow_left" parent="list/prev_button/anchor" index="0" instance=ExtResource("7_g6a5k")]
+
+[node name="no" type="Label" parent="list" index="1"]
+layout_mode = 0
+offset_left = 250.0
+offset_right = 290.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("3_ay6ts")
+text = "1/1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="next_button" type="TextureButton" parent="list" index="2"]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 380.0
+offset_bottom = 84.0
+scale = Vector2(0.5, 0.5)
+focus_neighbor_left = NodePath("../prev_button")
+texture_normal = ExtResource("4_swpvy")
+texture_pressed = ExtResource("5_18b48")
+texture_hover = ExtResource("6_ehopr")
+texture_focused = ExtResource("6_ehopr")
+
+[node name="anchor" type="Control" parent="list/next_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="arrow_right" parent="list/next_button/anchor" index="0" instance=ExtResource("8_3v7sm")]
+
+[node name="x" type="LineEdit" parent="list" index="3"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 440.0
+offset_bottom = 40.0
+placeholder_text = "X"
+alignment = 1
+max_length = 2
+
+[node name="y" type="LineEdit" parent="list" index="4"]
+layout_mode = 0
+offset_left = 450.0
+offset_right = 540.0
+offset_bottom = 40.0
+placeholder_text = "Y"
+alignment = 1
+max_length = 2
+
+[connection signal="text_changed" from="player_id/id" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="player_side/side" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="amount/amount" to="." method="_on_text_changed"]
+[connection signal="pressed" from="list/prev_button" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="list/next_button" to="." method="_on_next_button_pressed"]
+[connection signal="text_changed" from="list/x" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="list/y" to="." method="_on_text_changed"]

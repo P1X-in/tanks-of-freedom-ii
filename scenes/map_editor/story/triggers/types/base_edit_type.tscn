@@ -1,0 +1,169 @@
+[gd_scene load_steps=6 format=3 uid="uid://dc4vyffm4fyvi"]
+
+[ext_resource type="Script" path="res://scenes/map_editor/story/triggers/types/base_edit_type.gd" id="1_5gawb"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="2_2oown"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="3_pmq33"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="4_f5jys"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="5_ysv25"]
+
+[node name="BaseEditType" type="Control"]
+custom_minimum_size = Vector2(550, 500)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -730.0
+offset_bottom = -300.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5gawb")
+
+[node name="name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -200.0
+offset_bottom = -460.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2oown")
+text = "trigger name"
+vertical_alignment = 1
+
+[node name="delete_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+texture_normal = ExtResource("3_pmq33")
+texture_pressed = ExtResource("4_f5jys")
+texture_hover = ExtResource("5_ysv25")
+texture_focused = ExtResource("5_ysv25")
+
+[node name="label" type="Label" parent="delete_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2oown")
+text = "TR_DELETE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="type" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 50.0
+offset_right = -200.0
+offset_bottom = -410.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2oown")
+text = "assassination"
+vertical_alignment = 1
+
+[node name="change_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 50.0
+offset_right = 540.0
+offset_bottom = 90.0
+texture_normal = ExtResource("3_pmq33")
+texture_pressed = ExtResource("4_f5jys")
+texture_hover = ExtResource("5_ysv25")
+texture_focused = ExtResource("5_ysv25")
+
+[node name="label" type="Label" parent="change_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2oown")
+text = "TR_CHANGE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="story" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 100.0
+offset_right = -200.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2oown")
+vertical_alignment = 1
+
+[node name="story_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 100.0
+offset_right = 540.0
+offset_bottom = 140.0
+texture_normal = ExtResource("3_pmq33")
+texture_pressed = ExtResource("4_f5jys")
+texture_hover = ExtResource("5_ysv25")
+texture_focused = ExtResource("5_ysv25")
+
+[node name="label" type="Label" parent="story_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2oown")
+text = "TR_SELECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="oneoff" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 150.0
+offset_right = -200.0
+offset_bottom = -310.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2oown")
+text = "TR_ONEOFF"
+vertical_alignment = 1
+
+[node name="oneoff_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 150.0
+offset_right = 540.0
+offset_bottom = 190.0
+texture_normal = ExtResource("3_pmq33")
+texture_pressed = ExtResource("4_f5jys")
+texture_hover = ExtResource("5_ysv25")
+texture_focused = ExtResource("5_ysv25")
+
+[node name="label" type="Label" parent="oneoff_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2oown")
+text = "TR_ON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="delete_button" to="." method="_on_delete_button_pressed"]
+[connection signal="pressed" from="change_button" to="." method="_on_change_button_pressed"]
+[connection signal="pressed" from="story_button" to="." method="_on_story_button_pressed"]
+[connection signal="pressed" from="oneoff_button" to="." method="_on_oneoff_button_pressed"]

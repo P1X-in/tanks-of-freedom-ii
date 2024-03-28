@@ -27,6 +27,7 @@ text = "TR_INITIAL_SKIP_HQ_CAM"
 vertical_alignment = 1
 
 [node name="skip_initial_hq_cam_toggle" type="TextureButton" parent="skip_initial_hq_cam"]
+layout_mode = 0
 offset_left = 350.0
 offset_right = 540.0
 offset_bottom = 40.0
@@ -58,6 +59,7 @@ text = "TR_INITIAL_CAM_POSITION"
 vertical_alignment = 1
 
 [node name="x" type="LineEdit" parent="initial_cam_position"]
+layout_mode = 0
 offset_left = 350.0
 offset_right = 440.0
 offset_bottom = 40.0
@@ -66,6 +68,7 @@ placeholder_text = "X"
 alignment = 1
 
 [node name="y" type="LineEdit" parent="initial_cam_position"]
+layout_mode = 0
 offset_left = 450.0
 offset_right = 540.0
 offset_bottom = 40.0
@@ -84,6 +87,7 @@ text = "TR_TRACK"
 vertical_alignment = 1
 
 [node name="track_button" type="TextureButton" parent="track"]
+layout_mode = 0
 offset_left = 350.0
 offset_right = 540.0
 offset_bottom = 40.0

@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://cen55657i84ui"]
+
+[ext_resource type="PackedScene" uid="uid://dc4vyffm4fyvi" path="res://scenes/map_editor/story/triggers/types/base_edit_type.tscn" id="1_majaw"]
+[ext_resource type="Script" path="res://scenes/map_editor/story/triggers/types/attacked.gd" id="2_rleaw"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_d0bnw"]
+
+[node name="Attacked" instance=ExtResource("1_majaw")]
+script = ExtResource("2_rleaw")
+
+[node name="vip" type="Label" parent="." index="8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 200.0
+offset_right = -250.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_d0bnw")
+text = "TR_VIP"
+vertical_alignment = 1
+
+[node name="x" type="LineEdit" parent="vip" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 440.0
+offset_bottom = 40.0
+placeholder_text = "X"
+alignment = 1
+max_length = 2
+
+[node name="y" type="LineEdit" parent="vip" index="1"]
+layout_mode = 0
+offset_left = 450.0
+offset_right = 540.0
+offset_bottom = 40.0
+placeholder_text = "Y"
+alignment = 1
+max_length = 2
+
+[connection signal="text_changed" from="vip/x" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="vip/y" to="." method="_on_text_changed"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnqbbv8qec4n4"]
+
+[ext_resource type="Script" path="res://scenes/map_editor/story/triggers/triggers.gd" id="1_6ul1w"]
+[ext_resource type="PackedScene" uid="uid://c6lrgtl1hkim3" path="res://scenes/map_editor/story/triggers/listing.tscn" id="2_1b5uf"]
+
+[node name="TriggersListing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6ul1w")
+
+[node name="Listing" parent="." instance=ExtResource("2_1b5uf")]
+layout_mode = 1

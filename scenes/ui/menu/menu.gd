@@ -51,6 +51,7 @@ func _on_load_button_pressed():
 	self.main_menu.open_saves()
 
 func _on_editor_button_pressed():
+	self.audio.play("menu_click")
 	self.recent_button_used = self.editor_button
 	self.audio.stop()
 	self.gamepad_adapter.disable()
