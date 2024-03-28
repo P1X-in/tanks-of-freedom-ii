@@ -2043,7 +2043,7 @@
                 },
                 "one_off": true,
                 "story": "05_2_imprisoned_units",
-                "type": "assasination"
+                "type": "assassination"
             },
             "05_3_hidden_artillery": {
                 "details": {
@@ -2092,7 +2092,7 @@
                 },
                 "one_off": true,
                 "story": "06_2_artillery_guard",
-                "type": "assasination"
+                "type": "assassination"
             },
             "07_second_gate_approach": {
                 "details": {
@@ -2268,7 +2268,7 @@
                 },
                 "one_off": true,
                 "story": "commando_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "warlord_defeated": {
                 "details": {
@@ -2279,7 +2279,7 @@
                 },
                 "one_off": true,
                 "story": "warlord_defeated",
-                "type": "assasination"
+                "type": "assassination"
             }
         }
     },

@@ -469,7 +469,7 @@
                 },
                 "one_off": true,
                 "story": "vip_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "blake_defeated": {
                 "details": {
@@ -480,7 +480,7 @@
                 },
                 "one_off": true,
                 "story": "blake_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "dawson_defeated": {
                 "details": {
@@ -491,7 +491,7 @@
                 },
                 "one_off": true,
                 "story": "vip_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "towers_captured": {
                 "details": {

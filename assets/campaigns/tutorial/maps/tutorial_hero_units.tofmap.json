@@ -501,7 +501,7 @@
                 "story": "welcome_message",
                 "type": "turn"
             },
-            "03_red_infantry_destroyed" : {"type" : "assasination", "story" : "first_red_infantry_destroyed", "details" : { "type" : "red_infantry" }, "one_off" : true},
+            "03_red_infantry_destroyed" : {"type" : "assassination", "story" : "first_red_infantry_destroyed", "details" : { "type" : "red_infantry" }, "one_off" : true},
             "04_blake_moved": {
                 "details": {
                     "fields": [
@@ -518,7 +518,7 @@
                 "story": "blake_moved",
                 "type": "move"
             },
-            "05_guard_destroyed" : {"type" : "assasination", "story" : "guard_destroyed", "details" : { "vip" : [20, 26] }, "one_off" : true},
+            "05_guard_destroyed" : {"type" : "assassination", "story" : "guard_destroyed", "details" : { "vip" : [20, 26] }, "one_off" : true},
             "06_cyrus_deployed" : {"type" : "deploy", "story" : "cyrus_deployed", "details" : { "amount" : 1, "player_side" : "blue", "type": "hero_general" }, "one_off" : true},
             "07_infantry_deployed" : {"type" : "deploy", "story" : "infantry_deployed", "details" : { "amount" : 1, "player_side" : "blue", "type": "blue_infantry" }, "one_off" : true},
             "08_deep_strike_ability_used" : {"type" : "ability", "story" : "deep_strike_ability_used", "details" : {}, "one_off" : true}

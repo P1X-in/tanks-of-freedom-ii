@@ -1332,7 +1332,7 @@
                 },
                 "one_off": true,
                 "story": "blake_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "blake_detected": {
                 "details": {
@@ -1409,7 +1409,7 @@
                 },
                 "one_off": true,
                 "story": "first_guard_eliminated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "first_guard_triggered": {
                 "details": {
@@ -1468,7 +1468,7 @@
                 },
                 "one_off": true,
                 "story": "alarm",
-                "type": "assasination"
+                "type": "assassination"
             },
             "rocket_2_destroyed": {
                 "details": {
@@ -1479,7 +1479,7 @@
                 },
                 "one_off": true,
                 "story": "alarm",
-                "type": "assasination"
+                "type": "assassination"
             },
             "second_guard_approached": {
                 "details": {
@@ -1515,7 +1515,7 @@
                 },
                 "one_off": true,
                 "story": "second_guard_eliminated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "second_guard_forth": {
                 "details": {

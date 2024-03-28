@@ -709,7 +709,7 @@
                 },
                 "one_off": true,
                 "story": "captain_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "hq_claimed": {
                 "details": {
@@ -735,7 +735,7 @@
                 },
                 "one_off": true,
                 "story": "prince_defeated",
-                "type": "assasination"
+                "type": "assassination"
             }
         }
     },

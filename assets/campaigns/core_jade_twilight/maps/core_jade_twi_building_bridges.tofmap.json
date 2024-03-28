@@ -1898,7 +1898,7 @@
                 },
                 "one_off": true,
                 "story": "blake_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "claude_defeated": {
                 "details": {
@@ -1909,7 +1909,7 @@
                 },
                 "one_off": true,
                 "story": "claude_defeated",
-                "type": "assasination"
+                "type": "assassination"
             }
         }
     },

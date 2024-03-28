@@ -536,7 +536,7 @@
                 },
                 "one_off": true,
                 "story": "admiral_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "claude_defeated": {
                 "details": {
@@ -547,7 +547,7 @@
                 },
                 "one_off": true,
                 "story": "claude_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "jade_resources": {
                 "details": {
@@ -572,7 +572,7 @@
                 },
                 "one_off": true,
                 "story": "prince_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "towers_captured": {
                 "details": {

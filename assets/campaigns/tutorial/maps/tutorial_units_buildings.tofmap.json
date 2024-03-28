@@ -710,7 +710,7 @@
                 },
                 "one_off": true,
                 "story": "red_infantry_destroyed",
-                "type": "assasination"
+                "type": "assassination"
             },
             "04_red_tank_destroyed": {
                 "details": {
@@ -718,7 +718,7 @@
                 },
                 "one_off": true,
                 "story": "red_tank_destroyed",
-                "type": "assasination"
+                "type": "assassination"
             },
             "05_red_heli_destroyed": {
                 "details": {
@@ -726,7 +726,7 @@
                 },
                 "one_off": true,
                 "story": "red_heli_destroyed",
-                "type": "assasination"
+                "type": "assassination"
             }
         }
     },

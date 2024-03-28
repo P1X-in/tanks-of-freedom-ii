@@ -912,7 +912,7 @@ var triggers = {
     'moved_vip' : {'type' : 'move', 'story' : 'moved', 'details' : { 'fields' : [Vector2(9, 9)], 'vip' : Vector2(9, 8) }, 'one_off' : true},
     'reinforce' : {'type' : 'deploy', 'story' : 'moved', 'details' : { 'amount' : 2, 'player' : 0 }, 'one_off' : true},
     'claim' : {'type' : 'domination', 'story' : 'moved', 'details' : { 'amount' : 2, 'list' : [Vector2(6, 4), Vector2(6, 11)], 'player' : 0 }, 'one_off' : true},
-    'assasin' : {'type' : 'assasination', 'story' : 'moved', 'details' : { 'vip' : Vector2(9, 8) }, 'one_off' : true},
+    'assasin' : {'type' : 'assassination', 'story' : 'moved', 'details' : { 'vip' : Vector2(9, 8) }, 'one_off' : true},
     'reinforce_enemy' : {'type' : 'deploy', 'story' : 'moved', 'details' : { 'amount' : 1, 'player' : 1 }, 'one_off' : true},
 }
 ```
@@ -972,7 +972,7 @@ var triggers = {
             "decimated" : [
                 {"action" : "message", "details": {"text" : "Units decimated", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
             ],
-            "assasination" : [
+            "assassination" : [
                 {"action" : "message", "details": {"text" : "Unit killed", "portrait" : "soldier_blue", "name" : "Peter", "side" : "left"}},
             ],
             "attacked" : [
@@ -994,7 +994,7 @@ var triggers = {
             "reinforce" : {"type" : "deploy", "story" : "reinforced", "details" : { "amount" : 3, "player_side" : "red", "type": "red_infantry" }, "one_off" : true},
             "domination" : {"type" : "claim", "story" : "claimed", "details" : { "amount" : 2, "list" : [[23, 27], [20, 29], [20, 25]], "player_side" : "blue" }, "one_off" : true},
             "decimated" : {"type" : "decimate", "story" : "decimated", "details" : { "player_side" : "red" }, "one_off" : true},
-            "assasination" : {"type" : "assasination", "story" : "assasination", "details" : { "vip" : [27, 22] }, "one_off" : true},
+            "assassination" : {"type" : "assassination", "story" : "assassination", "details" : { "vip" : [27, 22] }, "one_off" : true},
             "attacked" : {"type" : "attacked", "story" : "attacked", "details" : { "vip" : [27, 22] }, "one_off" : true},
             "resources" : {"type" : "resources", "story" : "resources", "details" : { "amount" : 100, "player_side" : "blue" }, "one_off" : true}
         }

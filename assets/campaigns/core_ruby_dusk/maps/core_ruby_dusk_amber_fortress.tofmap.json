@@ -503,7 +503,7 @@
                 },
                 "one_off": true,
                 "story": "sidney_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "tybalt_defeated": {
                 "details": {
@@ -514,7 +514,7 @@
                 },
                 "one_off": true,
                 "story": "tybalt_defeated",
-                "type": "assasination"
+                "type": "assassination"
             }
         }
     },
