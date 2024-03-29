@@ -813,31 +813,34 @@ var side_materials_metallic_desat = {
 var generic_building = preload("res://scenes/tiles/buildings/building.gd")
 var generic_unit = preload("res://scenes/tiles/units/unit.gd")
 
+func _compile_templates_list():
+	var partial_templates = [
+		self._ground_templates,
+		self._damage_templates,
+		self._frame_templates,
+		self._decoration_templates,
+		self._railway_templates,
+		self._city_decoration_templates,
+		self._city_templates,
+		self._damaged_city_templates,
+		self._wall_templates,
+		self._nature_templates,
+		self._special_templates,
+		self._building_templates,
+		self._unit_templates,
+		self._hero_templates,
+		self._other_templates
+	]
+	for partial_dict in partial_templates:
+		for template_key in partial_dict:
+			self.templates[template_key] = partial_dict[template_key]
+				
 func get_template(template):
 	if template == null:
 		return null
 
 	if self.templates.size() == 0:
-		var partial_templates = [
-			self._ground_templates,
-			self._damage_templates,
-			self._frame_templates,
-			self._decoration_templates,
-			self._railway_templates,
-			self._city_decoration_templates,
-			self._city_templates,
-			self._damaged_city_templates,
-			self._wall_templates,
-			self._nature_templates,
-			self._special_templates,
-			self._building_templates,
-			self._unit_templates,
-			self._hero_templates,
-			self._other_templates
-		]
-		for partial_dict in partial_templates:
-			for template_key in partial_dict:
-				self.templates[template_key] = partial_dict[template_key]
+		_compile_templates_list()
 
 	var new_tile = self.templates[template].instantiate()
 	new_tile.template_name = template
