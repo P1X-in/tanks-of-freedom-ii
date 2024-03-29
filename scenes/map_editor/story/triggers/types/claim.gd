@@ -7,6 +7,12 @@ var tmp_y = ""
 func fill_trigger_data(new_trigger_name, new_trigger_data):
 	super.fill_trigger_data(new_trigger_name, new_trigger_data)
 	
+	$"player_id/id".set_text("")
+	$"player_side/side".set_text("")
+	$"amount/amount".set_text("1")
+	$"list/x".set_text("")
+	$"list/y".set_text("")
+	
 	self.current_index = 0
 	self.tmp_x = ""
 	self.tmp_y = ""
@@ -16,7 +22,10 @@ func fill_trigger_data(new_trigger_name, new_trigger_data):
 			$"player_id/id".set_text(str(self.trigger_data["details"]["player"]))
 
 		if self.trigger_data["details"].has("player_side"):
-			$"player_side/side".set_text(self.trigger_data["details"]["player_side"])
+			var side = self.trigger_data["details"]["player_side"]
+			if side is Array:
+				side = ",".join(side)
+			$"player_side/side".set_text(side)
 			
 		if self.trigger_data["details"].has("amount"):
 			$"amount/amount".set_text(str(self.trigger_data["details"]["amount"]))
@@ -42,7 +51,7 @@ func _compile_trigger_data():
 		current_list = self.trigger_data["details"]["list"]
 	
 	var player_id = $"player_id/id".get_text()
-	var player_side = $"player_side/side".get_text()
+	var player_side = Array($"player_side/side".get_text().split(","))
 	var amount = $"amount/amount".get_text()
 	
 	
@@ -53,7 +62,7 @@ func _compile_trigger_data():
 
 	if player_id != "":
 		self.trigger_data["details"]["player"] = int(player_id)
-	if player_side != "":
+	if player_side.size() > 0:
 		self.trigger_data["details"]["player_side"] = player_side
 	if amount != "":
 		self.trigger_data["details"]["amount"] = int(amount)
@@ -77,12 +86,15 @@ func _on_text_changed(_new_text):
 	_emit_updated_signal()
 
 func _manage_list_buttons():
-	$"list/no".set_text(str(self.current_index + 1) + "/" + str(self.trigger_data["details"]["list"].size()))
+	var list_size = 0
+	if self.trigger_data["details"].has("list"):
+		list_size = self.trigger_data["details"]["list"].size()
+	$"list/no".set_text(str(self.current_index + 1) + "/" + str(list_size))
 	if self.current_index > 0:
 		$"list/prev_button".show()
 	else:
 		$"list/prev_button".hide()
-	if self.current_index < self.trigger_data["details"]["list"].size():
+	if self.current_index < list_size:
 		$"list/next_button".show()
 	else:
 		$"list/next_button".hide()
@@ -92,8 +104,12 @@ func _handle_element_removal():
 	var x = $"list/x".get_text()
 	var y = $"list/y".get_text()
 	
+	var list_size = 0
+	if self.trigger_data["details"].has("list"):
+		list_size = self.trigger_data["details"]["list"].size()
+	
 	if x == "" or y == "":
-		if self.current_index < self.trigger_data["details"]["list"].size():
+		if self.current_index < list_size:
 			self.trigger_data["details"]["list"].pop_at(self.current_index)
 			return true
 	return false

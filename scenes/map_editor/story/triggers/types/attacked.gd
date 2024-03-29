@@ -3,6 +3,9 @@ extends BaseTriggerTypeEditor
 func fill_trigger_data(new_trigger_name, new_trigger_data):
 	super.fill_trigger_data(new_trigger_name, new_trigger_data)
 	
+	$"vip/x".set_text("")
+	$"vip/y".set_text("")
+	
 	if self.trigger_data.has("details"):
 		if self.trigger_data["details"].has("vip"):
 			$"vip/x".set_text(str(self.trigger_data["details"]["vip"][0]))

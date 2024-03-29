@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://w53igqpdbpat"]
+
+[ext_resource type="PackedScene" uid="uid://dc4vyffm4fyvi" path="res://scenes/map_editor/story/triggers/types/base_edit_type.tscn" id="1_fqi5d"]
+[ext_resource type="Script" path="res://scenes/map_editor/story/triggers/types/turn.gd" id="2_tgrjb"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_jhk0d"]
+
+[node name="Turn" instance=ExtResource("1_fqi5d")]
+script = ExtResource("2_tgrjb")
+
+[node name="player_id" type="Label" parent="." index="8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 200.0
+offset_right = -250.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_jhk0d")
+text = "TR_PLAYER_ID"
+vertical_alignment = 1
+
+[node name="id" type="LineEdit" parent="player_id" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+max_length = 1
+
+[node name="player_side" type="Label" parent="." index="9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 250.0
+offset_right = -250.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_jhk0d")
+text = "TR_PLAYER_SIDE"
+vertical_alignment = 1
+
+[node name="side" type="LineEdit" parent="player_side" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="turn" type="Label" parent="." index="10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 300.0
+offset_right = -250.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_jhk0d")
+text = "TR_TURN"
+vertical_alignment = 1
+
+[node name="turn" type="LineEdit" parent="turn" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[connection signal="text_changed" from="player_id/id" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="player_side/side" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="turn/turn" to="." method="_on_text_changed"]
