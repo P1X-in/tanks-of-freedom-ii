@@ -375,25 +375,27 @@ const PLAYER_BLACK = "black"
 const MATERIAL_NORMAL = "normal"
 const MATERIAL_METALLIC = "metallic"
 
-var templates = {
-	self.DUMMY_GROUND : preload("res://scenes/tiles/ground/base_ground.tscn"),
-
+var _ground_templates = {
 	self.GROUND_GRASS : preload("res://scenes/tiles/ground/grass.tscn"),
 	self.GROUND_CONCRETE : preload("res://scenes/tiles/ground/concrete.tscn"),
+	self.GROUND_MUD : preload("res://scenes/tiles/ground/mud.tscn"),
 	self.GROUND_RIVER1 : preload("res://scenes/tiles/ground/river1.tscn"),
 	self.GROUND_RIVER2 : preload("res://scenes/tiles/ground/river2.tscn"),
+	self.GROUND_SWAMP : preload("res://scenes/tiles/ground/swamp.tscn"),
+	self.GROUND_SWAMP2 : preload("res://scenes/tiles/ground/swamp2.tscn"),
+	self.GROUND_SWAMP3 : preload("res://scenes/tiles/ground/swamp3.tscn"),
 	self.GROUND_ROAD1 : preload("res://scenes/tiles/ground/road1.tscn"),
 	self.GROUND_ROAD2 : preload("res://scenes/tiles/ground/road2.tscn"),
 	self.GROUND_ROAD3 : preload("res://scenes/tiles/ground/road3.tscn"),
 	self.GROUND_ROAD4 : preload("res://scenes/tiles/ground/road4.tscn"),
-	self.GROUND_DIRT_ROAD1 : preload("res://scenes/tiles/ground/dirt_road1.tscn"),
-	self.GROUND_DIRT_ROAD2 : preload("res://scenes/tiles/ground/dirt_road2.tscn"),
-	self.GROUND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/dirt_road3.tscn"),
-	self.GROUND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/dirt_road4.tscn"),
 	self.GROUND_ROAD_TRANSITION : preload("res://scenes/tiles/ground/road_transition.tscn"),
 	self.GROUND_ROAD_TRANSITION2 : preload("res://scenes/tiles/ground/road_transition2.tscn"),
 	self.GROUND_ROAD_TRANSITION3 : preload("res://scenes/tiles/ground/road_transition3.tscn"),
 	self.GROUND_ROAD_TRANSITION4 : preload("res://scenes/tiles/ground/road_transition4.tscn"),
+	self.GROUND_DIRT_ROAD1 : preload("res://scenes/tiles/ground/dirt_road1.tscn"),
+	self.GROUND_DIRT_ROAD2 : preload("res://scenes/tiles/ground/dirt_road2.tscn"),
+	self.GROUND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/dirt_road3.tscn"),
+	self.GROUND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/dirt_road4.tscn"),
 
 	self.GROUND_SNOW : preload("res://scenes/tiles/ground/snow/snow.tscn"),
 	self.GROUND_SNOW_RIVER1 : preload("res://scenes/tiles/ground/snow/ice_river1.tscn"),
@@ -402,14 +404,14 @@ var templates = {
 	self.GROUND_SNOW_ROAD2 : preload("res://scenes/tiles/ground/snow/snow_road2.tscn"),
 	self.GROUND_SNOW_ROAD3 : preload("res://scenes/tiles/ground/snow/snow_road3.tscn"),
 	self.GROUND_SNOW_ROAD4 : preload("res://scenes/tiles/ground/snow/snow_road4.tscn"),
-	self.GROUND_SNOW_DIRT_ROAD1 : preload("res://scenes/tiles/ground/snow/snow_dirt_road1.tscn"),
-	self.GROUND_SNOW_DIRT_ROAD2 : preload("res://scenes/tiles/ground/snow/snow_dirt_road2.tscn"),
-	self.GROUND_SNOW_DIRT_ROAD3 : preload("res://scenes/tiles/ground/snow/snow_dirt_road3.tscn"),
-	self.GROUND_SNOW_DIRT_ROAD4 : preload("res://scenes/tiles/ground/snow/snow_dirt_road4.tscn"),
 	self.GROUND_SNOW_ROAD_TRANSITION : preload("res://scenes/tiles/ground/snow/snow_road_transition.tscn"),
 	self.GROUND_SNOW_ROAD_TRANSITION2 : preload("res://scenes/tiles/ground/snow/snow_road_transition2.tscn"),
 	self.GROUND_SNOW_ROAD_TRANSITION3 : preload("res://scenes/tiles/ground/snow/snow_road_transition3.tscn"),
 	self.GROUND_SNOW_ROAD_TRANSITION4 : preload("res://scenes/tiles/ground/snow/snow_road_transition4.tscn"),
+	self.GROUND_SNOW_DIRT_ROAD1 : preload("res://scenes/tiles/ground/snow/snow_dirt_road1.tscn"),
+	self.GROUND_SNOW_DIRT_ROAD2 : preload("res://scenes/tiles/ground/snow/snow_dirt_road2.tscn"),
+	self.GROUND_SNOW_DIRT_ROAD3 : preload("res://scenes/tiles/ground/snow/snow_dirt_road3.tscn"),
+	self.GROUND_SNOW_DIRT_ROAD4 : preload("res://scenes/tiles/ground/snow/snow_dirt_road4.tscn"),
 
 	self.GROUND_SAND : preload("res://scenes/tiles/ground/sand/sand.tscn"),
 	self.GROUND_SAND_RIVER1 : preload("res://scenes/tiles/ground/sand/sand_river1.tscn"),
@@ -418,34 +420,42 @@ var templates = {
 	self.GROUND_SAND_ROAD2 : preload("res://scenes/tiles/ground/sand/sand_road2.tscn"),
 	self.GROUND_SAND_ROAD3 : preload("res://scenes/tiles/ground/sand/sand_road3.tscn"),
 	self.GROUND_SAND_ROAD4 : preload("res://scenes/tiles/ground/sand/sand_road4.tscn"),
-	self.GROUND_SAND_DIRT_ROAD1 : preload("res://scenes/tiles/ground/sand/sand_dirt_road1.tscn"),
-	self.GROUND_SAND_DIRT_ROAD2 : preload("res://scenes/tiles/ground/sand/sand_dirt_road2.tscn"),
-	self.GROUND_SAND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/sand/sand_dirt_road3.tscn"),
-	self.GROUND_SAND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/sand/sand_dirt_road4.tscn"),
 	self.GROUND_SAND_ROAD_TRANSITION : preload("res://scenes/tiles/ground/sand/sand_road_transition.tscn"),
 	self.GROUND_SAND_ROAD_TRANSITION2 : preload("res://scenes/tiles/ground/sand/sand_road_transition2.tscn"),
 	self.GROUND_SAND_ROAD_TRANSITION3 : preload("res://scenes/tiles/ground/sand/sand_road_transition3.tscn"),
 	self.GROUND_SAND_ROAD_TRANSITION4 : preload("res://scenes/tiles/ground/sand/sand_road_transition4.tscn"),
-
-	self.GROUND_MUD : preload("res://scenes/tiles/ground/mud.tscn"),
-	self.GROUND_SWAMP : preload("res://scenes/tiles/ground/swamp.tscn"),
-	self.GROUND_SWAMP2 : preload("res://scenes/tiles/ground/swamp2.tscn"),
-	self.GROUND_SWAMP3 : preload("res://scenes/tiles/ground/swamp3.tscn"),
-	self.GROUND_FLYABLE : preload("res://scenes/tiles/ground/flyable.tscn"),
+	self.GROUND_SAND_DIRT_ROAD1 : preload("res://scenes/tiles/ground/sand/sand_dirt_road1.tscn"),
+	self.GROUND_SAND_DIRT_ROAD2 : preload("res://scenes/tiles/ground/sand/sand_dirt_road2.tscn"),
+	self.GROUND_SAND_DIRT_ROAD3 : preload("res://scenes/tiles/ground/sand/sand_dirt_road3.tscn"),
+	self.GROUND_SAND_DIRT_ROAD4 : preload("res://scenes/tiles/ground/sand/sand_dirt_road4.tscn"),
 
 	self.BRIDGE_PLATE : preload("res://scenes/tiles/ground/bridge_plate.tscn"),
-	self.BRIDGE_LEGS : preload("res://scenes/tiles/ground/bridge_legs.tscn"),
-	self.BRIDGE_STONE : preload("res://scenes/tiles/ground/bridge_stone.tscn"),
 	self.BRIDGE2_PLATE : preload("res://scenes/tiles/ground/bridge2_plate.tscn"),
+	self.BRIDGE_LEGS : preload("res://scenes/tiles/ground/bridge_legs.tscn"),
 	self.BRIDGE2_LEGS : preload("res://scenes/tiles/ground/bridge2_legs.tscn"),
+	self.BRIDGE_STONE : preload("res://scenes/tiles/ground/bridge_stone.tscn"),
 	self.BRIDGE2_STONE : preload("res://scenes/tiles/ground/bridge2_stone.tscn"),
 
+	self.GROUND_FLYABLE : preload("res://scenes/tiles/ground/flyable.tscn"),
+}
+
+var _damage_templates = {
+	self.DECO_GROUND_DMG_1 : preload("res://scenes/tiles/decorations/ground_damage_1.tscn"),
+	self.DECO_GROUND_DMG_2 : preload("res://scenes/tiles/decorations/ground_damage_2.tscn"),
+	self.DECO_GROUND_DMG_3 : preload("res://scenes/tiles/decorations/ground_damage_3.tscn"),
+	self.DECO_GROUND_DMG_4 : preload("res://scenes/tiles/decorations/ground_damage_4.tscn"),
+	self.DECO_GROUND_DMG_5 : preload("res://scenes/tiles/decorations/ground_damage_5.tscn"),
+	self.DECO_GROUND_DMG_6 : preload("res://scenes/tiles/decorations/ground_damage_6.tscn"),
+}
+
+var _frame_templates = {
 	self.FRAME_GRASS1 : preload("res://scenes/tiles/frames/grass_1_overtile.tscn"),
 	self.FRAME_GRASS2 : preload("res://scenes/tiles/frames/grass_2_overtile.tscn"),
 	self.FRAME_GRASS3 : preload("res://scenes/tiles/frames/grass_3_overtile.tscn"),
 	self.FRAME_GRASS4 : preload("res://scenes/tiles/frames/grass_4_overtile.tscn"),
 	self.FRAME_GRASS5 : preload("res://scenes/tiles/frames/grass_5_overtile.tscn"),
 	self.FRAME_GRASS6 : preload("res://scenes/tiles/frames/grass_6_overtile.tscn"),
+	self.FRAME_WHEAT : preload("res://scenes/tiles/frames/wheat_overtile.tscn"),
 	self.FRAME_RIVER1 : preload("res://scenes/tiles/frames/river_plants_1_overtile.tscn"),
 	self.FRAME_RIVER2 : preload("res://scenes/tiles/frames/river_plants_2_overtile.tscn"),
 	self.FRAME_RIVER3 : preload("res://scenes/tiles/frames/river_plants_3_overtile.tscn"),
@@ -456,13 +466,6 @@ var templates = {
 	self.FRAME_ROAD2 : preload("res://scenes/tiles/frames/road_2_overtile.tscn"),
 	self.FRAME_ROAD3 : preload("res://scenes/tiles/frames/road_3_overtile.tscn"),
 	self.FRAME_ROAD4 : preload("res://scenes/tiles/frames/road_4_overtile.tscn"),
-	self.FRAME_WHEAT : preload("res://scenes/tiles/frames/wheat_overtile.tscn"),
-	self.FRAME_MUD1 : preload("res://scenes/tiles/frames/mud_1_overtile.tscn"),
-	self.FRAME_MUD2 : preload("res://scenes/tiles/frames/mud_2_overtile.tscn"),
-
-	self.FRAME_FENCE : preload("res://scenes/tiles/frames/wired_fence_overtile.tscn"),
-	self.FRAME_LASER : preload("res://scenes/tiles/frames/laser_fence_overtile.tscn"),
-	self.FRAME_WALL : preload("res://scenes/tiles/frames/wall_fence_overtile.tscn"),
 
 	self.FRAME_SNOW2 : preload("res://scenes/tiles/frames/snow/snow_2_overtile.tscn"),
 	self.FRAME_SNOW3 : preload("res://scenes/tiles/frames/snow/snow_3_overtile.tscn"),
@@ -476,6 +479,15 @@ var templates = {
 	self.FRAME_SAND_BEACH2 : preload("res://scenes/tiles/frames/sand/beach_2_overtile.tscn"),
 	self.FRAME_SAND_BEACH3 : preload("res://scenes/tiles/frames/sand/beach_3_overtile.tscn"),
 
+	self.FRAME_MUD1 : preload("res://scenes/tiles/frames/mud_1_overtile.tscn"),
+	self.FRAME_MUD2 : preload("res://scenes/tiles/frames/mud_2_overtile.tscn"),
+
+	self.FRAME_FENCE : preload("res://scenes/tiles/frames/wired_fence_overtile.tscn"),
+	self.FRAME_LASER : preload("res://scenes/tiles/frames/laser_fence_overtile.tscn"),
+	self.FRAME_WALL : preload("res://scenes/tiles/frames/wall_fence_overtile.tscn"),
+}
+
+var _decoration_templates = {
 	self.DECO_FLOWERS1 : preload("res://scenes/tiles/decorations/flowers_1_overtile.tscn"),
 	self.DECO_FLOWERS2 : preload("res://scenes/tiles/decorations/flowers_2_overtile.tscn"),
 	self.DECO_FLOWERS3 : preload("res://scenes/tiles/decorations/flowers_3_overtile.tscn"),
@@ -488,13 +500,9 @@ var templates = {
 	self.DECO_FLOWERS10 : preload("res://scenes/tiles/decorations/flowers_10_overtile.tscn"),
 	self.DECO_FLOWERS11 : preload("res://scenes/tiles/decorations/flowers_11_overtile.tscn"),
 	self.DECO_FLOWERS12 : preload("res://scenes/tiles/decorations/flowers_12_overtile.tscn"),
-	self.DECO_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_overtile.tscn"),
 	self.DECO_LOG : preload("res://scenes/tiles/decorations/log_1_overtile.tscn"),
 	self.DECO_ROCKS1 : preload("res://scenes/tiles/decorations/rocks_1_overtile.tscn"),
 	self.DECO_ROCKS2 : preload("res://scenes/tiles/decorations/rocks_2_overtile.tscn"),
-	self.DECO_STATUE : preload("res://scenes/tiles/decorations/statue_overtile.tscn"),
-	self.DECO_STATUE_RAT : preload("res://scenes/tiles/decorations/rat_statue_overtile.tscn"),
-	self.DECO_STATUE_CAPSULE : preload("res://scenes/tiles/decorations/capsule_statue_overtile.tscn"),
 
 	self.DECO_STUMPS1 : preload("res://scenes/tiles/decorations/stumps_1_overtile.tscn"),
 	self.DECO_STUMPS2 : preload("res://scenes/tiles/decorations/stumps_2_overtile.tscn"),
@@ -504,88 +512,55 @@ var templates = {
 	self.DECO_BEACH1 : preload("res://scenes/tiles/decorations/beach_1_overtile.tscn"),
 	self.DECO_BEACH2 : preload("res://scenes/tiles/decorations/beach_2_overtile.tscn"),
 	self.DECO_BEACH3 : preload("res://scenes/tiles/decorations/beach_3_overtile.tscn"),
+}
 
-	self.DECO_GROUND_DMG_1 : preload("res://scenes/tiles/decorations/ground_damage_1.tscn"),
-	self.DECO_GROUND_DMG_2 : preload("res://scenes/tiles/decorations/ground_damage_2.tscn"),
-	self.DECO_GROUND_DMG_3 : preload("res://scenes/tiles/decorations/ground_damage_3.tscn"),
-	self.DECO_GROUND_DMG_4 : preload("res://scenes/tiles/decorations/ground_damage_4.tscn"),
-	self.DECO_GROUND_DMG_5 : preload("res://scenes/tiles/decorations/ground_damage_5.tscn"),
-	self.DECO_GROUND_DMG_6 : preload("res://scenes/tiles/decorations/ground_damage_6.tscn"),
-
+var _railway_templates = {
 	self.DECO_RAIL_STRAIGHT : preload("res://scenes/tiles/decorations/railway_straight.tscn"),
 	self.DECO_RAIL_STRAIGHT2 : preload("res://scenes/tiles/decorations/railway_straight2.tscn"),
 	self.DECO_RAIL_TURN     : preload("res://scenes/tiles/decorations/railway_turn.tscn"),
 	self.DECO_RAIL_T        : preload("res://scenes/tiles/decorations/railway_t.tscn"),
 	self.DECO_RAIL_CROSS    : preload("res://scenes/tiles/decorations/railway_cross.tscn"),
 	self.DECO_RAIL_END      : preload("res://scenes/tiles/decorations/railway_end.tscn"),
-	self.DECO_RAIL_STOP     : preload("res://scenes/tiles/decorations/railway_stop.tscn"),
+}
 
+var _city_decoration_templates = {
+	self.DECO_FOUNTAIN : preload("res://scenes/tiles/decorations/fountain_overtile.tscn"),
+	self.DECO_STATUE : preload("res://scenes/tiles/decorations/statue_overtile.tscn"),
+	self.DECO_STATUE_RAT : preload("res://scenes/tiles/decorations/rat_statue_overtile.tscn"),
+	self.DECO_STATUE_CAPSULE : preload("res://scenes/tiles/decorations/capsule_statue_overtile.tscn"),
+}
 
+var _city_templates = {
 	self.CITY_BUILDING_BIG1 : preload("res://scenes/tiles/city/building_big_1_overtile.tscn"),
 	self.CITY_BUILDING_BIG2 : preload("res://scenes/tiles/city/building_big_2_overtile.tscn"),
 	self.CITY_BUILDING_BIG3 : preload("res://scenes/tiles/city/building_big_3_overtile.tscn"),
 	self.CITY_BUILDING_BIG4 : preload("res://scenes/tiles/city/building_big_4_overtile.tscn"),
 	self.CITY_BUILDING_BIG5 : preload("res://scenes/tiles/city/building_big_5_overtile.tscn"),
+	self.CITY_BUILDING_SMALL5 : preload("res://scenes/tiles/city/building_small_5_overtile.tscn"),
+	self.CITY_BUILDING_SMALL6 : preload("res://scenes/tiles/city/building_small_6_overtile.tscn"),
 	self.CITY_BUILDING_MEDIUM1 : preload("res://scenes/tiles/city/building_medium_1_overtile.tscn"),
 	self.CITY_BUILDING_SMALL1 : preload("res://scenes/tiles/city/building_small_1_overtile.tscn"),
 	self.CITY_BUILDING_SMALL2 : preload("res://scenes/tiles/city/building_small_2_overtile.tscn"),
 	self.CITY_BUILDING_SMALL3 : preload("res://scenes/tiles/city/building_small_3_overtile.tscn"),
 	self.CITY_BUILDING_SMALL4 : preload("res://scenes/tiles/city/building_small_4_overtile.tscn"),
-	self.CITY_BUILDING_SMALL5 : preload("res://scenes/tiles/city/building_small_5_overtile.tscn"),
-	self.CITY_BUILDING_SMALL6 : preload("res://scenes/tiles/city/building_small_6_overtile.tscn"),
 	self.CITY_BUILDING_SMALL10 : preload("res://scenes/tiles/city/building_small_10_overtile.tscn"),
 	self.CITY_BUILDING_SMALL11 : preload("res://scenes/tiles/city/building_small_11_overtile.tscn"),
+	self.CITY_FARM1 : preload("res://scenes/tiles/city/farm_1_overtile.tscn"),
+	self.CITY_FARM2 : preload("res://scenes/tiles/city/farm_2_overtile.tscn"),
 	self.CITY_SHOP1 : preload("res://scenes/tiles/city/shop_1_overtile.tscn"),
 	self.CITY_SHOP2 : preload("res://scenes/tiles/city/shop_2_overtile.tscn"),
 	self.CITY_SHOP3 : preload("res://scenes/tiles/city/shop_3_overtile.tscn"),
-	self.CITY_FARM1 : preload("res://scenes/tiles/city/farm_1_overtile.tscn"),
-	self.CITY_FARM2 : preload("res://scenes/tiles/city/farm_2_overtile.tscn"),
 	self.CITY_BRIDGE : preload("res://scenes/tiles/city/river_bridge_overtile.tscn"),
+	self.CITY_BRIDGE_WOOD : preload("res://scenes/tiles/city/wooden_bridge_overtile.tscn"),
 	self.CITY_ROADBLOCK : preload("res://scenes/tiles/city/roadblock_overtile.tscn"),
 	self.CITY_SANDBAGS : preload("res://scenes/tiles/city/sandbags_overtile.tscn"),
 	self.BRIDGE_SUSPENSION : preload("res://scenes/tiles/city/bridge_suspension.tscn"),
 	self.BRIDGE_SUSPENSION_TILED : preload("res://scenes/tiles/city/bridge_suspension_tiled.tscn"),
 	self.BRIDGE_STONE_BARRIER : preload("res://scenes/tiles/city/bridge_stone_barrier.tscn"),
 	self.BRIDGE_STONE_BARRIER_TILED : preload("res://scenes/tiles/city/bridge_stone_barrier_tiled.tscn"),
+}
 
-	self.CITY_BRIDGE_WOOD : preload("res://scenes/tiles/city/wooden_bridge_overtile.tscn"),
-
-	self.CASTLE_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall_straight.tscn"),
-	self.CASTLE_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall_straight2.tscn"),
-	self.CASTLE_WALL_CORNER : preload("res://scenes/tiles/city/wall_corner.tscn"),
-	self.CASTLE_WALL_CROSS : preload("res://scenes/tiles/city/wall_cross.tscn"),
-	self.CASTLE_WALL_T : preload("res://scenes/tiles/city/wall_t.tscn"),
-	self.CASTLE_WALL_T2 : preload("res://scenes/tiles/city/wall_t2.tscn"),
-	self.CASTLE_WALL_GATE : preload("res://scenes/tiles/city/wall_gate.tscn"),
-	self.CASTLE_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall_gate_closed.tscn"),
-
-	self.BRICK_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall2_straight.tscn"),
-	self.BRICK_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall2_straight2.tscn"),
-	self.BRICK_WALL_CORNER : preload("res://scenes/tiles/city/wall2_corner.tscn"),
-	self.BRICK_WALL_CROSS : preload("res://scenes/tiles/city/wall2_cross.tscn"),
-	self.BRICK_WALL_T : preload("res://scenes/tiles/city/wall2_t.tscn"),
-	self.BRICK_WALL_T2 : preload("res://scenes/tiles/city/wall2_t2.tscn"),
-	self.BRICK_WALL_GATE : preload("res://scenes/tiles/city/wall2_gate.tscn"),
-	self.BRICK_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall2_gate_closed.tscn"),
-
-	self.FENCE_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall3_straight.tscn"),
-	self.FENCE_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall3_straight2.tscn"),
-	self.FENCE_WALL_CORNER : preload("res://scenes/tiles/city/wall3_corner.tscn"),
-	self.FENCE_WALL_CROSS : preload("res://scenes/tiles/city/wall3_cross.tscn"),
-	self.FENCE_WALL_T : preload("res://scenes/tiles/city/wall3_t.tscn"),
-	self.FENCE_WALL_T2 : preload("res://scenes/tiles/city/wall3_t2.tscn"),
-	self.FENCE_WALL_GATE : preload("res://scenes/tiles/city/wall3_gate.tscn"),
-	self.FENCE_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall3_gate_closed.tscn"),
-
-	self.FUTURISTIC_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall4_straight.tscn"),
-	self.FUTURISTIC_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall4_straight2.tscn"),
-	self.FUTURISTIC_WALL_CORNER : preload("res://scenes/tiles/city/wall4_corner.tscn"),
-	self.FUTURISTIC_WALL_CROSS : preload("res://scenes/tiles/city/wall4_cross.tscn"),
-	self.FUTURISTIC_WALL_T : preload("res://scenes/tiles/city/wall4_t.tscn"),
-	self.FUTURISTIC_WALL_T2 : preload("res://scenes/tiles/city/wall4_t2.tscn"),
-	self.FUTURISTIC_WALL_GATE : preload("res://scenes/tiles/city/wall4_gate.tscn"),
-	self.FUTURISTIC_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall4_gate_closed.tscn"),
-
+var _damaged_city_templates = {
 	self.DAMAGED_STATUE : preload("res://scenes/tiles/decorations/statue_damaged.tscn"),
 	self.DAMAGED_STATUE_RAT : preload("res://scenes/tiles/decorations/rat_statue_damaged.tscn"),
 	self.DAMAGED_STATUE_CAPSULE : preload("res://scenes/tiles/decorations/capsule_statue_damaged.tscn"),
@@ -633,7 +608,47 @@ var templates = {
 	self.DESTROYED_BUILDING_BIG3 : preload("res://scenes/tiles/city/building_big_3_destroyed.tscn"),
 	self.DESTROYED_BUILDING_BIG4 : preload("res://scenes/tiles/city/building_big_4_destroyed.tscn"),
 	self.DESTROYED_BUILDING_BIG5 : preload("res://scenes/tiles/city/building_big_5_destroyed.tscn"),
+}
 
+var _wall_templates = {
+	self.CASTLE_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall_straight.tscn"),
+	self.CASTLE_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall_straight2.tscn"),
+	self.CASTLE_WALL_CORNER : preload("res://scenes/tiles/city/wall_corner.tscn"),
+	self.CASTLE_WALL_CROSS : preload("res://scenes/tiles/city/wall_cross.tscn"),
+	self.CASTLE_WALL_T : preload("res://scenes/tiles/city/wall_t.tscn"),
+	self.CASTLE_WALL_T2 : preload("res://scenes/tiles/city/wall_t2.tscn"),
+	self.CASTLE_WALL_GATE : preload("res://scenes/tiles/city/wall_gate.tscn"),
+	self.CASTLE_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall_gate_closed.tscn"),
+
+	self.BRICK_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall2_straight.tscn"),
+	self.BRICK_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall2_straight2.tscn"),
+	self.BRICK_WALL_CORNER : preload("res://scenes/tiles/city/wall2_corner.tscn"),
+	self.BRICK_WALL_CROSS : preload("res://scenes/tiles/city/wall2_cross.tscn"),
+	self.BRICK_WALL_T : preload("res://scenes/tiles/city/wall2_t.tscn"),
+	self.BRICK_WALL_T2 : preload("res://scenes/tiles/city/wall2_t2.tscn"),
+	self.BRICK_WALL_GATE : preload("res://scenes/tiles/city/wall2_gate.tscn"),
+	self.BRICK_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall2_gate_closed.tscn"),
+
+	self.FENCE_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall3_straight.tscn"),
+	self.FENCE_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall3_straight2.tscn"),
+	self.FENCE_WALL_CORNER : preload("res://scenes/tiles/city/wall3_corner.tscn"),
+	self.FENCE_WALL_CROSS : preload("res://scenes/tiles/city/wall3_cross.tscn"),
+	self.FENCE_WALL_T : preload("res://scenes/tiles/city/wall3_t.tscn"),
+	self.FENCE_WALL_T2 : preload("res://scenes/tiles/city/wall3_t2.tscn"),
+	self.FENCE_WALL_GATE : preload("res://scenes/tiles/city/wall3_gate.tscn"),
+	self.FENCE_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall3_gate_closed.tscn"),
+
+	self.FUTURISTIC_WALL_STRAIGHT : preload("res://scenes/tiles/city/wall4_straight.tscn"),
+	self.FUTURISTIC_WALL_STRAIGHT2 : preload("res://scenes/tiles/city/wall4_straight2.tscn"),
+	self.FUTURISTIC_WALL_CORNER : preload("res://scenes/tiles/city/wall4_corner.tscn"),
+	self.FUTURISTIC_WALL_CROSS : preload("res://scenes/tiles/city/wall4_cross.tscn"),
+	self.FUTURISTIC_WALL_T : preload("res://scenes/tiles/city/wall4_t.tscn"),
+	self.FUTURISTIC_WALL_T2 : preload("res://scenes/tiles/city/wall4_t2.tscn"),
+	self.FUTURISTIC_WALL_GATE : preload("res://scenes/tiles/city/wall4_gate.tscn"),
+	self.FUTURISTIC_WALL_GATE_CLOSED : preload("res://scenes/tiles/city/wall4_gate_closed.tscn"),
+}
+
+var _nature_templates = {
 	self.NATURE_BIG_ROCKS1 : preload("res://scenes/tiles/nature/big_rocks_1_overtile.tscn"),
 	self.NATURE_BIG_ROCKS2 : preload("res://scenes/tiles/nature/big_rocks_2_overtile.tscn"),
 	self.NATURE_BIG_ROCKS3 : preload("res://scenes/tiles/nature/big_rocks_3_overtile.tscn"),
@@ -641,16 +656,16 @@ var templates = {
 	self.NATURE_TREES1 : preload("res://scenes/tiles/nature/trees_1_overtile.tscn"),
 	self.NATURE_TREES2 : preload("res://scenes/tiles/nature/trees_2_overtile.tscn"),
 	self.NATURE_TREES3 : preload("res://scenes/tiles/nature/trees_3_overtile.tscn"),
+	self.NATURE_TREES10 : preload("res://scenes/tiles/nature/trees_10_overtile.tscn"),
+	self.NATURE_TREES11 : preload("res://scenes/tiles/nature/trees_11_overtile.tscn"),
 	self.NATURE_TREES4 : preload("res://scenes/tiles/nature/trees_4_overtile.tscn"),
 	self.NATURE_TREES5 : preload("res://scenes/tiles/nature/trees_5_overtile.tscn"),
 	self.NATURE_TREES6 : preload("res://scenes/tiles/nature/trees_6_overtile.tscn"),
+	self.NATURE_TREES12 : preload("res://scenes/tiles/nature/trees_12_overtile.tscn"),
+	self.NATURE_TREES13 : preload("res://scenes/tiles/nature/trees_13_overtile.tscn"),
 	self.NATURE_TREES7 : preload("res://scenes/tiles/nature/trees_7_overtile.tscn"),
 	self.NATURE_TREES8 : preload("res://scenes/tiles/nature/trees_8_overtile.tscn"),
 	self.NATURE_TREES9 : preload("res://scenes/tiles/nature/trees_9_overtile.tscn"),
-	self.NATURE_TREES10 : preload("res://scenes/tiles/nature/trees_10_overtile.tscn"),
-	self.NATURE_TREES11 : preload("res://scenes/tiles/nature/trees_11_overtile.tscn"),
-	self.NATURE_TREES12 : preload("res://scenes/tiles/nature/trees_12_overtile.tscn"),
-	self.NATURE_TREES13 : preload("res://scenes/tiles/nature/trees_13_overtile.tscn"),
 	self.NATURE_TREES14 : preload("res://scenes/tiles/nature/trees_14_overtile.tscn"),
 	self.NATURE_TREES15 : preload("res://scenes/tiles/nature/trees_15_overtile.tscn"),
 	self.NATURE_TREES16 : preload("res://scenes/tiles/nature/trees_16_overtile.tscn"),
@@ -668,35 +683,42 @@ var templates = {
 	self.NATURE_SAND_PALMS2 : preload("res://scenes/tiles/nature/sand/palms_2_overtile.tscn"),
 	self.NATURE_SAND_PALMS3 : preload("res://scenes/tiles/nature/sand/palms_3_overtile.tscn"),
 	self.NATURE_SAND_PALMS4 : preload("res://scenes/tiles/nature/sand/palms_4_overtile.tscn"),
+}
 
+var _special_templates = {
 	self.SPECIAL_KEY : preload("res://scenes/tiles/special/key.tscn"),
+	self.DECO_RAIL_STOP     : preload("res://scenes/tiles/decorations/railway_stop.tscn"),
+}
 
-	self.MODERN_AIRFIELD : preload("res://scenes/tiles/buildings/blue/airfield.tscn"),
+var _building_templates = {
+	self.MODERN_HQ : preload("res://scenes/tiles/buildings/blue/headquarters.tscn"),
 	self.MODERN_BARRACKS : preload("res://scenes/tiles/buildings/blue/barracks.tscn"),
 	self.MODERN_FACTORY : preload("res://scenes/tiles/buildings/blue/factory.tscn"),
-	self.MODERN_HQ : preload("res://scenes/tiles/buildings/blue/headquarters.tscn"),
+	self.MODERN_AIRFIELD : preload("res://scenes/tiles/buildings/blue/airfield.tscn"),
 	self.MODERN_TOWER : preload("res://scenes/tiles/buildings/blue/tower.tscn"),
 
-	self.STEAMPUNK_AIRFIELD : preload("res://scenes/tiles/buildings/red/airfield.tscn"),
+	self.STEAMPUNK_HQ : preload("res://scenes/tiles/buildings/red/headquarters.tscn"),
 	self.STEAMPUNK_BARRACKS : preload("res://scenes/tiles/buildings/red/barracks.tscn"),
 	self.STEAMPUNK_FACTORY : preload("res://scenes/tiles/buildings/red/factory.tscn"),
-	self.STEAMPUNK_HQ : preload("res://scenes/tiles/buildings/red/headquarters.tscn"),
+	self.STEAMPUNK_AIRFIELD : preload("res://scenes/tiles/buildings/red/airfield.tscn"),
 	self.STEAMPUNK_TOWER : preload("res://scenes/tiles/buildings/red/tower.tscn"),
 
-	self.FUTURISTIC_AIRFIELD : preload("res://scenes/tiles/buildings/green/airfield.tscn"),
+	self.FUTURISTIC_HQ : preload("res://scenes/tiles/buildings/green/headquarters.tscn"),
 	self.FUTURISTIC_BARRACKS : preload("res://scenes/tiles/buildings/green/barracks.tscn"),
 	self.FUTURISTIC_FACTORY : preload("res://scenes/tiles/buildings/green/factory.tscn"),
-	self.FUTURISTIC_HQ : preload("res://scenes/tiles/buildings/green/headquarters.tscn"),
+	self.FUTURISTIC_AIRFIELD : preload("res://scenes/tiles/buildings/green/airfield.tscn"),
 	self.FUTURISTIC_TOWER : preload("res://scenes/tiles/buildings/green/tower.tscn"),
 
-	self.FEUDAL_AIRFIELD : preload("res://scenes/tiles/buildings/yellow/airfield.tscn"),
+	self.FEUDAL_HQ : preload("res://scenes/tiles/buildings/yellow/headquarters.tscn"),
 	self.FEUDAL_BARRACKS : preload("res://scenes/tiles/buildings/yellow/barracks.tscn"),
 	self.FEUDAL_FACTORY : preload("res://scenes/tiles/buildings/yellow/factory.tscn"),
-	self.FEUDAL_HQ : preload("res://scenes/tiles/buildings/yellow/headquarters.tscn"),
+	self.FEUDAL_AIRFIELD : preload("res://scenes/tiles/buildings/yellow/airfield.tscn"),
 	self.FEUDAL_TOWER : preload("res://scenes/tiles/buildings/yellow/tower.tscn"),
 
 	self.NEUTRAL_LIGHTHOUSE : preload("res://scenes/tiles/buildings/neutral/lighthouse.tscn"),
+}
 
+var _unit_templates = {
 	self.UNIT_BLUE_INFANTRY : preload("res://scenes/tiles/units/blue/infantry.tscn"),
 	self.UNIT_BLUE_TANK : preload("res://scenes/tiles/units/blue/tank.tscn"),
 	self.UNIT_BLUE_HELI : preload("res://scenes/tiles/units/blue/heli.tscn"),
@@ -728,21 +750,31 @@ var templates = {
 	self.UNIT_YELLOW_ROCKET : preload("res://scenes/tiles/units/yellow/rocket_artillery.tscn"),
 	self.UNIT_YELLOW_SCOUT : preload("res://scenes/tiles/units/yellow/scout_heli.tscn"),
 	self.UNIT_YELLOW_TRUCK : preload("res://scenes/tiles/units/yellow/truck.tscn"),
+}
 
+var _hero_templates = {
 	self.NPC_PRESIDENT : preload("res://scenes/tiles/units/npc/president.tscn"),
-	self.NPC_LORD : preload("res://scenes/tiles/units/npc/lord.tscn"),
-	self.NPC_CHANCELLOR : preload("res://scenes/tiles/units/npc/chancellor.tscn"),
-	self.NPC_KING : preload("res://scenes/tiles/units/npc/king.tscn"),
-
 	self.HERO_GENERAL : preload("res://scenes/tiles/units/heroes/general.tscn"),
 	self.HERO_COMMANDO : preload("res://scenes/tiles/units/heroes/commando.tscn"),
+
+	self.NPC_LORD : preload("res://scenes/tiles/units/npc/lord.tscn"),
 	self.HERO_GENTLEMAN : preload("res://scenes/tiles/units/heroes/gentleman.tscn"),
 	self.HERO_NOBLE : preload("res://scenes/tiles/units/heroes/noble.tscn"),
+
+	self.NPC_CHANCELLOR : preload("res://scenes/tiles/units/npc/chancellor.tscn"),
 	self.HERO_ADMIRAL : preload("res://scenes/tiles/units/heroes/admiral.tscn"),
 	self.HERO_CAPTAIN : preload("res://scenes/tiles/units/heroes/captain.tscn"),
+
+	self.NPC_KING : preload("res://scenes/tiles/units/npc/king.tscn"),
 	self.HERO_PRINCE : preload("res://scenes/tiles/units/heroes/prince.tscn"),
 	self.HERO_WARLORD : preload("res://scenes/tiles/units/heroes/warlord.tscn"),
 }
+
+var _other_templates = {
+	self.DUMMY_GROUND : preload("res://scenes/tiles/ground/base_ground.tscn"),
+}
+
+var templates = {}
 
 var side_materials = {
 	self.PLAYER_NEUTRAL : ResourceLoader.load("res://assets/materials/arne32_neutral.tres"),
@@ -784,6 +816,28 @@ var generic_unit = preload("res://scenes/tiles/units/unit.gd")
 func get_template(template):
 	if template == null:
 		return null
+
+	if self.templates.size() == 0:
+		var partial_templates = [
+			self._ground_templates,
+			self._damage_templates,
+			self._frame_templates,
+			self._decoration_templates,
+			self._railway_templates,
+			self._city_decoration_templates,
+			self._city_templates,
+			self._damaged_city_templates,
+			self._wall_templates,
+			self._nature_templates,
+			self._special_templates,
+			self._building_templates,
+			self._unit_templates,
+			self._hero_templates,
+			self._other_templates
+		]
+		for partial_dict in partial_templates:
+			for template_key in partial_dict:
+				self.templates[template_key] = partial_dict[template_key]
 
 	var new_tile = self.templates[template].instantiate()
 	new_tile.template_name = template
