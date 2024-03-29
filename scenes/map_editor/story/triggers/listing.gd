@@ -11,6 +11,7 @@ signal story_select_requested(trigger_name)
 
 @onready var prev_button = $"list_prev"
 @onready var next_button = $"list_next"
+@onready var add_button = $"new_trigger/add_button"
 @onready var audio = $"/root/SimpleAudioLibrary"
 
 var list_elements = []
@@ -131,11 +132,14 @@ func _on_add_button_pressed():
 
 func _on_trigger_data_updated(trigger_name, trigger_data):
 	self.trigger_data_updated.emit(trigger_name, trigger_data)
+
 	if self.edit_panels["type_selector"].is_visible() or trigger_data["type"] == null:
 		self.edit_trigger(trigger_name, trigger_data)
+		self.add_button.grab_focus()
 
 func _on_trigger_removal_requested(trigger_name):
 	self.trigger_removal_requested.emit(trigger_name)
+	self.add_button.grab_focus()
 
 func _on_story_select_requested(trigger_name):
 	self.story_select_requested.emit(trigger_name)

@@ -33,11 +33,16 @@ func fill_trigger_data(new_trigger_name, new_trigger_data):
 		if self.trigger_data["details"].has("list"):
 			if self.trigger_data["details"]["list"].size() > 0:
 				_fill_list_item(0)
+	_manage_list_buttons()
 
 
 func _fill_list_item(index):
+	var list_size = 0
+	if self.trigger_data["details"].has("list"):
+		list_size = self.trigger_data["details"]["list"].size()
+		
 	self.current_index = index
-	if index < self.trigger_data["details"]["list"].size():
+	if index < list_size:
 		$"list/x".set_text(str(self.trigger_data["details"]["list"][index][0]))
 		$"list/y".set_text(str(self.trigger_data["details"]["list"][index][1]))
 	else:
@@ -63,7 +68,10 @@ func _compile_trigger_data():
 	if player_id != "":
 		self.trigger_data["details"]["player"] = int(player_id)
 	if player_side.size() > 0:
-		self.trigger_data["details"]["player_side"] = player_side
+		if self.trigger_data["type"] == null:
+			self.trigger_data["details"]["player_side"] = $"player_side/side".get_text()
+		else:
+			self.trigger_data["details"]["player_side"] = player_side
 	if amount != "":
 		self.trigger_data["details"]["amount"] = int(amount)
 	
