@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://bf2wnxwm482ir"]
+[gd_scene load_steps=8 format=3 uid="uid://bf2wnxwm482ir"]
 
 [ext_resource type="PackedScene" uid="uid://dc4vyffm4fyvi" path="res://scenes/map_editor/story/triggers/types/base_edit_type.tscn" id="1_2jcdp"]
 [ext_resource type="Script" path="res://scenes/map_editor/story/triggers/types/deploy.gd" id="2_raldu"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_wrw1b"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="4_35ppe"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="5_4vyc0"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="6_qta1r"]
+[ext_resource type="PackedScene" uid="uid://gxr1dxy4v75y" path="res://scenes/ui/icons/pen.tscn" id="7_ck26d"]
 
 [node name="Deploy" instance=ExtResource("1_2jcdp")]
 script = ExtResource("2_raldu")
@@ -66,10 +70,30 @@ vertical_alignment = 1
 
 [node name="unit_type_input" type="LineEdit" parent="unit_type" index="0"]
 layout_mode = 0
-offset_left = 350.0
+offset_left = 400.0
 offset_right = 540.0
 offset_bottom = 40.0
 alignment = 1
+
+[node name="unit_picker_button" type="TextureButton" parent="unit_type" index="1"]
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_35ppe")
+texture_pressed = ExtResource("5_4vyc0")
+texture_hover = ExtResource("6_qta1r")
+texture_focused = ExtResource("6_qta1r")
+
+[node name="anchor" type="Control" parent="unit_type/unit_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="unit_type/unit_picker_button/anchor" index="0" instance=ExtResource("7_ck26d")]
 
 [node name="amount" type="Label" parent="." index="11"]
 layout_mode = 1
@@ -96,4 +120,5 @@ alignment = 1
 [connection signal="text_changed" from="player_id/id" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="player_side/side" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="unit_type/unit_type_input" to="." method="_on_text_changed"]
+[connection signal="pressed" from="unit_type/unit_picker_button" to="." method="_on_unit_picker_button_pressed"]
 [connection signal="text_changed" from="amount/amount" to="." method="_on_text_changed"]

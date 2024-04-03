@@ -147,7 +147,6 @@ func _on_picker_button_pressed():
 		building_position = [int(x), int(y)]
 
 	self.picker_requested.emit({
-		"tab": "settings",
 		"type": "position",
 		"position": building_position,
 		"trigger_name": self.trigger_name

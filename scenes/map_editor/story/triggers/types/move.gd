@@ -266,7 +266,6 @@ func _request_picker_for_fields(identifier, input_x, input_y):
 		current_position = [int(x), int(y)]
 
 	self.picker_requested.emit({
-		"tab": "settings",
 		"type": "position",
 		"position": current_position,
 		"trigger_name": self.trigger_name,

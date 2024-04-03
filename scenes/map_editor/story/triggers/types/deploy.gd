@@ -42,3 +42,17 @@ func _compile_trigger_data():
 
 func _on_text_changed(_new_text):
 	_emit_updated_signal()
+
+func _handle_picker_response(response, context):
+	super._handle_picker_response(response, context)
+	if context["type"] == "unit_type":
+		$"unit_type/unit_type_input".set_text(response)
+	_emit_updated_signal()
+
+func _on_unit_picker_button_pressed():
+	self.audio.play("menu_click")
+
+	self.picker_requested.emit({
+		"type": "unit_type",
+		"trigger_name": self.trigger_name
+	})

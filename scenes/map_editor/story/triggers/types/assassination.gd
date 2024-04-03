@@ -40,7 +40,6 @@ func _on_picker_button_pressed():
 		vip_position = self.trigger_data["details"]["vip"]
 
 	self.picker_requested.emit({
-		"tab": "settings",
 		"type": "position",
 		"position": vip_position,
 		"trigger_name": self.trigger_name
@@ -51,4 +50,15 @@ func _handle_picker_response(response, context):
 	if context["type"] == "position":
 		$"vip/x".set_text(str(response.x))
 		$"vip/y".set_text(str(response.y))
-		_emit_updated_signal()
+	if context["type"] == "unit_type":
+		$"unit_type/unit_type_input".set_text(response)
+	_emit_updated_signal()
+
+
+func _on_unit_picker_button_pressed():
+	self.audio.play("menu_click")
+
+	self.picker_requested.emit({
+		"type": "unit_type",
+		"trigger_name": self.trigger_name
+	})

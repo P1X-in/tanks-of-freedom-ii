@@ -80,12 +80,33 @@ vertical_alignment = 1
 
 [node name="unit_type_input" type="LineEdit" parent="unit_type" index="0"]
 layout_mode = 0
-offset_left = 350.0
+offset_left = 400.0
 offset_right = 540.0
 offset_bottom = 40.0
 alignment = 1
+
+[node name="unit_picker_button" type="TextureButton" parent="unit_type" index="1"]
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_5krwh")
+texture_pressed = ExtResource("5_gxxg1")
+texture_hover = ExtResource("6_d6qr3")
+texture_focused = ExtResource("6_d6qr3")
+
+[node name="anchor" type="Control" parent="unit_type/unit_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="unit_type/unit_picker_button/anchor" index="0" instance=ExtResource("7_ii02g")]
 
 [connection signal="text_changed" from="vip/x" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="vip/y" to="." method="_on_text_changed"]
 [connection signal="pressed" from="vip/picker_button" to="." method="_on_picker_button_pressed"]
 [connection signal="text_changed" from="unit_type/unit_type_input" to="." method="_on_text_changed"]
+[connection signal="pressed" from="unit_type/unit_picker_button" to="." method="_on_unit_picker_button_pressed"]

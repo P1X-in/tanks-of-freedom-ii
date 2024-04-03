@@ -33,7 +33,6 @@ func _on_picker_button_pressed():
 		vip_position = self.trigger_data["details"]["vip"]
 
 	self.picker_requested.emit({
-		"tab": "settings",
 		"type": "position",
 		"position": vip_position,
 		"trigger_name": self.trigger_name

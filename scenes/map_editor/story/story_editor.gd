@@ -65,6 +65,8 @@ func _on_back_button_pressed():
 	if self.picker_panel.is_visible():
 		if self.picker_panel.picker_context["tab"] == "triggers":
 			_switch_to_panel(self.triggers_panel)
+		if self.picker_panel.picker_context["tab"] == "stories":
+			_switch_to_panel(self.stories_panel)
 		return
 	if self.editor != null:
 		self.editor.close_story()
@@ -76,6 +78,11 @@ func _on_picker_requested(context):
 	else:
 		if context["type"] == "story":
 			self.picker_panel.load_list(self.stories_panel._get_sorted_stories_names(), context)
+		if context["type"] == "unit_type":
+			self.picker_panel.load_list(
+				self.editor.map.templates._unit_templates.keys() + self.editor.map.templates._hero_templates.keys(), 
+				context
+			)
 		_switch_to_panel(self.picker_panel)	
 
 func _handle_picker_response(response, context):
@@ -85,6 +92,9 @@ func _handle_picker_response(response, context):
 	if context["tab"] == "triggers":
 		self.triggers_panel._handle_picker_response(response, context)
 		_switch_to_panel(self.triggers_panel)
+	if context["tab"] == "stories":
+		self.stories_panel._handle_picker_response(response, context)
+		_switch_to_panel(self.stories_panel)
 
 func _on_picker_value_selected(response, context):
 	_handle_picker_response(response, context)
