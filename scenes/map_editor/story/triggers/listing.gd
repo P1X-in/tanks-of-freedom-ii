@@ -7,7 +7,7 @@ signal page_load_requested(page_no)
 signal edit_requested(trigger_name)
 signal trigger_data_updated(trigger_name, trigger_data)
 signal trigger_removal_requested(trigger_name)
-signal story_select_requested(trigger_name)
+signal picker_requested(context)
 
 @onready var prev_button = $"list_prev"
 @onready var next_button = $"list_next"
@@ -28,7 +28,7 @@ func _ready():
 		edit_panel.hide()
 		edit_panel.trigger_data_updated.connect(self._on_trigger_data_updated)
 		edit_panel.trigger_removal_requested.connect(self._on_trigger_removal_requested)
-		edit_panel.story_select_requested.connect(self._on_story_select_requested)
+		edit_panel.picker_requested.connect(self._on_picker_requested)
 
 func _switch_to_edit_panel(panel_name, trigger_name, trigger_data):
 	for edit_panel in self.edit_panels.values():
@@ -141,5 +141,9 @@ func _on_trigger_removal_requested(trigger_name):
 	self.trigger_removal_requested.emit(trigger_name)
 	self.add_button.grab_focus()
 
-func _on_story_select_requested(trigger_name):
-	self.story_select_requested.emit(trigger_name)
+func _on_picker_requested(context):
+	self.picker_requested.emit(context)
+
+func _handle_picker_response(response, context):
+	if context.has("trigger_type"):
+		self.edit_panels[context["trigger_type"]]._handle_picker_response(response, context)

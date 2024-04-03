@@ -64,16 +64,22 @@ func toggle_radial():
 
 func show_tiles():
 	self.tile_animations.play("show")
-	self.minimap_animations.play("show")
-	if self.map_name_label.get_text() != "":
-		self.map_name_wrapper.show()
+	self.show_minimap()
 	self.show_controls()
 
 func hide_tiles():
 	self.tile_animations.play("hide")
+	self.hide_minimap()
+	self.hide_controls()
+
+func show_minimap():
+	self.minimap_animations.play("show")
+	if self.map_name_label.get_text() != "":
+		self.map_name_wrapper.show()
+
+func hide_minimap():
 	self.minimap_animations.play("hide")
 	self.map_name_wrapper.hide()
-	self.hide_controls()
 
 func show_radial():
 	self.radial.show_menu()

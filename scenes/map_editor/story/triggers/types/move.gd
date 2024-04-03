@@ -235,3 +235,59 @@ func _on_fields_next_button_pressed():
 		_fill_fields_list_item(self.current_index_fields)
 	else:
 		_fill_fields_list_item(self.current_index_fields + 1)
+
+
+func _on_vip_picker_button_pressed():
+	self.audio.play("menu_click")
+	_request_picker_for_fields("vip", $"vip/x", $"vip/y")
+
+
+func _on_excluded_picker_button_pressed():
+	self.audio.play("menu_click")
+	_request_picker_for_fields("excluded", $"excluded/x", $"excluded/y")
+
+
+func _on_fields_1_picker_button_pressed():
+	self.audio.play("menu_click")
+	_request_picker_for_fields("fields_1", $"fields/x1", $"fields/y1")
+
+
+func _on_fields_2_picker_button_pressed():
+	self.audio.play("menu_click")
+	_request_picker_for_fields("fields_2", $"fields/x2", $"fields/y2")
+
+
+func _request_picker_for_fields(identifier, input_x, input_y):
+	var x = input_x.get_text()
+	var y = input_y.get_text()
+
+	var current_position = null
+	if x != "" and y != "":
+		current_position = [int(x), int(y)]
+
+	self.picker_requested.emit({
+		"tab": "settings",
+		"type": "position",
+		"position": current_position,
+		"trigger_name": self.trigger_name,
+		"field_id": identifier
+	})
+
+func _handle_picker_response(response, context):
+	super._handle_picker_response(response, context)
+	if context["type"] == "position":
+		if context.has("field_id"):
+			if context["field_id"] == "vip":
+				_handle_picker_response_for_fields($"vip/x", $"vip/y", response)
+			if context["field_id"] == "excluded":
+				_handle_picker_response_for_fields($"excluded/x", $"excluded/y", response)
+			if context["field_id"] == "fields_1":
+				_handle_picker_response_for_fields($"fields/x1", $"fields/y1", response)
+			if context["field_id"] == "fields_2":
+				_handle_picker_response_for_fields($"fields/x2", $"fields/y2", response)
+
+
+func _handle_picker_response_for_fields(input_x, input_y, response):
+	input_x.set_text(str(response.x))
+	input_y.set_text(str(response.y))
+	_emit_updated_signal()

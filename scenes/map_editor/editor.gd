@@ -23,6 +23,8 @@ var current_map_name = ""
 const HISTORY_MAX_SIZE = 50
 var actions_history = []
 
+var picker_context = null
+
 func _ready():
 	self.rotations.build_rotations(self.map.templates, self.map.builder)
 	self.select_tile(self.map.templates.GROUND_GRASS, self.map.builder.CLASS_GROUND)
@@ -48,6 +50,8 @@ func _ready():
 	self.ui.edge_pan_bottom.mouse_entered.connect(self.map.camera._on_edge_pan.bind([null, -1]))
 	self.ui.edge_pan_bottom.mouse_exited.connect(self.map.camera._on_edge_pan.bind([null, 0]))
 
+	self.ui.story.picker_requested.connect(self._on_picker_requested)
+
 
 func _physics_process(_delta):
 	self.update_ui_position()
@@ -62,91 +66,126 @@ func _input(event):
 		return
 
 	if not self.ui.is_panel_open():
-		if event.is_action_pressed("ui_accept"):
+		if self.picker_context == null:
+			_input_tile_edit(event)
+		else:
+			_input_picker(event)
+	else:
+		_input_menu(event)
+		
+
+func _input_tile_edit(event):
+	if event.is_action_pressed("ui_accept"):
+		self.place_tile()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("mouse_click"):
+		self.mouse_click_position = event.position
+	if event.is_action_released("mouse_click"):
+		if self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD:
+			self.audio.play("menu_click")
 			self.place_tile()
-			self.audio.play("menu_click")
+		self.mouse_click_position = null
 
-		if event.is_action_pressed("mouse_click"):
+	if event.is_action_pressed("editor_clear"):
+		self.clear_tile()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("editor_next_alternative"):
+		self.next_alternative()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("ui_left"):
+		self.switch_to_prev_tile()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("ui_right"):
+		self.switch_to_next_tile()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("ui_up"):
+		self.switch_to_next_type()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("ui_down"):
+		self.switch_to_prev_type()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("rotate_cw"):
+		self.rotate_cw()
+		self.refresh_tile()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("rotate_ccw"):
+		self.rotate_ccw()
+		self.refresh_tile()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("editor_menu"):
+		self.toggle_radial_menu()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("ui_cancel"):
+		if event is InputEventMouseButton:
 			self.mouse_click_position = event.position
-		if event.is_action_released("mouse_click"):
-			if self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD:
-				self.audio.play("menu_click")
-				self.place_tile()
-			self.mouse_click_position = null
-
-		if event.is_action_pressed("editor_clear"):
-			self.clear_tile()
+	if event.is_action_released("ui_cancel"):
+		if (self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD) or not event is InputEventMouseButton:
 			self.audio.play("menu_click")
+			self.undo_action()
+		self.mouse_click_position = null
 
-		if event.is_action_pressed("editor_next_alternative"):
-			self.next_alternative()
+	if event.is_action_pressed("editor_ban_menu"):
+		self._open_ability_ban_menu()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("editor_ai_pause"):
+		self.toggle_unit_ai_pause()
+		self.audio.play("menu_click")
+
+func _input_picker(event):
+	if event.is_action_pressed("ui_accept"):
+		self._confirm_position_pick()
+		self.audio.play("menu_click")
+
+	if event.is_action_pressed("mouse_click"):
+		self.mouse_click_position = event.position
+	if event.is_action_released("mouse_click"):
+		if self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD:
 			self.audio.play("menu_click")
+			self._confirm_position_pick()
+		self.mouse_click_position = null
 
-		if event.is_action_pressed("ui_left"):
-			self.switch_to_prev_tile()
+	if event.is_action_pressed("ui_cancel"):
+		if event is InputEventMouseButton:
+			self.mouse_click_position = event.position
+	if event.is_action_released("ui_cancel"):
+		if (self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD) or not event is InputEventMouseButton:
 			self.audio.play("menu_click")
+			_cancel_position_pick()
+		self.mouse_click_position = null
 
-		if event.is_action_pressed("ui_right"):
-			self.switch_to_next_tile()
-			self.audio.play("menu_click")
+	if event.is_action_pressed("editor_menu"):
+		_cancel_position_pick()
+		self.audio.play("menu_click")
 
-		if event.is_action_pressed("ui_up"):
-			self.switch_to_next_type()
-			self.audio.play("menu_click")
-
-		if event.is_action_pressed("ui_down"):
-			self.switch_to_prev_type()
-			self.audio.play("menu_click")
-
-		if event.is_action_pressed("rotate_cw"):
-			self.rotate_cw()
-			self.refresh_tile()
-			self.audio.play("menu_click")
-
-		if event.is_action_pressed("rotate_ccw"):
-			self.rotate_ccw()
-			self.refresh_tile()
+func _input_menu(event):
+	if self.ui.radial.is_visible() and not self.ui.is_popup_open():
+		if event.is_action_pressed("ui_cancel"):
+			self.toggle_radial_menu()
 			self.audio.play("menu_click")
 
 		if event.is_action_pressed("editor_menu"):
 			self.toggle_radial_menu()
 			self.audio.play("menu_click")
 
+	if self.ui.story.is_visible():
 		if event.is_action_pressed("ui_cancel"):
-			if event is InputEventMouseButton:
-				self.mouse_click_position = event.position
-		if event.is_action_released("ui_cancel"):
-			if (self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD) or not event is InputEventMouseButton:
-				self.audio.play("menu_click")
-				self.undo_action()
-			self.mouse_click_position = null
-
-		if event.is_action_pressed("editor_ban_menu"):
-			self._open_ability_ban_menu()
+			self.ui.story._on_back_button_pressed()
 			self.audio.play("menu_click")
 
-		if event.is_action_pressed("editor_ai_pause"):
-			self.toggle_unit_ai_pause()
+		if event.is_action_pressed("editor_menu"):
+			self.ui.story._on_back_button_pressed()
 			self.audio.play("menu_click")
-	else:
-		if self.ui.radial.is_visible() and not self.ui.is_popup_open():
-			if event.is_action_pressed("ui_cancel"):
-				self.toggle_radial_menu()
-				self.audio.play("menu_click")
-
-			if event.is_action_pressed("editor_menu"):
-				self.toggle_radial_menu()
-				self.audio.play("menu_click")
-
-		if self.ui.story.is_visible():
-			if event.is_action_pressed("ui_cancel"):
-				self.ui.story._on_back_button_pressed()
-				self.audio.play("menu_click")
-
-			if event.is_action_pressed("editor_menu"):
-				self.ui.story._on_back_button_pressed()
-				self.audio.play("menu_click")
-
 
 func autosave():
 	_apply_map_settings()
@@ -498,3 +537,35 @@ func toggle_unit_ai_pause():
 
 func write_action_history(action_details):
 	self.actions_history.append(action_details)
+
+
+func _on_picker_requested(context):
+	self.picker_context = context
+
+	if context.has("position") and context["position"] is Array:
+		self.map.snap_camera_to_position(Vector2(context["position"][0], context["position"][1]))
+
+	self.ui.hide_story()
+	self.map.camera.paused = false
+	self.map.tile_box.set_visible(true)
+	self.ui.show_minimap()
+	self.ui.show_position()
+
+func _confirm_position_pick():
+	self.ui.story._handle_picker_response(self.map.tile_box_position, self.picker_context)
+	self.picker_context = null
+
+	self.ui.show_story()
+	self.map.camera.paused = true
+	self.map.tile_box.set_visible(false)
+	self.ui.hide_minimap()
+	self.ui.hide_position()
+
+func _cancel_position_pick():
+	self.picker_context = null
+
+	self.ui.show_story()
+	self.map.camera.paused = true
+	self.map.tile_box.set_visible(false)
+	self.ui.hide_minimap()
+	self.ui.hide_position()

@@ -8,7 +8,7 @@ var trigger_data
 
 signal trigger_data_updated(trigger_name, trigger_data)
 signal trigger_removal_requested(trigger_name)
-signal story_select_requested(trigger_name)
+signal picker_requested(context)
 
 func show_panel():
 	self.show()
@@ -53,7 +53,10 @@ func _on_change_button_pressed():
 
 func _on_story_button_pressed():
 	self.audio.play("menu_click")
-	self.story_select_requested.emit(self.trigger_name)
+	self.picker_requested.emit({
+		"type": "story",
+		"trigger_name": self.trigger_name
+	})
 
 
 func _on_oneoff_button_pressed():
@@ -63,3 +66,6 @@ func _on_oneoff_button_pressed():
 		$"oneoff_button/label".set_text("TR_ON")
 	else:
 		$"oneoff_button/label".set_text("TR_OFF")
+
+func _handle_picker_response(_response, _context):
+	return

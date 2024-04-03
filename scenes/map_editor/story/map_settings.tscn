@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b71wopr1381hv"]
+[gd_scene load_steps=11 format=3 uid="uid://b71wopr1381hv"]
 
 [ext_resource type="Script" path="res://scenes/map_editor/story/map_settings.gd" id="1_ym3fw"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_m2k20"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="4_18ge0"]
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="5_flqyd"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="6_v7dr1"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="7_rwcpv"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="8_7oq04"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="9_fq5eb"]
+[ext_resource type="PackedScene" uid="uid://gxr1dxy4v75y" path="res://scenes/ui/icons/pen.tscn" id="10_yptlp"]
 
 [node name="MapSettings" type="Control"]
 layout_mode = 3
@@ -60,8 +64,8 @@ vertical_alignment = 1
 
 [node name="x" type="LineEdit" parent="initial_cam_position"]
 layout_mode = 0
-offset_left = 350.0
-offset_right = 440.0
+offset_left = 395.0
+offset_right = 465.0
 offset_bottom = 40.0
 mouse_default_cursor_shape = 0
 placeholder_text = "X"
@@ -69,12 +73,33 @@ alignment = 1
 
 [node name="y" type="LineEdit" parent="initial_cam_position"]
 layout_mode = 0
-offset_left = 450.0
+offset_left = 470.0
 offset_right = 540.0
 offset_bottom = 40.0
 mouse_default_cursor_shape = 0
 placeholder_text = "Y"
 alignment = 1
+
+[node name="picker_button" type="TextureButton" parent="initial_cam_position"]
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+focus_neighbor_right = NodePath("../next_button")
+texture_normal = ExtResource("7_rwcpv")
+texture_pressed = ExtResource("8_7oq04")
+texture_hover = ExtResource("9_fq5eb")
+texture_focused = ExtResource("9_fq5eb")
+
+[node name="anchor" type="Control" parent="initial_cam_position/picker_button"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="initial_cam_position/picker_button/anchor" instance=ExtResource("10_yptlp")]
 
 [node name="track" type="Label" parent="."]
 layout_mode = 0
@@ -111,4 +136,5 @@ vertical_alignment = 1
 [connection signal="pressed" from="skip_initial_hq_cam/skip_initial_hq_cam_toggle" to="." method="_on_skip_initial_hq_cam_toggle_pressed"]
 [connection signal="text_changed" from="initial_cam_position/x" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="initial_cam_position/y" to="." method="_on_text_changed"]
+[connection signal="pressed" from="initial_cam_position/picker_button" to="." method="_on_picker_button_pressed"]
 [connection signal="pressed" from="track/track_button" to="." method="_on_track_button_pressed"]

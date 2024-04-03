@@ -7,7 +7,7 @@ var trigger_data
 
 signal trigger_data_updated(trigger_name, trigger_data)
 signal trigger_removal_requested(trigger_name)
-signal story_select_requested(trigger_name)
+signal picker_requested(context)
 
 func _ready():
 	for button in $"buttons".get_children():

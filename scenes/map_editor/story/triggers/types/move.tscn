@@ -1,11 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1s0e8uya4j0a"]
+[gd_scene load_steps=13 format=3 uid="uid://d1s0e8uya4j0a"]
 
 [ext_resource type="PackedScene" uid="uid://dc4vyffm4fyvi" path="res://scenes/map_editor/story/triggers/types/base_edit_type.tscn" id="1_287jo"]
 [ext_resource type="Script" path="res://scenes/map_editor/story/triggers/types/move.gd" id="2_4uja3"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_1334m"]
 [ext_resource type="Texture2D" uid="uid://pfrikdjfa7lc" path="res://assets/gui/menu/buttons/buttonSquare_brown.png" id="4_4ky6w"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="4_ya6n4"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="5_8bm6e"]
 [ext_resource type="Texture2D" uid="uid://b0unbl4vx0tow" path="res://assets/gui/menu/buttons/buttonSquare_brown_pressed.png" id="5_43xg1"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="6_2mfvo"]
 [ext_resource type="Texture2D" uid="uid://by1obiwt54odo" path="res://assets/gui/menu/buttons/buttonSquare_brown_hover.png" id="6_6nmlc"]
+[ext_resource type="PackedScene" uid="uid://gxr1dxy4v75y" path="res://scenes/ui/icons/pen.tscn" id="7_ainhf"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_left.tscn" id="7_uy8un"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_right.tscn" id="8_2ew0g"]
 
@@ -95,8 +99,8 @@ vertical_alignment = 1
 
 [node name="x" type="LineEdit" parent="vip" index="0"]
 layout_mode = 0
-offset_left = 350.0
-offset_right = 440.0
+offset_left = 395.0
+offset_right = 465.0
 offset_bottom = 40.0
 placeholder_text = "X"
 alignment = 1
@@ -104,12 +108,33 @@ max_length = 2
 
 [node name="y" type="LineEdit" parent="vip" index="1"]
 layout_mode = 0
-offset_left = 450.0
+offset_left = 470.0
 offset_right = 540.0
 offset_bottom = 40.0
 placeholder_text = "Y"
 alignment = 1
 max_length = 2
+
+[node name="vip_picker_button" type="TextureButton" parent="vip" index="2"]
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+focus_neighbor_right = NodePath("../next_button")
+texture_normal = ExtResource("4_ya6n4")
+texture_pressed = ExtResource("5_8bm6e")
+texture_hover = ExtResource("6_2mfvo")
+texture_focused = ExtResource("6_2mfvo")
+
+[node name="anchor" type="Control" parent="vip/vip_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="vip/vip_picker_button/anchor" index="0" instance=ExtResource("7_ainhf")]
 
 [node name="unit_tag" type="Label" parent="." index="11"]
 layout_mode = 1
@@ -201,8 +226,8 @@ anchor_bottom = 0.5
 
 [node name="x" type="LineEdit" parent="excluded" index="3"]
 layout_mode = 0
-offset_left = 350.0
-offset_right = 440.0
+offset_left = 395.0
+offset_right = 465.0
 offset_bottom = 40.0
 placeholder_text = "X"
 alignment = 1
@@ -210,12 +235,33 @@ max_length = 2
 
 [node name="y" type="LineEdit" parent="excluded" index="4"]
 layout_mode = 0
-offset_left = 450.0
+offset_left = 470.0
 offset_right = 540.0
 offset_bottom = 40.0
 placeholder_text = "Y"
 alignment = 1
 max_length = 2
+
+[node name="excluded_picker_button" type="TextureButton" parent="excluded" index="5"]
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+focus_neighbor_right = NodePath("../next_button")
+texture_normal = ExtResource("4_ya6n4")
+texture_pressed = ExtResource("5_8bm6e")
+texture_hover = ExtResource("6_2mfvo")
+texture_focused = ExtResource("6_2mfvo")
+
+[node name="anchor" type="Control" parent="excluded/excluded_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="excluded/excluded_picker_button/anchor" index="0" instance=ExtResource("7_ainhf")]
 
 [node name="fields" type="Label" parent="." index="13"]
 layout_mode = 1
@@ -286,19 +332,19 @@ anchor_bottom = 0.5
 
 [node name="x1" type="LineEdit" parent="fields" index="3"]
 layout_mode = 0
-offset_left = 350.0
-offset_top = -25.0
-offset_right = 440.0
-offset_bottom = 15.0
+offset_left = 395.0
+offset_top = -20.0
+offset_right = 465.0
+offset_bottom = 20.0
 placeholder_text = "X1"
 alignment = 1
 max_length = 2
 
 [node name="x2" type="LineEdit" parent="fields" index="4"]
 layout_mode = 0
-offset_left = 350.0
+offset_left = 395.0
 offset_top = 25.0
-offset_right = 440.0
+offset_right = 465.0
 offset_bottom = 65.0
 placeholder_text = "X2"
 alignment = 1
@@ -306,17 +352,17 @@ max_length = 2
 
 [node name="y1" type="LineEdit" parent="fields" index="5"]
 layout_mode = 0
-offset_left = 450.0
-offset_top = -25.0
+offset_left = 470.0
+offset_top = -20.0
 offset_right = 540.0
-offset_bottom = 15.0
+offset_bottom = 20.0
 placeholder_text = "Y1"
 alignment = 1
 max_length = 2
 
 [node name="y2" type="LineEdit" parent="fields" index="6"]
 layout_mode = 0
-offset_left = 450.0
+offset_left = 470.0
 offset_top = 25.0
 offset_right = 540.0
 offset_bottom = 65.0
@@ -324,16 +370,64 @@ placeholder_text = "Y2"
 alignment = 1
 max_length = 2
 
+[node name="fields1_picker_button" type="TextureButton" parent="fields" index="7"]
+offset_left = 350.0
+offset_top = -20.0
+offset_right = 386.0
+offset_bottom = 20.0
+focus_neighbor_right = NodePath("../next_button")
+texture_normal = ExtResource("4_ya6n4")
+texture_pressed = ExtResource("5_8bm6e")
+texture_hover = ExtResource("6_2mfvo")
+texture_focused = ExtResource("6_2mfvo")
+
+[node name="anchor" type="Control" parent="fields/fields1_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="fields/fields1_picker_button/anchor" index="0" instance=ExtResource("7_ainhf")]
+
+[node name="fields2_picker_button" type="TextureButton" parent="fields" index="8"]
+offset_left = 350.0
+offset_top = 25.0
+offset_right = 386.0
+offset_bottom = 65.0
+focus_neighbor_right = NodePath("../next_button")
+texture_normal = ExtResource("4_ya6n4")
+texture_pressed = ExtResource("5_8bm6e")
+texture_hover = ExtResource("6_2mfvo")
+texture_focused = ExtResource("6_2mfvo")
+
+[node name="anchor" type="Control" parent="fields/fields2_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="fields/fields2_picker_button/anchor" index="0" instance=ExtResource("7_ainhf")]
+
 [connection signal="text_changed" from="player_id/id" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="player_side/side" to="." method="_on_text_changed"]
+[connection signal="pressed" from="vip/vip_picker_button" to="." method="_on_vip_picker_button_pressed"]
 [connection signal="text_changed" from="unit_tag/tag" to="." method="_on_text_changed"]
 [connection signal="pressed" from="excluded/prev_button" to="." method="_on_excluded_prev_button_pressed"]
 [connection signal="pressed" from="excluded/next_button" to="." method="_on_excluded_next_button_pressed"]
 [connection signal="text_changed" from="excluded/x" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="excluded/y" to="." method="_on_text_changed"]
+[connection signal="pressed" from="excluded/excluded_picker_button" to="." method="_on_excluded_picker_button_pressed"]
 [connection signal="pressed" from="fields/prev_button" to="." method="_on_fields_prev_button_pressed"]
 [connection signal="pressed" from="fields/next_button" to="." method="_on_fields_next_button_pressed"]
 [connection signal="text_changed" from="fields/x1" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="fields/x2" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="fields/y1" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="fields/y2" to="." method="_on_text_changed"]
+[connection signal="pressed" from="fields/fields1_picker_button" to="." method="_on_fields_1_picker_button_pressed"]
+[connection signal="pressed" from="fields/fields2_picker_button" to="." method="_on_fields_2_picker_button_pressed"]

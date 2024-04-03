@@ -8,8 +8,11 @@ var editor
 @onready var map_settings_panel = $"widgets/panels/MapSettings"
 @onready var triggers_panel = $"widgets/panels/Triggers"
 
+signal picker_requested(context)
 
 func _ready():
+	self.map_settings_panel.picker_requested.connect(self._on_picker_requested)
+	self.triggers_panel.picker_requested.connect(self._on_picker_requested)
 	_switch_to_panel(self.map_settings_panel)
 
 func show_panel():
@@ -53,3 +56,16 @@ func _on_back_button_pressed():
 	self.audio.play("menu_back")
 	if self.editor != null:
 		self.editor.close_story()
+
+
+func _on_picker_requested(context):
+	if context["type"] == "position":
+		self.picker_requested.emit(context)
+	else:
+		print("Picker requested ", context)	
+
+func _handle_picker_response(response, context):
+	if context["tab"] == "settings":
+		self.map_settings_panel._handle_picker_response(response, context)
+	if context["tab"] == "triggers":
+		self.triggers_panel._handle_picker_response(response, context)

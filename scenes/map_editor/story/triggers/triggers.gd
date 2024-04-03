@@ -2,6 +2,8 @@ extends Control
 
 @onready var listing_panel = $Listing
 
+signal picker_requested(context)
+
 var triggers_data = {}
 
 func _ready():
@@ -10,7 +12,7 @@ func _ready():
 	self.listing_panel.edit_requested.connect(self._on_trigger_edit_requested)
 	self.listing_panel.trigger_data_updated.connect(self._on_trigger_data_updated)
 	self.listing_panel.trigger_removal_requested.connect(self._on_trigger_removal_requested)
-	self.listing_panel.story_select_requested.connect(self._on_story_select_requested)
+	self.listing_panel.picker_requested.connect(self._on_picker_requested)
 
 
 func _switch_to_panel(panel):
@@ -62,5 +64,12 @@ func _on_trigger_removal_requested(trigger_name):
 	self.triggers_data.erase(trigger_name)
 	self.listing_panel.refresh_page(_get_sorted_trigger_names())
 
-func _on_story_select_requested(trigger_name):
-	print("Story selection requested for ", trigger_name)
+func _on_picker_requested(context):
+	context["tab"] = "triggers"
+	if context.has("trigger_name"):
+		if self.triggers_data.has(context["trigger_name"]):
+			context["trigger_type"] = self.triggers_data[context["trigger_name"]]["type"]
+	self.picker_requested.emit(context)
+
+func _handle_picker_response(response, context):
+	self.listing_panel._handle_picker_response(response, context)

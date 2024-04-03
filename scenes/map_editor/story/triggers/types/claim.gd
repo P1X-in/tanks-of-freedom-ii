@@ -134,3 +134,28 @@ func _on_next_button_pressed():
 		_fill_list_item(self.current_index)
 	else:
 		_fill_list_item(self.current_index + 1)
+
+
+func _on_picker_button_pressed():
+	self.audio.play("menu_click")
+
+	var x = $"list/x".get_text()
+	var y = $"list/y".get_text()
+
+	var building_position = null
+	if x != "" and y != "":
+		building_position = [int(x), int(y)]
+
+	self.picker_requested.emit({
+		"tab": "settings",
+		"type": "position",
+		"position": building_position,
+		"trigger_name": self.trigger_name
+	})
+
+func _handle_picker_response(response, context):
+	super._handle_picker_response(response, context)
+	if context["type"] == "position":
+		$"list/x".set_text(str(response.x))
+		$"list/y".set_text(str(response.y))
+		_emit_updated_signal()

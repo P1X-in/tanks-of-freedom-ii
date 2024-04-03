@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7dectldayttw"]
+[gd_scene load_steps=13 format=3 uid="uid://b7dectldayttw"]
 
 [ext_resource type="PackedScene" uid="uid://dc4vyffm4fyvi" path="res://scenes/map_editor/story/triggers/types/base_edit_type.tscn" id="1_l2n5y"]
 [ext_resource type="Script" path="res://scenes/map_editor/story/triggers/types/claim.gd" id="2_dlx4k"]
@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://by1obiwt54odo" path="res://assets/gui/menu/buttons/buttonSquare_brown_hover.png" id="6_ehopr"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_left.tscn" id="7_g6a5k"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_right.tscn" id="8_3v7sm"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="9_7yq3p"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="10_e8dmc"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="11_1wlig"]
+[ext_resource type="PackedScene" uid="uid://gxr1dxy4v75y" path="res://scenes/ui/icons/pen.tscn" id="12_07tyx"]
 
 [node name="Claim" instance=ExtResource("1_l2n5y")]
 script = ExtResource("2_dlx4k")
@@ -146,8 +150,8 @@ anchor_bottom = 0.5
 
 [node name="x" type="LineEdit" parent="list" index="3"]
 layout_mode = 0
-offset_left = 350.0
-offset_right = 440.0
+offset_left = 395.0
+offset_right = 465.0
 offset_bottom = 40.0
 placeholder_text = "X"
 alignment = 1
@@ -155,12 +159,33 @@ max_length = 2
 
 [node name="y" type="LineEdit" parent="list" index="4"]
 layout_mode = 0
-offset_left = 450.0
+offset_left = 470.0
 offset_right = 540.0
 offset_bottom = 40.0
 placeholder_text = "Y"
 alignment = 1
 max_length = 2
+
+[node name="picker_button" type="TextureButton" parent="list" index="5"]
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+focus_neighbor_right = NodePath("../next_button")
+texture_normal = ExtResource("9_7yq3p")
+texture_pressed = ExtResource("10_e8dmc")
+texture_hover = ExtResource("11_1wlig")
+texture_focused = ExtResource("11_1wlig")
+
+[node name="anchor" type="Control" parent="list/picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="list/picker_button/anchor" index="0" instance=ExtResource("12_07tyx")]
 
 [connection signal="text_changed" from="player_id/id" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="player_side/side" to="." method="_on_text_changed"]
@@ -169,3 +194,4 @@ max_length = 2
 [connection signal="pressed" from="list/next_button" to="." method="_on_next_button_pressed"]
 [connection signal="text_changed" from="list/x" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="list/y" to="." method="_on_text_changed"]
+[connection signal="pressed" from="list/picker_button" to="." method="_on_picker_button_pressed"]

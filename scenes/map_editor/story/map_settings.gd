@@ -6,6 +6,7 @@ extends Control
 @onready var track_label = $"track/track_button/label"
 @onready var audio = $"/root/SimpleAudioLibrary"
 
+signal picker_requested(context)
 
 var skip_initial_hq_cam = false
 var initial_cam_pos = null
@@ -120,4 +121,19 @@ func _on_text_changed(_new_text):
 		self.initial_cam_pos = [int(x), int(y)]
 	else:
 		self.initial_cam_pos = null
+	
+
+func _on_picker_button_pressed():
+	self.audio.play("menu_click")
+	self.picker_requested.emit({
+		"tab": "settings",
+		"type": "position",
+		"position": self.initial_cam_pos
+	})
+
+func _handle_picker_response(response, context):
+	if context["type"] == "position":
+		self.initial_cam_pos = [response.x, response.y]
+		_update_initial_cam_pos_inputs()
+
 	
