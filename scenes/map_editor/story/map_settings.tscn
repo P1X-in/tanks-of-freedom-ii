@@ -81,10 +81,10 @@ placeholder_text = "Y"
 alignment = 1
 
 [node name="picker_button" type="TextureButton" parent="initial_cam_position"]
+layout_mode = 0
 offset_left = 350.0
 offset_right = 386.0
 offset_bottom = 40.0
-focus_neighbor_right = NodePath("../next_button")
 texture_normal = ExtResource("7_rwcpv")
 texture_pressed = ExtResource("8_7oq04")
 texture_hover = ExtResource("9_fq5eb")

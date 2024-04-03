@@ -167,10 +167,10 @@ alignment = 1
 max_length = 2
 
 [node name="picker_button" type="TextureButton" parent="list" index="5"]
+layout_mode = 0
 offset_left = 350.0
 offset_right = 386.0
 offset_bottom = 40.0
-focus_neighbor_right = NodePath("../next_button")
 texture_normal = ExtResource("9_7yq3p")
 texture_pressed = ExtResource("10_e8dmc")
 texture_hover = ExtResource("11_1wlig")

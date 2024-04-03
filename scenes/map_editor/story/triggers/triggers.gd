@@ -27,6 +27,7 @@ func ingest_triggers_data(data):
 	self.triggers_data = data
 	_on_triggers_page_load_request(0)
 	_switch_to_panel(self.listing_panel)
+	self.listing_panel._hide_edit_panels()
 	
 
 func compile_triggers_data():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cbg465a8j5ejh"]
+[gd_scene load_steps=14 format=3 uid="uid://cbg465a8j5ejh"]
 
 [ext_resource type="Script" path="res://scenes/map_editor/story/story_editor.gd" id="1_1fbvq"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="1_v2xof"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dnqbbv8qec4n4" path="res://scenes/map_editor/story/triggers/triggers.tscn" id="8_b7gmi"]
 [ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="8_wtysv"]
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="9_78ah5"]
+[ext_resource type="PackedScene" uid="uid://dtahaaryqp26j" path="res://scenes/map_editor/story/story_element_picker.tscn" id="9_d6jtt"]
+[ext_resource type="PackedScene" uid="uid://v0w877sln3rh" path="res://scenes/map_editor/story/stories/stories.tscn" id="9_nvsc3"]
 
 [node name="StoryEditor" type="Node2D"]
 script = ExtResource("1_1fbvq")
@@ -122,9 +124,18 @@ offset_right = 1175.0
 offset_bottom = 630.0
 
 [node name="MapSettings" parent="widgets/panels" instance=ExtResource("7_2mpp0")]
+visible = false
 layout_mode = 1
 
 [node name="Triggers" parent="widgets/panels" instance=ExtResource("8_b7gmi")]
+visible = false
+layout_mode = 1
+
+[node name="Stories" parent="widgets/panels" instance=ExtResource("9_nvsc3")]
+visible = false
+layout_mode = 1
+
+[node name="StoryElementPicker" parent="widgets/panels" instance=ExtResource("9_d6jtt")]
 visible = false
 layout_mode = 1
 

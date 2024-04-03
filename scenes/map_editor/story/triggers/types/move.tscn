@@ -116,10 +116,10 @@ alignment = 1
 max_length = 2
 
 [node name="vip_picker_button" type="TextureButton" parent="vip" index="2"]
+layout_mode = 0
 offset_left = 350.0
 offset_right = 386.0
 offset_bottom = 40.0
-focus_neighbor_right = NodePath("../next_button")
 texture_normal = ExtResource("4_ya6n4")
 texture_pressed = ExtResource("5_8bm6e")
 texture_hover = ExtResource("6_2mfvo")
@@ -243,10 +243,10 @@ alignment = 1
 max_length = 2
 
 [node name="excluded_picker_button" type="TextureButton" parent="excluded" index="5"]
+layout_mode = 0
 offset_left = 350.0
 offset_right = 386.0
 offset_bottom = 40.0
-focus_neighbor_right = NodePath("../next_button")
 texture_normal = ExtResource("4_ya6n4")
 texture_pressed = ExtResource("5_8bm6e")
 texture_hover = ExtResource("6_2mfvo")
@@ -371,11 +371,11 @@ alignment = 1
 max_length = 2
 
 [node name="fields1_picker_button" type="TextureButton" parent="fields" index="7"]
+layout_mode = 0
 offset_left = 350.0
 offset_top = -20.0
 offset_right = 386.0
 offset_bottom = 20.0
-focus_neighbor_right = NodePath("../next_button")
 texture_normal = ExtResource("4_ya6n4")
 texture_pressed = ExtResource("5_8bm6e")
 texture_hover = ExtResource("6_2mfvo")
@@ -393,11 +393,11 @@ offset_bottom = -2.0
 [node name="hourglass" parent="fields/fields1_picker_button/anchor" index="0" instance=ExtResource("7_ainhf")]
 
 [node name="fields2_picker_button" type="TextureButton" parent="fields" index="8"]
+layout_mode = 0
 offset_left = 350.0
 offset_top = 25.0
 offset_right = 386.0
 offset_bottom = 65.0
-focus_neighbor_right = NodePath("../next_button")
 texture_normal = ExtResource("4_ya6n4")
 texture_pressed = ExtResource("5_8bm6e")
 texture_hover = ExtResource("6_2mfvo")

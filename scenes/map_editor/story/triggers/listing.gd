@@ -30,9 +30,12 @@ func _ready():
 		edit_panel.trigger_removal_requested.connect(self._on_trigger_removal_requested)
 		edit_panel.picker_requested.connect(self._on_picker_requested)
 
-func _switch_to_edit_panel(panel_name, trigger_name, trigger_data):
+func _hide_edit_panels():
 	for edit_panel in self.edit_panels.values():
 		edit_panel.hide()
+
+func _switch_to_edit_panel(panel_name, trigger_name, trigger_data):
+	_hide_edit_panels()
 	if self.edit_panels.has(panel_name):
 		self.edit_panels[panel_name].show_panel()
 		self.edit_panels[panel_name].fill_trigger_data(trigger_name, trigger_data)
