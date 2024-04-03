@@ -83,6 +83,11 @@ func _on_picker_requested(context):
 				self.editor.map.templates._unit_templates.keys() + self.editor.map.templates._hero_templates.keys(), 
 				context
 			)
+		if context["type"] == "side":
+			self.picker_panel.load_list(
+				self.editor.map.templates.side_materials.keys(), 
+				context
+			)
 		_switch_to_panel(self.picker_panel)	
 
 func _handle_picker_response(response, context):

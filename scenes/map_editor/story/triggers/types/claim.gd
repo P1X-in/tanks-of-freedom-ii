@@ -157,4 +157,15 @@ func _handle_picker_response(response, context):
 	if context["type"] == "position":
 		$"list/x".set_text(str(response.x))
 		$"list/y".set_text(str(response.y))
-		_emit_updated_signal()
+	if context["type"] == "side":
+		$"player_side/side".set_text(response)
+	_emit_updated_signal()
+
+
+func _on_side_picker_button_pressed():
+	self.audio.play("menu_click")
+
+	self.picker_requested.emit({
+		"type": "side",
+		"trigger_name": self.trigger_name
+	})

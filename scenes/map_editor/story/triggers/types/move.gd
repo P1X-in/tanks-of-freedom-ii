@@ -284,9 +284,20 @@ func _handle_picker_response(response, context):
 				_handle_picker_response_for_fields($"fields/x1", $"fields/y1", response)
 			if context["field_id"] == "fields_2":
 				_handle_picker_response_for_fields($"fields/x2", $"fields/y2", response)
+	if context["type"] == "side":
+		$"player_side/side".set_text(response)
 
 
 func _handle_picker_response_for_fields(input_x, input_y, response):
 	input_x.set_text(str(response.x))
 	input_y.set_text(str(response.y))
 	_emit_updated_signal()
+
+
+func _on_side_picker_button_pressed():
+	self.audio.play("menu_click")
+
+	self.picker_requested.emit({
+		"type": "side",
+		"trigger_name": self.trigger_name
+	})
