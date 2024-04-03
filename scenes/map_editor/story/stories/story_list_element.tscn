@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://dl4ndc5spq6qb"]
+
+[ext_resource type="Script" path="res://scenes/map_editor/story/stories/story_list_element.gd" id="1_e3w0u"]
+[ext_resource type="Texture2D" uid="uid://d0774ly4xd6g5" path="res://assets/gui/menu/buttons/buttonShort_brown.png" id="2_6613p"]
+[ext_resource type="Texture2D" uid="uid://cjfmw5jj1ysfn" path="res://assets/gui/menu/buttons/buttonShort_brown_pressed.png" id="3_8okr1"]
+[ext_resource type="Texture2D" uid="uid://cty1cg40iadkv" path="res://assets/gui/menu/buttons/buttonShort_brown_hover.png" id="4_c76tr"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="5_dqypp"]
+
+[node name="StoriesListElement" type="Control"]
+custom_minimum_size = Vector2(575, 45)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -710.0
+offset_bottom = -755.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e3w0u")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(350, 40)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Story name"
+vertical_alignment = 1
+
+[node name="edit_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 460.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_6613p")
+texture_pressed = ExtResource("3_8okr1")
+texture_hover = ExtResource("4_c76tr")
+texture_focused = ExtResource("4_c76tr")
+
+[node name="label" type="Label" parent="edit_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dqypp")
+text = "TR_EDIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="delete_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 470.0
+offset_right = 570.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_6613p")
+texture_pressed = ExtResource("3_8okr1")
+texture_hover = ExtResource("4_c76tr")
+texture_focused = ExtResource("4_c76tr")
+
+[node name="label" type="Label" parent="delete_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dqypp")
+text = "TR_DELETE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="edit_button" to="." method="_on_edit_button_pressed"]
+[connection signal="pressed" from="delete_button" to="." method="_on_delete_button_pressed"]

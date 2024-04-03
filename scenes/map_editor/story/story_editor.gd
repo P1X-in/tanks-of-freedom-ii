@@ -58,6 +58,7 @@ func _on_triggers_button_pressed():
 
 func _on_stories_button_pressed():
 	self.audio.play("menu_click")
+	_switch_to_panel(self.stories_panel)
 
 
 func _on_back_button_pressed():

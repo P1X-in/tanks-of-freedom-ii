@@ -112,7 +112,6 @@ func edit_trigger(trigger_name, trigger_data):
 	if trigger_data["type"] != null:
 		edit_panel = trigger_data["type"]
 	_switch_to_edit_panel(edit_panel, trigger_name, trigger_data)
-	print_debug(trigger_name, " ", trigger_data)
 
 func _on_edit_requested(trigger_name):
 	self.audio.play("menu_click")
