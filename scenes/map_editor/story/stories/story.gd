@@ -6,6 +6,7 @@ signal step_created(story_name)
 signal page_load_requested(story_name, page_no)
 signal edit_requested(story_name, step_no)
 signal step_data_updated(story_name, step_no, step_data)
+signal step_move_requested(step_no, new_step_no)
 signal step_removal_requested(story_name, step_no)
 signal picker_requested(context)
 
@@ -30,6 +31,7 @@ func _ready():
 		self.edit_panels[str(edit_panel.name)] = edit_panel
 		edit_panel.hide()
 		edit_panel.step_data_updated.connect(self._on_step_data_updated)
+		edit_panel.step_move_requested.connect(self._on_step_move_requested)
 		edit_panel.step_removal_requested.connect(self._on_step_removal_requested)
 		edit_panel.picker_requested.connect(self._on_picker_requested)
 
@@ -113,9 +115,10 @@ func show_page(story_name, steps_list, page_no):
 	_fill_page(_slice_page(steps_list, page_no), steps_list, page_no)
 	_manage_buttons(steps_list.size(), page_no)
 
-func refresh_page(story_name, steps_list):
+func refresh_page(story_name, steps_list, clear_edit_panel=true):
 	self.show_page(story_name, steps_list, self.current_page)
-	_switch_to_edit_panel("none", "", {})
+	if clear_edit_panel:
+		_switch_to_edit_panel("none", "", {})
 
 func show_step_page(story_name, steps_list, step_no):
 	self.show_page(story_name, steps_list, _find_step_page(steps_list, step_no))
@@ -156,10 +159,13 @@ func _on_step_removal_requested(step_no):
 	self.step_removal_requested.emit(self._story_name, step_no)
 	self.add_button.grab_focus()
 
+func _on_step_move_requested(step_no, new_step_no):
+	self.step_move_requested.emit(self._story_name, step_no, new_step_no)
+
 func _on_picker_requested(context):
 	context["story_name"] = self._story_name
 	self.picker_requested.emit(context)
 
 func _handle_picker_response(response, context):
-	if context.has("step_type"):
-		self.edit_panels[context["step_type"]]._handle_picker_response(response, context)
+	if context.has("step_action"):
+		self.edit_panels[context["step_action"]]._handle_picker_response(response, context)

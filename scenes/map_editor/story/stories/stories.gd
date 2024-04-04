@@ -18,7 +18,9 @@ func _ready():
 	self.story_panel.page_load_requested.connect(self._on_step_page_load_requested)
 	self.story_panel.edit_requested.connect(self._on_step_edit_requested)
 	self.story_panel.step_data_updated.connect(self._on_step_data_updated)
+	self.story_panel.step_move_requested.connect(self._on_step_move_requested)
 	self.story_panel.step_removal_requested.connect(self._on_story_step_removal_requested)
+	self.story_panel.picker_requested.connect(self._on_picker_requested)
 
 
 func _switch_to_panel(panel):
@@ -72,10 +74,6 @@ func _on_story_removal_requested(story_name):
 	_switch_to_panel(self.listing_panel)
 	self.listing_panel.refresh_page(_get_sorted_stories_names())
 
-func _on_picker_requested(context):
-	context["tab"] = "stories"
-	self.picker_requested.emit(context)
-
 
 func _on_new_story_step_created(story_name):
 	if not self.stories_data.has(story_name):
@@ -99,8 +97,27 @@ func _on_step_edit_requested(story_name, step_no):
 func _on_step_data_updated(story_name, step_no, step_data):
 	if self.stories_data.has(story_name):
 		self.stories_data[story_name][step_no] = step_data
+		self.story_panel.refresh_page(story_name, self.stories_data[story_name], false)
+
+func _on_step_move_requested(story_name, step_no, new_step_no):
+	if self.stories_data.has(story_name):
+		var step_data = self.stories_data[story_name].pop_at(step_no)
+		new_step_no = clamp(new_step_no, 0, self.stories_data[story_name].size())
+		self.stories_data[story_name].insert(new_step_no, step_data)
+		self.story_panel.show_step_page(story_name, self.stories_data[story_name], new_step_no)
+		self.story_panel.edit_step(new_step_no, self.stories_data[story_name][new_step_no])
 
 func _on_story_step_removal_requested(story_name, step_no):
 	if self.stories_data.has(story_name):
 		self.stories_data[story_name].remove_at(step_no)
-		self.story_panel.refresh_page(story_name, _get_sorted_stories_names())
+		self.story_panel.refresh_page(story_name, self.stories_data[story_name])
+
+func _on_picker_requested(context):
+	context["tab"] = "stories"
+	if context.has("story_name"):
+		if self.stories_data.has(context["story_name"]):
+			context["step_action"] = self.stories_data[context["story_name"]][context["step_no"]]["action"]
+	self.picker_requested.emit(context)
+
+func _handle_picker_response(response, context):
+	self.story_panel._handle_picker_response(response, context)

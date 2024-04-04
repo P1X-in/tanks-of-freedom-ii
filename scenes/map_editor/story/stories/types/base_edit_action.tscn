@@ -1,0 +1,149 @@
+[gd_scene load_steps=9 format=3 uid="uid://cyrjqlsuuv5"]
+
+[ext_resource type="Script" path="res://scenes/map_editor/story/stories/types/base_edit_action.gd" id="1_vs4ea"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="2_q50do"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="3_cxm6p"]
+[ext_resource type="Texture2D" uid="uid://d0774ly4xd6g5" path="res://assets/gui/menu/buttons/buttonShort_brown.png" id="3_qqcrb"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="4_cqfsd"]
+[ext_resource type="Texture2D" uid="uid://cjfmw5jj1ysfn" path="res://assets/gui/menu/buttons/buttonShort_brown_pressed.png" id="4_mcyx7"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="5_gdoov"]
+[ext_resource type="Texture2D" uid="uid://cty1cg40iadkv" path="res://assets/gui/menu/buttons/buttonShort_brown_hover.png" id="5_rkxsf"]
+
+[node name="BaseEditAction" type="Control"]
+custom_minimum_size = Vector2(550, 500)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -730.0
+offset_bottom = -300.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vs4ea")
+
+[node name="step_no" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -310.0
+offset_bottom = -460.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_q50do")
+text = "TR_STEP_NO"
+vertical_alignment = 1
+
+[node name="no" type="LineEdit" parent="step_no"]
+layout_mode = 0
+offset_left = 250.0
+offset_right = 320.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="move_button" type="TextureButton" parent="step_no"]
+layout_mode = 0
+offset_left = 330.0
+offset_right = 430.0
+offset_bottom = 40.0
+texture_normal = ExtResource("3_qqcrb")
+texture_pressed = ExtResource("4_mcyx7")
+texture_hover = ExtResource("5_rkxsf")
+texture_focused = ExtResource("5_rkxsf")
+
+[node name="label" type="Label" parent="step_no/move_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_q50do")
+text = "TR_MOVE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="delete_button" type="TextureButton" parent="step_no"]
+layout_mode = 0
+offset_left = 440.0
+offset_right = 540.0
+offset_bottom = 40.0
+texture_normal = ExtResource("3_qqcrb")
+texture_pressed = ExtResource("4_mcyx7")
+texture_hover = ExtResource("5_rkxsf")
+texture_focused = ExtResource("5_rkxsf")
+
+[node name="label" type="Label" parent="step_no/delete_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_q50do")
+text = "TR_DELETE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="action" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 50.0
+offset_right = -200.0
+offset_bottom = -410.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_q50do")
+text = "assassination"
+vertical_alignment = 1
+
+[node name="change_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 50.0
+offset_right = 540.0
+offset_bottom = 90.0
+texture_normal = ExtResource("3_cxm6p")
+texture_pressed = ExtResource("4_cqfsd")
+texture_hover = ExtResource("5_gdoov")
+texture_focused = ExtResource("5_gdoov")
+
+[node name="label" type="Label" parent="change_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_q50do")
+text = "TR_CHANGE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="delay" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 100.0
+offset_right = -250.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_q50do")
+text = "TR_DELAY"
+vertical_alignment = 1
+
+[node name="delay" type="LineEdit" parent="delay"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[connection signal="pressed" from="step_no/move_button" to="." method="_on_move_button_pressed"]
+[connection signal="pressed" from="step_no/delete_button" to="." method="_on_delete_button_pressed"]
+[connection signal="pressed" from="change_button" to="." method="_on_change_button_pressed"]
+[connection signal="text_changed" from="delay/delay" to="." method="_on_text_changed"]
