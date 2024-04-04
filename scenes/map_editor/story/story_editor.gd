@@ -69,6 +69,9 @@ func _on_back_button_pressed():
 		if self.picker_panel.picker_context["tab"] == "stories":
 			_switch_to_panel(self.stories_panel)
 		return
+	if self.stories_panel.is_visible():
+		if self.stories_panel._on_back_button_pressed():
+			return
 	if self.editor != null:
 		self.editor.close_story()
 
