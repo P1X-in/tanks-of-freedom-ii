@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://3jg4od1lphdr"]
+[gd_scene load_steps=22 format=3 uid="uid://3jg4od1lphdr"]
 
 [ext_resource type="Script" path="res://scenes/map_editor/story/stories/story.gd" id="1_0lwys"]
 [ext_resource type="PackedScene" uid="uid://yl7ug0tr62ix" path="res://scenes/map_editor/story/stories/story_step_element.tscn" id="2_af5aa"]
@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://c0412vygx3bp3" path="res://scenes/map_editor/story/stories/types/hero_ability.tscn" id="14_oxrqi"]
 [ext_resource type="PackedScene" uid="uid://c8v3obj6muf3n" path="res://scenes/map_editor/story/stories/types/level_up.tscn" id="15_n43d1"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="15_nknqw"]
+[ext_resource type="PackedScene" uid="uid://dw8ppwvdbxlyg" path="res://scenes/map_editor/story/stories/types/lock_hud.tscn" id="16_qebbb"]
+[ext_resource type="PackedScene" uid="uid://cavm8ues0o4w4" path="res://scenes/map_editor/story/stories/types/message.tscn" id="17_d8jt1"]
 
 [node name="Story" type="Control"]
 layout_mode = 3
@@ -141,6 +143,18 @@ offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="level_up" parent="edit_panels" instance=ExtResource("15_n43d1")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="lock" parent="edit_panels" instance=ExtResource("16_qebbb")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="message" parent="edit_panels" instance=ExtResource("17_d8jt1")]
 visible = false
 layout_mode = 1
 offset_right = 0.0

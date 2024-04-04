@@ -31,10 +31,9 @@ func _execute(_metadata):
 		self.board.audio.play(self.sound)
 
 func _ingest_details(details):
-	self.text = details['text']
+	self.name = details['name']
 	if details.has("portrait"):
 		self.portrait = details['portrait']
-	self.name = details['name']
 	if details.has("side"):
 		self.side = details['side']
 	if details.has("colour"):
@@ -43,3 +42,4 @@ func _ingest_details(details):
 		self.font_size = details['font_size']
 	if details.has("sound"):
 		self.sound = details['sound']
+	self.text = details['text']

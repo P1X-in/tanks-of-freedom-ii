@@ -2,5 +2,5 @@
 
 [ext_resource type="Texture2D" uid="uid://dk20o1oop25gh" path="res://assets/gui/icons/pen.png" id="1_dwbxu"]
 
-[node name="hourglass" type="Sprite2D"]
+[node name="pen" type="Sprite2D"]
 texture = ExtResource("1_dwbxu")

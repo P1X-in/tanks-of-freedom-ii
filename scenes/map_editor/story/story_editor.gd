@@ -92,6 +92,16 @@ func _on_picker_requested(context):
 				self.editor.map.templates.side_materials.keys(), 
 				context
 			)
+		if context["type"] == "portrait":
+			self.picker_panel.load_list(
+				self.editor.map.templates._unit_templates.keys() + self.editor.map.templates._hero_templates.keys() + self.editor.map.templates._building_templates.keys(), 
+				context
+			)
+		if context["type"] == "sound":
+			self.picker_panel.load_list(
+				self.editor.audio.samples.keys(), 
+				context
+			)
 		_switch_to_panel(self.picker_panel)	
 
 func _handle_picker_response(response, context):

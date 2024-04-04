@@ -1,0 +1,236 @@
+[gd_scene load_steps=11 format=3 uid="uid://cavm8ues0o4w4"]
+
+[ext_resource type="PackedScene" uid="uid://cyrjqlsuuv5" path="res://scenes/map_editor/story/stories/types/base_edit_action.tscn" id="1_xdqkj"]
+[ext_resource type="Script" path="res://scenes/map_editor/story/stories/types/message.gd" id="2_j7naj"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_caxoc"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="4_iykjs"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="4_w32fs"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="5_q5egl"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="5_xnaoc"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="6_dywrk"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="6_xdjwa"]
+[ext_resource type="PackedScene" uid="uid://gxr1dxy4v75y" path="res://scenes/ui/icons/pen.tscn" id="7_pm5yt"]
+
+[node name="Message" instance=ExtResource("1_xdqkj")]
+script = ExtResource("2_j7naj")
+
+[node name="name" type="Label" parent="." index="4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 145.0
+offset_right = -250.0
+offset_bottom = -315.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_caxoc")
+text = "TR_NAME"
+vertical_alignment = 1
+
+[node name="name" type="LineEdit" parent="name" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="portrait" type="Label" parent="." index="5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 190.0
+offset_right = -250.0
+offset_bottom = -270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_caxoc")
+text = "TR_PORTRAIT"
+vertical_alignment = 1
+
+[node name="portrait" type="LineEdit" parent="portrait" index="0"]
+layout_mode = 0
+offset_left = 400.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="portrait_picker_button" type="TextureButton" parent="portrait" index="1"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_w32fs")
+texture_pressed = ExtResource("5_q5egl")
+texture_hover = ExtResource("6_xdjwa")
+texture_focused = ExtResource("6_xdjwa")
+
+[node name="anchor" type="Control" parent="portrait/portrait_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="portrait/portrait_picker_button/anchor" index="0" instance=ExtResource("7_pm5yt")]
+
+[node name="actor_side" type="Label" parent="." index="6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 235.0
+offset_right = -250.0
+offset_bottom = -225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_caxoc")
+text = "TR_SIDE"
+vertical_alignment = 1
+
+[node name="side_button" type="TextureButton" parent="actor_side" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_iykjs")
+texture_pressed = ExtResource("5_xnaoc")
+texture_hover = ExtResource("6_dywrk")
+texture_focused = ExtResource("6_dywrk")
+
+[node name="label" type="Label" parent="actor_side/side_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_caxoc")
+text = "TR_LEFT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="colour" type="Label" parent="." index="7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 280.0
+offset_right = -250.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_caxoc")
+text = "TR_COLOUR"
+vertical_alignment = 1
+
+[node name="colour" type="LineEdit" parent="colour" index="0"]
+layout_mode = 0
+offset_left = 400.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="colour_picker_button" type="TextureButton" parent="colour" index="1"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_w32fs")
+texture_pressed = ExtResource("5_q5egl")
+texture_hover = ExtResource("6_xdjwa")
+texture_focused = ExtResource("6_xdjwa")
+
+[node name="anchor" type="Control" parent="colour/colour_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="colour/colour_picker_button/anchor" index="0" instance=ExtResource("7_pm5yt")]
+
+[node name="font" type="Label" parent="." index="8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 325.0
+offset_right = -250.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_caxoc")
+text = "TR_FONT_SIZE"
+vertical_alignment = 1
+
+[node name="font" type="LineEdit" parent="font" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="sound" type="Label" parent="." index="9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 370.0
+offset_right = -250.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_caxoc")
+text = "TR_SOUND"
+vertical_alignment = 1
+
+[node name="sound" type="LineEdit" parent="sound" index="0"]
+layout_mode = 0
+offset_left = 400.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="sound_picker_button" type="TextureButton" parent="sound" index="1"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_w32fs")
+texture_pressed = ExtResource("5_q5egl")
+texture_hover = ExtResource("6_xdjwa")
+texture_focused = ExtResource("6_xdjwa")
+
+[node name="anchor" type="Control" parent="sound/sound_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="sound/sound_picker_button/anchor" index="0" instance=ExtResource("7_pm5yt")]
+
+[node name="text" type="TextEdit" parent="." index="10"]
+layout_mode = 0
+offset_top = 415.0
+offset_right = 540.0
+offset_bottom = 495.0
+
+[connection signal="text_changed" from="name/name" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="portrait/portrait" to="." method="_on_text_changed"]
+[connection signal="pressed" from="portrait/portrait_picker_button" to="." method="_on_portrait_picker_button_pressed"]
+[connection signal="pressed" from="actor_side/side_button" to="." method="_on_side_button_pressed"]
+[connection signal="text_changed" from="colour/colour" to="." method="_on_text_changed"]
+[connection signal="pressed" from="colour/colour_picker_button" to="." method="_on_colour_picker_button_pressed"]
+[connection signal="text_changed" from="font/font" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="sound/sound" to="." method="_on_text_changed"]
+[connection signal="pressed" from="sound/sound_picker_button" to="." method="_on_sound_picker_button_pressed"]
+[connection signal="text_changed" from="text" to="." method="_on_text_area_changed"]
