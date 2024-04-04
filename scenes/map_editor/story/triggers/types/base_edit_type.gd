@@ -66,8 +66,10 @@ func _on_oneoff_button_pressed():
 		$"oneoff_button/label".set_text("TR_ON")
 	else:
 		$"oneoff_button/label".set_text("TR_OFF")
+	_emit_updated_signal()
 
 func _handle_picker_response(response, context):
 	if context["type"] == "story":
 		self.trigger_data["story"] = response
 		$"story".set_text(response)
+		_emit_updated_signal()

@@ -118,7 +118,10 @@ func show_page(story_name, steps_list, page_no):
 func refresh_page(story_name, steps_list, clear_edit_panel=true):
 	self.show_page(story_name, steps_list, self.current_page)
 	if clear_edit_panel:
-		_switch_to_edit_panel("none", "", {})
+		self.clear_editor()
+
+func clear_editor():
+	_switch_to_edit_panel("none", "", {})
 
 func show_step_page(story_name, steps_list, step_no):
 	self.show_page(story_name, steps_list, _find_step_page(steps_list, step_no))

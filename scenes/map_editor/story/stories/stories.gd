@@ -68,6 +68,7 @@ func _on_stories_page_load_request(page_no):
 func _on_story_edit_requested(story_name):
 	_switch_to_panel(self.story_panel)
 	_on_step_page_load_requested(story_name, 0)
+	self.story_panel.clear_editor()
 
 func _on_story_removal_requested(story_name):
 	self.stories_data.erase(story_name)
