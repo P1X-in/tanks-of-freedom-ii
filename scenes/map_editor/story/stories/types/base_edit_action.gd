@@ -19,7 +19,7 @@ func fill_step_data(new_step_no, new_step_data):
 	self.step_data = new_step_data
 	
 	if not self.step_data.has("delay"):
-		self.step_data["delay"] = 0
+		self.step_data["delay"] = 0.0
 	
 	$"delay/delay".set_text(str(self.step_data["delay"]))
 	$"step_no/no".set_text(str(self.step_no))
@@ -35,7 +35,7 @@ func _compile_step_data():
 	var delay = $"delay/delay".get_text()
 
 	if delay != "":
-		self.step_data["delay"] = int(delay)
+		self.step_data["delay"] = float(delay)
 
 	return self.step_data
 

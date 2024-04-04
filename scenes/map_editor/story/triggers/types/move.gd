@@ -141,7 +141,7 @@ func _compile_trigger_data():
 		self.trigger_data["details"]["fields"][self.current_index_fields] = {"x1": int(x1), "y1": int(y1), "x2": int(x2), "y2": int(y2)}
 		_manage_list_buttons()
 	else:
-		if self.current_index_vips == self.trigger_data["details"]["fields"].size():
+		if self.current_index_fields == self.trigger_data["details"]["fields"].size():
 			self.tmp_x1 = x1
 			self.tmp_y1 = y1
 			self.tmp_x2 = x2
