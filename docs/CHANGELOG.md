@@ -3,7 +3,10 @@
 
 ### 0.7.0-alpha
 - Added unit healthbars and level stars
-- Added story editor to map editor
+- Added story editor to map editor allowing to create scenarios
+  - Additional map settings
+  - Triggers editor
+  - Stories editor
 - Added new content suppression for maps created with older editor version
   - New abilities need to be marked with proper dlc version
 - Fixed a bug preventing online maps from being downloaded
