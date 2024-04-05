@@ -1,0 +1,141 @@
+[gd_scene load_steps=11 format=3 uid="uid://ddecu22bxbhtb"]
+
+[ext_resource type="PackedScene" uid="uid://cyrjqlsuuv5" path="res://scenes/map_editor/story/stories/types/base_edit_action.tscn" id="1_ho7p2"]
+[ext_resource type="Script" path="res://scenes/map_editor/story/stories/types/trigger.gd" id="2_30in1"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_78b1r"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="4_g4phv"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="5_qhxqy"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="6_cgf2u"]
+[ext_resource type="PackedScene" uid="uid://gxr1dxy4v75y" path="res://scenes/ui/icons/pen.tscn" id="7_xj5vc"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="8_md3lf"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="9_r21v2"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="10_0mq13"]
+
+[node name="Trigger" instance=ExtResource("1_ho7p2")]
+script = ExtResource("2_30in1")
+
+[node name="trigger" type="Label" parent="." index="4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 150.0
+offset_right = -250.0
+offset_bottom = -310.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_78b1r")
+text = "TR_TRIGGER"
+vertical_alignment = 1
+
+[node name="trigger" type="LineEdit" parent="trigger" index="0"]
+layout_mode = 0
+offset_left = 400.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="trigger_picker_button" type="TextureButton" parent="trigger" index="1"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_g4phv")
+texture_pressed = ExtResource("5_qhxqy")
+texture_hover = ExtResource("6_cgf2u")
+texture_focused = ExtResource("6_cgf2u")
+
+[node name="anchor" type="Control" parent="trigger/trigger_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="trigger/trigger_picker_button/anchor" index="0" instance=ExtResource("7_xj5vc")]
+
+[node name="suspended" type="Label" parent="." index="5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 200.0
+offset_right = -250.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_78b1r")
+text = "TR_SUSPENDED"
+vertical_alignment = 1
+
+[node name="suspended_button" type="TextureButton" parent="suspended" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+texture_normal = ExtResource("8_md3lf")
+texture_pressed = ExtResource("9_r21v2")
+texture_hover = ExtResource("10_0mq13")
+texture_focused = ExtResource("10_0mq13")
+
+[node name="label" type="Label" parent="suspended/suspended_button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_78b1r")
+text = "TR_ON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="group" type="Label" parent="." index="6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 250.0
+offset_right = -250.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_78b1r")
+text = "TR_GROUP"
+vertical_alignment = 1
+
+[node name="group" type="LineEdit" parent="group" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="turns" type="Label" parent="." index="7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 300.0
+offset_right = -250.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_78b1r")
+text = "TR_TURNS"
+vertical_alignment = 1
+
+[node name="turns" type="LineEdit" parent="turns" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[connection signal="text_changed" from="trigger/trigger" to="." method="_on_text_changed"]
+[connection signal="pressed" from="trigger/trigger_picker_button" to="." method="_on_trigger_picker_button_pressed"]
+[connection signal="pressed" from="suspended/suspended_button" to="." method="_on_suspended_button_pressed"]
+[connection signal="text_changed" from="group/group" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="turns/turns" to="." method="_on_text_changed"]

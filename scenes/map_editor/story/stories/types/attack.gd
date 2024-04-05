@@ -49,8 +49,6 @@ func _handle_picker_response(response, context):
 				_handle_picker_response_for_fields($"who/x", $"who/y", response)
 			if context["field_id"] == "whom":
 				_handle_picker_response_for_fields($"whom/x", $"whom/y", response)
-	if context["type"] == "side":
-		$"player_side/side".set_text(response)
 
 
 func _handle_picker_response_for_fields(input_x, input_y, response):

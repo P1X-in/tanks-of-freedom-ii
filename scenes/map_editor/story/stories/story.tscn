@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://3jg4od1lphdr"]
+[gd_scene load_steps=36 format=3 uid="uid://3jg4od1lphdr"]
 
 [ext_resource type="Script" path="res://scenes/map_editor/story/stories/story.gd" id="1_0lwys"]
 [ext_resource type="PackedScene" uid="uid://yl7ug0tr62ix" path="res://scenes/map_editor/story/stories/story_step_element.tscn" id="2_af5aa"]
@@ -30,6 +30,11 @@
 [ext_resource type="PackedScene" uid="uid://b045k7u4g471f" path="res://scenes/map_editor/story/stories/types/target_vip.tscn" id="24_xwhhi"]
 [ext_resource type="PackedScene" uid="uid://bjehe02ylhmey" path="res://scenes/map_editor/story/stories/types/terrain_add.tscn" id="25_1u72t"]
 [ext_resource type="PackedScene" uid="uid://s5068qhhnkp5" path="res://scenes/map_editor/story/stories/types/terrain_remove.tscn" id="26_yueg2"]
+[ext_resource type="PackedScene" uid="uid://cvw8dv62638ta" path="res://scenes/map_editor/story/stories/types/tether.tscn" id="27_tk5jl"]
+[ext_resource type="PackedScene" uid="uid://ddecu22bxbhtb" path="res://scenes/map_editor/story/stories/types/trigger.tscn" id="28_6av32"]
+[ext_resource type="PackedScene" uid="uid://cmc0kp03t4gk3" path="res://scenes/map_editor/story/stories/types/trigger_group.tscn" id="29_cgajc"]
+[ext_resource type="PackedScene" uid="uid://drule5okhum23" path="res://scenes/map_editor/story/stories/types/unlock_hud.tscn" id="30_k2i1j"]
+[ext_resource type="PackedScene" uid="uid://31fxnjuu1v6o" path="res://scenes/map_editor/story/stories/types/use_ability.tscn" id="31_des6b"]
 
 [node name="Story" type="Control"]
 layout_mode = 3
@@ -218,6 +223,36 @@ offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="terrain_remove" parent="edit_panels" instance=ExtResource("26_yueg2")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="tether" parent="edit_panels" instance=ExtResource("27_tk5jl")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="trigger" parent="edit_panels" instance=ExtResource("28_6av32")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="trigger_group" parent="edit_panels" instance=ExtResource("29_cgajc")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="unlock" parent="edit_panels" instance=ExtResource("30_k2i1j")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="use_ability" parent="edit_panels" instance=ExtResource("31_des6b")]
 visible = false
 layout_mode = 1
 offset_right = 0.0
