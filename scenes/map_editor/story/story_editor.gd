@@ -80,6 +80,8 @@ func _on_picker_requested(context):
 	if context["type"] == "position":
 		self.picker_requested.emit(context)
 	else:
+		if context["type"] == "trigger":
+			self.picker_panel.load_list(self.triggers_panel._get_sorted_trigger_names(), context)
 		if context["type"] == "story":
 			self.picker_panel.load_list(self.stories_panel._get_sorted_stories_names(), context)
 		if context["type"] == "unit_type":
@@ -102,6 +104,47 @@ func _on_picker_requested(context):
 				self.editor.audio.samples.keys(), 
 				context
 			)
+		if context["type"] == "tile_type":
+			self.picker_panel.load_list(
+				["decoration","damage","frame","terrain","ground","building"], 
+				context
+			)
+		if context["type"] == "template":
+			if context["tile_type"] == "decoration":
+				self.picker_panel.load_list(
+					self.editor.map.templates._decoration_templates.keys() + self.editor.map.templates._special_templates.keys(), 
+					context
+				)
+			if context["tile_type"] == "damage":
+				self.picker_panel.load_list(
+					self.editor.map.templates._damage_templates.keys(), 
+					context
+				)
+			if context["tile_type"] == "frame":
+				self.picker_panel.load_list(
+					self.editor.map.templates._frame_templates.keys(), 
+					context
+				)
+			if context["tile_type"] == "terrain":
+				self.picker_panel.load_list(
+					self.editor.map.templates._city_templates.keys() + self.editor.map.templates._city_decoration_templates.keys() + self.editor.map.templates._wall_templates.keys() + self.editor.map.templates._railway_templates.keys() + self.editor.map.templates._nature_templates.keys(), 
+					context
+				)
+			if context["tile_type"] == "ground":
+				self.picker_panel.load_list(
+					self.editor.map.templates._ground_templates.keys(), 
+					context
+				)
+			if context["tile_type"] == "building":
+				self.picker_panel.load_list(
+					self.editor.map.templates._building_templates.keys(), 
+					context
+				)
+			if context["tile_type"] not in ["decoration","damage","frame","terrain","ground","building"]:
+				self.picker_panel.load_list(
+					self.editor.map.templates._ground_templates.keys() + self.editor.map.templates._damage_templates.keys() + self.editor.map.templates._frame_templates.keys() + self.editor.map.templates._decoration_templates.keys() + self.editor.map.templates._railway_templates.keys() + self.editor.map.templates._city_decoration_templates.keys() + self.editor.map.templates._city_templates.keys() + self.editor.map.templates._damaged_city_templates.keys() + self.editor.map.templates._wall_templates.keys() + self.editor.map.templates._nature_templates.keys() + self.editor.map.templates._special_templates.keys(), 
+					context
+				)
 		_switch_to_panel(self.picker_panel)	
 
 func _handle_picker_response(response, context):
