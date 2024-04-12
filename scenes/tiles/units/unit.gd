@@ -432,9 +432,12 @@ func is_hero():
 	return false
 
 func _update_healthbar():
-	self.healthbar.value = self.hp
+	if self.healthbar != null:
+		self.healthbar.value = self.hp
 
 func _update_level():
+	if self.healthbar == null:
+		return
 	self.healthbar_lv1.hide()
 	self.healthbar_lv2.hide()
 	self.healthbar_lv3.hide()
