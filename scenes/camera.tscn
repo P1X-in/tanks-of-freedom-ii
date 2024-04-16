@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfmdw1ysub4x1"]
+[gd_scene load_steps=7 format=3 uid="uid://dfmdw1ysub4x1"]
 
 [ext_resource type="Script" path="res://scenes/camera.gd" id="2"]
 [ext_resource type="PackedScene" path="res://assets/gui/markers/pointer.tscn" id="3"]
+[ext_resource type="CameraAttributesPractical" uid="uid://dj2ff8ec0jux7" path="res://assets/camera_attributes.tres" id="3_cjjgt"]
 
 [sub_resource type="Animation" id="1"]
 length = 0.001
@@ -57,6 +58,7 @@ transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573577, 0, -0.573577, 0.819152, 
 
 [node name="lens" type="Camera3D" parent="pivot/arm"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+attributes = ExtResource("3_cjjgt")
 current = true
 fov = 50.0
 size = 65.0
@@ -70,6 +72,7 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
 
 [node name="tof_style_camera" type="Camera3D" parent="tof_pivot/tof_arm"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 50)
+attributes = ExtResource("3_cjjgt")
 projection = 1
 current = true
 size = 40.0
@@ -82,6 +85,7 @@ transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 
 
 [node name="aw_style_camera" type="Camera3D" parent="aw_pivot/aw_arm"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 50)
+attributes = ExtResource("3_cjjgt")
 projection = 1
 size = 40.0
 far = 300.0
