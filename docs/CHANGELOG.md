@@ -7,6 +7,7 @@
   - Additional map settings
   - Triggers editor
   - Stories editor
+  - Documentation added to MANUAL.md
 - Added new content suppression for maps created with older editor version
   - New abilities need to be marked with proper dlc version
 - Fixed a bug preventing online maps from being downloaded
