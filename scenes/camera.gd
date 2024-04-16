@@ -488,7 +488,7 @@ func _on_edge_pan(direction_vector):
 		self.camera_pan.y = direction_vector[1]
 
 func _set_near_blur(magnitude):
-	var near_threshold = 0.68
+	var near_threshold = 0.60
 	if magnitude > 0:
 		var camera_fraction = float(magnitude - self.tof_camera_distance_min) / float(self.tof_camera_distance_max - self.tof_camera_distance_min)
 
