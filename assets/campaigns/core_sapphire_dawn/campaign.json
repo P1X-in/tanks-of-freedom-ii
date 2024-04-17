@@ -3,6 +3,7 @@
     "title": "tr_core_sapphire_dawn_campaign_title",
     "icon": "blue_gem",
     "prerequisite": "core_ruby_dusk",
+    "map": "map.jpeg",
     "missions": [
         {
             "name": "lucrative_offer",
@@ -10,8 +11,8 @@
             "map": "core_sap_dawn_lucrative_offer.tofmap.json",
             "description": "tr_core_sapphire_dawn_m1_desc",
             "marker": [
-                470,
-                180
+                1050,
+                1400
             ],
             "players": [
                 {
@@ -32,8 +33,8 @@
             "map": "core_sap_dawn_consolidation.tofmap.json",
             "description": "tr_core_sapphire_dawn_m2_desc",
             "marker": [
-                510,
-                140
+                870,
+                1000
             ],
             "players": [
                 {
@@ -54,8 +55,8 @@
             "map": "core_sap_dawn_capital_offence.tofmap.json",
             "description": "tr_core_sapphire_dawn_m3_desc",
             "marker": [
-                520,
-                80
+                430,
+                410
             ],
             "players": [
                 {
@@ -76,8 +77,8 @@
             "map": "core_sap_dawn_noble_cause.tofmap.json",
             "description": "tr_core_sapphire_dawn_m4_desc",
             "marker": [
-                550,
-                130
+                280,
+                250
             ],
             "players": [
                 {
@@ -107,8 +108,8 @@
             "map": "core_sap_dawn_glimmer_of_jade.tofmap.json",
             "description": "tr_core_sapphire_dawn_m5_desc",
             "marker": [
-                630,
-                110
+                1395,
+                470
             ],
             "players": [
                 {
@@ -134,8 +135,8 @@
             "map": "core_sap_dawn_hostile_takeover.tofmap.json",
             "description": "tr_core_sapphire_dawn_m6_desc",
             "marker": [
-                615,
-                170
+                1590,
+                730
             ],
             "players": [
                 {
@@ -156,8 +157,8 @@
             "map": "core_sap_dawn_pursuit_of_great.tofmap.json",
             "description": "tr_core_sapphire_dawn_m7_desc",
             "marker": [
-                600,
-                230
+                1600,
+                1180
             ],
             "players": [
                 {
