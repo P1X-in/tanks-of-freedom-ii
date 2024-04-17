@@ -3,6 +3,7 @@
     "title": "tr_core_amber_noon_campaign_title",
     "icon": "yellow_gem",
     "prerequisite": "core_jade_twilight",
+    "map": "map.jpeg",
     "missions": [
         {
             "name": "king_in_making",
@@ -10,8 +11,8 @@
             "map": "core_amb_noon_king_in_making.tofmap.json",
             "description": "tr_core_amber_noon_m1_desc",
             "marker": [
-                590,
-                220
+                3290,
+                2400
             ],
             "players": [
                 {
@@ -32,8 +33,8 @@
             "map": "core_amb_noon_obsidian_shadow.tofmap.json",
             "description": "tr_core_amber_noon_m2_desc",
             "marker": [
-                620,
-                120
+                2000,
+                1900
             ],
             "players": [
                 {
@@ -62,8 +63,8 @@
             "map": "core_amb_noon_cracked_sapphire.tofmap.json",
             "description": "tr_core_amber_noon_m3_desc",
             "marker": [
-                490,
-                155
+                1195,
+                1790
             ],
             "players": [
                 {
@@ -92,8 +93,8 @@
             "map": "core_amb_noon_noble_redemption.tofmap.json",
             "description": "tr_core_amber_noon_m4_desc",
             "marker": [
-                450,
-                100
+                1135,
+                1135
             ],
             "players": [
                 {
@@ -123,8 +124,8 @@
             "map": "core_amb_noon_mission_complete.tofmap.json",
             "description": "tr_core_amber_noon_m5_desc",
             "marker": [
-                540,
-                120
+                1700,
+                1150
             ],
             "players": [
                 {
@@ -153,8 +154,8 @@
             "map": "core_amb_noon_name_of_king.tofmap.json",
             "description": "tr_core_amber_noon_m6_desc",
             "marker": [
-                500,
-                50
+                1580,
+                400
             ],
             "players": [
                 {
