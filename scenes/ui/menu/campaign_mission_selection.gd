@@ -178,8 +178,13 @@ func _show_base_map():
 	self.override_map.hide()
 
 func _load_map_override(filename):
-	var image = Image.load_from_file(filename)
-	var texture = ImageTexture.create_from_image(image)
+	var image
+	var texture
+	if filename.begins_with("res://"):
+		texture = load(filename)
+	else:
+		image = Image.load_from_file(filename)
+		texture = ImageTexture.create_from_image(image)
 	self.override_map.texture = texture
 
 	self.base_map.hide()
