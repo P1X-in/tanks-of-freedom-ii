@@ -3,6 +3,7 @@
     "title": "tr_core_epilogue_campaign_title",
     "icon": "black_gem",
     "prerequisite": "core_amber_noon",
+    "map": "map.png",
     "missions": [
         {
             "name": "grim_reminder",
@@ -10,8 +11,8 @@
             "map": "core_epilogue_grim_reminder.tofmap.json",
             "description": "tr_core_epilogue_m1_desc",
             "marker": [
-                520,
-                20
+                450,
+                135
             ],
             "players": [
                 {
