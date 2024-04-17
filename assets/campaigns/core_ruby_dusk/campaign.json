@@ -11,7 +11,7 @@
             "map": "core_ruby_dusk_sudden_strike.tofmap.json",
             "description": "tr_core_ruby_dusk_m1_desc",
             "marker": [
-                4680,
+                2580,
                 1445
             ],
             "players": [
@@ -33,7 +33,7 @@
             "map": "core_ruby_dusk_securing_lines.tofmap.json",
             "description": "tr_core_ruby_dusk_m2_desc",
             "marker": [
-                5030,
+                2930,
                 1340
             ],
             "players": [
@@ -55,7 +55,7 @@
             "map": "core_ruby_dusk_taking_flight.tofmap.json",
             "description": "tr_core_ruby_dusk_m3_desc",
             "marker": [
-                4860,
+                2760,
                 870
             ],
             "players": [
@@ -77,7 +77,7 @@
             "map": "core_ruby_dusk_gateway.tofmap.json",
             "description": "tr_core_ruby_dusk_m4_desc",
             "marker": [
-                4680,
+                2540,
                 610
             ],
             "players": [
@@ -99,7 +99,7 @@
             "map": "core_ruby_dusk_amber_fortress.tofmap.json",
             "description": "tr_core_ruby_dusk_m5_desc",
             "marker": [
-                6300,
+                4200,
                 840
             ],
             "players": [
@@ -121,7 +121,7 @@
             "map": "core_ruby_dusk_stranded.tofmap.json",
             "description": "tr_core_ruby_dusk_m6_desc",
             "marker": [
-                6580,
+                4445,
                 1170
             ],
             "players": [
@@ -143,7 +143,7 @@
             "map": "core_ruby_dusk_uninv_guests.tofmap.json",
             "description": "tr_core_ruby_dusk_m7_desc",
             "marker": [
-                4360,
+                2260,
                 3100
             ],
             "players": [
@@ -165,7 +165,7 @@
             "map": "core_ruby_dusk_res_and_dev.tofmap.json",
             "description": "tr_core_ruby_dusk_m8_desc",
             "marker": [
-                3960,
+                1860,
                 3770
             ],
             "players": [
@@ -187,7 +187,7 @@
             "map": "core_ruby_dusk_hold_the_line.tofmap.json",
             "description": "tr_core_ruby_dusk_m9_desc",
             "marker": [
-                2900,
+                760,
                 4600
             ],
             "players": [
