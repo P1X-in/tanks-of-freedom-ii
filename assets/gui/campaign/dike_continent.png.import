@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deeked66umgj"
-path="res://.godot/imported/dyke_continent.png-d2e2cc1f90f722f6a1c7797ee6830adb.ctex"
+path="res://.godot/imported/dike_continent.png-cec5619ead9a01c91261eb7e768a65ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gui/campaign/dyke_continent.png"
-dest_files=["res://.godot/imported/dyke_continent.png-d2e2cc1f90f722f6a1c7797ee6830adb.ctex"]
+source_file="res://assets/gui/campaign/dike_continent.png"
+dest_files=["res://.godot/imported/dike_continent.png-cec5619ead9a01c91261eb7e768a65ec.ctex"]
 
 [params]
 

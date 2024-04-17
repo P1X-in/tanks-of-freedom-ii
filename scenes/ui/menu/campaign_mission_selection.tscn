@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/ui/menu/campaign_mission_selection.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_es55k"]
-[ext_resource type="Texture2D" uid="uid://deeked66umgj" path="res://assets/gui/campaign/dyke_continent.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://deeked66umgj" path="res://assets/gui/campaign/dike_continent.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dqt600ejx5uaj" path="res://assets/gui/menu/backgrounds/map_panel.png" id="3_1vyoc"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_4d13j"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_left.tscn" id="4"]
