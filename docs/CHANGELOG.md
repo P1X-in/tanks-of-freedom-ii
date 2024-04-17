@@ -4,6 +4,7 @@
 ### 0.7.0-alpha
 - Added unit healthbars and level stars
 - Added more blur for tilt-shift effect near max camera zoom
+- Added new cover maps for campaigns
 - Added story editor to map editor allowing to create scenarios
   - Additional map settings
   - Triggers editor
