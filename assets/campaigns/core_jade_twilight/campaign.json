@@ -3,6 +3,7 @@
     "title": "tr_core_jade_twilight_campaign_title",
     "icon": "green_gem",
     "prerequisite": "core_sapphire_dawn",
+    "map": "map.jpeg",
     "missions": [
         {
             "name": "the_envoy",
@@ -10,8 +11,8 @@
             "map": "core_jade_twi_envoy.tofmap.json",
             "description": "tr_core_jade_twilight_m1_desc",
             "marker": [
-                700,
-                198
+                4140,
+                3750
             ],
             "players": [
                 {
@@ -32,8 +33,8 @@
             "map": "core_jade_twi_delegation.tofmap.json",
             "description": "tr_core_jade_twilight_m2_desc",
             "marker": [
-                620,
-                165
+                2740,
+                2700
             ],
             "players": [
                 {
@@ -54,8 +55,8 @@
             "map": "core_jade_twi_exchange_args.tofmap.json",
             "description": "tr_core_jade_twilight_m3_desc",
             "marker": [
-                560,
-                155
+                2100,
+                1830
             ],
             "players": [
                 {
@@ -85,8 +86,8 @@
             "map": "core_jade_twi_lost_translation.tofmap.json",
             "description": "tr_core_jade_twilight_m4_desc",
             "marker": [
-                500,
-                135
+                1720,
+                1150
             ],
             "players": [
                 {
@@ -107,8 +108,8 @@
             "map": "core_jade_twi_hard_diplomacy.tofmap.json",
             "description": "tr_core_jade_twilight_m5_desc",
             "marker": [
-                540,
-                120
+                1250,
+                1450
             ],
             "players": [
                 {
@@ -144,8 +145,8 @@
             "map": "core_jade_twi_marathon.tofmap.json",
             "description": "tr_core_jade_twilight_m6_desc",
             "marker": [
-                580,
-                70
+                1700,
+                800
             ],
             "players": [
                 {
@@ -166,8 +167,8 @@
             "map": "core_jade_twi_building_bridges.tofmap.json",
             "description": "tr_core_jade_twilight_m7_desc",
             "marker": [
-                648,
-                93
+                3170,
+                1700
             ],
             "players": [
                 {
