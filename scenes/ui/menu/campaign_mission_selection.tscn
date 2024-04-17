@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cyl32ydicrnad"]
+[gd_scene load_steps=23 format=3 uid="uid://cyl32ydicrnad"]
 
 [ext_resource type="Script" path="res://scenes/ui/menu/campaign_mission_selection.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_es55k"]
@@ -16,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://pfrikdjfa7lc" path="res://assets/gui/menu/buttons/buttonSquare_brown.png" id="9_yeryd"]
 [ext_resource type="Texture2D" uid="uid://b0unbl4vx0tow" path="res://assets/gui/menu/buttons/buttonSquare_brown_pressed.png" id="10_cbjjd"]
 [ext_resource type="Texture2D" uid="uid://by1obiwt54odo" path="res://assets/gui/menu/buttons/buttonSquare_brown_hover.png" id="11_3oxor"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ppni4"]
+viewport_path = NodePath("widgets/map_viewport")
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -265,24 +268,38 @@ patch_margin_bottom = 5
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="map" type="Sprite2D" parent="widgets"]
+[node name="map_view" type="Sprite2D" parent="widgets"]
 texture_filter = 4
 position = Vector2(600, 350)
+texture = SubResource("ViewportTexture_ppni4")
+
+[node name="map_viewport" type="SubViewport" parent="widgets"]
+disable_3d = true
+own_world_3d = true
+size = Vector2i(960, 487)
+
+[node name="map" type="Sprite2D" parent="widgets/map_viewport"]
+texture_filter = 4
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3")
+centered = false
 
-[node name="map_override" type="Sprite2D" parent="widgets"]
+[node name="map_override" type="Sprite2D" parent="widgets/map_viewport"]
 visible = false
-position = Vector2(600, 350)
 texture = ExtResource("3")
+centered = false
 
-[node name="missions_anchor" type="Control" parent="widgets"]
-clip_contents = true
+[node name="missions_anchor" type="Control" parent="widgets/map_viewport"]
+layout_mode = 3
 anchors_preset = 0
-offset_left = 120.0
-offset_top = 107.0
-offset_right = 1080.0
-offset_bottom = 593.0
+offset_right = 960.0
+offset_bottom = 487.0
+
+[node name="camera" type="Camera2D" parent="widgets/map_viewport"]
+limit_left = 0
+limit_top = 0
+limit_right = 960
+limit_bottom = 487
 
 [node name="back_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
