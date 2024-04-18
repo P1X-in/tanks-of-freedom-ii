@@ -11,6 +11,9 @@ extends Control
 @onready var next_button = $"widgets/next_button"
 @onready var medal = $"widgets/medal"
 
+@onready var zoom_in_button = $"widgets/zoom_in_button"
+@onready var zoom_out_button = $"widgets/zoom_out_button"
+
 @onready var title = $"widgets/title"
 @onready var mission_anchor = $"widgets/map_viewport/missions_anchor"
 
@@ -29,6 +32,9 @@ var mission_markers = []
 var selected_mission = 0
 
 var _maps_cache = {}
+var _zoom_level = 1.0
+var _zoom_limit = 1.0
+var _zoom_step  = 0.1
 
 func bind_menu(menu):
 	self.main_menu = menu
@@ -108,8 +114,12 @@ func load_campaign(campaign_name):
 
 	if manifest.has("map"):
 		self._load_map_override(manifest["map"])
+		self._calculate_zoom_limit()
 	else:
 		self._show_base_map()
+		self._zoom_limit = 1.0
+	self._set_zoom(1.0)
+	self._manage_zoom_buttons()
 
 func _add_mission_markers(missions):
 	var index = 1
@@ -210,3 +220,51 @@ func _load_map_override(filename):
 
 	self.base_map.hide()
 	self.override_map.show()
+
+func _calculate_zoom_limit():
+	self._zoom_limit = 1.0
+
+	var fraction_x = float(self.campaign_viewport.size.x) / float(self.override_map.texture.get_width())
+	var fraction_y = float(self.campaign_viewport.size.y) / float(self.override_map.texture.get_height())
+	var fraction = max(fraction_x, fraction_y)
+
+	while fraction < self._zoom_limit - self._zoom_step:
+		self._zoom_limit -= self._zoom_step
+
+func _set_zoom(amount):
+	amount = clamp(amount, self._zoom_limit, 1.0)
+	self._zoom_level = amount
+	self.campaign_camera.zoom.x = amount
+	self.campaign_camera.zoom.y = amount
+
+func _manage_zoom_buttons():
+	if self._zoom_level <= self._zoom_limit:
+		self.zoom_out_button.hide()
+	else:
+		self.zoom_out_button.show()
+
+	if self._zoom_level >= 1.0:
+		self.zoom_in_button.hide()
+	else:
+		self.zoom_in_button.show()
+
+func _on_zoom_in_button_pressed():
+	if self._zoom_level >= 1.0:
+		return
+
+	self.audio.play("menu_click")
+	self._set_zoom(self._zoom_level + self._zoom_step)
+	self._manage_zoom_buttons()
+	if self._zoom_level >= 1.0:
+		self.zoom_out_button.grab_focus()
+
+
+func _on_zoom_out_button_pressed():
+	if self._zoom_level <= self._zoom_limit:
+		return
+
+	self.audio.play("menu_click")
+	self._set_zoom(self._zoom_level - self._zoom_step)
+	self._manage_zoom_buttons()
+	if self._zoom_level <= self._zoom_limit:
+		self.zoom_in_button.grab_focus()

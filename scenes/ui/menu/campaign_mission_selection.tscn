@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cyl32ydicrnad"]
+[gd_scene load_steps=26 format=3 uid="uid://cyl32ydicrnad"]
 
 [ext_resource type="Script" path="res://scenes/ui/menu/campaign_mission_selection.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_es55k"]
@@ -16,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://pfrikdjfa7lc" path="res://assets/gui/menu/buttons/buttonSquare_brown.png" id="9_yeryd"]
 [ext_resource type="Texture2D" uid="uid://b0unbl4vx0tow" path="res://assets/gui/menu/buttons/buttonSquare_brown_pressed.png" id="10_cbjjd"]
 [ext_resource type="Texture2D" uid="uid://by1obiwt54odo" path="res://assets/gui/menu/buttons/buttonSquare_brown_hover.png" id="11_3oxor"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="17_m45k7"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="18_f2m1f"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="19_icgj7"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_ppni4"]
 viewport_path = NodePath("widgets/map_viewport")
@@ -414,6 +417,50 @@ scale = Vector2(2, 2)
 texture = ExtResource("8")
 offset = Vector2(60, 53)
 
+[node name="zoom_in_button" type="TextureButton" parent="widgets"]
+offset_left = 1032.0
+offset_top = 580.0
+offset_right = 1068.0
+offset_bottom = 620.0
+texture_normal = ExtResource("17_m45k7")
+texture_pressed = ExtResource("18_f2m1f")
+texture_hover = ExtResource("19_icgj7")
+texture_focused = ExtResource("19_icgj7")
+
+[node name="label" type="Label" parent="widgets/zoom_in_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_ei8ho")
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="zoom_out_button" type="TextureButton" parent="widgets"]
+offset_left = 982.0
+offset_top = 580.0
+offset_right = 1018.0
+offset_bottom = 620.0
+texture_normal = ExtResource("17_m45k7")
+texture_pressed = ExtResource("18_f2m1f")
+texture_hover = ExtResource("19_icgj7")
+texture_focused = ExtResource("19_icgj7")
+
+[node name="label" type="Label" parent="widgets/zoom_out_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_ei8ho")
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_h4u4c")
@@ -424,3 +471,5 @@ speed_scale = 4.0
 [connection signal="pressed" from="widgets/select_button" to="." method="_on_select_button_pressed"]
 [connection signal="pressed" from="widgets/prev_button" to="." method="_on_prev_button_pressed"]
 [connection signal="pressed" from="widgets/next_button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="widgets/zoom_in_button" to="." method="_on_zoom_in_button_pressed"]
+[connection signal="pressed" from="widgets/zoom_out_button" to="." method="_on_zoom_out_button_pressed"]
