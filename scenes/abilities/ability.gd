@@ -60,3 +60,6 @@ func reset_cooldown():
 func cd_tick_down():
 	if self.cd_turns_left > 0:
 		self.cd_turns_left -= 1
+
+func get_cost():
+	return self.ap_cost

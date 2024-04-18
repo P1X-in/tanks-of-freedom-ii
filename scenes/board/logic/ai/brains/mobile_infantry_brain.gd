@@ -21,7 +21,7 @@ func _gather_ability_actions(entity_tile, ap, _board):
         unit_range = ap
 
     for ability in unit.active_abilities:
-        if ability.is_visible() and ability.ap_cost <= ap and not ability.is_on_cooldown():
+        if ability.is_visible() and ability.get_cost() <= ap and not ability.is_on_cooldown():
             for friendly_unit_tile in self.pathfinder.own_units:
                 target_tile = self.pathfinder.own_units[friendly_unit_tile]
                 

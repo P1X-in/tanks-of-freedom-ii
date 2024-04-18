@@ -20,3 +20,9 @@ func _execute(board, position):
 
 func is_tile_applicable(tile, source_tile):
     return tile.has_friendly_unit(self.source.side) and tile != source_tile and (tile.unit.tile.unit_class in self.MEDKIT_UNITS)
+
+func get_cost():
+    if self.source == null or self.source.level == 0:
+        return super.get_cost()
+
+    return 0
