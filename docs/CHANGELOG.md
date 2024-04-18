@@ -15,6 +15,7 @@
   - Documentation added to MANUAL.md
 - Added new content suppression for maps created with older editor version
   - New abilities need to be marked with proper dlc version
+- Added Credits screen
 - Fixed a bug preventing online maps from being downloaded
 
 

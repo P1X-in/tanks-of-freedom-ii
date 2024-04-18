@@ -14,6 +14,8 @@ extends Control
 @onready var online_lobby = $"online_lobby/lobby"
 @onready var multiplayer_panel = $"multiplayer/multiplayer"
 @onready var multiplayer_lobby_panel = $"multiplayer_lobby/lobby"
+@onready var credits_panel = $"credits/credits"
+@onready var credits_button = $"credits_button/button"
 
 func bind_menu(main_menu):
 	self.menu.bind_menu(main_menu)
@@ -27,6 +29,7 @@ func bind_menu(main_menu):
 	self.online_lobby.bind_menu(main_menu)
 	self.multiplayer_panel.bind_menu(main_menu)
 	self.multiplayer_lobby_panel.bind_menu(main_menu)
+	self.credits_panel.bind_menu(main_menu)
 
 	var version_string = tr("TR_VERSION") + " v" + ProjectSettings.get_setting("application/config/version")
 	if main_menu.settings._is_steam_deck():
@@ -38,10 +41,12 @@ func bind_menu(main_menu):
 func hide_menu():
 	self.menu.hide_panel()
 	#self.logo.hide()
+	self.credits_button.hide()
 
 func show_menu():
 	self.menu.show_panel()
 	#self.logo.show()
+	self.credits_button.show()
 
 func show_picker():
 	self.picker.show_picker()
@@ -122,3 +127,14 @@ func show_multiplayer_lobby():
 
 func hide_multiplayer_lobby():
 	self.multiplayer_lobby_panel.hide_panel()
+
+func show_credits():
+	self.credits_panel.show_panel()
+
+func hide_credits():
+	self.credits_panel.hide_panel()
+
+
+func _on_button_pressed():
+	self.credits_panel.audio.play("menu_back")
+	self.credits_panel.main_menu.open_credits()

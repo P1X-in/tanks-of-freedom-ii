@@ -326,3 +326,14 @@ func close_online_lobby():
 	self.ui.hide_online_lobby()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.show_online()
+
+func open_credits():
+	self.ui.hide_menu()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.show_credits()
+
+func close_credits():
+	self.ui.hide_credits()
+	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
+	self.ui.show_menu()
+
