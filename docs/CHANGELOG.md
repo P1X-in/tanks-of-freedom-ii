@@ -3,6 +3,9 @@
 
 ### 0.7.0-alpha
 - Added unit healthbars and level stars
+- Mobile Infantry Medkit ability rebalanced
+  - Ability now available at level 0 for 5AP
+  - Ability now free at level 1
 - Added more blur for tilt-shift effect near max camera zoom
 - Added new cover maps for campaigns
 - Added story editor to map editor allowing to create scenarios
