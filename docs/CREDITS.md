@@ -18,3 +18,5 @@
 ## engine
    - Godot Engine https://godotengine.org/
    
+## foss contributors
+   - GaidamakUA
