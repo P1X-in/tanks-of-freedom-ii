@@ -23,6 +23,10 @@ config/windows_native_icon="res://assets/icons/tof2_icon.ico"
 name_pl=""
 config/name_pl="Czołgi Wolności II"
 
+[audio]
+
+buses/default_bus_layout="res://assets/default_bus_layout.tres"
+
 [autoload]
 
 MapManager="*res://scripts/services/map_manager.gd"
@@ -228,5 +232,6 @@ textures/decals/filter=0
 textures/light_projectors/filter=0
 environment/volumetric_fog/use_filter=0
 anti_aliasing/quality/msaa_3d=2
+environment/defaults/default_environment="res://assets/default_env.tres"
 threads/thread_model=2
 gles3/shaders/shader_compilation_mode=2

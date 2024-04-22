@@ -7,7 +7,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cw6doarcq783m" path="res://assets/gui/board/map_frame.obj" id="5"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dj2ff8ec0jux7" path="res://assets/camera_attributes.tres" id="7_llrhv"]
 [ext_resource type="PackedScene" uid="uid://dfmdw1ysub4x1" path="res://scenes/camera.tscn" id="11"]
-[ext_resource type="Environment" uid="uid://bdfocgrybgkli" path="res://default_env.tres" id="12"]
+[ext_resource type="Environment" uid="uid://bdfocgrybgkli" path="res://assets/default_env.tres" id="12"]
 
 [sub_resource type="PlaneMesh" id="1"]
 material = ExtResource("2")
