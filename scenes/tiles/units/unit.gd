@@ -402,7 +402,8 @@ func _get_abilities_status():
 	return status
 
 func restore_from_state(state):
-	self.scripting_tags = state["tags"]
+	if state.has("tags"):
+		self.scripting_tags = state["tags"]
 	self.hp = state["stats"]["hp"]
 	self.move = state["stats"]["move"]
 	self.attacks = state["stats"]["attacks"]

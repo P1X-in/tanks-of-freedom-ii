@@ -1,6 +1,9 @@
 {
     "metadata": {
-
+        "base_code": null,
+        "editor_version": 1,
+        "iteration": 1,
+        "name": "2p_split2"
     },
     "scripts": {
         "stories": {
@@ -680,12 +683,32 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
                 "modifiers": {
 
                 },
                 "rotation": 0,
                 "side": "red",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "team": null,
                 "tile": "red_infantry"
             }
         },
@@ -745,12 +768,32 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
                 "modifiers": {
 
                 },
                 "rotation": 0,
                 "side": "red",
+                "stats": {
+                    "armor": 2,
+                    "attack": 10,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 6,
+                    "move": 6
+                },
+                "team": null,
                 "tile": "red_tank"
             }
         },
@@ -870,12 +913,32 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
                 "modifiers": {
 
                 },
                 "rotation": 180,
                 "side": "yellow",
+                "stats": {
+                    "armor": 2,
+                    "attack": 10,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 6,
+                    "move": 6
+                },
+                "team": null,
                 "tile": "yellow_tank"
             }
         },
@@ -1486,12 +1549,32 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
                 "modifiers": {
 
                 },
                 "rotation": 0,
                 "side": "red",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "team": null,
                 "tile": "red_infantry"
             }
         },
@@ -1556,12 +1639,32 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
                 "modifiers": {
 
                 },
                 "rotation": 0,
                 "side": "red",
+                "stats": {
+                    "armor": 1,
+                    "attack": 8,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 7,
+                    "move": 7
+                },
+                "team": null,
                 "tile": "red_heli"
             }
         },
@@ -1681,12 +1784,32 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
                 "modifiers": {
 
                 },
                 "rotation": 180,
                 "side": "yellow",
+                "stats": {
+                    "armor": 1,
+                    "attack": 8,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 7,
+                    "move": 7
+                },
+                "team": null,
                 "tile": "yellow_heli"
             }
         },
@@ -1751,12 +1874,32 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
                 "modifiers": {
 
                 },
                 "rotation": 180,
                 "side": "yellow",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "team": null,
                 "tile": "yellow_infantry"
             }
         },
@@ -2367,12 +2510,32 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
                 "modifiers": {
 
                 },
                 "rotation": 0,
                 "side": "red",
+                "stats": {
+                    "armor": 2,
+                    "attack": 10,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 6,
+                    "move": 6
+                },
+                "team": null,
                 "tile": "red_tank"
             }
         },
@@ -2492,12 +2655,32 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
                 "modifiers": {
 
                 },
                 "rotation": 180,
                 "side": "yellow",
+                "stats": {
+                    "armor": 2,
+                    "attack": 10,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 6,
+                    "move": 6
+                },
+                "team": null,
                 "tile": "yellow_tank"
             }
         },
@@ -2557,12 +2740,32 @@
                 "tile": null
             },
             "unit": {
+                "abilities": {
+                    "ability2": [
+                        false,
+                        0
+                    ]
+                },
                 "ai_paused": false,
                 "modifiers": {
 
                 },
                 "rotation": 180,
                 "side": "yellow",
+                "stats": {
+                    "armor": 0,
+                    "attack": 6,
+                    "attacks": 1,
+                    "experience": 0,
+                    "hp": 10,
+                    "kills": 0,
+                    "level": 0,
+                    "max_attacks": 1,
+                    "max_hp": 10,
+                    "max_move": 4,
+                    "move": 4
+                },
+                "team": null,
                 "tile": "yellow_infantry"
             }
         },

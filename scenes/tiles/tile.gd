@@ -23,11 +23,13 @@ var current_rotation = 0
 func get_dict():
 	var tile_rotation = self.get_rotation_degrees()
 
-	return {
+	var tile_dict = {
 		"tile" : self.template_name,
-		"rotation" : tile_rotation.y,
-		"tags" : self.scripting_tags
+		"rotation" : tile_rotation.y
 	}
+	if self.scripting_tags.size() > 0:
+		tile_dict["tags"] = self.scripting_tags
+	return tile_dict
 
 func reset_position_for_tile_view():
 	var mesh_position = $"mesh".get_position()
