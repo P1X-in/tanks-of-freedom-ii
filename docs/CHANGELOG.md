@@ -2,6 +2,12 @@
 ## Changelog
 
 ### 0.7.0-alpha
+- New Skirmish mode maps
+  - 2p_cityscape
+- Renamed existing Skirmish mode maps
+  - `crossroad` is now `2p_crossroad`
+  - `crossroad2` is now `4p_crossroad`
+  - `split2` is now `2p_split2`
 - Added unit healthbars and level stars
 - Mobile Infantry Medkit ability rebalanced
   - Ability now available at level 0 for 5AP
