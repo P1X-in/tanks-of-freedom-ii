@@ -208,6 +208,10 @@ cheat_kill={
 ]
 }
 
+[input_devices]
+
+pointing/android/enable_pan_and_scale_gestures=true
+
 [internationalization]
 
 locale/translations=PackedStringArray("res://assets/translations/common.en.en.translation", "res://assets/translations/common.pl.pl.translation", "res://assets/translations/core.en.en.translation", "res://assets/translations/core.pl.pl.translation")

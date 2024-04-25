@@ -37,6 +37,8 @@ const MODE_AW = "AW"
 
 @export var camera_space_size = 100
 
+@export var pan_speed = 20
+
 var camera_mode = "TOF"
 
 var camera_pivot
@@ -148,6 +150,11 @@ func _input(event):
 
 		if self.mouse_drag:
 			self._mouse_shift_camera(event.relative)
+	elif event is InputEventPanGesture:
+		self._mouse_shift_camera(event.delta * pan_speed)
+	elif event is InputEventMagnifyGesture:
+		var zoom_steps = int((event.factor - 1) * 100)
+		self._mouse_zoom(self.mouse_zoom_step * zoom_steps)
 
 func _process(delta):
 	if self.paused:
@@ -424,25 +431,23 @@ func _shift_camera_translation(offset):
 	self.set_position(current_position)
 
 func _mouse_zoom_in():
-	camera_distance -= self.mouse_zoom_step
-	camera_distance = clamp(camera_distance, self.camera_distance_min, self.camera_distance_max)
-
-	tof_camera_distance -= self.mouse_zoom_step
-	tof_camera_distance = clamp(tof_camera_distance, self.tof_camera_distance_min, self.tof_camera_distance_max)
-
-	aw_camera_distance -= self.mouse_zoom_step
-	aw_camera_distance = clamp(aw_camera_distance, self.aw_camera_distance_min, self.aw_camera_distance_max)
+	self._mouse_zoom(-self.mouse_zoom_step)
 
 
 func _mouse_zoom_out():
-	camera_distance += self.mouse_zoom_step
+	self._mouse_zoom(self.mouse_zoom_step)
+
+
+func _mouse_zoom(step):
+	camera_distance += step
 	camera_distance = clamp(camera_distance, self.camera_distance_min, self.camera_distance_max)
 
-	tof_camera_distance += self.mouse_zoom_step
+	tof_camera_distance += step
 	tof_camera_distance = clamp(tof_camera_distance, self.tof_camera_distance_min, self.tof_camera_distance_max)
 
-	aw_camera_distance += self.mouse_zoom_step
+	aw_camera_distance += step
 	aw_camera_distance = clamp(aw_camera_distance, self.aw_camera_distance_min, self.aw_camera_distance_max)
+
 
 func _mouse_shift_camera(relative_offset):
 	var camera_fraction
