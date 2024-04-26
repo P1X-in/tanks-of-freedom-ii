@@ -133,8 +133,41 @@ text = "TR_RANDOM"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="allow_level_up" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 190.0
+offset_right = 355.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("2_m2k20")
+text = "TR_ALLOW_LEVEL_UP"
+vertical_alignment = 1
+
+[node name="allow_level_up_toggle" type="TextureButton" parent="allow_level_up"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+texture_normal = ExtResource("3_go838")
+texture_pressed = ExtResource("4_18ge0")
+texture_hover = ExtResource("5_flqyd")
+texture_focused = ExtResource("5_flqyd")
+
+[node name="label" type="Label" parent="allow_level_up/allow_level_up_toggle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_v7dr1")
+text = "TR_OFF"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="skip_initial_hq_cam/skip_initial_hq_cam_toggle" to="." method="_on_skip_initial_hq_cam_toggle_pressed"]
 [connection signal="text_changed" from="initial_cam_position/x" to="." method="_on_text_changed"]
 [connection signal="text_changed" from="initial_cam_position/y" to="." method="_on_text_changed"]
 [connection signal="pressed" from="initial_cam_position/picker_button" to="." method="_on_picker_button_pressed"]
 [connection signal="pressed" from="track/track_button" to="." method="_on_track_button_pressed"]
+[connection signal="pressed" from="allow_level_up/allow_level_up_toggle" to="." method="_on_allow_level_up_toggle_pressed"]

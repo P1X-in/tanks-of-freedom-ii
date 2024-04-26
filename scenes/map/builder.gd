@@ -186,6 +186,9 @@ func force_place_unit(position, name, rotation, side=null, ai_paused=false):
     if self.enable_health and self.map.settings.get_option("show_health"):
         new_unit.enable_health()
 
+    if self.map.model.metadata.has("allow_level_up"):
+        new_unit.allow_level_up = self.map.model.metadata["allow_level_up"]
+
     return new_unit
 
 

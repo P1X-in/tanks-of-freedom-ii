@@ -25,6 +25,8 @@ This tab contains some map settings that are useful for both skirmish and campai
 
 - `Track` - musical track that is going to play during a match on this map. By default the track is randomised.
 
+- `Allow Level up` - wether or not units are allowed to level up on this map. Can be used to create classic ToF 1-style maps.
+
 ### Triggers tab
 
 Triggers can be set up to react to what is happening on the game board in order to start Stories (configured in Stories tab). New Trigger can be created by providing a name.

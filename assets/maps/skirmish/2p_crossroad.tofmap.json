@@ -1,8 +1,9 @@
 {
     "metadata": {
+        "allow_level_up": false,
         "base_code": null,
         "editor_version": 1,
-        "iteration": 1,
+        "iteration": 2,
         "name": "2p_crossroad"
     },
     "scripts": {

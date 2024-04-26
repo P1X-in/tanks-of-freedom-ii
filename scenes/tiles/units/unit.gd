@@ -51,6 +51,7 @@ var tether_length = 0
 var modifiers = {}
 var passive_ability = null
 var active_abilities = []
+var allow_level_up = true
 
 var unit_rotations = {
 	"s" : 0,
@@ -358,7 +359,7 @@ func gain_exp():
 			self.level_up()
 
 func level_up():
-	if not self.is_max_level():
+	if not self.is_max_level() and self.allow_level_up:
 		self.level += 1
 		self.animations.play("level_up")
 		self.sfx_effect("level_up")

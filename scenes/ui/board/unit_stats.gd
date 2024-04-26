@@ -85,6 +85,10 @@ func bind_unit(unit, tile_preview, board_object):
 	self.show_active_abilities(unit, board_object)
 	self.show_passive_ability(unit)
 
+	if self.board != null:
+		if self.board.map.model.metadata.has("allow_level_up") and not self.board.map.model.metadata["allow_level_up"]:
+			self.level_value.set_text("-")
+
 func show_active_abilities(unit, board_object):
 	if not unit.has_active_ability():
 		return

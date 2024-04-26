@@ -4,6 +4,7 @@ extends Control
 @onready var initial_cam_pos_x = $"initial_cam_position/x"
 @onready var initial_cam_pos_y = $"initial_cam_position/y"
 @onready var track_label = $"track/track_button/label"
+@onready var allow_level_up_label = $"allow_level_up/allow_level_up_toggle/label"
 @onready var audio = $"/root/SimpleAudioLibrary"
 
 signal picker_requested(context)
@@ -11,6 +12,7 @@ signal picker_requested(context)
 var skip_initial_hq_cam = false
 var initial_cam_pos = null
 var track = null
+var allow_level_up = true
 
 
 const tracks = [
@@ -28,7 +30,7 @@ func show_panel():
 	_update_skip_initial_hq_cam_label()
 	_update_initial_cam_pos_inputs()
 	_update_track_label()
-
+	_update_allow_level_up_label()
 
 
 func ingest_metadata(metadata):
@@ -49,6 +51,12 @@ func ingest_metadata(metadata):
 	else:
 		self.track = null
 	_update_track_label()
+	
+	if metadata.has("allow_level_up"):
+		self.allow_level_up = metadata["allow_level_up"]
+	else:
+		self.allow_level_up = true
+	_update_allow_level_up_label()
 
 
 func fill_metadata(metadata):
@@ -66,6 +74,11 @@ func fill_metadata(metadata):
 		metadata["track"] = self.track
 	else:
 		metadata.erase("track")
+		
+	if not self.allow_level_up:
+		metadata["allow_level_up"] = self.allow_level_up
+	else:
+		metadata.erase("allow_level_up")
 
 	return metadata
 
@@ -76,6 +89,12 @@ func _update_skip_initial_hq_cam_label():
 	else:
 		self.skip_initial_hq_cam_label.set_text("TR_OFF")
 
+func _update_allow_level_up_label():
+	if self.allow_level_up:
+		self.allow_level_up_label.set_text("TR_ON")
+	else:
+		self.allow_level_up_label.set_text("TR_OFF")
+		
 func _update_initial_cam_pos_inputs():
 	if self.initial_cam_pos != null:
 		initial_cam_pos_x.set_text(str(self.initial_cam_pos[0]))
@@ -136,4 +155,7 @@ func _handle_picker_response(response, context):
 		self.initial_cam_pos = [response.x, response.y]
 		_update_initial_cam_pos_inputs()
 
-	
+func _on_allow_level_up_toggle_pressed():
+	self.audio.play("menu_click")
+	self.allow_level_up = not self.allow_level_up
+	_update_allow_level_up_label()
