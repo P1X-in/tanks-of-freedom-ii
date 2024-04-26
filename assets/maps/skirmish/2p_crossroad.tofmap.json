@@ -3,7 +3,7 @@
         "allow_level_up": false,
         "base_code": null,
         "editor_version": 1,
-        "iteration": 2,
+        "iteration": 3,
         "name": "2p_crossroad"
     },
     "scripts": {
@@ -652,7 +652,7 @@
         "20_25": {
             "building": {
                 "abilities": {
-                    "ability0": false,
+                    "ability0": true,
                     "ability2": false
                 },
                 "rotation": 0,
@@ -1740,7 +1740,7 @@
         "23_27": {
             "building": {
                 "abilities": {
-                    "ability0": false,
+                    "ability0": true,
                     "ability2": false
                 },
                 "rotation": 270,
@@ -1775,9 +1775,9 @@
         "23_28": {
             "building": {
                 "abilities": {
-                    "ability0": false,
+                    "ability0": true,
                     "ability2": false,
-                    "ability4": false
+                    "ability4": true
                 },
                 "rotation": 90,
                 "side": "blue",
@@ -2106,7 +2106,7 @@
         "25_20": {
             "building": {
                 "abilities": {
-                    "ability0": false,
+                    "ability0": true,
                     "ability2": false
                 },
                 "rotation": 90,
@@ -2406,7 +2406,7 @@
         "27_23": {
             "building": {
                 "abilities": {
-                    "ability0": false,
+                    "ability0": true,
                     "ability2": false
                 },
                 "rotation": 180,
@@ -2561,9 +2561,9 @@
         "28_23": {
             "building": {
                 "abilities": {
-                    "ability0": false,
+                    "ability0": true,
                     "ability2": false,
-                    "ability4": false
+                    "ability4": true
                 },
                 "rotation": 0,
                 "side": "red",
