@@ -9,6 +9,7 @@
   - `crossroad` is now `2p_crossroad`
   - `crossroad2` is now `4p_crossroad2`
   - `split2` is now `2p_split2`
+- Removed new units and level ups from `2p_crossroad` to make it closer to ToF 1 classic
 - Added unit healthbars and level stars
 - Mobile Infantry Medkit ability rebalanced
   - Ability now available at level 0 for 5AP
