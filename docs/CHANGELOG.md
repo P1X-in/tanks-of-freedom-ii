@@ -5,6 +5,7 @@
 - New Skirmish mode maps
   - `2p_cityscape`
   - `2p_oasis`
+  - `2p_forlorn`
 - Renamed existing Skirmish mode maps
   - `crossroad` is now `2p_crossroad`
   - `crossroad2` is now `4p_crossroad2`
