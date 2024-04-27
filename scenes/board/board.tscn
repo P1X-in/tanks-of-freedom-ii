@@ -1,39 +1,39 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=10 format=3 uid="uid://dccdvvx62ulgt"]
 
-[ext_resource path="res://scenes/map/map.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/board/board.gd" type="Script" id=2]
-[ext_resource path="res://scenes/board/ui/ui.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/ui/markers/tile_marker.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/board/logic/markers/movement_markers.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/board/logic/markers/interaction_markers.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/board/logic/markers/path_markers.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/fx/explosion.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/board/logic/markers/ability_markers.tscn" type="PackedScene" id=9]
+[ext_resource type="PackedScene" uid="uid://kxsoppflnua2" path="res://scenes/map/map.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/board/board.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://dg2dljfus8ij1" path="res://scenes/board/ui/ui.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cirwr7ypc7t1u" path="res://scenes/ui/markers/tile_marker.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/board/logic/markers/movement_markers.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/board/logic/markers/interaction_markers.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://scenes/board/logic/markers/path_markers.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://siiihsh6wb0p" path="res://scenes/fx/explosion.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://scenes/board/logic/markers/ability_markers.tscn" id="9"]
 
 [node name="board" type="Node3D"]
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="marker_anchor" type="Node3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 4 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 4)
 
-[node name="tile_marker" parent="marker_anchor" instance=ExtResource( 4 )]
+[node name="tile_marker" parent="marker_anchor" instance=ExtResource("4")]
 visible = false
 
-[node name="movement_markers" parent="marker_anchor" instance=ExtResource( 5 )]
+[node name="movement_markers" parent="marker_anchor" instance=ExtResource("5")]
 map = NodePath("../../map")
 
-[node name="interaction_markers" parent="marker_anchor" instance=ExtResource( 6 )]
+[node name="interaction_markers" parent="marker_anchor" instance=ExtResource("6")]
 map = NodePath("../../map")
 
-[node name="path_markers" parent="marker_anchor" instance=ExtResource( 7 )]
+[node name="path_markers" parent="marker_anchor" instance=ExtResource("7")]
 map = NodePath("../../map")
 
-[node name="ability_markers" parent="marker_anchor" instance=ExtResource( 9 )]
+[node name="ability_markers" parent="marker_anchor" instance=ExtResource("9")]
 map = NodePath("../../map")
 
-[node name="explosion" parent="marker_anchor" instance=ExtResource( 8 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0 )
+[node name="explosion" parent="marker_anchor" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
 
-[node name="map" parent="." instance=ExtResource( 1 )]
+[node name="map" parent="." instance=ExtResource("1")]
 
-[node name="ui" parent="." instance=ExtResource( 3 )]
+[node name="ui" parent="." instance=ExtResource("3")]
