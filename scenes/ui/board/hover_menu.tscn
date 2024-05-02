@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://ce08h2jnhhsh4"]
+[gd_scene load_steps=14 format=3 uid="uid://ce08h2jnhhsh4"]
 
 [ext_resource type="Script" path="res://scenes/ui/board/hover_menu.gd" id="1_j6ss3"]
 [ext_resource type="Texture2D" uid="uid://b5k32hj4wy5tb" path="res://assets/gui/editor/circle_white.png" id="2_0uiag"]
 [ext_resource type="Texture2D" uid="uid://biu2u7rf4o1vh" path="res://assets/gui/editor/circle.png" id="3_nd642"]
 [ext_resource type="PackedScene" uid="uid://npd40qtkohuq" path="res://scenes/ui/icons/coin.tscn" id="4_5ny1k"]
 [ext_resource type="PackedScene" uid="uid://brl2hwxvkhpsm" path="res://scenes/ui/icons/hourglass.tscn" id="4_d3xti"]
+[ext_resource type="PackedScene" uid="uid://dbuy7ss84alp" path="res://scenes/ui/icons/hotkey.tscn" id="5_daydi"]
 [ext_resource type="PackedScene" uid="uid://cpeera0162bio" path="res://scenes/ui/icons/star2.tscn" id="5_m6cda"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/info.tscn" id="5_ocuec"]
 
@@ -128,6 +129,13 @@ texture = ExtResource("3_nd642")
 
 [node name="hourglass" parent="turn_button/icon_anchor" instance=ExtResource("4_d3xti")]
 
+[node name="hotkey" parent="turn_button/icon_anchor" instance=ExtResource("5_daydi")]
+position = Vector2(40, 40)
+scale = Vector2(2, 2)
+region_rect = Rect2(336, 64, 16, 16)
+keyboard_frame = 157
+gamepad_frame = 50
+
 [node name="mouse_click" type="Area2D" parent="turn_button"]
 
 [node name="collision" type="CollisionShape2D" parent="turn_button/mouse_click"]
@@ -184,6 +192,13 @@ texture = ExtResource("3_nd642")
 
 [node name="info" parent="stats_button/button_anchor/icon_anchor" instance=ExtResource("5_ocuec")]
 
+[node name="hotkey" parent="stats_button/button_anchor/icon_anchor" instance=ExtResource("5_daydi")]
+position = Vector2(40, 40)
+scale = Vector2(2, 2)
+region_rect = Rect2(320, 64, 16, 16)
+keyboard_frame = 156
+gamepad_frame = 49
+
 [node name="mouse_click" type="Area2D" parent="stats_button/button_anchor"]
 
 [node name="collision" type="CollisionShape2D" parent="stats_button/button_anchor/mouse_click"]
@@ -223,12 +238,3 @@ libraries = {
 "": SubResource("AnimationLibrary_kefv0")
 }
 speed_scale = 4.0
-
-[connection signal="mouse_entered" from="turn_button/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["turn"]]
-[connection signal="mouse_exited" from="turn_button/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["turn"]]
-[connection signal="mouse_entered" from="build_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["build"]]
-[connection signal="mouse_exited" from="build_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["build"]]
-[connection signal="mouse_entered" from="stats_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["stats"]]
-[connection signal="mouse_exited" from="stats_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["stats"]]
-[connection signal="mouse_entered" from="skills_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["skills"]]
-[connection signal="mouse_exited" from="skills_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["skills"]]
