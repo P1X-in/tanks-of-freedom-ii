@@ -238,3 +238,12 @@ libraries = {
 "": SubResource("AnimationLibrary_kefv0")
 }
 speed_scale = 4.0
+
+[connection signal="mouse_entered" from="turn_button/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["turn"]]
+[connection signal="mouse_exited" from="turn_button/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["turn"]]
+[connection signal="mouse_entered" from="build_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["build"]]
+[connection signal="mouse_exited" from="build_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["build"]]
+[connection signal="mouse_entered" from="stats_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["stats"]]
+[connection signal="mouse_exited" from="stats_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["stats"]]
+[connection signal="mouse_entered" from="skills_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_entered" binds= ["skills"]]
+[connection signal="mouse_exited" from="skills_button/button_anchor/mouse_click" to="." method="_on_mouse_click_mouse_exited" binds= ["skills"]]
