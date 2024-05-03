@@ -1,6 +1,8 @@
 @tool
 extends Sprite2D
 
+enum DISPLAY_MODE {BOTH, KEYBOARD, GAMEPAD}
+
 @export var keyboard_frame:int:
 	set(val):
 		keyboard_frame = val
@@ -29,6 +31,18 @@ extends Sprite2D
 			region_rect = get_atlas_rect(gamepad_frame, gamepad_cell_size)
 		else:
 			_update_icon()
+@export var display_mode :DISPLAY_MODE = DISPLAY_MODE.BOTH:
+	set(val):
+		display_mode = val
+		if Engine.is_editor_hint():
+			match val:
+				DISPLAY_MODE.GAMEPAD:
+					region_rect = get_atlas_rect(gamepad_frame, gamepad_cell_size)
+				_:
+					region_rect = get_atlas_rect(keyboard_frame, keyboard_cell_size)
+		else:
+			_update_icon()
+
 
 
 const atlas_params := {
@@ -37,7 +51,10 @@ const atlas_params := {
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
-		region_rect = get_atlas_rect(keyboard_frame, keyboard_cell_size)
+		if display_mode == DISPLAY_MODE.GAMEPAD:
+			region_rect = get_atlas_rect(gamepad_frame, gamepad_cell_size)
+		else:
+			region_rect = get_atlas_rect(keyboard_frame, keyboard_cell_size)
 		return
 	ButtonHotkeyService.mode_changed.connect(_update_icon)
 	_update_icon()
@@ -45,9 +62,17 @@ func _ready() -> void:
 func _update_icon():
 	match ButtonHotkeyService.current_mode:
 		ButtonHotkeyService.MODE.KEYBOARD:
-			region_rect = get_atlas_rect(keyboard_frame, keyboard_cell_size)
+			if display_mode == DISPLAY_MODE.GAMEPAD:
+				hide()
+			else:
+				show()
+				region_rect = get_atlas_rect(keyboard_frame, keyboard_cell_size)
 		ButtonHotkeyService.MODE.GAMEPAD:
-			region_rect = get_atlas_rect(gamepad_frame, gamepad_cell_size)
+			if display_mode == DISPLAY_MODE.KEYBOARD:
+				hide()
+			else:
+				show()
+				region_rect = get_atlas_rect(gamepad_frame, gamepad_cell_size)
 
 func get_atlas_rect(atlas_frame:int, size:Vector2 = Vector2(1,1)):
 	var altasCellSize = texture.get_size() / atlas_params.atlas_size

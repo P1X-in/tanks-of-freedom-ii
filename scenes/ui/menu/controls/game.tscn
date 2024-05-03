@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://crv1ageml0d4g"]
+[gd_scene load_steps=4 format=3 uid="uid://crv1ageml0d4g"]
 
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="1_ubwp4"]
 [ext_resource type="Texture2D" uid="uid://bpunwi45xf0cx" path="res://assets/gui/icons/controls/tilemap_packed.png" id="2"]
+[ext_resource type="Script" path="res://scenes/ui/icons/hotkey.gd" id="3_7y3i1"]
 
 [node name="game" type="Control"]
 layout_mode = 3
@@ -39,32 +40,27 @@ text = "TR_CAMERA"
 points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
 
-[node name="key" type="Sprite2D" parent="binds/camera"]
+[node name="hotkey" type="Sprite2D" parent="binds/camera"]
 position = Vector2(180, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
 centered = false
-hframes = 34
-vframes = 24
-frame = 253
+region_enabled = true
+region_rect = Rect2(144, 32, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 77
+gamepad_frame = 253
 
-[node name="key2" type="Sprite2D" parent="binds/camera"]
+[node name="hotkey2" type="Sprite2D" parent="binds/camera"]
 position = Vector2(230, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
 centered = false
-hframes = 34
-vframes = 24
-frame = 321
-
-[node name="key3" type="Sprite2D" parent="binds/camera"]
-position = Vector2(280, -7)
-scale = Vector2(2, 2)
-texture = ExtResource("2")
-centered = false
-hframes = 34
-vframes = 24
-frame = 77
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+script = ExtResource("3_7y3i1")
+gamepad_frame = 321
+display_mode = 2
 
 [node name="switch_cam" type="Label" parent="binds"]
 layout_mode = 0
@@ -79,16 +75,8 @@ text = "TR_CAM_SW"
 points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
 
-[node name="key" type="Sprite2D" parent="binds/switch_cam"]
-position = Vector2(180, -7)
-scale = Vector2(2, 2)
-texture = ExtResource("2")
-centered = false
-hframes = 34
-vframes = 24
-frame = 650
-
 [node name="key2" type="Sprite2D" parent="binds/switch_cam"]
+visible = false
 position = Vector2(230, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -107,6 +95,17 @@ hframes = 34
 vframes = 24
 frame = 77
 
+[node name="hotkey" type="Sprite2D" parent="binds/switch_cam"]
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(336, 48, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 123
+gamepad_frame = 650
+
 [node name="zoom" type="Label" parent="binds"]
 layout_mode = 0
 offset_left = 20.0
@@ -121,6 +120,7 @@ points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
 
 [node name="key" type="Sprite2D" parent="binds/zoom"]
+visible = false
 position = Vector2(180, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -130,6 +130,7 @@ vframes = 24
 frame = 585
 
 [node name="key2" type="Sprite2D" parent="binds/zoom"]
+visible = false
 position = Vector2(230, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -139,6 +140,7 @@ vframes = 24
 frame = 586
 
 [node name="key3" type="Sprite2D" parent="binds/zoom"]
+visible = false
 position = Vector2(280, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -146,6 +148,28 @@ centered = false
 hframes = 34
 vframes = 24
 frame = 82
+
+[node name="hotkey" type="Sprite2D" parent="binds/zoom"]
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(224, 32, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 82
+gamepad_frame = 585
+
+[node name="hotkey2" type="Sprite2D" parent="binds/zoom"]
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+script = ExtResource("3_7y3i1")
+gamepad_frame = 586
+display_mode = 2
 
 [node name="select" type="Label" parent="binds"]
 layout_mode = 0
@@ -161,6 +185,7 @@ points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
 
 [node name="key" type="Sprite2D" parent="binds/select"]
+visible = false
 position = Vector2(180, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -170,6 +195,7 @@ vframes = 24
 frame = 47
 
 [node name="key2" type="Sprite2D" parent="binds/select"]
+visible = false
 position = Vector2(230, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -179,6 +205,7 @@ vframes = 24
 frame = 77
 
 [node name="key3" type="Sprite2D" parent="binds/select"]
+visible = false
 position = Vector2(280, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -188,6 +215,7 @@ vframes = 24
 frame = 235
 
 [node name="key4" type="Sprite2D" parent="binds/select"]
+visible = false
 position = Vector2(312, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -195,6 +223,29 @@ centered = false
 hframes = 34
 vframes = 24
 frame = 67
+
+[node name="hotkey" type="Sprite2D" parent="binds/select"]
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 32, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 77
+gamepad_frame = 47
+
+[node name="hotkey2" type="Sprite2D" parent="binds/select"]
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(496, 96, 48, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 235
+keyboard_cell_size = Vector2(3, 1)
+display_mode = 1
 
 [node name="back" type="Label" parent="binds"]
 layout_mode = 0
@@ -210,6 +261,7 @@ points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
 
 [node name="key" type="Sprite2D" parent="binds/back"]
+visible = false
 position = Vector2(180, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -219,6 +271,7 @@ vframes = 24
 frame = 48
 
 [node name="key2" type="Sprite2D" parent="binds/back"]
+visible = false
 position = Vector2(230, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -237,6 +290,17 @@ hframes = 34
 vframes = 24
 frame = 77
 
+[node name="hotkey" type="Sprite2D" parent="binds/back"]
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(160, 32, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 78
+gamepad_frame = 48
+
 [node name="nav" type="Label" parent="binds"]
 layout_mode = 0
 offset_left = 20.0
@@ -251,6 +315,7 @@ points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
 
 [node name="key" type="Sprite2D" parent="binds/nav"]
+visible = false
 position = Vector2(130, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -260,6 +325,7 @@ vframes = 24
 frame = 253
 
 [node name="key2" type="Sprite2D" parent="binds/nav"]
+visible = false
 position = Vector2(180, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -269,6 +335,7 @@ vframes = 24
 frame = 68
 
 [node name="key3" type="Sprite2D" parent="binds/nav"]
+visible = false
 position = Vector2(230, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -278,6 +345,7 @@ vframes = 24
 frame = 166
 
 [node name="key4" type="Sprite2D" parent="binds/nav"]
+visible = false
 position = Vector2(265, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -287,6 +355,7 @@ vframes = 24
 frame = 167
 
 [node name="key5" type="Sprite2D" parent="binds/nav"]
+visible = false
 position = Vector2(300, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -296,6 +365,7 @@ vframes = 24
 frame = 168
 
 [node name="key6" type="Sprite2D" parent="binds/nav"]
+visible = false
 position = Vector2(335, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -303,6 +373,50 @@ centered = false
 hframes = 34
 vframes = 24
 frame = 169
+
+[node name="hotkey" type="Sprite2D" parent="binds/nav"]
+position = Vector2(130, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(480, 64, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 166
+gamepad_frame = 68
+
+[node name="hotkey2" type="Sprite2D" parent="binds/nav"]
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(496, 64, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 167
+gamepad_frame = 253
+
+[node name="hotkey3" type="Sprite2D" parent="binds/nav"]
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(512, 64, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 168
+display_mode = 1
+
+[node name="hotkey4" type="Sprite2D" parent="binds/nav"]
+position = Vector2(280, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(528, 64, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 169
+display_mode = 1
 
 [node name="menu" type="Label" parent="binds"]
 layout_mode = 0
@@ -318,6 +432,7 @@ points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
 
 [node name="key" type="Sprite2D" parent="binds/menu"]
+visible = false
 position = Vector2(180, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -327,6 +442,7 @@ vframes = 24
 frame = 651
 
 [node name="key2" type="Sprite2D" parent="binds/menu"]
+visible = false
 position = Vector2(230, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -336,6 +452,7 @@ vframes = 24
 frame = 155
 
 [node name="key3" type="Sprite2D" parent="binds/menu"]
+visible = false
 position = Vector2(280, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -343,6 +460,29 @@ centered = false
 hframes = 34
 vframes = 24
 frame = 17
+
+[node name="hotkey" type="Sprite2D" parent="binds/menu"]
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(304, 64, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 155
+gamepad_frame = 651
+
+[node name="hotkey2" type="Sprite2D" parent="binds/menu"]
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 0, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 17
+gamepad_frame = 586
+display_mode = 1
 
 [node name="end_turn" type="Label" parent="binds"]
 layout_mode = 0
@@ -358,6 +498,7 @@ points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
 
 [node name="key" type="Sprite2D" parent="binds/end_turn"]
+visible = false
 position = Vector2(180, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -367,6 +508,7 @@ vframes = 24
 frame = 50
 
 [node name="key2" type="Sprite2D" parent="binds/end_turn"]
+visible = false
 position = Vector2(230, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -376,6 +518,7 @@ vframes = 24
 frame = 157
 
 [node name="key3" type="Sprite2D" parent="binds/end_turn"]
+visible = false
 position = Vector2(280, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -383,6 +526,29 @@ centered = false
 hframes = 34
 vframes = 24
 frame = 79
+
+[node name="hotkey" type="Sprite2D" parent="binds/end_turn"]
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(336, 64, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 157
+gamepad_frame = 50
+
+[node name="hotkey2" type="Sprite2D" parent="binds/end_turn"]
+position = Vector2(230, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(176, 32, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 79
+gamepad_frame = 586
+display_mode = 1
 
 [node name="unit_stats" type="Label" parent="binds"]
 layout_mode = 0
@@ -398,6 +564,7 @@ points = PackedVector2Array(0, 27, 360, 27)
 width = 1.0
 
 [node name="key" type="Sprite2D" parent="binds/unit_stats"]
+visible = false
 position = Vector2(180, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -407,6 +574,7 @@ vframes = 24
 frame = 49
 
 [node name="key2" type="Sprite2D" parent="binds/unit_stats"]
+visible = false
 position = Vector2(230, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
@@ -424,3 +592,14 @@ centered = false
 hframes = 34
 vframes = 24
 frame = 79
+
+[node name="hotkey" type="Sprite2D" parent="binds/unit_stats"]
+position = Vector2(180, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+region_enabled = true
+region_rect = Rect2(320, 64, 16, 16)
+script = ExtResource("3_7y3i1")
+keyboard_frame = 156
+gamepad_frame = 49
