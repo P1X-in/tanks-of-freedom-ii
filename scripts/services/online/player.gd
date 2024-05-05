@@ -5,7 +5,7 @@ var API_REGISTER_URL = "/players"
 
 const ONLINE_FILE_PATH = "user://online.json"
 
-var filesystem = preload("res://scripts/services/filesystem.gd").new()
+var filesystem = load("res://scripts/services/filesystem.gd").new()
 
 var integration_data = {
 	"player_id": null,

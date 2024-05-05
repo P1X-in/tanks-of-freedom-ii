@@ -4,13 +4,13 @@ extends Node3D
 @onready var ui = $"ui"
 @onready var cart = $"map/path/cart"
 @onready var animations = $"animations"
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var switcher = $"/root/SceneSwitcher"
-@onready var gamepad_adapter = $"/root/GamepadAdapter"
-@onready var match_setup = $"/root/MatchSetup"
-@onready var campaign = $"/root/Campaign"
-@onready var settings = $"/root/Settings"
-@onready var multiplayer_srv = $"/root/Multiplayer"
+
+
+
+
+
+
+
 
 const MENU_TIMEOUT = 0.2
 
@@ -21,11 +21,11 @@ func _ready():
 	self._setup_camera()
 	self.map.hide_tile_box()
 
-	self.audio.master_switch = true
-	self.gamepad_adapter.enable()
+	SimpleAudioLibrary.master_switch = true
+	GamepadAdapter.enable()
 	self.ui.bind_menu(self)
 
-	if not self.switcher.intro_played and self.settings.get_option("show_intro"):
+	if not SceneSwitcher.intro_played and Settings.get_option("show_intro"):
 		self.call_deferred("_start_intro")
 	else:
 		self.call_deferred("_intro_finished")
@@ -43,7 +43,7 @@ func _setup_camera():
 
 
 func _start_intro():
-	self.switcher.intro_played = true
+	SceneSwitcher.intro_played = true
 	$"ui/logo".hide()
 	if not self.camera_reparented:
 		self.camera_reparented = true
@@ -52,10 +52,10 @@ func _start_intro():
 		self.map.camera.set_position(Vector3(0, 0, 0))
 		#self.map.camera.camera_pivot.set_rotation_degrees(Vector3(0, 180, 0))
 		self.map.camera.camera_lens.set_fov(90)
-	if self.settings.get_option("is_steamdeck"):
+	if Settings.get_option("is_steamdeck"):
 		await self.get_tree().create_timer(1).timeout
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
-	self.audio.track("intro")
+	SimpleAudioLibrary.track("intro")
 	self.animations.play("path")
 	self.map.camera.animations.play("fov")
 
@@ -63,16 +63,16 @@ func _camera_arrived():
 	pass
 
 func _intro_music_finished():
-	self.audio.stop()
+	SimpleAudioLibrary.stop()
 
 func _intro_finished():
-	self.switcher.intro_played = true
+	SceneSwitcher.intro_played = true
 	$"ui/logo".show()
-	self.audio.track("menu")
-	if not self.match_setup.campaign_win:
+	SimpleAudioLibrary.track("menu")
+	if not MatchSetup.campaign_win:
 		self.ui.show_menu()
 
-	if self.match_setup.campaign_win:
+	if MatchSetup.campaign_win:
 		self.reopen_campaign_mission_selection_after_win()
 
 func open_picker():
@@ -86,13 +86,13 @@ func open_picker():
 
 func close_picker():
 	self.ui.hide_picker()
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.show_menu()
 
 func handle_picker_output(args):
 	self.ui.hide_picker()
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.show_skirmish(args[0])
 
@@ -142,18 +142,18 @@ func close_campaign_mission():
 	self.ui.show_campaign_mission_selection()
 
 func reopen_campaign_mission_selection_after_win():
-	self.match_setup.campaign_win = false
+	MatchSetup.campaign_win = false
 	self.ui.hide_menu()
 	self.ui.campaign_selection.show_first_page()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
-	if self.campaign.is_campaign_complete(self.match_setup.campaign_name):
-		self.ui.show_campaign_mission_selection(self.match_setup.campaign_name)
+	if Campaign.is_campaign_complete(MatchSetup.campaign_name):
+		self.ui.show_campaign_mission_selection(MatchSetup.campaign_name)
 	else:
-		self.ui.campaign_mission_selection.load_campaign(self.match_setup.campaign_name)
-		if self.match_setup.has_won:
-			self.ui.show_campaign_mission(self.match_setup.campaign_name, self.match_setup.mission_no + 1)
+		self.ui.campaign_mission_selection.load_campaign(MatchSetup.campaign_name)
+		if MatchSetup.has_won:
+			self.ui.show_campaign_mission(MatchSetup.campaign_name, MatchSetup.mission_no + 1)
 		else:
-			self.ui.show_campaign_mission(self.match_setup.campaign_name, self.match_setup.mission_no)
+			self.ui.show_campaign_mission(MatchSetup.campaign_name, MatchSetup.mission_no)
 
 func open_controls():
 	self.ui.hide_settings()
@@ -174,7 +174,7 @@ func open_saves():
 
 func close_saves():
 	self.ui.hide_saves()
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.show_menu()
 
@@ -201,14 +201,14 @@ func open_upload_picker():
 
 func close_upload_picker():
 	self.ui.hide_picker()
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.picker.unlock_tab_bar()
 	self.ui.show_online()
 
 func handle_upload_output(args):
 	self.ui.hide_picker()
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.picker.unlock_tab_bar()
 	self.ui.online.selected_upload_map = args[0]
@@ -225,7 +225,7 @@ func open_download_picker():
 
 func close_download_picker():
 	self.ui.hide_picker()
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.picker.unlock_tab_bar()
 	self.ui.picker.list_mode = self.ui.picker.map_list_service.LIST_STOCK
@@ -235,7 +235,7 @@ func close_download_picker():
 
 func handle_download_output(args):
 	self.ui.hide_picker()
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.picker.unlock_tab_bar()
 	self.ui.picker.list_mode = self.ui.picker.map_list_service.LIST_STOCK
@@ -265,17 +265,17 @@ func open_multiplayer_picker():
 
 func close_multiplayer_picker():
 	self.ui.hide_picker()
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.picker.unlock_tab_bar()
 	self.ui.show_multiplayer()
 
 func handle_multiplayer_picker_output(args):
 	self.ui.hide_picker()
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.picker.unlock_tab_bar()
-	var error = self.multiplayer_srv.create_game(args[0])
+	var error = Multiplayer.create_game(args[0])
 	if error:
 		self.ui.show_multiplayer()
 		return
@@ -304,14 +304,14 @@ func open_online_match_map_picker():
 
 func close_online_match_map_picker():
 	self.ui.hide_picker()
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.picker.unlock_tab_bar()
 	self.ui.show_online()
 
 func handle_online_match_map_picker_output(args):
 	self.ui.hide_picker()
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.picker.unlock_tab_bar()
 	self.ui.show_online()

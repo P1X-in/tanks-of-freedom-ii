@@ -3,8 +3,8 @@ extends Node3D
 @export var map: NodePath
 var map_obj: Node
 
-var marker_template = preload("res://scenes/ui/markers/movement_marker.tscn")
-var range_template = preload("res://scenes/ui/markers/range_marker.tscn")
+var marker_template = load("res://scenes/ui/markers/movement_marker.tscn")
+var range_template = load("res://scenes/ui/markers/range_marker.tscn")
 var colour_materials = {
 	"blue" : ResourceLoader.load("res://assets/materials/arne32_blue.tres"),
 	"red" : ResourceLoader.load("res://assets/materials/arne32_red.tres"),

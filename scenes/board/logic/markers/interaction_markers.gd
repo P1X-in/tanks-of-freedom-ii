@@ -3,8 +3,8 @@ extends Node3D
 @export var map: NodePath
 var map_obj: Node
 
-var attack_marker_template = preload("res://scenes/ui/markers/attack_marker.tscn")
-var capture_marker_template = preload("res://scenes/ui/markers/capture_marker.tscn")
+var attack_marker_template = load("res://scenes/ui/markers/attack_marker.tscn")
+var capture_marker_template = load("res://scenes/ui/markers/capture_marker.tscn")
 
 var created_markers = {}
 

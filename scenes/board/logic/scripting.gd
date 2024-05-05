@@ -1,14 +1,15 @@
+class_name Scripting
 
-var board
+var board:GameBoard
 var scripts
 
 var triggers = {}
 var trigger_groups = {}
 
-var trigger_templates = preload("res://scenes/board/logic/scripting/triggers/templates.gd").new()
-var outcome_templates = preload("res://scenes/board/logic/scripting/outcomes/templates.gd").new()
+var trigger_templates = load("res://scenes/board/logic/scripting/triggers/templates.gd").new()
+var outcome_templates = load("res://scenes/board/logic/scripting/outcomes/templates.gd").new()
 
-func ingest_scripts(board_object, incoming_scripts):
+func ingest_scripts(board_object:GameBoard, incoming_scripts):
 	self.board = board_object
 	self.scripts = incoming_scripts
 

@@ -7,11 +7,11 @@ const AUTOSAVE_FILE = "__autosave__"
 @onready var map_list_service = $"/root/MapManager"
 @onready var online_service = $"/root/Online"
 
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var switcher = $"/root/SceneSwitcher"
 
-var rotations = preload("res://scenes/map_editor/rotations.gd").new()
-var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").new()
+
+
+var rotations = load("res://scenes/map_editor/rotations.gd").new()
+var radial_abilities = load("res://scenes/board/logic/radial_abilities.gd").new()
 
 var tile_rotation = 0
 var selected_tile = "ground_grass"
@@ -62,79 +62,79 @@ func _input(event):
 	if not self.ui.is_panel_open():
 		if event.is_action_pressed("ui_accept"):
 			self.place_tile()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 
 		if event.is_action_pressed("mouse_click"):
 			self.mouse_click_position = event.position
 		if event.is_action_released("mouse_click"):
 			if self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD:
-				self.audio.play("menu_click")
+				SimpleAudioLibrary.play("menu_click")
 				self.place_tile()
 			self.mouse_click_position = null
 
 		if event.is_action_pressed("editor_clear"):
 			self.clear_tile()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 
 		if event.is_action_pressed("editor_next_alternative"):
 			self.next_alternative()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 
 		if event.is_action_pressed("ui_left"):
 			self.switch_to_prev_tile()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 
 		if event.is_action_pressed("ui_right"):
 			self.switch_to_next_tile()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 
 		if event.is_action_pressed("ui_up"):
 			self.switch_to_next_type()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 
 		if event.is_action_pressed("ui_down"):
 			self.switch_to_prev_type()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 
 		if event.is_action_pressed("rotate_cw"):
 			self.rotate_cw()
 			self.refresh_tile()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 
 		if event.is_action_pressed("rotate_ccw"):
 			self.rotate_ccw()
 			self.refresh_tile()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 
 		if event.is_action_pressed("editor_menu"):
 			self.toggle_radial_menu()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 
 		if event.is_action_pressed("ui_cancel"):
 			if event is InputEventMouseButton:
 				self.mouse_click_position = event.position
 		if event.is_action_released("ui_cancel"):
 			if (self.mouse_click_position != null and event.position.distance_squared_to(self.mouse_click_position) < self.map.camera.MOUSE_MOVE_THRESHOLD) or not event is InputEventMouseButton:
-				self.audio.play("menu_click")
+				SimpleAudioLibrary.play("menu_click")
 				self.undo_action()
 			self.mouse_click_position = null
 
 		if event.is_action_pressed("editor_ban_menu"):
 			self._open_ability_ban_menu()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 
 		if event.is_action_pressed("editor_ai_pause"):
 			self.toggle_unit_ai_pause()
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 	else:
 		if self.ui.radial.is_visible() and not self.ui.is_popup_open():
 			if event.is_action_pressed("ui_cancel"):
 				self.toggle_radial_menu()
-				self.audio.play("menu_click")
+				SimpleAudioLibrary.play("menu_click")
 
 			if event.is_action_pressed("editor_menu"):
 				self.toggle_radial_menu()
-				self.audio.play("menu_click")
+				SimpleAudioLibrary.play("menu_click")
 
 
 func autosave():
@@ -300,7 +300,7 @@ func setup_radial_menu(context_object=null):
 			self.ui.radial.set_field(self.ui.icons.quicksave.instantiate(), "TR_QUICKSAVE", 1, self, "quicksave")
 		self.ui.radial.set_field(self.ui.icons.disk.instantiate(), "TR_SAVE_LOAD_MAP", 2, self, "open_picker")
 		self.ui.radial.set_field(self.ui.icons.tof.instantiate(), "TR_TOF1_IMPORT", 3, self, "open_tof_import")
-		self.ui.radial.set_field(self.ui.icons.quit.instantiate(), "TR_MAIN_MENU", 4, self.switcher, "main_menu")
+		self.ui.radial.set_field(self.ui.icons.quit.instantiate(), "TR_MAIN_MENU", 4, SceneSwitcher, "main_menu")
 		self.ui.radial.set_field(self.ui.icons.cross.instantiate(), "TR_CLOSE", 6, self, "toggle_radial_menu")
 	else:
 		self.radial_abilities.fill_radial_with_ability_bans(self, self.ui.radial, context_object)

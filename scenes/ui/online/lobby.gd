@@ -3,8 +3,8 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 @onready var relay = $"/root/Relay"
 @onready var online = $"/root/Online"
 @onready var map_list_service = $"/root/MapManager"
-@onready var switcher = $"/root/SceneSwitcher"
-@onready var match_setup = $"/root/MatchSetup"
+
+
 @onready var start_button = $"widgets/start_button"
 @onready var back_button = $"widgets/back_button"
 @onready var minimap = $"widgets/minimap"
@@ -225,7 +225,7 @@ func _on_server_disconnected():
 
 
 func _on_start_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.relay.game_start()
 	#_load_multiplayer_game.rpc()
 
@@ -254,16 +254,16 @@ func _handle_message(message):
 
 #@rpc("call_local", "reliable")
 func _load_multiplayer_game():
-	self.match_setup.reset()
-	self.match_setup.map_name = self.relay.selected_map
-	self.match_setup.is_multiplayer = true
+	MatchSetup.reset()
+	MatchSetup.map_name = self.relay.selected_map
+	MatchSetup.is_multiplayer = true
 
 	for player in self.player_panels:
 		if player.player_peer_id != null or player.type == "ai":
-			self.match_setup.add_player(player.side, player.ap, player.type, true, player.team, player.player_peer_id)
+			MatchSetup.add_player(player.side, player.ap, player.type, true, player.team, player.player_peer_id)
 
 	self.hide()
-	self.switcher.board_online()
+	SceneSwitcher.board_online()
 
 func _on_player_joined_side(index):
 	for panel in self.player_panels:
@@ -277,7 +277,7 @@ func _on_player_joined_side(index):
 		"peer_id": self.relay.peer_id,
 		"index": index
 	})
-	#for peer_id in self.multiplayer_srv.players:
+	#for peer_id in Multiplayer.players:
 	#	if peer_id != relay.peer_id:
 	#		_player_joined_a_side.rpc_id(peer_id, multiplayer.get_unique_id(), index)
 	_manage_start_button(false)
@@ -290,7 +290,7 @@ func _on_player_left_side(index):
 		"type": "player_left_side",
 		"index": index
 	})
-	#for peer_id in self.multiplayer_srv.players:
+	#for peer_id in Multiplayer.players:
 	#	if peer_id != multiplayer.get_unique_id():
 	#		_player_left_a_side.rpc_id(peer_id, index)
 	_manage_start_button(false)
@@ -303,7 +303,7 @@ func _on_panel_state_changed(index):
 		"team": self.player_panels[index].team,
 		"ptype": self.player_panels[index].type
 	})
-	#for peer_id in self.multiplayer_srv.players:
+	#for peer_id in Multiplayer.players:
 	#	if peer_id != multiplayer.get_unique_id():
 	#		_update_panel_state.rpc_id(peer_id, index, self.player_panels[index].ap, self.player_panels[index].team, self.player_panels[index].type)
 	_manage_start_button(false)
@@ -313,7 +313,7 @@ func _on_panel_swap(index):
 		"type": "player_panel_swap",
 		"index": index
 	})
-	#for peer_id in self.multiplayer_srv.players:
+	#for peer_id in Multiplayer.players:
 	#	if peer_id != multiplayer.get_unique_id():
 	#		_swap_panel.rpc_id(peer_id, index)
 
@@ -361,16 +361,16 @@ func _swap_panel(index):
 
 
 func load_game_from_state(state):
-	self.match_setup.reset()
+	MatchSetup.reset()
 
-	self.match_setup.map_name = state["map_name"]
-	self.match_setup.restore_save_id = "multiplayer"
-	self.match_setup.is_multiplayer = true
+	MatchSetup.map_name = state["map_name"]
+	MatchSetup.restore_save_id = "multiplayer"
+	MatchSetup.is_multiplayer = true
 	for player in state["players"]:
 		var int_peer_id = player["peer_id"]
 		if int_peer_id != null:
 			int_peer_id = int(int_peer_id)
-		self.match_setup.add_player(
+		MatchSetup.add_player(
 			player["side"],
 			player["ap"],
 			player["type"],
@@ -379,4 +379,4 @@ func load_game_from_state(state):
 			int_peer_id
 		)
 
-	self.switcher.board_online()
+	SceneSwitcher.board_online()

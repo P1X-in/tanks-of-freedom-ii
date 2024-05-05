@@ -1,6 +1,6 @@
 extends Control
 
-@onready var settings = $"/root/Settings"
+
 
 # Panels
 @onready var radial = $"radial/radial"
@@ -53,11 +53,11 @@ var ability_icons = [null, null, null]
 @onready var hover_menu = $"buttons/hover_menu"
 
 
-var icons = preload("res://scenes/ui/icons/icons.gd").new()
+var icons = load("res://scenes/ui/icons/icons.gd").new()
 
 func _ready():
 	self.show_controls()
-	self.settings.changed.connect(self._on_settings_changed)
+	Settings.changed.connect(self._on_settings_changed)
 
 func is_popup_open():
 	if self.summary.is_visible():
@@ -271,7 +271,7 @@ func hide_saves():
 	self.saves.hide_saves()
 
 func show_controls():
-	if self.settings.get_option("show_controls"):
+	if Settings.get_option("show_controls"):
 		self.controls.show()
 
 func hide_controls():

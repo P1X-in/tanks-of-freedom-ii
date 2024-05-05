@@ -2,7 +2,7 @@ extends Node2D
 
 signal close_requested
 
-@onready var audio = $"/root/SimpleAudioLibrary"
+
 @onready var animations = $"animations"
 @onready var label_node = $"label"
 @onready var label_text = $"label/label"
@@ -139,5 +139,5 @@ func execute_focused_field():
 	if not self.is_visible():
 		return
 
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.focused_field.execute_bound_method()

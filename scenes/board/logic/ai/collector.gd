@@ -1,5 +1,5 @@
 
-var brains = preload("res://scenes/board/logic/ai/brains/brains.gd").new()
+var brains = load("res://scenes/board/logic/ai/brains/brains.gd").new()
 
 var board
 

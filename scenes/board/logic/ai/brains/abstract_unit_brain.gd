@@ -2,13 +2,13 @@ extends "res://scenes/board/logic/ai/brains/abstract_brain.gd"
 
 const EXPLORE_DISTANCE = 16
 
-var pathfinder = preload("res://scenes/board/logic/ai/pathfinder.gd").new()
+var pathfinder = load("res://scenes/board/logic/ai/pathfinder.gd").new()
 
 var actions_templates = {
-	'attack' : preload("res://scenes/board/logic/ai/actions/attack_action.gd"),
-	'move' : preload("res://scenes/board/logic/ai/actions/move_action.gd"),
-	'capture' : preload("res://scenes/board/logic/ai/actions/capture_action.gd"),
-	'ability' : preload("res://scenes/board/logic/ai/actions/use_ability_action.gd"),
+	'attack' : load("res://scenes/board/logic/ai/actions/attack_action.gd"),
+	'move' : load("res://scenes/board/logic/ai/actions/move_action.gd"),
+	'capture' : load("res://scenes/board/logic/ai/actions/capture_action.gd"),
+	'ability' : load("res://scenes/board/logic/ai/actions/use_ability_action.gd"),
 }
 var counter_death_penalty = 20
 

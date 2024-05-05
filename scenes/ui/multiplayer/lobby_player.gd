@@ -37,9 +37,9 @@ var attached_icon
 var locked_out = false
 var ai_mode = false
 
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var multiplayer_srv = $"/root/Multiplayer"
-var icons = preload("res://scenes/ui/icons/icons.gd").new()
+
+
+var icons = load("res://scenes/ui/icons/icons.gd").new()
 
 func _ready():
 	self.swap_target_node = self.get_node(self.swap_target)
@@ -116,8 +116,8 @@ func _update_join_label():
 		else:
 			self.player.set_text(tr("TR_AI"))
 	else:
-		if self.multiplayer_srv.players.has(self.player_peer_id):
-			self.player.set_text(self.multiplayer_srv.players[self.player_peer_id]["name"])
+		if Multiplayer.players.has(self.player_peer_id):
+			self.player.set_text(Multiplayer.players[self.player_peer_id]["name"])
 
 func lock_side():
 	self.locked_out = true
@@ -141,7 +141,7 @@ func _update_team_label():
 	self.team_button_label2.set_text(tr("TR_TEAM") + " " + str(self.team))
 
 func _on_starting_ap_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.ap += self.AP_STEP
 	if self.ap > self.AP_MAX:
 		self.ap = 0
@@ -150,7 +150,7 @@ func _on_starting_ap_pressed():
 
 
 func _on_swap_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	_perform_panel_swap()
 	swap_happened.emit(self.index)
 

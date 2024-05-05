@@ -6,21 +6,14 @@ const RETALIATION_DELAY = 0.1
 @onready var map = $"map"
 @onready var ui = $"ui"
 
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var switcher = $"/root/SceneSwitcher"
-@onready var match_setup = $"/root/MatchSetup"
-@onready var settings = $"/root/Settings"
-@onready var campaign = $"/root/Campaign"
-@onready var saves_manager = $"/root/SavesManager"
-
-var state = preload("res://scenes/board/logic/state.gd").new()
-var radial_abilities = preload("res://scenes/board/logic/radial_abilities.gd").new()
-var abilities = preload("res://scenes/abilities/abilities.gd").new(self)
-var events = preload("res://scenes/board/logic/events.gd").new()
-var observers = preload("res://scenes/board/logic/observers/observers.gd").new(self)
-var scripting = preload("res://scenes/board/logic/scripting.gd").new()
-var ai = preload("res://scenes/board/logic/ai/ai.gd").new(self)
-var collateral = preload("res://scenes/board/logic/collateral.gd").new(self)
+var state := State.new()
+var radial_abilities := RadialAbilities.new()
+var abilities := Abilities.new(self)
+var events := Events.new()
+var observers := Observers.new(self)
+var scripting := Scripting.new()
+var ai := AI.new(self)
+var collateral := Collateral.new(self)
 
 
 var selected_tile = null
@@ -34,8 +27,8 @@ var last_hover_tile = null
 @onready var explosion_anchor = $"marker_anchor"
 @onready var explosion = $"marker_anchor/explosion"
 
-var explosion_template = preload("res://scenes/fx/explosion.tscn")
-var projectile_template = preload("res://scenes/fx/projectile.tscn")
+var explosion_template = load("res://scenes/fx/explosion.tscn")
+var projectile_template = load("res://scenes/fx/projectile.tscn")
 
 var ending_turn_in_progress = false
 var ending_turn_multiplier = 1
@@ -47,8 +40,8 @@ func _ready():
 	self.set_up_map()
 	self.set_up_board()
 
-	if self.match_setup.restore_save_id == null:
-		self.match_setup.store_setup()
+	if MatchSetup.restore_save_id == null:
+		MatchSetup.store_setup()
 		self.start_turn()
 	else:
 		self.restore_saved_state()
@@ -85,28 +78,28 @@ func _input(event):
 				self.mouse_click_position = null
 
 			if event.is_action_pressed("game_context"):
-				self.audio.play("menu_click")
+				SimpleAudioLibrary.play("menu_click")
 				self.open_context_panel()
 
 			if OS.is_debug_build():
 				if event.is_action_pressed("cheat_capture"):
-					self.audio.play("menu_click")
+					SimpleAudioLibrary.play("menu_click")
 					self.cheat_capture()
 				if event.is_action_pressed("cheat_kill"):
-					self.audio.play("menu_click")
+					SimpleAudioLibrary.play("menu_click")
 					self.cheat_kill()
 
 		if event.is_action_pressed("editor_menu"):
-			self.audio.play("menu_click")
+			SimpleAudioLibrary.play("menu_click")
 			self.toggle_radial_menu()
 	else:
 		if self.ui.radial.is_visible() and not self.ui.is_popup_open():
 			if event.is_action_pressed("ui_cancel"):
-				self.audio.play("menu_back")
+				SimpleAudioLibrary.play("menu_back")
 				self.toggle_radial_menu()
 
 			if event.is_action_pressed("editor_menu"):
-				self.audio.play("menu_click")
+				SimpleAudioLibrary.play("menu_click")
 				self.toggle_radial_menu()
 
 		if self.ui.unit_stats.is_visible():
@@ -161,7 +154,7 @@ func set_up_ui():
 
 func set_up_map():
 	self.map.builder.enable_health = true
-	if self.match_setup.campaign_name != null:
+	if MatchSetup.campaign_name != null:
 		self.load_campaign_map()
 	else:
 		self.load_skirmish_map()
@@ -173,7 +166,7 @@ func set_up_board():
 	self.start_music_track()
 
 	var index = 0
-	for player_setup in self.match_setup.setup:
+	for player_setup in MatchSetup.setup:
 		if player_setup["side"] != self.map.templates.PLAYER_NEUTRAL:
 			_add_player_to_state(player_setup)
 			self.state.add_player_ap(index, player_setup["ap"])
@@ -199,9 +192,9 @@ func start_music_track():
 	var tracks = 6
 
 	if self.map.model.metadata.has("track"):
-		self.audio.track(self.map.model.metadata["track"])
+		SimpleAudioLibrary.track(self.map.model.metadata["track"])
 	else:
-		self.audio.track("soundtrack_" + str((randi() % tracks) + 1))
+		SimpleAudioLibrary.track("soundtrack_" + str((randi() % tracks) + 1))
 
 
 func check_end_turn():
@@ -306,7 +299,7 @@ func select_tile(tile_position):
 	self.hover_tile()
 
 	if self.selected_tile != null and not self.state.is_current_player_ai():
-		self.audio.play("map_click")
+		SimpleAudioLibrary.play("map_click")
 
 
 func unselect_action():
@@ -343,11 +336,11 @@ func cancel_ability():
 
 
 func load_skirmish_map():
-	self.map.loader.load_map_file(self.match_setup.map_name)
+	self.map.loader.load_map_file(MatchSetup.map_name)
 
 func load_campaign_map():
-	self.map.loader.load_campaign_map(self.match_setup.campaign_name, self.match_setup.mission_no)
-	self.match_setup.campaign_win = true
+	self.map.loader.load_campaign_map(MatchSetup.campaign_name, MatchSetup.mission_no)
+	MatchSetup.campaign_win = true
 
 
 func update_for_current_player():
@@ -544,7 +537,7 @@ func destroy_unit_on_tile(tile, skip_explosion=false):
 	if not skip_explosion:
 		self.explode_a_tile(tile, true)
 		_generate_collateral_damage(tile)
-		if self.settings.get_option("cam_shake"):
+		if Settings.get_option("cam_shake"):
 			self.map.camera.shake()
 	tile.unit.clear()
 
@@ -710,7 +703,7 @@ func add_current_player_ap(ap_sum):
 func use_current_player_ap(value):
 	self.state.use_current_player_ap(value)
 	self.ui.update_resource_value(self.state.get_current_ap())
-	if self.state.get_current_ap() == 0 and self.settings.get_option("notify_ap_spent") and not self.state.is_current_player_ai():
+	if self.state.get_current_ap() == 0 and Settings.get_option("notify_ap_spent") and not self.state.is_current_player_ai():
 		self.ui.ap_depleted.flash()
 
 
@@ -776,7 +769,7 @@ func _open_context_panel_for_active_tile():
 		self._open_context_panel_for_tile(self.selected_tile)
 
 func close_context_panel():
-	self.audio.play("menu_back")
+	SimpleAudioLibrary.play("menu_back")
 	self.ui.hide_unit_stats()
 	self.map.camera.paused = false
 
@@ -808,7 +801,7 @@ func start_ending_turn():
 	self.ui.show_end_turn()
 
 	self.ending_turn_multiplier = 1
-	var ending_multiplier_setting = self.settings.get_option("end_turn_speed")
+	var ending_multiplier_setting = Settings.get_option("end_turn_speed")
 	if ending_multiplier_setting == "x2":
 		self.ending_turn_multiplier = 2
 	if ending_multiplier_setting == "x4":
@@ -831,16 +824,16 @@ func abort_ending_turn():
 
 func main_menu():
 	self.ai.abort()
-	self.switcher.main_menu()
+	SceneSwitcher.main_menu()
 
 func destroy_explosion_with_delay(explosion_object, delay):
 	await self.get_tree().create_timer(delay).timeout
 	explosion_object.queue_free()
 
 func _signal_winner(winning_side):
-	if self.match_setup.campaign_win and self.state.is_player_human(winning_side):
-		self.campaign.update_campaign_progress(self.match_setup.campaign_name, self.match_setup.mission_no)
-		self.match_setup.has_won = true
+	if MatchSetup.campaign_win and self.state.is_player_human(winning_side):
+		Campaign.update_campaign_progress(MatchSetup.campaign_name, MatchSetup.mission_no)
+		MatchSetup.has_won = true
 
 func shoot_projectile(source_tile, destination_tile, tween_time=0.5):
 	var new_projectile = self._spawn_temporary_projectile_instance_on_tile(source_tile)
@@ -871,7 +864,7 @@ func _move_camera_to_hq():
 
 
 func _should_perform_hq_cam():
-	if not self.state.is_current_player_ai() and self.settings.get_option("hq_cam"):
+	if not self.state.is_current_player_ai() and Settings.get_option("hq_cam"):
 		if self.map.model.metadata.has("skip_initial_hq_cam") and not self.initial_hq_cam_skipped:
 			self.initial_hq_cam_skipped = true
 			return false
@@ -879,12 +872,12 @@ func _should_perform_hq_cam():
 	return false
 
 func _restart_board():
-	if self.match_setup.restore_save_id != null:
-		self.match_setup.restore_save_id = null
-		self.match_setup.restore_setup()
-	self.match_setup.has_won = false
-	self.switcher.board()
-	self.audio.play("menu_click")
+	if MatchSetup.restore_save_id != null:
+		MatchSetup.restore_save_id = null
+		MatchSetup.restore_setup()
+	MatchSetup.has_won = false
+	SceneSwitcher.board()
+	SimpleAudioLibrary.play("menu_click")
 
 func open_saves():
 	if self.state.is_current_player_ai():
@@ -905,7 +898,7 @@ func close_saves():
 		self.map.tile_box.set_visible(true)
 
 func restore_saved_state():
-	var save_data = self.saves_manager.get_save_data(self.match_setup.restore_save_id)
+	var save_data = SavesManager.get_save_data(MatchSetup.restore_save_id)
 	_restore_saved_state(save_data)
 
 func _restore_saved_state(save_data):

@@ -1,11 +1,12 @@
+class_name Observers
 
-var board
+var board:GameBoard
 var basic_observers = [
-	preload("res://scenes/board/logic/observers/experience.gd"),
-	preload("res://scenes/board/logic/observers/hero_spawn.gd"),
+	load("res://scenes/board/logic/observers/experience.gd"),
+	load("res://scenes/board/logic/observers/hero_spawn.gd"),
 ]
 
-func _init(_board):
+func _init(_board:GameBoard):
 	self.board = _board
 	self._register_basic_observers()
 

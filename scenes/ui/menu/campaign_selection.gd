@@ -2,8 +2,8 @@ extends Control
 
 const TILES_PER_PAGE = 6
 
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var campaign = $"/root/Campaign"
+
+
 
 @onready var animations = $"animations"
 @onready var prev_button = $"widgets/prev_button"
@@ -18,7 +18,7 @@ const TILES_PER_PAGE = 6
 	$"widgets/campaign6",
 ]
 
-var icons = preload("res://scenes/ui/icons/icons.gd").new()
+var icons = load("res://scenes/ui/icons/icons.gd").new()
 
 var main_menu
 var page = 0
@@ -43,14 +43,14 @@ func _input(event):
 		self._on_prev_button_pressed()
 
 func _on_back_button_pressed():
-	self.audio.play("menu_back")
+	SimpleAudioLibrary.play("menu_back")
 	self.main_menu.close_campaign_selection()
 
 func _on_prev_button_pressed():
 	if self._is_first_page():
 		return
 
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self._switch_to_page(self.page - 1)
 	if self._is_first_page():
 		self.campaign_tiles[0].focus_tile()
@@ -59,7 +59,7 @@ func _on_next_button_pressed():
 	if self._is_last_page():
 		return
 		
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self._switch_to_page(self.page + 1)
 	if self._is_last_page():
 		self.campaign_tiles[0].focus_tile()
@@ -84,7 +84,7 @@ func _is_last_page():
 	return self.page == self._get_amount_of_pages() - 1
 
 func _get_amount_of_pages():
-	var campaigns = self.campaign.get_campaigns()
+	var campaigns = Campaign.get_campaigns()
 
 	var amount = campaigns.size()
 	var overflow = amount % self.TILES_PER_PAGE
@@ -98,7 +98,7 @@ func _get_amount_of_pages():
 func _switch_to_page(page_no):
 	self.page = page_no
 
-	var campaigns = self.campaign.get_campaigns()
+	var campaigns = Campaign.get_campaigns()
 
 	var index = 0
 	var campaign_index = 0
@@ -119,12 +119,12 @@ func _fill_tile(tile, manifest):
 	var icon = self.icons.get_named_icon(manifest["icon"])
 
 	if manifest.has("prerequisite"):
-		if not self.campaign.is_campaign_complete(manifest["prerequisite"]):
+		if not Campaign.is_campaign_complete(manifest["prerequisite"]):
 			tile.set_locked(icon)
 			return
 
 	tile.set_up(manifest["title"], icon, manifest["name"])
-	if self.campaign.is_campaign_complete(manifest["name"]):
+	if Campaign.is_campaign_complete(manifest["name"]):
 		tile.set_complete()
 
 func _manage_navigation():

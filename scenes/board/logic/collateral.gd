@@ -1,9 +1,10 @@
+class_name Collateral
 
 const COLLATERAL_CHANCE = 0.5
 
-var board = null
+var board:GameBoard = null
 
-func _init(board_object):
+func _init(board_object:GameBoard):
 	self.board = board_object
 
 func damage_tile(tile):

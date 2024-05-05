@@ -5,7 +5,7 @@ const LIST_FILE_PATH := "user://saves.json"
 const SAVE_PATH := "user://save"
 const SAVE_EXTENSION := ".tofsave.json"
 
-var filesystem = preload("res://scripts/services/filesystem.gd").new()
+var filesystem = load("res://scripts/services/filesystem.gd").new()
 
 var autosave = null
 var saves := []

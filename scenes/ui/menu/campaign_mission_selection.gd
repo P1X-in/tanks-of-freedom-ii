@@ -1,8 +1,8 @@
 extends Control
 
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var campaign = $"/root/Campaign"
-@onready var match_setup = $"/root/MatchSetup"
+
+
+
 
 @onready var animations = $"animations"
 @onready var back_button = $"widgets/back_button"
@@ -21,7 +21,7 @@ var main_menu
 
 var manifest
 
-var mission_marker_template = preload("res://scenes/ui/menu/mission_marker.tscn")
+var mission_marker_template = load("res://scenes/ui/menu/mission_marker.tscn")
 var mission_markers = []
 var selected_mission = 0
 
@@ -42,14 +42,14 @@ func _input(event):
 		self.select_button.grab_focus()
 
 func _on_back_button_pressed():
-	self.audio.play("menu_back")
+	SimpleAudioLibrary.play("menu_back")
 	self.main_menu.close_campaign_mission_selection()
 
 func _on_prev_button_pressed(do_grab=true):
 	if self._is_first_mission():
 		return
 
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self._select_marker(self.selected_mission - 1)
 	if do_grab and self._is_first_mission():
 		self.next_button.grab_focus()
@@ -58,13 +58,13 @@ func _on_next_button_pressed(do_grab=true):
 	if self._is_last_mission():
 		return
 
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self._select_marker(self.selected_mission + 1)
 	if do_grab and self._is_last_mission():
 		self.prev_button.grab_focus()
 
 func _on_select_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_campaign_mission(self.manifest["name"], self.selected_mission)
 
 func show_panel():
@@ -79,7 +79,7 @@ func hide_panel():
 
 func load_campaign(campaign_name):
 	self.clear_markers()
-	self.manifest = self.campaign.get_campaign(campaign_name)
+	self.manifest = Campaign.get_campaign(campaign_name)
 
 	if self.manifest == null:
 		self.main_menu.close_campaign_mission_selection()
@@ -89,9 +89,9 @@ func load_campaign(campaign_name):
 	self._add_mission_markers(manifest["missions"])
 	self._select_latest_mission()
 
-	if self.campaign.is_campaign_complete(manifest["name"]):
-		if self.match_setup.animate_medal:
-			self.match_setup.animate_medal = false
+	if Campaign.is_campaign_complete(manifest["name"]):
+		if MatchSetup.animate_medal:
+			MatchSetup.animate_medal = false
 			await self.get_tree().create_timer(0.2).timeout
 			self.animations.play("medal")
 		else:
@@ -107,7 +107,7 @@ func load_campaign(campaign_name):
 func _add_mission_markers(missions):
 	var index = 1
 	var marker
-	var campaign_progress = self.campaign.get_campaign_progress(self.manifest["name"])
+	var campaign_progress = Campaign.get_campaign_progress(self.manifest["name"])
 
 	for mission in missions:
 		marker = self._add_mission_marker(index, mission)
@@ -134,11 +134,11 @@ func clear_markers():
 	self.selected_mission = 0
 
 func _select_latest_mission():
-	if self.campaign.is_campaign_complete(self.manifest["name"]):
+	if Campaign.is_campaign_complete(self.manifest["name"]):
 		self._select_marker(0)
 		return
 
-	var campaign_progress = self.campaign.get_campaign_progress(self.manifest["name"])
+	var campaign_progress = Campaign.get_campaign_progress(self.manifest["name"])
 
 	if campaign_progress > self.mission_markers.size():
 		campaign_progress = self.mission_markers.size() - 1
@@ -170,7 +170,7 @@ func _is_first_mission():
 	return self.selected_mission == 0
 
 func _is_last_mission():
-	var campaign_progress = self.campaign.get_campaign_progress(self.manifest["name"])
+	var campaign_progress = Campaign.get_campaign_progress(self.manifest["name"])
 	return self.selected_mission == campaign_progress or self.selected_mission == self.mission_markers.size() - 1
 
 func _show_base_map():

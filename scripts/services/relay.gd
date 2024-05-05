@@ -31,7 +31,7 @@ var connecting: bool = false
 
 func _ready() -> void:
 	self._read_settings()
-	self.settings.changed.connect(self._on_settings_changed)
+	Settings.changed.connect(self._on_settings_changed)
 	self.set_process(false)
 	self.message_received.connect(self._message_received)
 
@@ -42,8 +42,8 @@ func _on_settings_changed(key: String, _value) -> void:
 
 
 func _read_settings() -> void:
-	self.RELAY_PORT = int(self.settings.get_option("relay_port"))
-	self.RELAY_URL = self.settings.get_option("relay_domain")
+	self.RELAY_PORT = int(Settings.get_option("relay_port"))
+	self.RELAY_URL = Settings.get_option("relay_domain")
 
 func is_server():
 	return self.peer_id == 1
@@ -205,7 +205,7 @@ func _on_connection_failed() -> void:
 
 func _get_player_info() -> Dictionary:
 	return {
-		"name": self.settings.get_option("nickname"),
+		"name": Settings.get_option("nickname"),
 	}
 
 func _get_player_count(map_name: String) -> int:

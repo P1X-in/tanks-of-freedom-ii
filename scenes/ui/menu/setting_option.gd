@@ -1,7 +1,7 @@
 extends Control
 
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var settings = $"/root/Settings"
+
+
 
 @onready var label = $"label"
 @onready var button = $"toggle"
@@ -18,7 +18,7 @@ func _ready():
 	self.button.set_disabled(self.unavailable)
 
 func _read_setting():
-	var value = self.settings.get_option(self.option_key)
+	var value = Settings.get_option(self.option_key)
 
 	match value:
 		null:
@@ -30,8 +30,8 @@ func _read_setting():
 			self.button_label.set_text("TR_OFF")
 
 func _on_toggle_button_pressed():
-	self.settings.set_option(self.option_key, not self.settings.get_option(self.option_key))
-	self.audio.play("menu_click")
+	Settings.set_option(self.option_key, not Settings.get_option(self.option_key))
+	SimpleAudioLibrary.play("menu_click")
 	self._read_setting()
 
 

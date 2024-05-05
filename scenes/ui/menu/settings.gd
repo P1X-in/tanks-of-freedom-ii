@@ -1,7 +1,7 @@
 extends Control
 
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var settings = $"/root/Settings"
+
+
 
 @onready var animations = $"animations"
 
@@ -35,7 +35,7 @@ func _input(event):
 
 func _on_back_button_pressed():
 	self.hide_help()
-	self.audio.play("menu_back")
+	SimpleAudioLibrary.play("menu_back")
 	self.main_menu.close_settings()
 
 func show_panel():
@@ -65,7 +65,7 @@ func _on_general_pressed():
 	self.audio_panel.hide()
 	self.gameplay_panel.hide()
 	self.multiplayer_panel.hide()
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 
 func _on_video_pressed():
 	self.general_panel.hide()
@@ -73,7 +73,7 @@ func _on_video_pressed():
 	self.audio_panel.hide()
 	self.gameplay_panel.hide()
 	self.multiplayer_panel.hide()
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 
 func _on_audio_pressed():
 	self.video_panel.hide()
@@ -81,7 +81,7 @@ func _on_audio_pressed():
 	self.audio_panel.show()
 	self.gameplay_panel.hide()
 	self.multiplayer_panel.hide()
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 
 func _on_gameplay_pressed():
 	self.video_panel.hide()
@@ -89,7 +89,7 @@ func _on_gameplay_pressed():
 	self.audio_panel.hide()
 	self.gameplay_panel.show()
 	self.multiplayer_panel.hide()
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 
 func _on_multiplayer_pressed():
 	self.video_panel.hide()
@@ -97,7 +97,7 @@ func _on_multiplayer_pressed():
 	self.audio_panel.hide()
 	self.gameplay_panel.hide()
 	self.multiplayer_panel.show()
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 
 func show_help(text):
 	self.help_text.set_text(text)
@@ -107,5 +107,5 @@ func hide_help():
 	self.help.hide()
 
 func _on_controls_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_controls()

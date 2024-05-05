@@ -9,11 +9,11 @@ extends Control
 @onready var online_button = $"online_button"
 @onready var quit_button = $"quit_button"
 @onready var animations = $"animations"
-@onready var gamepad_adapter = $"/root/GamepadAdapter"
 
-@onready var switcher = $"/root/SceneSwitcher"
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var mouse_layer = $"/root/MouseLayer"
+
+
+
+
 
 var main_menu
 var recent_button_used = null
@@ -36,43 +36,43 @@ func bind_menu(menu):
 
 func _on_skirmish_button_pressed():
 	self.recent_button_used = self.skirmish_button
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_picker()
 
 func _on_multiplayer_button_pressed():
 	self.recent_button_used = self.multiplayer_button
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_multiplayer()
 
 
 func _on_load_button_pressed():
 	self.recent_button_used = self.load_button
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_saves()
 
 func _on_editor_button_pressed():
 	self.recent_button_used = self.editor_button
-	self.audio.stop()
-	self.gamepad_adapter.disable()
-	self.switcher.map_editor()
+	SimpleAudioLibrary.stop()
+	GamepadAdapter.disable()
+	SceneSwitcher.map_editor()
 
 func _on_settings_button_pressed():
 	self.recent_button_used = self.settings_button
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_settings()
 
 func _on_campaign_button_pressed():
 	self.recent_button_used = self.campaign_button
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_campaign_selection()
 
 func _on_online_button_pressed():
 	self.recent_button_used = self.online_button
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_online()
 
 func _on_quit_button_pressed():
-	self.mouse_layer.destroy()
+	MouseLayer.destroy()
 	self.get_tree().quit()
 
 func show_panel():

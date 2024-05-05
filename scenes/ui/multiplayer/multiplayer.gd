@@ -12,8 +12,8 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 @onready var connect_port = $"widgets/address/port"
 @onready var connect_message = $"widgets/address/message"
 
-@onready var settings = $"/root/Settings"
-@onready var multiplayer_srv = $"/root/Multiplayer"
+
+
 @onready var autodiscovery = $"/root/Autodiscovery"
 
 @onready var server_panels = [
@@ -27,12 +27,12 @@ var connection_busy = false
 
 func _ready():
 	super._ready()
-	self.nickname_input.set_text(self.settings.get_option("nickname"))
-	self.connect_input.set_text(self.settings.get_option("last_used_ip"))
-	self.connect_port.set_text(self.settings.get_option("last_used_port"))
+	self.nickname_input.set_text(Settings.get_option("nickname"))
+	self.connect_input.set_text(Settings.get_option("last_used_ip"))
+	self.connect_port.set_text(Settings.get_option("last_used_port"))
 
-	self.multiplayer_srv.connection_failed.connect(_on_connection_failed)
-	self.multiplayer_srv.connection_success.connect(_on_connection_success)
+	Multiplayer.connection_failed.connect(_on_connection_failed)
+	Multiplayer.connection_success.connect(_on_connection_success)
 	self.autodiscovery.scanned_server.connect(_on_server_found)
 
 	for panel in self.server_panels:
@@ -72,27 +72,27 @@ func _switch_to_connect_panel():
 	self.connect_button.grab_focus()
 
 func _on_create_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_multiplayer_picker()
 
 
 func _on_join_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	_switch_to_connect_panel()
 
 
 func _on_nickname_focus_exited():
-	self.settings.set_option("nickname", self.nickname_input.get_text())
+	Settings.set_option("nickname", self.nickname_input.get_text())
 
 func _on_address_focus_exited():
-	self.settings.set_option("last_used_ip", self.connect_input.get_text())
+	Settings.set_option("last_used_ip", self.connect_input.get_text())
 
 func _on_port_focus_exited():
-	self.settings.set_option("last_used_port", self.connect_port.get_text())
+	Settings.set_option("last_used_port", self.connect_port.get_text())
 
 
 func _on_connect_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	_connect_to_server(self.connect_input.get_text(), self.connect_port.get_text().to_int())
 
 func _connect_to_server(address, port):
@@ -101,7 +101,7 @@ func _connect_to_server(address, port):
 
 	self.connection_busy = true
 	self.connect_message.set_text(tr("TR_CONNECTING"))
-	var error = self.multiplayer_srv.connect_server(address, port)
+	var error = Multiplayer.connect_server(address, port)
 	if error:
 		self.connection_busy = false
 		self.connect_message.set_text(tr("TR_CONNECTION_ERROR"))

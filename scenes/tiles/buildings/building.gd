@@ -1,7 +1,7 @@
 extends "res://scenes/tiles/tile.gd"
 class_name BaseBuilding
 
-@onready var audio = $"/root/SimpleAudioLibrary"
+
 
 @onready var animations = $"animations"
 
@@ -44,7 +44,7 @@ func animate_coin():
 	self.animations.play("ap_gain")
 
 func sfx_effect(sfx_name):
-	if not self.audio.sounds_enabled:
+	if not SimpleAudioLibrary.sounds_enabled:
 		return
 
 	var audio_player = self.get_node_or_null("audio/" + sfx_name)

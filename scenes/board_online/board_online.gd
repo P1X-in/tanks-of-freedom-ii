@@ -75,12 +75,12 @@ func _on_player_connected(peer_id, _player_info):
 
 	self.state.assign_free_peer(peer_id)
 	if self.relay.is_server():
-		var current_state = self.saves_manager.compile_save_data(self)["save_data"]
+		var current_state = SavesManager.compile_save_data(self)["save_data"]
 		self.relay.message_direct(peer_id, {
 			"type": "match_state",
 			"state": current_state
 		})
-	#self.multiplayer_srv._set_match_state.rpc_id(peer_id, current_state)
+	#Multiplayer._set_match_state.rpc_id(peer_id, current_state)
 
 func _on_player_disconnected(peer_id):
 	if self.match_ended:

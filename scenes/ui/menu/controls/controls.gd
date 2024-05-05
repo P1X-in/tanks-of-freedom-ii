@@ -1,6 +1,6 @@
 extends Control
 
-@onready var audio = $"/root/SimpleAudioLibrary"
+
 
 @onready var animations = $"animations"
 @onready var back_button = $"widgets/back_button"
@@ -18,7 +18,7 @@ func _input(event):
 		self._on_back_button_pressed()
 
 func _on_back_button_pressed():
-	self.audio.play("menu_back")
+	SimpleAudioLibrary.play("menu_back")
 	self.main_menu.close_controls()
 
 func show_panel():

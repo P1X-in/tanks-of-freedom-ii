@@ -3,7 +3,7 @@ extends Node
 var initialized = false
 var mouse_layer = Node3D.new()
 var ground_points = {}
-var dummy_ground_template = preload("res://scenes/tiles/ground/base_ground.tscn")
+var dummy_ground_template = load("res://scenes/tiles/ground/base_ground.tscn")
 
 func initialize(size, tile_size):
 	if self.initialized:

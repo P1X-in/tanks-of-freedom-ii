@@ -304,7 +304,7 @@ func restore_highlight() -> void:
 	#self.spotlight.show()
 
 func sfx_effect(sfx_name: String) -> void:
-	if not self.audio.sounds_enabled:
+	if not SimpleAudioLibrary.sounds_enabled:
 		return
 
 	var audio_player: AudioStreamPlayer = self.get_node_or_null("audio/" + sfx_name)
@@ -312,7 +312,7 @@ func sfx_effect(sfx_name: String) -> void:
 		audio_player.play()
 
 func give_sfx_effect(sfx_name: String) -> AudioStreamPlayer:
-	if not self.audio.sounds_enabled:
+	if not SimpleAudioLibrary.sounds_enabled:
 		return null
 
 	var audio_player: AudioStreamPlayer = self.get_node_or_null("audio/" + sfx_name)

@@ -6,18 +6,18 @@ const GROUND_HEIGHT = 4
 
 @onready var tile_box = $"tiles/tile_box"
 @onready var camera = $"camera"
-@onready var campaign = $"/root/Campaign"
-@onready var mouse_layer = $"/root/MouseLayer"
-@onready var settings = $"/root/Settings"
+
+
+
 
 var tile_box_space_size
 var tile_box_position = Vector2(0, 0)
 var tile_box_mouse = false
 
-var templates = preload("res://scenes/map/templates.gd").new()
-var model = preload("res://scenes/map/model.gd").new()
-var builder = preload("res://scenes/map/builder.gd").new(self)
-var loader = preload("res://scenes/map/loader.gd").new(self)
+var templates := Templates.new()
+var model := Model.new()
+var builder := Builder.new(self)
+var loader := Loader.new(self)
 
 @onready var tiles_ground_anchor = $"tiles/ground"
 @onready var tiles_frames_anchor = $"tiles/frames"
@@ -28,12 +28,12 @@ var loader = preload("res://scenes/map/loader.gd").new(self)
 func _ready():
 	self.tile_box_space_size = self.camera.camera_space_size - self.TILE_SIZE
 
-	self.settings.changed.connect(_settings_changed)
+	Settings.changed.connect(_settings_changed)
 	for i in self.model.tiles.keys():
-		self.model.tiles[i].settings = self.settings
-		self.settings.changed.connect(self.model.tiles[i]._settings_changed)
+		self.model.tiles[i].settings = Settings
+		Settings.changed.connect(self.model.tiles[i]._settings_changed)
 
-	if not self.settings.get_option("decorations"):
+	if not Settings.get_option("decorations"):
 		self.tiles_frames_anchor.hide()
 
 func _input(event):

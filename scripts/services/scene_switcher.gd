@@ -1,6 +1,6 @@
 extends Node
 
-@onready var mouse_layer = $"/root/MouseLayer"
+
 var intro_played = false
 
 func main_menu():
@@ -19,5 +19,5 @@ func board_online():
 	_switch_to("res://scenes/board_online/board_online.tscn")
 
 func _switch_to(path):
-	self.mouse_layer.detach()
+	MouseLayer.detach()
 	return self.get_tree().change_scene_to_file(path)

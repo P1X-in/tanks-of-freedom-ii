@@ -1,5 +1,6 @@
+class_name RadialAbilities
 
-var tile_view_template = preload("res://scenes/map_editor/tile_view.tscn")
+var tile_view_template = load("res://scenes/map_editor/tile_view.tscn")
 
 
 func is_object_without_abilities(_board, context_object, include_disabled=false):

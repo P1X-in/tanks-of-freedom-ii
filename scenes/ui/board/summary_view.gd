@@ -14,27 +14,27 @@ extends Node2D
 @onready var yellow_wins = $"background/yellow_wins"
 @onready var black_wins = $"background/black_wins"
 
-@onready var switcher = $"/root/SceneSwitcher"
-@onready var gamepad_adapter = $"/root/GamepadAdapter"
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var match_setup = $"/root/MatchSetup"
-@onready var campaign = $"/root/Campaign"
-@onready var multiplayer_srv = $"/root/Multiplayer"
+
+
+
+
+
+
 
 func configure_winner(winner):
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 	self.restart_button.show()
 
-	if self.match_setup.campaign_win:
-		if self.match_setup.has_won:
+	if MatchSetup.campaign_win:
+		if MatchSetup.has_won:
 			self.mission_complete.show()
 			self._setup_next_mission()
 			self.next_mission_button.grab_focus()
-			self.audio.play("fanfare")
+			SimpleAudioLibrary.play("fanfare")
 		else:
 			self.mission_failed.show()
 			self.restart_button.grab_focus()
-			self.audio.play("failfare")
+			SimpleAudioLibrary.play("failfare")
 	else:
 		match winner:
 			"blue":
@@ -49,7 +49,7 @@ func configure_winner(winner):
 				self.black_wins.show()
 
 		self.menu_button.grab_focus()
-		self.audio.play("fanfare")
+		SimpleAudioLibrary.play("fanfare")
 
 func disable_restart():
 	self.restart_button.hide()
@@ -57,29 +57,29 @@ func disable_restart():
 
 func _setup_next_mission():
 	self.next_mission_button.show()
-	if self.campaign.is_campaign_complete(self.match_setup.campaign_name):
+	if Campaign.is_campaign_complete(MatchSetup.campaign_name):
 		self.next_mission_button_label.set_text("TR_FINISH")
 
 func _on_menu_button_pressed():
-	self.gamepad_adapter.disable()
-	self.match_setup.reset()
-	self.multiplayer_srv.close_game()
-	self.switcher.main_menu()
-	self.audio.play("menu_click")
+	GamepadAdapter.disable()
+	MatchSetup.reset()
+	Multiplayer.close_game()
+	SceneSwitcher.main_menu()
+	SimpleAudioLibrary.play("menu_click")
 
 
 func _on_restart_button_pressed():
-	self.gamepad_adapter.disable()
-	if self.match_setup.restore_save_id != null:
-		self.match_setup.restore_save_id = null
-		self.match_setup.restore_setup()
-	self.match_setup.has_won = false
-	self.switcher.board()
-	self.audio.play("menu_click")
+	GamepadAdapter.disable()
+	if MatchSetup.restore_save_id != null:
+		MatchSetup.restore_save_id = null
+		MatchSetup.restore_setup()
+	MatchSetup.has_won = false
+	SceneSwitcher.board()
+	SimpleAudioLibrary.play("menu_click")
 
 func _on_next_mission_button_pressed():
-	if self.campaign.is_campaign_complete(self.match_setup.campaign_name):
-		self.match_setup.animate_medal = true
-	self.gamepad_adapter.disable()
-	self.switcher.main_menu()
-	self.audio.play("menu_click")
+	if Campaign.is_campaign_complete(MatchSetup.campaign_name):
+		MatchSetup.animate_medal = true
+	GamepadAdapter.disable()
+	SceneSwitcher.main_menu()
+	SimpleAudioLibrary.play("menu_click")

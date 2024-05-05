@@ -1,7 +1,8 @@
+class_name Model
 
 const SIZE = 40
 
-var tile_template = preload("res://scenes/map/tile.gd")
+var tile_template = load("res://scenes/map/tile.gd")
 
 var tiles = {}
 var scripts = {

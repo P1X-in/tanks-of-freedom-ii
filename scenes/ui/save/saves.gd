@@ -2,7 +2,7 @@ extends Node2D
 
 const PAGE_SIZE = 10
 
-@onready var audio = $"/root/SimpleAudioLibrary"
+
 @onready var animations = $"animations"
 
 @onready var save_button = $"widgets/save_button"
@@ -12,12 +12,11 @@ const PAGE_SIZE = 10
 @onready var next_button = $"widgets/list_next"
 @onready var prev_button = $"widgets/list_prev"
 
-@onready var campaign = $"/root/Campaign"
-@onready var saves_manager = $"/root/SavesManager"
-@onready var gamepad_adapter = $"/root/GamepadAdapter"
 
-@onready var switcher = $"/root/SceneSwitcher"
-@onready var match_setup = $"/root/MatchSetup"
+
+
+
+
 
 @onready var entry_buttons = [
 	$"widgets/save_list/entry0",
@@ -83,9 +82,9 @@ func bind_cancel(cancel_object, cancel_method, cancel_args=[]):
 	self.bound_cancel_args = cancel_args
 
 func execute_new_save():
-	self.audio.play("menu_click")
-	var save_data = self.saves_manager.compile_save_data(self.board)
-	self.saves_manager.add_new_save(
+	SimpleAudioLibrary.play("menu_click")
+	var save_data = SavesManager.compile_save_data(self.board)
+	SavesManager.add_new_save(
 		save_data["map_name"],
 		save_data["map_label"],
 		save_data["turn_no"],
@@ -97,18 +96,18 @@ func execute_new_save():
 func save_pressed():
 	if self.selected_save_id == null:
 		return
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.save_state_to_id(self.selected_save_id)
 	self.refresh_current_entries_page()
 
 func load_pressed():
 	if self.selected_save_id == null:
 		return
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.load_state_from_id(self.selected_save_id)
 
 func entry_button_pressed(save_id, button):
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.selected_save_id = save_id
 
 	for entry_button in self.entry_buttons:
@@ -122,7 +121,7 @@ func entry_button_pressed(save_id, button):
 	self.load_button.grab_focus()
 
 func execute_cancel():
-	self.audio.play("menu_back")
+	SimpleAudioLibrary.play("menu_back")
 	if self.bound_cancel_object != null:
 		if self.bound_cancel_args.size() > 0:
 			self.bound_cancel_object.call_deferred(self.bound_cancel_method, self.bound_cancel_args)
@@ -130,7 +129,7 @@ func execute_cancel():
 			self.bound_cancel_object.call_deferred(self.bound_cancel_method)
 
 func execute_success(map_name, context=null):
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	if self.bound_success_object != null:
 		var args = [] + self.bound_success_args
 
@@ -161,16 +160,16 @@ func show_saves(set_save_mode):
 	else:
 		self.cancel_button.grab_focus()
 
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 
 
 func hide_saves():
 	self.animations.play("hide")
 	self.set_process_input(false)
-	self.gamepad_adapter.disable()
+	GamepadAdapter.disable()
 
 func refresh_current_entries_page():
-	var pages_count = self.saves_manager.get_pages_count(self.PAGE_SIZE)
+	var pages_count = SavesManager.get_pages_count(self.PAGE_SIZE)
 
 	if self.current_page == 0 || pages_count < 2:
 		self.prev_button.hide()
@@ -190,7 +189,7 @@ func refresh_current_entries_page():
 		entry_button.hide()
 		entry_button.hide_stars()
 
-	var entries_page = self.saves_manager.get_entries_page(self.current_page, self.PAGE_SIZE)
+	var entries_page = SavesManager.get_entries_page(self.current_page, self.PAGE_SIZE)
 	var entry
 
 	for index in range(entries_page.size()):
@@ -204,7 +203,7 @@ func refresh_current_entries_page():
 		self.entry_buttons[index].show()
 
 func switch_to_prev_page():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	if self.current_page > 0:
 		self.current_page -= 1
 
@@ -216,8 +215,8 @@ func switch_to_prev_page():
 
 
 func switch_to_next_page():
-	self.audio.play("menu_click")
-	var pages_count = self.saves_manager.get_pages_count(self.PAGE_SIZE)
+	SimpleAudioLibrary.play("menu_click")
+	var pages_count = SavesManager.get_pages_count(self.PAGE_SIZE)
 
 	if self.current_page < pages_count - 1:
 		self.current_page += 1
@@ -229,9 +228,9 @@ func switch_to_next_page():
 			self.prev_button.grab_focus()
 
 func save_state_to_id(save_id):
-	var save_data = self.saves_manager.compile_save_data(self.board)
+	var save_data = SavesManager.compile_save_data(self.board)
 
-	self.saves_manager.overwrite_save(
+	SavesManager.overwrite_save(
 		save_data["map_name"],
 		save_data["map_label"],
 		save_data["turn_no"],
@@ -240,10 +239,10 @@ func save_state_to_id(save_id):
 	)
 
 func perform_autosave():
-	var save_data = self.saves_manager.compile_save_data(self.board)
+	var save_data = SavesManager.compile_save_data(self.board)
 	save_data["map_label"] = tr("TR_AUTOSAVE") + " - " + save_data["map_label"]
 
-	self.saves_manager.write_autosave(
+	SavesManager.write_autosave(
 		save_data["map_name"],
 		save_data["map_label"],
 		save_data["turn_no"],
@@ -251,16 +250,16 @@ func perform_autosave():
 	)
 
 func load_state_from_id(save_id):
-	var save_data = self.saves_manager.get_save_data(save_id)
-	self.match_setup.reset()
+	var save_data = SavesManager.get_save_data(save_id)
+	MatchSetup.reset()
 
-	self.match_setup.restore_save_id = save_id
-	self.match_setup.map_name = save_data["map_name"]
-	self.match_setup.campaign_name = save_data["campaign_name"]
-	self.match_setup.mission_no = save_data["mission_no"]
-	self.match_setup.stored_setup = save_data["initial_setup"]
+	MatchSetup.restore_save_id = save_id
+	MatchSetup.map_name = save_data["map_name"]
+	MatchSetup.campaign_name = save_data["campaign_name"]
+	MatchSetup.mission_no = save_data["mission_no"]
+	MatchSetup.stored_setup = save_data["initial_setup"]
 	for player in save_data["players"]:
-		self.match_setup.add_player(
+		MatchSetup.add_player(
 			player["side"],
 			player["ap"],
 			player["type"],
@@ -268,5 +267,5 @@ func load_state_from_id(save_id):
 			player["team"]
 		)
 
-	self.gamepad_adapter.disable()
-	self.switcher.board()
+	GamepadAdapter.disable()
+	SceneSwitcher.board()

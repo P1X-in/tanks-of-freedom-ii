@@ -1,10 +1,10 @@
 extends "res://scenes/ui/menu/base_menu_panel.gd"
 
-@onready var multiplayer_srv = $"/root/Multiplayer"
+
 @onready var online = $"/root/Online"
 @onready var map_list_service = $"/root/MapManager"
-@onready var switcher = $"/root/SceneSwitcher"
-@onready var match_setup = $"/root/MatchSetup"
+
+
 @onready var start_button = $"widgets/start_button"
 @onready var back_button = $"widgets/back_button"
 @onready var minimap = $"widgets/minimap"
@@ -34,9 +34,9 @@ var server_state = null
 
 func _ready():
 	super._ready()
-	self.multiplayer_srv.player_connected.connect(_on_player_connected)
-	self.multiplayer_srv.player_disconnected.connect(_on_player_disconnected)
-	self.multiplayer_srv.server_disconnected.connect(_on_server_disconnected)
+	Multiplayer.player_connected.connect(_on_player_connected)
+	Multiplayer.player_disconnected.connect(_on_player_disconnected)
+	Multiplayer.server_disconnected.connect(_on_server_disconnected)
 
 	for panel in self.player_panels:
 		panel.player_joined.connect(_on_player_joined_side)
@@ -47,11 +47,11 @@ func _ready():
 func show_panel():
 	super.show_panel()
 
-	if self.map_list_service._is_bundled(self.multiplayer_srv.selected_map) or self.map_list_service._is_online(self.multiplayer_srv.selected_map):
+	if self.map_list_service._is_bundled(Multiplayer.selected_map) or self.map_list_service._is_online(Multiplayer.selected_map):
 		
-		_prepare_initial_panel_state(self.multiplayer_srv.selected_map)
+		_prepare_initial_panel_state(Multiplayer.selected_map)
 	else:
-		self._download_map_data(self.multiplayer_srv.selected_map)
+		self._download_map_data(Multiplayer.selected_map)
 
 func _download_map_data(map_name):
 	self.widgets.hide()
@@ -69,11 +69,11 @@ func _download_map_data(map_name):
 
 
 func _prepare_initial_panel_state(map_name):
-	if self.multiplayer_srv.players[1]["in_progress"]:
+	if Multiplayer.players[1]["in_progress"]:
 		self.widgets.hide()
-		while not self.multiplayer_srv.match_state_available:
+		while not Multiplayer.match_state_available:
 			await self.get_tree().create_timer(0.1).timeout
-		self.load_game_from_state(self.multiplayer_srv.match_state)
+		self.load_game_from_state(Multiplayer.match_state)
 		return
 
 	self._fill_map_data(map_name)
@@ -94,7 +94,7 @@ func _manage_start_button(grab):
 
 func _is_ready_to_start():
 	var player_spots = 0
-	var human_players = self.multiplayer_srv.players.size()
+	var human_players = Multiplayer.players.size()
 	var players_assigned = 0
 	var ai_assigned = 0
 
@@ -122,7 +122,7 @@ func _fill_player_labels():
 	for label in self.player_labels:
 		label[0].hide()
 
-	var player_info = self.multiplayer_srv.players.values()
+	var player_info = Multiplayer.players.values()
 	for index in range(player_info.size()):
 		self.player_labels[index][0].show()
 		self.player_labels[index][1].set_text(player_info[index]["name"])
@@ -177,7 +177,7 @@ func _on_back_button_pressed():
 
 	super._on_back_button_pressed()
 	
-	self.multiplayer_srv.close_game()
+	Multiplayer.close_game()
 	self.main_menu.close_multiplayer_lobby()
 
 func _on_player_connected(peer_id, _player_info):
@@ -208,21 +208,21 @@ func _on_server_disconnected():
 
 
 func _on_start_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	_load_multiplayer_game.rpc()
 
 
 @rpc("call_local", "reliable")
 func _load_multiplayer_game():
-	self.match_setup.reset()
-	self.match_setup.map_name = self.multiplayer_srv.selected_map
-	self.match_setup.is_multiplayer = true
+	MatchSetup.reset()
+	MatchSetup.map_name = Multiplayer.selected_map
+	MatchSetup.is_multiplayer = true
 
 	for player in self.player_panels:
 		if player.player_peer_id != null or player.type == "ai":
-			self.match_setup.add_player(player.side, player.ap, player.type, true, player.team, player.player_peer_id)
+			MatchSetup.add_player(player.side, player.ap, player.type, true, player.team, player.player_peer_id)
 
-	self.switcher.board_multiplayer()
+	SceneSwitcher.board_multiplayer()
 
 func _on_player_joined_side(index):
 	for panel in self.player_panels:
@@ -231,7 +231,7 @@ func _on_player_joined_side(index):
 				panel.switch_to_ai()
 			else:
 				panel.lock_side()
-	for peer_id in self.multiplayer_srv.players:
+	for peer_id in Multiplayer.players:
 		if peer_id != multiplayer.get_unique_id():
 			_player_joined_a_side.rpc_id(peer_id, multiplayer.get_unique_id(), index)
 	_manage_start_button(false)
@@ -240,19 +240,19 @@ func _on_player_left_side(index):
 	for panel in self.player_panels:
 		if panel.index != index:
 			panel.unlock_side()
-	for peer_id in self.multiplayer_srv.players:
+	for peer_id in Multiplayer.players:
 		if peer_id != multiplayer.get_unique_id():
 			_player_left_a_side.rpc_id(peer_id, index)
 	_manage_start_button(false)
 
 func _on_panel_state_changed(index):
-	for peer_id in self.multiplayer_srv.players:
+	for peer_id in Multiplayer.players:
 		if peer_id != multiplayer.get_unique_id():
 			_update_panel_state.rpc_id(peer_id, index, self.player_panels[index].ap, self.player_panels[index].team, self.player_panels[index].type)
 	_manage_start_button(false)
 
 func _on_panel_swap(index):
-	for peer_id in self.multiplayer_srv.players:
+	for peer_id in Multiplayer.players:
 		if peer_id != multiplayer.get_unique_id():
 			_swap_panel.rpc_id(peer_id, index)
 
@@ -297,13 +297,13 @@ func _swap_panel(index):
 
 
 func load_game_from_state(state):
-	self.match_setup.reset()
+	MatchSetup.reset()
 
-	self.match_setup.map_name = state["map_name"]
-	self.match_setup.restore_save_id = "multiplayer"
-	self.match_setup.is_multiplayer = true
+	MatchSetup.map_name = state["map_name"]
+	MatchSetup.restore_save_id = "multiplayer"
+	MatchSetup.is_multiplayer = true
 	for player in state["players"]:
-		self.match_setup.add_player(
+		MatchSetup.add_player(
 			player["side"],
 			player["ap"],
 			player["type"],
@@ -312,4 +312,4 @@ func load_game_from_state(state):
 			player["peer_id"]
 		)
 
-	self.switcher.board_multiplayer()
+	SceneSwitcher.board_multiplayer()

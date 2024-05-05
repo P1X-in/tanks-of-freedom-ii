@@ -1,6 +1,6 @@
 extends "res://scenes/board/board.gd"
 
-@onready var multiplayer_srv = $"/root/Multiplayer"
+
 
 @onready var ui_multiplayer = $"ui_multiplayer"
 
@@ -10,12 +10,12 @@ var match_ended = false
 
 func _ready():
 	super._ready()
-	self.multiplayer_srv.player_connected.connect(_on_player_connected)
-	self.multiplayer_srv.player_disconnected.connect(_on_player_disconnected)
-	self.multiplayer_srv.server_disconnected.connect(_on_server_disconnected)
-	self.multiplayer_srv.all_players_loaded.connect(_all_players_loaded)
+	Multiplayer.player_connected.connect(_on_player_connected)
+	Multiplayer.player_disconnected.connect(_on_player_disconnected)
+	Multiplayer.server_disconnected.connect(_on_server_disconnected)
+	Multiplayer.all_players_loaded.connect(_all_players_loaded)
 
-	self.multiplayer_srv.player_loaded.rpc_id(1)
+	Multiplayer.player_loaded.rpc_id(1)
 
 func _all_players_loaded():
 	_start_game.rpc()
@@ -23,15 +23,15 @@ func _all_players_loaded():
 @rpc("call_local", "reliable")
 func _start_game():
 	self.all_players_loaded = true
-	self.multiplayer_srv.match_in_progress = true
+	Multiplayer.match_in_progress = true
 	_manage_cinematic_bars()
 	_manage_ai_start()
 
 
 func _on_player_connected(peer_id, _player_info):
 	self.state.assign_free_peer(peer_id)
-	var current_state = self.saves_manager.compile_save_data(self)["save_data"]
-	self.multiplayer_srv._set_match_state.rpc_id(peer_id, current_state)
+	var current_state = SavesManager.compile_save_data(self)["save_data"]
+	Multiplayer._set_match_state.rpc_id(peer_id, current_state)
 
 func _on_player_disconnected(peer_id):
 	if self.match_ended:
@@ -60,7 +60,7 @@ func _should_perform_hq_cam():
 	return false
 
 func restore_saved_state():
-	_restore_saved_state(self.multiplayer_srv.match_state)
+	_restore_saved_state(Multiplayer.match_state)
 	_notify_player_reconnected.rpc()
 
 func _manage_cinematic_bars():
@@ -76,7 +76,7 @@ func _manage_cinematic_bars():
 			if self.state.is_current_player_ai():
 				self.ui_multiplayer.set_announcement(tr("TR_AI"))
 			else:
-				self.ui_multiplayer.set_announcement(self.multiplayer_srv.players[self.state.get_current_param("peer_id")]["name"])
+				self.ui_multiplayer.set_announcement(Multiplayer.players[self.state.get_current_param("peer_id")]["name"])
 
 func _manage_ai_start():
 	if _can_current_player_perform_actions():
@@ -116,7 +116,7 @@ func _add_player_to_state(data):
 	self.state.add_player(data["type"], data["side"], data["alive"], data["team"], data["peer_id"])
 
 func main_menu():
-	self.multiplayer_srv.close_game()
+	Multiplayer.close_game()
 	super.main_menu()
 
 func _physics_process(_delta):

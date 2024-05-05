@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var audio = $"/root/SimpleAudioLibrary"
+
 
 @onready var text = $"background/text"
 @onready var continue_button = $"background/continue"
@@ -42,5 +42,5 @@ func _continue_grab_focus():
 	self.continue_button.grab_focus()
 
 func _on_continue_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.hide()

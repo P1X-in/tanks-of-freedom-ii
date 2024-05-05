@@ -1,6 +1,6 @@
 extends "res://scenes/abilities/hero/active/active.gd"
 
-var precision_strike_executor_template = preload("res://scenes/abilities/hero/active/precision_strike_executor.tscn")
+var precision_strike_executor_template = load("res://scenes/abilities/hero/active/precision_strike_executor.tscn")
 
 
 func _execute(board, position):

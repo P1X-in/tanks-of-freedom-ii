@@ -1,9 +1,9 @@
 extends Control
 
 @onready var map_list_service = $"/root/MapManager"
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var switcher = $"/root/SceneSwitcher"
-@onready var match_setup = $"/root/MatchSetup"
+
+
+
 @onready var start_button = $"widgets/start_button"
 @onready var player_panels = [
 	$"widgets/skirmish_player_0",
@@ -97,20 +97,20 @@ func _lookup_side(data):
 
 
 func _on_start_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 
-	self.match_setup.reset()
-	self.match_setup.map_name = self.map_name
+	MatchSetup.reset()
+	MatchSetup.map_name = self.map_name
 
 	for player in self.player_panels:
 		if player.side != null:
-			self.match_setup.add_player(player.side, player.ap, player.type, true, player.team)
+			MatchSetup.add_player(player.side, player.ap, player.type, true, player.team)
 
-	self.switcher.board()
+	SceneSwitcher.board()
 
 
 func _on_back_button_pressed():
-	self.audio.play("menu_back")
+	SimpleAudioLibrary.play("menu_back")
 	self.main_menu.close_skirmish()
 
 func _get_map_data(fill_name):

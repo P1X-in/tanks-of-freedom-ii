@@ -1,5 +1,6 @@
+class_name AI
 
-var board
+var board:GameBoard
 var collector
 
 var _ai_paused = false
@@ -11,9 +12,9 @@ var _last_action_signature = null
 
 var _reserved_ap = 0
 
-func _init(board_object):
+func _init(board_object:GameBoard):
 	self.board = board_object
-	self.collector = preload("res://scenes/board/logic/ai/collector.gd").new(board_object)
+	self.collector = load("res://scenes/board/logic/ai/collector.gd").new(board_object)
 
 func run():
 	self._failsafe_counter = 0

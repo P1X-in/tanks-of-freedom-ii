@@ -1,7 +1,8 @@
+class_name Abilities
 
-var board
+var board:GameBoard
 
-func _init(_board):
+func _init(_board:GameBoard):
 	self.board = _board
 
 func execute_ability(ability, context_object=null):

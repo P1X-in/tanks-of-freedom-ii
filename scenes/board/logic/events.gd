@@ -1,14 +1,15 @@
+class_name Events
 
-var types = preload("res://scenes/board/logic/events/types.gd").new()
+var types = load("res://scenes/board/logic/events/types.gd").new()
 
 var event_templates = {
-	self.types.BUILDING_CAPTURED : preload("res://scenes/board/logic/events/building_captured.gd"),
-	self.types.UNIT_SPAWNED : preload("res://scenes/board/logic/events/unit_spawned.gd"),
-	self.types.UNIT_MOVED : preload("res://scenes/board/logic/events/unit_moved.gd"),
-	self.types.UNIT_ATTACKED : preload("res://scenes/board/logic/events/unit_attacked.gd"),
-	self.types.UNIT_DESTROYED : preload("res://scenes/board/logic/events/unit_destroyed.gd"),
-	self.types.TURN_STARTED : preload("res://scenes/board/logic/events/turn_started.gd"),
-	self.types.ABILITY_USED : preload("res://scenes/board/logic/events/ability_used.gd")
+	self.types.BUILDING_CAPTURED : load("res://scenes/board/logic/events/building_captured.gd"),
+	self.types.UNIT_SPAWNED : load("res://scenes/board/logic/events/unit_spawned.gd"),
+	self.types.UNIT_MOVED : load("res://scenes/board/logic/events/unit_moved.gd"),
+	self.types.UNIT_ATTACKED : load("res://scenes/board/logic/events/unit_attacked.gd"),
+	self.types.UNIT_DESTROYED : load("res://scenes/board/logic/events/unit_destroyed.gd"),
+	self.types.TURN_STARTED : load("res://scenes/board/logic/events/turn_started.gd"),
+	self.types.ABILITY_USED : load("res://scenes/board/logic/events/ability_used.gd")
 }
 
 var observers = {}

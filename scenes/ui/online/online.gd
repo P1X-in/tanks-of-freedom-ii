@@ -1,7 +1,7 @@
 extends "res://scenes/ui/menu/base_menu_panel.gd"
 
 @onready var online = $"/root/Online"
-@onready var settings = $"/root/Settings"
+
 @onready var relay = $"/root/Relay"
 
 @onready var back_button = $"widgets/back_button"
@@ -53,14 +53,14 @@ func _ready():
 	self.download_name.set_message_translation(false)
 	self.download_name.notification(NOTIFICATION_TRANSLATION_CHANGED)
 	
-	self.online_match_nickname_input.set_text(self.settings.get_option("nickname"))
+	self.online_match_nickname_input.set_text(Settings.get_option("nickname"))
 	self.relay.session_success.connect(self._on_session_success)
 	self.relay.connection_failed.connect(self._on_connection_failed)
 
 func _on_back_button_pressed():
 	if self.working:
 		return
-	self.audio.play("menu_back")
+	SimpleAudioLibrary.play("menu_back")
 	if self.selected_upload_map != null:
 		self.selected_upload_map = null
 		self._select_panel()
@@ -78,7 +78,7 @@ func _on_register_button_pressed():
 		return
 
 	self.working = true
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.register_description.set_text(tr("TR_REQUESTING_PLAYER_ID"))
 	self.register_button.hide()
 	self.back_button.hide()
@@ -172,12 +172,12 @@ func _show_online_connecting_panel():
 
 
 func _on_upload_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_upload_picker()
 
 
 func _on_download_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_download_picker()
 	self.back_button.hide()
 
@@ -187,7 +187,7 @@ func _on_confirm_upload_button_pressed():
 		return
 
 	self.working = true
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.upload_desc.set_text(tr("TR_UPLOADING_WAIT"))
 	self.confirm_upload_button.hide()
 	self.change_button.hide()
@@ -216,7 +216,7 @@ func _on_retry_button_pressed():
 		return
 
 	self.working = true
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.download_desc.set_text(tr("TR_DOWNLOADING_MAP"))
 	self.retry_download_button.hide()
 	self.back_button.hide()
@@ -238,16 +238,16 @@ func _on_retry_button_pressed():
 
 
 func _on_nickname_focus_exited():
-	self.settings.set_option("nickname", self.online_match_nickname_input.get_text())
+	Settings.set_option("nickname", self.online_match_nickname_input.get_text())
 
 
 func _on_create_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_online_match_map_picker()
 
 
 func _on_join_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 
 	if self.online_match_join_code_input.get_text() == "":
 		return

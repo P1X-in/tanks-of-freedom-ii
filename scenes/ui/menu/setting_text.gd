@@ -1,7 +1,7 @@
 extends Control
 
-@onready var audio = $"/root/SimpleAudioLibrary"
-@onready var settings = $"/root/Settings"
+
+
 
 @onready var label = $"label"
 @onready var text_input = $"text"
@@ -19,13 +19,13 @@ func _ready():
 	self.text_input.set_placeholder(self.placeholder)
 
 func _read_setting():
-	var value = self.settings.get_option(self.option_key)
+	var value = Settings.get_option(self.option_key)
 
 	self.text_input.set_text(str(value))
 
 func _on_text_text_changed(_text):
-	self.settings.set_option(self.option_key, self.text_input.get_text().to_int())
-	self.audio.play("menu_click")
+	Settings.set_option(self.option_key, self.text_input.get_text().to_int())
+	SimpleAudioLibrary.play("menu_click")
 
 
 func _show_help():

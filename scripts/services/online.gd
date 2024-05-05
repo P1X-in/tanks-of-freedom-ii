@@ -17,7 +17,7 @@ var api_version: int = 2
 func _ready() -> void:
 	self.player.load_data_from_file()
 	self._read_settings()
-	self.settings.changed.connect(self._on_settings_changed)
+	Settings.changed.connect(self._on_settings_changed)
 
 
 func _on_settings_changed(key: String, _value) -> void:
@@ -27,7 +27,7 @@ func _on_settings_changed(key: String, _value) -> void:
 
 
 func _read_settings() -> void:
-	self.THUMBNAIL_LOCATION = self.settings.get_option("online_domain")
+	self.THUMBNAIL_LOCATION = Settings.get_option("online_domain")
 
 
 func is_integrated() -> bool:

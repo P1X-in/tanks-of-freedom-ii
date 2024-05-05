@@ -9,7 +9,7 @@ const LIST_DOWNLOADED = "downloaded"
 
 const PAGE_SIZE = 10
 
-@onready var audio = $"/root/SimpleAudioLibrary"
+
 @onready var animations = $"animations"
 
 @onready var tabs_bar = $"widgets/tabs"
@@ -29,7 +29,7 @@ const PAGE_SIZE = 10
 @onready var custom_maps_button = $"widgets/tabs/custom_button"
 
 @onready var map_list_service = $"/root/MapManager"
-@onready var gamepad_adapter = $"/root/GamepadAdapter"
+
 @onready var online_service = $"/root/Online"
 
 @onready var map_selection_buttons = [
@@ -150,7 +150,7 @@ func bind_cancel(cancel_object, cancel_method, cancel_args=[]):
 
 
 func execute_success(map_name, context=null):
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	if self.bound_success_object != null:
 		var args = [] + self.bound_success_args
 
@@ -159,7 +159,7 @@ func execute_success(map_name, context=null):
 		self.bound_success_object.call_deferred(self.bound_success_method, args)
 
 func execute_load():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	var map_name = self.map_name_field.get_text()
 
 	if map_name == "" || map_name == null:
@@ -172,7 +172,7 @@ func execute_load():
 
 
 func execute_save():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	var map_name = self.map_name_field.get_text()
 
 	if map_name == "" || map_name == null:
@@ -181,7 +181,7 @@ func execute_save():
 	self.execute_success(map_name, "save")
 
 func execute_cancel():
-	self.audio.play("menu_back")
+	SimpleAudioLibrary.play("menu_back")
 	if self.bound_cancel_object != null:
 		if self.bound_cancel_args.size() > 0:
 			self.bound_cancel_object.call_deferred(self.bound_cancel_method, self.bound_cancel_args)
@@ -211,13 +211,13 @@ func show_picker():
 	else:
 		self.cancel_button.grab_focus()
 
-	self.gamepad_adapter.enable()
+	GamepadAdapter.enable()
 
 
 func hide_picker():
 	self.animations.play("hide")
 	self.set_process_input(false)
-	self.gamepad_adapter.disable()
+	GamepadAdapter.disable()
 
 func set_map_name(map_name):
 	self.map_name_field.set_text(map_name)
@@ -278,7 +278,7 @@ func manage_pagination_buttons(pages_count):
 		self.next_button.show()
 
 func switch_to_prev_page():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	if self.current_page > 0:
 		self.current_page -= 1
 
@@ -293,7 +293,7 @@ func switch_to_prev_page():
 
 
 func switch_to_next_page():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	var pages_count
 	if self.operation_mode == self.MODE_BROWSE:
 		pages_count = self.online_service.get_pages_count(self.PAGE_SIZE)
@@ -314,7 +314,7 @@ func switch_to_next_page():
 
 
 func map_button_pressed(map_name):
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	if self.operation_mode == self.MODE_NAME:
 		self.set_map_name(map_name)
 		self.load_button.grab_focus()
@@ -370,28 +370,28 @@ func _fetch_next_online_page():
 	self.manage_pagination_buttons(pages_count)
 
 func _on_stock_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.list_mode = self.map_list_service.LIST_STOCK
 	self.current_page = 0
 	self.refresh_current_maps_page()
 
 
 func _on_custom_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.list_mode = self.map_list_service.LIST_CUSTOM
 	self.current_page = 0
 	self.refresh_current_maps_page()
 
 
 func _on_downloaded_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.list_mode = self.map_list_service.LIST_DOWNLOADED
 	self.current_page = 0
 	self.refresh_current_maps_page()
 
 
 func _on_latest_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	if self.list_mode == self.LIST_LATEST:
 		return
 	self.list_mode = self.LIST_LATEST
@@ -414,7 +414,7 @@ func _on_top_button_pressed():
 
 
 func _on_download_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	var code = self.code_field.get_text()
 
 	if code == "" || code == null:

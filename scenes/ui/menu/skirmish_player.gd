@@ -33,7 +33,7 @@ var type
 @export var swap_target: NodePath
 var swap_target_node: Node
 
-@onready var audio = $"/root/SimpleAudioLibrary"
+
 
 
 func _ready():
@@ -98,7 +98,7 @@ func _update_team_label():
 	self.team_button.set_text(tr("TR_TEAM") + " " + str(self.team))
 
 func _on_player_type_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	if self.type == self.PLAYER_HUMAN:
 		self.type = self.PLAYER_AI
 	else:
@@ -107,7 +107,7 @@ func _on_player_type_pressed():
 
 
 func _on_starting_ap_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.ap += self.AP_STEP
 	if self.ap > self.AP_MAX:
 		self.ap = 0
@@ -115,7 +115,7 @@ func _on_starting_ap_pressed():
 
 
 func _on_swap_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	var own_side = self.side
 	var own_ap = self.ap
 	var own_type = self.type

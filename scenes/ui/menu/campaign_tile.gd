@@ -1,6 +1,6 @@
 extends Control
 
-@onready var audio = $"/root/SimpleAudioLibrary"
+
 
 @onready var button = $"button"
 @onready var icon_anchor = $"icon_anchor"
@@ -44,6 +44,6 @@ func _set_icon(icon):
 		self.attached_icon = icon
 
 func _on_button_pressed():
-	self.audio.play("menu_click")
+	SimpleAudioLibrary.play("menu_click")
 	self.main_menu.open_campaign_mission_selection(self.campaign_name)
 	self.main_menu.ui.campaign_selection.last_campaign_tile_clicked = self

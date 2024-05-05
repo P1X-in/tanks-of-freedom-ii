@@ -9,13 +9,13 @@ const SOUTH = "s"
 
 var position = Vector2(0, 0)
 
-var ground = preload("res://scenes/map/tile_fragment.gd").new()
-var frame = preload("res://scenes/map/tile_fragment.gd").new()
-var decoration = preload("res://scenes/map/tile_fragment.gd").new()
-var terrain = preload("res://scenes/map/tile_fragment.gd").new()
-var building = preload("res://scenes/map/tile_fragment.gd").new()
-var unit = preload("res://scenes/map/tile_fragment.gd").new()
-var damage = preload("res://scenes/map/tile_fragment.gd").new()
+var ground = load("res://scenes/map/tile_fragment.gd").new()
+var frame = load("res://scenes/map/tile_fragment.gd").new()
+var decoration = load("res://scenes/map/tile_fragment.gd").new()
+var terrain = load("res://scenes/map/tile_fragment.gd").new()
+var building = load("res://scenes/map/tile_fragment.gd").new()
+var unit = load("res://scenes/map/tile_fragment.gd").new()
+var damage = load("res://scenes/map/tile_fragment.gd").new()
 
 var fragments = []
 
@@ -219,8 +219,8 @@ func apply_invisibility():
 
 
 func _settings_changed(key, _new_value):
-	var shadows = self.settings.get_option("shadows")
-	var dec_shadows = self.settings.get_option("dec_shadows")
+	var shadows = Settings.get_option("shadows")
+	var dec_shadows = Settings.get_option("dec_shadows")
 
 	if key == "shadows" or key == "dec_shadows":
 		if shadows:

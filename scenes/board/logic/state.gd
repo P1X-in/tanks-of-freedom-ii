@@ -1,3 +1,4 @@
+class_name State
 
 const PLAYER_HUMAN = "human"
 const PLAYER_AI = "ai"

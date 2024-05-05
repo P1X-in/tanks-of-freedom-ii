@@ -32,7 +32,7 @@ func create_game(map_name: String) -> Error:
 	self.players.clear()
 	self.player_limit = _get_player_count(map_name)
 	var peer = ENetMultiplayerPeer.new()
-	var error = peer.create_server(self.settings.get_option("game_port"), self.player_limit)
+	var error = peer.create_server(Settings.get_option("game_port"), self.player_limit)
 	if error:
 		return error
 
@@ -123,7 +123,7 @@ func _on_server_disconnected() -> void:
 
 func _get_player_info() -> Dictionary:
 	return {
-		"name": self.settings.get_option("nickname"),
+		"name": Settings.get_option("nickname"),
 		"map": self.selected_map,
 		"in_progress": self.match_in_progress
 	}

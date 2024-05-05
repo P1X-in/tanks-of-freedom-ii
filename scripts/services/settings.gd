@@ -4,8 +4,8 @@ const SETTINGS_FILE_PATH = "user://settings.json"
 
 signal changed(key, new_value)
 
-@onready var audio = $"/root/SimpleAudioLibrary"
-var filesystem = preload("res://scripts/services/filesystem.gd").new()
+
+var filesystem = load("res://scripts/services/filesystem.gd").new()
 var os_string = ""
 
 var settings = {
@@ -77,13 +77,13 @@ func _apply_option(key):
 	if key == "fullscreen":
 		get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (self.settings[key]) else Window.MODE_WINDOWED
 	elif key == "sound":
-		self.audio.sounds_enabled = self.settings[key]
+		SimpleAudioLibrary.sounds_enabled = self.settings[key]
 	elif key == "music":
-		self.audio.music_enabled = self.settings[key]
+		SimpleAudioLibrary.music_enabled = self.settings[key]
 		if self.settings[key]:
-			self.audio.restart_track()
+			SimpleAudioLibrary.restart_track()
 		else:
-			self.audio.stop()
+			SimpleAudioLibrary.stop()
 	elif key == "vol_master":
 		self._set_bus_vol("Master", key)
 	elif key == "vol_sfx":

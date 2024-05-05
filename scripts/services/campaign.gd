@@ -5,7 +5,7 @@ const CORE_CAMPAIGNS_BASE_PATH = "res://assets/campaigns/"
 const CUSTOM_CAMPAIGNS_BASE_PATH = "campaign"
 const CAMPAIGN_MANIFEST = "/campaign.json"
 
-var filesystem = preload("res://scripts/services/filesystem.gd").new()
+var filesystem = load("res://scripts/services/filesystem.gd").new()
 
 var campaign_progress = {}
 

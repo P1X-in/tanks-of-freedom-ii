@@ -84,7 +84,7 @@ var mouse_click_position = null
 
 var camera_pan = Vector2(0, 0)
 
-@onready var settings = $"/root/Settings"
+
 
 func _ready():
 	randomize()
@@ -114,7 +114,7 @@ func _ready():
 	aw_camera_distance = pivot_rotation.z
 	_aw_camera_distance = pivot_rotation.z
 
-	self.switch_to_camera_style(self.settings.get_option("def_cam_st"))
+	self.switch_to_camera_style(Settings.get_option("def_cam_st"))
 
 func _input(event):
 	if not get_window().has_focus():
@@ -474,7 +474,7 @@ func _on_edge_pan(direction_vector):
 	if self.mouse_drag:
 		return
 
-	if not self.settings.get_option("edge_pan"):
+	if not Settings.get_option("edge_pan"):
 		return
 
 	if direction_vector[0] != null:

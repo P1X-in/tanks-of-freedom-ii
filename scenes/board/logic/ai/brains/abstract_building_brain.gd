@@ -5,8 +5,8 @@ const UNITS_HARD_LIMIT = 5
 const HARD_LIMIT_MULTIPLIER = 1.3
 const UNITS_SOFT_LIMIT = 10
 
-var action_template = preload("res://scenes/board/logic/ai/actions/use_ability_action.gd")
-var reserve_template = preload("res://scenes/board/logic/ai/actions/reserve_ap_action.gd")
+var action_template = load("res://scenes/board/logic/ai/actions/use_ability_action.gd")
+var reserve_template = load("res://scenes/board/logic/ai/actions/reserve_ap_action.gd")
 
 func get_actions(entity_tile, enemy_buildings, enemy_units, own_buildings, own_units, ap, board):
 	var spawn_points = self._get_spawn_points(entity_tile)

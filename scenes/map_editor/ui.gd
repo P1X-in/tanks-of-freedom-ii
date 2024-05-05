@@ -1,6 +1,6 @@
 extends Control
 
-@onready var settings = $"/root/Settings"
+
 
 @onready var radial = $"radial/radial"
 @onready var picker = $"picker/picker"
@@ -25,7 +25,7 @@ extends Control
 @onready var edge_pan_top = $"edge_pan/top"
 @onready var edge_pan_bottom = $"edge_pan/bottom"
 
-var icons = preload("res://scenes/ui/icons/icons.gd").new()
+var icons = load("res://scenes/ui/icons/icons.gd").new()
 
 func _ready():
 	self.map_name_label.set_message_translation(false)
@@ -130,7 +130,7 @@ func wipe_minimap():
 	self.minimap.wipe()
 
 func show_controls():
-	if self.settings.get_option("show_controls"):
+	if Settings.get_option("show_controls"):
 		self.controls.show()
 
 func hide_controls():

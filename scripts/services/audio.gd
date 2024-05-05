@@ -14,23 +14,23 @@ var sounds_enabled: bool = true
 var music_enabled: bool = true
 
 func _ready() -> void:
-	self.register_sample("click", preload("res://assets/audio/menu.wav"))
-	self.register_sample("menu_click", preload("res://assets/audio/menu_click.wav"))
-	self.register_sample("menu_back", preload("res://assets/audio/menu_back.wav"))
-	self.register_sample("explosion", preload("res://assets/audio/explosion.wav"))
-	self.register_sample("map_click", preload("res://assets/audio/map_click.wav"))
-	self.register_sample("fanfare", preload("res://assets/audio/fanfare.wav"))
-	self.register_sample("failfare", preload("res://assets/audio/failfare.wav"))
+	self.register_sample("click", load("res://assets/audio/menu.wav"))
+	self.register_sample("menu_click", load("res://assets/audio/menu_click.wav"))
+	self.register_sample("menu_back", load("res://assets/audio/menu_back.wav"))
+	self.register_sample("explosion", load("res://assets/audio/explosion.wav"))
+	self.register_sample("map_click", load("res://assets/audio/map_click.wav"))
+	self.register_sample("fanfare", load("res://assets/audio/fanfare.wav"))
+	self.register_sample("failfare", load("res://assets/audio/failfare.wav"))
 
 
-	self.register_track("intro", preload("res://assets/audio/soundtrack/grand_beats_intro.ogg"))
-	self.register_track("menu", preload("res://assets/audio/soundtrack/grand_beats_menu_soundtrack.ogg"))
-	self.register_track("soundtrack_1", preload("res://assets/audio/soundtrack/grand_beats_soundtrack_1_metal.ogg"))
-	self.register_track("soundtrack_2", preload("res://assets/audio/soundtrack/grand_beats_110.ogg"))
-	self.register_track("soundtrack_3", preload("res://assets/audio/soundtrack/reduz_all_star_champion_sheep.ogg"))
-	self.register_track("soundtrack_4", preload("res://assets/audio/soundtrack/reduz_like_a_whale.ogg"))
-	self.register_track("soundtrack_5", preload("res://assets/audio/soundtrack/reduz_the_sorrows_of_a_crab.ogg"))
-	self.register_track("soundtrack_6", preload("res://assets/audio/soundtrack/reduz_capybara_love.ogg"))
+	self.register_track("intro", load("res://assets/audio/soundtrack/grand_beats_intro.ogg"))
+	self.register_track("menu", load("res://assets/audio/soundtrack/grand_beats_menu_soundtrack.ogg"))
+	self.register_track("soundtrack_1", load("res://assets/audio/soundtrack/grand_beats_soundtrack_1_metal.ogg"))
+	self.register_track("soundtrack_2", load("res://assets/audio/soundtrack/grand_beats_110.ogg"))
+	self.register_track("soundtrack_3", load("res://assets/audio/soundtrack/reduz_all_star_champion_sheep.ogg"))
+	self.register_track("soundtrack_4", load("res://assets/audio/soundtrack/reduz_like_a_whale.ogg"))
+	self.register_track("soundtrack_5", load("res://assets/audio/soundtrack/reduz_the_sorrows_of_a_crab.ogg"))
+	self.register_track("soundtrack_6", load("res://assets/audio/soundtrack/reduz_capybara_love.ogg"))
 
 
 func play(sample_name: String) -> void:

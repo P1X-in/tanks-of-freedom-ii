@@ -2,7 +2,7 @@ extends "res://scenes/abilities/hero/active/active.gd"
 
 @export var unit_template = "blue_infantry"
 
-var deep_strike_executor_template = preload("res://scenes/abilities/hero/active/deep_strike_executor.tscn")
+var deep_strike_executor_template = load("res://scenes/abilities/hero/active/deep_strike_executor.tscn")
 
 func _execute(board, position):
     var executor = self.deep_strike_executor_template.instantiate()
