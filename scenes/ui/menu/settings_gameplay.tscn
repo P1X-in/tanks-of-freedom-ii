@@ -61,3 +61,10 @@ offset_bottom = 460.0
 option_name = "TR_SHOW_HEALTH"
 option_key = "show_health"
 help_tip = "TR_SHOW_HEALTH_DESC"
+
+[node name="scale_ui" parent="." instance=ExtResource("2")]
+offset_top = 475.0
+offset_bottom = 525.0
+option_name = "TR_SCALE_UI"
+option_key = "scale_ui"
+help_tip = "TR_SCALE_UI_DESC"

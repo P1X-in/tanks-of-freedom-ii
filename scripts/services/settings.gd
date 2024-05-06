@@ -43,7 +43,8 @@ var settings = {
 	"relay_domain": "api.tof.p1x.in",
 	"relay_port": 9939,
 	"end_turn_speed": "x1",
-	"show_health": true
+	"show_health": true,
+	"scale_ui": true
 }
 
 
@@ -108,6 +109,13 @@ func _apply_option(key):
 		Engine.set_max_physics_steps_per_frame(self.settings[key])
 	elif key == "locale":
 		TranslationServer.set_locale(self.settings[key])
+	elif key == "scale_ui":
+		if self.settings[key]:
+			get_window().set_content_scale_mode(Window.CONTENT_SCALE_MODE_CANVAS_ITEMS)
+			get_window().set_content_scale_aspect(Window.CONTENT_SCALE_ASPECT_KEEP_HEIGHT)
+		else:
+			get_window().set_content_scale_mode(Window.CONTENT_SCALE_MODE_DISABLED)
+			get_window().set_content_scale_aspect(Window.CONTENT_SCALE_ASPECT_KEEP)
 
 func _set_bus_vol(bus_name, key):
 	var decibels = self._get_decibels(self.settings[key])
