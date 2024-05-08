@@ -57,7 +57,7 @@ func apply_passive_modifiers(unit):
 			unit.apply_modifier(modifier_name, modifiers[modifier_name])
 
 func can_intimidate_crew(source):
-	var passive_abilities = self._get_passives_for_source(source)
+	var passive_abilities = self._get_passives_for_source(source.side)
 
 	for ability in passive_abilities:
 		if ability.can_intimidate_crew():
@@ -65,12 +65,12 @@ func can_intimidate_crew(source):
 
 	return false
 
-func _get_passives_for_source(source):
-	if source.side == "neutral":
+func _get_passives_for_source(side: String):
+	if side == "neutral":
 		return []
 
 	var abilities = []
-	var heroes = self.board.state.get_heroes_for_side(source.side)
+	var heroes = self.board.state.get_heroes_for_side(side)
 
 	for hero in heroes:
 		if hero.has_passive_ability():

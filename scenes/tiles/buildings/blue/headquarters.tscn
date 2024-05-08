@@ -1,12 +1,25 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1l4ov48rhaoc"]
+[gd_scene load_steps=9 format=3 uid="uid://d1l4ov48rhaoc"]
 
 [ext_resource type="ArrayMesh" uid="uid://vdvsrf4yxhih" path="res://assets/buildings/blue/headquarters.obj" id="1"]
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/buildings/building.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/blue/infantry.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/heroes/general.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/heroes/commando.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="3"]
+[ext_resource type="Script" path="res://scenes/abilities/production/unit.gd" id="3_y6nhm"]
 [ext_resource type="Script" path="res://scenes/tiles/buildings/blue/headquarters.gd" id="7"]
+
+[sub_resource type="Resource" id="Resource_o6vi5"]
+script = ExtResource("3_y6nhm")
+style = "blue"
+unit = "infantry"
+TYPE = "production"
+dlc_version = 1
+index = 1
+label = "TR_INFANTRY"
+description = ""
+ap_cost = 40
+cooldown = 0
+ability_range = 0
+draw_range = 0
+in_line = false
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -44,28 +57,15 @@ _data = {
 [node name="headquarters" instance=ExtResource("3")]
 script = ExtResource("7")
 side = "blue"
-require_crew = true
 ap_gain = 20
 capture_value = 1000
-uses_metallic_material = false
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([SubResource("Resource_o6vi5")])
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("1")
 surface_material_override/0 = ExtResource("2")
 
-[node name="infantry" parent="." index="1" instance=ExtResource("4")]
-index = 2
-ap_cost = 40
-
-[node name="general" parent="." index="2" instance=ExtResource("5")]
-
-[node name="commando" parent="." index="3" instance=ExtResource("6")]
-index = 4
-
-[node name="animations" parent="." index="5"]
+[node name="animations" parent="." index="2"]
 libraries = {
 "": SubResource("AnimationLibrary_oe3u7")
 }
-
-[node name="capture" parent="audio" index="0"]
-bus = &"Units"

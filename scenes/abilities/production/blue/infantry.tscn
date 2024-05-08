@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://scenes/abilities/production/unit.tscn" type="PackedScene" id=1]
-
-[node name="infantry" instance=ExtResource( 1 )]
-label = "TR_INFANTRY"
-ap_cost = 25
-template_name = "blue_infantry"
