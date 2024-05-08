@@ -16,7 +16,11 @@ var team = null
 
 @export var uses_metallic_material = false
 
-var abilities = []
+@export var abilities: Array[Ability] = []
+
+func _ready():
+	for ability in abilities:
+		ability.subscribe_for_ability(self)
 
 func get_dict():
 	var new_dict = super.get_dict()
@@ -36,9 +40,6 @@ func set_side_materials(_base_material, _desaturated_material):
 
 func set_side_material(material):
 	$"mesh".set_surface_override_material(0, material)
-
-func register_ability(ability):
-	self.abilities.append(ability)
 
 func animate_coin():
 	self.animations.play("ap_gain")

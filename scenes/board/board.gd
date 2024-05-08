@@ -128,7 +128,7 @@ func hover_tile():
 	if not self.ui.is_panel_open():
 		var tile = self.map.model.get_tile(self.map.tile_box_position)
 
-		if tile != self.last_hover_tile or true:
+		if tile != self.last_hover_tile:
 			self.last_hover_tile = tile
 
 			self.update_tile_highlight(tile)
@@ -644,7 +644,7 @@ func activate_production_ability(args):
 
 func _activate_production_ability(ability):
 	var cost = ability.get_cost()
-	cost = self.abilities.get_modified_cost(cost, ability.template_name, ability.source)
+	cost = self.abilities.get_modified_cost(cost, ability.template_name, ability.side)
 
 	if self.state.can_current_player_afford(cost):
 		self.active_ability = ability
@@ -683,7 +683,7 @@ func replenish_unit_actions():
 
 	for unit in units:
 		unit.clear_modifiers()
-		self.abilities.apply_passive_modifiers(unit)
+		self.abilities.apply_passive_modifiers(unit.side)
 		unit.replenish_moves()
 		unit.ability_cd_tick_down()
 		unit.team = self.state.get_player_team(current_player["side"])
@@ -694,7 +694,7 @@ func gain_building_ap():
 	var buildings = self.map.model.get_player_buildings(current_player["side"])
 
 	for building in buildings:
-		ap_sum += self.abilities.get_modified_ap_gain(building.ap_gain, building)
+		ap_sum += self.abilities.get_modified_ap_gain(building.ap_gain, building.side)
 		if building.ap_gain > 0:
 			building.animate_coin()
 
@@ -741,7 +741,7 @@ func update_tile_highlight(tile):
 
 	if tile.building.is_present():
 		var ap_gain = tile.building.tile.ap_gain
-		ap_gain = self.abilities.get_modified_ap_gain(ap_gain, tile.building.tile)
+		ap_gain = self.abilities.get_modified_ap_gain(ap_gain, tile.building.tile.side)
 		self.ui.update_tile_highlight_building_panel(ap_gain)
 	if tile.unit.is_present():
 		self.ui.update_tile_highlight_unit_panel(tile.unit.tile, self)
