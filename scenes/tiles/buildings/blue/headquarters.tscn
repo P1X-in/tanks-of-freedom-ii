@@ -1,25 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1l4ov48rhaoc"]
+[gd_scene load_steps=7 format=3 uid="uid://d1l4ov48rhaoc"]
 
 [ext_resource type="ArrayMesh" uid="uid://vdvsrf4yxhih" path="res://assets/buildings/blue/headquarters.obj" id="1"]
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="2"]
+[ext_resource type="Resource" uid="uid://b7uw3y4b42tew" path="res://scenes/abilities/production/units/infantry_headquarters.tres" id="2_brjyf"]
 [ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="3"]
-[ext_resource type="Script" path="res://scenes/abilities/production/unit.gd" id="3_y6nhm"]
-[ext_resource type="Script" path="res://scenes/tiles/buildings/blue/headquarters.gd" id="7"]
-
-[sub_resource type="Resource" id="Resource_o6vi5"]
-script = ExtResource("3_y6nhm")
-style = "blue"
-unit = "infantry"
-TYPE = "production"
-dlc_version = 1
-index = 1
-label = "TR_INFANTRY"
-description = ""
-ap_cost = 40
-cooldown = 0
-ability_range = 0
-draw_range = 0
-in_line = false
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -55,11 +39,10 @@ _data = {
 }
 
 [node name="headquarters" instance=ExtResource("3")]
-script = ExtResource("7")
 side = "blue"
 ap_gain = 20
 capture_value = 1000
-abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([SubResource("Resource_o6vi5")])
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_brjyf")])
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("1")

@@ -3,7 +3,6 @@
 [ext_resource type="ArrayMesh" uid="uid://bu87skmt6004s" path="res://assets/buildings/blue/tower.obj" id="1"]
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="2"]
 [ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="3"]
-[ext_resource type="Script" path="res://scenes/tiles/buildings/blue/tower.gd" id="4"]
 [ext_resource type="AudioStream" uid="uid://dkkuho3c7y47f" path="res://assets/audio/building_capture_drum.wav" id="5_1544k"]
 
 [sub_resource type="Animation" id="1"]
@@ -40,7 +39,6 @@ _data = {
 }
 
 [node name="tower" instance=ExtResource("3")]
-script = ExtResource("4")
 side = "blue"
 require_crew = false
 ap_gain = 15
