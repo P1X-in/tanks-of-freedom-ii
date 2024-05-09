@@ -23,7 +23,7 @@ func _execute(board, position):
 
 	new_unit.replenish_moves()
 	new_unit.team = board.state.get_player_team(board.state.get_current_side())
-	board.abilities.apply_passive_modifiers(new_unit.side)
+	board.abilities.apply_passive_modifiers(new_unit)
 	new_unit.sfx_effect("spawn")
 
 	if board.abilities.get_initial_level(self.template_name, self.side) > 0:

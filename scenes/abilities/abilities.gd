@@ -30,7 +30,7 @@ func get_modified_cooldown(cd_value, source):
 
 
 func get_modified_ap_gain(value, source):
-	var passive_abilities = self._get_passives_for_source(source)
+	var passive_abilities = self._get_passives_for_source(source.side)
 	var modified_value = value
 
 	for ability in passive_abilities:
@@ -48,7 +48,7 @@ func get_initial_level(template_name, source):
 	return initial_level
 
 func apply_passive_modifiers(unit):
-	var passive_abilities = self._get_passives_for_source(unit)
+	var passive_abilities = self._get_passives_for_source(unit.side)
 	var modifiers = {}
 
 	for ability in passive_abilities:
