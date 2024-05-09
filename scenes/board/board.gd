@@ -683,7 +683,7 @@ func replenish_unit_actions():
 
 	for unit in units:
 		unit.clear_modifiers()
-		self.abilities.apply_passive_modifiers(unit.side)
+		self.abilities.apply_passive_modifiers(unit)
 		unit.replenish_moves()
 		unit.ability_cd_tick_down()
 		unit.team = self.state.get_player_team(current_player["side"])
@@ -694,7 +694,7 @@ func gain_building_ap():
 	var buildings = self.map.model.get_player_buildings(current_player["side"])
 
 	for building in buildings:
-		ap_sum += self.abilities.get_modified_ap_gain(building.ap_gain, building.side)
+		ap_sum += self.abilities.get_modified_ap_gain(building.ap_gain, building)
 		if building.ap_gain > 0:
 			building.animate_coin()
 
@@ -741,7 +741,7 @@ func update_tile_highlight(tile):
 
 	if tile.building.is_present():
 		var ap_gain = tile.building.tile.ap_gain
-		ap_gain = self.abilities.get_modified_ap_gain(ap_gain, tile.building.tile.side)
+		ap_gain = self.abilities.get_modified_ap_gain(ap_gain, tile.building.tile)
 		self.ui.update_tile_highlight_building_panel(ap_gain)
 	if tile.unit.is_present():
 		self.ui.update_tile_highlight_unit_panel(tile.unit.tile, self)
