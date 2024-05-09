@@ -50,7 +50,7 @@ func is_on_cooldown():
 	return self.cd_turns_left > 0
 
 func activate_cooldown(board):
-	var modified_cooldown = board.abilities.get_modified_cooldown(self.cooldown, self.source)
+	var modified_cooldown = board.abilities.get_modified_cooldown(self.cooldown, self.source.side)
 
 	self.cd_turns_left = modified_cooldown
 

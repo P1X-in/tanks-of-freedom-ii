@@ -5,8 +5,9 @@ extends Ability
 var style: String
 
 var template_name: String:
-	get:
-		return style + "_" + unit
+	get = _get_template_name
+func _get_template_name():
+	return style + "_" + unit
 
 func _init():
 	self.TYPE = "production"
