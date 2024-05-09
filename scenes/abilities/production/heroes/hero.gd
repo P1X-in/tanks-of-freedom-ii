@@ -1,6 +1,11 @@
 class_name Hero
 extends SpawnUnit
 
+@export_enum("admiral", "captain", "commando", "general", "gentleman", "noble", "prince", "warlord") var hero: String
+
+func _get_template_name():
+	return "hero_" + hero
+
 func _is_visible(board=null):
 	if self.source == null:
 		return false
