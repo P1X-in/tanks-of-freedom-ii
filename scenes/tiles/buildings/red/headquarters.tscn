@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://busyqun207nnw" path="res://assets/buildings/red/headquarters.obj" id="2"]
-[ext_resource type="Resource" uid="uid://bexxoi63crsej" path="res://scenes/abilities/production/units/infantry.tres" id="2_csobr"]
+[ext_resource type="Resource" uid="uid://b7uw3y4b42tew" path="res://scenes/abilities/production/units/infantry_headquarters.tres" id="2_xcb33"]
 [ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="3"]
 
 [sub_resource type="Animation" id="1"]
@@ -42,7 +42,7 @@ _data = {
 side = "red"
 ap_gain = 20
 capture_value = 1000
-abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_csobr")])
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_xcb33")])
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("2")
