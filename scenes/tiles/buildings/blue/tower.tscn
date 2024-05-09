@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://nhd7usw4yg58"]
+[gd_scene load_steps=7 format=3 uid="uid://nhd7usw4yg58"]
 
 [ext_resource type="ArrayMesh" uid="uid://bu87skmt6004s" path="res://assets/buildings/blue/tower.obj" id="1"]
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="2"]
