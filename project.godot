@@ -42,6 +42,7 @@ Online="*res://scripts/services/online.gd"
 Multiplayer="*res://scripts/services/multiplayer.gd"
 Autodiscovery="*res://scripts/services/autodiscovery.gd"
 Relay="*res://scripts/services/relay.gd"
+ButtonHotkeyService="*res://scripts/services/button_hotkey_service.gd"
 
 [debug]
 

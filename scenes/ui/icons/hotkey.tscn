@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbuy7ss84alp"]
+
+[ext_resource type="Texture2D" uid="uid://bpunwi45xf0cx" path="res://assets/gui/icons/controls/tilemap_packed.png" id="1_ppxay"]
+[ext_resource type="Script" path="res://scenes/ui/icons/hotkey.gd" id="2_f0f61"]
+
+[node name="hotkey" type="Sprite2D"]
+texture = ExtResource("1_ppxay")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+script = ExtResource("2_f0f61")
