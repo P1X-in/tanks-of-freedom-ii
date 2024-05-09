@@ -1,8 +1,8 @@
 class_name SpawnUnit
 extends Ability
 
-@export_enum("red", "yellow", "blue", "green") var style: String
 @export_enum("heli", "infantry", "m_inf", "rocket", "scout", "tank") var unit: String
+var style: String
 
 var template_name: String:
 	get:
@@ -10,6 +10,10 @@ var template_name: String:
 
 func _init():
 	self.TYPE = "production"
+
+func subscribe_for_ability(subscriber: BaseBuilding):
+	super.subscribe_for_ability(subscriber)
+	self.style = subscriber.side
 
 func _execute(board, position):
 	var new_unit = board.map.builder.place_unit(position, self.template_name, 0, board.state.get_current_side())
