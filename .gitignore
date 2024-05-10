@@ -20,3 +20,6 @@ assets/terrain/grasslands/grassland_library.tres
 assets/terrain/grasslands_library.tres
 
 **/.DS_Store
+
+#Editor addons
+addons/
