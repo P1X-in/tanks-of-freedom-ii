@@ -6,7 +6,8 @@
   - `2p_cityscape`
   - `2p_oasis`
   - `2p_forlorn`
-  - `2p_arrowhead`
+  - `3p_arrowhead`
+  - `3p_nexus`
 - Renamed existing Skirmish mode maps
   - `crossroad` is now `2p_crossroad`
   - `crossroad2` is now `4p_crossroad2`
