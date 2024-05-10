@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cf1bvfsm08e70"]
+[gd_scene load_steps=9 format=3 uid="uid://cf1bvfsm08e70"]
 
 [ext_resource type="ArrayMesh" uid="uid://cs2xntyvnbpia" path="res://assets/buildings/green/headquarters.obj" id="1"]
 [ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="2"]
 [ext_resource type="Resource" uid="uid://b7uw3y4b42tew" path="res://scenes/abilities/production/units/infantry_headquarters.tres" id="2_f8aam"]
-[ext_resource type="Resource" uid="uid://b80sn50eptnqc" path="res://scenes/abilities/production/heroes/admiral.tres" id="3_rleha"]
+[ext_resource type="Resource" uid="uid://b80sn50eptnqc" path="res://scenes/abilities/production/heroes/admiral.tres" id="3_dtm3i"]
 [ext_resource type="Material" uid="uid://cj2u6cis5y0wd" path="res://assets/materials/arne32_green.tres" id="4"]
+[ext_resource type="Resource" uid="uid://dkp1odiutneg4" path="res://scenes/abilities/production/heroes/capitan.tres" id="4_xdsw2"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -43,7 +44,7 @@ _data = {
 side = "green"
 ap_gain = 20
 capture_value = 1000
-abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_f8aam"), ExtResource("3_rleha")])
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_f8aam"), ExtResource("3_dtm3i"), ExtResource("4_xdsw2")])
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("1")

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Hero" load_steps=2 format=3 uid="uid://bkcutwt340j0v"]
+
+[ext_resource type="Script" path="res://scenes/abilities/production/heroes/hero.gd" id="1_cy8yv"]
+
+[resource]
+script = ExtResource("1_cy8yv")
+hero = "warlord"
+unit = ""
+TYPE = "production"
+dlc_version = 1
+index = 2
+label = "TR_WARLORD"
+description = ""
+ap_cost = 150
+cooldown = 0
+ability_range = 0
+draw_range = 0
+in_line = false
