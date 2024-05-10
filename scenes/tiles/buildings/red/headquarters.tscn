@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://beabbbh66nuru"]
+[gd_scene load_steps=9 format=3 uid="uid://beabbbh66nuru"]
 
 [ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://busyqun207nnw" path="res://assets/buildings/red/headquarters.obj" id="2"]
 [ext_resource type="Resource" uid="uid://b7uw3y4b42tew" path="res://scenes/abilities/production/units/infantry_headquarters.tres" id="2_xcb33"]
 [ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="3"]
+[ext_resource type="Resource" uid="uid://cu15wtn6y8g15" path="res://scenes/abilities/production/heroes/gentleman.tres" id="3_80tyc"]
+[ext_resource type="Resource" uid="uid://cbec0ll7uw6cl" path="res://scenes/abilities/production/heroes/noble.tres" id="4_8isat"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -42,7 +44,7 @@ _data = {
 side = "red"
 ap_gain = 20
 capture_value = 1000
-abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_xcb33")])
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_xcb33"), ExtResource("3_80tyc"), ExtResource("4_8isat")])
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("2")
