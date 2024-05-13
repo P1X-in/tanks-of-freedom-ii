@@ -8,6 +8,7 @@
   - `2p_forlorn`
   - `3p_arrowhead`
   - `3p_nexus`
+  - `3p_isle`
 - Renamed existing Skirmish mode maps
   - `crossroad` is now `2p_crossroad`
   - `crossroad2` is now `4p_crossroad2`
