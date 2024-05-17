@@ -11,6 +11,7 @@
   - `3p_isle`
   - `4p_oasis2`
   - `4p_cross`
+  - `4p_ridge`
 - Renamed existing Skirmish mode maps
   - `crossroad` is now `2p_crossroad`
   - `crossroad2` is now `4p_crossroad2`
