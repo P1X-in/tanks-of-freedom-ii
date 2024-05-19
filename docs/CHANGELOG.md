@@ -31,6 +31,7 @@
 - Added new content suppression for maps created with older editor version
   - New abilities need to be marked with proper dlc version
 - Added Credits screen
+- Fixed a bug causing AI to stop working, freezing the turn
 - Fixed a bug preventing online maps from being downloaded
 
 
