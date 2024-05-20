@@ -1,5 +1,5 @@
-extends MapTile
 class_name BaseUnit
+extends MapTile
 
 signal move_finished
 
@@ -51,6 +51,7 @@ var tether_length: int = 0
 var modifiers: Dictionary = {}
 var passive_ability: PassiveAbility = null
 var active_abilities: Array = []
+var allow_level_up: bool = true
 
 var unit_rotations: Dictionary = {
 	"s" : 0,
@@ -356,7 +357,7 @@ func gain_exp() -> void:
 			self.level_up()
 
 func level_up() -> void:
-	if not self.is_max_level():
+	if not self.is_max_level() and self.allow_level_up:
 		self.level += 1
 		self.animations.play("level_up")
 		self.sfx_effect("level_up")
@@ -400,7 +401,8 @@ func _get_abilities_status() -> Dictionary:
 	return status
 
 func restore_from_state(state: Dictionary) -> void:
-	self.scripting_tags = state["tags"]
+	if state.has("tags"):
+		self.scripting_tags = state["tags"]
 	self.hp = state["stats"]["hp"]
 	self.move = state["stats"]["move"]
 	self.attacks = state["stats"]["attacks"]
@@ -430,9 +432,12 @@ func is_hero() -> bool:
 	return false
 
 func _update_healthbar() -> void:
-	self.healthbar.value = self.hp
+	if self.healthbar != null:
+		self.healthbar.value = self.hp
 
 func _update_level() -> void:
+	if self.healthbar == null:
+		return
 	self.healthbar_lv1.hide()
 	self.healthbar_lv2.hide()
 	self.healthbar_lv3.hide()

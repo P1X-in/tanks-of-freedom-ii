@@ -2,13 +2,14 @@
     "name" : "core_prologue",
     "title" : "tr_core_prologue_campaign_title",
     "icon" : "book",
+    "map": "map.png",
     "missions" : [
         {
             "name" : "another_excercise",
             "title" : "tr_core_prologue_m1_name",
             "map" : "prologue_excercise.tofmap.json",
             "description" : "tr_core_prologue_m1_desc",
-            "marker" : [420, 90],
+            "marker" : [555, 315],
             "players": [
                 {
                     "side" : "yellow",
@@ -27,7 +28,7 @@
             "title" : "tr_core_prologue_m2_name",
             "map" : "prologue_inspection.tofmap.json",
             "description" : "tr_core_prologue_m2_desc",
-            "marker" : [450, 155],
+            "marker" : [250, 60],
             "players": [
                 {
                     "side" : "yellow",

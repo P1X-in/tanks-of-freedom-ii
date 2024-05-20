@@ -31,7 +31,7 @@ func get_actions(entity_tile, enemy_buildings, enemy_units, own_buildings, own_u
 			continue
 
 		action = null
-		ability_cost = board.abilities.get_modified_cost(ability.ap_cost, ability.template_name, building)
+		ability_cost = board.abilities.get_modified_cost(ability.get_cost(), ability.template_name, building)
 		if ability_cost <= ap:
 			action = self._create_ability_action(ability, self._select_random_spawn_point(spawn_points))
 			ability.active_source_tile = entity_tile
@@ -86,7 +86,7 @@ func _calculate_proximity_value_bonus(entity_tile, enemy_units, enemy_buildings)
 	return bonus
 
 func _calculate_value(ability, bonus, units_stats, ap):
-	var value = ability.ap_cost
+	var value = ability.get_cost()
 	var template_name = self._map_template_name(ability.template_name)
 
 	var unit_presence = 0.0
@@ -98,7 +98,7 @@ func _calculate_value(ability, bonus, units_stats, ap):
 	if unit_presence > 0.5:
 		value -= 20
 
-	if float(ability.ap_cost) / float(ap) >= 0.8:
+	if float(ability.get_cost()) / float(ap) >= 0.8:
 		value -= 20
 
 	if units_stats["total"] > self.UNITS_SOFT_LIMIT:

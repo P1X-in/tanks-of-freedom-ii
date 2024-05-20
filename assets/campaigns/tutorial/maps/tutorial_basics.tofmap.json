@@ -667,7 +667,7 @@
                 "type": "move"
             },
             "08_red_unit_attacked" : {"type" : "attacked", "story" : "red_unit_attacked", "details" : { "vip" : [12, 21] }, "one_off" : true},
-            "09_red_unit_destroyed" : {"type" : "assasination", "story" : "red_unit_destroyed", "details" : { "vip" : [12, 21] }, "one_off" : true},
+            "09_red_unit_destroyed" : {"type" : "assassination", "story" : "red_unit_destroyed", "details" : { "vip" : [12, 21] }, "one_off" : true},
             "10_hq_claimed": {
                 "details": {
                     "amount": 1,

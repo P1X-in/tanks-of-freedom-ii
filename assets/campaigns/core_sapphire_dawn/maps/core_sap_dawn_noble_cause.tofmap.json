@@ -812,7 +812,7 @@
                 },
                 "one_off": true,
                 "story": "cyrus_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "free_sidney": {
                 "details": {
@@ -862,7 +862,7 @@
                 },
                 "one_off": true,
                 "story": "sidney_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "spawn_wave": {
                 "details": {

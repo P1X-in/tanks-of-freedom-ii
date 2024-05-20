@@ -77,6 +77,8 @@ func _load_core_campaigns():
 	for registered_campaign in self.registered_core_campaign_names:
 		campaign_details = self._load_campaign_details(self.CORE_CAMPAIGNS_BASE_PATH + registered_campaign)
 		if campaign_details != null:
+			if campaign_details.has("map"):
+				campaign_details["map"] = self.CORE_CAMPAIGNS_BASE_PATH + "/" + registered_campaign + "/" + campaign_details["map"]
 			self.core_campaigns.append(campaign_details)
 			self.core_campaigns_by_name[registered_campaign] = campaign_details
 

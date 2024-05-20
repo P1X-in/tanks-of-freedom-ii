@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://cen55657i84ui"]
+
+[ext_resource type="PackedScene" uid="uid://dc4vyffm4fyvi" path="res://scenes/map_editor/story/triggers/types/base_edit_type.tscn" id="1_majaw"]
+[ext_resource type="Script" path="res://scenes/map_editor/story/triggers/types/attacked.gd" id="2_rleaw"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_d0bnw"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="4_ffulh"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="5_ptdvh"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="6_m1o5u"]
+[ext_resource type="PackedScene" uid="uid://gxr1dxy4v75y" path="res://scenes/ui/icons/pen.tscn" id="7_ly267"]
+
+[node name="Attacked" instance=ExtResource("1_majaw")]
+script = ExtResource("2_rleaw")
+
+[node name="vip" type="Label" parent="." index="8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 200.0
+offset_right = -250.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_d0bnw")
+text = "TR_VIP"
+vertical_alignment = 1
+
+[node name="x" type="LineEdit" parent="vip" index="0"]
+layout_mode = 0
+offset_left = 395.0
+offset_right = 465.0
+offset_bottom = 40.0
+placeholder_text = "X"
+alignment = 1
+max_length = 2
+
+[node name="y" type="LineEdit" parent="vip" index="1"]
+layout_mode = 0
+offset_left = 470.0
+offset_right = 540.0
+offset_bottom = 40.0
+placeholder_text = "Y"
+alignment = 1
+max_length = 2
+
+[node name="picker_button" type="TextureButton" parent="vip" index="2"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_ffulh")
+texture_pressed = ExtResource("5_ptdvh")
+texture_hover = ExtResource("6_m1o5u")
+texture_focused = ExtResource("6_m1o5u")
+
+[node name="anchor" type="Control" parent="vip/picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="vip/picker_button/anchor" index="0" instance=ExtResource("7_ly267")]
+
+[connection signal="text_changed" from="vip/x" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="vip/y" to="." method="_on_text_changed"]
+[connection signal="pressed" from="vip/picker_button" to="." method="_on_picker_button_pressed"]

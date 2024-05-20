@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://82wwyxe6qas2"]
+
+[ext_resource type="Script" path="res://scenes/map_editor/story/story_element_picker_list_element.gd" id="1_58kl6"]
+[ext_resource type="Texture2D" uid="uid://f7wawy5861s0" path="res://assets/gui/menu/buttons/buttonVeryLong_brown.png" id="1_hkod2"]
+[ext_resource type="Texture2D" uid="uid://dkj6fiih1s22v" path="res://assets/gui/menu/buttons/buttonVeryLong_brown_pressed.png" id="2_mx3ul"]
+[ext_resource type="Texture2D" uid="uid://bgiktitmj0ar4" path="res://assets/gui/menu/buttons/buttonVeryLong_brown_hover.png" id="3_7os4a"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="4_7qdjq"]
+
+[node name="StoryElementPickerListElement" type="Control"]
+custom_minimum_size = Vector2(580, 45)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -700.0
+offset_bottom = -755.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_58kl6")
+
+[node name="button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 555.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_hkod2")
+texture_pressed = ExtResource("2_mx3ul")
+texture_hover = ExtResource("3_7os4a")
+texture_focused = ExtResource("3_7os4a")
+
+[node name="label" type="Label" parent="button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_7qdjq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="button" to="." method="_on_button_pressed"]

@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=3 uid="uid://w53igqpdbpat"]
+
+[ext_resource type="PackedScene" uid="uid://dc4vyffm4fyvi" path="res://scenes/map_editor/story/triggers/types/base_edit_type.tscn" id="1_fqi5d"]
+[ext_resource type="Script" path="res://scenes/map_editor/story/triggers/types/turn.gd" id="2_tgrjb"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_jhk0d"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="4_qgrwg"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="5_55ko1"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="6_b6fqt"]
+[ext_resource type="PackedScene" uid="uid://gxr1dxy4v75y" path="res://scenes/ui/icons/pen.tscn" id="7_e8b60"]
+
+[node name="Turn" instance=ExtResource("1_fqi5d")]
+script = ExtResource("2_tgrjb")
+
+[node name="player_id" type="Label" parent="." index="8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 200.0
+offset_right = -250.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_jhk0d")
+text = "TR_PLAYER_ID"
+vertical_alignment = 1
+
+[node name="id" type="LineEdit" parent="player_id" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+max_length = 1
+
+[node name="player_side" type="Label" parent="." index="9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 250.0
+offset_right = -250.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_jhk0d")
+text = "TR_PLAYER_SIDE"
+vertical_alignment = 1
+
+[node name="side" type="LineEdit" parent="player_side" index="0"]
+layout_mode = 0
+offset_left = 400.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="side_picker_button" type="TextureButton" parent="player_side" index="1"]
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_qgrwg")
+texture_pressed = ExtResource("5_55ko1")
+texture_hover = ExtResource("6_b6fqt")
+texture_focused = ExtResource("6_b6fqt")
+
+[node name="anchor" type="Control" parent="player_side/side_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="player_side/side_picker_button/anchor" index="0" instance=ExtResource("7_e8b60")]
+
+[node name="turn" type="Label" parent="." index="10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 300.0
+offset_right = -250.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_jhk0d")
+text = "TR_TURN"
+vertical_alignment = 1
+
+[node name="turn" type="LineEdit" parent="turn" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[connection signal="text_changed" from="player_id/id" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="player_side/side" to="." method="_on_text_changed"]
+[connection signal="pressed" from="player_side/side_picker_button" to="." method="_on_side_picker_button_pressed"]
+[connection signal="text_changed" from="turn/turn" to="." method="_on_text_changed"]

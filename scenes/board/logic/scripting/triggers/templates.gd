@@ -6,7 +6,7 @@ var templates = {
     'deploy' : preload("res://scenes/board/logic/scripting/triggers/deploy.gd"),
     'claim' : preload("res://scenes/board/logic/scripting/triggers/claim.gd"),
     'decimate' : preload("res://scenes/board/logic/scripting/triggers/decimate.gd"),
-    'assasination' : preload("res://scenes/board/logic/scripting/triggers/assasination.gd"),
+    'assassination' : preload("res://scenes/board/logic/scripting/triggers/assassination.gd"),
     'attacked' : preload("res://scenes/board/logic/scripting/triggers/attacked.gd"),
     'resources' : preload("res://scenes/board/logic/scripting/triggers/resources.gd"),
     'ability' : preload("res://scenes/board/logic/scripting/triggers/ability.gd"),

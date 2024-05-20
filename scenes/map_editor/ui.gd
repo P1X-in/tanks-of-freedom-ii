@@ -5,6 +5,7 @@ extends Control
 @onready var radial = $"radial/radial"
 @onready var picker = $"picker/picker"
 @onready var controls = $"controls/editor"
+@onready var story = $"story/StoryEditor"
 @onready var minimap = $"minimap"
 @onready var minimap_animations = $"minimap/animations"
 
@@ -63,16 +64,22 @@ func toggle_radial():
 
 func show_tiles():
 	self.tile_animations.play("show")
-	self.minimap_animations.play("show")
-	if self.map_name_label.get_text() != "":
-		self.map_name_wrapper.show()
+	self.show_minimap()
 	self.show_controls()
 
 func hide_tiles():
 	self.tile_animations.play("hide")
+	self.hide_minimap()
+	self.hide_controls()
+
+func show_minimap():
+	self.minimap_animations.play("show")
+	if self.map_name_label.get_text() != "":
+		self.map_name_wrapper.show()
+
+func hide_minimap():
 	self.minimap_animations.play("hide")
 	self.map_name_wrapper.hide()
-	self.hide_controls()
 
 func show_radial():
 	self.radial.show_menu()
@@ -95,12 +102,16 @@ func hide_position():
 func close_all_popups():
 	if self.picker.is_visible():
 		self.hide_picker()
+	if self.story.is_visible():
+		self.hide_story()
 
 func is_radial_open():
 	return self.radial.is_visible()
 
 func is_popup_open():
 	if self.picker.is_visible():
+		return true
+	if self.story.is_visible():
 		return true
 
 	return false
@@ -135,3 +146,9 @@ func show_controls():
 
 func hide_controls():
 	self.controls.hide()
+
+func show_story():
+	self.story.show_panel()
+
+func hide_story():
+	self.story.hide()

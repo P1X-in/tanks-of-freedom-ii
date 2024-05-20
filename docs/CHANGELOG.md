@@ -2,9 +2,36 @@
 ## Changelog
 
 ### 0.7.0-alpha
+- New Skirmish mode maps
+  - `2p_cityscape`
+  - `2p_oasis`
+  - `2p_forlorn`
+  - `3p_arrowhead`
+  - `3p_nexus`
+  - `3p_isle`
+  - `4p_oasis2`
+  - `4p_cross`
+  - `4p_ridge`
+- Renamed existing Skirmish mode maps
+  - `crossroad` is now `2p_crossroad`
+  - `crossroad2` is now `4p_crossroad2`
+  - `split2` is now `2p_split2`
+- Removed new units and level ups from `2p_crossroad` to make it closer to ToF 1 classic
 - Added unit healthbars and level stars
+- Mobile Infantry Medkit ability rebalanced
+  - Ability now available at level 0 for 5AP
+  - Ability now free at level 1
+- Added more blur for tilt-shift effect near max camera zoom
+- Added new cover maps for campaigns
+- Added story editor to map editor allowing to create scenarios
+  - Additional map settings
+  - Triggers editor
+  - Stories editor
+  - Documentation added to MANUAL.md
 - Added new content suppression for maps created with older editor version
   - New abilities need to be marked with proper dlc version
+- Added Credits screen
+- Fixed a bug causing AI to stop working, freezing the turn
 - Fixed a bug preventing online maps from being downloaded
 
 

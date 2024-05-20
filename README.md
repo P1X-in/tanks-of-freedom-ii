@@ -26,6 +26,14 @@ Game is made using [Godot Engine 4.2+](https://godotengine.org).
 
 Development progress can be tracked at [the trello board](https://trello.com/b/RQOwyCwm/tanks-of-freedom-3-d).
 
+## Documentation
+
+For the game design document please see [DESIGN](docs/DESIGN.md)
+
+The development process is being documented with screenshots that can be found in [devlog folder](docs/devlog)
+
+Built-in map editor has it's more advanced functions described in [MANUAL](docs/MANUAL.md)
+
 ## Build from sources
 To get the latest version of the game, you'll need to use the source code and Godot Engine.
 
@@ -58,6 +66,8 @@ Follow [official documentation](https://docs.godotengine.org/en/stable/getting_s
 
 ### engine
    - Godot Engine https://godotengine.org/
+
+For any additional credits please see [CREDITS](docs/CREDITS.md)
 
 ## License
 

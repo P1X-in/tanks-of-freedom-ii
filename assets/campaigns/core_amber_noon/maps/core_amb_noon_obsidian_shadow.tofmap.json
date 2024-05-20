@@ -408,7 +408,7 @@
                 },
                 "one_off": true,
                 "story": "claude_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "hq_claimed": {
                 "details": {
@@ -434,7 +434,7 @@
                 },
                 "one_off": true,
                 "story": "prince_defeated",
-                "type": "assasination"
+                "type": "assassination"
             }
         }
     },

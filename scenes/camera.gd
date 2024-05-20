@@ -37,6 +37,8 @@ const MODE_AW = "AW"
 
 @export var camera_space_size = 100
 
+@export var pan_speed = 20
+
 var camera_mode = "TOF"
 
 var camera_pivot
@@ -115,6 +117,7 @@ func _ready():
 	_aw_camera_distance = pivot_rotation.z
 
 	self.switch_to_camera_style(self.settings.get_option("def_cam_st"))
+	self._set_near_blur(0)
 
 func _input(event):
 	if not get_window().has_focus():
@@ -147,6 +150,11 @@ func _input(event):
 
 		if self.mouse_drag:
 			self._mouse_shift_camera(event.relative)
+	elif event is InputEventPanGesture:
+		self._mouse_shift_camera(event.delta * pan_speed)
+	elif event is InputEventMagnifyGesture:
+		var zoom_steps = int((event.factor - 1) * 100)
+		self._mouse_zoom(self.mouse_zoom_step * zoom_steps)
 
 func _process(delta):
 	if self.paused:
@@ -175,6 +183,7 @@ func _process(delta):
 
 		self.camera_tof.set_position(Vector3(0, 0, _tof_camera_distance))
 		self.camera_tof.set_size(0.8 * _tof_camera_distance)
+		self._set_near_blur(_tof_camera_distance)
 
 	if aw_camera_distance != _aw_camera_distance:
 		_aw_camera_distance = aw_camera_distance
@@ -302,14 +311,17 @@ func switch_camera():
 	if self.camera_mode == self.MODE_TOF:
 		self.camera_mode = self.MODE_AW
 		self.camera_aw.make_current()
+		self._set_near_blur(0)
 		return
 	if self.camera_mode == self.MODE_AW:
 		self.camera_mode = self.MODE_FREE
 		self.camera_lens.make_current()
+		self._set_near_blur(0)
 		return
 	if self.camera_mode == self.MODE_FREE:
 		self.camera_mode = self.MODE_TOF
 		self.camera_tof.make_current()
+		self._set_near_blur(self.tof_camera_distance)
 		return
 
 func switch_to_camera_style(style):
@@ -419,25 +431,23 @@ func _shift_camera_translation(offset):
 	self.set_position(current_position)
 
 func _mouse_zoom_in():
-	camera_distance -= self.mouse_zoom_step
-	camera_distance = clamp(camera_distance, self.camera_distance_min, self.camera_distance_max)
-
-	tof_camera_distance -= self.mouse_zoom_step
-	tof_camera_distance = clamp(tof_camera_distance, self.tof_camera_distance_min, self.tof_camera_distance_max)
-
-	aw_camera_distance -= self.mouse_zoom_step
-	aw_camera_distance = clamp(aw_camera_distance, self.aw_camera_distance_min, self.aw_camera_distance_max)
+	self._mouse_zoom(-self.mouse_zoom_step)
 
 
 func _mouse_zoom_out():
-	camera_distance += self.mouse_zoom_step
+	self._mouse_zoom(self.mouse_zoom_step)
+
+
+func _mouse_zoom(step):
+	camera_distance += step
 	camera_distance = clamp(camera_distance, self.camera_distance_min, self.camera_distance_max)
 
-	tof_camera_distance += self.mouse_zoom_step
+	tof_camera_distance += step
 	tof_camera_distance = clamp(tof_camera_distance, self.tof_camera_distance_min, self.tof_camera_distance_max)
 
-	aw_camera_distance += self.mouse_zoom_step
+	aw_camera_distance += step
 	aw_camera_distance = clamp(aw_camera_distance, self.aw_camera_distance_min, self.aw_camera_distance_max)
+
 
 func _mouse_shift_camera(relative_offset):
 	var camera_fraction
@@ -481,4 +491,17 @@ func _on_edge_pan(direction_vector):
 		self.camera_pan.x = direction_vector[0]
 	if direction_vector[1] != null:
 		self.camera_pan.y = direction_vector[1]
+
+func _set_near_blur(magnitude):
+	var near_threshold = 0.60
+	if magnitude > 0:
+		var camera_fraction = float(magnitude - self.tof_camera_distance_min) / float(self.tof_camera_distance_max - self.tof_camera_distance_min)
+
+		if camera_fraction > near_threshold:
+			self.camera_tof.attributes.dof_blur_near_enabled = true
+			self.camera_tof.attributes.dof_blur_near_distance = 90 * ((camera_fraction - near_threshold) / (1.0 - near_threshold))
+		else:
+			self.camera_tof.attributes.dof_blur_near_enabled = false
+	else:
+		self.camera_tof.attributes.dof_blur_near_enabled = false
 

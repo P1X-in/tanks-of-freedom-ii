@@ -15,6 +15,7 @@ var arrow_right = preload("res://scenes/ui/icons/arrow_right.tscn")
 var cog = preload("res://scenes/ui/icons/cog.tscn")
 var hourglass = preload("res://scenes/ui/icons/hourglass.tscn")
 var coin = preload("res://scenes/ui/icons/coin.tscn")
+var pen = preload("res://scenes/ui/icons/pen.tscn")
 
 var tof = preload("res://scenes/ui/icons/tof.tscn")
 
@@ -60,6 +61,7 @@ var named_icons = {
     "cog" : self.cog,
     "hourglass" : self.hourglass,
     "coin" : self.coin,
+    "pen" : self.pen,
 
     "tof" : self.tof,
 

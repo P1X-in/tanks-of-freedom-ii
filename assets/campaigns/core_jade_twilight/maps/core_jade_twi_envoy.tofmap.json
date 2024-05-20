@@ -513,7 +513,7 @@
                 },
                 "one_off": true,
                 "story": "claude_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "torsten_defeated": {
                 "details": {
@@ -524,7 +524,7 @@
                 },
                 "one_off": true,
                 "story": "torsten_defeated",
-                "type": "assasination"
+                "type": "assassination"
             }
         }
     },

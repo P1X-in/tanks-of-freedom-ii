@@ -19,8 +19,11 @@ func _gather_ability_actions(entity_tile, ap, board):
 	var interaction_tiles
 	var unit_range = unit.get_move()
 
+	if unit_range > ap:
+		unit_range = ap
+		
 	for ability in unit.active_abilities:
-		if ability.is_visible() and ability.ap_cost <= ap and not ability.is_on_cooldown():
+		if ability.is_visible() and ability.get_cost() <= ap and not ability.is_on_cooldown():
 			targets_in_range = []
 
 			tiles_in_range = board.ability_markers.get_all_tiles_in_ability_range(ability, entity_tile)

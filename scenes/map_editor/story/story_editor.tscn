@@ -1,0 +1,168 @@
+[gd_scene load_steps=14 format=3 uid="uid://cbg465a8j5ejh"]
+
+[ext_resource type="Script" path="res://scenes/map_editor/story/story_editor.gd" id="1_1fbvq"]
+[ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="1_v2xof"]
+[ext_resource type="Texture2D" uid="uid://bey3i1nl046fc" path="res://assets/gui/menu/buttons/buttonLong_brown.png" id="2_5pfvj"]
+[ext_resource type="Texture2D" uid="uid://2tgpj2lpm5ae" path="res://assets/gui/menu/buttons/buttonLong_brown_pressed.png" id="3_fvvfw"]
+[ext_resource type="Texture2D" uid="uid://43s7leku2m4k" path="res://assets/gui/menu/buttons/buttonLong_brown_hover.png" id="4_422w5"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="5_jyxs4"]
+[ext_resource type="PackedScene" uid="uid://b71wopr1381hv" path="res://scenes/map_editor/story/map_settings.tscn" id="7_2mpp0"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="7_8dn85"]
+[ext_resource type="PackedScene" uid="uid://dnqbbv8qec4n4" path="res://scenes/map_editor/story/triggers/triggers.tscn" id="8_b7gmi"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="8_wtysv"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="9_78ah5"]
+[ext_resource type="PackedScene" uid="uid://dtahaaryqp26j" path="res://scenes/map_editor/story/story_element_picker.tscn" id="9_d6jtt"]
+[ext_resource type="PackedScene" uid="uid://v0w877sln3rh" path="res://scenes/map_editor/story/stories/stories.tscn" id="9_nvsc3"]
+
+[node name="StoryEditor" type="Node2D"]
+script = ExtResource("1_1fbvq")
+
+[node name="background" type="NinePatchRect" parent="."]
+offset_left = -600.0
+offset_top = -350.0
+offset_right = 600.0
+offset_bottom = 350.0
+texture = ExtResource("1_v2xof")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="widgets" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -600.0
+offset_top = -350.0
+offset_right = 600.0
+offset_bottom = 350.0
+
+[node name="tabs" type="Control" parent="widgets"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 1175.0
+offset_bottom = 50.0
+
+[node name="map_settings_button" type="TextureButton" parent="widgets/tabs"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 40.0
+focus_neighbor_right = NodePath("../triggers_button")
+texture_normal = ExtResource("2_5pfvj")
+texture_pressed = ExtResource("3_fvvfw")
+texture_hover = ExtResource("4_422w5")
+texture_focused = ExtResource("4_422w5")
+
+[node name="label" type="Label" parent="widgets/tabs/map_settings_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_jyxs4")
+text = "TR_MAP_SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="triggers_button" type="TextureButton" parent="widgets/tabs"]
+layout_mode = 0
+offset_left = 425.0
+offset_right = 725.0
+offset_bottom = 40.0
+focus_neighbor_left = NodePath("../map_settings_button")
+focus_neighbor_right = NodePath("../stories_button")
+texture_normal = ExtResource("2_5pfvj")
+texture_pressed = ExtResource("3_fvvfw")
+texture_hover = ExtResource("4_422w5")
+texture_focused = ExtResource("4_422w5")
+
+[node name="label" type="Label" parent="widgets/tabs/triggers_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_jyxs4")
+text = "TR_TRIGGERS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="stories_button" type="TextureButton" parent="widgets/tabs"]
+layout_mode = 0
+offset_left = 850.0
+offset_right = 1150.0
+offset_bottom = 40.0
+focus_neighbor_left = NodePath("../triggers_button")
+texture_normal = ExtResource("2_5pfvj")
+texture_pressed = ExtResource("3_fvvfw")
+texture_hover = ExtResource("4_422w5")
+texture_focused = ExtResource("4_422w5")
+
+[node name="label" type="Label" parent="widgets/tabs/stories_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_jyxs4")
+text = "TR_STORIES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="panels" type="Control" parent="widgets"]
+custom_minimum_size = Vector2(1150, 0)
+anchors_preset = 0
+offset_left = 25.0
+offset_top = 60.0
+offset_right = 1175.0
+offset_bottom = 630.0
+
+[node name="MapSettings" parent="widgets/panels" instance=ExtResource("7_2mpp0")]
+visible = false
+layout_mode = 1
+
+[node name="Triggers" parent="widgets/panels" instance=ExtResource("8_b7gmi")]
+visible = false
+layout_mode = 1
+
+[node name="Stories" parent="widgets/panels" instance=ExtResource("9_nvsc3")]
+visible = false
+layout_mode = 1
+
+[node name="StoryElementPicker" parent="widgets/panels" instance=ExtResource("9_d6jtt")]
+visible = false
+layout_mode = 1
+
+[node name="back_button" type="TextureButton" parent="widgets"]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 640.0
+offset_right = 695.0
+offset_bottom = 680.0
+texture_normal = ExtResource("7_8dn85")
+texture_pressed = ExtResource("8_wtysv")
+texture_hover = ExtResource("9_78ah5")
+texture_focused = ExtResource("9_78ah5")
+
+[node name="label" type="Label" parent="widgets/back_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_jyxs4")
+text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="widgets/tabs/map_settings_button" to="." method="_on_map_settings_button_pressed"]
+[connection signal="pressed" from="widgets/tabs/triggers_button" to="." method="_on_triggers_button_pressed"]
+[connection signal="pressed" from="widgets/tabs/stories_button" to="." method="_on_stories_button_pressed"]
+[connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

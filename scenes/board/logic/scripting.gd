@@ -16,7 +16,10 @@ func ingest_scripts(board_object, incoming_scripts):
 		self._setup_basic_win_condition()
 	else:
 		for trigger_name in self.scripts['triggers']:
-			self.triggers[trigger_name] = self._setup_trigger(self.scripts['triggers'][trigger_name])
+			if _is_trigger_valid(self.scripts['triggers'][trigger_name]):
+				self.triggers[trigger_name] = self._setup_trigger(self.scripts['triggers'][trigger_name])
+			else:
+				print("Invalid trigger: ", trigger_name)
 
 func _setup_basic_win_condition():
 	self._build_hq_lost_event(self.board.map.templates.MODERN_HQ)
@@ -35,6 +38,11 @@ func _build_hq_lost_event(hq_type):
 	outcome.board = self.board
 
 	self.board.events.register_observer(self.board.events.types.BUILDING_CAPTURED, trigger, 'observe')
+
+func _is_trigger_valid(trigger_definition):
+	if trigger_definition['type'] == null or trigger_definition['story'] == null:
+		return false
+	return true
 
 func _setup_trigger(trigger_definition):
 	var new_trigger = self.trigger_templates.get_trigger(trigger_definition['type'])

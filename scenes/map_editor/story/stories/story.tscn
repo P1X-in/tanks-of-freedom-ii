@@ -1,0 +1,340 @@
+[gd_scene load_steps=36 format=3 uid="uid://3jg4od1lphdr"]
+
+[ext_resource type="Script" path="res://scenes/map_editor/story/stories/story.gd" id="1_0lwys"]
+[ext_resource type="PackedScene" uid="uid://yl7ug0tr62ix" path="res://scenes/map_editor/story/stories/story_step_element.tscn" id="2_af5aa"]
+[ext_resource type="PackedScene" uid="uid://cdo215we3i3x5" path="res://scenes/map_editor/story/stories/type_selector.tscn" id="3_ib64o"]
+[ext_resource type="PackedScene" uid="uid://uk5nfa188dvk" path="res://scenes/map_editor/story/stories/types/activate_hero.tscn" id="4_usy7x"]
+[ext_resource type="PackedScene" uid="uid://dhq3orgwk8ccw" path="res://scenes/map_editor/story/stories/types/ap.tscn" id="5_iv5qk"]
+[ext_resource type="PackedScene" uid="uid://bck75ofgo2th5" path="res://scenes/map_editor/story/stories/types/attack.tscn" id="6_m6sns"]
+[ext_resource type="PackedScene" uid="uid://2sgw2kjm6pnr" path="res://scenes/map_editor/story/stories/types/ban_unit.tscn" id="7_n1083"]
+[ext_resource type="PackedScene" uid="uid://hfr8cim8moqr" path="res://scenes/map_editor/story/stories/types/camera.tscn" id="8_vymkp"]
+[ext_resource type="PackedScene" uid="uid://b330nvtxmj3os" path="res://scenes/map_editor/story/stories/types/claim.tscn" id="9_m177b"]
+[ext_resource type="PackedScene" uid="uid://beivko4wjgis" path="res://scenes/map_editor/story/stories/types/despawn.tscn" id="10_led3u"]
+[ext_resource type="PackedScene" uid="uid://csx0owg6yiwis" path="res://scenes/map_editor/story/stories/types/die.tscn" id="11_dx1g0"]
+[ext_resource type="PackedScene" uid="uid://dp6gq5f4n7ewn" path="res://scenes/map_editor/story/stories/types/eliminate_player.tscn" id="12_c8cf2"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="12_nfyn2"]
+[ext_resource type="PackedScene" uid="uid://dcca0ud508onp" path="res://scenes/map_editor/story/stories/types/end_game.tscn" id="13_7743s"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="13_sehvg"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="14_b5j0h"]
+[ext_resource type="PackedScene" uid="uid://c0412vygx3bp3" path="res://scenes/map_editor/story/stories/types/hero_ability.tscn" id="14_oxrqi"]
+[ext_resource type="PackedScene" uid="uid://c8v3obj6muf3n" path="res://scenes/map_editor/story/stories/types/level_up.tscn" id="15_n43d1"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="15_nknqw"]
+[ext_resource type="PackedScene" uid="uid://dw8ppwvdbxlyg" path="res://scenes/map_editor/story/stories/types/lock_hud.tscn" id="16_qebbb"]
+[ext_resource type="PackedScene" uid="uid://cavm8ues0o4w4" path="res://scenes/map_editor/story/stories/types/message.tscn" id="17_d8jt1"]
+[ext_resource type="PackedScene" uid="uid://cxb3sdpck3fyf" path="res://scenes/map_editor/story/stories/types/move.tscn" id="18_immyp"]
+[ext_resource type="PackedScene" uid="uid://w23y105a110o" path="res://scenes/map_editor/story/stories/types/objective.tscn" id="19_7jxlw"]
+[ext_resource type="PackedScene" uid="uid://dyxkg51bo2al2" path="res://scenes/map_editor/story/stories/types/pause_ai.tscn" id="20_oa3ca"]
+[ext_resource type="PackedScene" uid="uid://cypcc88jrcci3" path="res://scenes/map_editor/story/stories/types/revive_player.tscn" id="21_htwnk"]
+[ext_resource type="PackedScene" uid="uid://dh058kdl816av" path="res://scenes/map_editor/story/stories/types/side.tscn" id="22_mknt8"]
+[ext_resource type="PackedScene" uid="uid://cydqtidvevn6d" path="res://scenes/map_editor/story/stories/types/spawn.tscn" id="23_w2447"]
+[ext_resource type="PackedScene" uid="uid://b045k7u4g471f" path="res://scenes/map_editor/story/stories/types/target_vip.tscn" id="24_xwhhi"]
+[ext_resource type="PackedScene" uid="uid://bjehe02ylhmey" path="res://scenes/map_editor/story/stories/types/terrain_add.tscn" id="25_1u72t"]
+[ext_resource type="PackedScene" uid="uid://s5068qhhnkp5" path="res://scenes/map_editor/story/stories/types/terrain_remove.tscn" id="26_yueg2"]
+[ext_resource type="PackedScene" uid="uid://cvw8dv62638ta" path="res://scenes/map_editor/story/stories/types/tether.tscn" id="27_tk5jl"]
+[ext_resource type="PackedScene" uid="uid://ddecu22bxbhtb" path="res://scenes/map_editor/story/stories/types/trigger.tscn" id="28_6av32"]
+[ext_resource type="PackedScene" uid="uid://cmc0kp03t4gk3" path="res://scenes/map_editor/story/stories/types/trigger_group.tscn" id="29_cgajc"]
+[ext_resource type="PackedScene" uid="uid://drule5okhum23" path="res://scenes/map_editor/story/stories/types/unlock_hud.tscn" id="30_k2i1j"]
+[ext_resource type="PackedScene" uid="uid://31fxnjuu1v6o" path="res://scenes/map_editor/story/stories/types/use_ability.tscn" id="31_des6b"]
+
+[node name="Story" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0lwys")
+
+[node name="elements" type="VFlowContainer" parent="."]
+layout_mode = 0
+offset_right = 540.0
+offset_bottom = 500.0
+
+[node name="StoryStepElement0" parent="elements" instance=ExtResource("2_af5aa")]
+layout_mode = 2
+
+[node name="StoryStepElement1" parent="elements" instance=ExtResource("2_af5aa")]
+layout_mode = 2
+
+[node name="StoryStepElement2" parent="elements" instance=ExtResource("2_af5aa")]
+layout_mode = 2
+
+[node name="StoryStepElement3" parent="elements" instance=ExtResource("2_af5aa")]
+layout_mode = 2
+
+[node name="StoryStepElement4" parent="elements" instance=ExtResource("2_af5aa")]
+layout_mode = 2
+
+[node name="StoryStepElement5" parent="elements" instance=ExtResource("2_af5aa")]
+layout_mode = 2
+
+[node name="StoryStepElement6" parent="elements" instance=ExtResource("2_af5aa")]
+layout_mode = 2
+
+[node name="StoryStepElement7" parent="elements" instance=ExtResource("2_af5aa")]
+layout_mode = 2
+
+[node name="StoryStepElement8" parent="elements" instance=ExtResource("2_af5aa")]
+layout_mode = 2
+
+[node name="StoryStepElement9" parent="elements" instance=ExtResource("2_af5aa")]
+layout_mode = 2
+
+[node name="edit_panels" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 600.0
+offset_right = 1150.0
+offset_bottom = 500.0
+
+[node name="type_selector" parent="edit_panels" instance=ExtResource("3_ib64o")]
+visible = false
+layout_mode = 1
+
+[node name="activate_hero" parent="edit_panels" instance=ExtResource("4_usy7x")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="ap" parent="edit_panels" instance=ExtResource("5_iv5qk")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="attack" parent="edit_panels" instance=ExtResource("6_m6sns")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="ban_unit" parent="edit_panels" instance=ExtResource("7_n1083")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="camera" parent="edit_panels" instance=ExtResource("8_vymkp")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="claim" parent="edit_panels" instance=ExtResource("9_m177b")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="despawn" parent="edit_panels" instance=ExtResource("10_led3u")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="die" parent="edit_panels" instance=ExtResource("11_dx1g0")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="eliminate_player" parent="edit_panels" instance=ExtResource("12_c8cf2")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="end_game" parent="edit_panels" instance=ExtResource("13_7743s")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="hero_ability" parent="edit_panels" instance=ExtResource("14_oxrqi")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="level_up" parent="edit_panels" instance=ExtResource("15_n43d1")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="lock" parent="edit_panels" instance=ExtResource("16_qebbb")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="message" parent="edit_panels" instance=ExtResource("17_d8jt1")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="move" parent="edit_panels" instance=ExtResource("18_immyp")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="objective" parent="edit_panels" instance=ExtResource("19_7jxlw")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="pause_ai" parent="edit_panels" instance=ExtResource("20_oa3ca")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="revive_player" parent="edit_panels" instance=ExtResource("21_htwnk")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="side" parent="edit_panels" instance=ExtResource("22_mknt8")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="spawn" parent="edit_panels" instance=ExtResource("23_w2447")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="target_vip" parent="edit_panels" instance=ExtResource("24_xwhhi")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="terrain_add" parent="edit_panels" instance=ExtResource("25_1u72t")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="terrain_remove" parent="edit_panels" instance=ExtResource("26_yueg2")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="tether" parent="edit_panels" instance=ExtResource("27_tk5jl")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="trigger" parent="edit_panels" instance=ExtResource("28_6av32")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="trigger_group" parent="edit_panels" instance=ExtResource("29_cgajc")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="unlock" parent="edit_panels" instance=ExtResource("30_k2i1j")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="use_ability" parent="edit_panels" instance=ExtResource("31_des6b")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="list_prev" type="TextureButton" parent="."]
+layout_mode = 0
+offset_top = 510.0
+offset_right = 190.0
+offset_bottom = 550.0
+focus_neighbor_right = NodePath("../list_next")
+texture_normal = ExtResource("12_nfyn2")
+texture_pressed = ExtResource("13_sehvg")
+texture_hover = ExtResource("14_b5j0h")
+texture_focused = ExtResource("14_b5j0h")
+
+[node name="label" type="Label" parent="list_prev"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_nknqw")
+text = "TR_PREV"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="list_next" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 510.0
+offset_right = 540.0
+offset_bottom = 550.0
+focus_neighbor_left = NodePath("../list_prev")
+texture_normal = ExtResource("12_nfyn2")
+texture_pressed = ExtResource("13_sehvg")
+texture_hover = ExtResource("14_b5j0h")
+texture_focused = ExtResource("14_b5j0h")
+
+[node name="label" type="Label" parent="list_next"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_nknqw")
+text = "TR_NEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="new_step" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 600.0
+offset_top = 510.0
+offset_right = 1000.0
+offset_bottom = 610.0
+
+[node name="add_button" type="TextureButton" parent="new_step"]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 550.0
+offset_bottom = 40.0
+texture_normal = ExtResource("12_nfyn2")
+texture_pressed = ExtResource("13_sehvg")
+texture_hover = ExtResource("14_b5j0h")
+texture_focused = ExtResource("14_b5j0h")
+
+[node name="label" type="Label" parent="new_step/add_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_nknqw")
+text = "TR_ADD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="list_prev" to="." method="_on_list_prev_pressed"]
+[connection signal="pressed" from="list_next" to="." method="_on_list_next_pressed"]
+[connection signal="pressed" from="new_step/add_button" to="." method="_on_add_button_pressed"]

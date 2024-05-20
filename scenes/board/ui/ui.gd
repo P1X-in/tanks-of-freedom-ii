@@ -1,6 +1,7 @@
 extends Control
 
 @onready var settings = $"/root/Settings"
+@onready var gamepad_adapter = $"/root/GamepadAdapter"
 
 # Panels
 @onready var radial = $"radial/radial"
@@ -280,9 +281,11 @@ func hide_controls():
 func show_settings():
 	self.settings_panel.show_panel()
 	self.settings_panel.hide_controls_button()
+	self.gamepad_adapter.enable()
 
 func hide_settings():
 	self.settings_panel.hide_panel()
+	self.gamepad_adapter.disable()
 
 func _on_settings_changed(key, new_value):
 	if key == "show_controls":

@@ -11,11 +11,17 @@ extends Control
 @onready var next_button = $"widgets/next_button"
 @onready var medal = $"widgets/medal"
 
-@onready var title = $"widgets/title"
-@onready var mission_anchor = $"widgets/missions_anchor"
+@onready var zoom_in_button = $"widgets/zoom_in_button"
+@onready var zoom_out_button = $"widgets/zoom_out_button"
 
-@onready var base_map = $"widgets/map"
-@onready var override_map = $"widgets/map_override"
+@onready var title = $"widgets/title"
+@onready var mission_anchor = $"widgets/map_viewport/missions_anchor"
+
+@onready var base_map = $"widgets/map_viewport/map"
+@onready var override_map = $"widgets/map_viewport/map_override"
+
+@onready var campaign_viewport = $"widgets/map_viewport"
+@onready var campaign_camera = $"widgets/map_viewport/camera"
 
 var main_menu
 
@@ -24,6 +30,11 @@ var manifest
 var mission_marker_template = preload("res://scenes/ui/menu/mission_marker.tscn")
 var mission_markers = []
 var selected_mission = 0
+
+var _maps_cache = {}
+var _zoom_level = 1.0
+var _zoom_limit = 1.0
+var _zoom_step  = 0.1
 
 func bind_menu(menu):
 	self.main_menu = menu
@@ -51,6 +62,7 @@ func _on_prev_button_pressed(do_grab=true):
 
 	self.audio.play("menu_click")
 	self._select_marker(self.selected_mission - 1)
+	self._tween_camera_to_marker(self.selected_mission)
 	if do_grab and self._is_first_mission():
 		self.next_button.grab_focus()
 
@@ -60,6 +72,7 @@ func _on_next_button_pressed(do_grab=true):
 
 	self.audio.play("menu_click")
 	self._select_marker(self.selected_mission + 1)
+	self._tween_camera_to_marker(self.selected_mission)
 	if do_grab and self._is_last_mission():
 		self.prev_button.grab_focus()
 
@@ -101,8 +114,12 @@ func load_campaign(campaign_name):
 
 	if manifest.has("map"):
 		self._load_map_override(manifest["map"])
+		self._calculate_zoom_limit()
 	else:
 		self._show_base_map()
+		self._zoom_limit = 1.0
+	self._set_zoom(1.0)
+	self._manage_zoom_buttons()
 
 func _add_mission_markers(missions):
 	var index = 1
@@ -136,6 +153,7 @@ func clear_markers():
 func _select_latest_mission():
 	if self.campaign.is_campaign_complete(self.manifest["name"]):
 		self._select_marker(0)
+		self._snap_camera_to_marker(0)
 		return
 
 	var campaign_progress = self.campaign.get_campaign_progress(self.manifest["name"])
@@ -144,6 +162,7 @@ func _select_latest_mission():
 		campaign_progress = self.mission_markers.size() - 1
 
 	self._select_marker(campaign_progress)
+	self._snap_camera_to_marker(campaign_progress)
 
 
 func _select_marker(marker_no):
@@ -154,6 +173,14 @@ func _select_marker(marker_no):
 	self.mission_markers[self.selected_mission].show_panel()
 	self.mission_markers[self.selected_mission].move_to_front()
 	self._manage_navigation()
+
+func _snap_camera_to_marker(marker_no):
+	self.campaign_camera.position.x = self.mission_markers[marker_no].position.x
+	self.campaign_camera.position.y = self.mission_markers[marker_no].position.y
+
+func _tween_camera_to_marker(marker_no):
+	var tween = self.create_tween()
+	tween.tween_property(self.campaign_camera, "position", self.mission_markers[marker_no].position, 0.5)
 
 func _manage_navigation():
 	if self._is_first_mission():
@@ -176,11 +203,68 @@ func _is_last_mission():
 func _show_base_map():
 	self.base_map.show()
 	self.override_map.hide()
+	self.campaign_camera.limit_right = self.campaign_viewport.size.x
+	self.campaign_camera.limit_bottom = self.campaign_viewport.size.y
 
 func _load_map_override(filename):
-	var image = Image.load_from_file(filename)
-	var texture = ImageTexture.create_from_image(image)
-	self.override_map.texture = texture
+	if not self._maps_cache.has(filename):
+		if filename.begins_with("res://"):
+			self._maps_cache[filename] = load(filename)
+		else:
+			var image = Image.load_from_file(filename)
+			self._maps_cache[filename] = ImageTexture.create_from_image(image)
+	self.override_map.texture = self._maps_cache[filename]
+	self.campaign_camera.limit_right = self._maps_cache[filename].get_width()
+	self.campaign_camera.limit_bottom = self._maps_cache[filename].get_height()
+
 
 	self.base_map.hide()
 	self.override_map.show()
+
+func _calculate_zoom_limit():
+	self._zoom_limit = 1.0
+
+	var fraction_x = float(self.campaign_viewport.size.x) / float(self.override_map.texture.get_width())
+	var fraction_y = float(self.campaign_viewport.size.y) / float(self.override_map.texture.get_height())
+	var fraction = max(fraction_x, fraction_y)
+
+	while fraction < self._zoom_limit - self._zoom_step:
+		self._zoom_limit -= self._zoom_step
+
+func _set_zoom(amount):
+	amount = clamp(amount, self._zoom_limit, 1.0)
+	self._zoom_level = amount
+	self.campaign_camera.zoom.x = amount
+	self.campaign_camera.zoom.y = amount
+
+func _manage_zoom_buttons():
+	if self._zoom_level <= self._zoom_limit:
+		self.zoom_out_button.hide()
+	else:
+		self.zoom_out_button.show()
+
+	if self._zoom_level >= 1.0:
+		self.zoom_in_button.hide()
+	else:
+		self.zoom_in_button.show()
+
+func _on_zoom_in_button_pressed():
+	if self._zoom_level >= 1.0:
+		return
+
+	self.audio.play("menu_click")
+	self._set_zoom(self._zoom_level + self._zoom_step)
+	self._manage_zoom_buttons()
+	if self._zoom_level >= 1.0:
+		self.zoom_out_button.grab_focus()
+
+
+func _on_zoom_out_button_pressed():
+	if self._zoom_level <= self._zoom_limit:
+		return
+
+	self.audio.play("menu_click")
+	self._set_zoom(self._zoom_level - self._zoom_step)
+	self._manage_zoom_buttons()
+	if self._zoom_level <= self._zoom_limit:
+		self.zoom_in_button.grab_focus()

@@ -1670,7 +1670,7 @@
                 },
                 "one_off": true,
                 "story": "blake_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "city_approached": {
                 "details": {
@@ -1697,7 +1697,7 @@
                 },
                 "one_off": true,
                 "story": "claude_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "factory_1_captured": {
                 "details": {

@@ -2,13 +2,14 @@
     "name" : "tutorial",
     "title" : "tr_core_tutorial_campaign_title",
     "icon" : "info",
+    "map": "map.png",
     "missions" : [
         {
             "name" : "basics",
             "title" : "tr_core_tutorial_mission1_name",
             "map" : "tutorial_basics.tofmap.json",
             "description" : "tr_core_tutorial_mission1_desc",
-            "marker" : [460, 200],
+            "marker" : [470, 65],
             "players": [
                 {
                     "side" : "blue",
@@ -22,7 +23,7 @@
             "title" : "tr_core_tutorial_mission2_name",
             "map" : "tutorial_units_buildings.tofmap.json",
             "description" : "tr_core_tutorial_mission2_desc",
-            "marker" : [390, 335],
+            "marker" : [560, 220],
             "players": [
                 {
                     "side" : "blue",
@@ -36,7 +37,7 @@
             "title" : "tr_core_tutorial_mission3_name",
             "map" : "tutorial_levels_abilities.tofmap.json",
             "description" : "tr_core_tutorial_mission3_desc",
-            "marker" : [520, 380],
+            "marker" : [270, 190],
             "players": [
                 {
                     "side" : "blue",
@@ -50,7 +51,7 @@
             "title" : "tr_core_tutorial_mission4_name",
             "map" : "tutorial_hero_units.tofmap.json",
             "description" : "tr_core_tutorial_mission4_desc",
-            "marker" : [650, 400],
+            "marker" : [180, 350],
             "players": [
                 {
                     "side" : "blue",

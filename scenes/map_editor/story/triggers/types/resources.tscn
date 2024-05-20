@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=3 uid="uid://drumohl5fu3g7"]
+
+[ext_resource type="PackedScene" uid="uid://dc4vyffm4fyvi" path="res://scenes/map_editor/story/triggers/types/base_edit_type.tscn" id="1_55wip"]
+[ext_resource type="Script" path="res://scenes/map_editor/story/triggers/types/resources.gd" id="2_ld4b6"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_mqovi"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="4_7vxmi"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="5_n56mk"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="6_ddxft"]
+[ext_resource type="PackedScene" uid="uid://gxr1dxy4v75y" path="res://scenes/ui/icons/pen.tscn" id="7_pac1p"]
+
+[node name="Resources" instance=ExtResource("1_55wip")]
+script = ExtResource("2_ld4b6")
+
+[node name="player_id" type="Label" parent="." index="8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 200.0
+offset_right = -250.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_mqovi")
+text = "TR_PLAYER_ID"
+vertical_alignment = 1
+
+[node name="id" type="LineEdit" parent="player_id" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+max_length = 1
+
+[node name="player_side" type="Label" parent="." index="9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 250.0
+offset_right = -250.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_mqovi")
+text = "TR_PLAYER_SIDE"
+vertical_alignment = 1
+
+[node name="side" type="LineEdit" parent="player_side" index="0"]
+layout_mode = 0
+offset_left = 400.0
+offset_right = 540.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="side_picker_button" type="TextureButton" parent="player_side" index="1"]
+offset_left = 350.0
+offset_right = 386.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_7vxmi")
+texture_pressed = ExtResource("5_n56mk")
+texture_hover = ExtResource("6_ddxft")
+texture_focused = ExtResource("6_ddxft")
+
+[node name="anchor" type="Control" parent="player_side/side_picker_button" index="0"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="hourglass" parent="player_side/side_picker_button/anchor" index="0" instance=ExtResource("7_pac1p")]
+
+[node name="amount" type="Label" parent="." index="10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 300.0
+offset_right = -250.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_mqovi")
+text = "TR_AMOUNT"
+vertical_alignment = 1
+
+[node name="amount" type="LineEdit" parent="amount" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+text = "1"
+alignment = 1
+
+[connection signal="text_changed" from="player_id/id" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="player_side/side" to="." method="_on_text_changed"]
+[connection signal="pressed" from="player_side/side_picker_button" to="." method="_on_side_picker_button_pressed"]
+[connection signal="text_changed" from="amount/amount" to="." method="_on_text_changed"]

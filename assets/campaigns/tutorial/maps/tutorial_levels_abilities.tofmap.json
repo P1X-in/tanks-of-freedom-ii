@@ -994,7 +994,7 @@
                 },
                 "one_off": true,
                 "story": "second_red_infantry_destroyed",
-                "type": "assasination"
+                "type": "assassination"
             },
             "04_red_infantry_destroyed": {
                 "details": {
@@ -1002,7 +1002,7 @@
                 },
                 "one_off": true,
                 "story": "first_red_infantry_destroyed",
-                "type": "assasination"
+                "type": "assassination"
             },
             "05_infantry_ability_used": {
                 "details": {
@@ -1066,7 +1066,7 @@
                 },
                 "one_off": true,
                 "story": "final_infantry_destroyed",
-                "type": "assasination"
+                "type": "assassination"
             }
         }
     },

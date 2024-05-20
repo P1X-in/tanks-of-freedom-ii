@@ -1,0 +1,174 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq2plr1btsovc"]
+
+[ext_resource type="Script" path="res://scenes/map_editor/story/triggers/type_selector.gd" id="1_7vkjo"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="2_poq1a"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="3_pgdk5"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="4_kihwp"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="5_dwq5y"]
+
+[node name="TypeSelector" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vkjo")
+
+[node name="buttons" type="VFlowContainer" parent="."]
+layout_mode = 0
+offset_left = 180.0
+offset_right = 370.0
+offset_bottom = 500.0
+
+[node name="assassination" type="TextureButton" parent="buttons"]
+layout_mode = 2
+texture_normal = ExtResource("2_poq1a")
+texture_pressed = ExtResource("3_pgdk5")
+texture_hover = ExtResource("4_kihwp")
+texture_focused = ExtResource("4_kihwp")
+
+[node name="label" type="Label" parent="buttons/assassination"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dwq5y")
+text = "assassination"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="attacked" type="TextureButton" parent="buttons"]
+layout_mode = 2
+texture_normal = ExtResource("2_poq1a")
+texture_pressed = ExtResource("3_pgdk5")
+texture_hover = ExtResource("4_kihwp")
+texture_focused = ExtResource("4_kihwp")
+
+[node name="label" type="Label" parent="buttons/attacked"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dwq5y")
+text = "attacked"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="claim" type="TextureButton" parent="buttons"]
+layout_mode = 2
+texture_normal = ExtResource("2_poq1a")
+texture_pressed = ExtResource("3_pgdk5")
+texture_hover = ExtResource("4_kihwp")
+texture_focused = ExtResource("4_kihwp")
+
+[node name="label" type="Label" parent="buttons/claim"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dwq5y")
+text = "claim"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="decimate" type="TextureButton" parent="buttons"]
+layout_mode = 2
+texture_normal = ExtResource("2_poq1a")
+texture_pressed = ExtResource("3_pgdk5")
+texture_hover = ExtResource("4_kihwp")
+texture_focused = ExtResource("4_kihwp")
+
+[node name="label" type="Label" parent="buttons/decimate"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dwq5y")
+text = "decimate"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="deploy" type="TextureButton" parent="buttons"]
+layout_mode = 2
+texture_normal = ExtResource("2_poq1a")
+texture_pressed = ExtResource("3_pgdk5")
+texture_hover = ExtResource("4_kihwp")
+texture_focused = ExtResource("4_kihwp")
+
+[node name="label" type="Label" parent="buttons/deploy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dwq5y")
+text = "deploy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="move" type="TextureButton" parent="buttons"]
+layout_mode = 2
+texture_normal = ExtResource("2_poq1a")
+texture_pressed = ExtResource("3_pgdk5")
+texture_hover = ExtResource("4_kihwp")
+texture_focused = ExtResource("4_kihwp")
+
+[node name="label" type="Label" parent="buttons/move"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dwq5y")
+text = "move"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resources" type="TextureButton" parent="buttons"]
+layout_mode = 2
+texture_normal = ExtResource("2_poq1a")
+texture_pressed = ExtResource("3_pgdk5")
+texture_hover = ExtResource("4_kihwp")
+texture_focused = ExtResource("4_kihwp")
+
+[node name="label" type="Label" parent="buttons/resources"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dwq5y")
+text = "resources"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="turn" type="TextureButton" parent="buttons"]
+layout_mode = 2
+texture_normal = ExtResource("2_poq1a")
+texture_pressed = ExtResource("3_pgdk5")
+texture_hover = ExtResource("4_kihwp")
+texture_focused = ExtResource("4_kihwp")
+
+[node name="label" type="Label" parent="buttons/turn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dwq5y")
+text = "turn"
+horizontal_alignment = 1
+vertical_alignment = 1

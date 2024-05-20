@@ -540,10 +540,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
-speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_wxkik")
 }
+speed_scale = 4.0
 
 [connection signal="text_changed" from="widgets/name/map_name" to="." method="_on_map_name_text_changed"]
 [connection signal="pressed" from="widgets/code/download_button" to="." method="_on_download_button_pressed"]

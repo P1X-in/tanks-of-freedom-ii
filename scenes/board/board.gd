@@ -644,7 +644,7 @@ func activate_production_ability(args):
 	_activate_production_ability(args[0])
 
 func _activate_production_ability(ability):
-	var cost = ability.ap_cost
+	var cost = ability.get_cost()
 	cost = self.abilities.get_modified_cost(cost, ability.template_name, ability.source)
 
 	if self.state.can_current_player_afford(cost):
@@ -654,7 +654,7 @@ func _activate_production_ability(ability):
 
 func activate_ability(args):
 	var ability = args[0]
-	if self.state.can_current_player_afford(ability.ap_cost) and not ability.is_on_cooldown():
+	if self.state.can_current_player_afford(ability.get_cost()) and not ability.is_on_cooldown():
 		self.toggle_radial_menu()
 		_activate_ability(ability)
 

@@ -642,7 +642,7 @@
                 },
                 "one_off": true,
                 "story": "blake_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "cyrus_defeated": {
                 "details": {
@@ -653,7 +653,7 @@
                 },
                 "one_off": true,
                 "story": "cyrus_defeated",
-                "type": "assasination"
+                "type": "assassination"
             },
             "prince_defeated": {
                 "details": {
@@ -664,7 +664,7 @@
                 },
                 "one_off": true,
                 "story": "prince_defeated",
-                "type": "assasination"
+                "type": "assassination"
             }
         }
     },

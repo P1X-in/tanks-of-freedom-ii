@@ -21,7 +21,8 @@ func _get_outcome_metadata(event):
     }
 
 func ingest_details(details):
-    self.amount = details['amount']
+    if details.has('amount'):
+        self.amount = details['amount']
     if details.has('player'):
         self.player_id = details['player']
     if details.has('player_side'):

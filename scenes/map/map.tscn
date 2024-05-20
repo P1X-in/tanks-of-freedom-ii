@@ -5,13 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dfk0pnl01eotc" path="res://scenes/ui/markers/tile_box.tscn" id="3"]
 [ext_resource type="Script" path="res://scenes/map/map.gd" id="4"]
 [ext_resource type="ArrayMesh" uid="uid://cw6doarcq783m" path="res://assets/gui/board/map_frame.obj" id="5"]
+[ext_resource type="CameraAttributesPractical" uid="uid://dj2ff8ec0jux7" path="res://assets/camera_attributes.tres" id="7_llrhv"]
 [ext_resource type="PackedScene" uid="uid://dfmdw1ysub4x1" path="res://scenes/camera.tscn" id="11"]
-[ext_resource type="Environment" uid="uid://bdfocgrybgkli" path="res://default_env.tres" id="12"]
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_no5qk"]
-dof_blur_far_enabled = true
-dof_blur_far_distance = 125.0
-dof_blur_far_transition = 50.0
+[ext_resource type="Environment" uid="uid://bdfocgrybgkli" path="res://assets/default_env.tres" id="12"]
 
 [sub_resource type="PlaneMesh" id="1"]
 material = ExtResource("2")
@@ -79,7 +75,7 @@ camera_space_size = 320
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("12")
-camera_attributes = SubResource("CameraAttributesPractical_no5qk")
+camera_attributes = ExtResource("7_llrhv")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, 24.8979, 28.6066, 1.54649)
