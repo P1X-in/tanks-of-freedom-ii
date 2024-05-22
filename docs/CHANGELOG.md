@@ -1,6 +1,10 @@
 # Tanks of Freedom 3D
 ## Changelog
 
+### 0.7.1-alpha
+- Fixed a possible team detection bug
+- Fixed a dialogue issue in Prologue
+
 ### 0.7.0-alpha
 - New Skirmish mode maps
   - `2p_cityscape`
