@@ -1,4 +1,4 @@
-class_name Hero
+class_name SpawnHero
 extends SpawnUnit
 
 @export_enum("admiral", "captain", "commando", "general", "gentleman", "noble", "prince", "warlord") var hero: String

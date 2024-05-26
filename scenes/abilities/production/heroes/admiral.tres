@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Hero" load_steps=2 format=3 uid="uid://b80sn50eptnqc"]
 
-[ext_resource type="Script" path="res://scenes/abilities/production/heroes/hero.gd" id="1_mkmvf"]
+[ext_resource type="Script" path="res://scenes/abilities/production/heroes/spawn_hero.gd" id="1_mkmvf"]
 
 [resource]
 script = ExtResource("1_mkmvf")

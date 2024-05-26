@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Hero" load_steps=2 format=3 uid="uid://cbec0ll7uw6cl"]
 
-[ext_resource type="Script" path="res://scenes/abilities/production/heroes/hero.gd" id="1_2dlw2"]
+[ext_resource type="Script" path="res://scenes/abilities/production/heroes/spawn_hero.gd" id="1_2dlw2"]
 
 [resource]
 script = ExtResource("1_2dlw2")

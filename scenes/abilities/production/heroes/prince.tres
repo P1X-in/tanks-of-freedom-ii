@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Prince" load_steps=2 format=3 uid="uid://gjpy1uui0mx8"]
 
-[ext_resource type="Script" path="res://scenes/abilities/production/heroes/prince.gd" id="1_1tgps"]
+[ext_resource type="Script" path="res://scenes/abilities/production/heroes/spawn_prince.gd" id="1_1tgps"]
 
 [resource]
 script = ExtResource("1_1tgps")

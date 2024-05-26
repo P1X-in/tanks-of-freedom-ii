@@ -4,11 +4,10 @@
 
 [resource]
 script = ExtResource("1_3rqnw")
-style = "blue"
 unit = "tank"
 TYPE = "production"
 dlc_version = 1
-index = 0
+index = 1
 label = "TR_TANK"
 description = ""
 ap_cost = 50

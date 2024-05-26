@@ -1,5 +1,5 @@
 class_name Prince
-extends Hero
+extends SpawnHero
 
 func _execute(board, position):
 	super._execute(board, position)

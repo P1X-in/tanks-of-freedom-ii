@@ -45,6 +45,7 @@ require_crew = true
 ap_gain = 5
 capture_value = 70
 uses_metallic_material = false
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([])
 
 [node name="voxel_coin" parent="." index="1" instance=ExtResource("3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
