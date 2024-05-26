@@ -1,30 +1,26 @@
-extends Node
+class_name Ability
+extends Resource
 
-var TYPE="undefined"
+@export var TYPE="undefined"
 
-@export var dlc_version = 1
-@export var index = 0
-@export var label = ""
-@export var description = ""
-@export var ap_cost = 0
-@export var cooldown = 0
-@export var ability_range = 0
-@export var draw_range = 0
-@export var in_line = false
+@export var dlc_version: int = 1
+@export var index: int = 1
+@export var label: String = ""
+@export var description: String = ""
+@export var ap_cost: int = 0
+@export var cooldown: int = 0
+@export var ability_range: int = 0
+@export var draw_range: int = 0
+@export var in_line: bool = false
 var source = null
 var active_source_tile = null
 var cd_turns_left = 0
 var disabled = false
+var side = null
 
-func _ready():
-	self.signal_to_parent()
-
-func signal_to_parent():
-	self.receive_signal(self.get_parent())
-
-func receive_signal(receiver):
-	receiver.register_ability(self)
-	self.source = receiver
+func subscribe_for_ability(subscriber):
+	self.source = subscriber
+	self.side = subscriber.side
 
 func execute(board, position):
 	self._execute(board, position)
@@ -50,7 +46,7 @@ func is_on_cooldown():
 	return self.cd_turns_left > 0
 
 func activate_cooldown(board):
-	var modified_cooldown = board.abilities.get_modified_cooldown(self.cooldown, self.source.side)
+	var modified_cooldown = board.abilities.get_modified_cooldown(self.cooldown, self.side)
 
 	self.cd_turns_left = modified_cooldown
 

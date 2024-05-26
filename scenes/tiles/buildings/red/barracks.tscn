@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://586vn0voqi0n"]
 
 [ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/buildings/building.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="2"]
+[ext_resource type="Resource" uid="uid://bexxoi63crsej" path="res://scenes/abilities/production/units/infantry.tres" id="2_ydklx"]
 [ext_resource type="ArrayMesh" uid="uid://ld6npu5khtto" path="res://assets/buildings/red/barracks.obj" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/red/infantry.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/red/mobile_infantry.tscn" id="5"]
+[ext_resource type="Resource" uid="uid://c1lmi7fow7hte" path="res://scenes/abilities/production/units/mobile_infantry.tres" id="3_0a8ve"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -41,24 +41,13 @@ _data = {
 
 [node name="tile" instance=ExtResource("2")]
 side = "red"
-require_crew = true
-ap_gain = 5
-capture_value = 70
-uses_metallic_material = false
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_ydklx"), ExtResource("3_0a8ve")])
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("3")
 surface_material_override/0 = ExtResource("1")
 
-[node name="infantry" parent="." index="1" instance=ExtResource("4")]
-index = 2
-
-[node name="mobile_infantry" parent="." index="2" instance=ExtResource("5")]
-
-[node name="animations" parent="." index="4"]
+[node name="animations" parent="." index="2"]
 libraries = {
 "": SubResource("AnimationLibrary_w4fkr")
 }
-
-[node name="capture" parent="audio" index="0"]
-bus = &"Units"
