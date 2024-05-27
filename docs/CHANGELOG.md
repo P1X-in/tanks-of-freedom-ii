@@ -3,6 +3,7 @@
 
 ### 0.7.1-alpha
 - Medkit and Repair Kit abilities now grant exp to the unit
+- Lowered some ability SFX volume
 - Fixed a possible team detection bug
 - Fixed a dialogue issue in Prologue
 
