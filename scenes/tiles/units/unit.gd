@@ -349,8 +349,11 @@ func apply_modifier(modifier_name, value):
 func clear_modifiers():
 	self.modifiers.clear()
 
-func gain_exp():
+func score_kill():
 	self.kills += 1
+	self.gain_exp()
+
+func gain_exp():
 	if not self.is_max_level():
 		self.experience += 1
 

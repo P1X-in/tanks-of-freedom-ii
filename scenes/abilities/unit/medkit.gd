@@ -15,6 +15,7 @@ func _execute(board, position):
     
     tile.unit.tile.heal(self.heal)
     board.heal_a_tile(tile)
+    self.source.gain_exp()
 
     #self.source.activate_all_cooldowns(board)
 
