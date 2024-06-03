@@ -27,3 +27,11 @@ func _is_visible(_board=null):
         return false
 
     return self.source.level >= 1
+
+func get_cost():
+    if self.source == null or self.source.level == 0:
+        return super.get_cost()
+
+    if self.source.level == 2:
+        return 10
+    return 5

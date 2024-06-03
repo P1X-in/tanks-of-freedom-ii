@@ -50,7 +50,7 @@ func is_on_cooldown():
 	return self.cd_turns_left > 0
 
 func activate_cooldown(board):
-	var modified_cooldown = board.abilities.get_modified_cooldown(self.cooldown, self.source)
+	var modified_cooldown = board.abilities.get_modified_cooldown(self.get_cooldown(), self.source)
 
 	self.cd_turns_left = modified_cooldown
 
@@ -63,3 +63,6 @@ func cd_tick_down():
 
 func get_cost():
 	return self.ap_cost
+
+func get_cooldown():
+	return self.cooldown

@@ -148,7 +148,8 @@ func compile_save_data(board) -> Dictionary:
 		"camera": board.map.camera.get_position_state(),
 		"tiles": self._compile_tiles_data(board),
 		"triggers": board.scripting.get_save_data(),
-		"objectives": board.ui.objectives.raw_text
+		"objectives": board.ui.objectives.raw_text,
+		"player_moved": board.state.has_player_moved,
 	}
 
 	return {

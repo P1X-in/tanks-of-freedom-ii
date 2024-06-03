@@ -1,11 +1,18 @@
 # Tanks of Freedom 3D
 ## Changelog
 
-### 0.7.1-alpha
+### 1.0.0-rc
 - Medkit and Repair Kit abilities now grant exp to the unit
+- Repair Kit ability costs less on higher levels
+- Hero level up bonuses rebalanced:
+  - armor bonus at lvl 1
+  - movement bonus at lvl 2
+  - ability cooldown bonus at lvl 3
 - Lowered some ability SFX volume
 - Fixed a possible team detection bug
 - Fixed a dialogue issue in Prologue
+- Fixed some dialogue issues in campaigns
+- Fixed a no moves popup after loading saved game and ending turn
 
 ### 0.7.0-alpha
 - New Skirmish mode maps

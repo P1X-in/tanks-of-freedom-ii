@@ -145,6 +145,9 @@ func get_stats_with_modifiers():
 		if self.modifiers.has(stat_key):
 			stats[stat_key] += self.modifiers[stat_key]
 
+	return _apply_experience_modifiers(stats)
+
+func _apply_experience_modifiers(stats):
 	if self.level > 1:
 		stats["armor"] += 1
 	if self.level > 2:

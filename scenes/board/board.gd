@@ -94,6 +94,10 @@ func _input(event):
 				if event.is_action_pressed("cheat_kill"):
 					self.audio.play("menu_click")
 					self.cheat_kill()
+				if event.is_action_pressed("cheat_level_up"):
+					self.audio.play("menu_click")
+					self.cheat_level_up()
+
 
 		if event.is_action_pressed("editor_menu"):
 			self.audio.play("menu_click")
@@ -637,6 +641,19 @@ func cheat_kill():
 	self.destroy_unit_on_tile(tile)
 	self.events.emit_unit_destroyed(null, unit_id, unit_type, unit_side)
 
+func cheat_level_up():
+	if not OS.is_debug_build():
+		print("Not a debug build")
+		return
+
+	var tile = self.map.model.get_tile(self.map.tile_box_position)
+
+	if not tile.unit.is_present():
+		print("No unit found")
+		return
+
+	tile.unit.tile.level_up()
+
 
 func activate_production_ability(args):
 	self.toggle_radial_menu()
@@ -913,6 +930,8 @@ func _restore_saved_state(save_data):
 	self.state.current_player = save_data["active_player"]
 	self.map.camera.restore_from_state(save_data["camera"])
 	self.ui.objectives.restore_from_state(save_data["objectives"])
+	if save_data.has("player_moved"):
+		self.state.has_player_moved = save_data["player_moved"]
 
 	# restore tiles state
 	self.map.model.wipe_all_units()
