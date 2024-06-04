@@ -8,6 +8,7 @@
   - armor bonus at lvl 1
   - movement bonus at lvl 2
   - ability cooldown bonus at lvl 3
+- Shortened cooldown on some hero abilities
 - Lowered some ability SFX volume
 - Fixed a possible team detection bug
 - Fixed a dialogue issue in Prologue
