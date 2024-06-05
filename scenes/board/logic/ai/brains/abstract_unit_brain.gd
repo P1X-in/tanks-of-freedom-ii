@@ -1,6 +1,7 @@
 extends "res://scenes/board/logic/ai/brains/abstract_brain.gd"
 
 const EXPLORE_DISTANCE = 16
+const EXTRA_EXPLORE_DISTANCE = 32
 
 var pathfinder = preload("res://scenes/board/logic/ai/pathfinder.gd").new()
 
@@ -12,13 +13,21 @@ var actions_templates = {
 }
 var counter_death_penalty = 20
 
-func get_actions(entity_tile, _enemy_buildings, _enemy_units, _own_buildings, _own_units, ap, _board):
+func get_actions(entity_tile, _enemy_buildings, _enemy_units, _own_buildings, _own_units, ap, board):
+	self.pathfinder.explore(entity_tile, self.EXPLORE_DISTANCE)
+	var actions = _gather_all_actions(entity_tile, ap, board)
+
+	if actions.size() == 0 and entity_tile.unit.tile.perform_extra_lookup:
+		self.pathfinder.explore(entity_tile, self.EXTRA_EXPLORE_DISTANCE)
+		return _gather_all_actions(entity_tile, ap, board)
+	return actions
+
+
+func _gather_all_actions(entity_tile, ap, board):
 	var actions = []
 
-	self.pathfinder.explore(entity_tile, self.EXPLORE_DISTANCE)
-
 	actions += self._gather_attack_actions(entity_tile, ap)
-	actions += self._gather_ability_actions(entity_tile, ap, _board)
+	actions += self._gather_ability_actions(entity_tile, ap, board)
 	if entity_tile.unit.tile.can_capture:
 		actions += self._gather_capture_actions(entity_tile, ap)
 

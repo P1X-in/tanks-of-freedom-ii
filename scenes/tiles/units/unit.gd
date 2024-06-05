@@ -46,6 +46,7 @@ var kills = 0
 var ai_paused = false
 var tether_point = Vector2(0, 0)
 var tether_length = 0
+@export var perform_extra_lookup = false
 # AI modifiers end
 
 var modifiers = {}

@@ -10,6 +10,7 @@
   - movement bonus at lvl 2
   - ability cooldown bonus at lvl 3
 - Shortened cooldown on some hero abilities
+- Extended AI lookup range to make it more active
 - Lowered some ability SFX volume
 - Fixed a possible team detection bug
 - Fixed a dialogue issue in Prologue
