@@ -4,6 +4,7 @@
 ### 1.0.0-rc
 - Medkit and Repair Kit abilities now grant exp to the unit
 - Repair Kit ability costs less on higher levels
+- Attack Helicopter ability Pick Up now works on Mobile Infantry when on lvl 3
 - Hero level up bonuses rebalanced:
   - armor bonus at lvl 1
   - movement bonus at lvl 2
@@ -14,6 +15,7 @@
 - Fixed a dialogue issue in Prologue
 - Fixed some dialogue issues in campaigns
 - Fixed a no moves popup after loading saved game and ending turn
+- Fixed Deep Strike infantry unit spawning without team assignment
 
 ### 0.7.0-alpha
 - New Skirmish mode maps

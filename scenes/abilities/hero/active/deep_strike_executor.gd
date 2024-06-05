@@ -27,6 +27,7 @@ func _deploy_unit():
 	var new_unit = self.board.map.builder.place_unit(self.strike_position, self.template_name, 90, self.source.side)
 
 	new_unit.remove_moves()
+	new_unit.team = self.source.team
 	self.board.abilities.apply_passive_modifiers(new_unit)
 	new_unit.sfx_effect("spawn")
 
