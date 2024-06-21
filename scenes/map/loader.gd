@@ -1,5 +1,5 @@
 
-var EDITOR_VERSION = 1
+var EDITOR_VERSION = 2
 
 var importer = preload("res://scenes/map/importer.gd").new()
 

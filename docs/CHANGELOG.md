@@ -1,7 +1,7 @@
 # Tanks of Freedom 3D
 ## Changelog
 
-### 1.0.0-rc
+### 1.0.0
 - Medkit and Repair Kit abilities now grant exp to the unit
 - Repair Kit ability costs less on higher levels
 - Attack Helicopter ability Pick Up now works on Mobile Infantry when on lvl 3
