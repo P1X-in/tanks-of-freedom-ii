@@ -458,6 +458,7 @@
                     "action": "objective",
                     "details": {
                         "slot": 2,
+                        "clear": true,
                         "text": "tr_core_epilogue_m1_o4"
                     }
                 },
