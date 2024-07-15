@@ -17,6 +17,7 @@
 - Fixed some dialogue issues in campaigns
 - Fixed a no moves popup after loading saved game and ending turn
 - Fixed Deep Strike infantry unit spawning without team assignment
+- Fixed a bug preventing maps from being uploaded
 
 ### 0.7.0-alpha
 - New Skirmish mode maps
