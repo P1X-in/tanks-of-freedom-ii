@@ -83,7 +83,7 @@ func _on_register_button_pressed():
 	self.register_button.hide()
 	self.back_button.hide()
 
-	var result = self.online.request_player_id()
+	var result = await self.online.request_player_id()
 
 	self.working = false
 	if result == "ok":
