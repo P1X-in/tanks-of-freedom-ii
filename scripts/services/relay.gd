@@ -149,7 +149,10 @@ func _process(_delta) -> void:
 			var reason: String = socket.get_close_reason()
 			print("WebSocket closed with code: %d, reason %s. Clean: %s" % [code, reason, code != -1])
 		self.set_process(false)
-		_on_server_disconnected()
+		if self.connecting:
+			_on_connection_failed()
+		else:
+			_on_server_disconnected()
 
 
 func _message_received(message: Dictionary) -> void:
