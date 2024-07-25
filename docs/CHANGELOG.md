@@ -18,6 +18,7 @@
 - Fixed a no moves popup after loading saved game and ending turn
 - Fixed Deep Strike infantry unit spawning without team assignment
 - Fixed a bug preventing maps from being uploaded
+- Fixed a bug that caused the game to softlock when it could not connect to online relay
 
 ### 0.7.0-alpha
 - New Skirmish mode maps
