@@ -36,6 +36,8 @@ func bind_menu(main_menu):
 		version_string += " SteamOS"
 	else:
 		version_string += " " + OS.get_name()
+	if OS.has_feature("demo"):
+		version_string += " Demo"
 	self.set_version(version_string)
 
 func hide_menu():
