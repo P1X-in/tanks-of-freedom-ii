@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cf7ix3pu4c806"]
+[gd_scene load_steps=13 format=3 uid="uid://cf7ix3pu4c806"]
 
 [ext_resource type="Script" path="res://scenes/ui/menu/menu.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_fcgt8"]
@@ -6,6 +6,8 @@
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="4_onr04"]
 [ext_resource type="Texture2D" uid="uid://2tgpj2lpm5ae" path="res://assets/gui/menu/buttons/buttonLong_brown_pressed.png" id="4_uk83y"]
 [ext_resource type="Texture2D" uid="uid://43s7leku2m4k" path="res://assets/gui/menu/buttons/buttonLong_brown_hover.png" id="5_twtay"]
+[ext_resource type="Texture2D" uid="uid://de0qb55m770jx" path="res://assets/gui/menu/buttons/buttonLong_brown_disabled.png" id="7_hi51h"]
+[ext_resource type="Texture2D" uid="uid://dqgr7bjubysg5" path="res://assets/gui/menu/buttons/buttonLong_brown_focus.png" id="8_2mvlk"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -231,9 +233,10 @@ offset_top = 90.0
 offset_right = 150.0
 offset_bottom = 130.0
 texture_normal = ExtResource("3_ao3ww")
-texture_pressed = ExtResource("4_uk83y")
+texture_pressed = ExtResource("5_twtay")
 texture_hover = ExtResource("5_twtay")
-texture_focused = ExtResource("5_twtay")
+texture_disabled = ExtResource("7_hi51h")
+texture_focused = ExtResource("8_2mvlk")
 
 [node name="label" type="Label" parent="online_button"]
 layout_mode = 1
@@ -317,10 +320,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
-speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_utmio")
 }
+speed_scale = 4.0
 
 [connection signal="pressed" from="campaign_button" to="." method="_on_campaign_button_pressed"]
 [connection signal="pressed" from="skirmish_button" to="." method="_on_skirmish_button_pressed"]

@@ -22,6 +22,9 @@ func _ready():
 	self.set_process_input(true)
 	self.campaign_button.grab_focus()
 
+	if OS.has_feature("demo"):
+		self.online_button.set_disabled(true)
+
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		self.quit_button.grab_focus()
