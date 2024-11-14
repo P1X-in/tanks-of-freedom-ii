@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://o1l3w0lursuf"]
+[gd_scene load_steps=3 format=3 uid="uid://o1l3w0lursuf"]
 
 [ext_resource type="PackedScene" uid="uid://ofwuqskwc7ah" path="res://scenes/ui/menu/setting_text.tscn" id="1_0q3q6"]
+[ext_resource type="Script" path="res://scenes/ui/menu/settings_multi.gd" id="1_a70xb"]
 
 [node name="settings_multi" type="Control"]
 layout_mode = 3
@@ -11,6 +12,7 @@ offset_right = -680.0
 offset_bottom = -500.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_a70xb")
 
 [node name="game_port" parent="." instance=ExtResource("1_0q3q6")]
 option_name = "TR_GAME_PORT"

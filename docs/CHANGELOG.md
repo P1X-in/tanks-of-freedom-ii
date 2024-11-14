@@ -1,7 +1,7 @@
 # Tanks of Freedom 3D
 ## Changelog
 
-### 1.0.0-rc
+### 1.0.0
 - Medkit and Repair Kit abilities now grant exp to the unit
 - Repair Kit ability costs less on higher levels
 - Attack Helicopter ability Pick Up now works on Mobile Infantry when on lvl 3
@@ -17,6 +17,8 @@
 - Fixed some dialogue issues in campaigns
 - Fixed a no moves popup after loading saved game and ending turn
 - Fixed Deep Strike infantry unit spawning without team assignment
+- Fixed a bug preventing maps from being uploaded
+- Fixed a bug that caused the game to softlock when it could not connect to online relay
 
 ### 0.7.0-alpha
 - New Skirmish mode maps

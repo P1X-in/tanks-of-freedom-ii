@@ -4,7 +4,7 @@ class_name OnlineConnector
 var API_PORT: int = 443
 var API_LOCATION: String = "api.tof.p1x.in"
 const API_USE_SSL: bool = true
-const API_PRESENT_VERSION: String = "0.3.0"
+const API_PRESENT_VERSION: String = "1.0.0"
 
 var online_service = null
 

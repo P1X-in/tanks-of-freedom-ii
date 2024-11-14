@@ -83,7 +83,7 @@ func _on_register_button_pressed():
 	self.register_button.hide()
 	self.back_button.hide()
 
-	var result = self.online.request_player_id()
+	var result = await self.online.request_player_id()
 
 	self.working = false
 	if result == "ok":
@@ -193,7 +193,7 @@ func _on_confirm_upload_button_pressed():
 	self.change_button.hide()
 	self.back_button.hide()
 
-	var result = self.online.upload_map(self.selected_upload_map)
+	var result = await self.online.upload_map(self.selected_upload_map)
 
 	self.working = false
 	self.back_button.show()
