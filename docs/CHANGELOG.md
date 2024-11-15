@@ -4,6 +4,7 @@
 ### 1.0.1
 - Added movement points bar to units
 - Remapped Middle Mouse Button to move camera instead of end turn
+- Added patch notes in main menu
 - Added "Reset" button in multiplayer settings
 - Fixed a crash when any of the online domains was set to empty string
 
