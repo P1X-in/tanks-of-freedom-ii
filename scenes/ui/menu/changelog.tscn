@@ -1,13 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://deovpfof2ipgn"]
+[gd_scene load_steps=11 format=3 uid="uid://bs2u3kr8ll868"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/controls/controls.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_u5grt"]
-[ext_resource type="PackedScene" uid="uid://crv1ageml0d4g" path="res://scenes/ui/menu/controls/game.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://bfxvqvxbfeppg" path="res://scenes/ui/menu/controls/editor.tscn" id="4"]
-[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_lrj5r"]
-[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_ba2wt"]
-[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_6c0av"]
-[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="8_f8qfl"]
+[ext_resource type="Script" path="res://scenes/ui/menu/changelog.gd" id="1_p3c6l"]
+[ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_u0cw5"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_ra12s"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="4_1sqed"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="5_uc3gr"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="6_pxy1y"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
@@ -147,7 +145,7 @@ _data = {
 "show": SubResource("2")
 }
 
-[node name="controls" type="Control"]
+[node name="changelog" type="Control"]
 visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 3
@@ -156,7 +154,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1")
+script = ExtResource("1_p3c6l")
 
 [node name="background" type="NinePatchRect" parent="."]
 layout_mode = 0
@@ -164,7 +162,7 @@ offset_left = -400.0
 offset_top = -300.0
 offset_right = 400.0
 offset_bottom = 300.0
-texture = ExtResource("2_u5grt")
+texture = ExtResource("2_u0cw5")
 patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 8
@@ -179,11 +177,51 @@ offset_top = -300.0
 offset_right = 400.0
 offset_bottom = 300.0
 
-[node name="game" parent="widgets" instance=ExtResource("3")]
-offset_top = 0.0
-offset_bottom = 550.0
+[node name="ScrollContainer" type="ScrollContainer" parent="widgets"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+horizontal_scroll_mode = 0
 
-[node name="editor" parent="widgets" instance=ExtResource("4")]
+[node name="RichTextLabel" type="RichTextLabel" parent="widgets/ScrollContainer"]
+custom_minimum_size = Vector2(760, 510)
+layout_mode = 2
+bbcode_enabled = true
+text = "[b]### 1.0.3[/b]
+- Added movement points bar to units
+- Remapped Middle Mouse Button to move camera instead of end turn
+- Added patch notes in main menu
+- Added \"Reset\" button in multiplayer settings
+	- Use \"Reset\" if Online is not working and you played a pre-release version of the game
+- Fixed a crash when any of the online domains was set to empty string
+ 
+[b]### 1.0.0[/b]
+- Medkit and Repair Kit abilities now grant exp to the unit
+- Repair Kit ability costs less on higher levels
+- Attack Helicopter ability Pick Up now works on Mobile Infantry when on lvl 3
+- Hero level up bonuses rebalanced:
+  - armor bonus at lvl 1
+  - movement bonus at lvl 2
+  - ability cooldown bonus at lvl 3
+- Shortened cooldown on some hero abilities
+- Extended AI lookup range to make it more active
+- Lowered some ability SFX volume
+- Fixed a possible team detection bug
+- Fixed a dialogue issue in Prologue
+- Fixed some dialogue issues in campaigns
+- Fixed a no moves popup after loading saved game and ending turn
+- Fixed Deep Strike infantry unit spawning without team assignment
+- Fixed a bug preventing maps from being uploaded
+- Fixed a bug that caused the game to softlock when it could not connect to online relay"
 
 [node name="back_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
@@ -191,10 +229,10 @@ offset_left = 305.0
 offset_top = 545.0
 offset_right = 495.0
 offset_bottom = 585.0
-texture_normal = ExtResource("5_lrj5r")
-texture_pressed = ExtResource("6_ba2wt")
-texture_hover = ExtResource("7_6c0av")
-texture_focused = ExtResource("7_6c0av")
+texture_normal = ExtResource("4_1sqed")
+texture_pressed = ExtResource("5_uc3gr")
+texture_hover = ExtResource("6_pxy1y")
+texture_focused = ExtResource("6_pxy1y")
 
 [node name="label" type="Label" parent="widgets/back_button"]
 layout_mode = 1
@@ -203,7 +241,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("8_f8qfl")
+theme_override_fonts/font = ExtResource("3_ra12s")
 text = "TR_BACK"
 horizontal_alignment = 1
 vertical_alignment = 1

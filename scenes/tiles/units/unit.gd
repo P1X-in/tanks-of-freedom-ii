@@ -20,6 +20,8 @@ var enable_healthbar = false
 @onready var healthbar_lv2 = $"mesh_anchor/healthbar/SubViewport/level2"
 @onready var healthbar_lv3 = $"mesh_anchor/healthbar/SubViewport/level3"
 
+@onready var energybar = $"mesh_anchor/healthbar/SubViewport/energy"
+
 @export var unit_name = ""
 @export var side = "neutral"
 var team = null
@@ -84,6 +86,7 @@ func reset():
 	self.move = stats["max_move"]
 	self.attacks = stats["max_attacks"]
 	self._update_healthbar()
+	self._update_energy()
 	self._update_level()
 
 func get_dict():
@@ -167,6 +170,7 @@ func use_move(value):
 	self.move -= value
 	if self.move < 1:
 		self.remove_highlight()
+	self._update_energy()
 
 func use_all_moves():
 	self.use_move(self.move)
@@ -175,6 +179,7 @@ func reset_move():
 	var stats = self.get_stats_with_modifiers()
 	self.move = stats["max_move"]
 	self.restore_highlight()
+	self._update_energy()
 
 func replenish_moves():
 	self.reset_move()
@@ -422,6 +427,7 @@ func restore_from_state(state):
 	self.modifiers = state["modifiers"]
 
 	self._update_healthbar()
+	self._update_energy()
 	self._update_level()
 
 	if self.move < 1:
@@ -456,6 +462,11 @@ func _update_level():
 		self.healthbar_lv2.show()
 	if self.level == 3:
 		self.healthbar_lv3.show()
+
+func _update_energy():
+	if self.energybar != null:
+		self.energybar.value = self.move
+		self.energybar.max_value = self.max_move
 
 func enable_health():
 	self.enable_healthbar = true

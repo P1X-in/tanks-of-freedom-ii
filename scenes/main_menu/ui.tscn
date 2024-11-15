@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c2tt60y1onsj4"]
+[gd_scene load_steps=24 format=3 uid="uid://c2tt60y1onsj4"]
 
 [ext_resource type="Script" path="res://scenes/main_menu/ui.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://ejd2ser0yy34" path="res://scenes/ui/menu/logo_view.tscn" id="2"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="20_8j5k3"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="21_07ybo"]
 [ext_resource type="PackedScene" uid="uid://ymr5550pcmub" path="res://scenes/ui/menu/credits.tscn" id="22_qtdd8"]
+[ext_resource type="PackedScene" uid="uid://bs2u3kr8ll868" path="res://scenes/ui/menu/changelog.tscn" id="23_vwc2e"]
 
 [node name="ui" type="Control"]
 layout_mode = 3
@@ -213,7 +214,8 @@ grow_vertical = 2
 [node name="lobby" parent="multiplayer_lobby" instance=ExtResource("16_xn36n")]
 layout_mode = 2
 
-[node name="credits_button" type="MarginContainer" parent="."]
+[node name="extra_buttons" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -221,21 +223,39 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -200.0
-offset_top = -50.0
+offset_top = -110.0
 offset_right = -10.0
 offset_bottom = -10.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="button" type="TextureButton" parent="credits_button"]
-visible = false
+[node name="changelog_button" type="TextureButton" parent="extra_buttons"]
 layout_mode = 2
 texture_normal = ExtResource("18_7g4xd")
 texture_pressed = ExtResource("19_w4f18")
 texture_hover = ExtResource("20_8j5k3")
 texture_focused = ExtResource("20_8j5k3")
 
-[node name="label" type="Label" parent="credits_button/button"]
+[node name="label" type="Label" parent="extra_buttons/changelog_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("21_07ybo")
+text = "TR_PATCH_NOTES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="credits_button" type="TextureButton" parent="extra_buttons"]
+layout_mode = 2
+texture_normal = ExtResource("18_7g4xd")
+texture_pressed = ExtResource("19_w4f18")
+texture_hover = ExtResource("20_8j5k3")
+texture_focused = ExtResource("20_8j5k3")
+
+[node name="label" type="Label" parent="extra_buttons/credits_button"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -260,4 +280,18 @@ grow_vertical = 2
 [node name="credits" parent="credits" instance=ExtResource("22_qtdd8")]
 layout_mode = 2
 
-[connection signal="pressed" from="credits_button/button" to="." method="_on_button_pressed"]
+[node name="changelog" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="changelog" parent="changelog" instance=ExtResource("23_vwc2e")]
+layout_mode = 2
+
+[connection signal="pressed" from="extra_buttons/changelog_button" to="." method="_on_changelog_button_pressed"]
+[connection signal="pressed" from="extra_buttons/credits_button" to="." method="_on_button_pressed"]

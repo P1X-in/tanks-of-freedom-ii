@@ -27,7 +27,9 @@ func _on_settings_changed(key: String, _value) -> void:
 
 
 func _read_settings() -> void:
-	self.THUMBNAIL_LOCATION = self.settings.get_option("online_domain")
+	var new_value = self.settings.get_option("online_domain")
+	if new_value is String:
+		self.THUMBNAIL_LOCATION = new_value
 
 
 func is_integrated() -> bool:
