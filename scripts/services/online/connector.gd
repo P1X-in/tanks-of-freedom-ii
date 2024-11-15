@@ -12,7 +12,9 @@ func _init(online) -> void:
 	self.online_service = online
 
 func _read_settings() -> void:
-	self.API_LOCATION = self.online_service.settings.get_option("online_domain")
+	var new_value = self.online_service.settings.get_option("online_domain")
+	if new_value is String:
+		self.API_LOCATION = new_value
 	self.API_PORT = int(self.online_service.settings.get_option("online_port"))
 
 func _get_request(resource: String, expect_json: bool = true) -> Dictionary:

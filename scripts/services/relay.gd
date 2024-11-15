@@ -42,8 +42,10 @@ func _on_settings_changed(key: String, _value) -> void:
 
 
 func _read_settings() -> void:
+	var new_value = self.settings.get_option("relay_domain")
+	if new_value is String:
+		self.RELAY_URL = new_value
 	self.RELAY_PORT = int(self.settings.get_option("relay_port"))
-	self.RELAY_URL = self.settings.get_option("relay_domain")
 
 func is_server():
 	return self.peer_id == 1

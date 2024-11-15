@@ -1,6 +1,10 @@
 # Tanks of Freedom 3D
 ## Changelog
 
+### 1.0.1
+- Added "Reset" button in multiplayer settings
+- Fixed a crash when any of the online domains was set to empty string
+
 ### 1.0.0
 - Medkit and Repair Kit abilities now grant exp to the unit
 - Repair Kit ability costs less on higher levels
