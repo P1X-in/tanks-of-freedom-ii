@@ -1,7 +1,7 @@
 # Tanks of Freedom 3D
 ## Changelog
 
-### 1.0.1
+### 1.0.3
 - Added movement points bar to units
 - Remapped Middle Mouse Button to move camera instead of end turn
 - Added patch notes in main menu
