@@ -136,7 +136,7 @@ func _input(event):
 	if self.camera_in_transit or self.ai_operated or self.script_operated:
 		return
 
-	if event is InputEventMouseButton and (event.button_index == MOUSE_BUTTON_LEFT or event.button_index == MOUSE_BUTTON_RIGHT):
+	if event is InputEventMouseButton and event.button_index in [MOUSE_BUTTON_RIGHT, MOUSE_BUTTON_LEFT, MOUSE_BUTTON_MIDDLE]:
 		if event.pressed:
 			self.mouse_click_position = event.position
 		else:

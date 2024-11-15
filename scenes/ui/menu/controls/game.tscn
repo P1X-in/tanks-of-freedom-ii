@@ -58,13 +58,31 @@ vframes = 24
 frame = 321
 
 [node name="key3" type="Sprite2D" parent="binds/camera"]
-position = Vector2(280, -7)
+position = Vector2(270, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
 centered = false
 hframes = 34
 vframes = 24
 frame = 77
+
+[node name="key4" type="Sprite2D" parent="binds/camera"]
+position = Vector2(300, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+hframes = 34
+vframes = 24
+frame = 78
+
+[node name="key5" type="Sprite2D" parent="binds/camera"]
+position = Vector2(330, -7)
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+centered = false
+hframes = 34
+vframes = 24
+frame = 79
 
 [node name="switch_cam" type="Label" parent="binds"]
 layout_mode = 0
@@ -376,6 +394,7 @@ vframes = 24
 frame = 157
 
 [node name="key3" type="Sprite2D" parent="binds/end_turn"]
+visible = false
 position = Vector2(280, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2")
