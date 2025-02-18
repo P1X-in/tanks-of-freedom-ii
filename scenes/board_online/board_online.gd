@@ -286,7 +286,9 @@ func _notify_activate_ability(tile_position, ability_index):
 
 
 func cancel_ability():
+	self.lock_multicall += 1
 	super.cancel_ability()
+	self.lock_multicall -= 1
 	if _can_broadcast_moves() and self.lock_multicall == 0:
 		self.relay.message_broadcast({
 			"type": "cancel_ability"
