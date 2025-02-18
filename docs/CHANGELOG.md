@@ -1,6 +1,11 @@
 # Tanks of Freedom 3D
 ## Changelog
 
+### 1.0.5
+- Added rendering scale slider to Video settings
+- Fixed AI taking over player turns in Multiplayer and Online
+- Fixed desync between clients when canceling ability in Multiplayer and Online
+
 ### 1.0.3
 - Added movement points bar to units
 - Remapped Middle Mouse Button to move camera instead of end turn
