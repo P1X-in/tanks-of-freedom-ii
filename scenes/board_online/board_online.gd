@@ -10,6 +10,7 @@ var match_ended = false
 
 var _last_camera_state = null
 
+
 func _ready():
 	super._ready()
 	self.relay.player_connected.connect(_on_player_connected)
@@ -19,6 +20,11 @@ func _ready():
 	self.relay.message_received.connect(_on_message_incoming)
 
 	self.relay.player_loaded()
+	
+	
+func _ready_start():
+	pass
+	
 
 func _on_message_incoming(message):
 	if self.match_ended:
@@ -26,6 +32,7 @@ func _on_message_incoming(message):
 
 	if message["action"] == "message":
 		_handle_message(message["payload"])
+
 
 func _handle_message(message):
 	if message["type"] == "player_loaded":
@@ -61,12 +68,13 @@ func _all_players_loaded():
 	})
 	_start_game()
 
+
 #@rpc("call_local", "reliable")
 func _start_game():
 	self.all_players_loaded = true
 	self.relay.match_in_progress = true
 	_manage_cinematic_bars()
-	_manage_ai_start()
+	start_turn()
 
 
 func _on_player_connected(peer_id, _player_info):
@@ -82,6 +90,7 @@ func _on_player_connected(peer_id, _player_info):
 		})
 	#self.multiplayer_srv._set_match_state.rpc_id(peer_id, current_state)
 
+
 func _on_player_disconnected(peer_id):
 	if self.match_ended:
 		return
@@ -92,9 +101,11 @@ func _on_player_disconnected(peer_id):
 	_manage_ai_start()
 	self.ui_multiplayer.set_announcement(tr("TR_WAITING_FOR_PLAYER_RECONNECTED"))
 
+
 func _on_server_disconnected():
 	if not self.match_ended:
 		self.main_menu()
+
 
 # function overrides
 # disable save/load for multiplayer
@@ -105,8 +116,10 @@ func cheat_capture():
 func cheat_kill():
 	return
 
+
 func _should_perform_hq_cam():
 	return false
+
 
 func restore_saved_state():
 	_restore_saved_state(self.relay.match_state)
@@ -115,6 +128,7 @@ func restore_saved_state():
 	})
 	self._notify_player_reconnected()
 	#_notify_player_reconnected.rpc()
+
 
 func _manage_cinematic_bars():
 	if _can_current_player_perform_actions():
@@ -132,6 +146,7 @@ func _manage_cinematic_bars():
 				print(self.relay.players)
 				self.ui_multiplayer.set_announcement(self.relay.players[self.state.get_current_param("peer_id")]["name"])
 
+
 func _manage_ai_start():
 	if _can_current_player_perform_actions():
 		self.map.camera.ai_operated = false
@@ -143,14 +158,17 @@ func _manage_ai_start():
 		if self.relay.is_server() and self.state.are_all_peers_present() and self.state.is_current_player_ai():
 			self.ai.run()
 
+
 func _can_current_player_perform_actions():
 	if self.relay.peer_id == 0:
 		return false
 
 	return self.all_players_loaded and self.state.is_current_player_active_peer(self.relay.peer_id)
 
+
 func _can_broadcast_moves():
 	return _can_current_player_perform_actions() or (self.relay.is_server() and self.state.are_all_peers_present() and self.state.is_current_player_ai())
+
 
 func setup_radial_menu(context_object=null):
 	if context_object != null and not _can_current_player_perform_actions():
@@ -162,17 +180,21 @@ func setup_radial_menu(context_object=null):
 		self.ui.radial.set_field_disabled(0, "X")
 		self.ui.radial.set_field_disabled(2, "X")
 
+
 func _show_contextual_select_radial(open_unit_abilities):
 	if _can_current_player_perform_actions():
 		super._show_contextual_select_radial(open_unit_abilities)
 
+
 func _add_player_to_state(data):
 	self.state.add_player(data["type"], data["side"], data["alive"], data["team"], data["peer_id"])
+
 
 func main_menu():
 	self.match_ended = true
 	self.relay.close_game()
 	super.main_menu()
+
 
 func _physics_process(_delta):
 	if self.match_ended:
@@ -189,6 +211,7 @@ func _physics_process(_delta):
 			})
 			self._last_camera_state = new_camera_state
 		#_update_camera_position.rpc(self.map.camera.get_position_state())
+
 
 #@rpc("any_peer", "call_remote", "unreliable_ordered")
 func _update_camera_position(camera_state):
@@ -207,6 +230,7 @@ func select_tile(tile_position):
 			"y": tile_position.y,
 		})
 		#_update_tile_select.rpc(tile_position)
+
 
 func _reselect_tile(tile_position):
 	self.lock_multicall += 1
@@ -230,12 +254,14 @@ func _activate_production_ability(ability):
 		})
 		#_notify_activate_production_ability.rpc(self.selected_tile.position, ability.index)
 
+
 #@rpc("any_peer", "call_remote", "reliable")
 func _notify_activate_production_ability(tile_position, ability_index):
 	for ability in self.map.model.get_tile(tile_position).building.tile.abilities:
 		if ability.index == ability_index:
 			_activate_production_ability(ability)
 			return
+
 
 func _activate_ability(ability):
 	super._activate_ability(ability)
@@ -248,6 +274,7 @@ func _activate_ability(ability):
 		})
 		#_notify_activate_ability.rpc(self.selected_tile.position, ability.index)
 
+
 #@rpc("any_peer", "call_remote", "reliable")
 func _notify_activate_ability(tile_position, ability_index):
 	var unit_tile = self.map.model.get_tile(tile_position)
@@ -256,18 +283,23 @@ func _notify_activate_ability(tile_position, ability_index):
 			ability.active_source_tile = unit_tile
 			_activate_ability(ability)
 			return
-			
+
+
 func cancel_ability():
+	self.lock_multicall += 1
 	super.cancel_ability()
+	self.lock_multicall -= 1
 	if _can_broadcast_moves() and self.lock_multicall == 0:
 		self.relay.message_broadcast({
 			"type": "cancel_ability"
 		})
 		#_notify_cancel_ability.rpc()
 
+
 #@rpc("any_peer", "call_remote", "reliable")
 func _notify_cancel_ability():
 	self.cancel_ability()
+
 
 func unselect_tile():
 	self.lock_multicall += 1
@@ -278,6 +310,7 @@ func unselect_tile():
 			"type": "unselect_tile"
 		})
 		#_notify_unselect_tile.rpc()
+
 
 #@rpc("any_peer", "call_remote", "reliable")
 func _notify_unselect_tile():
@@ -309,12 +342,20 @@ func _generate_collateral_damage(tile):
 
 		return damage
 
+
 #@rpc("any_peer", "call_remote", "reliable")
 func _notify_collateral_damage(damage):
 	if damage["damage"] != null:
 		self.collateral.apply_tile_damage(Vector2(int(damage["damage"][0][0]), int(damage["damage"][0][1])), damage["damage"][1], damage["damage"][2])
 	for neighbour in damage["collateral"]:
 		self.collateral.damage_terrain(self.map.model.get_tile(Vector2(int(neighbour[0]), int(neighbour[1]))))
+
+
+func end_turn():
+	if self.ui.radial.is_visible():
+		self.toggle_radial_menu()
+	_end_turn()
+
 
 func _end_turn():
 	if _can_broadcast_moves():
@@ -326,9 +367,11 @@ func _end_turn():
 	else:
 		super._end_turn()
 
+
 #@rpc("any_peer", "call_remote", "reliable")
 func _notify_end_turn():
 	_end_turn()
+
 
 func end_game(winner):
 	super.end_game(winner)

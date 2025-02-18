@@ -11,20 +11,25 @@ var _last_action_signature = null
 
 var _reserved_ap = 0
 
+
 func _init(board_object):
 	self.board = board_object
 	self.collector = preload("res://scenes/board/logic/ai/collector.gd").new(board_object)
+
 
 func run():
 	self._failsafe_counter = 0
 	self._reserved_ap = 0
 	self.call_deferred("_ai_tick")
 
+
 func reserve_ap(amount):
 	self._reserved_ap += amount
 
+
 func _finish_run():
 	self.board.end_turn()
+
 
 func _ai_tick():
 	if self._ai_abort:
@@ -69,6 +74,7 @@ func _ai_tick():
 
 		if not self._ai_abort:
 			self.call_deferred("_finish_run")
+
 
 func abort():
 	self._ai_abort = true

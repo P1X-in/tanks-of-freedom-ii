@@ -44,7 +44,8 @@ var settings = {
 	"relay_port": 9959,
 	"end_turn_speed": "x1",
 	"show_health": true,
-	"scale_ui": true
+	"scale_ui": true,
+	"render_scale": 100
 }
 
 
@@ -77,6 +78,8 @@ func set_option(key, value):
 func _apply_option(key):
 	if key == "fullscreen":
 		get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (self.settings[key]) else Window.MODE_WINDOWED
+	elif key == "render_scale":
+		self.get_tree().root.scaling_3d_scale = float(self.settings[key]) / 100.0
 	elif key == "sound":
 		self.audio.sounds_enabled = self.settings[key]
 	elif key == "music":
