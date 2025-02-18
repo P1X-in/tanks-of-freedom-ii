@@ -29,6 +29,7 @@ var peer_id: int = 0
 var join_code: String = ""
 var connecting: bool = false
 
+
 func _ready() -> void:
 	self._read_settings()
 	self.settings.changed.connect(self._on_settings_changed)
@@ -47,8 +48,10 @@ func _read_settings() -> void:
 		self.RELAY_URL = new_value
 	self.RELAY_PORT = int(self.settings.get_option("relay_port"))
 
+
 func is_server():
 	return self.peer_id == 1
+
 
 func create_game(map_name: String) -> Error:
 	self.players.clear()
@@ -67,6 +70,7 @@ func create_game(map_name: String) -> Error:
 
 	return OK
 
+
 func connect_game(server_join_code: String) -> Error:
 	self.connecting = true
 	self.socket.connect_to_url(self.RELAY_URL + ":" + str(self.RELAY_PORT))
@@ -78,6 +82,7 @@ func connect_game(server_join_code: String) -> Error:
 
 	return OK
 
+
 func close_game() -> void:
 	self.players.clear()
 	self.players_loaded = 0
@@ -88,6 +93,7 @@ func close_game() -> void:
 	self.connecting = false
 	self.socket.close()
 
+
 func message_direct(target_peer_id: int, payload: Dictionary) -> Error:
 	return _send_message("message_direct", {
 		"join_code" : self.join_code,
@@ -96,6 +102,7 @@ func message_direct(target_peer_id: int, payload: Dictionary) -> Error:
 		"message": payload
 	})
 
+
 func message_broadcast(payload: Dictionary) -> Error:
 	return _send_message("message_broadcast", {
 		"join_code" : self.join_code,
@@ -103,10 +110,12 @@ func message_broadcast(payload: Dictionary) -> Error:
 		"message": payload
 	})
 
+
 func game_start() -> Error:
 	return _send_message("game_start", {
 		"join_code" : self.join_code
 	})
+
 
 func player_loaded() -> void:
 	if self.is_server():
@@ -116,11 +125,13 @@ func player_loaded() -> void:
 			"type": "player_loaded"
 		})
 
+
 func mark_player_loaded() -> void:
 	players_loaded += 1
 	if players_loaded == players.size():
 		all_players_loaded.emit()
 		players_loaded = 0
+
 
 func _send_message(action: String, payload: Dictionary) -> Error:
 	var message_data: Dictionary = {
@@ -158,8 +169,8 @@ func _process(_delta) -> void:
 
 
 func _message_received(message: Dictionary) -> void:
-	if OS.is_debug_build():
-		print("Message: ", message)
+	#if OS.is_debug_build():
+	#	print("Message: ", message)
 	if message["action"] == "hosted":
 		self.join_code = message["payload"]["join_code"]
 		self._join_session(self.join_code)
@@ -190,28 +201,34 @@ func _join_session(session_code: String) -> void:
 		"player_data": self._get_player_info()
 	})
 
+
 func _on_player_connected(payload: Dictionary) -> void:
 	var new_player_id = int(payload["peer_id"])
 	players[new_player_id] = payload["player_data"]
 	player_connected.emit(new_player_id, payload["player_data"])
+
 
 func _on_player_disconnected(disconnected_peer_id: int) -> void:
 	self.players.erase(disconnected_peer_id)
 	print(self.players)
 	player_disconnected.emit(disconnected_peer_id)
 
+
 func _on_server_disconnected() -> void:
 	self.close_game()
 	server_disconnected.emit()
+
 
 func _on_connection_failed() -> void:
 	self.close_game()
 	connection_failed.emit()
 
+
 func _get_player_info() -> Dictionary:
 	return {
 		"name": self.settings.get_option("nickname"),
 	}
+
 
 func _get_player_count(map_name: String) -> int:
 	var map_data = self.map_list_service.get_map_data(map_name)
@@ -229,6 +246,7 @@ func _get_player_count(map_name: String) -> int:
 				if side != "":
 					sides[side] = side
 	return clampi(sides.size(), 1, 4)
+
 
 func _lookup_side(data: Dictionary) -> String:
 	var hq_templates = [

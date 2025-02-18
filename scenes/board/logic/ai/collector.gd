@@ -3,8 +3,10 @@ var brains = preload("res://scenes/board/logic/ai/brains/brains.gd").new()
 
 var board
 
+
 func _init(board_object):
 	self.board = board_object
+
 
 func select_best_action():
 	var actions = await self._gather_all_actions()
@@ -15,13 +17,14 @@ func select_best_action():
 
 	return null
 
+
 func _gather_all_actions():
 	var side = self.board.state.get_current_side()
 	var team = self.board.state.get_player_team(side)
 	var ap = self.board.state.get_current_ap() - self.board.ai._reserved_ap
 
-	if OS.is_debug_build():
-		print("Available AP: " + str(ap))
+	#if OS.is_debug_build():
+	#	print("Available AP: " + str(ap))
 
 	if ap <= 0:
 		return []
@@ -29,9 +32,9 @@ func _gather_all_actions():
 	var buildings = self.board.map.model.get_player_buildings_tiles(side)
 	var units = self.board.map.model.get_player_units_tiles(side)
 
-	if OS.is_debug_build():
-		print("Units: " + str(units.size()))
-		print("Buildings: " + str(buildings.size()))
+	#if OS.is_debug_build():
+	#	print("Units: " + str(units.size()))
+	#	print("Buildings: " + str(buildings.size()))
 
 	var enemy_buildings = self.board.map.model.get_enemy_buildings_tiles(side, team)
 	var enemy_units = self.board.map.model.get_enemy_units_tiles(side, team)
@@ -41,6 +44,7 @@ func _gather_all_actions():
 	var units_actions = await self._gather_unit_actions(units, enemy_buildings, enemy_units, buildings, units, ap)
 
 	return buildings_actions + units_actions
+
 
 func _gather_building_actions(buildings, enemy_buildings, enemy_units, own_buildings, own_units, ap):
 	var buildings_actions = []
@@ -54,6 +58,7 @@ func _gather_building_actions(buildings, enemy_buildings, enemy_units, own_build
 		await self.board.get_tree().create_timer(0.01).timeout
 
 	return buildings_actions
+
 
 func _gather_unit_actions(units, enemy_buildings, enemy_units, own_buildings, own_units, ap):
 	var units_actions = []
@@ -70,6 +75,7 @@ func _gather_unit_actions(units, enemy_buildings, enemy_units, own_buildings, ow
 		await self.board.get_tree().create_timer(0.01).timeout
 
 	return units_actions
+
 
 func _sort_actions(actions):
 	actions.sort_custom(Callable(self, "_customComparison"))
