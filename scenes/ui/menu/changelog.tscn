@@ -196,7 +196,12 @@ horizontal_scroll_mode = 0
 custom_minimum_size = Vector2(760, 510)
 layout_mode = 2
 bbcode_enabled = true
-text = "[b]### 1.0.3[/b]
+text = "[b]### 1.0.5[/b]
+- Added rendering scale slider to Video settings
+- Fixed AI taking over player turns in Multiplayer and Online
+- Fixed desync between clients when canceling ability in Multiplayer and Online
+ 
+[b]### 1.0.3[/b]
 - Added movement points bar to units
 - Remapped Middle Mouse Button to move camera instead of end turn
 - Added patch notes in main menu

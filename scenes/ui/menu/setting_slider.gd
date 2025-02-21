@@ -39,8 +39,8 @@ func _on_slider_value_changed(value):
 	if self.prepared:
 		self.audio.play("menu_click")
 	self.slider_value.set_text(str(int(value + min_value)))
-	
-	
+
+
 func _show_help():
 	if self.help_tip != "":
 		self.get_parent().get_parent().get_parent().get_parent().show_help(self.help_tip)
@@ -50,4 +50,4 @@ func _show_help():
 
 func _clear_help():
 	self.get_parent().get_parent().get_parent().get_parent().hide_help()
-	
+

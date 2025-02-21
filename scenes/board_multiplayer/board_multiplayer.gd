@@ -17,11 +17,11 @@ func _ready():
 	self.multiplayer_srv.all_players_loaded.connect(_all_players_loaded)
 
 	self.multiplayer_srv.player_loaded.rpc_id(1)
-	
-	
+
+
 func _ready_start():
 	pass
-	
+
 
 func _all_players_loaded():
 	_start_game.rpc()
@@ -248,7 +248,7 @@ func end_turn():
 	if self.ui.radial.is_visible():
 		self.toggle_radial_menu()
 	_end_turn()
-	
+
 
 func _end_turn():
 	if _can_broadcast_moves():

@@ -20,11 +20,11 @@ func _ready():
 	self.relay.message_received.connect(_on_message_incoming)
 
 	self.relay.player_loaded()
-	
-	
+
+
 func _ready_start():
 	pass
-	
+
 
 func _on_message_incoming(message):
 	if self.match_ended:

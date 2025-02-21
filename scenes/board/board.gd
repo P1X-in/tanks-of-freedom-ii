@@ -47,8 +47,8 @@ func _ready():
 	self.set_up_map()
 	self.set_up_board()
 	_ready_start()
-	
-	
+
+
 func _ready_start():
 	if self.match_setup.restore_save_id == null:
 		self.match_setup.store_setup()

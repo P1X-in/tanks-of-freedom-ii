@@ -16,7 +16,7 @@ func perform(board):
 	board.select_tile(self.unit.position)
 	board.select_tile(self.target.position)
 	board.unselect_tile()
-	
+
 	if unit_object and not unit_object.is_queued_for_deletion():
 		await unit_object.move_finished
 
