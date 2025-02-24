@@ -4,6 +4,7 @@
 ### 1.0.6
 - Unit is snapped into position before attacking to prevent misalignment
 - Fixed screen edge camera pan getting stuck if camera is dragged while panning
+- Fixed multiplayer settings domain being converted to a number value
 
 
 ### 1.0.5
