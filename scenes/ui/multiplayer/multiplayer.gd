@@ -41,13 +41,13 @@ func _ready():
 func show_panel():
 	super.show_panel()
 	_switch_to_main_panel()
-	
+
 func _on_back_button_pressed():
 	super._on_back_button_pressed()
 
 	if self.connection_busy:
 		return
-	
+
 	if self.address_panel.is_visible():
 		_switch_to_main_panel()
 	else:

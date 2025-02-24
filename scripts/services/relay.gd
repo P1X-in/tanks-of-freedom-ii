@@ -55,7 +55,7 @@ func is_server():
 
 func create_game(map_name: String) -> Error:
 	self.players.clear()
-	self.player_limit = _get_player_count(map_name)
+	self.player_limit = 8 #_get_player_count(map_name)
 
 	self.connecting = true
 	self.socket.connect_to_url("ws://" + self.RELAY_URL + ":" + str(self.RELAY_PORT))

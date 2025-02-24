@@ -39,8 +39,6 @@ func load_data_from_file():
 		self.integration_data["integrations"]["api.tof.p1x.in"]["player_id"] = self.integration_data["player_id"]
 		self.integration_data["integrations"]["api.tof.p1x.in"]["pin"] = self.integration_data["pin"]
 
-	print(self.integration_data)
-
 
 func is_registered():
 	var current_integration = self.online_service.settings.get_option("online_domain")

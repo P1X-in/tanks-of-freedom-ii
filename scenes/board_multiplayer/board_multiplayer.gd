@@ -20,7 +20,8 @@ func _ready():
 
 
 func _ready_start():
-	pass
+	if self.match_setup.restore_save_id != null:
+		self.restore_saved_state()
 
 
 func _all_players_loaded():
@@ -45,11 +46,12 @@ func _on_player_disconnected(peer_id):
 	if self.match_ended:
 		return
 
-	self.all_players_loaded = false
-	self.state.clear_peer_id(peer_id)
-	_manage_cinematic_bars()
-	_manage_ai_start()
-	self.ui_multiplayer.set_announcement(tr("TR_WAITING_FOR_PLAYER_RECONNECTED"))
+	if self.state.is_non_observer_peer(peer_id):
+		self.all_players_loaded = false
+		self.state.clear_peer_id(peer_id)
+		_manage_cinematic_bars()
+		_manage_ai_start()
+		self.ui_multiplayer.set_announcement(tr("TR_WAITING_FOR_PLAYER_RECONNECTED"))
 
 
 func _on_server_disconnected():
@@ -271,6 +273,16 @@ func end_game(winner):
 
 @rpc("any_peer", "call_local", "reliable")
 func _notify_player_reconnected():
+	if self.all_players_loaded:
+		if _can_broadcast_moves():
+			if self.selected_tile != null:
+				_update_tile_select.rpc_id(multiplayer.get_remote_sender_id(), self.selected_tile.position)
+			if self.active_ability != null:
+				if self.active_ability.TYPE == "production":
+					_notify_activate_production_ability.rpc_id(multiplayer.get_remote_sender_id(), self.selected_tile.position, self.active_ability.index)
+				else:
+					_notify_activate_ability.rpc_id(multiplayer.get_remote_sender_id(), self.selected_tile.position, self.active_ability.index)
+		return
 	self.all_players_loaded = self.state.are_all_peers_present()
 	_manage_cinematic_bars()
 	_manage_ai_start()

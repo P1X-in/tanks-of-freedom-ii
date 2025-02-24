@@ -52,7 +52,7 @@ func _ready():
 	self.upload_name.notification(NOTIFICATION_TRANSLATION_CHANGED)
 	self.download_name.set_message_translation(false)
 	self.download_name.notification(NOTIFICATION_TRANSLATION_CHANGED)
-	
+
 	self.online_match_nickname_input.set_text(self.settings.get_option("nickname"))
 	self.relay.session_success.connect(self._on_session_success)
 	self.relay.connection_failed.connect(self._on_connection_failed)

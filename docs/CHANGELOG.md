@@ -2,9 +2,11 @@
 ## Changelog
 
 ### 1.0.6
+- Added spectators to multiplayer matches
 - Unit is snapped into position before attacking to prevent misalignment
 - Fixed screen edge camera pan getting stuck if camera is dragged while panning
 - Fixed multiplayer settings domain being converted to a number value
+- Fixed a reggresion introduced in 1.0.3 that prevented players from properly reconnecting to a multiplayer match
 
 
 ### 1.0.5

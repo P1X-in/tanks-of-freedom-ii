@@ -20,10 +20,14 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 	$"widgets/lobby_player_3",
 ]
 @onready var player_labels = [
-	[$"widgets/player_0", $"widgets/player_0/label"],
-	[$"widgets/player_1", $"widgets/player_1/label"],
-	[$"widgets/player_2", $"widgets/player_2/label"],
-	[$"widgets/player_3", $"widgets/player_3/label"],
+	[$"widgets/player_labels/labels_grid/player_0", $"widgets/player_labels/labels_grid/player_0/label"],
+	[$"widgets/player_labels/labels_grid/player_1", $"widgets/player_labels/labels_grid/player_1/label"],
+	[$"widgets/player_labels/labels_grid/player_2", $"widgets/player_labels/labels_grid/player_2/label"],
+	[$"widgets/player_labels/labels_grid/player_3", $"widgets/player_labels/labels_grid/player_3/label"],
+	[$"widgets/player_labels/labels_grid/player_4", $"widgets/player_labels/labels_grid/player_4/label"],
+	[$"widgets/player_labels/labels_grid/player_5", $"widgets/player_labels/labels_grid/player_5/label"],
+	[$"widgets/player_labels/labels_grid/player_6", $"widgets/player_labels/labels_grid/player_6/label"],
+	[$"widgets/player_labels/labels_grid/player_7", $"widgets/player_labels/labels_grid/player_7/label"],
 ]
 var hq_templates = [
 	"modern_hq",
@@ -98,7 +102,7 @@ func _manage_start_button(grab):
 
 func _is_ready_to_start():
 	var player_spots = 0
-	var human_players = self.relay.players.size()
+	#var human_players = self.relay.players.size()
 	var players_assigned = 0
 	var ai_assigned = 0
 
@@ -111,8 +115,8 @@ func _is_ready_to_start():
 			else:
 				ai_assigned += 1
 
-	if human_players > players_assigned:
-		return false
+	#if human_players > players_assigned:
+	#	return false
 
 	return players_assigned + ai_assigned == player_spots
 
@@ -161,7 +165,7 @@ func _gather_player_sides(map_data):
 			key = str(x) + "_" + str(y)
 			if map_data["tiles"].has(key):
 				side = self._lookup_side(map_data["tiles"][key])
-				
+
 				if side != null:
 					sides[side] = side
 
@@ -174,13 +178,13 @@ func _lookup_side(data):
 
 	return null
 
-	
+
 func _on_back_button_pressed():
 	if self.downloading_label.is_visible():
 		return
 
 	super._on_back_button_pressed()
-	
+
 	self.relay.close_game()
 	self.main_menu.close_online_lobby()
 
