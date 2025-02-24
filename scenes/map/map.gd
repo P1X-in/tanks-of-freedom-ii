@@ -135,7 +135,7 @@ func anchor_unit(unit, unit_position):
 	world_position.y = self.GROUND_HEIGHT
 	self.tiles_units_anchor.add_child(unit)
 	unit.set_position(world_position)
-	
+
 
 func detach_unit(unit):
 	self.tiles_units_anchor.remove_child(unit)

@@ -532,6 +532,8 @@ func battle(attacker_tile, defender_tile):
 	attacker.use_move(1)
 	attacker.use_attack()
 
+	self.reset_unit_position(attacker_tile, attacker)
+
 	attacker.rotate_unit_to_direction(attacker_tile.get_direction_to_neighbour(defender_tile))
 
 	defender.receive_damage(attacker.get_attack())

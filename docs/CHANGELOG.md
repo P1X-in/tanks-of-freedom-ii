@@ -1,6 +1,11 @@
 # Tanks of Freedom 3D
 ## Changelog
 
+### 1.0.6
+- Unit is snapped into position before attacking to prevent misalignment
+- Fixed screen edge camera pan getting stuck if camera is dragged while panning
+
+
 ### 1.0.5
 - Added rendering scale slider to Video settings
 - Fixed AI taking over player turns in Multiplayer and Online

@@ -482,6 +482,8 @@ func restore_from_state(state):
 
 func _on_edge_pan(direction_vector):
 	if self.mouse_drag:
+		self.camera_pan.x = 0
+		self.camera_pan.y = 0
 		return
 
 	if not self.settings.get_option("edge_pan"):
