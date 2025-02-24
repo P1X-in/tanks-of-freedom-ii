@@ -11,6 +11,7 @@ extends Control
 @export var option_key = ""
 @export var help_tip = ""
 @export var placeholder = ""
+@export var is_int = true
 
 func _ready():
 	self.label.set_text(self.option_name)
@@ -24,7 +25,10 @@ func _read_setting():
 	self.text_input.set_text(str(value))
 
 func _on_text_text_changed(_text):
-	self.settings.set_option(self.option_key, self.text_input.get_text().to_int())
+	var new_value = self.text_input.get_text()
+	if is_int:
+		new_value = new_value.to_int()
+	self.settings.set_option(self.option_key, new_value)
 	self.audio.play("menu_click")
 
 

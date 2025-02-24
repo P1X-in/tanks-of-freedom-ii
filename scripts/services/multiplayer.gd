@@ -30,7 +30,7 @@ func _ready() -> void:
 
 func create_game(map_name: String) -> Error:
 	self.players.clear()
-	self.player_limit = _get_player_count(map_name)
+	self.player_limit = 7 #_get_player_count(map_name)
 	var peer = ENetMultiplayerPeer.new()
 	var error = peer.create_server(self.settings.get_option("game_port"), self.player_limit)
 	if error:
@@ -140,7 +140,7 @@ func _get_player_count(map_name: String) -> int:
 			key = str(x) + "_" + str(y)
 			if map_data["tiles"].has(key):
 				side = self._lookup_side(map_data["tiles"][key])
-				
+
 				if side != "":
 					sides[side] = side
 	return clampi(sides.size() - 1, 1, 3)

@@ -67,7 +67,7 @@ func _gather_unit_actions(units, enemy_buildings, enemy_units, own_buildings, ow
 	for unit_tile in units:
 		if unit_tile.unit.tile.ai_paused:
 			continue
-			
+
 		brain = self.brains.get_brain_for_unit(unit_tile.unit.tile)
 		if brain == null:
 			continue

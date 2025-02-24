@@ -20,11 +20,12 @@ func _ready():
 	self.relay.message_received.connect(_on_message_incoming)
 
 	self.relay.player_loaded()
-	
-	
+
+
 func _ready_start():
-	pass
-	
+	if self.match_setup.restore_save_id != null:
+		self.restore_saved_state()
+
 
 func _on_message_incoming(message):
 	if self.match_ended:
@@ -95,11 +96,12 @@ func _on_player_disconnected(peer_id):
 	if self.match_ended:
 		return
 
-	self.all_players_loaded = false
-	self.state.clear_peer_id(peer_id)
-	_manage_cinematic_bars()
-	_manage_ai_start()
-	self.ui_multiplayer.set_announcement(tr("TR_WAITING_FOR_PLAYER_RECONNECTED"))
+	if self.state.is_non_observer_peer(peer_id):
+		self.all_players_loaded = false
+		self.state.clear_peer_id(peer_id)
+		_manage_cinematic_bars()
+		_manage_ai_start()
+		self.ui_multiplayer.set_announcement(tr("TR_WAITING_FOR_PLAYER_RECONNECTED"))
 
 
 func _on_server_disconnected():
@@ -382,6 +384,20 @@ func end_game(winner):
 
 #@rpc("any_peer", "call_local", "reliable")
 func _notify_player_reconnected():
+	if self.all_players_loaded:
+		if _can_broadcast_moves():
+			var _tmp_tile = null
+			var _tmp_ability = null
+			if self.selected_tile != null:
+				_tmp_tile = self.selected_tile
+			if self.active_ability != null:
+				_tmp_ability = self.active_ability
+
+			if _tmp_tile != null:
+				unselect_tile()
+			if _tmp_ability != null:
+				cancel_ability()
+		return
 	self.all_players_loaded = self.state.are_all_peers_present()
 	self.relay.players_loaded = 0
 	_manage_cinematic_bars()

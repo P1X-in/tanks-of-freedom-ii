@@ -106,17 +106,20 @@ team = 4
 index = 3
 swap_target = NodePath("../lobby_player_2")
 
-[node name="player_0" type="NinePatchRect" parent="widgets" index="5"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="player_labels" type="CenterContainer" parent="widgets" index="5"]
+layout_mode = 0
 offset_left = 25.0
-offset_top = 550.0
-offset_right = -925.0
-offset_bottom = -110.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_top = 540.0
+offset_right = 1175.0
+offset_bottom = 630.0
+
+[node name="labels_grid" type="GridContainer" parent="widgets/player_labels" index="0"]
+layout_mode = 2
+columns = 4
+
+[node name="player_0" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="0"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
 texture = ExtResource("5_8ywfm")
 patch_margin_left = 5
 patch_margin_top = 5
@@ -125,7 +128,7 @@ patch_margin_bottom = 5
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="label" type="Label" parent="widgets/player_0" index="0"]
+[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_0" index="0"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -138,17 +141,9 @@ text = "dummy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="player_1" type="NinePatchRect" parent="widgets" index="6"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 325.0
-offset_top = 550.0
-offset_right = -625.0
-offset_bottom = -110.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="player_1" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="1"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
 texture = ExtResource("5_8ywfm")
 patch_margin_left = 5
 patch_margin_top = 5
@@ -157,7 +152,7 @@ patch_margin_bottom = 5
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="label" type="Label" parent="widgets/player_1" index="0"]
+[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_1" index="0"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -170,17 +165,9 @@ text = "dummy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="player_2" type="NinePatchRect" parent="widgets" index="7"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 625.0
-offset_top = 550.0
-offset_right = -325.0
-offset_bottom = -110.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="player_2" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="2"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
 texture = ExtResource("5_8ywfm")
 patch_margin_left = 5
 patch_margin_top = 5
@@ -189,7 +176,7 @@ patch_margin_bottom = 5
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="label" type="Label" parent="widgets/player_2" index="0"]
+[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_2" index="0"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -202,17 +189,9 @@ text = "dummy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="player_3" type="NinePatchRect" parent="widgets" index="8"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 925.0
-offset_top = 550.0
-offset_right = -25.0
-offset_bottom = -110.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="player_3" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="3"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
 texture = ExtResource("5_8ywfm")
 patch_margin_left = 5
 patch_margin_top = 5
@@ -221,7 +200,7 @@ patch_margin_bottom = 5
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="label" type="Label" parent="widgets/player_3" index="0"]
+[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_3" index="0"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -234,7 +213,103 @@ text = "dummy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="start_button" type="TextureButton" parent="widgets" index="9"]
+[node name="player_4" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="4"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+texture = ExtResource("5_8ywfm")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_4" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_yotih")
+theme_override_font_sizes/font_size = 20
+text = "dummy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="player_5" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="5"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+texture = ExtResource("5_8ywfm")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_5" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_yotih")
+theme_override_font_sizes/font_size = 20
+text = "dummy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="player_6" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="6"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+texture = ExtResource("5_8ywfm")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_6" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_yotih")
+theme_override_font_sizes/font_size = 20
+text = "dummy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="player_7" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="7"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+texture = ExtResource("5_8ywfm")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_7" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_yotih")
+theme_override_font_sizes/font_size = 20
+text = "dummy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start_button" type="TextureButton" parent="widgets" index="6"]
 layout_mode = 0
 offset_left = 985.0
 offset_top = 640.0
@@ -257,7 +332,7 @@ text = "TR_START"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="back_button" type="TextureButton" parent="widgets" index="10"]
+[node name="back_button" type="TextureButton" parent="widgets" index="7"]
 layout_mode = 0
 offset_left = 25.0
 offset_top = 640.0

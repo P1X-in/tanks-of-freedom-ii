@@ -47,8 +47,8 @@ func _ready():
 	self.set_up_map()
 	self.set_up_board()
 	_ready_start()
-	
-	
+
+
 func _ready_start():
 	if self.match_setup.restore_save_id == null:
 		self.match_setup.store_setup()
@@ -531,6 +531,8 @@ func battle(attacker_tile, defender_tile):
 
 	attacker.use_move(1)
 	attacker.use_attack()
+
+	self.reset_unit_position(attacker_tile, attacker)
 
 	attacker.rotate_unit_to_direction(attacker_tile.get_direction_to_neighbour(defender_tile))
 
