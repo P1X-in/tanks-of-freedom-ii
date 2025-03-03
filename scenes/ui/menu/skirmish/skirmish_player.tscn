@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dl5ci1t5c1agk"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/skirmish_player.gd" id="1"]
+[ext_resource type="Script" path="res://scenes/ui/menu/skirmish/skirmish_player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="2_fl6im"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_xy4iu"]
 [ext_resource type="Texture2D" uid="uid://cn0ayth0xirby" path="res://assets/gui/menu/skirmish_border_red.png" id="3"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://yrab27ll6oeh"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/campaign_selection.gd" id="1"]
-[ext_resource type="PackedScene" uid="uid://beirm1evrukrk" path="res://scenes/ui/menu/campaign_tile.tscn" id="2"]
+[ext_resource type="Script" path="res://scenes/ui/menu/campaign/campaign_selection.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://beirm1evrukrk" path="res://scenes/ui/menu/campaign/campaign_tile.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_btryb"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="4_dfath"]
 [ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="5_acmon"]

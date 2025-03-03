@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_nb4uq"]
 [ext_resource type="Texture2D" uid="uid://dwjs5gt4qkxu2" path="res://assets/gui/campaign/campaign_tile_focused.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://bplir5a6wkccs" path="res://assets/gui/campaign/campaign_tile_disabled.png" id="4"]
-[ext_resource type="Script" path="res://scenes/ui/menu/campaign_tile.gd" id="6"]
+[ext_resource type="Script" path="res://scenes/ui/menu/campaign/campaign_tile.gd" id="6"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/medal.tscn" id="7"]
 
 [node name="campaign" type="Control"]

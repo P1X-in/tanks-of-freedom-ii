@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://co5xbe4c30mkx"]
 
-[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="1"]
-[ext_resource type="Texture2D" uid="uid://0lbtq8yu4pc0" path="res://assets/gui/icons/flag.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="2_u0eal"]
-[ext_resource type="Texture2D" uid="uid://bno2vmgdibxfd" path="res://assets/gui/icons/flag_complete.png" id="3"]
-[ext_resource type="Script" path="res://scenes/ui/menu/mission_marker.gd" id="4"]
+[ext_resource type="Script" path="res://scenes/ui/menu/campaign/mission_marker.gd" id="1_g65bv"]
+[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="2_x1yh5"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_xipji"]
+[ext_resource type="Texture2D" uid="uid://0lbtq8yu4pc0" path="res://assets/gui/icons/flag.png" id="4_asw7p"]
+[ext_resource type="Texture2D" uid="uid://bno2vmgdibxfd" path="res://assets/gui/icons/flag_complete.png" id="5_vgndo"]
 
 [sub_resource type="Animation" id="2"]
 resource_name = "hide"
@@ -49,7 +49,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 250.0
 offset_bottom = 50.0
-script = ExtResource("4")
+script = ExtResource("1_g65bv")
 
 [node name="label" type="Control" parent="."]
 clip_contents = true
@@ -62,7 +62,7 @@ offset_bottom = 50.0
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 50.0
-texture = ExtResource("2_u0eal")
+texture = ExtResource("2_x1yh5")
 patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
@@ -74,22 +74,22 @@ axis_stretch_vertical = 1
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme_override_fonts/font = ExtResource("1")
+theme_override_fonts/font = ExtResource("3_xipji")
 text = "Mission name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="flag" type="Sprite2D" parent="."]
 position = Vector2(25, 25)
-texture = ExtResource("2")
+texture = ExtResource("4_asw7p")
 
 [node name="flag_complete" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(25, 25)
-texture = ExtResource("3")
+texture = ExtResource("5_vgndo")
 
 [node name="animations" type="AnimationPlayer" parent="."]
-speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_7mr6a")
 }
+speed_scale = 4.0

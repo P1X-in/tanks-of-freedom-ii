@@ -27,7 +27,7 @@ var main_menu
 
 var manifest
 
-var mission_marker_template = preload("res://scenes/ui/menu/mission_marker.tscn")
+var mission_marker_template = preload("res://scenes/ui/menu/campaign/mission_marker.tscn")
 var mission_markers = []
 var selected_mission = 0
 

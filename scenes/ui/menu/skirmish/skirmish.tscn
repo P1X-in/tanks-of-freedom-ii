@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://b68vtard4p6s3" path="res://scenes/ui/minimap/minimap.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_y8fji"]
-[ext_resource type="Script" path="res://scenes/ui/menu/skirmish.gd" id="3"]
-[ext_resource type="PackedScene" uid="uid://dl5ci1t5c1agk" path="res://scenes/ui/menu/skirmish_player.tscn" id="4"]
+[ext_resource type="Script" path="res://scenes/ui/menu/skirmish/skirmish.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://dl5ci1t5c1agk" path="res://scenes/ui/menu/skirmish/skirmish_player.tscn" id="4"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_nw18n"]
 [ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_hh8c6"]
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_wxskm"]
