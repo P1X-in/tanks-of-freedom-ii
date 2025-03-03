@@ -288,3 +288,8 @@ func _notify_player_reconnected():
 	self.all_players_loaded = self.state.are_all_peers_present()
 	_manage_cinematic_bars()
 	_manage_ai_start()
+
+
+func _timer_end_turn() -> void:
+	if _can_broadcast_moves():
+		_end_turn()

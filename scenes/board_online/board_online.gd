@@ -402,3 +402,8 @@ func _notify_player_reconnected():
 	self.relay.players_loaded = 0
 	_manage_cinematic_bars()
 	_manage_ai_start()
+
+
+func _timer_end_turn() -> void:
+	if _can_broadcast_moves():
+		_end_turn()

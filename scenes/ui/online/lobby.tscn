@@ -123,27 +123,35 @@ columns = 4
 
 [node name="player_0" parent="widgets/player_labels/labels_grid" index="0" instance=ExtResource("7_4r14n")]
 layout_mode = 2
+is_online_relay = true
 
 [node name="player_1" parent="widgets/player_labels/labels_grid" index="1" instance=ExtResource("7_4r14n")]
 layout_mode = 2
+is_online_relay = true
 
 [node name="player_2" parent="widgets/player_labels/labels_grid" index="2" instance=ExtResource("7_4r14n")]
 layout_mode = 2
+is_online_relay = true
 
 [node name="player_3" parent="widgets/player_labels/labels_grid" index="3" instance=ExtResource("7_4r14n")]
 layout_mode = 2
+is_online_relay = true
 
 [node name="player_4" parent="widgets/player_labels/labels_grid" index="4" instance=ExtResource("7_4r14n")]
 layout_mode = 2
+is_online_relay = true
 
 [node name="player_5" parent="widgets/player_labels/labels_grid" index="5" instance=ExtResource("7_4r14n")]
 layout_mode = 2
+is_online_relay = true
 
 [node name="player_6" parent="widgets/player_labels/labels_grid" index="6" instance=ExtResource("7_4r14n")]
 layout_mode = 2
+is_online_relay = true
 
 [node name="player_7" parent="widgets/player_labels/labels_grid" index="7" instance=ExtResource("7_4r14n")]
 layout_mode = 2
+is_online_relay = true
 
 [node name="join_code" type="NinePatchRect" parent="widgets" index="6"]
 layout_mode = 1

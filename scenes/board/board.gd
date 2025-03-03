@@ -170,6 +170,8 @@ func set_up_ui():
 	self.ui.edge_pan_bottom.mouse_entered.connect(self.map.camera._on_edge_pan.bind([null, -1]))
 	self.ui.edge_pan_bottom.mouse_exited.connect(self.map.camera._on_edge_pan.bind([null, 0]))
 
+	self.ui.turn_timer.turn_timeout.connect(_timer_end_turn)
+
 
 func set_up_map():
 	self.map.builder.enable_health = true
@@ -237,6 +239,7 @@ func end_turn():
 func _end_turn():
 	self.unselect_tile()
 	self.state.switch_to_next_player()
+	self.ui.reset_timer()
 	self.call_deferred("start_turn")
 
 
@@ -258,6 +261,7 @@ func start_turn():
 	self.ui.flash_start_end_card(self.state.get_current_side(), self.state.turn)
 
 	_manage_ai_start()
+	_manage_turn_timer()
 
 	self.events.emit_turn_started(self.state.turn, self.state.current_player)
 
@@ -280,6 +284,11 @@ func _manage_ai_start():
 	else:
 		self.map.camera.ai_operated = false
 		self.map.show_tile_box()
+
+
+func _manage_turn_timer():
+	if not self.state.is_current_player_ai() and self.match_setup.time_limit > 0:
+		self.ui.start_turn_timer(self.match_setup.time_limit)
 
 
 func select_tile(tile_position):
@@ -1047,3 +1056,7 @@ func close_settings():
 
 	if not self.state.is_current_player_ai():
 		self.map.tile_box.set_visible(true)
+
+
+func _timer_end_turn() -> void:
+	end_turn()

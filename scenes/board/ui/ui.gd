@@ -19,6 +19,7 @@ extends Control
 @onready var saves = $"saves/saves"
 @onready var settings_panel = $"settings/settings"
 @onready var controls = $"controls/game"
+@onready var turn_timer = $"TurnTime"
 
 # Tile highlight
 @onready var tile_highlight = $"tile_highlight/tile_view"
@@ -59,6 +60,7 @@ var icons = preload("res://scenes/ui/icons/icons.gd").new()
 func _ready():
 	self.show_controls()
 	self.settings.changed.connect(self._on_settings_changed)
+	self.turn_timer.turn_timeout.connect(self.turn_timer.hide)
 
 func is_popup_open():
 	if self.summary.is_visible():
@@ -293,3 +295,13 @@ func _on_settings_changed(key, new_value):
 			self.show_controls()
 		else:
 			self.hide_controls()
+
+
+func start_turn_timer(seconds: int) -> void:
+	turn_timer.start_timer(seconds)
+	turn_timer.show()
+
+
+func reset_timer() -> void:
+	turn_timer.reset()
+	turn_timer.hide()
