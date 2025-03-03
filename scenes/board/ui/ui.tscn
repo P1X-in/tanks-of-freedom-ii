@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://0bbskwqb2iu4" path="res://scenes/ui/board/ap_depleted.tscn" id="16"]
 [ext_resource type="PackedScene" uid="uid://4fm2h6kocq46" path="res://scenes/ui/save/saves.tscn" id="17"]
 [ext_resource type="PackedScene" uid="uid://crv1ageml0d4g" path="res://scenes/ui/menu/controls/game.tscn" id="18"]
-[ext_resource type="PackedScene" uid="uid://b6crhl6g0ory" path="res://scenes/ui/menu/settings.tscn" id="19_xcys2"]
+[ext_resource type="PackedScene" uid="uid://b6crhl6g0ory" path="res://scenes/ui/menu/settings/settings.tscn" id="19_xcys2"]
 [ext_resource type="PackedScene" uid="uid://ce08h2jnhhsh4" path="res://scenes/ui/board/hover_menu.tscn" id="20_f08si"]
 
 [node name="ui" type="Control"]

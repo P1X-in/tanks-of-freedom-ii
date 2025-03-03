@@ -1,6 +1,11 @@
 # Tanks of Freedom 3D
 ## Changelog
 
+
+### 1.0.7
+- Multiplayer host can now kick players from lobby
+
+
 ### 1.0.6
 - Added spectators to multiplayer matches
 - Unit is snapped into position before attacking to prevent misalignment

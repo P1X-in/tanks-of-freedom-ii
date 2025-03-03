@@ -20,14 +20,14 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 	$"widgets/lobby_player_3",
 ]
 @onready var player_labels = [
-	[$"widgets/player_labels/labels_grid/player_0", $"widgets/player_labels/labels_grid/player_0/label"],
-	[$"widgets/player_labels/labels_grid/player_1", $"widgets/player_labels/labels_grid/player_1/label"],
-	[$"widgets/player_labels/labels_grid/player_2", $"widgets/player_labels/labels_grid/player_2/label"],
-	[$"widgets/player_labels/labels_grid/player_3", $"widgets/player_labels/labels_grid/player_3/label"],
-	[$"widgets/player_labels/labels_grid/player_4", $"widgets/player_labels/labels_grid/player_4/label"],
-	[$"widgets/player_labels/labels_grid/player_5", $"widgets/player_labels/labels_grid/player_5/label"],
-	[$"widgets/player_labels/labels_grid/player_6", $"widgets/player_labels/labels_grid/player_6/label"],
-	[$"widgets/player_labels/labels_grid/player_7", $"widgets/player_labels/labels_grid/player_7/label"],
+	$"widgets/player_labels/labels_grid/player_0",
+	$"widgets/player_labels/labels_grid/player_1",
+	$"widgets/player_labels/labels_grid/player_2",
+	$"widgets/player_labels/labels_grid/player_3",
+	$"widgets/player_labels/labels_grid/player_4",
+	$"widgets/player_labels/labels_grid/player_5",
+	$"widgets/player_labels/labels_grid/player_6",
+	$"widgets/player_labels/labels_grid/player_7",
 ]
 var hq_templates = [
 	"modern_hq",
@@ -37,7 +37,8 @@ var hq_templates = [
 ]
 var server_state = null
 
-func _ready():
+
+func _ready() -> void:
 	super._ready()
 	self.relay.player_connected.connect(_on_player_connected)
 	self.relay.player_disconnected.connect(_on_player_disconnected)
@@ -50,6 +51,9 @@ func _ready():
 		panel.player_left.connect(_on_player_left_side)
 		panel.state_changed.connect(_on_panel_state_changed)
 		panel.swap_happened.connect(_on_panel_swap)
+	for label: ConnectedPlayerPanel in self.player_labels:
+		label.kick_requested.connect(_on_player_kick_requested)
+
 
 func show_panel():
 	super.show_panel()
@@ -59,6 +63,7 @@ func show_panel():
 		_prepare_initial_panel_state(self.relay.selected_map)
 	else:
 		self._download_map_data(self.relay.selected_map)
+
 
 func _download_map_data(map_name):
 	self.widgets.hide()
@@ -90,6 +95,7 @@ func _prepare_initial_panel_state(map_name):
 	await self.get_tree().create_timer(0.1).timeout
 	_manage_start_button(true)
 
+
 func _manage_start_button(grab):
 	if relay.is_server() and _is_ready_to_start():
 		self.start_button.show()
@@ -99,6 +105,7 @@ func _manage_start_button(grab):
 		self.start_button.hide()
 		if grab:
 			self.back_button.grab_focus()
+
 
 func _is_ready_to_start():
 	var player_spots = 0
@@ -126,20 +133,23 @@ func _fill_map_data(fill_name):
 	$"widgets/minimap/map_name/label".set_text(fill_name)
 	self._fill_player_panels(fill_name)
 
-func _fill_player_labels():
-	for label in self.player_labels:
-		label[0].hide()
 
-	var player_info = self.relay.players.values()
-	for index in range(player_info.size()):
-		self.player_labels[index][0].show()
-		self.player_labels[index][1].set_text(player_info[index]["name"])
+func _fill_player_labels():
+	for label: ConnectedPlayerPanel in self.player_labels:
+		label.hide()
+
+	var index: int = 0
+	for player_peer_id: int in Relay.players:
+		self.player_labels[index].show()
+		self.player_labels[index].bind_player(player_peer_id, Relay.players[player_peer_id])
+		index += 1
 
 
 func _hide_player_panels():
 	for panel in self.player_panels:
 		panel.hide()
 		panel._reset_labels()
+
 
 func _fill_player_panels(fill_name):
 	self._hide_player_panels()
@@ -154,6 +164,7 @@ func _fill_player_panels(fill_name):
 		self.player_panels[index].fill_panel(side)
 		self.player_panels[index].show()
 		index += 1
+
 
 func _gather_player_sides(map_data):
 	var sides = {}
@@ -171,6 +182,7 @@ func _gather_player_sides(map_data):
 
 	return sides
 
+
 func _lookup_side(data):
 	if data["building"]["tile"] != null:
 		if data["building"]["tile"] in self.hq_templates:
@@ -187,6 +199,7 @@ func _on_back_button_pressed():
 
 	self.relay.close_game()
 	self.main_menu.close_online_lobby()
+
 
 func _on_player_connected(peer_id, _player_info):
 	if not self.is_visible():
@@ -211,6 +224,7 @@ func _on_player_connected(peer_id, _player_info):
 	for panel in self.player_panels:
 		panel._update_join_label()
 
+
 func _on_player_disconnected(peer_id):
 	if not self.is_visible():
 		return
@@ -220,6 +234,7 @@ func _on_player_disconnected(peer_id):
 		if panel.player_peer_id == peer_id:
 			panel._set_peer_id(null)
 	_manage_start_button(false)
+
 
 func _on_server_disconnected():
 	if not self.is_visible():
@@ -241,6 +256,7 @@ func _on_message_incoming(message):
 	if message["action"] == "message":
 		_handle_message(message["payload"])
 
+
 func _handle_message(message):
 	if message["type"] == "state":
 		self._set_lobby_state(message["state"])
@@ -254,6 +270,8 @@ func _handle_message(message):
 		self._swap_panel(message["index"])
 	if message["type"] == "match_state":
 		self.relay._set_match_state(message["state"])
+	if message["type"] == "kick":
+		self._kick_player()
 
 
 #@rpc("call_local", "reliable")
@@ -268,6 +286,7 @@ func _load_multiplayer_game():
 
 	self.hide()
 	self.switcher.board_online()
+
 
 func _on_player_joined_side(index):
 	for panel in self.player_panels:
@@ -286,6 +305,7 @@ func _on_player_joined_side(index):
 	#		_player_joined_a_side.rpc_id(peer_id, multiplayer.get_unique_id(), index)
 	_manage_start_button(false)
 
+
 func _on_player_left_side(index):
 	for panel in self.player_panels:
 		if panel.index != index:
@@ -298,6 +318,7 @@ func _on_player_left_side(index):
 	#	if peer_id != multiplayer.get_unique_id():
 	#		_player_left_a_side.rpc_id(peer_id, index)
 	_manage_start_button(false)
+
 
 func _on_panel_state_changed(index):
 	self.relay.message_broadcast({
@@ -312,6 +333,7 @@ func _on_panel_state_changed(index):
 	#		_update_panel_state.rpc_id(peer_id, index, self.player_panels[index].ap, self.player_panels[index].team, self.player_panels[index].type)
 	_manage_start_button(false)
 
+
 func _on_panel_swap(index):
 	self.relay.message_broadcast({
 		"type": "player_panel_swap",
@@ -321,19 +343,23 @@ func _on_panel_swap(index):
 	#	if peer_id != multiplayer.get_unique_id():
 	#		_swap_panel.rpc_id(peer_id, index)
 
+
 #@rpc("any_peer", "reliable")
 func _player_joined_a_side(peer_id, index):
 	self.player_panels[index]._set_peer_id(peer_id)
 	_manage_start_button(false)
+
 
 #@rpc("any_peer", "reliable")
 func _player_left_a_side(index):
 	self.player_panels[index]._set_peer_id(null)
 	_manage_start_button(false)
 
+
 #@rpc("any_peer", "reliable")
 func _set_lobby_state(state):
 	self.server_state = state
+
 
 func _apply_server_state():
 	var int_index
@@ -349,19 +375,17 @@ func _apply_server_state():
 				self.player_panels[int_index]._set_type(self.server_state[index]["type"])
 	self.server_state = null
 
+
 #@rpc("any_peer", "reliable")
 func _update_panel_state(index, ap, team, type):
 	self.player_panels[index]._set_ap(ap)
 	self.player_panels[index]._set_team(team)
 	self.player_panels[index]._set_type(type)
 
+
 #@rpc("any_peer", "reliable")
 func _swap_panel(index):
 	self.player_panels[index]._perform_panel_swap()
-
-
-
-
 
 
 func load_game_from_state(state):
@@ -384,3 +408,15 @@ func load_game_from_state(state):
 		)
 
 	self.switcher.board_online()
+
+
+func _on_player_kick_requested(player_peer_id: int) -> void:
+	if Relay.is_server():
+		self.relay.message_direct(player_peer_id, {
+			"type": "kick"
+		})
+		back_button.grab_focus()
+
+
+func _kick_player() -> void:
+	_on_back_button_pressed()

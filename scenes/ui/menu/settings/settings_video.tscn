@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjragqykjl7h2"]
 
-[ext_resource type="PackedScene" uid="uid://dp8jphj7nj6ku" path="res://scenes/ui/menu/setting_option.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://dprklkmc4f8lq" path="res://scenes/ui/menu/setting_option_rotating.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://bhevhm6o3i72h" path="res://scenes/ui/menu/setting_slider.tscn" id="2_nh6bq"]
+[ext_resource type="PackedScene" uid="uid://dp8jphj7nj6ku" path="res://scenes/ui/menu/settings/setting_option.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dprklkmc4f8lq" path="res://scenes/ui/menu/settings/setting_option_rotating.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bhevhm6o3i72h" path="res://scenes/ui/menu/settings/setting_slider.tscn" id="2_nh6bq"]
+
 
 [node name="settings_graphics" type="Control"]
 layout_mode = 3

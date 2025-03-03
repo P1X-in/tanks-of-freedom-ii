@@ -6,7 +6,7 @@
 [ext_resource type="Theme" path="res://assets/gui/ui_theme.tres" id="4"]
 [ext_resource type="PackedScene" uid="uid://b1tod34kr8cro" path="res://scenes/ui/map_picker/picker.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://bsjjhsr305hgj" path="res://scenes/ui/menu/skirmish.tscn" id="6"]
-[ext_resource type="PackedScene" uid="uid://b6crhl6g0ory" path="res://scenes/ui/menu/settings.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://b6crhl6g0ory" path="res://scenes/ui/menu/settings/settings.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://yrab27ll6oeh" path="res://scenes/ui/menu/campaign_selection.tscn" id="8"]
 [ext_resource type="PackedScene" uid="uid://cyl32ydicrnad" path="res://scenes/ui/menu/campaign_mission_selection.tscn" id="9"]
 [ext_resource type="PackedScene" uid="uid://b61jtis2h2knb" path="res://scenes/ui/menu/campaign_mission.tscn" id="10"]

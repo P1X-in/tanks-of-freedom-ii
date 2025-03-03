@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cocnl04cpm23o"]
 
-[ext_resource type="PackedScene" uid="uid://dprklkmc4f8lq" path="res://scenes/ui/menu/setting_option_rotating.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://dp8jphj7nj6ku" path="res://scenes/ui/menu/setting_option.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dprklkmc4f8lq" path="res://scenes/ui/menu/settings/setting_option_rotating.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dp8jphj7nj6ku" path="res://scenes/ui/menu/settings/setting_option.tscn" id="2"]
 
 [node name="settings_gameplay" type="Control"]
 layout_mode = 3

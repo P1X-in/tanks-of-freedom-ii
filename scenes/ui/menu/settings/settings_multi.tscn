@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://o1l3w0lursuf"]
 
-[ext_resource type="PackedScene" uid="uid://ofwuqskwc7ah" path="res://scenes/ui/menu/setting_text.tscn" id="1_0q3q6"]
-[ext_resource type="Script" path="res://scenes/ui/menu/settings_multi.gd" id="1_a70xb"]
+[ext_resource type="PackedScene" uid="uid://ofwuqskwc7ah" path="res://scenes/ui/menu/settings/setting_text.tscn" id="1_0q3q6"]
+[ext_resource type="Script" path="res://scenes/ui/menu/settings/settings_multi.gd" id="1_a70xb"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="3_vbgau"]
 [ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="4_hvdpw"]
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="5_pmbd7"]

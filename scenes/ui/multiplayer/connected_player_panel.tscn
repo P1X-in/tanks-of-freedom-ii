@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://chch0q8y12i3i"]
+
+[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="1_o2xbx"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_wrxto"]
+[ext_resource type="Script" path="res://scenes/ui/multiplayer/connected_player_panel.gd" id="2_ygtmr"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="3_xfmlf"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="4_p02ia"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="5_jcwkv"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="6_3so1f"]
+
+[node name="player_0" type="NinePatchRect"]
+custom_minimum_size = Vector2(250, 40)
+texture = ExtResource("1_o2xbx")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_ygtmr")
+
+[node name="label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wrxto")
+theme_override_font_sizes/font_size = 20
+text = "dummy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="kick_button" type="TextureButton" parent="."]
+offset_left = 215.0
+offset_right = 251.0
+offset_bottom = 40.0
+texture_normal = ExtResource("3_xfmlf")
+texture_pressed = ExtResource("4_p02ia")
+texture_hover = ExtResource("5_jcwkv")
+texture_focused = ExtResource("5_jcwkv")
+
+[node name="label" type="Label" parent="kick_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_3so1f")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="kick_button" to="." method="_on_kick_button_pressed"]
