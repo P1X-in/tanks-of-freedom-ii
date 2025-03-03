@@ -1,5 +1,6 @@
 extends Node2D
 
+var board
 @onready var menu_button = $"menu_button"
 @onready var restart_button = $"restart_button"
 @onready var next_mission_button = $"next_mission_button"
@@ -22,9 +23,18 @@ extends Node2D
 @onready var campaign = $"/root/Campaign"
 @onready var multiplayer_srv = $"/root/Multiplayer"
 
+@onready var points_panels: Dictionary = {
+	"blue": $"points/HBoxContainer/SummaryViewPoints0",
+	"red": $"points/HBoxContainer/SummaryViewPoints1",
+	"yellow": $"points/HBoxContainer/SummaryViewPoints2",
+	"green": $"points/HBoxContainer/SummaryViewPoints3",
+	"black": $"points/HBoxContainer/SummaryViewPoints4",
+}
+
 func configure_winner(winner):
 	self.gamepad_adapter.enable()
 	self.restart_button.show()
+	_clear_points()
 
 	if self.match_setup.campaign_win:
 		if self.match_setup.has_won:
@@ -50,6 +60,7 @@ func configure_winner(winner):
 				self.black_wins.show()
 			"none":
 				self.game_draw.show()
+				self._show_points()
 
 		self.menu_button.grab_focus()
 		self.audio.play("fanfare")
@@ -86,3 +97,19 @@ func _on_next_mission_button_pressed():
 	self.gamepad_adapter.disable()
 	self.switcher.main_menu()
 	self.audio.play("menu_click")
+
+
+func _clear_points() -> void:
+	for panel: Node in points_panels.values():
+		panel.hide()
+
+
+func _show_points() -> void:
+	for player_data: Dictionary in board.state.players:
+		_show_points_for_player(player_data)
+
+
+func _show_points_for_player(player_data: Dictionary) -> void:
+	if points_panels.has(player_data["side"]):
+		points_panels[player_data["side"]].show()
+		points_panels[player_data["side"]].show_player_points(player_data, board)

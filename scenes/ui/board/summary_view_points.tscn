@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5i31jke8jkj1"]
+
+[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="1_2cblg"]
+[ext_resource type="Script" path="res://scenes/ui/board/summary_view_points.gd" id="1_6jvbd"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_7f8ul"]
+[ext_resource type="PackedScene" uid="uid://3fj8wtorlnlk" path="res://scenes/ui/icons/building.tscn" id="3_ydfc3"]
+[ext_resource type="PackedScene" uid="uid://bdjcbovjyx7j5" path="res://scenes/ui/icons/tank.tscn" id="5_uxqda"]
+[ext_resource type="PackedScene" uid="uid://npd40qtkohuq" path="res://scenes/ui/icons/coin.tscn" id="6_hxpuq"]
+
+[node name="SummaryViewPoints" type="Control"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_6jvbd")
+
+[node name="background" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 200.0
+offset_bottom = 200.0
+texture = ExtResource("1_2cblg")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="icon_anchor" type="CenterContainer" parent="background"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+
+[node name="icon_anchor" type="Control" parent="background/icon_anchor"]
+layout_mode = 2
+
+[node name="building" parent="background" instance=ExtResource("3_ydfc3")]
+position = Vector2(30, 74)
+
+[node name="building_points" type="Label" parent="background"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 58.0
+offset_right = 200.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("3_7f8ul")
+theme_override_font_sizes/font_size = 30
+text = "100
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tank" parent="background" instance=ExtResource("5_uxqda")]
+position = Vector2(30, 115)
+
+[node name="unit_points" type="Label" parent="background"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 95.0
+offset_right = 200.0
+offset_bottom = 135.0
+theme_override_fonts/font = ExtResource("3_7f8ul")
+theme_override_font_sizes/font_size = 30
+text = "100
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="coin" parent="background" instance=ExtResource("6_hxpuq")]
+position = Vector2(30, 148)
+scale = Vector2(0.8, 0.8)
+
+[node name="ap_points" type="Label" parent="background"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 131.0
+offset_right = 200.0
+offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("3_7f8ul")
+theme_override_font_sizes/font_size = 30
+text = "100
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="total_points" type="Label" parent="background"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 0
+offset_top = 165.0
+offset_right = 200.0
+offset_bottom = 205.0
+theme_override_fonts/font = ExtResource("3_7f8ul")
+theme_override_font_sizes/font_size = 30
+text = "100
+"
+horizontal_alignment = 1
+vertical_alignment = 1

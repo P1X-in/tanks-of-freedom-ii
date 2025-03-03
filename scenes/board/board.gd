@@ -156,6 +156,7 @@ func set_up_ui():
 	self.ui.hover_menu.board = self
 	self.ui.unit_stats.board = self
 	self.ui.end_turn_confirm.board = self
+	self.ui.summary.board = self
 	self.ui.radial.close_requested.connect(self.toggle_radial_menu)
 
 	self.ui.edge_pan_left.mouse_entered.connect(self.map.camera._on_edge_pan.bind([1, null]))

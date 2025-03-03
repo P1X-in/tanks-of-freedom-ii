@@ -58,7 +58,7 @@ func _on_prev_button_pressed():
 func _on_next_button_pressed():
 	if self._is_last_page():
 		return
-		
+
 	self.audio.play("menu_click")
 	self._switch_to_page(self.page + 1)
 	if self._is_last_page():
