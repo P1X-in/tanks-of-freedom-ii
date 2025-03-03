@@ -11,6 +11,7 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 
 @onready var widgets = $"widgets"
 @onready var downloading_label = $"downloading"
+@onready var turn_config = $"widgets/TurnConfig"
 
 @onready var player_panels = [
 	$"widgets/lobby_player_0",
@@ -42,6 +43,7 @@ func _ready() -> void:
 	self.multiplayer_srv.player_connected.connect(_on_player_connected)
 	self.multiplayer_srv.player_disconnected.connect(_on_player_disconnected)
 	self.multiplayer_srv.server_disconnected.connect(_on_server_disconnected)
+	self.turn_config.configuration_changed.connect(_on_turn_config_changed)
 
 	for panel in self.player_panels:
 		panel.player_joined.connect(_on_player_joined_side)
@@ -54,6 +56,7 @@ func _ready() -> void:
 
 func show_panel():
 	super.show_panel()
+	self.turn_config.reset()
 
 	if self.map_list_service._is_bundled(self.multiplayer_srv.selected_map) or self.map_list_service._is_online(self.multiplayer_srv.selected_map):
 
@@ -87,6 +90,10 @@ func _prepare_initial_panel_state(map_name):
 
 	self._fill_map_data(map_name)
 	self._apply_server_state()
+	if multiplayer.is_server():
+		self.turn_config.unlock_buttons()
+	else:
+		self.turn_config.lock_buttons()
 	await self.get_tree().create_timer(0.1).timeout
 	_manage_start_button(true)
 
@@ -199,9 +206,13 @@ func _on_back_button_pressed():
 func _on_player_connected(peer_id, _player_info):
 	_fill_player_labels()
 	if multiplayer.is_server() and peer_id != multiplayer.get_unique_id():
-		var state = {}
+		var state = {
+			"turn_limit": self.turn_config.turn_limit,
+			"time_limit": self.turn_config.time_limit,
+			"panels": {}
+		}
 		for panel in self.player_panels:
-			state[panel.index] = {
+			state["panels"][panel.index] = {
 				"type": panel.type,
 				"side": panel.side,
 				"peer_id": panel.player_peer_id,
@@ -235,6 +246,8 @@ func _load_multiplayer_game():
 	self.match_setup.reset()
 	self.match_setup.map_name = self.multiplayer_srv.selected_map
 	self.match_setup.is_multiplayer = true
+	self.match_setup.turn_limit = self.turn_config.turn_limit
+	self.match_setup.time_limit = self.turn_config.time_limit
 
 	for player in self.player_panels:
 		if player.player_peer_id != null or player.type == "ai":
@@ -298,13 +311,17 @@ func _set_lobby_state(state):
 
 func _apply_server_state():
 	if self.server_state != null:
-		for index in self.server_state:
+		self.turn_config.set_turn_limit(int(self.server_state["turn_limit"]))
+		self.turn_config.set_time_limit(int(self.server_state["time_limit"]))
+
+		var panels_state = self.server_state["panels"]
+		for index in panels_state:
 			if self.player_panels[index].is_visible():
-				self.player_panels[index].fill_panel(self.server_state[index]["side"])
-				self.player_panels[index]._set_peer_id(self.server_state[index]["peer_id"])
-				self.player_panels[index]._set_ap(self.server_state[index]["ap"])
-				self.player_panels[index]._set_team(self.server_state[index]["team"])
-				self.player_panels[index]._set_type(self.server_state[index]["type"])
+				self.player_panels[index].fill_panel(panels_state[index]["side"])
+				self.player_panels[index]._set_peer_id(panels_state[index]["peer_id"])
+				self.player_panels[index]._set_ap(panels_state[index]["ap"])
+				self.player_panels[index]._set_team(panels_state[index]["team"])
+				self.player_panels[index]._set_type(panels_state[index]["type"])
 	self.server_state = null
 
 
@@ -326,6 +343,10 @@ func load_game_from_state(state):
 	self.match_setup.map_name = state["map_name"]
 	self.match_setup.restore_save_id = "multiplayer"
 	self.match_setup.is_multiplayer = true
+	if state.has("turn_limit"):
+		self.match_setup.turn_limit = int(state["turn_limit"])
+	if state.has("time_limit"):
+		self.match_setup.time_limit = int(state["time_limit"])
 	for player in state["players"]:
 		self.match_setup.add_player(
 			player["side"],
@@ -348,3 +369,13 @@ func _on_player_kick_requested(player_peer_id: int) -> void:
 @rpc("call_remote")
 func _kick_player() -> void:
 	_on_back_button_pressed()
+
+
+@rpc("call_remote")
+func _update_turn_config(turn_limit: int, time_limit: int) -> void:
+	self.turn_config.set_turn_limit(turn_limit)
+	self.turn_config.set_time_limit(time_limit)
+
+
+func _on_turn_config_changed() -> void:
+	_update_turn_config.rpc(self.turn_config.turn_limit, self.turn_config.time_limit)

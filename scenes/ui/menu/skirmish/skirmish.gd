@@ -14,6 +14,7 @@ extends Control
 
 @onready var minimap = $"widgets/minimap"
 @onready var animations = $"animations"
+@onready var turn_config = $"widgets/TurnConfig"
 
 var hq_templates = [
 	"modern_hq",
@@ -30,7 +31,7 @@ func bind_menu(menu):
 	self.main_menu = menu
 
 func _ready():
-	self.set_process_input(false)    
+	self.set_process_input(false)
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel") or event.is_action_pressed('editor_menu'):
@@ -41,6 +42,7 @@ func show_panel(selected_map_name):
 	self.set_process_input(true)
 	self.fill_map_data(selected_map_name)
 	self.map_name = selected_map_name
+	self.turn_config.reset()
 	await self.get_tree().create_timer(0.1).timeout
 	self.start_button.grab_focus()
 
@@ -51,6 +53,7 @@ func hide_panel():
 
 func fill_map_data(fill_name):
 	self.minimap.fill_minimap(fill_name)
+	$"widgets/minimap/map_name/label".set_text(fill_name)
 	self._fill_player_panels(fill_name)
 
 func _hide_player_panels():
@@ -71,7 +74,7 @@ func _fill_player_panels(fill_name):
 		self.player_panels[index].fill_panel(side)
 		self.player_panels[index].show()
 		index += 1
-	
+
 func _gather_player_sides(map_data):
 	var sides = {}
 	var side
@@ -82,7 +85,7 @@ func _gather_player_sides(map_data):
 			key = str(x) + "_" + str(y)
 			if map_data["tiles"].has(key):
 				side = self._lookup_side(map_data["tiles"][key])
-				
+
 				if side != null:
 					sides[side] = side
 
@@ -101,6 +104,8 @@ func _on_start_button_pressed():
 
 	self.match_setup.reset()
 	self.match_setup.map_name = self.map_name
+	self.match_setup.turn_limit = self.turn_config.turn_limit
+	self.match_setup.time_limit = self.turn_config.time_limit
 
 	for player in self.player_panels:
 		if player.side != null:

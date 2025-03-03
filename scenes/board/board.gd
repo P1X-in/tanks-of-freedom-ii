@@ -241,6 +241,9 @@ func _end_turn():
 
 
 func start_turn():
+	if self.match_setup.turn_limit > 0 and self.state.turn > self.match_setup.turn_limit:
+		self.end_game("none")
+		return
 	self.update_for_current_player()
 
 	await _manage_cinematic_bars()
@@ -1001,6 +1004,10 @@ func _restore_saved_state(save_data):
 	self.ui.objectives.restore_from_state(save_data["objectives"])
 	if save_data.has("player_moved"):
 		self.state.has_player_moved = save_data["player_moved"]
+	if save_data.has("turn_limit"):
+		self.match_setup.turn_limit = int(save_data["turn_limit"])
+	if save_data.has("time_limit"):
+		self.match_setup.time_limit = int(save_data["time_limit"])
 
 	# restore tiles state
 	self.map.model.wipe_all_units()

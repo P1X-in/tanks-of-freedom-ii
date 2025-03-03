@@ -13,6 +13,7 @@ extends Node2D
 @onready var green_wins = $"background/green_wins"
 @onready var yellow_wins = $"background/yellow_wins"
 @onready var black_wins = $"background/black_wins"
+@onready var game_draw = $"background/game_draw"
 
 @onready var switcher = $"/root/SceneSwitcher"
 @onready var gamepad_adapter = $"/root/GamepadAdapter"
@@ -47,6 +48,8 @@ func configure_winner(winner):
 				self.green_wins.show()
 			"black":
 				self.black_wins.show()
+			"none":
+				self.game_draw.show()
 
 		self.menu_button.grab_focus()
 		self.audio.play("fanfare")

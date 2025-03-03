@@ -111,6 +111,18 @@ text = "TR_OBS_NIGHT_WIN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="game_draw" type="Label" parent="background"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 7.0
+theme_override_fonts/font = ExtResource("3_skfsh")
+theme_override_font_sizes/font_size = 30
+text = "TR_GAME_DRAW"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="menu_button" type="TextureButton" parent="."]
 offset_left = -400.0
 offset_top = 60.0

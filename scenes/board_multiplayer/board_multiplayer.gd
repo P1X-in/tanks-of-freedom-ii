@@ -114,6 +114,8 @@ func _can_current_player_perform_actions():
 
 
 func _can_broadcast_moves():
+	if multiplayer.multiplayer_peer == null:
+		return false
 	return _can_current_player_perform_actions() or (self.multiplayer.is_server() and self.state.are_all_peers_present() and self.state.is_current_player_ai())
 
 

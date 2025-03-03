@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://guehs06rsfa1"]
+[gd_scene load_steps=13 format=3 uid="uid://guehs06rsfa1"]
 
 [ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1_vvs0u"]
 [ext_resource type="Script" path="res://scenes/ui/online/lobby.gd" id="2_wsvsj"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dy4dmaksk0oot" path="res://scenes/ui/online/lobby_player.tscn" id="7_42u2e"]
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_r14xm"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="8_y4322"]
+[ext_resource type="PackedScene" uid="uid://corpp72mh3y4" path="res://scenes/ui/menu/skirmish/turn_config.tscn" id="12_70kkq"]
 
 [node name="lobby" instance=ExtResource("1_vvs0u")]
 script = ExtResource("2_wsvsj")
@@ -27,9 +28,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -125.0
-offset_top = -270.0
+offset_top = -295.0
 offset_right = 85.0
-offset_bottom = -270.0
+offset_bottom = -295.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_8ywfm")
@@ -45,8 +46,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 2.0
-offset_bottom = 2.0
+offset_top = 3.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("6_yotih")
@@ -149,10 +150,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 350.0
-offset_top = 625.0
-offset_right = -350.0
-offset_bottom = -35.0
+offset_left = 100.0
+offset_top = -15.0
+offset_right = -600.0
+offset_bottom = -675.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_8ywfm")
@@ -223,6 +224,18 @@ theme_override_fonts/font = ExtResource("8_y4322")
 text = "TR_BACK"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TurnConfig" parent="widgets" index="9" instance=ExtResource("12_70kkq")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -350.0
+offset_top = -60.0
+offset_right = 350.0
+offset_bottom = -20.0
+grow_vertical = 0
 
 [node name="downloading" type="Label" parent="." index="2"]
 visible = false

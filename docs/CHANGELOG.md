@@ -4,6 +4,7 @@
 
 ### 1.0.7
 - Multiplayer host can now kick players from lobby
+- Moved UI elements in map picker and load/save interface
 
 
 ### 1.0.6

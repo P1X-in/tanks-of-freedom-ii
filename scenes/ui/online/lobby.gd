@@ -12,6 +12,7 @@ extends "res://scenes/ui/menu/base_menu_panel.gd"
 
 @onready var widgets = $"widgets"
 @onready var downloading_label = $"downloading"
+@onready var turn_config = $"widgets/TurnConfig"
 
 @onready var player_panels = [
 	$"widgets/lobby_player_0",
@@ -43,6 +44,7 @@ func _ready() -> void:
 	self.relay.player_connected.connect(_on_player_connected)
 	self.relay.player_disconnected.connect(_on_player_disconnected)
 	self.relay.server_disconnected.connect(_on_server_disconnected)
+	self.turn_config.configuration_changed.connect(_on_turn_config_changed)
 
 	self.relay.message_received.connect(_on_message_incoming)
 
@@ -92,6 +94,10 @@ func _prepare_initial_panel_state(map_name):
 	self.join_code_label.set_text(tr("TR_JOIN_CODE") + " " +self.relay.join_code)
 	_fill_player_labels()
 	self._apply_server_state()
+	if Relay.is_server():
+		self.turn_config.unlock_buttons()
+	else:
+		self.turn_config.lock_buttons()
 	await self.get_tree().create_timer(0.1).timeout
 	_manage_start_button(true)
 
@@ -207,9 +213,13 @@ func _on_player_connected(peer_id, _player_info):
 
 	_fill_player_labels()
 	if relay.is_server() and peer_id != relay.peer_id:
-		var state = {}
+		var state = {
+			"turn_limit": self.turn_config.turn_limit,
+			"time_limit": self.turn_config.time_limit,
+			"panels": {}
+		}
 		for panel in self.player_panels:
-			state[panel.index] = {
+			state["panels"][panel.index] = {
 				"type": panel.type,
 				"side": panel.side,
 				"peer_id": panel.player_peer_id,
@@ -272,6 +282,8 @@ func _handle_message(message):
 		self.relay._set_match_state(message["state"])
 	if message["type"] == "kick":
 		self._kick_player()
+	if message["type"] == "turn_config_updated":
+		self._update_turn_config(int(message["turn_limit"]), int(message["time_limit"]))
 
 
 #@rpc("call_local", "reliable")
@@ -279,6 +291,8 @@ func _load_multiplayer_game():
 	self.match_setup.reset()
 	self.match_setup.map_name = self.relay.selected_map
 	self.match_setup.is_multiplayer = true
+	self.match_setup.turn_limit = self.turn_config.turn_limit
+	self.match_setup.time_limit = self.turn_config.time_limit
 
 	for player in self.player_panels:
 		if player.player_peer_id != null or player.type == "ai":
@@ -364,15 +378,19 @@ func _set_lobby_state(state):
 func _apply_server_state():
 	var int_index
 	if self.server_state != null:
-		for index in self.server_state:
+		self.turn_config.set_turn_limit(int(self.server_state["turn_limit"]))
+		self.turn_config.set_time_limit(int(self.server_state["time_limit"]))
+
+		var panels_state = self.server_state["panels"]
+		for index in panels_state:
 			int_index = int(index)
 			if self.player_panels[int_index].is_visible():
-				self.player_panels[int_index].fill_panel(self.server_state[index]["side"])
-				if self.server_state[index]["peer_id"] != null:
-					self.player_panels[int_index]._set_peer_id(int(self.server_state[index]["peer_id"]))
-				self.player_panels[int_index]._set_ap(int(self.server_state[index]["ap"]))
-				self.player_panels[int_index]._set_team(self.server_state[index]["team"])
-				self.player_panels[int_index]._set_type(self.server_state[index]["type"])
+				self.player_panels[int_index].fill_panel(panels_state[index]["side"])
+				if panels_state[index]["peer_id"] != null:
+					self.player_panels[int_index]._set_peer_id(int(panels_state[index]["peer_id"]))
+				self.player_panels[int_index]._set_ap(int(panels_state[index]["ap"]))
+				self.player_panels[int_index]._set_team(panels_state[index]["team"])
+				self.player_panels[int_index]._set_type(panels_state[index]["type"])
 	self.server_state = null
 
 
@@ -420,3 +438,16 @@ func _on_player_kick_requested(player_peer_id: int) -> void:
 
 func _kick_player() -> void:
 	_on_back_button_pressed()
+
+
+func _update_turn_config(turn_limit: int, time_limit: int) -> void:
+	self.turn_config.set_turn_limit(turn_limit)
+	self.turn_config.set_time_limit(time_limit)
+
+
+func _on_turn_config_changed() -> void:
+	self.relay.message_broadcast({
+		"type": "turn_config_updated",
+		"turn_limit": self.turn_config.turn_limit,
+		"time_limit": self.turn_config.time_limit
+	})
