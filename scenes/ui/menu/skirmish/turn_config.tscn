@@ -1,0 +1,142 @@
+[gd_scene load_steps=6 format=3 uid="uid://corpp72mh3y4"]
+
+[ext_resource type="Script" path="res://scenes/ui/menu/skirmish/turn_config.gd" id="1_w66f5"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="4_437br"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="5_4i6w6"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="6_c64di"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="7_en7qh"]
+
+[node name="TurnConfig" type="Control"]
+custom_minimum_size = Vector2(700, 40)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -580.0
+offset_bottom = -760.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w66f5")
+
+[node name="turn_limit_label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 130.0
+offset_bottom = 40.0
+text = "TR_TURN_LIMIT"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="less_turn_button" type="TextureButton" parent="turn_limit_label"]
+offset_left = 135.0
+offset_right = 171.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_4i6w6")
+texture_pressed = ExtResource("6_c64di")
+texture_hover = ExtResource("7_en7qh")
+texture_focused = ExtResource("7_en7qh")
+
+[node name="label" type="Label" parent="turn_limit_label/less_turn_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_437br")
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="turn_limit_value" type="Label" parent="turn_limit_label"]
+offset_left = 180.0
+offset_right = 240.0
+offset_bottom = 40.0
+text = "TR_OFF"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="more_turn_button" type="TextureButton" parent="turn_limit_label"]
+offset_left = 250.0
+offset_right = 286.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_4i6w6")
+texture_pressed = ExtResource("6_c64di")
+texture_hover = ExtResource("7_en7qh")
+texture_focused = ExtResource("7_en7qh")
+
+[node name="label" type="Label" parent="turn_limit_label/more_turn_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_437br")
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="turn_time_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_right = 530.0
+offset_bottom = 40.0
+text = "TR_TURN_TIME"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="less_time_button" type="TextureButton" parent="turn_time_label"]
+offset_left = 135.0
+offset_right = 171.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_4i6w6")
+texture_pressed = ExtResource("6_c64di")
+texture_hover = ExtResource("7_en7qh")
+texture_focused = ExtResource("7_en7qh")
+
+[node name="label" type="Label" parent="turn_time_label/less_time_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_437br")
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="turn_time_value" type="Label" parent="turn_time_label"]
+layout_mode = 0
+offset_left = 180.0
+offset_right = 240.0
+offset_bottom = 40.0
+text = "TR_OFF"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="more_time_button" type="TextureButton" parent="turn_time_label"]
+offset_left = 250.0
+offset_right = 286.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_4i6w6")
+texture_pressed = ExtResource("6_c64di")
+texture_hover = ExtResource("7_en7qh")
+texture_focused = ExtResource("7_en7qh")
+
+[node name="label" type="Label" parent="turn_time_label/more_time_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_437br")
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="turn_limit_label/less_turn_button" to="." method="_on_less_turn_button_pressed"]
+[connection signal="pressed" from="turn_limit_label/more_turn_button" to="." method="_on_more_turn_button_pressed"]
+[connection signal="pressed" from="turn_time_label/less_time_button" to="." method="_on_less_time_button_pressed"]
+[connection signal="pressed" from="turn_time_label/more_time_button" to="." method="_on_more_time_button_pressed"]

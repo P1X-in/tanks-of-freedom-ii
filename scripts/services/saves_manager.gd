@@ -150,6 +150,8 @@ func compile_save_data(board) -> Dictionary:
 		"triggers": board.scripting.get_save_data(),
 		"objectives": board.ui.objectives.raw_text,
 		"player_moved": board.state.has_player_moved,
+		"turn_limit": board.match_setup.turn_limit,
+		"time_limit": board.match_setup.time_limit
 	}
 
 	return {

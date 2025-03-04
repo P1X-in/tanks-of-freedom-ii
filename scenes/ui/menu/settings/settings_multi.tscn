@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=3 uid="uid://o1l3w0lursuf"]
+
+[ext_resource type="PackedScene" uid="uid://ofwuqskwc7ah" path="res://scenes/ui/menu/settings/setting_text.tscn" id="1_0q3q6"]
+[ext_resource type="Script" path="res://scenes/ui/menu/settings/settings_multi.gd" id="1_a70xb"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="3_vbgau"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="4_hvdpw"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="5_pmbd7"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="6_ilprp"]
+
+[node name="settings_multi" type="Control"]
+custom_minimum_size = Vector2(600, 700)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 700.0
+script = ExtResource("1_a70xb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="game_port" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
+option_name = "TR_GAME_PORT"
+option_key = "game_port"
+help_tip = "TR_GAME_PORT_DESC"
+
+[node name="discovery_port" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
+option_name = "TR_DISCOVERY_PORT"
+option_key = "discovery_port"
+help_tip = "TR_DISCOVERY_PORT_DESC"
+
+[node name="online_domain" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
+option_name = "TR_ONLINE_DOMAIN"
+option_key = "online_domain"
+help_tip = "TR_ONLINE_DOMAIN_DESC"
+placeholder = "api.tof.p1x.in"
+is_int = false
+
+[node name="online_port" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
+option_name = "TR_ONLINE_PORT"
+option_key = "online_port"
+help_tip = "TR_ONLINE_PORT_DESC"
+placeholder = "443"
+
+[node name="relay_domain" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
+option_name = "TR_RELAY_DOMAIN"
+option_key = "relay_domain"
+help_tip = "TR_RELAY_DOMAIN_DESC"
+placeholder = "api.tof.p1x.in"
+is_int = false
+
+[node name="relay_port" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
+option_name = "TR_RELAY_PORT"
+option_key = "relay_port"
+help_tip = "TR_RELAY_PORT_DESC"
+placeholder = "9939"
+
+[node name="reset_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 350.0
+offset_right = 570.0
+offset_bottom = 390.0
+texture_normal = ExtResource("3_vbgau")
+texture_pressed = ExtResource("4_hvdpw")
+texture_hover = ExtResource("5_pmbd7")
+texture_focused = ExtResource("5_pmbd7")
+
+[node name="label" type="Label" parent="reset_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_ilprp")
+text = "TR_RESET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="reset_button" to="." method="_on_reset_button_pressed"]

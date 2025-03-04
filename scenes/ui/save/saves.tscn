@@ -153,9 +153,9 @@ offset_bottom = 350.0
 
 [node name="cancel_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 980.0
+offset_left = 25.0
 offset_top = 640.0
-offset_right = 1170.0
+offset_right = 215.0
 offset_bottom = 680.0
 texture_normal = ExtResource("3_4fku8")
 texture_pressed = ExtResource("4_3ivj0")
@@ -322,9 +322,9 @@ vertical_alignment = 1
 
 [node name="load_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 230.0
+offset_left = 980.0
 offset_top = 640.0
-offset_right = 420.0
+offset_right = 1170.0
 offset_bottom = 680.0
 texture_normal = ExtResource("3_4fku8")
 texture_pressed = ExtResource("4_3ivj0")
@@ -345,9 +345,9 @@ vertical_alignment = 1
 
 [node name="save_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 30.0
+offset_left = 780.0
 offset_top = 640.0
-offset_right = 220.0
+offset_right = 970.0
 offset_bottom = 680.0
 texture_normal = ExtResource("3_4fku8")
 texture_pressed = ExtResource("4_3ivj0")
@@ -367,10 +367,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
-speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_ylvri")
 }
+speed_scale = 4.0
 
 [connection signal="pressed" from="widgets/cancel_button" to="." method="execute_cancel"]
 [connection signal="pressed" from="widgets/list_prev" to="." method="switch_to_prev_page"]

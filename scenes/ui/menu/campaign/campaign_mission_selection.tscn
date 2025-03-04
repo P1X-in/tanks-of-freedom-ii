@@ -1,0 +1,475 @@
+[gd_scene load_steps=26 format=3 uid="uid://cyl32ydicrnad"]
+
+[ext_resource type="Script" path="res://scenes/ui/menu/campaign/campaign_mission_selection.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_es55k"]
+[ext_resource type="Texture2D" uid="uid://deeked66umgj" path="res://assets/gui/campaign/dike_continent.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dqt600ejx5uaj" path="res://assets/gui/menu/backgrounds/map_panel.png" id="3_1vyoc"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_4d13j"]
+[ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_left.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_right.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_if6ob"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_64pnk"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="6_ei8ho"]
+[ext_resource type="PackedScene" path="res://scenes/ui/icons/medal.tscn" id="7"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_j6s3u"]
+[ext_resource type="Texture2D" uid="uid://b1gttp6sik08" path="res://assets/gui/icons/medal_whiteout.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://pfrikdjfa7lc" path="res://assets/gui/menu/buttons/buttonSquare_brown.png" id="9_yeryd"]
+[ext_resource type="Texture2D" uid="uid://b0unbl4vx0tow" path="res://assets/gui/menu/buttons/buttonSquare_brown_pressed.png" id="10_cbjjd"]
+[ext_resource type="Texture2D" uid="uid://by1obiwt54odo" path="res://assets/gui/menu/buttons/buttonSquare_brown_hover.png" id="11_3oxor"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="17_m45k7"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="18_f2m1f"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="19_icgj7"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ppni4"]
+viewport_path = NodePath("widgets/map_viewport")
+
+[sub_resource type="Animation" id="3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("widgets/medal:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("widgets/medal:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("widgets/medal_whiteout:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("widgets/medal_whiteout:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="1"]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="4"]
+resource_name = "medal"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("widgets/medal:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("widgets/medal_whiteout:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("widgets/medal_whiteout:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="2"]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h4u4c"]
+_data = {
+"RESET": SubResource("3"),
+"hide": SubResource("1"),
+"medal": SubResource("4"),
+"show": SubResource("2")
+}
+
+[node name="campaign_mission_selection" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="background" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -600.0
+offset_top = -350.0
+offset_right = 600.0
+offset_bottom = 350.0
+texture = ExtResource("2_es55k")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="widgets" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -600.0
+offset_top = -350.0
+offset_right = 600.0
+offset_bottom = 350.0
+
+[node name="background" type="NinePatchRect" parent="widgets"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 95.0
+offset_right = 1090.0
+offset_bottom = 603.0
+texture = ExtResource("3_1vyoc")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="map_view" type="Sprite2D" parent="widgets"]
+texture_filter = 4
+position = Vector2(600, 350)
+texture = SubResource("ViewportTexture_ppni4")
+
+[node name="map_viewport" type="SubViewport" parent="widgets"]
+disable_3d = true
+own_world_3d = true
+size = Vector2i(960, 487)
+
+[node name="map" type="Sprite2D" parent="widgets/map_viewport"]
+texture_filter = 4
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3")
+centered = false
+
+[node name="map_override" type="Sprite2D" parent="widgets/map_viewport"]
+visible = false
+texture = ExtResource("3")
+centered = false
+
+[node name="missions_anchor" type="Control" parent="widgets/map_viewport"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 960.0
+offset_bottom = 487.0
+
+[node name="camera" type="Camera2D" parent="widgets/map_viewport"]
+limit_left = 0
+limit_top = 0
+limit_right = 960
+limit_bottom = 487
+
+[node name="back_button" type="TextureButton" parent="widgets"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 645.0
+offset_right = 570.0
+offset_bottom = 685.0
+texture_normal = ExtResource("5_if6ob")
+texture_pressed = ExtResource("6_64pnk")
+texture_hover = ExtResource("7_j6s3u")
+texture_focused = ExtResource("7_j6s3u")
+
+[node name="label" type="Label" parent="widgets/back_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_ei8ho")
+text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="select_button" type="TextureButton" parent="widgets"]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 645.0
+offset_right = 820.0
+offset_bottom = 685.0
+texture_normal = ExtResource("5_if6ob")
+texture_pressed = ExtResource("6_64pnk")
+texture_hover = ExtResource("7_j6s3u")
+texture_focused = ExtResource("7_j6s3u")
+
+[node name="label" type="Label" parent="widgets/select_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_ei8ho")
+text = "TR_SELECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="prev_button" type="TextureButton" parent="widgets"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 308.0
+offset_right = 115.0
+offset_bottom = 392.0
+focus_neighbor_right = NodePath("../next_button")
+texture_normal = ExtResource("9_yeryd")
+texture_pressed = ExtResource("10_cbjjd")
+texture_hover = ExtResource("11_3oxor")
+texture_focused = ExtResource("11_3oxor")
+
+[node name="anchor" type="Control" parent="widgets/prev_button"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="arrow_left" parent="widgets/prev_button/anchor" instance=ExtResource("4")]
+
+[node name="next_button" type="TextureButton" parent="widgets"]
+layout_mode = 0
+offset_left = 1085.0
+offset_top = 308.0
+offset_right = 1165.0
+offset_bottom = 392.0
+focus_neighbor_left = NodePath("../prev_button")
+texture_normal = ExtResource("9_yeryd")
+texture_pressed = ExtResource("10_cbjjd")
+texture_hover = ExtResource("11_3oxor")
+texture_focused = ExtResource("11_3oxor")
+
+[node name="anchor" type="Control" parent="widgets/next_button"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="arrow_right" parent="widgets/next_button/anchor" instance=ExtResource("5")]
+
+[node name="title" type="Label" parent="widgets"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 1160.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("3_4d13j")
+theme_override_font_sizes/font_size = 42
+text = "Campaign Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="medal" parent="widgets" instance=ExtResource("7")]
+visible = false
+position = Vector2(40, 50)
+scale = Vector2(2, 2)
+offset = Vector2(60, 53)
+
+[node name="medal_whiteout" parent="widgets" instance=ExtResource("7")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(40, 50)
+scale = Vector2(2, 2)
+texture = ExtResource("8")
+offset = Vector2(60, 53)
+
+[node name="zoom_in_button" type="TextureButton" parent="widgets"]
+offset_left = 1032.0
+offset_top = 580.0
+offset_right = 1068.0
+offset_bottom = 620.0
+texture_normal = ExtResource("17_m45k7")
+texture_pressed = ExtResource("18_f2m1f")
+texture_hover = ExtResource("19_icgj7")
+texture_focused = ExtResource("19_icgj7")
+
+[node name="label" type="Label" parent="widgets/zoom_in_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_ei8ho")
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="zoom_out_button" type="TextureButton" parent="widgets"]
+offset_left = 982.0
+offset_top = 580.0
+offset_right = 1018.0
+offset_bottom = 620.0
+texture_normal = ExtResource("17_m45k7")
+texture_pressed = ExtResource("18_f2m1f")
+texture_hover = ExtResource("19_icgj7")
+texture_focused = ExtResource("19_icgj7")
+
+[node name="label" type="Label" parent="widgets/zoom_out_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_ei8ho")
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="animations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_h4u4c")
+}
+speed_scale = 4.0
+
+[connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="widgets/select_button" to="." method="_on_select_button_pressed"]
+[connection signal="pressed" from="widgets/prev_button" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="widgets/next_button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="widgets/zoom_in_button" to="." method="_on_zoom_in_button_pressed"]
+[connection signal="pressed" from="widgets/zoom_out_button" to="." method="_on_zoom_out_button_pressed"]

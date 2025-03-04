@@ -1,0 +1,319 @@
+[gd_scene load_steps=16 format=3 uid="uid://bsjjhsr305hgj"]
+
+[ext_resource type="PackedScene" uid="uid://b68vtard4p6s3" path="res://scenes/ui/minimap/minimap.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_y8fji"]
+[ext_resource type="Script" path="res://scenes/ui/menu/skirmish/skirmish.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://dl5ci1t5c1agk" path="res://scenes/ui/menu/skirmish/skirmish_player.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="5_h4jhr"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_nw18n"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_hh8c6"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="6_p3cw7"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_wxskm"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="8_eqpsb"]
+[ext_resource type="PackedScene" uid="uid://corpp72mh3y4" path="res://scenes/ui/menu/skirmish/turn_config.tscn" id="11_u7pv7"]
+
+[sub_resource type="Animation" id="3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="1"]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="2"]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4l2fb"]
+_data = {
+"RESET": SubResource("3"),
+"hide": SubResource("1"),
+"show": SubResource("2")
+}
+
+[node name="skirmish" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3")
+
+[node name="background" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -600.0
+offset_top = -350.0
+offset_right = 600.0
+offset_bottom = 350.0
+texture = ExtResource("2_y8fji")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="widgets" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -600.0
+offset_top = -350.0
+offset_right = 600.0
+offset_bottom = 350.0
+
+[node name="skirmish_player_0" parent="widgets" instance=ExtResource("4")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 25.0
+offset_top = 30.0
+offset_right = 675.0
+offset_bottom = 155.0
+grow_horizontal = 1
+grow_vertical = 1
+swap_target = NodePath(".")
+
+[node name="skirmish_player_1" parent="widgets" instance=ExtResource("4")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 25.0
+offset_top = 155.0
+offset_right = 675.0
+offset_bottom = 280.0
+grow_horizontal = 1
+grow_vertical = 1
+team = 2
+index = 1
+swap_target = NodePath("../skirmish_player_0")
+
+[node name="skirmish_player_2" parent="widgets" instance=ExtResource("4")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 25.0
+offset_top = 280.0
+offset_right = 675.0
+offset_bottom = 405.0
+grow_horizontal = 1
+grow_vertical = 1
+team = 3
+index = 2
+swap_target = NodePath("../skirmish_player_1")
+
+[node name="skirmish_player_3" parent="widgets" instance=ExtResource("4")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 25.0
+offset_top = 405.0
+offset_right = 675.0
+offset_bottom = 530.0
+grow_horizontal = 1
+grow_vertical = 1
+team = 4
+index = 3
+swap_target = NodePath("../skirmish_player_2")
+
+[node name="minimap" parent="widgets" instance=ExtResource("1")]
+offset_left = 925.0
+offset_top = 280.0
+offset_right = 965.0
+offset_bottom = 320.0
+
+[node name="map_name" type="NinePatchRect" parent="widgets/minimap"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -295.0
+offset_right = 85.0
+offset_bottom = -295.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_h4jhr")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="label" type="Label" parent="widgets/minimap/map_name"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_p3cw7")
+theme_override_font_sizes/font_size = 20
+text = "dummy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start_button" type="TextureButton" parent="widgets"]
+layout_mode = 0
+offset_left = 985.0
+offset_top = 640.0
+offset_right = 1175.0
+offset_bottom = 680.0
+texture_normal = ExtResource("5_nw18n")
+texture_pressed = ExtResource("6_hh8c6")
+texture_hover = ExtResource("7_wxskm")
+texture_focused = ExtResource("7_wxskm")
+
+[node name="label" type="Label" parent="widgets/start_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_eqpsb")
+text = "TR_START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back_button" type="TextureButton" parent="widgets"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 640.0
+offset_right = 215.0
+offset_bottom = 680.0
+texture_normal = ExtResource("5_nw18n")
+texture_pressed = ExtResource("6_hh8c6")
+texture_hover = ExtResource("7_wxskm")
+texture_focused = ExtResource("7_wxskm")
+
+[node name="label" type="Label" parent="widgets/back_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_eqpsb")
+text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TurnConfig" parent="widgets" instance=ExtResource("11_u7pv7")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -350.0
+offset_top = -60.0
+offset_right = 350.0
+offset_bottom = -20.0
+grow_vertical = 0
+
+[node name="animations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4l2fb")
+}
+speed_scale = 4.0
+
+[connection signal="pressed" from="widgets/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

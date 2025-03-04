@@ -222,7 +222,7 @@ func is_damageable():
 func apply_invisibility():
 	for fragment in self.fragments:
 		if fragment.is_present() and fragment.tile.is_invisible:
-			fragment.tile.hide_mesh() 
+			fragment.tile.hide_mesh()
 
 
 func _settings_changed(key, _new_value):

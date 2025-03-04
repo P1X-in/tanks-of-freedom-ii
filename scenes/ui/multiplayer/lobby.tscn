@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://gv5orbc5avp5"]
+[gd_scene load_steps=13 format=3 uid="uid://gv5orbc5avp5"]
 
 [ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1_vvs0u"]
 [ext_resource type="Script" path="res://scenes/ui/multiplayer/lobby.gd" id="2_q5w7a"]
@@ -8,8 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_rncjt"]
 [ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_wcimc"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="6_yotih"]
+[ext_resource type="PackedScene" uid="uid://chch0q8y12i3i" path="res://scenes/ui/multiplayer/connected_player_panel.tscn" id="7_2anxx"]
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_r14xm"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="8_y4322"]
+[ext_resource type="PackedScene" uid="uid://corpp72mh3y4" path="res://scenes/ui/menu/skirmish/turn_config.tscn" id="12_0xmlw"]
 
 [node name="lobby" instance=ExtResource("1_vvs0u")]
 script = ExtResource("2_q5w7a")
@@ -26,9 +28,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -125.0
-offset_top = -270.0
+offset_top = -295.0
 offset_right = 85.0
-offset_bottom = -270.0
+offset_bottom = -295.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_8ywfm")
@@ -44,6 +46,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("6_yotih")
@@ -117,197 +121,29 @@ offset_bottom = 630.0
 layout_mode = 2
 columns = 4
 
-[node name="player_0" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="0"]
-custom_minimum_size = Vector2(250, 40)
+[node name="player_0" parent="widgets/player_labels/labels_grid" index="0" instance=ExtResource("7_2anxx")]
 layout_mode = 2
-texture = ExtResource("5_8ywfm")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 
-[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_0" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("6_yotih")
-theme_override_font_sizes/font_size = 20
-text = "dummy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="player_1" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="1"]
-custom_minimum_size = Vector2(250, 40)
+[node name="player_1" parent="widgets/player_labels/labels_grid" index="1" instance=ExtResource("7_2anxx")]
 layout_mode = 2
-texture = ExtResource("5_8ywfm")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 
-[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_1" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("6_yotih")
-theme_override_font_sizes/font_size = 20
-text = "dummy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="player_2" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="2"]
-custom_minimum_size = Vector2(250, 40)
+[node name="player_2" parent="widgets/player_labels/labels_grid" index="2" instance=ExtResource("7_2anxx")]
 layout_mode = 2
-texture = ExtResource("5_8ywfm")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 
-[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_2" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("6_yotih")
-theme_override_font_sizes/font_size = 20
-text = "dummy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="player_3" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="3"]
-custom_minimum_size = Vector2(250, 40)
+[node name="player_3" parent="widgets/player_labels/labels_grid" index="3" instance=ExtResource("7_2anxx")]
 layout_mode = 2
-texture = ExtResource("5_8ywfm")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 
-[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_3" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("6_yotih")
-theme_override_font_sizes/font_size = 20
-text = "dummy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="player_4" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="4"]
-custom_minimum_size = Vector2(250, 40)
+[node name="player_4" parent="widgets/player_labels/labels_grid" index="4" instance=ExtResource("7_2anxx")]
 layout_mode = 2
-texture = ExtResource("5_8ywfm")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 
-[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_4" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("6_yotih")
-theme_override_font_sizes/font_size = 20
-text = "dummy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="player_5" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="5"]
-custom_minimum_size = Vector2(250, 40)
+[node name="player_5" parent="widgets/player_labels/labels_grid" index="5" instance=ExtResource("7_2anxx")]
 layout_mode = 2
-texture = ExtResource("5_8ywfm")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 
-[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_5" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("6_yotih")
-theme_override_font_sizes/font_size = 20
-text = "dummy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="player_6" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="6"]
-custom_minimum_size = Vector2(250, 40)
+[node name="player_6" parent="widgets/player_labels/labels_grid" index="6" instance=ExtResource("7_2anxx")]
 layout_mode = 2
-texture = ExtResource("5_8ywfm")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 
-[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_6" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("6_yotih")
-theme_override_font_sizes/font_size = 20
-text = "dummy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="player_7" type="NinePatchRect" parent="widgets/player_labels/labels_grid" index="7"]
-custom_minimum_size = Vector2(250, 40)
+[node name="player_7" parent="widgets/player_labels/labels_grid" index="7" instance=ExtResource("7_2anxx")]
 layout_mode = 2
-texture = ExtResource("5_8ywfm")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-
-[node name="label" type="Label" parent="widgets/player_labels/labels_grid/player_7" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("6_yotih")
-theme_override_font_sizes/font_size = 20
-text = "dummy"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="start_button" type="TextureButton" parent="widgets" index="6"]
 layout_mode = 0
@@ -354,6 +190,18 @@ theme_override_fonts/font = ExtResource("8_y4322")
 text = "TR_BACK"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TurnConfig" parent="widgets" index="8" instance=ExtResource("12_0xmlw")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -350.0
+offset_top = -60.0
+offset_right = 350.0
+offset_bottom = -20.0
+grow_vertical = 0
 
 [node name="downloading" type="Label" parent="." index="2"]
 visible = false

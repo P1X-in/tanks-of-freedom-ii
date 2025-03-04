@@ -145,7 +145,6 @@ func _manage_cinematic_bars():
 			if self.state.is_current_player_ai():
 				self.ui_multiplayer.set_announcement(tr("TR_AI"))
 			else:
-				print(self.relay.players)
 				self.ui_multiplayer.set_announcement(self.relay.players[self.state.get_current_param("peer_id")]["name"])
 
 
@@ -402,3 +401,8 @@ func _notify_player_reconnected():
 	self.relay.players_loaded = 0
 	_manage_cinematic_bars()
 	_manage_ai_start()
+
+
+func _timer_end_turn() -> void:
+	if _can_broadcast_moves():
+		_end_turn()

@@ -196,7 +196,16 @@ horizontal_scroll_mode = 0
 custom_minimum_size = Vector2(760, 510)
 layout_mode = 2
 bbcode_enabled = true
-text = "[b]### 1.0.6[/b]
+text = "[b]### 1.0.7[/b]
+- Multiplayer host can now kick players from lobby
+- Added configurable turn time limit to multiplayer games
+- Added configurable turns limit to multiplayer games
+- Added points summary in multiplayer games in case of a turn limit draw
+- Added Online join code copy button
+- Added tilt-shift blur toggle to Settings
+- Moved UI elements in map picker and load/save interface
+ 
+[b]### 1.0.6[/b]
 - Added spectators to multiplayer matches
 - Unit is snapped into position before attacking to prevent misalignment
 - Online registration is now stored on per-domain basis
