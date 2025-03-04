@@ -455,3 +455,4 @@ func _on_turn_config_changed() -> void:
 
 func _on_copy_button_pressed() -> void:
 	DisplayServer.clipboard_set(Relay.join_code)
+	SimpleAudioLibrary.play("menu_click")

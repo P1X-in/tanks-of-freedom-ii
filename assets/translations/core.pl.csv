@@ -322,3 +322,5 @@ TR_RENDER_SCALE_DESC,"Skala renderowania trójwymiarowego obrazu. Niższe warto�
 TR_TURN_LIMIT,"Limit tur"
 TR_TURN_TIME,"Czas tury"
 TR_GAME_DRAW,"Koniec czasu"
+TR_TILT_SHIFT,"Tilt shift"
+TR_TILT_SHIFT_DESC,"Rozmycie górnej i dolnej części ekranu dla efektu tilt-shift."

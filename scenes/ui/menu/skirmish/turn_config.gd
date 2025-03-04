@@ -50,24 +50,28 @@ func _on_less_turn_button_pressed() -> void:
 	turn_limit = maxi(0, turn_limit - TURN_STEP)
 	update_values()
 	configuration_changed.emit()
+	SimpleAudioLibrary.play("menu_click")
 
 
 func _on_more_turn_button_pressed() -> void:
 	turn_limit += TURN_STEP
 	update_values()
 	configuration_changed.emit()
+	SimpleAudioLibrary.play("menu_click")
 
 
 func _on_less_time_button_pressed() -> void:
 	time_limit = maxi(0, time_limit - TIME_STEP)
 	update_values()
 	configuration_changed.emit()
+	SimpleAudioLibrary.play("menu_click")
 
 
 func _on_more_time_button_pressed() -> void:
 	time_limit += TIME_STEP
 	update_values()
 	configuration_changed.emit()
+	SimpleAudioLibrary.play("menu_click")
 
 
 func lock_buttons() -> void:

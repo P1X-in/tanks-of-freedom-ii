@@ -85,11 +85,13 @@ var mouse_drag = false
 var mouse_click_position = null
 
 var camera_pan = Vector2(0, 0)
+var _last_used_blur_magnitude = 0
 
 @onready var settings = $"/root/Settings"
 
 func _ready():
 	randomize()
+	settings.changed.connect(_settings_changed)
 	self.camera_pivot = $"pivot"
 	self.camera_arm = $"pivot/arm"
 	self.camera_lens = $"pivot/arm/lens"
@@ -495,6 +497,11 @@ func _on_edge_pan(direction_vector):
 		self.camera_pan.y = direction_vector[1]
 
 func _set_near_blur(magnitude):
+	_last_used_blur_magnitude = magnitude
+	if not settings.get_option("tilt_shift_enabled"):
+		self.camera_tof.attributes.dof_blur_near_enabled = false
+		return
+
 	var near_threshold = 0.60
 	if magnitude > 0:
 		var camera_fraction = float(magnitude - self.tof_camera_distance_min) / float(self.tof_camera_distance_max - self.tof_camera_distance_min)
@@ -507,3 +514,8 @@ func _set_near_blur(magnitude):
 	else:
 		self.camera_tof.attributes.dof_blur_near_enabled = false
 
+
+func _settings_changed(key: String, new_value) -> void:
+	if key == "tilt_shift_enabled":
+		camera_tof.attributes.dof_blur_far_enabled = new_value
+		_set_near_blur(_last_used_blur_magnitude)

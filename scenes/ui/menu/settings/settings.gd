@@ -23,20 +23,28 @@ extends Control
 
 var main_menu
 
+
 func bind_menu(menu):
 	self.main_menu = menu
 
+
 func _ready():
-	self.set_process_input(false)  
-	
+	self.set_process_input(false)
+	for category_panel in $widgets/boxes.get_children():
+		category_panel.help_requested.connect(show_help)
+		category_panel.clear_help_requested.connect(hide_help)
+
+
 func _input(event):
 	if event.is_action_pressed("ui_cancel") or event.is_action_pressed('editor_menu'):
 		self._on_back_button_pressed()
+
 
 func _on_back_button_pressed():
 	self.hide_help()
 	self.audio.play("menu_back")
 	self.main_menu.close_settings()
+
 
 func show_panel():
 	self.hide_help()
@@ -51,13 +59,16 @@ func show_panel():
 	await self.get_tree().create_timer(0.1).timeout
 	self.general_button.grab_focus()
 
+
 func hide_panel():
 	self.hide_help()
 	self.animations.play("hide")
 	self.set_process_input(false)
-	
+
+
 func hide_controls_button():
 	self.controls_button.hide()
+
 
 func _on_general_pressed():
 	self.general_panel.show()
@@ -67,6 +78,7 @@ func _on_general_pressed():
 	self.multiplayer_panel.hide()
 	self.audio.play("menu_click")
 
+
 func _on_video_pressed():
 	self.general_panel.hide()
 	self.video_panel.show()
@@ -74,6 +86,7 @@ func _on_video_pressed():
 	self.gameplay_panel.hide()
 	self.multiplayer_panel.hide()
 	self.audio.play("menu_click")
+
 
 func _on_audio_pressed():
 	self.video_panel.hide()
@@ -83,6 +96,7 @@ func _on_audio_pressed():
 	self.multiplayer_panel.hide()
 	self.audio.play("menu_click")
 
+
 func _on_gameplay_pressed():
 	self.video_panel.hide()
 	self.general_panel.hide()
@@ -90,6 +104,7 @@ func _on_gameplay_pressed():
 	self.gameplay_panel.show()
 	self.multiplayer_panel.hide()
 	self.audio.play("menu_click")
+
 
 func _on_multiplayer_pressed():
 	self.video_panel.hide()
@@ -99,12 +114,15 @@ func _on_multiplayer_pressed():
 	self.multiplayer_panel.show()
 	self.audio.play("menu_click")
 
+
 func show_help(text):
 	self.help_text.set_text(text)
 	self.help.show()
 
+
 func hide_help():
 	self.help.hide()
+
 
 func _on_controls_pressed():
 	self.audio.play("menu_click")

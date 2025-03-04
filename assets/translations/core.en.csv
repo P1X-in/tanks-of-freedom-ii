@@ -322,3 +322,5 @@ TR_RENDER_SCALE_DESC,"3D view rendering scale. Lower value results in better per
 TR_TURN_LIMIT,"Turn limit"
 TR_TURN_TIME,"Turn time"
 TR_GAME_DRAW,"Time out"
+TR_TILT_SHIFT,"Tilt shift blur"
+TR_TILT_SHIFT_DESC,"Top and bottom screen blur to create tilt-shift effect."

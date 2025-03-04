@@ -1,28 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjragqykjl7h2"]
+[gd_scene load_steps=5 format=3 uid="uid://cjragqykjl7h2"]
 
 [ext_resource type="PackedScene" uid="uid://dp8jphj7nj6ku" path="res://scenes/ui/menu/settings/setting_option.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/ui/menu/settings/settings_panel.gd" id="1_1yq5h"]
 [ext_resource type="PackedScene" uid="uid://dprklkmc4f8lq" path="res://scenes/ui/menu/settings/setting_option_rotating.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://bhevhm6o3i72h" path="res://scenes/ui/menu/settings/setting_slider.tscn" id="2_nh6bq"]
 
-
-[node name="settings_graphics" type="Control"]
+[node name="settings_video" type="Control"]
+custom_minimum_size = Vector2(600, 700)
 layout_mode = 3
+anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 700.0
+script = ExtResource("1_1yq5h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -780.0
-offset_bottom = -100.0
+offset_left = 20.0
+offset_top = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="fullscreen" parent="." instance=ExtResource("1")]
+[node name="fullscreen" parent="VBoxContainer" instance=ExtResource("1")]
+layout_mode = 2
 option_name = "TR_FULLSCREEN"
 option_key = "fullscreen"
 help_tip = "TR_FULLSCREEN_DESC"
 
-[node name="render_scale" parent="." instance=ExtResource("2_nh6bq")]
-offset_top = 80.0
-offset_bottom = 130.0
+[node name="render_scale" parent="VBoxContainer" instance=ExtResource("2_nh6bq")]
+layout_mode = 2
 option_name = "TR_RENDER_SCALE"
 option_key = "render_scale"
 help_tip = "TR_RENDER_SCALE_DESC"
@@ -30,60 +38,58 @@ step = 5
 min_value = 20
 max_value = 100
 
-[node name="shadows" parent="." instance=ExtResource("1")]
-offset_top = 140.0
-offset_bottom = 190.0
+[node name="shadows" parent="VBoxContainer" instance=ExtResource("1")]
+layout_mode = 2
 option_name = "TR_SHADOWS"
 option_key = "shadows"
 help_tip = "TR_SHADOWS_DESC"
 
-[node name="decorations" parent="." instance=ExtResource("1")]
-offset_top = 200.0
-offset_bottom = 250.0
+[node name="decorations" parent="VBoxContainer" instance=ExtResource("1")]
+layout_mode = 2
 option_name = "TR_DECO"
 option_key = "decorations"
 help_tip = "TR_DECO_DESC"
 
-[node name="dec_shadows" parent="." instance=ExtResource("1")]
-offset_top = 260.0
-offset_bottom = 310.0
+[node name="dec_shadows" parent="VBoxContainer" instance=ExtResource("1")]
+layout_mode = 2
 option_name = "TR_DECO_SHAD"
 option_key = "dec_shadows"
 help_tip = "TR_DECO_SHAD_DESC"
 
-[node name="msaa" parent="." instance=ExtResource("2")]
-offset_top = 320.0
-offset_bottom = 370.0
+[node name="tilt_shift" parent="VBoxContainer" instance=ExtResource("1")]
+layout_mode = 2
+option_name = "TR_TILT_SHIFT"
+option_key = "tilt_shift_enabled"
+help_tip = "TR_TILT_SHIFT_DESC"
+
+[node name="msaa" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_MSAA"
 option_key = "msaa"
 help_tip = "TR_MSAA_DESC"
 available_values = [0.0, 2.0, 4.0, 8.0]
 
-[node name="fxaa" parent="." instance=ExtResource("1")]
-offset_top = 380.0
-offset_bottom = 430.0
+[node name="fxaa" parent="VBoxContainer" instance=ExtResource("1")]
+layout_mode = 2
 option_name = "TR_FXAA"
 option_key = "fxaa"
 help_tip = "TR_FXAA_DESC"
 
-[node name="vsync" parent="." instance=ExtResource("1")]
-offset_top = 440.0
-offset_bottom = 490.0
+[node name="vsync" parent="VBoxContainer" instance=ExtResource("1")]
+layout_mode = 2
 option_name = "TR_VSYNC"
 option_key = "vsync"
 help_tip = "TR_VSYNC_DESC"
 
-[node name="fps" parent="." instance=ExtResource("2")]
-offset_top = 500.0
-offset_bottom = 550.0
+[node name="fps" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_FPS_L"
 option_key = "fps"
 help_tip = "TR_FPS_L_DESC"
 available_values = [30.0, 60.0, 90.0, 120.0, 144.0]
 
-[node name="ips" parent="." instance=ExtResource("2")]
-offset_top = 560.0
-offset_bottom = 610.0
+[node name="ips" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_IPS_L"
 option_key = "ips"
 help_tip = "TR_IPS_L_DESC"

@@ -45,7 +45,8 @@ var settings = {
 	"end_turn_speed": "x1",
 	"show_health": true,
 	"scale_ui": true,
-	"render_scale": 100
+	"render_scale": 100,
+	"tilt_shift_enabled": true
 }
 
 

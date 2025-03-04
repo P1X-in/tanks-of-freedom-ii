@@ -304,53 +304,28 @@ offset_right = 810.0
 offset_bottom = 300.0
 
 [node name="settings_general" parent="widgets/boxes" instance=ExtResource("4")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="settings_video" parent="widgets/boxes" instance=ExtResource("6")]
 visible = false
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_right = -500.0
 offset_bottom = -300.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="settings_audio" parent="widgets/boxes" instance=ExtResource("5")]
 visible = false
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="settings_gameplay" parent="widgets/boxes" instance=ExtResource("3")]
 visible = false
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="settings_multi" parent="widgets/boxes" instance=ExtResource("11_ettfb")]
 visible = false
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="back_button" type="TextureButton" parent="widgets"]
 layout_mode = 0

@@ -1,11 +1,12 @@
-extends Control
+class_name MultiplayerSettingsCategoryPanel
+extends SettingsCategoryPanel
 
 
 @onready var audio = $"/root/SimpleAudioLibrary"
 @onready var settings = $"/root/Settings"
 
 
-var defaults = {
+var defaults: Dictionary = {
 	"game_port": 3959,
 	"discovery_port": 3960,
 	"online_domain": "api.tof.p1x.in",
@@ -15,7 +16,8 @@ var defaults = {
 }
 
 
-func _ready():
+func _ready() -> void:
+	super._ready()
 	if OS.has_feature("demo"):
 		$online_domain.hide()
 		$online_port.hide()
@@ -23,8 +25,8 @@ func _ready():
 		$relay_port.hide()
 
 
-func _on_reset_button_pressed():
-	for setting_key in self.defaults:
+func _on_reset_button_pressed() -> void:
+	for setting_key: String in self.defaults:
 		self.settings.set_option(setting_key, self.defaults[setting_key])
 
 	self.audio.play("menu_click")

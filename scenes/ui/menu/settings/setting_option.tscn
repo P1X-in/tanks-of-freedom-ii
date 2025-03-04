@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="5_23mih"]
 
 [node name="option" type="Control"]
+custom_minimum_size = Vector2(550, 50)
 layout_mode = 3
 anchors_preset = 0
 offset_left = 20.0

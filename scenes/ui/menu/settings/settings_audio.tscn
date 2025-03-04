@@ -1,32 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhd3mqllw6g05"]
+[gd_scene load_steps=3 format=3 uid="uid://bhd3mqllw6g05"]
 
+[ext_resource type="Script" path="res://scenes/ui/menu/settings/settings_panel.gd" id="1_lnsq6"]
 [ext_resource type="PackedScene" uid="uid://bhevhm6o3i72h" path="res://scenes/ui/menu/settings/setting_slider.tscn" id="2"]
 
 [node name="settings_audio" type="Control"]
+custom_minimum_size = Vector2(600, 700)
 layout_mode = 3
+anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 700.0
+script = ExtResource("1_lnsq6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -680.0
-offset_bottom = -500.0
+offset_left = 20.0
+offset_top = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="master" parent="." instance=ExtResource("2")]
+[node name="master" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_MASTER"
 option_key = "vol_master"
 help_tip = "TR_MASTER_DESC"
 
-[node name="sfx" parent="." instance=ExtResource("2")]
-offset_top = 85.0
-offset_bottom = 135.0
+[node name="sfx" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_SFX"
 option_key = "vol_sfx"
 help_tip = "TR_SFX_DESC"
 
-[node name="music" parent="." instance=ExtResource("2")]
-offset_top = 150.0
-offset_bottom = 200.0
+[node name="music" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_MUSIC"
 option_key = "vol_music"
 help_tip = "TR_MUSIC_DESC"

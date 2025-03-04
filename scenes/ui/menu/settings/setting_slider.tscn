@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_3pyw3"]
 
 [node name="option" type="Control"]
+custom_minimum_size = Vector2(550, 50)
 layout_mode = 3
 anchors_preset = 0
 offset_left = 20.0

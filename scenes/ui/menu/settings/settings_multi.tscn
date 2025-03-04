@@ -8,57 +8,60 @@
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="6_ilprp"]
 
 [node name="settings_multi" type="Control"]
+custom_minimum_size = Vector2(600, 700)
 layout_mode = 3
+anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 700.0
+script = ExtResource("1_a70xb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -680.0
-offset_bottom = -500.0
+offset_left = 20.0
+offset_top = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_a70xb")
 
-[node name="game_port" parent="." instance=ExtResource("1_0q3q6")]
+[node name="game_port" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
 option_name = "TR_GAME_PORT"
 option_key = "game_port"
 help_tip = "TR_GAME_PORT_DESC"
 
-[node name="discovery_port" parent="." instance=ExtResource("1_0q3q6")]
-offset_top = 85.0
-offset_bottom = 135.0
+[node name="discovery_port" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
 option_name = "TR_DISCOVERY_PORT"
 option_key = "discovery_port"
 help_tip = "TR_DISCOVERY_PORT_DESC"
 
-[node name="online_domain" parent="." instance=ExtResource("1_0q3q6")]
-offset_top = 150.0
-offset_bottom = 200.0
+[node name="online_domain" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
 option_name = "TR_ONLINE_DOMAIN"
 option_key = "online_domain"
 help_tip = "TR_ONLINE_DOMAIN_DESC"
 placeholder = "api.tof.p1x.in"
 is_int = false
 
-[node name="online_port" parent="." instance=ExtResource("1_0q3q6")]
-offset_top = 215.0
-offset_bottom = 265.0
+[node name="online_port" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
 option_name = "TR_ONLINE_PORT"
 option_key = "online_port"
 help_tip = "TR_ONLINE_PORT_DESC"
 placeholder = "443"
 
-[node name="relay_domain" parent="." instance=ExtResource("1_0q3q6")]
-offset_top = 280.0
-offset_bottom = 330.0
+[node name="relay_domain" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
 option_name = "TR_RELAY_DOMAIN"
 option_key = "relay_domain"
 help_tip = "TR_RELAY_DOMAIN_DESC"
 placeholder = "api.tof.p1x.in"
 is_int = false
 
-[node name="relay_port" parent="." instance=ExtResource("1_0q3q6")]
-offset_top = 345.0
-offset_bottom = 395.0
+[node name="relay_port" parent="VBoxContainer" instance=ExtResource("1_0q3q6")]
+layout_mode = 2
 option_name = "TR_RELAY_PORT"
 option_key = "relay_port"
 help_tip = "TR_RELAY_PORT_DESC"
@@ -67,9 +70,9 @@ placeholder = "9939"
 [node name="reset_button" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 380.0
-offset_top = 415.0
+offset_top = 350.0
 offset_right = 570.0
-offset_bottom = 455.0
+offset_bottom = 390.0
 texture_normal = ExtResource("3_vbgau")
 texture_pressed = ExtResource("4_hvdpw")
 texture_hover = ExtResource("5_pmbd7")

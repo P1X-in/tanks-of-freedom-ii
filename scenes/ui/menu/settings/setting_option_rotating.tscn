@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="6_edpqc"]
 
 [node name="option" type="Control"]
+custom_minimum_size = Vector2(550, 50)
 layout_mode = 3
 anchors_preset = 0
 offset_left = 20.0

@@ -1,70 +1,73 @@
-[gd_scene load_steps=3 format=3 uid="uid://cocnl04cpm23o"]
+[gd_scene load_steps=4 format=3 uid="uid://cocnl04cpm23o"]
 
 [ext_resource type="PackedScene" uid="uid://dprklkmc4f8lq" path="res://scenes/ui/menu/settings/setting_option_rotating.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/ui/menu/settings/settings_panel.gd" id="1_r8ffm"]
 [ext_resource type="PackedScene" uid="uid://dp8jphj7nj6ku" path="res://scenes/ui/menu/settings/setting_option.tscn" id="2"]
 
 [node name="settings_gameplay" type="Control"]
+custom_minimum_size = Vector2(600, 700)
 layout_mode = 3
+anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 700.0
+script = ExtResource("1_r8ffm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -680.0
-offset_bottom = -500.0
+offset_left = 20.0
+offset_top = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="hq_cam" parent="." instance=ExtResource("2")]
+[node name="hq_cam" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_HQ_CAM"
 option_key = "hq_cam"
 help_tip = "TR_HQ_CAM_DESC"
 
-[node name="cam_shake" parent="." instance=ExtResource("2")]
-offset_top = 85.0
-offset_bottom = 135.0
+[node name="cam_shake" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_CAM_SHAKE"
 option_key = "cam_shake"
 help_tip = "TR_CAM_SHAKE_DESC"
 
-[node name="def_cam_st" parent="." instance=ExtResource("1")]
-offset_top = 150.0
-offset_bottom = 200.0
+[node name="def_cam_st" parent="VBoxContainer" instance=ExtResource("1")]
+layout_mode = 2
 option_name = "TR_DEF_CAM_ST"
 option_key = "def_cam_st"
 help_tip = "TR_DEF_CAM_ST_DESC"
 available_values = ["TOF", "AW", "FREE"]
 
-[node name="ap_spent" parent="." instance=ExtResource("2")]
-offset_top = 215.0
-offset_bottom = 265.0
+[node name="ap_spent" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_NOT_AP_SP"
 option_key = "notify_ap_spent"
 help_tip = "TR_NOT_AP_SP_DESC"
 
-[node name="edge_pan" parent="." instance=ExtResource("2")]
-offset_top = 280.0
-offset_bottom = 330.0
+[node name="edge_pan" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_EDGE_PAN"
 option_key = "edge_pan"
 help_tip = "TR_EDGE_PAN_DESC"
 
-[node name="end_turn_speed" parent="." instance=ExtResource("1")]
-offset_top = 345.0
-offset_bottom = 395.0
+[node name="end_turn_speed" parent="VBoxContainer" instance=ExtResource("1")]
+layout_mode = 2
 option_name = "TR_END_TURN_SPEED"
 option_key = "end_turn_speed"
 help_tip = "TR_END_TURN_SPEED_DESC"
 available_values = ["x1", "x2", "x4"]
 
-[node name="show_health" parent="." instance=ExtResource("2")]
-offset_top = 410.0
-offset_bottom = 460.0
+[node name="show_health" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_SHOW_HEALTH"
 option_key = "show_health"
 help_tip = "TR_SHOW_HEALTH_DESC"
 
-[node name="scale_ui" parent="." instance=ExtResource("2")]
-offset_top = 475.0
-offset_bottom = 525.0
+[node name="scale_ui" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
 option_name = "TR_SCALE_UI"
 option_key = "scale_ui"
 help_tip = "TR_SCALE_UI_DESC"

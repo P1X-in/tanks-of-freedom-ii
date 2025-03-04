@@ -1,5 +1,9 @@
 extends Control
 
+
+signal help_requested(tip: String)
+signal clear_help_requested()
+
 @onready var audio = $"/root/SimpleAudioLibrary"
 @onready var settings = $"/root/Settings"
 
@@ -43,11 +47,10 @@ func _on_slider_value_changed(value):
 
 func _show_help():
 	if self.help_tip != "":
-		self.get_parent().get_parent().get_parent().get_parent().show_help(self.help_tip)
+		help_requested.emit(help_tip)
 	else:
 		self._clear_help()
 
-
 func _clear_help():
-	self.get_parent().get_parent().get_parent().get_parent().hide_help()
+	clear_help_requested.emit()
 
