@@ -91,7 +91,7 @@ func _prepare_initial_panel_state(map_name):
 		return
 
 	self._fill_map_data(map_name)
-	self.join_code_label.set_text(tr("TR_JOIN_CODE") + " " +self.relay.join_code)
+	self.join_code_label.set_text(tr("TR_JOIN_CODE") + " " + self.relay.join_code)
 	_fill_player_labels()
 	self._apply_server_state()
 	if Relay.is_server():
@@ -451,3 +451,7 @@ func _on_turn_config_changed() -> void:
 		"turn_limit": self.turn_config.turn_limit,
 		"time_limit": self.turn_config.time_limit
 	})
+
+
+func _on_copy_button_pressed() -> void:
+	DisplayServer.clipboard_set(Relay.join_code)

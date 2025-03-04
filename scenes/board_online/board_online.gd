@@ -145,7 +145,6 @@ func _manage_cinematic_bars():
 			if self.state.is_current_player_ai():
 				self.ui_multiplayer.set_announcement(tr("TR_AI"))
 			else:
-				print(self.relay.players)
 				self.ui_multiplayer.set_announcement(self.relay.players[self.state.get_current_param("peer_id")]["name"])
 
 

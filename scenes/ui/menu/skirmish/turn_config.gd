@@ -30,7 +30,7 @@ func update_values() -> void:
 		$turn_limit_label/turn_limit_value.set_text("TR_OFF")
 
 	if time_limit > 0:
-		$turn_time_label/turn_time_value.set_text(str(time_limit))
+		$turn_time_label/turn_time_value.set_text(str(time_limit) + "s")
 	else:
 		$turn_time_label/turn_time_value.set_text("TR_OFF")
 

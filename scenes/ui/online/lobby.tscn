@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://guehs06rsfa1"]
+[gd_scene load_steps=17 format=3 uid="uid://guehs06rsfa1"]
 
 [ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1_vvs0u"]
 [ext_resource type="Script" path="res://scenes/ui/online/lobby.gd" id="2_wsvsj"]
@@ -10,7 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://chch0q8y12i3i" path="res://scenes/ui/multiplayer/connected_player_panel.tscn" id="7_4r14n"]
 [ext_resource type="PackedScene" uid="uid://dy4dmaksk0oot" path="res://scenes/ui/online/lobby_player.tscn" id="7_42u2e"]
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_r14xm"]
+[ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="8_wh7uq"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="8_y4322"]
+[ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="9_dpp5c"]
+[ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="10_hmkcc"]
+[ext_resource type="PackedScene" uid="uid://b21pxp2ai2cow" path="res://scenes/ui/icons/copy.tscn" id="11_ssmau"]
 [ext_resource type="PackedScene" uid="uid://corpp72mh3y4" path="res://scenes/ui/menu/skirmish/turn_config.tscn" id="12_70kkq"]
 
 [node name="lobby" instance=ExtResource("1_vvs0u")]
@@ -187,6 +191,18 @@ text = "dummy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="copy_button" type="TextureButton" parent="widgets/join_code" index="1"]
+offset_left = 464.0
+offset_right = 500.0
+offset_bottom = 40.0
+texture_normal = ExtResource("8_wh7uq")
+texture_pressed = ExtResource("9_dpp5c")
+texture_hover = ExtResource("10_hmkcc")
+texture_focused = ExtResource("10_hmkcc")
+
+[node name="tank" parent="widgets/join_code/copy_button" index="0" instance=ExtResource("11_ssmau")]
+position = Vector2(18, 18)
+
 [node name="start_button" type="TextureButton" parent="widgets" index="7"]
 layout_mode = 0
 offset_left = 985.0
@@ -258,5 +274,6 @@ text = "TR_DOWNLOADING_MAP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="pressed" from="widgets/join_code/copy_button" to="." method="_on_copy_button_pressed"]
 [connection signal="pressed" from="widgets/start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]
