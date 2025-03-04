@@ -8,6 +8,7 @@
 - Added configurable turns limit to multiplayer games
 - Added points summary in multiplayer games in case of a turn limit draw
 - Added Online join code copy button
+- Added tilt-shift blur toggle to Settings
 - Moved UI elements in map picker and load/save interface
 
 
