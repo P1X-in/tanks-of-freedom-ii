@@ -2,6 +2,10 @@
 ## Changelog
 
 
+### 1.0.8
+- Fixed Targetting Automaton not enabling Mobile Infantry to attack air units
+
+
 ### 1.0.7
 - Multiplayer host can now kick players from lobby
 - Added configurable turn time limit to multiplayer games
