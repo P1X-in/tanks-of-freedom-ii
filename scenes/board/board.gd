@@ -41,6 +41,8 @@ var ending_turn_multiplier = 1
 var initial_hq_cam_skipped = false
 var mouse_click_position = null
 
+var last_unit_move = null
+
 
 func _ready():
 	self.set_up_ui()
@@ -92,6 +94,10 @@ func _input(event):
 				self.audio.play("menu_click")
 				self.open_context_panel()
 
+			if event.is_action_pressed("undo_move"):
+				self.audio.play("menu_click")
+				self._undo_unit_move()
+
 			if OS.is_debug_build():
 				if event.is_action_pressed("cheat_capture"):
 					self.audio.play("menu_click")
@@ -102,7 +108,6 @@ func _input(event):
 				if event.is_action_pressed("cheat_level_up"):
 					self.audio.play("menu_click")
 					self.cheat_level_up()
-
 
 		if event.is_action_pressed("editor_menu"):
 			self.audio.play("menu_click")
@@ -308,6 +313,7 @@ func select_tile(tile_position):
 
 	if self.active_ability != null:
 		if self.ability_markers.marker_exists(tile_position) or self.state.is_current_player_ai():
+			set_last_unit_move(null)
 			self.execute_active_ability(tile)
 		else:
 			self.unselect_tile()
@@ -321,11 +327,13 @@ func select_tile(tile_position):
 	elif self.selected_tile != null:
 		if self.selected_tile.unit.is_present():
 			if self.can_move_to_tile(tile):
+				set_last_unit_move(null)
 				self.move_unit(self.selected_tile, tile)
 				self.selected_tile = tile
 				self.show_contextual_select()
 
 			elif self.selected_tile.is_neighbour(tile) && tile.can_unit_interact(self.selected_tile.unit.tile) && self.state.can_current_player_afford(1):
+				set_last_unit_move(null)
 				self.handle_interaction(tile)
 
 			else:
@@ -481,6 +489,14 @@ func _show_contextual_select_radial(open_unit_abilities):
 
 func move_unit(source_tile, destination_tile):
 	var move_cost = self.movement_markers.get_tile_cost(destination_tile)
+	if not state.is_current_player_ai():
+		set_last_unit_move({
+			"source": source_tile,
+			"destination": destination_tile,
+			"cost": move_cost
+		})
+	else:
+		set_last_unit_move(null)
 	destination_tile.unit.set_tile(source_tile.unit.tile)
 	source_tile.unit.release()
 	self.use_current_player_ap(move_cost)
@@ -1061,3 +1077,22 @@ func close_settings():
 
 func _timer_end_turn() -> void:
 	end_turn()
+
+
+func set_last_unit_move(move):
+	last_unit_move = move
+
+
+func _undo_unit_move() -> void:
+	if last_unit_move:
+		var source_tile = last_unit_move["destination"]
+		var destination_tile = last_unit_move["source"]
+		var move_cost = last_unit_move["cost"]
+		destination_tile.unit.set_tile(source_tile.unit.tile)
+		source_tile.unit.release()
+		self.state.add_current_player_ap(move_cost)
+		self.ui.update_resource_value(self.state.get_current_ap())
+		destination_tile.unit.tile.restore_move(move_cost)
+		self.reset_unit_position(destination_tile, destination_tile.unit.tile)
+		self.unselect_tile()
+		set_last_unit_move(null)

@@ -293,3 +293,14 @@ func _notify_player_reconnected():
 func _timer_end_turn() -> void:
 	if _can_broadcast_moves():
 		_end_turn()
+
+
+func _undo_unit_move():
+	if _can_broadcast_moves():
+		super._undo_unit_move()
+		_notify_end_turn.rpc()
+
+
+@rpc("any_peer", "call_remote", "reliable")
+func _notify_undo_unit_move():
+	super._undo_unit_move()

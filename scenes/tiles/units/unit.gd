@@ -175,6 +175,12 @@ func use_move(value):
 func use_all_moves():
 	self.use_move(self.move)
 
+
+func restore_move(value):
+	self.move += value
+	self.restore_highlight()
+	self._update_energy()
+
 func reset_move():
 	var stats = self.get_stats_with_modifiers()
 	self.move = stats["max_move"]

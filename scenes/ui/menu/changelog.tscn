@@ -196,7 +196,14 @@ horizontal_scroll_mode = 0
 custom_minimum_size = Vector2(760, 510)
 layout_mode = 2
 bbcode_enabled = true
-text = "[b]### 1.0.7[/b]
+text = "[b]### 1.0.8[/b]
+- In Ruby Dusk campaign mission Hold the Line the amount of AP available to the AI has been greatly reduced
+- Added three rolling autosaves
+- Added experimental undo last unit move with R key
+- Fixed Targetting Automaton not enabling Mobile Infantry to attack air units
+- Fixed a bug where tilt-shift toggle was not being applied on map load
+ 
+[b]### 1.0.7[/b]
 - Multiplayer host can now kick players from lobby
 - Added configurable turn time limit to multiplayer games
 - Added configurable turns limit to multiplayer games
