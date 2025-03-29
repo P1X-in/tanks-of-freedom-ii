@@ -5,6 +5,7 @@
 ### 1.0.8
 - In Ruby Dusk campaign mission Hold the Line the amount of AP available to the AI has been greatly reduced
 - Added three rolling autosaves
+- Added experimental undo last unit move with R key
 - Fixed Targetting Automaton not enabling Mobile Infantry to attack air units
 - Fixed a bug where tilt-shift toggle was not being applied on map load
 

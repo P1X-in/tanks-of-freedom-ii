@@ -58,6 +58,8 @@ func _handle_message(message):
 		self._notify_collateral_damage(message["damage"])
 	if message["type"] == "end_turn":
 		self._notify_end_turn()
+	if message["type"] == "undo_unit_move":
+		self._notify_undo_unit_move()
 
 
 func _all_players_loaded():
@@ -406,3 +408,16 @@ func _notify_player_reconnected():
 func _timer_end_turn() -> void:
 	if _can_broadcast_moves():
 		_end_turn()
+
+
+func _undo_unit_move():
+	if _can_broadcast_moves():
+		super._undo_unit_move()
+		self.relay.message_broadcast({
+			"type": "undo_unit_move"
+		})
+
+
+#@rpc("any_peer", "call_remote", "reliable")
+func _notify_undo_unit_move():
+	super._undo_unit_move()
