@@ -120,6 +120,7 @@ func _ready():
 
 	self.switch_to_camera_style(self.settings.get_option("def_cam_st"))
 	self._set_near_blur(0)
+	self._settings_changed("tilt_shift_enabled", Settings.get_option("tilt_shift_enabled"))
 
 func _input(event):
 	if not get_window().has_focus():
