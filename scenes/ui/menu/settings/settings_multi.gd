@@ -19,10 +19,10 @@ var defaults: Dictionary = {
 func _ready() -> void:
 	super._ready()
 	if OS.has_feature("demo"):
-		$online_domain.hide()
-		$online_port.hide()
-		$relay_domain.hide()
-		$relay_port.hide()
+		$VBoxContainer/online_domain.hide()
+		$VBoxContainer/online_port.hide()
+		$VBoxContainer/relay_domain.hide()
+		$VBoxContainer/relay_port.hide()
 
 
 func _on_reset_button_pressed() -> void:
@@ -30,11 +30,11 @@ func _on_reset_button_pressed() -> void:
 		self.settings.set_option(setting_key, self.defaults[setting_key])
 
 	self.audio.play("menu_click")
-	$game_port._read_setting()
-	$discovery_port._read_setting()
-	$online_domain._read_setting()
-	$online_port._read_setting()
-	$relay_domain._read_setting()
-	$relay_port._read_setting()
+	$VBoxContainer/game_port._read_setting()
+	$VBoxContainer/discovery_port._read_setting()
+	$VBoxContainer/online_domain._read_setting()
+	$VBoxContainer/online_port._read_setting()
+	$VBoxContainer/relay_domain._read_setting()
+	$VBoxContainer/relay_port._read_setting()
 
 

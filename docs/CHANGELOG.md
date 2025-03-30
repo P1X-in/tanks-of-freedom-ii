@@ -2,6 +2,10 @@
 ## Changelog
 
 
+### 1.0.9
+- Fixed a bug preventing multiplayer settings from being reset to defaults
+
+
 ### 1.0.8
 - In Ruby Dusk campaign mission Hold the Line the amount of AP available to the AI has been greatly reduced
 - Added three rolling autosaves
