@@ -3,6 +3,7 @@
 
 
 ### 1.0.9
+- In Ruby Dusk campaign mission Amber Fortress added a new Barracks building for quicker reinforcement
 - Fixed a bug preventing multiplayer settings from being reset to defaults
 
 
