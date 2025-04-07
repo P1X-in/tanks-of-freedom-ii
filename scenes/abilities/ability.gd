@@ -18,7 +18,7 @@ var disabled = false
 
 func _ready():
 	self.signal_to_parent()
-	
+
 func signal_to_parent():
 	self.receive_signal(self.get_parent())
 

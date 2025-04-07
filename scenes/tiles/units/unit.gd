@@ -303,6 +303,11 @@ func receive_direct_damage(value):
 func is_alive():
 	return self.hp > 0
 
+
+func is_damaged() -> bool:
+	return hp < max_hp
+
+
 func get_attack():
 	var stats = self.get_stats_with_modifiers()
 	return stats["attack"]
