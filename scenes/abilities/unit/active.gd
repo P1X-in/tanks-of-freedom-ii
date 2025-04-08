@@ -7,8 +7,8 @@ func _init():
 	self.TYPE = "active"
 
 func execute(board, position):
+	board.use_current_player_ap(self.get_cost())
 	super.execute(board, position)
-	board.use_current_player_ap(self.ap_cost)
 	self.source.use_move(1)
 
 	if not board.state.is_current_player_ai():

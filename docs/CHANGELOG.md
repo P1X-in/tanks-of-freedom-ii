@@ -2,6 +2,13 @@
 ## Changelog
 
 
+### 1.0.9
+- In Ruby Dusk campaign mission Amber Fortress added a new Barracks building for quicker reinforcement
+- Medkit and Repair Kit abilities can no longer be used on full HP units
+- Fixed a bug preventing multiplayer settings from being reset to defaults
+- Fixed incorrect AP cost for Medkit and Repair Kit abilities
+
+
 ### 1.0.8
 - In Ruby Dusk campaign mission Hold the Line the amount of AP available to the AI has been greatly reduced
 - Added three rolling autosaves
