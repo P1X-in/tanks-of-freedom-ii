@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://cavv3dnla66vt"]
 
-[ext_resource path="res://assets/gui/icons/abilities/targeting_automaton.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://pyy1m2okq4dk" path="res://assets/gui/icons/abilities/targeting_automaton.png" id="1"]
 
 [node name="targeting_automaton" type="Sprite2D"]
-texture = ExtResource( 1 )
+texture = ExtResource("1")

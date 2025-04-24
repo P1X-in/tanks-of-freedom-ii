@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dg583v0vs343i"]
 
-[ext_resource type="PackedScene" path="res://scenes/board/board.tscn" id="1_e3c4i"]
-[ext_resource type="Script" path="res://scenes/board_online/board_online.gd" id="2_g4f1b"]
+[ext_resource type="PackedScene" uid="uid://vl85agjbmg7" path="res://scenes/board/board.tscn" id="1_e3c4i"]
+[ext_resource type="Script" uid="uid://bco0o0kyvt2j8" path="res://scenes/board_online/board_online.gd" id="2_g4f1b"]
 [ext_resource type="PackedScene" uid="uid://dlmv2mhpe26s3" path="res://scenes/board_multiplayer/ui_multiplayer.tscn" id="3_ci457"]
-[ext_resource type="Script" path="res://scenes/board_multiplayer/ui_multiplayer.gd" id="4_34utl"]
+[ext_resource type="Script" uid="uid://be3dcud6vts7t" path="res://scenes/board_multiplayer/ui_multiplayer.gd" id="4_34utl"]
 
 [node name="board" instance=ExtResource("1_e3c4i")]
 script = ExtResource("2_g4f1b")

@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://dkl16galneuob"]
 
-[ext_resource path="res://scenes/abilities/unit/active.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/abilities/unit/medkit.gd" type="Script" id=2]
+[ext_resource type="PackedScene" uid="uid://dqv4mqct0nssu" path="res://scenes/abilities/unit/active.tscn" id="1"]
+[ext_resource type="Script" uid="uid://d0n2o3ofv8p1f" path="res://scenes/abilities/unit/medkit.gd" id="2"]
 
-[node name="medkit" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[node name="medkit" instance=ExtResource("1")]
+script = ExtResource("2")
 label = "TR_MEDKIT"
 description = "TR_MEDKIT_DESC"
 ap_cost = 5

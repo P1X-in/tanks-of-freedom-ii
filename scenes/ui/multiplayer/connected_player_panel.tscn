@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="1_o2xbx"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_wrxto"]
-[ext_resource type="Script" path="res://scenes/ui/multiplayer/connected_player_panel.gd" id="2_ygtmr"]
+[ext_resource type="Script" uid="uid://d4drxw27p7mds" path="res://scenes/ui/multiplayer/connected_player_panel.gd" id="2_ygtmr"]
 [ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="3_xfmlf"]
 [ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="4_p02ia"]
 [ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="5_jcwkv"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://cbg465a8j5ejh"]
 
-[ext_resource type="Script" path="res://scenes/map_editor/story/story_editor.gd" id="1_1fbvq"]
+[ext_resource type="Script" uid="uid://bwdbtse7fxnr" path="res://scenes/map_editor/story/story_editor.gd" id="1_1fbvq"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="1_v2xof"]
 [ext_resource type="Texture2D" uid="uid://bey3i1nl046fc" path="res://assets/gui/menu/buttons/buttonLong_brown.png" id="2_5pfvj"]
 [ext_resource type="Texture2D" uid="uid://2tgpj2lpm5ae" path="res://assets/gui/menu/buttons/buttonLong_brown_pressed.png" id="3_fvvfw"]

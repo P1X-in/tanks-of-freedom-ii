@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://ccjre2of34oek"]
 
-[ext_resource path="res://scenes/abilities/hero/passive/passive.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/abilities/hero/passive/intimidate.gd" type="Script" id=2]
+[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/passive.tscn" id="1"]
+[ext_resource type="Script" uid="uid://di7e8vhg4kau2" path="res://scenes/abilities/hero/passive/intimidate.gd" id="2"]
 
-[node name="intimidate" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[node name="intimidate" instance=ExtResource("1")]
+script = ExtResource("2")
 label = "TR_PASS_INTIM"
 description = "TR_PASS_INTIM_DESC"

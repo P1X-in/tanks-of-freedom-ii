@@ -12,4 +12,3 @@ func _execute(board, position):
 		if neighbour.has_friendly_unit(self.source.side):
 			neighbour.unit.tile.heal(self.HEAL)
 			board.heal_a_tile(neighbour)
-

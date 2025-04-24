@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://b7dectldayttw"]
 
 [ext_resource type="PackedScene" uid="uid://dc4vyffm4fyvi" path="res://scenes/map_editor/story/triggers/types/base_edit_type.tscn" id="1_l2n5y"]
-[ext_resource type="Script" path="res://scenes/map_editor/story/triggers/types/claim.gd" id="2_dlx4k"]
+[ext_resource type="Script" uid="uid://btxje1vb8b37b" path="res://scenes/map_editor/story/triggers/types/claim.gd" id="2_dlx4k"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_ay6ts"]
 [ext_resource type="Texture2D" uid="uid://pfrikdjfa7lc" path="res://assets/gui/menu/buttons/buttonSquare_brown.png" id="4_swpvy"]
 [ext_resource type="Texture2D" uid="uid://b0unbl4vx0tow" path="res://assets/gui/menu/buttons/buttonSquare_brown_pressed.png" id="5_18b48"]

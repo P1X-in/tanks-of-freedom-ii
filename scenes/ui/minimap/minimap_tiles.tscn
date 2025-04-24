@@ -1,79 +1,79 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=16 format=3 uid="uid://cw3kutei45xkc"]
 
-[ext_resource path="res://assets/gui/picker/minimap_tile_building.png" type="Texture2D" id=1]
-[ext_resource path="res://assets/gui/picker/minimap_tile_city.png" type="Texture2D" id=2]
-[ext_resource path="res://assets/gui/picker/minimap_tile_dirt_road.png" type="Texture2D" id=3]
-[ext_resource path="res://assets/gui/picker/minimap_tile_forest.png" type="Texture2D" id=4]
-[ext_resource path="res://assets/gui/picker/minimap_tile_grass.png" type="Texture2D" id=5]
-[ext_resource path="res://assets/gui/picker/minimap_tile_mountain.png" type="Texture2D" id=6]
-[ext_resource path="res://assets/gui/picker/minimap_tile_river.png" type="Texture2D" id=7]
-[ext_resource path="res://assets/gui/picker/minimap_tile_road.png" type="Texture2D" id=8]
-[ext_resource path="res://assets/gui/picker/minimap_tile_concrete.png" type="Texture2D" id=9]
-[ext_resource path="res://assets/gui/picker/minimap_tile_water.png" type="Texture2D" id=10]
-[ext_resource path="res://assets/gui/picker/minimap_tile_snow.png" type="Texture2D" id=11]
-[ext_resource path="res://assets/gui/picker/minimap_tile_sand.png" type="Texture2D" id=12]
-[ext_resource path="res://assets/gui/picker/minimap_tile_forest_autumn.png" type="Texture2D" id=13]
-[ext_resource path="res://assets/gui/picker/minimap_tile_dunes.png" type="Texture2D" id=14]
-[ext_resource path="res://assets/gui/picker/minimap_tile_cacti.png" type="Texture2D" id=15]
+[ext_resource type="Texture2D" uid="uid://bid1yvphxej3v" path="res://assets/gui/picker/minimap_tile_building.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://djuxlio7jsu2d" path="res://assets/gui/picker/minimap_tile_city.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://drjsx8jkvd8kr" path="res://assets/gui/picker/minimap_tile_dirt_road.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bhe6j2rwc7cib" path="res://assets/gui/picker/minimap_tile_forest.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://d0vdvra45ap5y" path="res://assets/gui/picker/minimap_tile_grass.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cohnsalkdalup" path="res://assets/gui/picker/minimap_tile_mountain.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://sngi5af2kjhp" path="res://assets/gui/picker/minimap_tile_river.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://2npli4qv4hhn" path="res://assets/gui/picker/minimap_tile_road.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cub8wc0b6qvpc" path="res://assets/gui/picker/minimap_tile_concrete.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bpwummkxwagxw" path="res://assets/gui/picker/minimap_tile_water.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://b8uifgd3cik21" path="res://assets/gui/picker/minimap_tile_snow.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://ev74a3wqsxl4" path="res://assets/gui/picker/minimap_tile_sand.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://dnasssvaw3833" path="res://assets/gui/picker/minimap_tile_forest_autumn.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://c1u0m13a3abev" path="res://assets/gui/picker/minimap_tile_dunes.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://j1v31y1n2jqn" path="res://assets/gui/picker/minimap_tile_cacti.png" id="15"]
 
 [node name="minimap_tiles" type="Node2D"]
 
 [node name="building" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 1 )
+position = Vector2(-506, -33)
+texture = ExtResource("1")
 
 [node name="city" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 2 )
+position = Vector2(-506, -33)
+texture = ExtResource("2")
 
 [node name="concrete" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 9 )
+position = Vector2(-506, -33)
+texture = ExtResource("9")
 
 [node name="dirt_road" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 3 )
+position = Vector2(-506, -33)
+texture = ExtResource("3")
 
 [node name="forest" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 4 )
+position = Vector2(-506, -33)
+texture = ExtResource("4")
 
 [node name="grass" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 5 )
+position = Vector2(-506, -33)
+texture = ExtResource("5")
 
 [node name="mountain" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 6 )
+position = Vector2(-506, -33)
+texture = ExtResource("6")
 
 [node name="river" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 7 )
+position = Vector2(-506, -33)
+texture = ExtResource("7")
 
 [node name="road" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 8 )
+position = Vector2(-506, -33)
+texture = ExtResource("8")
 
 [node name="water" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 10 )
+position = Vector2(-506, -33)
+texture = ExtResource("10")
 
 [node name="snow" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 11 )
+position = Vector2(-506, -33)
+texture = ExtResource("11")
 
 [node name="sand" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 12 )
+position = Vector2(-506, -33)
+texture = ExtResource("12")
 
 [node name="autumn" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 13 )
+position = Vector2(-506, -33)
+texture = ExtResource("13")
 
 [node name="dunes" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 14 )
+position = Vector2(-506, -33)
+texture = ExtResource("14")
 
 [node name="cacti" type="Sprite2D" parent="."]
-position = Vector2( -506, -33 )
-texture = ExtResource( 15 )
+position = Vector2(-506, -33)
+texture = ExtResource("15")

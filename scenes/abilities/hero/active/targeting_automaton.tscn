@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://b2jj2u3qg1jm0"]
 
-[ext_resource path="res://scenes/abilities/hero/active/targeting_automaton.gd" type="Script" id=1]
-[ext_resource path="res://scenes/abilities/hero/active/active.tscn" type="PackedScene" id=2]
+[ext_resource type="Script" uid="uid://djudqbr1vy6in" path="res://scenes/abilities/hero/active/targeting_automaton.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://ljrlhlvyllyf" path="res://scenes/abilities/hero/active/active.tscn" id="2"]
 
-[node name="targeting_automaton" instance=ExtResource( 2 )]
-script = ExtResource( 1 )
+[node name="targeting_automaton" instance=ExtResource("2")]
+script = ExtResource("1")
 label = "TR_TARG_AUT"
 description = "TR_TARG_AUT_DESC"
 draw_range = 1

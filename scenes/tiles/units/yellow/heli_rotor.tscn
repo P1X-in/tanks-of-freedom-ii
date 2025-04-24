@@ -22,7 +22,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a0yuq"]
 _data = {
-"rotate": SubResource("1")
+&"rotate": SubResource("1")
 }
 
 [sub_resource type="Animation" id="2"]
@@ -43,7 +43,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mtae5"]
 _data = {
-"rotate": SubResource("2")
+&"rotate": SubResource("2")
 }
 
 [sub_resource type="Animation" id="3"]
@@ -64,7 +64,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wwj5f"]
 _data = {
-"rotate": SubResource("3")
+&"rotate": SubResource("3")
 }
 
 [sub_resource type="Animation" id="4"]
@@ -85,7 +85,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ypjx"]
 _data = {
-"rotate": SubResource("4")
+&"rotate": SubResource("4")
 }
 
 [node name="rotor" type="Node3D"]

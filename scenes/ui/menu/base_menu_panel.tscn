@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://btja81mcoqvcc"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/base_menu_panel.gd" id="1"]
+[ext_resource type="Script" uid="uid://6xgmj5aodbaa" path="res://scenes/ui/menu/base_menu_panel.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_nnn1y"]
 
 [sub_resource type="Animation" id="3"]
@@ -112,9 +112,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e0gpw"]
 _data = {
-"RESET": SubResource("3"),
-"hide": SubResource("1"),
-"show": SubResource("2")
+&"RESET": SubResource("3"),
+&"hide": SubResource("1"),
+&"show": SubResource("2")
 }
 
 [node name="base_menu_panel" type="Control"]

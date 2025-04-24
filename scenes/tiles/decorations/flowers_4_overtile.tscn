@@ -1,38 +1,38 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://caqw20u6vlgsc"]
 
-[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_4.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=3]
+[ext_resource type="PackedScene" uid="uid://ley0148tebaa" path="res://assets/terrain/grasslands/plants_small/flower_4.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="3"]
 
-[node name="tile" instance=ExtResource( 3 )]
+[node name="tile" instance=ExtResource("3")]
 main_tile_view_cam_modifier = -10
 side_tile_view_cam_modifier = -25
 
 [node name="mesh" parent="." index="0"]
 cast_shadow = 0
 
-[node name="flower_4_1" parent="mesh" index="0" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0.9 )
+[node name="flower_4_1" parent="mesh" index="0" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0.9)
 
-[node name="flower_4_2" parent="mesh" index="1" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 1.8 )
+[node name="flower_4_2" parent="mesh" index="1" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 1.8)
 
-[node name="flower_4_3" parent="mesh" index="2" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1 )
+[node name="flower_4_3" parent="mesh" index="2" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
 
-[node name="flower_4_4" parent="mesh" index="3" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.6 )
+[node name="flower_4_4" parent="mesh" index="3" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.6)
 
-[node name="flower_4_5" parent="mesh" index="4" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.2 )
+[node name="flower_4_5" parent="mesh" index="4" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.2)
 
-[node name="flower_4_6" parent="mesh" index="5" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.3 )
+[node name="flower_4_6" parent="mesh" index="5" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.3)
 
-[node name="flower_4_7" parent="mesh" index="6" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, 1.1 )
+[node name="flower_4_7" parent="mesh" index="6" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, 1.1)
 
-[node name="flower_4_8" parent="mesh" index="7" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, 0.8 )
+[node name="flower_4_8" parent="mesh" index="7" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, 0.8)
 
-[node name="flower_4_9" parent="mesh" index="8" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1 )
+[node name="flower_4_9" parent="mesh" index="8" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)

@@ -858,4 +858,3 @@ func get_side_material_desat(side, _type="normal"):
 	#	return self.side_materials_metallic_desat[side]
 
 	return self.side_materials_desat[side]
-

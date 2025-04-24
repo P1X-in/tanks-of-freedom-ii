@@ -346,5 +346,3 @@ func close_changelog():
 	self.ui.hide_changelog()
 	await self.get_tree().create_timer(self.MENU_TIMEOUT).timeout
 	self.ui.show_menu()
-
-
