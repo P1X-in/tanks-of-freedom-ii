@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cu10bh4uu5aq6"]
 
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/tile.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://ca3xqnf2rv6iw" path="res://assets/terrain/variety/wall_straight2.obj" id="3"]
 
 [node name="wall_straight2" instance=ExtResource("2")]

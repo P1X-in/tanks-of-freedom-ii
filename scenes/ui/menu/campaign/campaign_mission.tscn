@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://b61jtis2h2knb"]
 
 [ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1"]
-[ext_resource type="Script" path="res://scenes/ui/menu/campaign/campaign_mission.gd" id="2"]
+[ext_resource type="Script" uid="uid://bec2fumml4hd2" path="res://scenes/ui/menu/campaign/campaign_mission.gd" id="2"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_l5xkv"]
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="4_jd3a2"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_ln6xn"]
@@ -121,9 +121,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8lift"]
 _data = {
-"RESET": SubResource("3"),
-"hide": SubResource("1"),
-"show": SubResource("2")
+&"RESET": SubResource("3"),
+&"hide": SubResource("1"),
+&"show": SubResource("2")
 }
 
 [node name="campaign_mission" instance=ExtResource("1")]

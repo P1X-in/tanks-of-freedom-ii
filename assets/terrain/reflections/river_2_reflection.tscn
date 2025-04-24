@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://dspw3223dt44o"]
 
-[ext_resource path="res://assets/terrain/reflections/river_2_reflection.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32_reflective.tres" type="Material" id=2]
-
-
+[ext_resource type="ArrayMesh" uid="uid://bt800syayyykk" path="res://assets/terrain/reflections/river_2_reflection.obj" id="1"]
+[ext_resource type="Material" uid="uid://bwgevluvlcqfg" path="res://assets/materials/arne32_reflective.tres" id="2"]
 
 [node name="river_2_reflection" type="MeshInstance3D"]
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+mesh = ExtResource("1")
+material/0 = ExtResource("2")

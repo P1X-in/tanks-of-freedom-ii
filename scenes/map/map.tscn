@@ -3,7 +3,7 @@
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="1"]
 [ext_resource type="Material" uid="uid://cvv3sh0uq5ynp" path="res://assets/water/water_material.tres" id="2"]
 [ext_resource type="PackedScene" uid="uid://dfk0pnl01eotc" path="res://scenes/ui/markers/tile_box.tscn" id="3"]
-[ext_resource type="Script" path="res://scenes/map/map.gd" id="4"]
+[ext_resource type="Script" uid="uid://dnb1uev1l7x4h" path="res://scenes/map/map.gd" id="4"]
 [ext_resource type="ArrayMesh" uid="uid://cw6doarcq783m" path="res://assets/gui/board/map_frame.obj" id="5"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dj2ff8ec0jux7" path="res://assets/camera_attributes.tres" id="7_llrhv"]
 [ext_resource type="PackedScene" uid="uid://dfmdw1ysub4x1" path="res://scenes/camera.tscn" id="11"]

@@ -33,7 +33,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k2i6m"]
 _data = {
-"rotate": SubResource("1")
+&"rotate": SubResource("1")
 }
 
 [sub_resource type="Animation" id="2"]
@@ -66,7 +66,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_njllm"]
 _data = {
-"rotate": SubResource("2")
+&"rotate": SubResource("2")
 }
 
 [node name="rotor" type="Node3D"]

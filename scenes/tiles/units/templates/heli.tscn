@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://s6g08w5ljxvm"]
 
-[ext_resource type="Script" path="res://scenes/tiles/units/templates/heli.gd" id="1"]
+[ext_resource type="Script" uid="uid://cta6igsbp2em7" path="res://scenes/tiles/units/templates/heli.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="2"]
 [ext_resource type="AudioStream" uid="uid://nj4o27bvq3k3" path="res://assets/units/audio/helicopter_move.wav" id="3"]
 [ext_resource type="AudioStream" uid="uid://blrcs175mat68" path="res://assets/units/audio/helicopter_damage.wav" id="4"]
 [ext_resource type="AudioStream" uid="uid://44w75p62dvdw" path="res://assets/units/audio/helicopter_die.wav" id="6"]
 [ext_resource type="AudioStream" uid="uid://sd73vscxvto2" path="res://assets/units/audio/missile_attack.wav" id="7_4xwxc"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/unit/pick_up.tscn" id="8"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/unit/drop_off.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://b5nul8njrox76" path="res://scenes/abilities/unit/pick_up.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://b37tcqfoip0k5" path="res://scenes/abilities/unit/drop_off.tscn" id="9"]
 
 [node name="heli" instance=ExtResource("2")]
 script = ExtResource("1")

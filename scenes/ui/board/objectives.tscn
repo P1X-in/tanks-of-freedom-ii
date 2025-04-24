@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cxyvigb7jv67r"]
 
-[ext_resource type="Script" path="res://scenes/ui/board/objectives.gd" id="1"]
+[ext_resource type="Script" uid="uid://b0sjq8mhye8o3" path="res://scenes/ui/board/objectives.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_ad6gj"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_q74m6"]
 
@@ -117,10 +117,10 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1puoi"]
 _data = {
-"RESET": SubResource("2"),
-"flash": SubResource("1"),
-"hide": SubResource("Animation_xi221"),
-"show": SubResource("Animation_bwahp")
+&"RESET": SubResource("2"),
+&"flash": SubResource("1"),
+&"hide": SubResource("Animation_xi221"),
+&"show": SubResource("Animation_bwahp")
 }
 
 [node name="objectives" type="Control"]

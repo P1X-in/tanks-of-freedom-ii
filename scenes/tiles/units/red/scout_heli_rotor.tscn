@@ -21,7 +21,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sp3n0"]
 _data = {
-"rotation": SubResource("1")
+&"rotation": SubResource("1")
 }
 
 [node name="rotor" type="Node3D"]

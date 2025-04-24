@@ -1,7 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://c14hahmdln3o6"]
 
-[ext_resource path="res://assets/gui/icons/tof48.png" type="Texture2D" id=1]
-
+[ext_resource type="Texture2D" uid="uid://dqklthxke575r" path="res://assets/gui/icons/tof48.png" id="1"]
 
 [node name="tof" type="Sprite2D"]
-texture = ExtResource( 1 )
+texture = ExtResource("1")

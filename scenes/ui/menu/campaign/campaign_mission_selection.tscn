@@ -1,16 +1,16 @@
 [gd_scene load_steps=26 format=3 uid="uid://cyl32ydicrnad"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/campaign/campaign_mission_selection.gd" id="1"]
+[ext_resource type="Script" uid="uid://csadte7d0wl66" path="res://scenes/ui/menu/campaign/campaign_mission_selection.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_es55k"]
 [ext_resource type="Texture2D" uid="uid://deeked66umgj" path="res://assets/gui/campaign/dike_continent.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dqt600ejx5uaj" path="res://assets/gui/menu/backgrounds/map_panel.png" id="3_1vyoc"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_4d13j"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_left.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_right.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://shs741dswr0v" path="res://scenes/ui/icons/arrow_left.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b2gykaq7wpo1q" path="res://scenes/ui/icons/arrow_right.tscn" id="5"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_if6ob"]
 [ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_64pnk"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="6_ei8ho"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/medal.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://ctj4mfrt4ynwb" path="res://scenes/ui/icons/medal.tscn" id="7"]
 [ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="7_j6s3u"]
 [ext_resource type="Texture2D" uid="uid://b1gttp6sik08" path="res://assets/gui/icons/medal_whiteout.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://pfrikdjfa7lc" path="res://assets/gui/menu/buttons/buttonSquare_brown.png" id="9_yeryd"]
@@ -220,10 +220,10 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h4u4c"]
 _data = {
-"RESET": SubResource("3"),
-"hide": SubResource("1"),
-"medal": SubResource("4"),
-"show": SubResource("2")
+&"RESET": SubResource("3"),
+&"hide": SubResource("1"),
+&"medal": SubResource("4"),
+&"show": SubResource("2")
 }
 
 [node name="campaign_mission_selection" type="Control"]

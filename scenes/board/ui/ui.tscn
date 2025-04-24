@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://dg2dljfus8ij1"]
 
-[ext_resource type="Script" path="res://scenes/board/ui/ui.gd" id="1"]
+[ext_resource type="Script" uid="uid://bt0tap08gwreq" path="res://scenes/board/ui/ui.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://5bep6mdci41m" path="res://scenes/ui/radial/radial.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/ui/board/coin_view.tscn" id="3"]
 [ext_resource type="Theme" path="res://assets/gui/ui_theme.tres" id="4"]
