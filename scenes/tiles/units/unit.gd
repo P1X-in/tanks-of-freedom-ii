@@ -20,6 +20,8 @@ var enable_healthbar = false
 @onready var healthbar_lv2 = $"mesh_anchor/healthbar/SubViewport/level2"
 @onready var healthbar_lv3 = $"mesh_anchor/healthbar/SubViewport/level3"
 
+@onready var energybar = $"mesh_anchor/healthbar/SubViewport/energy"
+
 @export var unit_name = ""
 @export var side = "neutral"
 var team = null
@@ -46,6 +48,7 @@ var kills = 0
 var ai_paused = false
 var tether_point = Vector2(0, 0)
 var tether_length = 0
+@export var perform_extra_lookup = false
 # AI modifiers end
 
 var modifiers = {}
@@ -83,6 +86,7 @@ func reset():
 	self.move = stats["max_move"]
 	self.attacks = stats["max_attacks"]
 	self._update_healthbar()
+	self._update_energy()
 	self._update_level()
 
 func get_dict():
@@ -145,6 +149,9 @@ func get_stats_with_modifiers():
 		if self.modifiers.has(stat_key):
 			stats[stat_key] += self.modifiers[stat_key]
 
+	return _apply_experience_modifiers(stats)
+
+func _apply_experience_modifiers(stats):
 	if self.level > 1:
 		stats["armor"] += 1
 	if self.level > 2:
@@ -163,14 +170,22 @@ func use_move(value):
 	self.move -= value
 	if self.move < 1:
 		self.remove_highlight()
+	self._update_energy()
 
 func use_all_moves():
 	self.use_move(self.move)
+
+
+func restore_move(value):
+	self.move += value
+	self.restore_highlight()
+	self._update_energy()
 
 func reset_move():
 	var stats = self.get_stats_with_modifiers()
 	self.move = stats["max_move"]
 	self.restore_highlight()
+	self._update_energy()
 
 func replenish_moves():
 	self.reset_move()
@@ -288,6 +303,11 @@ func receive_direct_damage(value):
 func is_alive():
 	return self.hp > 0
 
+
+func is_damaged() -> bool:
+	return hp < max_hp
+
+
 func get_attack():
 	var stats = self.get_stats_with_modifiers()
 	return stats["attack"]
@@ -349,8 +369,11 @@ func apply_modifier(modifier_name, value):
 func clear_modifiers():
 	self.modifiers.clear()
 
-func gain_exp():
+func score_kill():
 	self.kills += 1
+	self.gain_exp()
+
+func gain_exp():
 	if not self.is_max_level():
 		self.experience += 1
 
@@ -415,6 +438,7 @@ func restore_from_state(state):
 	self.modifiers = state["modifiers"]
 
 	self._update_healthbar()
+	self._update_energy()
 	self._update_level()
 
 	if self.move < 1:
@@ -449,6 +473,11 @@ func _update_level():
 		self.healthbar_lv2.show()
 	if self.level == 3:
 		self.healthbar_lv3.show()
+
+func _update_energy():
+	if self.energybar != null:
+		self.energybar.value = self.move
+		self.energybar.max_value = self.max_move
 
 func enable_health():
 	self.enable_healthbar = true

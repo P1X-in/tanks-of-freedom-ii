@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdjcbovjyx7j5"]
+
+[ext_resource type="Texture2D" uid="uid://bu1tekc8nxvyh" path="res://assets/gui/icons/tank.png" id="1_mnw78"]
+
+[node name="tank" type="Sprite2D"]
+texture = ExtResource("1_mnw78")

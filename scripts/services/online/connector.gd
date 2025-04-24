@@ -4,7 +4,7 @@ class_name OnlineConnector
 var API_PORT: int = 443
 var API_LOCATION: String = "api.tof.p1x.in"
 const API_USE_SSL: bool = true
-const API_PRESENT_VERSION: String = "0.3.0"
+const API_PRESENT_VERSION: String = "1.0.0"
 
 var online_service = null
 
@@ -12,7 +12,9 @@ func _init(online) -> void:
 	self.online_service = online
 
 func _read_settings() -> void:
-	self.API_LOCATION = self.online_service.settings.get_option("online_domain")
+	var new_value = self.online_service.settings.get_option("online_domain")
+	if new_value is String:
+		self.API_LOCATION = new_value
 	self.API_PORT = int(self.online_service.settings.get_option("online_port"))
 
 func _get_request(resource: String, expect_json: bool = true) -> Dictionary:

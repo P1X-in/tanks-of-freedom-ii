@@ -52,6 +52,8 @@ stream = ExtResource("6")
 
 [node name="ab_attack" type="AudioStreamPlayer" parent="audio" index="7"]
 stream = ExtResource("10")
+bus = &"Attack"
 
 [node name="ab_hit" type="AudioStreamPlayer" parent="audio" index="8"]
 stream = ExtResource("9")
+bus = &"Attack"

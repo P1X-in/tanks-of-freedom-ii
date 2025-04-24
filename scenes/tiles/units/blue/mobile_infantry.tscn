@@ -2,10 +2,11 @@
 
 [ext_resource type="ArrayMesh" uid="uid://dn6ck3fuoa3an" path="res://assets/units/blue/mobile_infantry.obj" id="1"]
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/mobile_infantry.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cqcktcidclmag" path="res://scenes/tiles/units/templates/mobile_infantry.tscn" id="3"]
 
 [node name="mobile_infantry" instance=ExtResource("3")]
 side = "blue"
+perform_extra_lookup = true
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 mesh = ExtResource("1")

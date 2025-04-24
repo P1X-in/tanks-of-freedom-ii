@@ -14,8 +14,12 @@ extends Control
 @onready var online_lobby = $"online_lobby/lobby"
 @onready var multiplayer_panel = $"multiplayer/multiplayer"
 @onready var multiplayer_lobby_panel = $"multiplayer_lobby/lobby"
+@onready var extra_buttons = $"extra_buttons"
 @onready var credits_panel = $"credits/credits"
-@onready var credits_button = $"credits_button/button"
+@onready var credits_button = $"extra_buttons/credits_button"
+@onready var changelog_panel = $"changelog/changelog"
+@onready var changelog_button = $"extra_buttons/changelog_button"
+
 
 func bind_menu(main_menu):
 	self.menu.bind_menu(main_menu)
@@ -30,23 +34,26 @@ func bind_menu(main_menu):
 	self.multiplayer_panel.bind_menu(main_menu)
 	self.multiplayer_lobby_panel.bind_menu(main_menu)
 	self.credits_panel.bind_menu(main_menu)
+	self.changelog_panel.bind_menu(main_menu)
 
 	var version_string = tr("TR_VERSION") + " v" + ProjectSettings.get_setting("application/config/version")
 	if main_menu.settings._is_steam_deck():
 		version_string += " SteamOS"
 	else:
 		version_string += " " + OS.get_name()
+	if OS.has_feature("demo"):
+		version_string += " Demo"
 	self.set_version(version_string)
 
 func hide_menu():
 	self.menu.hide_panel()
 	#self.logo.hide()
-	self.credits_button.hide()
+	self.extra_buttons.hide()
 
 func show_menu():
 	self.menu.show_panel()
 	#self.logo.show()
-	self.credits_button.show()
+	self.extra_buttons.show()
 
 func show_picker():
 	self.picker.show_picker()
@@ -134,7 +141,18 @@ func show_credits():
 func hide_credits():
 	self.credits_panel.hide_panel()
 
+func show_changelog():
+	self.changelog_panel.show_panel()
+
+func hide_changelog():
+	self.changelog_panel.hide_panel()
+
 
 func _on_button_pressed():
 	self.credits_panel.audio.play("menu_back")
 	self.credits_panel.main_menu.open_credits()
+
+
+func _on_changelog_button_pressed():
+	self.credits_panel.audio.play("menu_back")
+	self.credits_panel.main_menu.open_changelog()

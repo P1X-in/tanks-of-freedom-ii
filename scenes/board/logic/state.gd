@@ -113,13 +113,24 @@ func is_current_player_ai():
 	return self.get_current_param("type") == self.PLAYER_AI
 
 func is_player_human(side):
-	return self.players[self.get_player_id_by_side(side)]["type"] == self.PLAYER_HUMAN
+	var player_id = self.get_player_id_by_side(side)
+	if player_id < 0:
+		return false
+	return self.players[player_id]["type"] == self.PLAYER_HUMAN
 
 func is_current_player_alive():
 	return self.get_current_param("alive")
 
 func is_current_player_active_peer(peer_id):
 	return self.get_current_param("peer_id") == peer_id
+
+
+func is_non_observer_peer(peer_id):
+	for player_data in self.players:
+		if player_data["peer_id"] == peer_id:
+			return true
+	return false
+
 
 func clear_peer_id(peer_id):
 	var index = 0
@@ -129,6 +140,14 @@ func clear_peer_id(peer_id):
 			self.players[index]['peer_id'] = null
 			return
 		index += 1
+
+
+func has_free_peer():
+	for player_data in self.players:
+		if player_data["peer_id"] == null:
+			return true
+	return false
+
 
 func assign_free_peer(peer_id):
 	var index = 0

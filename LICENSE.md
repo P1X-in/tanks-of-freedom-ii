@@ -1,5 +1,5 @@
 # The MIT License (MIT)
-This license applies both to the code, and to all graphical assets within this repository, unless later parts of this file, or the Credits list states otherwise.
+This license applies both to the code, and to all graphical assets used in the game, unless later parts of this file, or the Credits list states otherwise.
 
 Copyright (c) 2021 P1X
 
@@ -21,6 +21,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+
+## Marketing assets
+All media files within docs folder are proprietary with copyrights belonging solely to their respectful owners.
 
 
 ## Fonts

@@ -1,0 +1,401 @@
+[gd_scene load_steps=18 format=3 uid="uid://b6crhl6g0ory"]
+
+[ext_resource type="Script" path="res://scenes/ui/menu/settings/settings.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_6psbf"]
+[ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_i5u15"]
+[ext_resource type="PackedScene" uid="uid://cocnl04cpm23o" path="res://scenes/ui/menu/settings/settings_gameplay.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dvtv5e3to0um5" path="res://scenes/ui/menu/settings/settings_general.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bhd3mqllw6g05" path="res://scenes/ui/menu/settings/settings_audio.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://cjragqykjl7h2" path="res://scenes/ui/menu/settings/settings_video.tscn" id="6"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="8_ld2fy"]
+[ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="8_pyc6j"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="9_3yekk"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="10_o8msu"]
+[ext_resource type="PackedScene" uid="uid://o1l3w0lursuf" path="res://scenes/ui/menu/settings/settings_multi.tscn" id="11_ettfb"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="11_vkxpb"]
+
+[sub_resource type="Animation" id="3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="1"]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="2"]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rhn4h"]
+_data = {
+"RESET": SubResource("3"),
+"hide": SubResource("1"),
+"show": SubResource("2")
+}
+
+[node name="settings" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="background" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -400.0
+offset_top = -350.0
+offset_right = 400.0
+offset_bottom = 350.0
+texture = ExtResource("2_i5u15")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="widgets" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -400.0
+offset_top = -350.0
+offset_right = 400.0
+offset_bottom = 350.0
+
+[node name="tabs" type="Control" parent="widgets"]
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 210.0
+offset_bottom = 620.0
+
+[node name="general" type="TextureButton" parent="widgets/tabs"]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 40.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/general"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
+text = "TR_GENERAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="video" type="TextureButton" parent="widgets/tabs"]
+layout_mode = 0
+offset_top = 180.0
+offset_right = 190.0
+offset_bottom = 220.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/video"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
+text = "TR_VIDEO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="audio" type="TextureButton" parent="widgets/tabs"]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 190.0
+offset_bottom = 280.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/audio"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
+text = "TR_AUDIO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="gameplay" type="TextureButton" parent="widgets/tabs"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 190.0
+offset_bottom = 100.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/gameplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
+text = "TR_GAMEPLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="multiplayer" type="TextureButton" parent="widgets/tabs"]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 190.0
+offset_bottom = 160.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/multiplayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
+text = "TR_MULTIPLAYER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="controls" type="TextureButton" parent="widgets/tabs"]
+layout_mode = 0
+offset_top = 500.0
+offset_right = 190.0
+offset_bottom = 540.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/tabs/controls"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
+text = "TR_CONTROLS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="boxes" type="Control" parent="widgets"]
+anchors_preset = 0
+offset_left = 210.0
+offset_right = 810.0
+offset_bottom = 300.0
+
+[node name="settings_general" parent="widgets/boxes" instance=ExtResource("4")]
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="settings_video" parent="widgets/boxes" instance=ExtResource("6")]
+visible = false
+offset_right = -500.0
+offset_bottom = -300.0
+
+[node name="settings_audio" parent="widgets/boxes" instance=ExtResource("5")]
+visible = false
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="settings_gameplay" parent="widgets/boxes" instance=ExtResource("3")]
+visible = false
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="settings_multi" parent="widgets/boxes" instance=ExtResource("11_ettfb")]
+visible = false
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="back_button" type="TextureButton" parent="widgets"]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 640.0
+offset_right = 495.0
+offset_bottom = 680.0
+texture_normal = ExtResource("8_ld2fy")
+texture_pressed = ExtResource("9_3yekk")
+texture_hover = ExtResource("10_o8msu")
+texture_focused = ExtResource("10_o8msu")
+
+[node name="label" type="Label" parent="widgets/back_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_vkxpb")
+text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="help" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 400.0
+offset_top = -350.0
+offset_right = 600.0
+offset_bottom = 350.0
+
+[node name="background" type="NinePatchRect" parent="help"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 700.0
+texture = ExtResource("8_pyc6j")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="text" type="Label" parent="help"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 190.0
+offset_bottom = 670.0
+theme_override_fonts/font = ExtResource("2_6psbf")
+autowrap_mode = 3
+
+[node name="animations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rhn4h")
+}
+speed_scale = 4.0
+
+[connection signal="focus_entered" from="widgets/tabs/general" to="." method="hide_help"]
+[connection signal="pressed" from="widgets/tabs/general" to="." method="_on_general_pressed"]
+[connection signal="focus_entered" from="widgets/tabs/video" to="." method="hide_help"]
+[connection signal="pressed" from="widgets/tabs/video" to="." method="_on_video_pressed"]
+[connection signal="focus_entered" from="widgets/tabs/audio" to="." method="hide_help"]
+[connection signal="pressed" from="widgets/tabs/audio" to="." method="_on_audio_pressed"]
+[connection signal="focus_entered" from="widgets/tabs/gameplay" to="." method="hide_help"]
+[connection signal="pressed" from="widgets/tabs/gameplay" to="." method="_on_gameplay_pressed"]
+[connection signal="focus_entered" from="widgets/tabs/multiplayer" to="." method="hide_help"]
+[connection signal="pressed" from="widgets/tabs/multiplayer" to="." method="_on_multiplayer_pressed"]
+[connection signal="focus_entered" from="widgets/tabs/controls" to="." method="hide_help"]
+[connection signal="pressed" from="widgets/tabs/controls" to="." method="_on_controls_pressed"]
+[connection signal="focus_entered" from="widgets/back_button" to="." method="hide_help"]
+[connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

@@ -11,7 +11,7 @@ func _execute(board, position):
 	for neighbour in source_tile.neighbours.values():
 		if neighbour.has_friendly_unit(self.source.side):
 			unit = neighbour.unit.tile
-			if unit.unit_class == "tank":
+			if unit.unit_class in ["tank", "mobile_infantry"]:
 				unit.apply_modifier("attack_air", true)
 				board.bless_a_tile(neighbour)
 			elif unit.unit_class != "rocket_artillery":

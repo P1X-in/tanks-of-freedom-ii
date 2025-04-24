@@ -21,4 +21,9 @@ func _is_visible(_board=null):
     return true
 
 func is_tile_applicable(tile, _source_tile):
-    return tile.has_friendly_unit(self.source.side) and tile.unit.tile.unit_class == "infantry"
+    var applicable_types = ["infantry"]
+    if self.source.level == 3:
+        applicable_types.append("mobile_infantry")
+    if tile.has_friendly_unit(self.source.side):
+        return tile.unit.tile.unit_class in applicable_types
+    return false

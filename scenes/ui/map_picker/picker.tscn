@@ -155,9 +155,9 @@ offset_bottom = 350.0
 
 [node name="name" type="Control" parent="widgets"]
 anchors_preset = 0
-offset_left = 25.0
+offset_left = 775.0
 offset_top = 605.0
-offset_right = 425.0
+offset_right = 1175.0
 offset_bottom = 705.0
 
 [node name="map_name" type="LineEdit" parent="widgets/name"]
@@ -217,9 +217,9 @@ vertical_alignment = 1
 [node name="code" type="Control" parent="widgets"]
 visible = false
 anchors_preset = 0
-offset_left = 25.0
+offset_left = 875.0
 offset_top = 605.0
-offset_right = 425.0
+offset_right = 1275.0
 offset_bottom = 705.0
 
 [node name="code" type="LineEdit" parent="widgets/code"]
@@ -254,9 +254,9 @@ vertical_alignment = 1
 
 [node name="cancel_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
-offset_left = 975.0
+offset_left = 25.0
 offset_top = 640.0
-offset_right = 1165.0
+offset_right = 215.0
 offset_bottom = 680.0
 focus_neighbor_left = NodePath("../name/load_button")
 texture_normal = ExtResource("4_s2yji")

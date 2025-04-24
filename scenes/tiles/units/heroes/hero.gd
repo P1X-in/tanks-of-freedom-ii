@@ -54,3 +54,11 @@ func restore_from_state(state):
 
 func is_hero():
 	return true
+
+func _apply_experience_modifiers(stats):
+	if self.level > 0:
+		stats["armor"] += 1
+	if self.level > 1:
+		stats["max_move"] += 1
+
+	return stats

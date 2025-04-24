@@ -210,9 +210,9 @@ vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
 reset_on_save = false
-speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_3nwki")
 }
+speed_scale = 4.0
 
 [connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

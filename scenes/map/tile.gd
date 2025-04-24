@@ -115,13 +115,17 @@ func can_pass_through(moving_unit):
 	return true
 
 func has_enemy_unit(side, team=null):
-	if self.unit.is_present() && self.unit.tile.side != side && self.unit.tile.team != team:
-		return true
+	if self.unit.is_present():
+		if self.unit.tile.side != side:
+			if team != null:
+				return self.unit.tile.team != team
+			return true
 	return false
 
 func has_allied_unit(team):
-	if self.unit.is_present() && self.unit.tile.team == team:
-		return true
+	if self.unit.is_present():
+		if team != null:
+			return self.unit.tile.team == team
 	return false
 
 func has_friendly_unit(side):
@@ -130,13 +134,17 @@ func has_friendly_unit(side):
 	return false
 
 func has_enemy_building(side, team=null):
-	if self.building.is_present() && self.building.tile.side != side && self.building.tile.team != team:
-		return true
+	if self.building.is_present():
+		if self.building.tile.side != side:
+			if team != null:
+				return self.building.tile.team != team
+			return true
 	return false
 
 func has_allied_building(team):
-	if self.building.is_present() && self.building.tile.team == team:
-		return true
+	if self.building.is_present():
+		if team != null:
+			return self.building.tile.team == team
 	return false
 
 func has_friendly_building(side):
@@ -214,7 +222,7 @@ func is_damageable():
 func apply_invisibility():
 	for fragment in self.fragments:
 		if fragment.is_present() and fragment.tile.is_invisible:
-			fragment.tile.hide_mesh() 
+			fragment.tile.hide_mesh()
 
 
 func _settings_changed(key, _new_value):

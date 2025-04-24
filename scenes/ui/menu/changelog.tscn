@@ -1,0 +1,285 @@
+[gd_scene load_steps=11 format=3 uid="uid://bs2u3kr8ll868"]
+
+[ext_resource type="Script" path="res://scenes/ui/menu/changelog.gd" id="1_p3c6l"]
+[ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_u0cw5"]
+[ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_ra12s"]
+[ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="4_1sqed"]
+[ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="5_uc3gr"]
+[ext_resource type="Texture2D" uid="uid://dk8ep1qsmga0q" path="res://assets/gui/menu/buttons/buttonMed_brown_hover.png" id="6_pxy1y"]
+
+[sub_resource type="Animation" id="3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:pivot_offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="1"]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="2"]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3nwki"]
+_data = {
+"RESET": SubResource("3"),
+"hide": SubResource("1"),
+"show": SubResource("2")
+}
+
+[node name="changelog" type="Control"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p3c6l")
+
+[node name="background" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+texture = ExtResource("2_u0cw5")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="widgets" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="widgets"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+horizontal_scroll_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="widgets/ScrollContainer"]
+custom_minimum_size = Vector2(760, 510)
+layout_mode = 2
+bbcode_enabled = true
+text = "[b]### 1.0.8[/b]
+- In Ruby Dusk campaign mission Hold the Line the amount of AP available to the AI has been greatly reduced
+- Added three rolling autosaves
+- Added experimental undo last unit move with R key
+- Fixed Targetting Automaton not enabling Mobile Infantry to attack air units
+- Fixed a bug where tilt-shift toggle was not being applied on map load
+ 
+[b]### 1.0.7[/b]
+- Multiplayer host can now kick players from lobby
+- Added configurable turn time limit to multiplayer games
+- Added configurable turns limit to multiplayer games
+- Added points summary in multiplayer games in case of a turn limit draw
+- Added Online join code copy button
+- Added tilt-shift blur toggle to Settings
+- Moved UI elements in map picker and load/save interface
+ 
+[b]### 1.0.6[/b]
+- Added spectators to multiplayer matches
+- Unit is snapped into position before attacking to prevent misalignment
+- Online registration is now stored on per-domain basis
+- Fixed screen edge camera pan getting stuck if camera is dragged while panning
+- Fixed multiplayer settings domain being converted to a number value
+- Fixed a reggresion introduced in 1.0.3 that prevented players from properly reconnecting to a multiplayer match
+ 
+[b]### 1.0.5[/b]
+- Added rendering scale slider to Video settings
+- Fixed AI taking over player turns in Multiplayer and Online
+- Fixed desync between clients when canceling ability in Multiplayer and Online
+ 
+[b]### 1.0.3[/b]
+- Added movement points bar to units
+- Remapped Middle Mouse Button to move camera instead of end turn
+- Added patch notes in main menu
+- Added \"Reset\" button in multiplayer settings
+	- Use \"Reset\" if Online is not working and you played a pre-release version of the game
+- Fixed a crash when any of the online domains was set to empty string
+ 
+[b]### 1.0.0[/b]
+- Medkit and Repair Kit abilities now grant exp to the unit
+- Repair Kit ability costs less on higher levels
+- Attack Helicopter ability Pick Up now works on Mobile Infantry when on lvl 3
+- Hero level up bonuses rebalanced:
+  - armor bonus at lvl 1
+  - movement bonus at lvl 2
+  - ability cooldown bonus at lvl 3
+- Shortened cooldown on some hero abilities
+- Extended AI lookup range to make it more active
+- Lowered some ability SFX volume
+- Fixed a possible team detection bug
+- Fixed a dialogue issue in Prologue
+- Fixed some dialogue issues in campaigns
+- Fixed a no moves popup after loading saved game and ending turn
+- Fixed Deep Strike infantry unit spawning without team assignment
+- Fixed a bug preventing maps from being uploaded
+- Fixed a bug that caused the game to softlock when it could not connect to online relay"
+
+[node name="back_button" type="TextureButton" parent="widgets"]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 545.0
+offset_right = 495.0
+offset_bottom = 585.0
+texture_normal = ExtResource("4_1sqed")
+texture_pressed = ExtResource("5_uc3gr")
+texture_hover = ExtResource("6_pxy1y")
+texture_focused = ExtResource("6_pxy1y")
+
+[node name="label" type="Label" parent="widgets/back_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ra12s")
+text = "TR_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="animations" type="AnimationPlayer" parent="."]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_3nwki")
+}
+speed_scale = 4.0
+
+[connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]

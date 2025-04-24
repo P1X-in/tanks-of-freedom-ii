@@ -6,4 +6,4 @@ func _init(_board):
 
 func _observe(event):
 	if event.attacker != null:
-		event.attacker.gain_exp()
+		event.attacker.score_kill()

@@ -27,7 +27,9 @@ func _on_settings_changed(key: String, _value) -> void:
 
 
 func _read_settings() -> void:
-	self.THUMBNAIL_LOCATION = self.settings.get_option("online_domain")
+	var new_value = self.settings.get_option("online_domain")
+	if new_value is String:
+		self.THUMBNAIL_LOCATION = new_value
 
 
 func is_integrated() -> bool:
@@ -92,7 +94,7 @@ func fetch_thumbnail(map_code: String) -> Dictionary:
 
 	var url: String = ""
 	if self.api_version == 1:
-		url = self.THUMBNAIL_V1_URL + map_code + ".png" 
+		url = self.THUMBNAIL_V1_URL + map_code + ".png"
 	elif self.api_version == 2:
 		url = self.THUMBNAIL_URL + map_code + ".png"
 	var result = await self.connector._request_any(self.THUMBNAIL_LOCATION, url, HTTPClient.METHOD_GET, "", false, false)

@@ -1,12 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://jnw53o383miy"]
 
-[ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/scout_heli.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://ck44txckfimci" path="res://scenes/tiles/units/templates/scout_heli.tscn" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://wugkpeue7hve" path="res://assets/units/blue/scout_heli.obj" id="3"]
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="3_xf4j6"]
 [ext_resource type="PackedScene" uid="uid://jmrbebeergcb" path="res://scenes/tiles/units/blue/scout_heli_rotor.tscn" id="4"]
 
 [node name="scout" instance=ExtResource("1")]
 side = "blue"
+perform_extra_lookup = true
 
 [node name="mesh" parent="mesh_anchor" index="0"]
 mesh = ExtResource("3")

@@ -30,7 +30,7 @@ func _ready() -> void:
 
 func create_game(map_name: String) -> Error:
 	self.players.clear()
-	self.player_limit = _get_player_count(map_name)
+	self.player_limit = 7 #_get_player_count(map_name)
 	var peer = ENetMultiplayerPeer.new()
 	var error = peer.create_server(self.settings.get_option("game_port"), self.player_limit)
 	if error:
@@ -45,6 +45,7 @@ func create_game(map_name: String) -> Error:
 
 	return OK
 
+
 func connect_server(ip_address: String, port: int) -> Error:
 	var peer = ENetMultiplayerPeer.new()
 	var error = peer.create_client(ip_address, port)
@@ -52,6 +53,7 @@ func connect_server(ip_address: String, port: int) -> Error:
 		return error
 	multiplayer.multiplayer_peer = peer
 	return OK
+
 
 func close_game() -> void:
 	self.players.clear()
@@ -84,6 +86,7 @@ func player_loaded() -> void:
 func _on_player_connected(id: int) -> void:
 	_register_player.rpc_id(id, self._get_player_info())
 
+
 @rpc("any_peer", "reliable")
 func _register_player(new_player_info: Dictionary) -> void:
 	var new_player_id = multiplayer.get_remote_sender_id()
@@ -92,6 +95,7 @@ func _register_player(new_player_info: Dictionary) -> void:
 
 	if not multiplayer.is_server() and new_player_id == 1:
 		self.selected_map = new_player_info["map"]
+
 
 func _on_player_disconnected(id: int) -> void:
 	self.players.erase(id)
@@ -104,21 +108,16 @@ func _on_connected_ok() -> void:
 	connection_success.emit()
 	player_connected.emit(peer_id, self._get_player_info())
 
+
 func _on_connected_fail() -> void:
 	self.close_game()
 	connection_failed.emit()
+
 
 func _on_server_disconnected() -> void:
 	self.close_game()
 	players.clear()
 	server_disconnected.emit()
-
-
-
-
-
-
-
 
 
 func _get_player_info() -> Dictionary:
@@ -127,6 +126,7 @@ func _get_player_info() -> Dictionary:
 		"map": self.selected_map,
 		"in_progress": self.match_in_progress
 	}
+
 
 func _get_player_count(map_name: String) -> int:
 	var map_data = self.map_list_service.get_map_data(map_name)
@@ -140,10 +140,11 @@ func _get_player_count(map_name: String) -> int:
 			key = str(x) + "_" + str(y)
 			if map_data["tiles"].has(key):
 				side = self._lookup_side(map_data["tiles"][key])
-				
+
 				if side != "":
 					sides[side] = side
 	return clampi(sides.size() - 1, 1, 3)
+
 
 func _lookup_side(data: Dictionary) -> String:
 	var hq_templates = [
@@ -158,3 +159,9 @@ func _lookup_side(data: Dictionary) -> String:
 			return data["building"]["side"]
 
 	return ""
+
+
+func is_server() -> bool:
+	if multiplayer.multiplayer_peer == null:
+		return false
+	return multiplayer.is_server()

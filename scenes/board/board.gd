@@ -41,16 +41,23 @@ var ending_turn_multiplier = 1
 var initial_hq_cam_skipped = false
 var mouse_click_position = null
 
+var last_unit_move = null
+
+
 func _ready():
 	self.set_up_ui()
 	self.set_up_map()
 	self.set_up_board()
+	_ready_start()
 
+
+func _ready_start():
 	if self.match_setup.restore_save_id == null:
 		self.match_setup.store_setup()
 		self.start_turn()
 	else:
 		self.restore_saved_state()
+
 
 func _input(event):
 	if not get_window().has_focus():
@@ -87,6 +94,10 @@ func _input(event):
 				self.audio.play("menu_click")
 				self.open_context_panel()
 
+			if event.is_action_pressed("undo_move"):
+				self.audio.play("menu_click")
+				self._undo_unit_move()
+
 			if OS.is_debug_build():
 				if event.is_action_pressed("cheat_capture"):
 					self.audio.play("menu_click")
@@ -94,6 +105,9 @@ func _input(event):
 				if event.is_action_pressed("cheat_kill"):
 					self.audio.play("menu_click")
 					self.cheat_kill()
+				if event.is_action_pressed("cheat_level_up"):
+					self.audio.play("menu_click")
+					self.cheat_level_up()
 
 		if event.is_action_pressed("editor_menu"):
 			self.audio.play("menu_click")
@@ -115,11 +129,14 @@ func _input(event):
 			if event.is_action_pressed("ui_cancel"):
 				self.close_end_turn_confirm_panel()
 
+
 func _can_current_player_perform_actions():
 	return not self.state.is_current_player_ai()
 
+
 func _physics_process(_delta):
 	self.hover_tile()
+
 
 func hover_tile():
 	if not _can_current_player_perform_actions():
@@ -138,11 +155,13 @@ func hover_tile():
 				var path = self.movement_markers.get_path_to_tile(tile)
 				self.path_markers.draw_path(path)
 
+
 func set_up_ui():
 	self.ui.settings_panel.bind_menu(self)
 	self.ui.hover_menu.board = self
 	self.ui.unit_stats.board = self
 	self.ui.end_turn_confirm.board = self
+	self.ui.summary.board = self
 	self.ui.radial.close_requested.connect(self.toggle_radial_menu)
 
 	self.ui.edge_pan_left.mouse_entered.connect(self.map.camera._on_edge_pan.bind([1, null]))
@@ -157,6 +176,8 @@ func set_up_ui():
 	self.ui.edge_pan_bottom.mouse_entered.connect(self.map.camera._on_edge_pan.bind([null, -1]))
 	self.ui.edge_pan_bottom.mouse_exited.connect(self.map.camera._on_edge_pan.bind([null, 0]))
 
+	self.ui.turn_timer.turn_timeout.connect(_timer_end_turn)
+
 
 func set_up_map():
 	self.map.builder.enable_health = true
@@ -165,6 +186,7 @@ func set_up_map():
 	else:
 		self.load_skirmish_map()
 	self.map.hide_invisible_tiles()
+
 
 func set_up_board():
 	self.ui.objectives.clear()
@@ -188,11 +210,12 @@ func set_up_board():
 				building.team = self.state.get_player_team(player_setup["side"])
 
 			index += 1
-
 	self.state.register_heroes(self.map.model)
+
 
 func _add_player_to_state(data):
 	self.state.add_player(data["type"], data["side"], data["alive"], data["team"])
+
 
 func start_music_track():
 	var tracks = 6
@@ -218,12 +241,18 @@ func end_turn():
 		self.toggle_radial_menu()
 	_end_turn()
 
+
 func _end_turn():
 	self.unselect_tile()
 	self.state.switch_to_next_player()
+	self.ui.reset_timer()
 	self.call_deferred("start_turn")
 
+
 func start_turn():
+	if self.match_setup.turn_limit > 0 and self.state.turn > self.match_setup.turn_limit:
+		self.end_game("none")
+		return
 	self.update_for_current_player()
 
 	await _manage_cinematic_bars()
@@ -238,8 +267,10 @@ func start_turn():
 	self.ui.flash_start_end_card(self.state.get_current_side(), self.state.turn)
 
 	_manage_ai_start()
+	_manage_turn_timer()
 
 	self.events.emit_turn_started(self.state.turn, self.state.current_player)
+
 
 func _manage_cinematic_bars():
 	if self.state.is_current_player_ai():
@@ -250,6 +281,7 @@ func _manage_cinematic_bars():
 		if self.ui.cinematic_bars.is_extended:
 			self.ui.hide_cinematic_bars()
 
+
 func _manage_ai_start():
 	if self.state.is_current_player_ai():
 		self.map.camera.ai_operated = true
@@ -258,6 +290,11 @@ func _manage_ai_start():
 	else:
 		self.map.camera.ai_operated = false
 		self.map.show_tile_box()
+
+
+func _manage_turn_timer():
+	if not self.state.is_current_player_ai() and self.match_setup.time_limit > 0:
+		self.ui.start_turn_timer(self.match_setup.time_limit)
 
 
 func select_tile(tile_position):
@@ -276,6 +313,7 @@ func select_tile(tile_position):
 
 	if self.active_ability != null:
 		if self.ability_markers.marker_exists(tile_position) or self.state.is_current_player_ai():
+			set_last_unit_move(null)
 			self.execute_active_ability(tile)
 		else:
 			self.unselect_tile()
@@ -289,11 +327,13 @@ func select_tile(tile_position):
 	elif self.selected_tile != null:
 		if self.selected_tile.unit.is_present():
 			if self.can_move_to_tile(tile):
+				set_last_unit_move(null)
 				self.move_unit(self.selected_tile, tile)
 				self.selected_tile = tile
 				self.show_contextual_select()
 
 			elif self.selected_tile.is_neighbour(tile) && tile.can_unit_interact(self.selected_tile.unit.tile) && self.state.can_current_player_afford(1):
+				set_last_unit_move(null)
 				self.handle_interaction(tile)
 
 			else:
@@ -321,19 +361,23 @@ func unselect_tile():
 	self.cancel_ability()
 	self.selected_tile_marker.hide()
 
+
 func refresh_tile_selection():
 	if self.selected_tile != null:
 		var selected_position = self.selected_tile.position
 		self.unselect_tile()
 		self.call_deferred("_reselect_tile", selected_position)
 
+
 func _reselect_tile(tile_position):
 	self.select_tile(tile_position)
+
 
 func reset_unit_markers():
 	self.movement_markers.reset()
 	self.interaction_markers.reset()
 	self.path_markers.reset()
+
 
 func cancel_ability():
 	self.active_ability = null
@@ -344,6 +388,7 @@ func cancel_ability():
 func load_skirmish_map():
 	self.map.loader.load_map_file(self.match_setup.map_name)
 
+
 func load_campaign_map():
 	self.map.loader.load_campaign_map(self.match_setup.campaign_name, self.match_setup.mission_no)
 	self.match_setup.campaign_win = true
@@ -351,8 +396,8 @@ func load_campaign_map():
 
 func update_for_current_player():
 	var current_player = self.state.get_current_player()
-
 	self.map.set_tile_box_side(current_player["side"])
+
 
 func toggle_radial_menu(context_object=null):
 	if self.map.camera.script_operated:
@@ -384,6 +429,7 @@ func toggle_radial_menu(context_object=null):
 	if _can_current_player_perform_actions():
 		self.map.tile_box.set_visible(not self.map.tile_box.is_visible())
 
+
 func setup_radial_menu(context_object=null):
 	self.ui.radial.clear_fields()
 	if context_object == null:
@@ -400,6 +446,7 @@ func setup_radial_menu(context_object=null):
 	else:
 		_setup_radial_menu_with_abilities(context_object)
 
+
 func _setup_radial_menu_with_abilities(context_object):
 	self.radial_abilities.fill_radial_with_abilities(self, self.ui.radial, context_object)
 
@@ -411,11 +458,14 @@ func place_selection_marker():
 	placement.y = new_position.y
 	self.selected_tile_marker.set_position(placement)
 
+
 func show_unit_movement_markers():
 	self.movement_markers.show_unit_movement_markers_for_tile(self.selected_tile, self.state.get_current_ap())
 
+
 func show_unit_interaction_markers():
 	self.interaction_markers.show_interaction_markers_for_tile(self.selected_tile, self.state.get_current_ap())
+
 
 func show_contextual_select(open_unit_abilities=false):
 	self.place_selection_marker()
@@ -428,6 +478,7 @@ func show_contextual_select(open_unit_abilities=false):
 		self.show_unit_interaction_markers()
 	_show_contextual_select_radial(open_unit_abilities)
 
+
 func _show_contextual_select_radial(open_unit_abilities):
 	if self.selected_tile.unit.is_present():
 		if open_unit_abilities and self.selected_tile.unit.tile.has_active_ability():
@@ -435,8 +486,17 @@ func _show_contextual_select_radial(open_unit_abilities):
 	if self.selected_tile.building.is_present():
 		self.toggle_radial_menu(self.selected_tile.building.tile)
 
+
 func move_unit(source_tile, destination_tile):
 	var move_cost = self.movement_markers.get_tile_cost(destination_tile)
+	if not state.is_current_player_ai():
+		set_last_unit_move({
+			"source": source_tile,
+			"destination": destination_tile,
+			"cost": move_cost
+		})
+	else:
+		set_last_unit_move(null)
 	destination_tile.unit.set_tile(source_tile.unit.tile)
 	source_tile.unit.release()
 	self.use_current_player_ap(move_cost)
@@ -447,12 +507,14 @@ func move_unit(source_tile, destination_tile):
 
 	self.events.emit_unit_moved(destination_tile.unit.tile, source_tile, destination_tile)
 
+
 func update_unit_position(tile):
 	var path = self.movement_markers.get_path_to_tile(tile)
 	var movement_path = self.path_markers.convert_path_to_directions(path)
 	var unit = tile.unit.tile
 
 	unit.animate_path(movement_path)
+
 
 func reset_unit_position(tile, unit):
 	unit.stop_animations()
@@ -461,11 +523,13 @@ func reset_unit_position(tile, unit):
 	world_position.y = old_position.y
 	unit.set_position(world_position)
 
+
 func can_move_to_tile(tile):
 	var move_cost = self.movement_markers.get_tile_cost(tile)
 	if move_cost != null and move_cost > 0 and tile.can_acommodate_unit(self.selected_tile.unit.tile):
 		return true
 	return false
+
 
 func should_draw_move_path(tile):
 	if self.selected_tile != null:
@@ -473,6 +537,7 @@ func should_draw_move_path(tile):
 			if self.can_move_to_tile(tile):
 				return true
 	return false
+
 
 func handle_interaction(tile):
 	if self.selected_tile != null:
@@ -489,13 +554,14 @@ func handle_interaction(tile):
 					self.show_contextual_select()
 
 
-
 func battle(attacker_tile, defender_tile):
 	var attacker = attacker_tile.unit.tile
 	var defender = defender_tile.unit.tile
 
 	attacker.use_move(1)
 	attacker.use_attack()
+
+	self.reset_unit_position(attacker_tile, attacker)
 
 	attacker.rotate_unit_to_direction(attacker_tile.get_direction_to_neighbour(defender_tile))
 
@@ -536,6 +602,7 @@ func battle(attacker_tile, defender_tile):
 		self.destroy_unit_on_tile(defender_tile)
 		self.events.emit_unit_destroyed(attacker, defender_id, defender_type, defender_side)
 
+
 func destroy_unit_on_tile(tile, skip_explosion=false):
 	if tile.unit.tile.unit_class == "hero":
 		self.state.clear_hero_for_side(tile.unit.tile.side, tile.unit.tile)
@@ -547,11 +614,13 @@ func destroy_unit_on_tile(tile, skip_explosion=false):
 			self.map.camera.shake()
 	tile.unit.clear()
 
+
 func _generate_collateral_damage(tile):
 	return {
 		"collateral": self.collateral.generate_collateral(tile),
 		"damage": self.collateral.damage_tile(tile)
 	}
+
 
 func explode_a_tile(tile, grab_sfx=false):
 	var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile, 0.5)
@@ -559,17 +628,21 @@ func explode_a_tile(tile, grab_sfx=false):
 	if grab_sfx:
 		new_explosion.grab_sfx_effect(tile.unit.tile)
 
+
 func smoke_a_tile(tile):
 	var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile, 0.5)
 	new_explosion.puff_some_smoke()
+
 
 func bless_a_tile(tile):
 	var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile, 1.0)
 	new_explosion.rain_bless()
 
+
 func heal_a_tile(tile):
 	var new_explosion = self._spawn_temporary_explosion_instance_on_tile(tile, 1.0)
 	new_explosion.rain_heal()
+
 
 func _spawn_temporary_explosion_instance_on_tile(tile, free_delay=1.5):
 	var explosion_position = self.map.map_to_local(tile.position)
@@ -579,6 +652,7 @@ func _spawn_temporary_explosion_instance_on_tile(tile, free_delay=1.5):
 	self.destroy_explosion_with_delay(new_explosion, free_delay)
 
 	return new_explosion
+
 
 func capture(attacker_tile, building_tile):
 	var attacker = attacker_tile.unit.tile
@@ -599,6 +673,7 @@ func capture(attacker_tile, building_tile):
 
 	self.events.emit_building_captured(building, old_side, attacker.side)
 
+
 func cheat_capture():
 	if not OS.is_debug_build():
 		print("Not a debug build")
@@ -617,6 +692,7 @@ func cheat_capture():
 	self.smoke_a_tile(tile)
 	building.sfx_effect("capture")
 	self.events.emit_building_captured(building, old_side, self.state.get_current_side())
+
 
 func cheat_kill():
 	if not OS.is_debug_build():
@@ -638,9 +714,24 @@ func cheat_kill():
 	self.events.emit_unit_destroyed(null, unit_id, unit_type, unit_side)
 
 
+func cheat_level_up():
+	if not OS.is_debug_build():
+		print("Not a debug build")
+		return
+
+	var tile = self.map.model.get_tile(self.map.tile_box_position)
+
+	if not tile.unit.is_present():
+		print("No unit found")
+		return
+
+	tile.unit.tile.level_up()
+
+
 func activate_production_ability(args):
 	self.toggle_radial_menu()
 	_activate_production_ability(args[0])
+
 
 func _activate_production_ability(ability):
 	var cost = ability.get_cost()
@@ -651,11 +742,13 @@ func _activate_production_ability(ability):
 		if self.selected_tile != null:
 			self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
 
+
 func activate_ability(args):
 	var ability = args[0]
 	if self.state.can_current_player_afford(ability.get_cost()) and not ability.is_on_cooldown():
 		self.toggle_radial_menu()
 		_activate_ability(ability)
+
 
 func _activate_ability(ability):
 	self.reset_unit_markers()
@@ -664,10 +757,10 @@ func _activate_ability(ability):
 		self.ability_markers.show_ability_markers_for_tile(ability, self.selected_tile)
 		ability.active_source_tile = self.selected_tile
 
+
 func execute_active_ability(tile):
 	self.abilities.execute_ability(self.active_ability, tile)
 	self.cancel_ability()
-
 
 
 func remove_unit_hightlights():
@@ -676,6 +769,7 @@ func remove_unit_hightlights():
 
 	for unit in units:
 		unit.remove_highlight()
+
 
 func replenish_unit_actions():
 	var current_player = self.state.get_current_player()
@@ -687,6 +781,7 @@ func replenish_unit_actions():
 		unit.replenish_moves()
 		unit.ability_cd_tick_down()
 		unit.team = self.state.get_player_team(current_player["side"])
+
 
 func gain_building_ap():
 	var ap_sum = 0
@@ -702,9 +797,11 @@ func gain_building_ap():
 
 	self.add_current_player_ap(ap_sum)
 
+
 func add_current_player_ap(ap_sum):
 	self.state.add_current_player_ap(ap_sum)
 	self.ui.update_resource_value(self.state.get_current_ap())
+
 
 func use_current_player_ap(value):
 	self.state.use_current_player_ap(value)
@@ -746,9 +843,11 @@ func update_tile_highlight(tile):
 	if tile.unit.is_present():
 		self.ui.update_tile_highlight_unit_panel(tile.unit.tile, self)
 
+
 func open_context_panel():
 	var tile = self.map.model.get_tile(self.map.tile_box_position)
 	self._open_context_panel_for_tile(tile)
+
 
 func _open_context_panel_for_tile(tile):
 	if tile != null:
@@ -770,9 +869,11 @@ func _open_context_panel_for_tile(tile):
 		self.ui.show_unit_stats(tile.unit.tile, tile_preview, self)
 		self.map.camera.paused = true
 
+
 func _open_context_panel_for_active_tile():
 	if self.selected_tile != null:
 		self._open_context_panel_for_tile(self.selected_tile)
+
 
 func close_context_panel():
 	self.audio.play("menu_back")
@@ -799,6 +900,7 @@ func end_game(winner):
 	self._signal_winner(winner)
 	self.ui.show_summary(winner)
 
+
 func start_ending_turn():
 	var step_delay = 0.1
 	var step_value = 2
@@ -824,32 +926,39 @@ func start_ending_turn():
 		self.abort_ending_turn()
 		self.call_deferred("check_end_turn")
 
+
 func abort_ending_turn():
 	self.ending_turn_in_progress = false
 	self.ui.hide_end_turn()
+
 
 func main_menu():
 	self.ai.abort()
 	self.switcher.main_menu()
 
+
 func destroy_explosion_with_delay(explosion_object, delay):
 	await self.get_tree().create_timer(delay).timeout
 	explosion_object.queue_free()
+
 
 func _signal_winner(winning_side):
 	if self.match_setup.campaign_win and self.state.is_player_human(winning_side):
 		self.campaign.update_campaign_progress(self.match_setup.campaign_name, self.match_setup.mission_no)
 		self.match_setup.has_won = true
 
+
 func shoot_projectile(source_tile, destination_tile, tween_time=0.5):
 	var new_projectile = self._spawn_temporary_projectile_instance_on_tile(source_tile)
 	var tile_position = self.map.map_to_local(destination_tile.position)
 	new_projectile.shoot_at_position(Vector3(tile_position.x, 0, tile_position.z), tween_time)
 
+
 func lob_projectile(source_tile, destination_tile, tween_time=0.5):
 	var new_projectile = self._spawn_temporary_projectile_instance_on_tile(source_tile)
 	var tile_position = self.map.map_to_local(destination_tile.position)
 	new_projectile.lob_at_position(Vector3(tile_position.x, 0, tile_position.z), tween_time)
+
 
 func _spawn_temporary_projectile_instance_on_tile(tile):
 	var tile_position = self.map.map_to_local(tile.position)
@@ -858,6 +967,7 @@ func _spawn_temporary_projectile_instance_on_tile(tile):
 	new_projectile.set_position(Vector3(tile_position.x, 0, tile_position.z))
 
 	return new_projectile
+
 
 func _move_camera_to_hq():
 	var hq_position = self.map.model.get_player_bunker_position(self.state.get_current_side())
@@ -877,6 +987,7 @@ func _should_perform_hq_cam():
 		return true
 	return false
 
+
 func _restart_board():
 	if self.match_setup.restore_save_id != null:
 		self.match_setup.restore_save_id = null
@@ -884,6 +995,7 @@ func _restart_board():
 	self.match_setup.has_won = false
 	self.switcher.board()
 	self.audio.play("menu_click")
+
 
 func open_saves():
 	if self.state.is_current_player_ai():
@@ -895,6 +1007,7 @@ func open_saves():
 
 	self.ui.saves.bind_cancel(self, "close_saves")
 
+
 func close_saves():
 	self.ui.hide_saves()
 	self.map.camera.paused = false
@@ -903,9 +1016,11 @@ func close_saves():
 	if not self.state.is_current_player_ai():
 		self.map.tile_box.set_visible(true)
 
+
 func restore_saved_state():
 	var save_data = self.saves_manager.get_save_data(self.match_setup.restore_save_id)
 	_restore_saved_state(save_data)
+
 
 func _restore_saved_state(save_data):
 	# restore basic state elements
@@ -913,6 +1028,12 @@ func _restore_saved_state(save_data):
 	self.state.current_player = save_data["active_player"]
 	self.map.camera.restore_from_state(save_data["camera"])
 	self.ui.objectives.restore_from_state(save_data["objectives"])
+	if save_data.has("player_moved"):
+		self.state.has_player_moved = save_data["player_moved"]
+	if save_data.has("turn_limit"):
+		self.match_setup.turn_limit = int(save_data["turn_limit"])
+	if save_data.has("time_limit"):
+		self.match_setup.time_limit = int(save_data["time_limit"])
 
 	# restore tiles state
 	self.map.model.wipe_all_units()
@@ -933,14 +1054,17 @@ func _restore_saved_state(save_data):
 	self.map.camera.ai_operated = false
 	self.map.show_tile_box()
 
+
 func perform_autosave():
 	self.ui.saves.board = self
 	self.ui.saves.perform_autosave()
+
 
 func open_settings():
 	self.ui.hide_radial()
 	self.ui.hide_objectives()
 	self.ui.show_settings()
+
 
 func close_settings():
 	self.ui.hide_settings()
@@ -949,3 +1073,26 @@ func close_settings():
 
 	if not self.state.is_current_player_ai():
 		self.map.tile_box.set_visible(true)
+
+
+func _timer_end_turn() -> void:
+	end_turn()
+
+
+func set_last_unit_move(move):
+	last_unit_move = move
+
+
+func _undo_unit_move() -> void:
+	if last_unit_move:
+		var source_tile = last_unit_move["destination"]
+		var destination_tile = last_unit_move["source"]
+		var move_cost = last_unit_move["cost"]
+		destination_tile.unit.set_tile(source_tile.unit.tile)
+		source_tile.unit.release()
+		self.state.add_current_player_ap(move_cost)
+		self.ui.update_resource_value(self.state.get_current_ap())
+		destination_tile.unit.tile.restore_move(move_cost)
+		self.reset_unit_position(destination_tile, destination_tile.unit.tile)
+		self.unselect_tile()
+		set_last_unit_move(null)

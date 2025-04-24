@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dt37ijplfqjd5"]
+[gd_scene load_steps=12 format=3 uid="uid://dt37ijplfqjd5"]
 
 [ext_resource type="Script" path="res://scenes/ui/board/summary_view.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="2_hv8eb"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://csq1hhm0xchio" path="res://assets/gui/menu/buttons/buttonLarge_brown.png" id="8_3uggk"]
 [ext_resource type="Texture2D" uid="uid://nove6ni5alhn" path="res://assets/gui/menu/buttons/buttonLarge_brown_pressed.png" id="9_hc17l"]
 [ext_resource type="Texture2D" uid="uid://5jm4o80mt8a2" path="res://assets/gui/menu/buttons/buttonLarge_brown_hover.png" id="10_bfbv2"]
+[ext_resource type="PackedScene" uid="uid://b5i31jke8jkj1" path="res://scenes/ui/board/summary_view_points.tscn" id="11_qqxbb"]
 
 [node name="summary_view" type="Node2D"]
 script = ExtResource("1")
@@ -111,6 +112,18 @@ text = "TR_OBS_NIGHT_WIN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="game_draw" type="Label" parent="background"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 7.0
+theme_override_fonts/font = ExtResource("3_skfsh")
+theme_override_font_sizes/font_size = 30
+text = "TR_GAME_DRAW"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="menu_button" type="TextureButton" parent="."]
 offset_left = -400.0
 offset_top = 60.0
@@ -183,6 +196,32 @@ theme_override_font_sizes/font_size = 30
 text = "TR_NEXT_MISS"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="points" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(1020, 200)
+offset_left = -510.0
+offset_top = -250.0
+offset_right = 510.0
+offset_bottom = -50.0
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="points"]
+layout_mode = 2
+
+[node name="SummaryViewPoints0" parent="points/HBoxContainer" instance=ExtResource("11_qqxbb")]
+layout_mode = 2
+
+[node name="SummaryViewPoints1" parent="points/HBoxContainer" instance=ExtResource("11_qqxbb")]
+layout_mode = 2
+
+[node name="SummaryViewPoints2" parent="points/HBoxContainer" instance=ExtResource("11_qqxbb")]
+layout_mode = 2
+
+[node name="SummaryViewPoints3" parent="points/HBoxContainer" instance=ExtResource("11_qqxbb")]
+layout_mode = 2
+
+[node name="SummaryViewPoints4" parent="points/HBoxContainer" instance=ExtResource("11_qqxbb")]
+layout_mode = 2
 
 [connection signal="pressed" from="menu_button" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]

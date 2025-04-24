@@ -1,3 +1,4 @@
+class_name IconsFactory
 
 var disk = preload("res://scenes/ui/icons/disk.tscn")
 var quicksave = preload("res://scenes/ui/icons/quicksave.tscn")
@@ -45,53 +46,53 @@ var yellow_gem = preload("res://scenes/ui/icons/nations/yellow.tscn")
 var black_gem = preload("res://scenes/ui/icons/nations/black.tscn")
 
 var named_icons = {
-    "disk" : self.disk,
-    "quicksave" : self.quicksave,
-    "back" : self.back,
-    "quit" : self.quit,
-    "trash" : self.trash,
-    "tick" : self.tick,
-    "star" : self.star,
-    "star2" : self.star2,
-    "info" : self.info,
-    "book" : self.book,
-    "cross" : self.cross,
-    "arrow_left" : self.arrow_left,
-    "arrow_right" : self.arrow_right,
-    "cog" : self.cog,
-    "hourglass" : self.hourglass,
-    "coin" : self.coin,
-    "pen" : self.pen,
+	"disk" : self.disk,
+	"quicksave" : self.quicksave,
+	"back" : self.back,
+	"quit" : self.quit,
+	"trash" : self.trash,
+	"tick" : self.tick,
+	"star" : self.star,
+	"star2" : self.star2,
+	"info" : self.info,
+	"book" : self.book,
+	"cross" : self.cross,
+	"arrow_left" : self.arrow_left,
+	"arrow_right" : self.arrow_right,
+	"cog" : self.cog,
+	"hourglass" : self.hourglass,
+	"coin" : self.coin,
+	"pen" : self.pen,
 
-    "tof" : self.tof,
+	"tof" : self.tof,
 
-    "deep_strike" : self.deep_strike,
-    "infiltration" : self.infiltration,
-    "targeting_automaton" : self.targeting_automaton,
-    "hardened_armour" : self.hardened_armour,
-    "precision_strike" : self.precision_strike,
-    "supply" : self.supply,
-    "inspire" : self.inspire,
-    "promote" : self.promote,
-    
-    "heavy_weapon" : self.heavy_weapon,
-    "long_range_shell" : self.long_range_shell,
-    "pick_up" : self.pick_up,
-    "drop_off" : self.drop_off,
-    "medkit" : self.medkit,
-    "repair_kit" : self.repair_kit,
-    "missile" : self.missile,
-    "heavy_missile" : self.heavy_missile,
-    "rapid_response" : self.rapid_response,
+	"deep_strike" : self.deep_strike,
+	"infiltration" : self.infiltration,
+	"targeting_automaton" : self.targeting_automaton,
+	"hardened_armour" : self.hardened_armour,
+	"precision_strike" : self.precision_strike,
+	"supply" : self.supply,
+	"inspire" : self.inspire,
+	"promote" : self.promote,
 
-    "blue_gem" : self.blue_gem,
-    "red_gem" : self.red_gem,
-    "green_gem" : self.green_gem,
-    "yellow_gem" : self.yellow_gem,
-    "black_gem" : self.black_gem,
+	"heavy_weapon" : self.heavy_weapon,
+	"long_range_shell" : self.long_range_shell,
+	"pick_up" : self.pick_up,
+	"drop_off" : self.drop_off,
+	"medkit" : self.medkit,
+	"repair_kit" : self.repair_kit,
+	"missile" : self.missile,
+	"heavy_missile" : self.heavy_missile,
+	"rapid_response" : self.rapid_response,
+
+	"blue_gem" : self.blue_gem,
+	"red_gem" : self.red_gem,
+	"green_gem" : self.green_gem,
+	"yellow_gem" : self.yellow_gem,
+	"black_gem" : self.black_gem,
 }
 
 func get_named_icon(name):
-    if self.named_icons.has(name):
-        return self.named_icons[name].instantiate()
-    return null
+	if self.named_icons.has(name):
+		return self.named_icons[name].instantiate()
+	return null

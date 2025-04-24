@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpv3yr6wjfwey"]
+
+[ext_resource type="Script" path="res://scenes/ui/board/turn_time.gd" id="1_032no"]
+[ext_resource type="Texture2D" uid="uid://ci2opj01qhem3" path="res://assets/gui/menu/backgrounds/sub_panel2.png" id="1_81y4g"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_wtxko"]
+
+[node name="TurnTime" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_032no")
+
+[node name="background" type="NinePatchRect" parent="."]
+visible = false
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+texture = ExtResource("1_81y4g")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="label" type="Label" parent="."]
+custom_minimum_size = Vector2(80, 80)
+offset_left = -40.0
+offset_top = -36.0
+offset_right = 40.0
+offset_bottom = 44.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_wtxko")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -52,7 +52,7 @@ func _ready():
 	self.upload_name.notification(NOTIFICATION_TRANSLATION_CHANGED)
 	self.download_name.set_message_translation(false)
 	self.download_name.notification(NOTIFICATION_TRANSLATION_CHANGED)
-	
+
 	self.online_match_nickname_input.set_text(self.settings.get_option("nickname"))
 	self.relay.session_success.connect(self._on_session_success)
 	self.relay.connection_failed.connect(self._on_connection_failed)
@@ -83,7 +83,7 @@ func _on_register_button_pressed():
 	self.register_button.hide()
 	self.back_button.hide()
 
-	var result = self.online.request_player_id()
+	var result = await self.online.request_player_id()
 
 	self.working = false
 	if result == "ok":
@@ -193,7 +193,7 @@ func _on_confirm_upload_button_pressed():
 	self.change_button.hide()
 	self.back_button.hide()
 
-	var result = self.online.upload_map(self.selected_upload_map)
+	var result = await self.online.upload_map(self.selected_upload_map)
 
 	self.working = false
 	self.back_button.show()

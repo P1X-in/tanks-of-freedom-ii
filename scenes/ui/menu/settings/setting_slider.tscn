@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhevhm6o3i72h"]
+
+[ext_resource type="Script" path="res://scenes/ui/menu/settings/setting_slider.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_3pyw3"]
+
+[node name="option" type="Control"]
+custom_minimum_size = Vector2(550, 50)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 570.0
+offset_bottom = 70.0
+script = ExtResource("2")
+
+[node name="label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 253.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("2_3pyw3")
+text = "Option
+"
+vertical_alignment = 1
+
+[node name="slider_value" type="Label" parent="."]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 350.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("2_3pyw3")
+text = "10
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 550.0
+offset_bottom = 50.0
+max_value = 10.0
+
+[connection signal="focus_entered" from="slider" to="." method="_show_help"]
+[connection signal="mouse_entered" from="slider" to="." method="_show_help"]
+[connection signal="mouse_exited" from="slider" to="." method="_clear_help"]
+[connection signal="value_changed" from="slider" to="." method="_on_slider_value_changed"]

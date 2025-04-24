@@ -7,14 +7,16 @@ const SAVE_EXTENSION := ".tofsave.json"
 
 var filesystem = preload("res://scripts/services/filesystem.gd").new()
 
-var autosave = null
+var autosave = [null, null, null]
 var saves := []
+
 
 func _ready():
 	self.load_saves_from_file()
 
+
 func add_new_save(map_name: String, map_label: String, turn_no: int, save_data: Dictionary) -> void:
-	var new_save_id := self.saves.size() + 1
+	var new_save_id := self.saves.size() + 3
 	self.saves.append({
 		"map": map_name,
 		"label": map_label,
@@ -26,8 +28,9 @@ func add_new_save(map_name: String, map_label: String, turn_no: int, save_data: 
 	self.save_list_to_file()
 	self.store_save_data(new_save_id, save_data)
 
+
 func overwrite_save(map_name: String, map_label: String, turn_no: int, save_data: Dictionary, save_id: int) -> void:
-	self.saves[save_id - 1] = {
+	self.saves[save_id - 3] = {
 		"map": map_name,
 		"label": map_label,
 		"turn": turn_no,
@@ -38,8 +41,17 @@ func overwrite_save(map_name: String, map_label: String, turn_no: int, save_data
 	self.save_list_to_file()
 	self.store_save_data(save_id, save_data)
 
+
 func write_autosave(map_name: String, map_label: String, turn_no: int, save_data: Dictionary) -> void:
-	self.autosave = {
+	self.autosave[2] = self.autosave[1]
+	if self.autosave[2] != null:
+		self.autosave[2]["save_id"] = 2
+		_move_save_file(1, 2)
+	self.autosave[1] = self.autosave[0]
+	if self.autosave[1] != null:
+		self.autosave[1]["save_id"] = 1
+		_move_save_file(0, 1)
+	self.autosave[0] = {
 		"map": map_name,
 		"label": map_label,
 		"turn": turn_no,
@@ -50,6 +62,7 @@ func write_autosave(map_name: String, map_label: String, turn_no: int, save_data
 	self.save_list_to_file()
 	self.store_save_data(0, save_data)
 
+
 func save_list_to_file() -> void:
 	var save_data = {
 		"autosave": self.autosave,
@@ -57,12 +70,19 @@ func save_list_to_file() -> void:
 	}
 	self.filesystem.write_data_as_json_to_file(self.LIST_FILE_PATH, save_data)
 
+
 func load_saves_from_file() -> void:
 	var save_data = self.filesystem.read_json_from_file(self.LIST_FILE_PATH)
-	if save_data.has("autosave"):
-		self.autosave = save_data["autosave"]
 	if save_data.has("saves"):
 		self.saves = save_data["saves"]
+	if save_data.has("autosave"):
+		if save_data["autosave"] is Dictionary:
+			save_data["autosave"] = [save_data["autosave"], null, null]
+			self.autosave = save_data["autosave"]
+			_migrate_saves()
+			self.save_list_to_file()
+		self.autosave = save_data["autosave"]
+
 
 func get_entries_page(page_number: int, page_size: int) -> Array:
 	var pages_count = self.get_pages_count(page_size)
@@ -75,8 +95,9 @@ func get_entries_page(page_number: int, page_size: int) -> Array:
 
 	var entries_list := []
 
-	if self.autosave != null:
-		entries_list.append(self.autosave)
+	for autosave_entry in self.autosave:
+		if autosave_entry != null:
+			entries_list.append(autosave_entry)
 
 	if self.saves.size() > 0:
 		var saves_copy := self.saves.duplicate()
@@ -96,10 +117,12 @@ func get_entries_page(page_number: int, page_size: int) -> Array:
 
 	return output
 
+
 func get_pages_count(page_size: int) -> int:
 	var total_saves_count := self.saves.size()
-	if self.autosave != null:
-		total_saves_count += 1
+	for autosave_entry in self.autosave:
+		if autosave_entry != null:
+			total_saves_count += 1
 
 	var last_page_overflow := total_saves_count % page_size
 	@warning_ignore("integer_division")
@@ -110,15 +133,19 @@ func get_pages_count(page_size: int) -> int:
 
 	return pages_count
 
+
 func get_save_data(save_id: int) -> Dictionary:
 	var filepath := self.get_save_path(save_id)
 	return self.filesystem.read_json_from_file(filepath)
 
+
 func store_save_data(save_id: int, save_data: Dictionary) -> void:
 	self.filesystem.write_data_as_json_to_file(self.get_save_path(save_id), save_data)
 
+
 func get_save_path(save_id: int) -> String:
 	return self.SAVE_PATH + str(save_id) + self.SAVE_EXTENSION
+
 
 func get_map_details(save_id: int) -> String:
 	return self.saves[save_id]
@@ -148,7 +175,10 @@ func compile_save_data(board) -> Dictionary:
 		"camera": board.map.camera.get_position_state(),
 		"tiles": self._compile_tiles_data(board),
 		"triggers": board.scripting.get_save_data(),
-		"objectives": board.ui.objectives.raw_text
+		"objectives": board.ui.objectives.raw_text,
+		"player_moved": board.state.has_player_moved,
+		"turn_limit": board.match_setup.turn_limit,
+		"time_limit": board.match_setup.time_limit
 	}
 
 	return {
@@ -169,3 +199,17 @@ func _compile_tiles_data(board) -> Dictionary:
 			tiles_data[tile_key] = tile.get_dict()
 
 	return tiles_data
+
+
+func _move_save_file(source_id, destination_id) -> void:
+	store_save_data(destination_id, get_save_data(source_id))
+
+
+func _migrate_saves() -> void:
+	var saves_copy := self.saves.duplicate()
+	saves_copy.reverse()
+	for save in saves_copy:
+		_move_save_file(save["save_id"], int(save["save_id"] + 2))
+		save["save_id"] = int(save["save_id"] + 2)
+	saves_copy.reverse()
+	self.saves = saves_copy

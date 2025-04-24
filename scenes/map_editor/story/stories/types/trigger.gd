@@ -30,6 +30,9 @@ func _compile_step_data():
 	var group = $"group/group".get_text()
 	var turns = $"turns/turns".get_text()
 	var suspended = false
+	
+	if not self.step_data.has("details"):
+		self.step_data["details"] = {}
 
 	if self.step_data["details"].has("suspended"):
 		suspended = self.step_data["details"]["suspended"]
@@ -66,6 +69,8 @@ func _on_trigger_picker_button_pressed():
 
 func _on_suspended_button_pressed():
 	self.audio.play("menu_click")
+	if not self.step_data.has("details"):
+		self.step_data["details"] = {}
 	if not self.step_data["details"].has("suspended"):
 		self.step_data["details"]["suspended"] = false
 	self.step_data["details"]["suspended"] = not self.step_data["details"]["suspended"]
