@@ -4,12 +4,7 @@
 [ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="2"]
 [ext_resource type="Resource" uid="uid://ch0a774sfnqvo" path="res://scenes/abilities/production/units/tank.tres" id="2_pplbo"]
 [ext_resource type="ArrayMesh" uid="uid://c70hdddepj4aj" path="res://assets/buildings/red/factory.obj" id="3"]
-<<<<<<< HEAD
 [ext_resource type="Resource" uid="uid://bmndbuygaub0t" path="res://scenes/abilities/production/units/rocket_artilery.tres" id="3_nd6u3"]
-=======
-[ext_resource type="PackedScene" uid="uid://cp5m6i4m3sut4" path="res://scenes/abilities/production/red/tank.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://cdd88kj8enb1l" path="res://scenes/abilities/production/red/rocket_artillery.tscn" id="5"]
->>>>>>> updated-to-Godot-4.4
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"

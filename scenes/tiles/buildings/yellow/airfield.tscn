@@ -4,12 +4,7 @@
 [ext_resource type="Material" uid="uid://cmuoryv8gy5rs" path="res://assets/materials/arne32_yellow.tres" id="2"]
 [ext_resource type="Resource" uid="uid://fx20mhhx3ssh" path="res://scenes/abilities/production/units/heli.tres" id="2_kjumm"]
 [ext_resource type="ArrayMesh" uid="uid://b7aowdguffepe" path="res://assets/buildings/yellow/airfield.obj" id="3"]
-<<<<<<< HEAD
 [ext_resource type="Resource" uid="uid://yjob02h7xuiu" path="res://scenes/abilities/production/units/scout.tres" id="3_c2f5p"]
-=======
-[ext_resource type="PackedScene" uid="uid://djaeawgdtw45o" path="res://scenes/abilities/production/yellow/heli.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://c5ktwho7qttpl" path="res://scenes/abilities/production/yellow/scout.tscn" id="5"]
->>>>>>> updated-to-Godot-4.4
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"

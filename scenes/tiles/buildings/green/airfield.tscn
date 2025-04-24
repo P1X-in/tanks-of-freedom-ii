@@ -1,14 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bmnsx7l2e4cb"]
 
-<<<<<<< HEAD
 [ext_resource type="Resource" uid="uid://fx20mhhx3ssh" path="res://scenes/abilities/production/units/heli.tres" id="2_opw87"]
 [ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="3"]
 [ext_resource type="Resource" uid="uid://yjob02h7xuiu" path="res://scenes/abilities/production/units/scout.tres" id="3_p07pq"]
-=======
-[ext_resource type="PackedScene" uid="uid://djr4m73eyq3hy" path="res://scenes/abilities/production/green/scout.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://bke3itcjt5umo" path="res://scenes/abilities/production/green/heli.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="3"]
->>>>>>> updated-to-Godot-4.4
 [ext_resource type="Material" uid="uid://cj2u6cis5y0wd" path="res://assets/materials/arne32_green.tres" id="4"]
 [ext_resource type="ArrayMesh" uid="uid://wbfjqsv3j53y" path="res://assets/buildings/green/airfield.obj" id="5"]
 

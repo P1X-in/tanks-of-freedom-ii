@@ -1,14 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://clwy67bj78vc8"]
 
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="2"]
 [ext_resource type="Resource" uid="uid://bexxoi63crsej" path="res://scenes/abilities/production/units/infantry.tres" id="2_xmtir"]
 [ext_resource type="Resource" uid="uid://c1lmi7fow7hte" path="res://scenes/abilities/production/units/mobile_infantry.tres" id="3_6a8iy"]
-=======
-[ext_resource type="PackedScene" uid="uid://bhr6124ng7y33" path="res://scenes/abilities/production/green/infantry.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://8wc08eojskpg" path="res://scenes/abilities/production/green/mobile_infantry.tscn" id="3"]
->>>>>>> updated-to-Godot-4.4
 [ext_resource type="Material" uid="uid://cj2u6cis5y0wd" path="res://assets/materials/arne32_green.tres" id="4"]
 [ext_resource type="ArrayMesh" uid="uid://bxm21ifk1gvav" path="res://assets/buildings/green/barracks.obj" id="5"]
 

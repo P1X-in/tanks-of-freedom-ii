@@ -4,14 +4,8 @@
 [ext_resource type="ArrayMesh" uid="uid://busyqun207nnw" path="res://assets/buildings/red/headquarters.obj" id="2"]
 [ext_resource type="Resource" uid="uid://b7uw3y4b42tew" path="res://scenes/abilities/production/units/infantry_headquarters.tres" id="2_xcb33"]
 [ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="3"]
-<<<<<<< HEAD
 [ext_resource type="Resource" uid="uid://cu15wtn6y8g15" path="res://scenes/abilities/production/heroes/gentleman.tres" id="3_80tyc"]
 [ext_resource type="Resource" uid="uid://cbec0ll7uw6cl" path="res://scenes/abilities/production/heroes/noble.tres" id="4_8isat"]
-=======
-[ext_resource type="PackedScene" uid="uid://ltnpyn227dex" path="res://scenes/abilities/production/red/infantry.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://bmcfd230usxlt" path="res://scenes/abilities/production/heroes/noble.tscn" id="5"]
-[ext_resource type="PackedScene" uid="uid://c730tqsq8twbi" path="res://scenes/abilities/production/heroes/gentleman.tscn" id="6"]
->>>>>>> updated-to-Godot-4.4
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
