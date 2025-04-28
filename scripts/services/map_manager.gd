@@ -99,7 +99,7 @@ func get_maps_page(list:String, page_number: int, page_size: int) -> Array:
 	if page_number >= pages_count:
 		return []
 
-	var index_start := page_number * page_size 
+	var index_start := page_number * page_size
 	var index_end := index_start + page_size
 
 	var map_key_list := []

@@ -22,7 +22,7 @@ func _execute(_metadata):
 		new_unit.level_up()
 
 func _ingest_details(details):
-	self.where = Vector2(details['where'][0], details['where'][1])
+	self.where = Vector2i(details['where'][0], details['where'][1])
 	self.template_name = details['template']
 	self.side = details['side']
 	if details.has('rotation'):

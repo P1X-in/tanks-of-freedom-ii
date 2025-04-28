@@ -10,7 +10,7 @@ const GROUND_HEIGHT = 4
 @onready var settings = $"/root/Settings"
 
 var tile_box_space_size
-var tile_box_position = Vector2(0, 0)
+var tile_box_position: Vector2i = Vector2i(0, 0)
 var tile_box_mouse = false
 
 var templates = preload("res://scenes/map/templates.gd").new()
