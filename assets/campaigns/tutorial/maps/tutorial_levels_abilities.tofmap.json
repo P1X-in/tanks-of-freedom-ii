@@ -84,6 +84,35 @@
                     }
                 },
                 {
+                    "action": "spawn",
+                    "delay": 1,
+                    "details": {
+                        "rotation": 90,
+                        "side": "red",
+                        "template": "red_infantry",
+                        "where": [
+                            20,
+                            18
+                        ]
+                    }
+                },
+                {
+                    "action": "attack",
+                    "delay": 1,
+                    "details": {
+                        "who": [20, 18],
+                        "whom": [20, 19],
+                        "damage": 1
+                    }
+                },
+                {
+                    "action": "despawn",
+                    "delay": 1,
+                    "details": {
+                        "who": [20, 18]
+                    }
+                },
+                {
                     "action": "level_up",
                     "details": {
                         "who": [
