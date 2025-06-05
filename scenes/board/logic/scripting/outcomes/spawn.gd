@@ -4,6 +4,7 @@ var where
 var template_name = null
 var side
 var rotation = 0
+var hp = 0
 var sound = true
 var promote = false
 
@@ -14,6 +15,9 @@ func _execute(_metadata):
 	var new_unit = self.board.map.builder.force_place_unit(self.where, self.template_name, self.rotation, self.side)
 	new_unit.team = self.board.state.get_player_team(self.side)
 	new_unit.replenish_moves()
+
+	if self.hp > 0:
+		new_unit.set_hp(self.hp)
 
 	if self.sound:
 		new_unit.sfx_effect("spawn")
@@ -27,6 +31,8 @@ func _ingest_details(details):
 	self.side = details['side']
 	if details.has('rotation'):
 		self.rotation = details['rotation']
+	if details.has('hp'):
+		self.hp = details['hp']
 	if details.has('sound'):
 		self.sound = details['sound']
 	if details.has('promote'):
