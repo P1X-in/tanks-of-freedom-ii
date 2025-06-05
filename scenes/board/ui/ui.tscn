@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bt0tap08gwreq" path="res://scenes/board/ui/ui.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://5bep6mdci41m" path="res://scenes/ui/radial/radial.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/ui/board/coin_view.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://giqrbrkatdg4" path="res://scenes/ui/board/coin_view.tscn" id="3"]
 [ext_resource type="Theme" path="res://assets/gui/ui_theme.tres" id="4"]
 [ext_resource type="PackedScene" uid="uid://k2hh8e6861ja" path="res://scenes/map_editor/tile_view.tscn" id="5"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="5_m22p8"]
@@ -44,7 +44,6 @@ offset_right = 60.0
 offset_bottom = 70.0
 
 [node name="coin_view" parent="resources" instance=ExtResource("3")]
-zoom_value = 5
 
 [node name="label" type="Label" parent="resources/coin_view"]
 offset_left = -30.0
