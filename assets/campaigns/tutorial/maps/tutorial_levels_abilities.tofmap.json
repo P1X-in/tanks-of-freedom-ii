@@ -1,12 +1,12 @@
 {
     "metadata": {
         "base_code": null,
-        "editor_version": "0.3.0",
+        "editor_version": 2,
         "initial_cam_pos": [
             20,
             20
         ],
-        "iteration": 0,
+        "iteration": 1,
         "name": "tutorial_levels_abilities",
         "track": "soundtrack_3"
     },
@@ -74,8 +74,11 @@
                     "action": "spawn",
                     "delay": 1,
                     "details": {
+                        "hp": 1,
+                        "promote": false,
                         "rotation": 90,
                         "side": "blue",
+                        "sound": true,
                         "template": "blue_infantry",
                         "where": [
                             20,
@@ -701,8 +704,8 @@
                     "details": {
                         "rotation": 90,
                         "side": "red",
-                        "template": "red_infantry",
                         "sound": false,
+                        "template": "red_infantry",
                         "where": [
                             20,
                             19
@@ -935,8 +938,8 @@
                     "details": {
                         "rotation": 90,
                         "side": "red",
-                        "template": "red_infantry",
                         "sound": false,
+                        "template": "red_infantry",
                         "where": [
                             20,
                             21
@@ -1086,16 +1089,10 @@
             },
             "frame": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "frame_road2"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "ground_road2"
             },
             "terrain": {
@@ -1122,16 +1119,10 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1158,16 +1149,10 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1190,23 +1175,14 @@
             },
             "decoration": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "deco_rail_stop"
             },
             "frame": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1233,16 +1209,10 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {
-
-                },
                 "tile": "frame_road2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {
-
-                },
                 "tile": "ground_road2"
             },
             "terrain": {
@@ -1273,16 +1243,10 @@
             },
             "ground": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "ground_river1"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "city_bridge"
             },
             "unit": {
@@ -1305,16 +1269,10 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -1341,16 +1299,10 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "frame_river3"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {
-
-                },
                 "tile": "ground_river2"
             },
             "terrain": {
@@ -1373,23 +1325,14 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "deco_rocks2"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {
-
-                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1416,16 +1359,10 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {
-
-                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {
-
-                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1452,16 +1389,10 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {
-
-                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {
-
-                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1484,23 +1415,14 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "deco_flower3"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {
-
-                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1533,9 +1455,6 @@
                     "max_move": 6,
                     "move": 6
                 },
-                "tags": {
-
-                },
                 "team": null,
                 "tile": "blue_tank"
             }
@@ -1555,16 +1474,10 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {
-
-                },
                 "tile": "frame_river2"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {
-
-                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -1587,23 +1500,14 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "deco_flower2"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {
-
-                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1630,16 +1534,10 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {
-
-                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 90,
-                "tags": {
-
-                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1666,16 +1564,10 @@
             },
             "frame": {
                 "rotation": 90,
-                "tags": {
-
-                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {
-
-                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1698,23 +1590,14 @@
             },
             "decoration": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "deco_flower5"
             },
             "frame": {
                 "rotation": 270,
-                "tags": {
-
-                },
                 "tile": "frame_grass4"
             },
             "ground": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "ground_grass"
             },
             "terrain": {
@@ -1741,16 +1624,10 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {
-
-                },
                 "tile": "frame_river4"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {
-
-                },
                 "tile": "ground_river2"
             },
             "terrain": {
@@ -1777,16 +1654,10 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "frame_river1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "ground_river1"
             },
             "terrain": {
@@ -1817,16 +1688,10 @@
             },
             "ground": {
                 "rotation": 0,
-                "tags": {
-
-                },
                 "tile": "ground_river1"
             },
             "terrain": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "city_bridge"
             },
             "unit": {
@@ -1849,16 +1714,10 @@
             },
             "frame": {
                 "rotation": 270,
-                "tags": {
-
-                },
                 "tile": "frame_road2"
             },
             "ground": {
                 "rotation": 270,
-                "tags": {
-
-                },
                 "tile": "ground_road2"
             },
             "terrain": {
@@ -1885,16 +1744,10 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1921,16 +1774,10 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1957,16 +1804,10 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "frame_road1"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "ground_road1"
             },
             "terrain": {
@@ -1993,16 +1834,10 @@
             },
             "frame": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "frame_road2"
             },
             "ground": {
                 "rotation": 180,
-                "tags": {
-
-                },
                 "tile": "ground_road2"
             },
             "terrain": {

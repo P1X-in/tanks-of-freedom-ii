@@ -173,7 +173,7 @@ offset_bottom = 40.0
 text = "0"
 alignment = 1
 
-[node name="sound" type="Label" parent="." index="8"]
+[node name="hp" type="Label" parent="." index="8"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -181,6 +181,28 @@ anchor_bottom = 1.0
 offset_top = 350.0
 offset_right = -250.0
 offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_iucfd")
+text = "TR_HP"
+vertical_alignment = 1
+
+[node name="hp" type="LineEdit" parent="hp" index="0"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 540.0
+offset_bottom = 40.0
+text = "0"
+alignment = 1
+
+[node name="sound" type="Label" parent="." index="9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 400.0
+offset_right = -250.0
+offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_iucfd")
@@ -209,14 +231,14 @@ text = "TR_ON"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="promote" type="Label" parent="." index="9"]
+[node name="promote" type="Label" parent="." index="10"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 400.0
+offset_top = 450.0
 offset_right = -250.0
-offset_bottom = -60.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_iucfd")
@@ -253,5 +275,6 @@ vertical_alignment = 1
 [connection signal="text_changed" from="player_side/side" to="." method="_on_text_changed"]
 [connection signal="pressed" from="player_side/side_picker_button" to="." method="_on_side_picker_button_pressed"]
 [connection signal="text_changed" from="rotation/rotation" to="." method="_on_text_changed"]
+[connection signal="text_changed" from="hp/hp" to="." method="_on_text_changed"]
 [connection signal="pressed" from="sound/sound_button" to="." method="_on_sound_button_pressed"]
 [connection signal="pressed" from="promote/promote_button" to="." method="_on_promote_button_pressed"]
