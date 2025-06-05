@@ -2,15 +2,16 @@ extends BaseStepActionEditor
 
 func fill_step_data(new_step_no, new_step_data):
 	super.fill_step_data(new_step_no, new_step_data)
-	
+
 	$"where/x".set_text("")
 	$"where/y".set_text("")
 	$"unit_type/unit_type_input".set_text("")
 	$"player_side/side".set_text("")
 	$"rotation/rotation".set_text("")
+	$"hp/hp".set_text("")
 	$"sound/sound_button/label".set_text("TR_ON")
 	$"promote/promote_button/label".set_text("TR_OFF")
-	
+
 	if self.step_data.has("details"):
 		if self.step_data["details"].has("where"):
 			$"where/x".set_text(str(self.step_data["details"]["where"][0]))
@@ -24,6 +25,9 @@ func fill_step_data(new_step_no, new_step_data):
 
 		if self.step_data["details"].has("rotation"):
 			$"rotation/rotation".set_text(str(self.step_data["details"]["rotation"]))
+
+		if self.step_data["details"].has("hp"):
+			$"hp/hp".set_text(str(self.step_data["details"]["hp"]))
 
 		if self.step_data["details"].has("sound"):
 			if self.step_data["details"]["sound"]:
@@ -46,12 +50,13 @@ func build_step_label(requested_step_data):
 
 func _compile_step_data():
 	self.step_data = super._compile_step_data()
-	
+
 	var x = $"where/x".get_text()
 	var y = $"where/y".get_text()
 	var unit_type = $"unit_type/unit_type_input".get_text()
 	var player_side = $"player_side/side".get_text()
 	var unit_rotation = $"rotation/rotation".get_text()
+	var hp = $"hp/hp".get_text()
 	var sound = true
 	var promote = false
 
@@ -73,6 +78,8 @@ func _compile_step_data():
 		self.step_data["details"]["side"] = player_side
 	if unit_rotation != "":
 		self.step_data["details"]["rotation"] = int(unit_rotation)
+	if hp != "":
+		self.step_data["details"]["hp"] = int(hp)
 
 	return self.step_data
 

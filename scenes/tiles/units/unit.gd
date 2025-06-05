@@ -300,6 +300,10 @@ func receive_direct_damage(value):
 		self.hp = 0
 	self._update_healthbar()
 
+func set_hp(value):
+	self.hp = value
+	self._update_healthbar()
+
 func is_alive():
 	return self.hp > 0
 
