@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://daj5qjwcqs8ap"]
 
-[ext_resource path="res://assets/gui/icons/nations/yellow.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://bkffyi183hlgk" path="res://assets/gui/icons/nations/yellow.png" id="1"]
 
 [node name="yellow" type="Sprite2D"]
-scale = Vector2( 2, 2 )
-texture = ExtResource( 1 )
+scale = Vector2(2, 2)
+texture = ExtResource("1")

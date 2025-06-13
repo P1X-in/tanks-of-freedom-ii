@@ -3,8 +3,8 @@
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://pbf2ydgtfdt4" path="res://scenes/tiles/units/heroes/hero.tscn" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://d15da154e3432" path="res://assets/units/heroes/general.obj" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/recruitment.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/active/deep_strike.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://f5nmbi52mdq4" path="res://scenes/abilities/hero/passive/recruitment.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bct4k5lo4ktcb" path="res://scenes/abilities/hero/active/deep_strike.tscn" id="5"]
 
 [node name="general" instance=ExtResource("2")]
 unit_name = "TR_GENERAL"

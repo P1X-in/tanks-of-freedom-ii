@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://0bbskwqb2iu4"]
 
-[ext_resource type="Script" path="res://scenes/ui/board/ap_depleted.gd" id="2"]
+[ext_resource type="Script" uid="uid://ct5knw5g3qgcx" path="res://scenes/ui/board/ap_depleted.gd" id="2"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_d3jya"]
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="2_ftahs"]
 
@@ -61,8 +61,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q6820"]
 _data = {
-"RESET": SubResource("1"),
-"flash": SubResource("2")
+&"RESET": SubResource("1"),
+&"flash": SubResource("2")
 }
 
 [node name="ap_depleted" type="Node2D"]

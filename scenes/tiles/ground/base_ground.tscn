@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://besqifsd1pqmm"]
 
 [ext_resource type="PackedScene" uid="uid://2tj73ejmcn0s" path="res://scenes/tiles/ground/mouse_collision.tscn" id="2"]
-[ext_resource type="Script" path="res://scenes/tiles/ground/ground.gd" id="3"]
+[ext_resource type="Script" uid="uid://bs8pr03s1wxtc" path="res://scenes/tiles/ground/ground.gd" id="3"]
 
 [node name="base_ground" type="Node3D"]
 script = ExtResource("3")

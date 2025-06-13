@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://d10shqx6iv5t7"]
 
 [ext_resource type="PackedScene" uid="uid://btja81mcoqvcc" path="res://scenes/ui/menu/base_menu_panel.tscn" id="1"]
-[ext_resource type="Script" path="res://scenes/ui/online/online.gd" id="2"]
+[ext_resource type="Script" uid="uid://cxtk2mm3v0rwx" path="res://scenes/ui/online/online.gd" id="2"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_vc4q3"]
 [ext_resource type="Texture2D" uid="uid://csq1hhm0xchio" path="res://assets/gui/menu/buttons/buttonLarge_brown.png" id="4_s7jy4"]
 [ext_resource type="Texture2D" uid="uid://nove6ni5alhn" path="res://assets/gui/menu/buttons/buttonLarge_brown_pressed.png" id="5_bdg7k"]
@@ -120,9 +120,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5hx6s"]
 _data = {
-"RESET": SubResource("3"),
-"hide": SubResource("1"),
-"show": SubResource("2")
+&"RESET": SubResource("3"),
+&"hide": SubResource("1"),
+&"show": SubResource("2")
 }
 
 [node name="online" instance=ExtResource("1")]

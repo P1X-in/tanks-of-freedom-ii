@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://cqcktcidclmag"]
 
-[ext_resource type="PackedScene" path="res://scenes/abilities/unit/repair_kit.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://8yggmgoy552i" path="res://scenes/abilities/unit/repair_kit.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="2"]
 [ext_resource type="AudioStream" uid="uid://b3wlebhgd4lb2" path="res://assets/units/audio/motorcycle_move.wav" id="4"]
 [ext_resource type="AudioStream" uid="uid://dnc4jrsp2rueh" path="res://assets/units/audio/soldier_damage.wav" id="5"]
 [ext_resource type="AudioStream" uid="uid://b0y6opij7tv8g" path="res://assets/units/audio/soldier_die.wav" id="6"]
 [ext_resource type="AudioStream" uid="uid://j4c0pv0pidvk" path="res://assets/units/audio/soldier_attack.wav" id="7"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/unit/medkit.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://dkl16galneuob" path="res://scenes/abilities/unit/medkit.tscn" id="8"]
 [ext_resource type="AudioStream" uid="uid://dlj62w0jmeuy7" path="res://assets/units/audio/soldier_hit.wav" id="8_hcx7q"]
-[ext_resource type="Script" path="res://scenes/tiles/units/templates/mobile_infantry.gd" id="9"]
+[ext_resource type="Script" uid="uid://dxw8gdkjeuxho" path="res://scenes/tiles/units/templates/mobile_infantry.gd" id="9"]
 
 [node name="mobile_infantry" instance=ExtResource("2")]
 script = ExtResource("9")

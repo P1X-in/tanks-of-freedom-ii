@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dfmdw1ysub4x1"]
 
-[ext_resource type="Script" path="res://scenes/camera.gd" id="2"]
-[ext_resource type="PackedScene" path="res://assets/gui/markers/pointer.tscn" id="3"]
+[ext_resource type="Script" uid="uid://s5k1abkx40vj" path="res://scenes/camera.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://cimdedognx6dh" path="res://assets/gui/markers/pointer.tscn" id="3"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dj2ff8ec0jux7" path="res://assets/camera_attributes.tres" id="3_cjjgt"]
 
 [sub_resource type="Animation" id="1"]
@@ -37,8 +37,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2gb6w"]
 _data = {
-"RESET": SubResource("1"),
-"fov": SubResource("2")
+&"RESET": SubResource("1"),
+&"fov": SubResource("2")
 }
 
 [node name="camera" type="Node3D"]

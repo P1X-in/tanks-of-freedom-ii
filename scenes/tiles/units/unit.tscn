@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://du53ax6xw71ai"]
 
 [ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="1"]
-[ext_resource type="Script" path="res://scenes/tiles/units/unit.gd" id="2"]
+[ext_resource type="Script" uid="uid://cyqkwb2a3b2bq" path="res://scenes/tiles/units/unit.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://siiihsh6wb0p" path="res://scenes/fx/explosion.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://m81x4smw4a2u" path="res://assets/gui/board/healthbar/healthbar.png" id="3_4v477"]
 [ext_resource type="Texture2D" uid="uid://c6wfohsbmqdbc" path="res://assets/gui/board/healthbar/healthbar_bg.png" id="3_887dj"]
@@ -18,7 +18,7 @@ colors = PackedColorArray(0.117647, 0.117647, 0.117647, 1, 0.431373, 0.431373, 0
 gradient = SubResource("10")
 
 [sub_resource type="Curve" id="12"]
-max_value = 4.0
+_limits = [0.0, 4.0, 0.0, 1.0]
 _data = [Vector2(0, 1.5), 0.0, 0.0, 0, 0, Vector2(1, 3.855), -1.98881, 0.0, 0, 0]
 point_count = 2
 
@@ -126,9 +126,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_aqf0r"]
 _data = {
-"RESET": SubResource("Animation_qsh5y"),
-"level_up": SubResource("1"),
-"move": SubResource("2")
+&"RESET": SubResource("Animation_qsh5y"),
+&"level_up": SubResource("1"),
+&"move": SubResource("2")
 }
 
 [node name="unit" instance=ExtResource("1")]

@@ -60,8 +60,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eelbs"]
 _data = {
-"RESET": SubResource("1"),
-"flash": SubResource("2")
+&"RESET": SubResource("1"),
+&"flash": SubResource("2")
 }
 
 [node name="logo_view" instance=ExtResource("2")]

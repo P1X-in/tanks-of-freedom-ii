@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://cf7ix3pu4c806"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/menu.gd" id="1"]
+[ext_resource type="Script" uid="uid://uf3p4x57ko7x" path="res://scenes/ui/menu/menu.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_fcgt8"]
 [ext_resource type="Texture2D" uid="uid://bey3i1nl046fc" path="res://assets/gui/menu/buttons/buttonLong_brown.png" id="3_ao3ww"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="4_onr04"]
@@ -106,9 +106,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_utmio"]
 _data = {
-"RESET": SubResource("3"),
-"hide": SubResource("1"),
-"show": SubResource("2")
+&"RESET": SubResource("3"),
+&"hide": SubResource("1"),
+&"show": SubResource("2")
 }
 
 [node name="menu" type="Control"]

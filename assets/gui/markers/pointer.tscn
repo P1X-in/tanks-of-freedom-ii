@@ -1,25 +1,25 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://cimdedognx6dh"]
 
-[ext_resource path="res://assets/gui/markers/pointer.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=2]
+[ext_resource type="ArrayMesh" uid="uid://c7qr3tgfd2h5k" path="res://assets/gui/markers/pointer.obj" id="1"]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="2"]
 
-[sub_resource type="StandardMaterial3D" id=1]
-flags_transparent = true
-flags_unshaded = true
-albedo_color = Color( 1, 1, 1, 0.0392157 )
+[sub_resource type="StandardMaterial3D" id="1"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0.0392157)
 
 [node name="pointer" type="Node3D"]
 
 [node name="pointer" type="MeshInstance3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0, -0.05 )
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0, -0.05)
+mesh = ExtResource("1")
+material/0 = ExtResource("2")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 visible = false
 cast_shadow = 0
 radius = 1.1
 height = 20.0
 sides = 50
-material = SubResource( 1 )
+material = SubResource("1")

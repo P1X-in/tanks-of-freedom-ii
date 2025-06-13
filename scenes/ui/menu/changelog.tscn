@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bs2u3kr8ll868"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/changelog.gd" id="1_p3c6l"]
+[ext_resource type="Script" uid="uid://bf2ckro62rs1w" path="res://scenes/ui/menu/changelog.gd" id="1_p3c6l"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_u0cw5"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_ra12s"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="4_1sqed"]
@@ -140,9 +140,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3nwki"]
 _data = {
-"RESET": SubResource("3"),
-"hide": SubResource("1"),
-"show": SubResource("2")
+&"RESET": SubResource("3"),
+&"hide": SubResource("1"),
+&"show": SubResource("2")
 }
 
 [node name="changelog" type="Control"]

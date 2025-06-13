@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://8yggmgoy552i"]
 
-[ext_resource path="res://scenes/abilities/unit/active.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/abilities/unit/repair_kit.gd" type="Script" id=2]
+[ext_resource type="PackedScene" uid="uid://dqv4mqct0nssu" path="res://scenes/abilities/unit/active.tscn" id="1"]
+[ext_resource type="Script" uid="uid://hvlnjdhxkpgh" path="res://scenes/abilities/unit/repair_kit.gd" id="2"]
 
-[node name="repair_kit" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[node name="repair_kit" instance=ExtResource("1")]
+script = ExtResource("2")
 label = "TR_REPAIR_KIT"
 description = "TR_REPAIR_KIT_DESC"
 ap_cost = 15

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://br0p42xdcarcd"]
 
-[ext_resource path="res://assets/gui/icons/abilities/missile.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://dni442qwoawnq" path="res://assets/gui/icons/abilities/missile.png" id="1"]
 
 [node name="missile" type="Sprite2D"]
-texture = ExtResource( 1 )
+texture = ExtResource("1")

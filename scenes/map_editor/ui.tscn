@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://c0go1rlnp6vju"]
 
-[ext_resource type="Script" path="res://scenes/map_editor/ui.gd" id="1"]
+[ext_resource type="Script" uid="uid://bxrupabbug4k0" path="res://scenes/map_editor/ui.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://k2hh8e6861ja" path="res://scenes/map_editor/tile_view.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://5bep6mdci41m" path="res://scenes/ui/radial/radial.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://b1tod34kr8cro" path="res://scenes/ui/map_picker/picker.tscn" id="4"]
@@ -67,8 +67,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gsio6"]
 _data = {
-"hide": SubResource("1"),
-"show": SubResource("2")
+&"hide": SubResource("1"),
+&"show": SubResource("2")
 }
 
 [sub_resource type="Animation" id="3"]
@@ -129,8 +129,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_46jqh"]
 _data = {
-"hide": SubResource("3"),
-"show": SubResource("4")
+&"hide": SubResource("3"),
+&"show": SubResource("4")
 }
 
 [node name="ui" type="Control"]

@@ -6,7 +6,7 @@ const WEST = "w"
 const NORTH = "n"
 const SOUTH = "s"
 
-var position = Vector2(0, 0)
+var position = Vector2i(0, 0)
 
 var ground = preload("res://scenes/map/tile_fragment.gd").new()
 var frame = preload("res://scenes/map/tile_fragment.gd").new()

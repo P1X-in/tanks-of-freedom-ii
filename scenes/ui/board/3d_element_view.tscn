@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bbk8kcsm0f45h"]
 
 [ext_resource type="PackedScene" uid="uid://cry3kqpb8cvim" path="res://scenes/map_editor/tile_cam.tscn" id="1"]
-[ext_resource type="Script" path="res://scenes/ui/board/3d_element_view.gd" id="2"]
+[ext_resource type="Script" uid="uid://cpcqu7ds5gqtm" path="res://scenes/ui/board/3d_element_view.gd" id="2"]
 
 [sub_resource type="Animation" id="1"]
 length = 0.001
@@ -60,8 +60,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hjv74"]
 _data = {
-"RESET": SubResource("1"),
-"flash": SubResource("2")
+&"RESET": SubResource("1"),
+&"flash": SubResource("2")
 }
 
 [node name="3d_element_view" type="Node2D"]

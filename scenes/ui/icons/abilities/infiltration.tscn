@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://d33ldiuupnp5c"]
 
-[ext_resource path="res://assets/gui/icons/abilities/infiltration.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://bkuvtm23snn8l" path="res://assets/gui/icons/abilities/infiltration.png" id="1"]
 
 [node name="infiltration" type="Sprite2D"]
-texture = ExtResource( 1 )
+texture = ExtResource("1")

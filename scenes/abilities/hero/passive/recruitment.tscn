@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://f5nmbi52mdq4"]
 
-[ext_resource path="res://scenes/abilities/hero/passive/passive.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/abilities/hero/passive/recruitment.gd" type="Script" id=2]
+[ext_resource type="PackedScene" uid="uid://bitouofekbv1n" path="res://scenes/abilities/hero/passive/passive.tscn" id="1"]
+[ext_resource type="Script" uid="uid://d2oe600vy0njh" path="res://scenes/abilities/hero/passive/recruitment.gd" id="2"]
 
-[node name="recruitment" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[node name="recruitment" instance=ExtResource("1")]
+script = ExtResource("2")
 label = "TR_PASS_RECRUIT"
 description = "TR_PASS_RECRUIT_DESC"

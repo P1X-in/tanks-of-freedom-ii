@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://wtym5yng5bf5"]
 
-[ext_resource path="res://assets/gui/icons/abilities/repair_kit.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://cfjlkyx4n8d7c" path="res://assets/gui/icons/abilities/repair_kit.png" id="1"]
 
 [node name="repair_kit" type="Sprite2D"]
-texture = ExtResource( 1 )
+texture = ExtResource("1")

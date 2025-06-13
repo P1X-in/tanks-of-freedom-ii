@@ -5,9 +5,9 @@
 [ext_resource type="AudioStream" uid="uid://boar0vcoegjfa" path="res://assets/units/audio/tank_attack.wav" id="4"]
 [ext_resource type="AudioStream" uid="uid://c8x4wd0406myw" path="res://assets/units/audio/tank_move.wav" id="5"]
 [ext_resource type="AudioStream" uid="uid://di5y7cgurfgrm" path="res://assets/units/audio/tank_damage.wav" id="6"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/unit/long_range_shell.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://c24uuhjj3adr4" path="res://scenes/abilities/unit/long_range_shell.tscn" id="7"]
 [ext_resource type="AudioStream" uid="uid://dg5ix6u5ctkil" path="res://assets/units/audio/tank_hit.wav" id="8"]
-[ext_resource type="Script" path="res://scenes/tiles/units/templates/tank.gd" id="9"]
+[ext_resource type="Script" uid="uid://6ruvojtnqojv" path="res://scenes/tiles/units/templates/tank.gd" id="9"]
 
 [node name="tank" instance=ExtResource("1")]
 script = ExtResource("9")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://4fm2h6kocq46"]
 
-[ext_resource type="Script" path="res://scenes/ui/save/saves.gd" id="2"]
+[ext_resource type="Script" uid="uid://25b1hbrqikr0" path="res://scenes/ui/save/saves.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_ehj22"]
 [ext_resource type="PackedScene" uid="uid://c25khmnk6x2xp" path="res://scenes/ui/save/entry_button.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="3_4fku8"]
@@ -121,9 +121,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ylvri"]
 _data = {
-"RESET": SubResource("1"),
-"hide": SubResource("2"),
-"show": SubResource("3")
+&"RESET": SubResource("1"),
+&"hide": SubResource("2"),
+&"show": SubResource("3")
 }
 
 [node name="saves" type="Node2D"]

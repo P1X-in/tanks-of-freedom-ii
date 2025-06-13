@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://ce08h2jnhhsh4"]
 
-[ext_resource type="Script" path="res://scenes/ui/board/hover_menu.gd" id="1_j6ss3"]
+[ext_resource type="Script" uid="uid://6df8duqii4kn" path="res://scenes/ui/board/hover_menu.gd" id="1_j6ss3"]
 [ext_resource type="Texture2D" uid="uid://b5k32hj4wy5tb" path="res://assets/gui/editor/circle_white.png" id="2_0uiag"]
 [ext_resource type="Texture2D" uid="uid://biu2u7rf4o1vh" path="res://assets/gui/editor/circle.png" id="3_nd642"]
 [ext_resource type="PackedScene" uid="uid://npd40qtkohuq" path="res://scenes/ui/icons/coin.tscn" id="4_5ny1k"]
@@ -96,9 +96,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kefv0"]
 _data = {
-"RESET": SubResource("Animation_2xg8h"),
-"hide": SubResource("Animation_ic3ke"),
-"show": SubResource("Animation_xciiy")
+&"RESET": SubResource("Animation_2xg8h"),
+&"hide": SubResource("Animation_ic3ke"),
+&"show": SubResource("Animation_xciiy")
 }
 
 [node name="hover_menu" type="Control"]

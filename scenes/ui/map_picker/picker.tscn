@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://b1tod34kr8cro"]
 
-[ext_resource type="Script" path="res://scenes/ui/map_picker/picker.gd" id="1"]
+[ext_resource type="Script" uid="uid://btixieux7e10a" path="res://scenes/ui/map_picker/picker.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_aj7tb"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_sca5i"]
 [ext_resource type="PackedScene" uid="uid://ltnnrfgqasgi" path="res://scenes/ui/map_picker/map_button.tscn" id="3"]
@@ -123,9 +123,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wxkik"]
 _data = {
-"RESET": SubResource("3"),
-"hide": SubResource("1"),
-"show": SubResource("2")
+&"RESET": SubResource("3"),
+&"hide": SubResource("1"),
+&"show": SubResource("2")
 }
 
 [node name="picker" type="Node2D"]

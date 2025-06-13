@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6itppyd8bte1"]
 
-[ext_resource type="PackedScene" path="res://scenes/tiles/tile.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="1"]
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://cj6jq5exg65by" path="res://assets/terrain/grasslands/river_plants_6_overtile.obj" id="3"]
 

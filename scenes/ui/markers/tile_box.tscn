@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dfk0pnl01eotc"]
 
-[ext_resource type="Script" path="res://scenes/ui/markers/tile_box.gd" id="1"]
+[ext_resource type="Script" uid="uid://5qn6m11x15ct" path="res://scenes/ui/markers/tile_box.gd" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://cp4xylwlqbo56" path="res://assets/gui/markers/tile_box.obj" id="2"]
 
 [sub_resource type="Animation" id="1"]
@@ -21,7 +21,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4helo"]
 _data = {
-"bob": SubResource("1")
+&"bob": SubResource("1")
 }
 
 [node name="tile_box" type="Node3D"]

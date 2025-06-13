@@ -5,9 +5,9 @@
 [ext_resource type="AudioStream" uid="uid://boar0vcoegjfa" path="res://assets/units/audio/tank_attack.wav" id="4"]
 [ext_resource type="AudioStream" uid="uid://c8x4wd0406myw" path="res://assets/units/audio/tank_move.wav" id="5"]
 [ext_resource type="AudioStream" uid="uid://di5y7cgurfgrm" path="res://assets/units/audio/tank_damage.wav" id="6"]
-[ext_resource type="Script" path="res://scenes/tiles/units/templates/rocket_artillery.gd" id="7"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/unit/missile.tscn" id="8"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/unit/heavy_missile.tscn" id="9"]
+[ext_resource type="Script" uid="uid://bub6r1obtavy8" path="res://scenes/tiles/units/templates/rocket_artillery.gd" id="7"]
+[ext_resource type="PackedScene" uid="uid://c38hykksjarm1" path="res://scenes/abilities/unit/missile.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://bbpe3xq6hh045" path="res://scenes/abilities/unit/heavy_missile.tscn" id="9"]
 [ext_resource type="AudioStream" uid="uid://sd73vscxvto2" path="res://assets/units/audio/missile_attack.wav" id="10"]
 
 [node name="rocket_artillery" instance=ExtResource("1")]

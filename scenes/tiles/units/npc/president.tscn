@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cx3h08fwcned7"]
 
-[ext_resource type="PackedScene" path="res://scenes/tiles/units/npc/npc.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dhp2upbfyqtoq" path="res://scenes/tiles/units/npc/npc.tscn" id="1"]
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://disaye12qlomn" path="res://assets/units/npcs/president.obj" id="3"]
 

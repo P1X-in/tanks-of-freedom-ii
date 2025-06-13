@@ -37,7 +37,7 @@ func draw_path(path):
 			self.place_marker(path[i])
 
 	self.rotate_markers(path)
-	
+
 
 func place_marker(tile_key):
 	var tile = self.map_obj.model.tiles[tile_key]
@@ -67,7 +67,7 @@ func convert_path_to_directions(path):
 	directions.reverse()
 	return directions
 
-func get_rotation_to_tile(source_key, destination_key):                
+func get_rotation_to_tile(source_key, destination_key):
 	var source_tile = self.map_obj.model.tiles[source_key]
 	var destination_tile = self.map_obj.model.tiles[destination_key]
 	return source_tile.get_direction_to_neighbour(destination_tile)

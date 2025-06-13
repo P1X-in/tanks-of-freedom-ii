@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbqwq8caminv0"]
 
-[ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/infantry.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://sd2igkrkfl" path="res://scenes/tiles/units/templates/infantry.tscn" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://dm2fnt422rg4k" path="res://assets/units/red/infantry.obj" id="2"]
 [ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="3"]
 

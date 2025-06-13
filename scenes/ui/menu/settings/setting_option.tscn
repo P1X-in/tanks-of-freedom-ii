@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dp8jphj7nj6ku"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/settings/setting_option.gd" id="2"]
+[ext_resource type="Script" uid="uid://bf6fkfnkuognf" path="res://scenes/ui/menu/settings/setting_option.gd" id="2"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_kfs5u"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="3_mn64k"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_qccue"]

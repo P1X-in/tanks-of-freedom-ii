@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SpawnUnit" load_steps=2 format=3 uid="uid://fx20mhhx3ssh"]
+
+[ext_resource type="Script" path="res://scenes/abilities/production/unit.gd" id="1_u4b4h"]
+
+[resource]
+script = ExtResource("1_u4b4h")
+unit = "heli"
+TYPE = "production"
+dlc_version = 1
+index = 1
+label = "TR_ATT_HELI"
+description = ""
+ap_cost = 70
+cooldown = 0
+ability_range = 0
+draw_range = 0
+in_line = false

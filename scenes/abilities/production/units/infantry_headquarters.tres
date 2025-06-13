@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SpawnUnit" load_steps=2 format=3 uid="uid://b7uw3y4b42tew"]
+
+[ext_resource type="Script" path="res://scenes/abilities/production/unit.gd" id="1_e4x2b"]
+
+[resource]
+script = ExtResource("1_e4x2b")
+style = "blue"
+unit = "infantry"
+TYPE = "production"
+dlc_version = 1
+index = 1
+label = "TR_INFANTRY"
+description = ""
+ap_cost = 40
+cooldown = 0
+ability_range = 0
+draw_range = 0
+in_line = false

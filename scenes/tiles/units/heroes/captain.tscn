@@ -3,8 +3,8 @@
 [ext_resource type="Material" uid="uid://cj2u6cis5y0wd" path="res://assets/materials/arne32_green.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://pbf2ydgtfdt4" path="res://scenes/tiles/units/heroes/hero.tscn" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://crchwyrj08q3x" path="res://assets/units/heroes/captain.obj" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/mentor.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/active/supply.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://cp10gpgbbaii2" path="res://scenes/abilities/hero/passive/mentor.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bno2xoxd2dgr0" path="res://scenes/abilities/hero/active/supply.tscn" id="5"]
 
 [node name="captain" instance=ExtResource("2")]
 unit_name = "TR_CAPTAIN"

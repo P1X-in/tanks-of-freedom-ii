@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://diishwyalmh0"]
 
-[ext_resource path="res://scenes/abilities/hero/passive/trained_specialist.gd" type="Script" id=1]
-[ext_resource path="res://scenes/abilities/hero/passive/passive.tscn" type="PackedScene" id=2]
+[ext_resource type="Script" uid="uid://yduomd0akyj4" path="res://scenes/abilities/hero/passive/trained_specialist.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bitouofekbv1n" path="res://scenes/abilities/hero/passive/passive.tscn" id="2"]
 
-[node name="trained_specialist" instance=ExtResource( 2 )]
-script = ExtResource( 1 )
+[node name="trained_specialist" instance=ExtResource("2")]
+script = ExtResource("1")
 label = "TR_PASS_TR_SPEC"
 description = "TR_PASS_TR_SPEC_DESC"

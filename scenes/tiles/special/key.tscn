@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://f02wy3v3ku6b"]
 
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/tile.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://c6t2i7ry5yko6" path="res://assets/gui/markers/key.obj" id="3"]
 
 [sub_resource type="Animation" id="1"]
@@ -38,8 +38,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_apt3c"]
 _data = {
-"RESET": SubResource("1"),
-"rotate": SubResource("2")
+&"RESET": SubResource("1"),
+&"rotate": SubResource("2")
 }
 
 [node name="key" instance=ExtResource("2")]

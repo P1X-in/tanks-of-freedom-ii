@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://craat6ei4htye"]
 
 [ext_resource type="Material" uid="uid://dkqg3sksh2p2c" path="res://assets/materials/arne32_neutral.tres" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/buildings/building.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://bely6vwtk66qv" path="res://assets/buildings/neutral/lighthouse.obj" id="3"]
-[ext_resource type="PackedScene" path="res://assets/terrain/grasslands/plants/tree_big_1.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bnswes5ub5mej" path="res://assets/terrain/grasslands/plants/tree_big_1.tscn" id="4"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -35,7 +35,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i2uv8"]
 _data = {
-"ap_gain": SubResource("1")
+&"ap_gain": SubResource("1")
 }
 
 [node name="lighthouse" instance=ExtResource("2")]

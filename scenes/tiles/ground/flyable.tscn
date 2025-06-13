@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cokqfimal0xeo"]
 
-[ext_resource type="Script" path="res://scenes/tiles/ground/flyable.gd" id="2"]
+[ext_resource type="Script" uid="uid://dxnsb075ir1xd" path="res://scenes/tiles/ground/flyable.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="3"]
 [ext_resource type="ArrayMesh" uid="uid://r34sx3ub4q52" path="res://assets/terrain/variety/flyable_tile.obj" id="3_rfa3m"]
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="4_tf6pi"]

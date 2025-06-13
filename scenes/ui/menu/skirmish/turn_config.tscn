@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://corpp72mh3y4"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/skirmish/turn_config.gd" id="1_w66f5"]
+[ext_resource type="Script" uid="uid://df5uxogm2lg3t" path="res://scenes/ui/menu/skirmish/turn_config.gd" id="1_w66f5"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="4_437br"]
 [ext_resource type="Texture2D" uid="uid://bkp8gbivdpjm" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown.png" id="5_4i6w6"]
 [ext_resource type="Texture2D" uid="uid://ceku0o1lajwmu" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_pressed.png" id="6_c64di"]

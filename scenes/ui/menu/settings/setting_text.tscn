@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ofwuqskwc7ah"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/settings/setting_text.gd" id="1_ybx0s"]
+[ext_resource type="Script" uid="uid://dd2cvf4l4r64a" path="res://scenes/ui/menu/settings/setting_text.gd" id="1_ybx0s"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_tteh7"]
 
 [node name="option" type="Control"]

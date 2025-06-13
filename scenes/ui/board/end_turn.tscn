@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bi4blrx7exbvc"]
 
-[ext_resource type="Script" path="res://scenes/ui/board/end_turn.gd" id="2"]
+[ext_resource type="Script" uid="uid://ct8f16bd7b2ew" path="res://scenes/ui/board/end_turn.gd" id="2"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_nvtu5"]
 [ext_resource type="Texture2D" uid="uid://c1upgftggmnfv" path="res://assets/gui/menu/backgrounds/sub_panel3.png" id="2_rjt8c"]
 

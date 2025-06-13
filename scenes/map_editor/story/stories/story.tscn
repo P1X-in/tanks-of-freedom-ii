@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=3 uid="uid://3jg4od1lphdr"]
 
-[ext_resource type="Script" path="res://scenes/map_editor/story/stories/story.gd" id="1_0lwys"]
+[ext_resource type="Script" uid="uid://euut3yx5qrt7" path="res://scenes/map_editor/story/stories/story.gd" id="1_0lwys"]
 [ext_resource type="PackedScene" uid="uid://yl7ug0tr62ix" path="res://scenes/map_editor/story/stories/story_step_element.tscn" id="2_af5aa"]
 [ext_resource type="PackedScene" uid="uid://cdo215we3i3x5" path="res://scenes/map_editor/story/stories/type_selector.tscn" id="3_ib64o"]
 [ext_resource type="PackedScene" uid="uid://uk5nfa188dvk" path="res://scenes/map_editor/story/stories/types/activate_hero.tscn" id="4_usy7x"]

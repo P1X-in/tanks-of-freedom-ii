@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://bno2xoxd2dgr0"]
 
-[ext_resource path="res://scenes/abilities/hero/active/active.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/abilities/hero/active/supply.gd" type="Script" id=2]
+[ext_resource type="PackedScene" uid="uid://ljrlhlvyllyf" path="res://scenes/abilities/hero/active/active.tscn" id="1"]
+[ext_resource type="Script" uid="uid://doqxcxhs7bigh" path="res://scenes/abilities/hero/active/supply.gd" id="2"]
 
-[node name="supply" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[node name="supply" instance=ExtResource("1")]
+script = ExtResource("2")
 label = "TR_SUPPLY"
 cooldown = 3
 description = "TR_SUPPLY_DESC"

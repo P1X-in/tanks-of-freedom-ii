@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://b6crhl6g0ory"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/settings/settings.gd" id="1"]
+[ext_resource type="Script" uid="uid://blnc0p7t7hhb2" path="res://scenes/ui/menu/settings/settings.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="2_6psbf"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_i5u15"]
 [ext_resource type="PackedScene" uid="uid://cocnl04cpm23o" path="res://scenes/ui/menu/settings/settings_gameplay.tscn" id="3"]
@@ -123,9 +123,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rhn4h"]
 _data = {
-"RESET": SubResource("3"),
-"hide": SubResource("1"),
-"show": SubResource("2")
+&"RESET": SubResource("3"),
+&"hide": SubResource("1"),
+&"show": SubResource("2")
 }
 
 [node name="settings" type="Control"]

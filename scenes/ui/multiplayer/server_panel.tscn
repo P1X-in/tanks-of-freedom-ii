@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cxxtuldmnlg48"]
 
-[ext_resource type="Script" path="res://scenes/ui/multiplayer/server_panel.gd" id="1_ticp1"]
+[ext_resource type="Script" uid="uid://b1y6gyhfjkuf0" path="res://scenes/ui/multiplayer/server_panel.gd" id="1_ticp1"]
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="2_kehx0"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="3_3ls40"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_uy66l"]

@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://dh0ydex1ysxum"]
 
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/tile.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://c80642wkcu8sy" path="res://assets/terrain/grasslands/plants/bush_1.tscn" id="4"]
 [ext_resource type="ArrayMesh" uid="uid://bll43gnhxtxc5" path="res://assets/terrain/grasslands/big_rocks_1_overtile.obj" id="5"]
-[ext_resource type="PackedScene" path="res://assets/terrain/grasslands/plants/bush_3.tscn" id="6"]
-[ext_resource type="PackedScene" path="res://assets/terrain/grasslands/plants/tree_small_1.tscn" id="7"]
-[ext_resource type="PackedScene" path="res://assets/terrain/grasslands/plants/pine_1.tscn" id="8"]
-[ext_resource type="PackedScene" path="res://assets/terrain/grasslands/plants/pine_3.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://cvxqgdouf1p2t" path="res://assets/terrain/grasslands/plants/bush_3.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://hc57dicq18r0" path="res://assets/terrain/grasslands/plants/tree_small_1.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://dvhw6ggsl620l" path="res://assets/terrain/grasslands/plants/pine_1.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://h8gmwud84vw1" path="res://assets/terrain/grasslands/plants/pine_3.tscn" id="9"]
 
 [node name="tile" instance=ExtResource("3")]
 

@@ -41,7 +41,7 @@ func fill_radial_with_building_abilities(board, radial, building):
 			var icon_model = board.map.templates.get_template(ability.template_name)
 			var ap_cost = ability.get_cost()
 
-			ap_cost = board.abilities.get_modified_cost(ap_cost, ability.template_name, building)
+			ap_cost = board.abilities.get_modified_cost(ap_cost, ability.template_name, building.side)
 
 			icon_model.set_side_material(board.map.templates.get_side_material(building.side))
 			icon = tile_view_template.instantiate()
@@ -54,7 +54,7 @@ func fill_radial_with_building_abilities(board, radial, building):
 			if not board.state.can_current_player_afford(ap_cost):
 				label += "\n" + tr("TR_NOT_ENOUGH_AP")
 				radial.set_field_disabled(ability.index, "")
-				
+
 			radial.set_field(icon, label, ability.index, board, "activate_production_ability", [ability])
 
 func fill_radial_with_unit_abilities(board, radial, unit):

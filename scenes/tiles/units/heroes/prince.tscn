@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://vi8b3inmwaqo"]
 
 [ext_resource type="Material" uid="uid://cmuoryv8gy5rs" path="res://assets/materials/arne32_yellow.tres" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/units/heroes/hero.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://pbf2ydgtfdt4" path="res://scenes/tiles/units/heroes/hero.tscn" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://cp07idpdhmm41" path="res://assets/units/heroes/prince.obj" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/high_morale.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/active/inspire.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://bgkg2a4ewdhsx" path="res://scenes/abilities/hero/passive/high_morale.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://1hbx5hmo1or6" path="res://scenes/abilities/hero/active/inspire.tscn" id="5"]
 
 [node name="prince" instance=ExtResource("2")]
 unit_name = "TR_PRINCE"

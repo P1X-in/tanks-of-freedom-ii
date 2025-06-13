@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cry3kqpb8cvim" path="res://scenes/map_editor/tile_cam.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://ci2opj01qhem3" path="res://assets/gui/menu/backgrounds/sub_panel2.png" id="2_uqfeg"]
-[ext_resource type="Script" path="res://scenes/map_editor/tile_view.gd" id="3"]
+[ext_resource type="Script" uid="uid://bgm3hmq5web2c" path="res://scenes/map_editor/tile_view.gd" id="3"]
 
 [node name="tile_view" type="Node2D"]
 script = ExtResource("3")

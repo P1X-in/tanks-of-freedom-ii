@@ -1,8 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://nll6vquv5fl2"]
 
-[ext_resource path="res://scenes/board/logic/markers/path_markers.gd" type="Script" id=1]
-
-
+[ext_resource type="Script" uid="uid://du5t53ro7pyj2" path="res://scenes/board/logic/markers/path_markers.gd" id="1"]
 
 [node name="path_markers" type="Node3D"]
-script = ExtResource( 1 )
+script = ExtResource("1")

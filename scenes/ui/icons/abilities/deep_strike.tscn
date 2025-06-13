@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://06qncwgc5cqy"]
 
-[ext_resource path="res://assets/gui/icons/abilities/deep_strike.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://blwspo4qp2xmm" path="res://assets/gui/icons/abilities/deep_strike.png" id="1"]
 
 [node name="deep_strike" type="Sprite2D"]
-texture = ExtResource( 1 )
+texture = ExtResource("1")

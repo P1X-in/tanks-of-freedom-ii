@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://co5xbe4c30mkx"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/campaign/mission_marker.gd" id="1_g65bv"]
+[ext_resource type="Script" uid="uid://b5lyklvhq8muh" path="res://scenes/ui/menu/campaign/mission_marker.gd" id="1_g65bv"]
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="2_x1yh5"]
 [ext_resource type="FontFile" uid="uid://btstgc45ggura" path="res://assets/fonts/courier.tres" id="3_xipji"]
 [ext_resource type="Texture2D" uid="uid://0lbtq8yu4pc0" path="res://assets/gui/icons/flag.png" id="4_asw7p"]
@@ -40,8 +40,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7mr6a"]
 _data = {
-"hide": SubResource("2"),
-"show": SubResource("1")
+&"hide": SubResource("2"),
+&"show": SubResource("1")
 }
 
 [node name="mission_marker" type="Control"]

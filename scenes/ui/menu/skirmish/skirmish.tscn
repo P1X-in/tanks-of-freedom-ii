@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b68vtard4p6s3" path="res://scenes/ui/minimap/minimap.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_y8fji"]
-[ext_resource type="Script" path="res://scenes/ui/menu/skirmish/skirmish.gd" id="3"]
+[ext_resource type="Script" uid="uid://b5tfholmqba3g" path="res://scenes/ui/menu/skirmish/skirmish.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://dl5ci1t5c1agk" path="res://scenes/ui/menu/skirmish/skirmish_player.tscn" id="4"]
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="5_h4jhr"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_nw18n"]
@@ -121,9 +121,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4l2fb"]
 _data = {
-"RESET": SubResource("3"),
-"hide": SubResource("1"),
-"show": SubResource("2")
+&"RESET": SubResource("3"),
+&"hide": SubResource("1"),
+&"show": SubResource("2")
 }
 
 [node name="skirmish" type="Control"]

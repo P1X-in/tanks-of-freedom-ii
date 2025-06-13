@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2g34lh4xlni8"]
 
 [ext_resource type="ArrayMesh" uid="uid://cp4xylwlqbo56" path="res://assets/gui/markers/tile_box.obj" id="1"]
-[ext_resource type="Script" path="res://scenes/ui/markers/movement_marker.gd" id="3"]
+[ext_resource type="Script" uid="uid://5m2fo8dr3b4w" path="res://scenes/ui/markers/movement_marker.gd" id="3"]
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="3_ge5au"]
 
 [node name="movement_marker" type="Node3D"]
