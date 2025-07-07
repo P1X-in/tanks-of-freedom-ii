@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://beabbbh66nuru"]
 
-[ext_resource type="PackedScene" path="res://scenes/tiles/buildings/building.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://busyqun207nnw" path="res://assets/buildings/red/headquarters.obj" id="2"]
 [ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/red/infantry.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/heroes/noble.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/heroes/gentleman.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://ltnpyn227dex" path="res://scenes/abilities/production/red/infantry.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bmcfd230usxlt" path="res://scenes/abilities/production/heroes/noble.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://c730tqsq8twbi" path="res://scenes/abilities/production/heroes/gentleman.tscn" id="6"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -37,7 +37,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iwttf"]
 _data = {
-"ap_gain": SubResource("1")
+&"ap_gain": SubResource("1")
 }
 
 [node name="tile" instance=ExtResource("1")]

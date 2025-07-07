@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7kei6ns4fqac"]
 
 [ext_resource type="ArrayMesh" uid="uid://cr16y5juavyp6" path="res://assets/units/yellow/tank.obj" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/tank.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bbgb5st5tw8p7" path="res://scenes/tiles/units/templates/tank.tscn" id="2"]
 [ext_resource type="Material" uid="uid://cmuoryv8gy5rs" path="res://assets/materials/arne32_yellow.tres" id="3_eo5hj"]
 
 [node name="tank" instance=ExtResource("2")]

@@ -48,7 +48,7 @@ func dir_list(dirpath, files=false):
 func _dir_list(dirpath, files=false):
 	var listing = []
 	var file_name
-	
+
 	var dir = DirAccess.open(dirpath)
 
 	if dir != null:

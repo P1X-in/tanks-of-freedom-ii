@@ -2,7 +2,7 @@
 
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://b8wyheog788t3" path="res://assets/terrain/snowlands/snow_road_transition_3_tile.obj" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/tile.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="3"]
 
 [node name="road_transition_3_tile" instance=ExtResource("3")]
 

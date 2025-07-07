@@ -834,7 +834,7 @@ func _compile_templates_list():
 	for partial_dict in partial_templates:
 		for template_key in partial_dict:
 			self.templates[template_key] = partial_dict[template_key]
-				
+
 func get_template(template):
 	if template == null:
 		return null
@@ -858,4 +858,3 @@ func get_side_material_desat(side, _type="normal"):
 	#	return self.side_materials_metallic_desat[side]
 
 	return self.side_materials_desat[side]
-

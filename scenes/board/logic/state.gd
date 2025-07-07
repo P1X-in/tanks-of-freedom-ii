@@ -36,7 +36,7 @@ func get_current_player():
 	return self.players[self.current_player]
 
 func get_current_ap():
-	return self.get_current_param("ap")
+	return int(self.get_current_param("ap"))
 
 func get_current_side():
 	return self.get_current_param("side")

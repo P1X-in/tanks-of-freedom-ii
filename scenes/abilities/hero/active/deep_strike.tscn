@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://bct4k5lo4ktcb"]
 
-[ext_resource path="res://scenes/abilities/hero/active/active.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/abilities/hero/active/deep_strike.gd" type="Script" id=2]
+[ext_resource type="PackedScene" uid="uid://ljrlhlvyllyf" path="res://scenes/abilities/hero/active/active.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cm3vo5fy7xtsu" path="res://scenes/abilities/hero/active/deep_strike.gd" id="2"]
 
-[node name="deep_strike" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[node name="deep_strike" instance=ExtResource("1")]
+script = ExtResource("2")
 label = "TR_DEEP_STRIKE"
 description = "TR_DEEP_STRIKE_DESC"
 ability_range = 2

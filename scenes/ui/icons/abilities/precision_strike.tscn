@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://xsipg3ff3m5a"]
 
-[ext_resource path="res://assets/gui/icons/abilities/precision_strike.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://se4gwmheaui6" path="res://assets/gui/icons/abilities/precision_strike.png" id="1"]
 
 [node name="precision_strike" type="Sprite2D"]
-texture = ExtResource( 1 )
+texture = ExtResource("1")

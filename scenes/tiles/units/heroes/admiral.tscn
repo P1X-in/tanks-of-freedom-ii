@@ -3,8 +3,8 @@
 [ext_resource type="Material" uid="uid://cj2u6cis5y0wd" path="res://assets/materials/arne32_green.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://pbf2ydgtfdt4" path="res://scenes/tiles/units/heroes/hero.tscn" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://cvkcpfn77vi7i" path="res://assets/units/heroes/admiral.obj" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/air_superiority.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/active/precision_strike.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://ctsqdpqv5c6ti" path="res://scenes/abilities/hero/passive/air_superiority.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://o8msyn6mneus" path="res://scenes/abilities/hero/active/precision_strike.tscn" id="5"]
 
 [node name="admiral" instance=ExtResource("2")]
 unit_name = "TR_ADMIRAL"

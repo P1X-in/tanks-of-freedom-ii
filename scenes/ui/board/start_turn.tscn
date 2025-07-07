@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://botr5y82s8y8r"]
 
-[ext_resource type="Script" path="res://scenes/ui/board/start_turn.gd" id="2"]
+[ext_resource type="Script" uid="uid://bp3tf1c3qc6sr" path="res://scenes/ui/board/start_turn.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://c1upgftggmnfv" path="res://assets/gui/menu/backgrounds/sub_panel3.png" id="2_kff67"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/nations/blue.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/ui/icons/nations/yellow.tscn" id="4"]
@@ -78,8 +78,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1puoi"]
 _data = {
-"RESET": SubResource("2"),
-"show": SubResource("1")
+&"RESET": SubResource("2"),
+&"show": SubResource("1")
 }
 
 [node name="start_turn" type="Node2D"]

@@ -1,9 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://cu088aneass63"]
 
-[ext_resource path="res://assets/materials/arne32_reflective.tres" type="Material" id=1]
-[ext_resource path="res://assets/terrain/reflections/building_big_3_reflections.obj" type="ArrayMesh" id=2]
-
+[ext_resource type="Material" uid="uid://bwgevluvlcqfg" path="res://assets/materials/arne32_reflective.tres" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://4i7xd3u1vf81" path="res://assets/terrain/reflections/building_big_3_reflections.obj" id="2"]
 
 [node name="building_big_3_reflections" type="MeshInstance3D"]
-mesh = ExtResource( 2 )
-material/0 = ExtResource( 1 )
+mesh = ExtResource("2")
+material/0 = ExtResource("1")

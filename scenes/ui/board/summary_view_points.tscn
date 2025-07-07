@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b5i31jke8jkj1"]
 
 [ext_resource type="Texture2D" uid="uid://4ccwqkvp01tf" path="res://assets/gui/menu/backgrounds/sub_panel.png" id="1_2cblg"]
-[ext_resource type="Script" path="res://scenes/ui/board/summary_view_points.gd" id="1_6jvbd"]
+[ext_resource type="Script" uid="uid://d38feddweee2n" path="res://scenes/ui/board/summary_view_points.gd" id="1_6jvbd"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="3_7f8ul"]
 [ext_resource type="PackedScene" uid="uid://3fj8wtorlnlk" path="res://scenes/ui/icons/building.tscn" id="3_ydfc3"]
 [ext_resource type="PackedScene" uid="uid://bdjcbovjyx7j5" path="res://scenes/ui/icons/tank.tscn" id="5_uxqda"]

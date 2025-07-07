@@ -2,11 +2,11 @@
 
 [ext_resource type="ArrayMesh" uid="uid://vdvsrf4yxhih" path="res://assets/buildings/blue/headquarters.obj" id="1"]
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/buildings/building.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/blue/infantry.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/heroes/general.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/heroes/commando.tscn" id="6"]
-[ext_resource type="Script" path="res://scenes/tiles/buildings/blue/headquarters.gd" id="7"]
+[ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bhqnytwquafj4" path="res://scenes/abilities/production/blue/infantry.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b0rr8trun1lp1" path="res://scenes/abilities/production/heroes/general.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://crkmprobm3a5g" path="res://scenes/abilities/production/heroes/commando.tscn" id="6"]
+[ext_resource type="Script" uid="uid://bxx4ywgvv1d2n" path="res://scenes/tiles/buildings/blue/headquarters.gd" id="7"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -38,7 +38,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oe3u7"]
 _data = {
-"ap_gain": SubResource("1")
+&"ap_gain": SubResource("1")
 }
 
 [node name="headquarters" instance=ExtResource("3")]

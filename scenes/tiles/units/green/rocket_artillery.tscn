@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dm3j82afi8uht"]
 
-[ext_resource type="PackedScene" path="res://scenes/tiles/units/templates/rocket_artillery.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dwhss6vtuek7n" path="res://scenes/tiles/units/templates/rocket_artillery.tscn" id="2"]
 [ext_resource type="Material" uid="uid://cj2u6cis5y0wd" path="res://assets/materials/arne32_green.tres" id="3_bfeap"]
 [ext_resource type="ArrayMesh" uid="uid://0aamts8q77q8" path="res://assets/units/green/rocket_artillery.obj" id="8"]
 

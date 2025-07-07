@@ -54,7 +54,7 @@ func fill_radial_with_building_abilities(board, radial, building):
 			if not board.state.can_current_player_afford(ap_cost):
 				label += "\n" + tr("TR_NOT_ENOUGH_AP")
 				radial.set_field_disabled(ability.index, "")
-				
+
 			radial.set_field(icon, label, ability.index, board, "activate_production_ability", [ability])
 
 func fill_radial_with_unit_abilities(board, radial, unit):

@@ -16,7 +16,10 @@ dest_files=["res://.godot/imported/grass_3.obj-42512266f973d34ee2ca95b7d6cb3ce2.
 [params]
 
 generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
 scale_mesh=Vector3(1, 1, 1)
 offset_mesh=Vector3(0, 0, 0)
-optimize_mesh=true
 force_disable_mesh_compression=false

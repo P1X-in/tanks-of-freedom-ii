@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dnqbbv8qec4n4"]
 
-[ext_resource type="Script" path="res://scenes/map_editor/story/triggers/triggers.gd" id="1_6ul1w"]
+[ext_resource type="Script" uid="uid://0qf71rtdhdan" path="res://scenes/map_editor/story/triggers/triggers.gd" id="1_6ul1w"]
 [ext_resource type="PackedScene" uid="uid://c6lrgtl1hkim3" path="res://scenes/map_editor/story/triggers/listing.tscn" id="2_1b5uf"]
 
 [node name="TriggersListing" type="Control"]

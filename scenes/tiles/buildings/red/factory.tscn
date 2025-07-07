@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://o28hn8evpx62"]
 
-[ext_resource type="PackedScene" path="res://scenes/tiles/buildings/building.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="1"]
 [ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://c70hdddepj4aj" path="res://assets/buildings/red/factory.obj" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/red/tank.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/red/rocket_artillery.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://cp5m6i4m3sut4" path="res://scenes/abilities/production/red/tank.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://cdd88kj8enb1l" path="res://scenes/abilities/production/red/rocket_artillery.tscn" id="5"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -36,7 +36,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kdtul"]
 _data = {
-"ap_gain": SubResource("1")
+&"ap_gain": SubResource("1")
 }
 
 [node name="tile" instance=ExtResource("1")]

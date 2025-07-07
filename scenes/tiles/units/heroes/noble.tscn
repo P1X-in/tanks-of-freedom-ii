@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://b5xe2ttsajnpg"]
 
 [ext_resource type="Material" uid="uid://j71bn7wbij01" path="res://assets/materials/arne32_red.tres" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/units/heroes/hero.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://pbf2ydgtfdt4" path="res://scenes/tiles/units/heroes/hero.tscn" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://b6wrfg0wv8es2" path="res://assets/units/heroes/noble.obj" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/efficient.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/active/hardened_armour.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://chxq1nfcmxmud" path="res://scenes/abilities/hero/passive/efficient.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bt36k5vm6iuqm" path="res://scenes/abilities/hero/active/hardened_armour.tscn" id="5"]
 
 [node name="noble" instance=ExtResource("2")]
 unit_name = "TR_NOBLE"

@@ -1,8 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://ckd2myisg76a1"]
 
-[ext_resource path="res://assets/materials/arne32.tres" type="Material" id=1]
-[ext_resource path="res://assets/terrain/grasslands/plants_small/flower_g_3.obj" type="ArrayMesh" id=2]
+[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://f0qnvicbaqn6" path="res://assets/terrain/grasslands/plants_small/flower_g_3.obj" id="2"]
 
 [node name="flower_g_3" type="MeshInstance3D"]
-mesh = ExtResource( 2 )
-material/0 = ExtResource( 1 )
+mesh = ExtResource("2")
+material/0 = ExtResource("1")

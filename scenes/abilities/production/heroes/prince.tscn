@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://clritfpm0oqqq"]
 
-[ext_resource path="res://scenes/abilities/production/unit.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/abilities/production/heroes/prince.gd" type="Script" id=2]
+[ext_resource type="PackedScene" path="res://scenes/abilities/production/unit.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cta7od5qpcar2" path="res://scenes/abilities/production/heroes/prince.gd" id="2"]
 
-[node name="prince" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[node name="prince" instance=ExtResource("1")]
+script = ExtResource("2")
 label = "TR_PRINCE"
 ap_cost = 150
 template_name = "hero_prince"

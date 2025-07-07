@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dhp2upbfyqtoq"]
 
 [ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="1"]
-[ext_resource type="Script" path="res://scenes/tiles/units/npc/npc.gd" id="2"]
+[ext_resource type="Script" uid="uid://daw03o6b3hfjg" path="res://scenes/tiles/units/npc/npc.gd" id="2"]
 [ext_resource type="AudioStream" uid="uid://b0y6opij7tv8g" path="res://assets/units/audio/soldier_die.wav" id="3"]
 [ext_resource type="AudioStream" uid="uid://bxpot80n08rb7" path="res://assets/units/audio/soldier_move.wav" id="4"]
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="4_hf6oi"]

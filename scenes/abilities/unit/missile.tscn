@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://c38hykksjarm1"]
 
-[ext_resource path="res://scenes/abilities/unit/active.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/abilities/unit/missile.gd" type="Script" id=2]
+[ext_resource type="PackedScene" uid="uid://dqv4mqct0nssu" path="res://scenes/abilities/unit/active.tscn" id="1"]
+[ext_resource type="Script" uid="uid://1ngamjnnqnty" path="res://scenes/abilities/unit/missile.gd" id="2"]
 
-[node name="missile" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[node name="missile" instance=ExtResource("1")]
+script = ExtResource("2")
 label = "TR_MISSILE"
 description = "TR_MISSILE_DESC"
 cooldown = 2
