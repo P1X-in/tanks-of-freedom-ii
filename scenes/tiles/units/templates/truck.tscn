@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://di5y7cgurfgrm" path="res://assets/units/audio/tank_damage.wav" id="5"]
 [ext_resource type="AudioStream" uid="uid://dg5ix6u5ctkil" path="res://assets/units/audio/tank_hit.wav" id="6"]
 [ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="7"]
-[ext_resource type="Script" path="res://scenes/tiles/units/templates/truck.gd" id="9"]
+[ext_resource type="Script" uid="uid://yk8k25s74eog" path="res://scenes/tiles/units/templates/truck.gd" id="9"]
 
 [node name="truck" instance=ExtResource("7")]
 script = ExtResource("9")

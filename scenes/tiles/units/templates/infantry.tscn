@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://sd2igkrkfl"]
 
-[ext_resource type="PackedScene" path="res://scenes/abilities/unit/heavy_weapon.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://c5mgkijudwx6h" path="res://scenes/abilities/unit/heavy_weapon.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="2"]
 [ext_resource type="AudioStream" uid="uid://bxpot80n08rb7" path="res://assets/units/audio/soldier_move.wav" id="4"]
 [ext_resource type="AudioStream" uid="uid://dnc4jrsp2rueh" path="res://assets/units/audio/soldier_damage.wav" id="5"]

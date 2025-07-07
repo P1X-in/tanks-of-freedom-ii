@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bhd3mqllw6g05"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/settings/settings_panel.gd" id="1_lnsq6"]
+[ext_resource type="Script" uid="uid://cicjy1lj1i5ov" path="res://scenes/ui/menu/settings/settings_panel.gd" id="1_lnsq6"]
 [ext_resource type="PackedScene" uid="uid://bhevhm6o3i72h" path="res://scenes/ui/menu/settings/setting_slider.tscn" id="2"]
 
 [node name="settings_audio" type="Control"]

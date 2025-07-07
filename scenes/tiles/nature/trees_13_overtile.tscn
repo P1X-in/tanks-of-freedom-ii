@@ -1,130 +1,130 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://bo3lp0wiscfyf"]
 
-[ext_resource path="res://assets/terrain/grasslands/plants/bush_3.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/tiles/tile.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/terrain/grasslands/plants/pine_3.tscn" type="PackedScene" id=4]
+[ext_resource type="PackedScene" uid="uid://cvxqgdouf1p2t" path="res://assets/terrain/grasslands/plants/bush_3.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cx8fo1iuv1i0n" path="res://scenes/tiles/tile.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://h8gmwud84vw1" path="res://assets/terrain/grasslands/plants/pine_3.tscn" id="4"]
 
-[node name="tile" instance=ExtResource( 3 )]
+[node name="tile" instance=ExtResource("3")]
 
-[node name="bush_3_1" parent="mesh" index="0" instance=ExtResource( 2 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.5, 0, 3.4 )
+[node name="bush_3_1" parent="mesh" index="0" instance=ExtResource("2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.5, 0, 3.4)
 
-[node name="bush_3_2" parent="mesh" index="1" instance=ExtResource( 2 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.7, 0, 3.3 )
+[node name="bush_3_2" parent="mesh" index="1" instance=ExtResource("2")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.7, 0, 3.3)
 
-[node name="bush_3_3" parent="mesh" index="2" instance=ExtResource( 2 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -3, 0, 1.7 )
+[node name="bush_3_3" parent="mesh" index="2" instance=ExtResource("2")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -3, 0, 1.7)
 
-[node name="bush_3_4" parent="mesh" index="3" instance=ExtResource( 2 )]
-transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.5, 0, -1.1 )
+[node name="bush_3_4" parent="mesh" index="3" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.5, 0, -1.1)
 
-[node name="bush_3_5" parent="mesh" index="4" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2.6 )
+[node name="bush_3_5" parent="mesh" index="4" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2.6)
 
-[node name="bush_3_6" parent="mesh" index="5" instance=ExtResource( 2 )]
-transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.5, 0, -3.1 )
+[node name="bush_3_6" parent="mesh" index="5" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.5, 0, -3.1)
 
-[node name="bush_3_7" parent="mesh" index="6" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0, 0.1 )
+[node name="bush_3_7" parent="mesh" index="6" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0, 0.1)
 
-[node name="bush_3_8" parent="mesh" index="7" instance=ExtResource( 2 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.1, 0, 1.8 )
+[node name="bush_3_8" parent="mesh" index="7" instance=ExtResource("2")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.1, 0, 1.8)
 
-[node name="bush_3_9" parent="mesh" index="8" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, -0.9 )
+[node name="bush_3_9" parent="mesh" index="8" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, -0.9)
 
-[node name="bush_3_10" parent="mesh" index="9" instance=ExtResource( 2 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.2, 0, -1.9 )
+[node name="bush_3_10" parent="mesh" index="9" instance=ExtResource("2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.2, 0, -1.9)
 
-[node name="bush_3_11" parent="mesh" index="10" instance=ExtResource( 2 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.4, 0, -2.9 )
+[node name="bush_3_11" parent="mesh" index="10" instance=ExtResource("2")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.4, 0, -2.9)
 
-[node name="bush_3_12" parent="mesh" index="11" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+[node name="bush_3_12" parent="mesh" index="11" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 
-[node name="bush_3_13" parent="mesh" index="12" instance=ExtResource( 2 )]
-transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.1, 0, 3.3 )
+[node name="bush_3_13" parent="mesh" index="12" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.1, 0, 3.3)
 
-[node name="bush_3_14" parent="mesh" index="13" instance=ExtResource( 2 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.2, 0, 1.3 )
+[node name="bush_3_14" parent="mesh" index="13" instance=ExtResource("2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.2, 0, 1.3)
 
-[node name="bush_3_15" parent="mesh" index="14" instance=ExtResource( 2 )]
-transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.4, 0, 2.4 )
+[node name="bush_3_15" parent="mesh" index="14" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.4, 0, 2.4)
 
-[node name="bush_3_16" parent="mesh" index="15" instance=ExtResource( 2 )]
-transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.9, 0, 0.8 )
+[node name="bush_3_16" parent="mesh" index="15" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.9, 0, 0.8)
 
-[node name="bush_3_17" parent="mesh" index="16" instance=ExtResource( 2 )]
-transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.7, 0, -0.2 )
+[node name="bush_3_17" parent="mesh" index="16" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.7, 0, -0.2)
 
-[node name="bush_3_18" parent="mesh" index="17" instance=ExtResource( 2 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.7, 0, -1.5 )
+[node name="bush_3_18" parent="mesh" index="17" instance=ExtResource("2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.7, 0, -1.5)
 
-[node name="bush_3_19" parent="mesh" index="18" instance=ExtResource( 2 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.9, 0, -0.8 )
+[node name="bush_3_19" parent="mesh" index="18" instance=ExtResource("2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.9, 0, -0.8)
 
-[node name="bush_3_20" parent="mesh" index="19" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0, -2.6 )
+[node name="bush_3_20" parent="mesh" index="19" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0, -2.6)
 
-[node name="bush_3_21" parent="mesh" index="20" instance=ExtResource( 2 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, -2.1 )
+[node name="bush_3_21" parent="mesh" index="20" instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, -2.1)
 
-[node name="pine_3_1" parent="mesh" index="21" instance=ExtResource( 4 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -3.1, 0, 3 )
+[node name="pine_3_1" parent="mesh" index="21" instance=ExtResource("4")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -3.1, 0, 3)
 
-[node name="pine_3_2" parent="mesh" index="22" instance=ExtResource( 4 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.4, 0, 1.5 )
+[node name="pine_3_2" parent="mesh" index="22" instance=ExtResource("4")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.4, 0, 1.5)
 
-[node name="pine_3_3" parent="mesh" index="23" instance=ExtResource( 4 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, 0.6 )
+[node name="pine_3_3" parent="mesh" index="23" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, 0.6)
 
-[node name="pine_3_4" parent="mesh" index="24" instance=ExtResource( 4 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, -0.5 )
+[node name="pine_3_4" parent="mesh" index="24" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, -0.5)
 
-[node name="pine_3_5" parent="mesh" index="25" instance=ExtResource( 4 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -1.8 )
+[node name="pine_3_5" parent="mesh" index="25" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0, -1.8)
 
-[node name="pine_3_6" parent="mesh" index="26" instance=ExtResource( 4 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.2, 0, -2.6 )
+[node name="pine_3_6" parent="mesh" index="26" instance=ExtResource("4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.2, 0, -2.6)
 
-[node name="pine_3_7" parent="mesh" index="27" instance=ExtResource( 4 )]
-transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.6, 0, -1.6 )
+[node name="pine_3_7" parent="mesh" index="27" instance=ExtResource("4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.6, 0, -1.6)
 
-[node name="pine_3_8" parent="mesh" index="28" instance=ExtResource( 4 )]
-transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 0, -2.8 )
+[node name="pine_3_8" parent="mesh" index="28" instance=ExtResource("4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 0, -2.8)
 
-[node name="pine_3_9" parent="mesh" index="29" instance=ExtResource( 4 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, 0.8 )
+[node name="pine_3_9" parent="mesh" index="29" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, 0.8)
 
-[node name="pine_3_10" parent="mesh" index="30" instance=ExtResource( 4 )]
-transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.4, 0, 3.3 )
+[node name="pine_3_10" parent="mesh" index="30" instance=ExtResource("4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.4, 0, 3.3)
 
-[node name="pine_3_11" parent="mesh" index="31" instance=ExtResource( 4 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.7, 0, 2.7 )
+[node name="pine_3_11" parent="mesh" index="31" instance=ExtResource("4")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.7, 0, 2.7)
 
-[node name="pine_3_12" parent="mesh" index="32" instance=ExtResource( 4 )]
-transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.6, 0, 2.3 )
+[node name="pine_3_12" parent="mesh" index="32" instance=ExtResource("4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.6, 0, 2.3)
 
-[node name="pine_3_13" parent="mesh" index="33" instance=ExtResource( 4 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.9, 0, 0.1 )
+[node name="pine_3_13" parent="mesh" index="33" instance=ExtResource("4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.9, 0, 0.1)
 
-[node name="pine_3_14" parent="mesh" index="34" instance=ExtResource( 4 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.7, 0, -1.7 )
+[node name="pine_3_14" parent="mesh" index="34" instance=ExtResource("4")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.7, 0, -1.7)
 
-[node name="pine_3_15" parent="mesh" index="35" instance=ExtResource( 4 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.2, 0, -2.7 )
+[node name="pine_3_15" parent="mesh" index="35" instance=ExtResource("4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.2, 0, -2.7)
 
-[node name="pine_3_16" parent="mesh" index="36" instance=ExtResource( 4 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.8, 0, 2.7 )
+[node name="pine_3_16" parent="mesh" index="36" instance=ExtResource("4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.8, 0, 2.7)
 
-[node name="pine_3_17" parent="mesh" index="37" instance=ExtResource( 4 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, 3 )
+[node name="pine_3_17" parent="mesh" index="37" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, 3)
 
-[node name="pine_3_18" parent="mesh" index="38" instance=ExtResource( 4 )]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, 0.2 )
+[node name="pine_3_18" parent="mesh" index="38" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, 0.2)
 
-[node name="pine_3_19" parent="mesh" index="39" instance=ExtResource( 4 )]
-transform = Transform3D( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 2.4, 0, 1.5 )
+[node name="pine_3_19" parent="mesh" index="39" instance=ExtResource("4")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 2.4, 0, 1.5)
 
-[node name="pine_3_20" parent="mesh" index="40" instance=ExtResource( 4 )]
-transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.8, 0, -1.5 )
+[node name="pine_3_20" parent="mesh" index="40" instance=ExtResource("4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.8, 0, -1.5)

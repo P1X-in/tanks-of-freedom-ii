@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://e38csyycv1yv"]
 
-[ext_resource path="res://scenes/abilities/hero/active/infiltration.gd" type="Script" id=1]
-[ext_resource path="res://scenes/abilities/hero/active/active.tscn" type="PackedScene" id=2]
+[ext_resource type="Script" uid="uid://bpin8irkca7cu" path="res://scenes/abilities/hero/active/infiltration.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://ljrlhlvyllyf" path="res://scenes/abilities/hero/active/active.tscn" id="2"]
 
-[node name="infiltration" instance=ExtResource( 2 )]
-script = ExtResource( 1 )
+[node name="infiltration" instance=ExtResource("2")]
+script = ExtResource("1")
 label = "TR_INFILTRATION"
 description = "TR_INFILTRATION_DESC"
 cooldown = 1

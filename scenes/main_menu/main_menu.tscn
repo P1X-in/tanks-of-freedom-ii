@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://coa5nxrvvqpui"]
 
 [ext_resource type="PackedScene" uid="uid://kxsoppflnua2" path="res://scenes/map/map.tscn" id="1"]
-[ext_resource type="Script" path="res://scenes/main_menu/main_menu.gd" id="2"]
+[ext_resource type="Script" uid="uid://cltv1fghhtr3c" path="res://scenes/main_menu/main_menu.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://c2tt60y1onsj4" path="res://scenes/main_menu/ui.tscn" id="3"]
 
 [sub_resource type="Curve3D" id="1"]
@@ -184,8 +184,8 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nkb72"]
 _data = {
-"RESET": SubResource("2"),
-"path": SubResource("3")
+&"RESET": SubResource("2"),
+&"path": SubResource("3")
 }
 
 [node name="main_menu" type="Node3D"]
@@ -203,5 +203,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 220, 4.05, 300)
 
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_nkb72")
+&"": SubResource("AnimationLibrary_nkb72")
 }

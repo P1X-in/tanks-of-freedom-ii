@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://ymr5550pcmub"]
 
-[ext_resource type="Script" path="res://scenes/ui/menu/credits.gd" id="1_6ghbh"]
+[ext_resource type="Script" uid="uid://cm6d61i3sxaaw" path="res://scenes/ui/menu/credits.gd" id="1_6ghbh"]
 [ext_resource type="Texture2D" uid="uid://thnrfs1tirjj" path="res://assets/gui/menu/backgrounds/main_panel.png" id="2_m4imo"]
 [ext_resource type="Texture2D" uid="uid://cat1jloyg2wym" path="res://assets/gui/menu/buttons/buttonMed_brown.png" id="5_jadfm"]
 [ext_resource type="Texture2D" uid="uid://bbdwp6f0d3nib" path="res://assets/gui/menu/buttons/buttonMed_brown_pressed.png" id="6_x0ham"]
@@ -140,9 +140,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3nwki"]
 _data = {
-"RESET": SubResource("3"),
-"hide": SubResource("1"),
-"show": SubResource("2")
+&"RESET": SubResource("3"),
+&"hide": SubResource("1"),
+&"show": SubResource("2")
 }
 
 [node name="credits" type="Control"]
