@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://pbf2ydgtfdt4"]
+[gd_scene load_steps=10 format=3 uid="uid://pbf2ydgtfdt4"]
 
 [ext_resource type="PackedScene" uid="uid://du53ax6xw71ai" path="res://scenes/tiles/units/unit.tscn" id="1"]
 [ext_resource type="Script" uid="uid://b2xyi16qdvlde" path="res://scenes/tiles/units/heroes/hero.gd" id="2"]
 [ext_resource type="AudioStream" uid="uid://b0y6opij7tv8g" path="res://assets/units/audio/soldier_die.wav" id="3"]
 [ext_resource type="AudioStream" uid="uid://bl06h12ywj8cu" path="res://assets/units/audio/hero_move.wav" id="4"]
-[ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="4_4rpd2"]
 [ext_resource type="AudioStream" uid="uid://dww2t65as4u2o" path="res://assets/units/audio/soldier_spawn.wav" id="5"]
 [ext_resource type="AudioStream" uid="uid://j4c0pv0pidvk" path="res://assets/units/audio/soldier_attack.wav" id="6"]
 [ext_resource type="AudioStream" uid="uid://dnc4jrsp2rueh" path="res://assets/units/audio/soldier_damage.wav" id="7"]
@@ -24,7 +23,6 @@ tile_view_height_cam_modifier = -0.5
 
 [node name="standard" type="MeshInstance3D" parent="mesh_anchor" index="1"]
 mesh = ExtResource("9")
-surface_material_override/0 = ExtResource("4_4rpd2")
 
 [node name="bar" parent="mesh_anchor/healthbar/SubViewport" index="0"]
 max_value = 20.0
