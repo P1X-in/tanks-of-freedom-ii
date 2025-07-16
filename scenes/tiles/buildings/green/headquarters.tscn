@@ -2,10 +2,10 @@
 
 [ext_resource type="ArrayMesh" uid="uid://cs2xntyvnbpia" path="res://assets/buildings/green/headquarters.obj" id="1"]
 [ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://bhr6124ng7y33" path="res://scenes/abilities/production/green/infantry.tscn" id="3"]
+[ext_resource type="Resource" uid="uid://b7uw3y4b42tew" path="res://scenes/abilities/production/units/infantry_headquarters.tres" id="2_f8aam"]
+[ext_resource type="Resource" uid="uid://b80sn50eptnqc" path="res://scenes/abilities/production/heroes/admiral.tres" id="3_dtm3i"]
 [ext_resource type="Material" uid="uid://cj2u6cis5y0wd" path="res://assets/materials/arne32_green.tres" id="4"]
-[ext_resource type="PackedScene" uid="uid://d0ipywfm1yckp" path="res://scenes/abilities/production/heroes/admiral.tscn" id="5"]
-[ext_resource type="PackedScene" uid="uid://c35sxy2bmxes4" path="res://scenes/abilities/production/heroes/captain.tscn" id="6"]
+[ext_resource type="Resource" uid="uid://dkp1odiutneg4" path="res://scenes/abilities/production/heroes/capitan.tres" id="4_xdsw2"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -42,28 +42,15 @@ _data = {
 
 [node name="tile" instance=ExtResource("2")]
 side = "green"
-require_crew = true
 ap_gain = 20
 capture_value = 1000
-uses_metallic_material = false
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_f8aam"), ExtResource("3_dtm3i"), ExtResource("4_xdsw2")])
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("1")
 surface_material_override/0 = ExtResource("4")
 
-[node name="infantry" parent="." index="1" instance=ExtResource("3")]
-index = 2
-ap_cost = 40
-
-[node name="admiral" parent="." index="2" instance=ExtResource("5")]
-
-[node name="captain" parent="." index="3" instance=ExtResource("6")]
-index = 4
-
-[node name="animations" parent="." index="5"]
+[node name="animations" parent="." index="2"]
 libraries = {
 "": SubResource("AnimationLibrary_o0bqk")
 }
-
-[node name="capture" parent="audio" index="0"]
-bus = &"Units"

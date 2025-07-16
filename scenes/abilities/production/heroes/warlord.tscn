@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://2cye0sry23jr"]
-
-[ext_resource type="PackedScene" uid="uid://ctxv8fgnc2oo8" path="res://scenes/abilities/production/heroes/hero.tscn" id="1"]
-
-[node name="warlord" instance=ExtResource("1")]
-label = "TR_WARLORD"
-ap_cost = 150
-template_name = "hero_warlord"

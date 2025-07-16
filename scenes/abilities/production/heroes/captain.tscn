@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c35sxy2bmxes4"]
-
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/heroes/hero.tscn" id="1"]
-
-[node name="captain" instance=ExtResource("1")]
-label = "TR_CAPTAIN"
-ap_cost = 150
-template_name = "hero_captain"

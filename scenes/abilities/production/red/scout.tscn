@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://r7pmf7atvtlv"]
-
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/unit.tscn" id="1"]
-
-[node name="scout" instance=ExtResource("1")]
-label = "TR_SCOUT_HELI"
-ap_cost = 50
-template_name = "red_scout"

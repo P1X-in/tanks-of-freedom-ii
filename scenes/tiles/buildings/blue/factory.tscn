@@ -2,9 +2,9 @@
 
 [ext_resource type="ArrayMesh" uid="uid://ql4pat40hd88" path="res://assets/buildings/blue/factory.obj" id="1"]
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="2"]
+[ext_resource type="Resource" uid="uid://ch0a774sfnqvo" path="res://scenes/abilities/production/units/tank.tres" id="2_phikv"]
 [ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://cnwhh421i1bg" path="res://scenes/abilities/production/blue/tank.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://ceoudxk2xjyt0" path="res://scenes/abilities/production/blue/rocket_artillery.tscn" id="5"]
+[ext_resource type="Resource" uid="uid://bmndbuygaub0t" path="res://scenes/abilities/production/units/rocket_artilery.tres" id="3_jhkwo"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -41,24 +41,13 @@ _data = {
 
 [node name="tile" instance=ExtResource("3")]
 side = "blue"
-require_crew = true
-ap_gain = 5
-capture_value = 70
-uses_metallic_material = false
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_phikv"), ExtResource("3_jhkwo")])
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("1")
 surface_material_override/0 = ExtResource("2")
 
-[node name="tank" parent="." index="1" instance=ExtResource("4")]
-index = 2
-
-[node name="rocket_artillery" parent="." index="2" instance=ExtResource("5")]
-
-[node name="animations" parent="." index="4"]
+[node name="animations" parent="." index="2"]
 libraries = {
 "": SubResource("AnimationLibrary_cr6yu")
 }
-
-[node name="capture" parent="audio" index="0"]
-bus = &"Units"

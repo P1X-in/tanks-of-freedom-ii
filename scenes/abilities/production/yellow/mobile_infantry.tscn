@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqwb4m8wgvb4p"]
-
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/unit.tscn" id="1"]
-
-[node name="mobile_infantry" instance=ExtResource("1")]
-label = "TR_M_INF"
-ap_cost = 35
-template_name = "yellow_m_inf"

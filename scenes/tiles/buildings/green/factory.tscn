@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://dm1or8i1wxe6q"]
 
-[ext_resource type="PackedScene" uid="uid://ciqg6r7jyq3j8" path="res://scenes/abilities/production/green/tank.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://ccc3o3doe7bo3" path="res://scenes/abilities/production/green/rocket_artillery.tscn" id="3"]
+[ext_resource type="Resource" uid="uid://ch0a774sfnqvo" path="res://scenes/abilities/production/units/tank.tres" id="2_x1k2y"]
+[ext_resource type="Resource" uid="uid://bmndbuygaub0t" path="res://scenes/abilities/production/units/rocket_artilery.tres" id="3_rdt4j"]
 [ext_resource type="Material" uid="uid://cj2u6cis5y0wd" path="res://assets/materials/arne32_green.tres" id="4"]
 [ext_resource type="ArrayMesh" uid="uid://gr6ken3jpasb" path="res://assets/buildings/green/factory.obj" id="5"]
 
@@ -41,24 +41,13 @@ _data = {
 
 [node name="tile" instance=ExtResource("2")]
 side = "green"
-require_crew = true
-ap_gain = 5
-capture_value = 70
-uses_metallic_material = false
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_x1k2y"), ExtResource("3_rdt4j")])
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("5")
 surface_material_override/0 = ExtResource("4")
 
-[node name="tank" parent="." index="1" instance=ExtResource("1")]
-index = 2
-
-[node name="rocket_artillery" parent="." index="2" instance=ExtResource("3")]
-
-[node name="animations" parent="." index="4"]
+[node name="animations" parent="." index="2"]
 libraries = {
 "": SubResource("AnimationLibrary_rkogv")
 }
-
-[node name="capture" parent="audio" index="0"]
-bus = &"Units"

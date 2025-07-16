@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnwhh421i1bg"]
-
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/unit.tscn" id="1"]
-
-[node name="tank" instance=ExtResource("1")]
-label = "TR_TANK"
-ap_cost = 50
-template_name = "blue_tank"

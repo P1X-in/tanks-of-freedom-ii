@@ -2,9 +2,9 @@
 
 [ext_resource type="Material" uid="uid://bd7bg72rx00b2" path="res://assets/materials/arne32_blue.tres" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://dempf68g70cgn" path="res://assets/buildings/blue/airfield.obj" id="2"]
+[ext_resource type="Resource" uid="uid://fx20mhhx3ssh" path="res://scenes/abilities/production/units/heli.tres" id="2_6t57q"]
 [ext_resource type="PackedScene" uid="uid://bif4f4faebcoj" path="res://scenes/tiles/buildings/building.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://vv6m615idjns" path="res://scenes/abilities/production/blue/heli.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://ckt0yd5251lru" path="res://scenes/abilities/production/blue/scout.tscn" id="5"]
+[ext_resource type="Resource" uid="uid://yjob02h7xuiu" path="res://scenes/abilities/production/units/scout.tres" id="3_gd6dd"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "ap_gain"
@@ -41,24 +41,13 @@ _data = {
 
 [node name="tile" instance=ExtResource("3")]
 side = "blue"
-require_crew = true
-ap_gain = 5
-capture_value = 70
-uses_metallic_material = false
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([ExtResource("2_6t57q"), ExtResource("3_gd6dd")])
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("2")
 surface_material_override/0 = ExtResource("1")
 
-[node name="heli" parent="." index="1" instance=ExtResource("4")]
-index = 2
-
-[node name="scout" parent="." index="2" instance=ExtResource("5")]
-
-[node name="animations" parent="." index="4"]
+[node name="animations" parent="." index="2"]
 libraries = {
 "": SubResource("AnimationLibrary_i4pnk")
 }
-
-[node name="capture" parent="audio" index="0"]
-bus = &"Units"

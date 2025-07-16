@@ -42,6 +42,7 @@ _data = {
 side = "yellow"
 require_crew = false
 ap_gain = 15
+abilities = Array[Resource("res://scenes/abilities/ability_resource.gd")]([])
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("3")

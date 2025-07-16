@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctxv8fgnc2oo8"]
-
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/unit.tscn" id="1"]
-[ext_resource type="Script" uid="uid://cqugrgvdy7qpg" path="res://scenes/abilities/production/heroes/hero.gd" id="2"]
-
-[node name="hero_production" instance=ExtResource("1")]
-script = ExtResource("2")

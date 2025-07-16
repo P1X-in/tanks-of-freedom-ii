@@ -145,7 +145,7 @@ func hover_tile():
 	if not self.ui.is_panel_open():
 		var tile = self.map.model.get_tile(self.map.tile_box_position)
 
-		if tile != self.last_hover_tile or true:
+		if tile != self.last_hover_tile:
 			self.last_hover_tile = tile
 
 			self.update_tile_highlight(tile)
@@ -735,7 +735,7 @@ func activate_production_ability(args):
 
 func _activate_production_ability(ability):
 	var cost = ability.get_cost()
-	cost = self.abilities.get_modified_cost(cost, ability.template_name, ability.source)
+	cost = self.abilities.get_modified_cost(cost, ability.template_name, ability.side)
 
 	if self.state.can_current_player_afford(cost):
 		self.active_ability = ability

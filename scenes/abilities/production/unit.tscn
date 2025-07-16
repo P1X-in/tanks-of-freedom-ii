@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://caegyk0a8xk2w"]
-
-[ext_resource type="PackedScene" path="res://scenes/abilities/ability.tscn" id="1"]
-[ext_resource type="Script" uid="uid://ddpd5irg1kk5f" path="res://scenes/abilities/production/unit.gd" id="2"]
-
-[node name="unit_production" instance=ExtResource("1")]
-script = ExtResource("2")
-template_name = ""
