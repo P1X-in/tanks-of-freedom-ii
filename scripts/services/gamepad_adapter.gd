@@ -1,39 +1,39 @@
 extends Node
 
-const DEADZONE = 0.5
-const MOVEMENT_AXIS_X = JOY_AXIS_LEFT_X
-const MOVEMENT_AXIS_Y = JOY_AXIS_LEFT_Y
+const DEADZONE := 0.5
+const MOVEMENT_AXIS_X := JOY_AXIS_LEFT_X
+const MOVEMENT_AXIS_Y := JOY_AXIS_LEFT_Y
 
-const UI_UP = "ui_up"
-const UI_DOWN = "ui_down"
-const UI_LEFT = "ui_left"
-const UI_RIGHT = "ui_right"
+const UI_UP := "ui_up"
+const UI_DOWN := "ui_down"
+const UI_LEFT := "ui_left"
+const UI_RIGHT := "ui_right"
 
-const BUTTON_INITIAL_INTERVAL = 500
-const BUTTON_INTERVAL = 300
-
-
-var state = {}
-var device_id = 0
+const BUTTON_INITIAL_INTERVAL := 500
+const BUTTON_INTERVAL := 300
 
 
-var enabled = false
-var ticks = 0
+var state: Dictionary[String, Dictionary]= {}
+var device_id := 0
 
-func _ready():
+
+var enabled := false
+var ticks := 0
+
+func _ready() -> void:
 	self.disable()
 
-func enable():
+func enable() -> void:
 	self.enabled = true
 	self.set_physics_process(true)
 
-func disable():
+func disable() -> void:
 	self.set_physics_process(false)
 	self.enabled = false
 	self.reset()
 
-func reset():
-	var directions = [self.UI_UP, self.UI_DOWN, self.UI_LEFT, self.UI_RIGHT]
+func reset() -> void:
+	var directions := [self.UI_UP, self.UI_DOWN, self.UI_LEFT, self.UI_RIGHT]
 
 	for direction in directions:
 		self.state[direction] = {
@@ -41,7 +41,7 @@ func reset():
 			"delay" : 0
 		}
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	if not get_window().has_focus():
 		return
 
@@ -49,7 +49,7 @@ func _physics_process(delta):
 		return
 
 	self.increment_directions(delta)
-	var axis_value = Vector2()
+	var axis_value := Vector2()
 
 	axis_value.x = Input.get_joy_axis(self.device_id, MOVEMENT_AXIS_X)
 	axis_value.y = Input.get_joy_axis(self.device_id, MOVEMENT_AXIS_Y)
@@ -69,11 +69,11 @@ func _physics_process(delta):
 		self.ticks = 0
 
 
-func increment_directions(delta):
+func increment_directions(delta: float) -> void:
 	for direction in self.state.keys():
 		self.state[direction]["delay"] += delta * 1000
 
-func handle_direction(direction):
+func handle_direction(direction: String) -> void:
 	if self.state[direction]["pressed"]:
 		self.state[direction]["pressed"] = false
 
@@ -91,14 +91,13 @@ func handle_direction(direction):
 		self.emit_event(direction, true)
 		self.ticks += 1
 
-func emit_event(direction, pressed):
+func emit_event(direction: String, pressed: bool) -> void:
 	if pressed:
 		Input.action_press(direction)
 	else:
 		Input.action_release(direction)
 
-	var ev = InputEventAction.new()
+	var ev := InputEventAction.new()
 	ev.set_action(direction)
 	ev.set_pressed(pressed)
 	Input.parse_input_event(ev)
-

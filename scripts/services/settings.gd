@@ -1,14 +1,14 @@
 extends Node
 
-const SETTINGS_FILE_PATH = "user://settings.json"
+const SETTINGS_FILE_PATH := "user://settings.json"
 
 signal changed(key, new_value)
 
-@onready var audio = $"/root/SimpleAudioLibrary"
-var filesystem = preload("res://scripts/services/filesystem.gd").new()
-var os_string = ""
+@onready var audio := $"/root/SimpleAudioLibrary"
+var filesystem := FileSystem.new()
+var os_string := ""
 
-var settings = {
+var settings: Dictionary[String, Variant] = {
 	"steamdeck_detection": false,
 	"is_steamdeck": false,
 	"fullscreen" : false,
@@ -50,33 +50,33 @@ var settings = {
 }
 
 
-func _ready():
+func _ready() -> void:
 	self._detect_steam_deck()
 	self.load_settings_from_file()
 
-func save_settings_to_file():
+func save_settings_to_file() -> void:
 	self.filesystem.write_data_as_json_to_file(self.SETTINGS_FILE_PATH, self.settings)
 
-func load_settings_from_file():
+func load_settings_from_file() -> void:
 	var loaded_settings = self.filesystem.read_json_from_file(self.SETTINGS_FILE_PATH)
 
 	for settings_key in loaded_settings:
 		self.settings[settings_key] = loaded_settings[settings_key]
 		self._apply_option(settings_key)
 
-func get_option(key):
+func get_option(key: String) -> Variant:
 	if self.settings.has(key):
 		return self.settings[key]
 	return null
 
-func set_option(key, value):
+func set_option(key: String, value: Variant) -> void:
 	self.settings[key] = value
 	self.save_settings_to_file()
 
 	self._apply_option(key)
 	self.changed.emit(key, value)
 
-func _apply_option(key):
+func _apply_option(key: String):
 	if key == "fullscreen":
 		get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (self.settings[key]) else Window.MODE_WINDOWED
 	elif key == "render_scale":
@@ -121,11 +121,11 @@ func _apply_option(key):
 			get_window().set_content_scale_mode(Window.CONTENT_SCALE_MODE_DISABLED)
 			get_window().set_content_scale_aspect(Window.CONTENT_SCALE_ASPECT_KEEP)
 
-func _set_bus_vol(bus_name, key):
-	var decibels = self._get_decibels(self.settings[key])
+func _set_bus_vol(bus_name: String, key: String):
+	var decibels := self._get_decibels(self.settings[key])
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(bus_name), decibels)
 
-func _get_decibels(value):
+func _get_decibels(value) -> int:
 	if value == 10:
 		return 0
 	elif value == 9:
@@ -148,8 +148,9 @@ func _get_decibels(value):
 		return -54
 	elif value == 0:
 		return -80
+	return 0
 
-func _get_msaa(value):
+func _get_msaa(value: int) -> int:
 	if value == 0:
 		return 0
 	elif value == 2:
@@ -158,10 +159,9 @@ func _get_msaa(value):
 		return 2
 	elif value == 8:
 		return 3
-	#elif value == 16:
-	#	return 4
+	return 0
 
-func _detect_steam_deck():
+func _detect_steam_deck() -> void:
 	if self.settings["steamdeck_detection"]:
 		return
 
@@ -171,10 +171,10 @@ func _detect_steam_deck():
 		self.settings["is_steamdeck"] = true
 		self._apply_steam_deck_settings()
 
-func _is_steam_deck():
+func _is_steam_deck() -> bool:
 	return OS.get_distribution_name() == "SteamOS"
 
-func _apply_steam_deck_settings():
+func _apply_steam_deck_settings() -> void:
 	self.settings["fullscreen"] = true
 	self.settings["def_cam_st"] = "TOF"
 	self.settings["shadows"] = false

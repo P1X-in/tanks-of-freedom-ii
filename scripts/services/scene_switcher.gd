@@ -1,21 +1,21 @@
 extends Node
 
-@onready var mouse_layer = $"/root/MouseLayer"
-var intro_played = false
+@onready var mouse_layer := $"/root/MouseLayer"
+var intro_played := false
 
-func main_menu():
+func main_menu() -> void:
 	_switch_to("res://scenes/main_menu/main_menu.tscn")
 
-func map_editor():
+func map_editor() -> void:
 	_switch_to("res://scenes/map_editor/editor.tscn")
 
-func board():
+func board() -> void:
 	_switch_to("res://scenes/board/board.tscn")
 
-func board_multiplayer():
+func board_multiplayer() -> void:
 	_switch_to("res://scenes/board_multiplayer/board_multiplayer.tscn")
 
-func board_online():
+func board_online() -> void:
 	_switch_to("res://scenes/board_online/board_online.tscn")
 
 func _switch_to(path):

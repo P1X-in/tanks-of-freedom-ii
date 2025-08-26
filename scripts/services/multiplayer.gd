@@ -11,7 +11,7 @@ signal all_players_loaded
 @onready var map_list_service: Node = $"/root/MapManager"
 @onready var settings: Node = $"/root/Settings"
 
-var players: Dictionary = {}
+var players: Dictionary[int, Dictionary] = {}
 var players_loaded: int = 0
 
 var player_limit: int = 0
@@ -89,7 +89,7 @@ func _on_player_connected(id: int) -> void:
 
 @rpc("any_peer", "reliable")
 func _register_player(new_player_info: Dictionary) -> void:
-	var new_player_id = multiplayer.get_remote_sender_id()
+	var new_player_id := multiplayer.get_remote_sender_id()
 	players[new_player_id] = new_player_info
 	player_connected.emit(new_player_id, new_player_info)
 
@@ -131,9 +131,9 @@ func _get_player_info() -> Dictionary:
 func _get_player_count(map_name: String) -> int:
 	var map_data = self.map_list_service.get_map_data(map_name)
 
-	var sides = {}
-	var side
-	var key
+	var sides: Dictionary[String, String] = {}
+	var side: String
+	var key: String
 
 	for y in range(self.map_list_service.MAX_MAP_SIZE):
 		for x in range(self.map_list_service.MAX_MAP_SIZE):
@@ -147,7 +147,7 @@ func _get_player_count(map_name: String) -> int:
 
 
 func _lookup_side(data: Dictionary) -> String:
-	var hq_templates = [
+	var hq_templates: Array[String] = [
 		"modern_hq",
 		"steampunk_hq",
 		"futuristic_hq",
