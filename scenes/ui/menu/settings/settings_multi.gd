@@ -36,5 +36,3 @@ func _on_reset_button_pressed() -> void:
 	$VBoxContainer/online_port._read_setting()
 	$VBoxContainer/relay_domain._read_setting()
 	$VBoxContainer/relay_port._read_setting()
-
-
