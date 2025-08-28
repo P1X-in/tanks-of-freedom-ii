@@ -1,13 +1,13 @@
 extends Object
 class_name OnlinePlayer
 
-var API_REGISTER_URL = "/players"
+var API_REGISTER_URL := "/players"
 
-const ONLINE_FILE_PATH = "user://online.json"
+const ONLINE_FILE_PATH := "user://online.json"
 
-var filesystem = preload("res://scripts/services/filesystem.gd").new()
+var filesystem := FileSystem.new()
 
-var integration_data = {
+var integration_data: Dictionary[String, Variant] = {
 	"player_id": null,
 	"pin": null,
 	"integrations": {
@@ -40,14 +40,14 @@ func load_data_from_file():
 		self.integration_data["integrations"]["api.tof.p1x.in"]["pin"] = self.integration_data["pin"]
 
 
-func is_registered():
+func is_registered() -> bool:
 	var current_integration = self.online_service.settings.get_option("online_domain")
 	if not self.integration_data["integrations"].has(current_integration):
 		return false
 	return self.integration_data["integrations"][current_integration]["player_id"] != null
 
 
-func request_player_id():
+func request_player_id() -> Variant:
 	var response = await self.online_service.connector._post_request(self.API_REGISTER_URL)
 
 	if response['status'] == 'ok':
@@ -64,7 +64,7 @@ func request_player_id():
 	return response['status']
 
 
-func get_basic_auth_json():
+func get_basic_auth_json() -> Dictionary[String, Variant]:
 	var current_integration = self.online_service.settings.get_option("online_domain")
 	if not self.integration_data["integrations"].has(current_integration):
 		return {}

@@ -63,7 +63,7 @@ func fetch_listing_chunk(last_id: int) -> int:
 
 	for map in response["data"]["maps"]:
 		self.listing_cache.append(map)
-	
+
 	var last_element: Dictionary = self.listing_cache.back()
 	return last_element["id"]
 
@@ -80,7 +80,7 @@ func fetch_top_downloads() -> int:
 	self.listing_end = true
 	for map in response["data"]["maps"]:
 		self.listing_cache.append(map)
-	
+
 	if self.listing_cache.size() == 0:
 		return -1
 
@@ -105,4 +105,3 @@ func download_map(code: String, api_version: int = 0) -> Dictionary:
 	var response = await self.online_service.connector._get_request(url)
 
 	return response
-

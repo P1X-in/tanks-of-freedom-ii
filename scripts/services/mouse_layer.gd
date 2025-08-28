@@ -1,11 +1,11 @@
 extends Node
 
-var initialized = false
-var mouse_layer = Node3D.new()
-var ground_points = {}
-var dummy_ground_template = preload("res://scenes/tiles/ground/base_ground.tscn")
+var initialized := false
+var mouse_layer := Node3D.new()
+var ground_points: Dictionary[String, Node] = {}
+var dummy_ground_template: PackedScene = preload("res://scenes/tiles/ground/base_ground.tscn")
 
-func initialize(size, tile_size):
+func initialize(size, tile_size) -> void:
 	if self.initialized:
 		return
 
@@ -21,10 +21,10 @@ func initialize(size, tile_size):
 			self.ground_points[key].set_position(Vector3(x * tile_size, 0, y * tile_size))
 
 
-func detach():
-	var parent = self.mouse_layer.get_parent()
+func detach() -> void:
+	var parent := self.mouse_layer.get_parent()
 	if parent != null:
 		parent.remove_child(self.mouse_layer)
 
-func destroy():
+func destroy() -> void:
 	self.mouse_layer.free()
