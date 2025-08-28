@@ -1,7 +1,7 @@
 # The MIT License (MIT)
 This license applies both to the code, and to all graphical assets used in the game, unless later parts of this file, or the Credits list states otherwise.
 
-Copyright (c) 2021 P1X
+Copyright (c) 2025 P1X
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
