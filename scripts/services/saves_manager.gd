@@ -1,14 +1,14 @@
 extends Node
 
-const AUTOSAVE_ID = 0
+const AUTOSAVE_ID := 0
 const LIST_FILE_PATH := "user://saves.json"
 const SAVE_PATH := "user://save"
 const SAVE_EXTENSION := ".tofsave.json"
 
-var filesystem = preload("res://scripts/services/filesystem.gd").new()
+var filesystem := FileSystem.new()
 
 var autosave = [null, null, null]
-var saves := []
+var saves: Array[Dictionary] = []
 
 
 func _ready():
@@ -145,10 +145,6 @@ func store_save_data(save_id: int, save_data: Dictionary) -> void:
 
 func get_save_path(save_id: int) -> String:
 	return self.SAVE_PATH + str(save_id) + self.SAVE_EXTENSION
-
-
-func get_map_details(save_id: int) -> String:
-	return self.saves[save_id]
 
 
 func compile_save_data(board) -> Dictionary:

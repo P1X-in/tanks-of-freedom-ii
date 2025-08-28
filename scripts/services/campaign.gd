@@ -1,11 +1,11 @@
 extends Node
 
-const PROGRESS_FILE_PATH = "user://campaigns.json"
-const CORE_CAMPAIGNS_BASE_PATH = "res://assets/campaigns/"
-const CUSTOM_CAMPAIGNS_BASE_PATH = "campaign"
-const CAMPAIGN_MANIFEST = "/campaign.json"
+const PROGRESS_FILE_PATH := "user://campaigns.json"
+const CORE_CAMPAIGNS_BASE_PATH := "res://assets/campaigns/"
+const CUSTOM_CAMPAIGNS_BASE_PATH := "campaign"
+const CAMPAIGN_MANIFEST := "/campaign.json"
 
-var filesystem = preload("res://scripts/services/filesystem.gd").new()
+var filesystem := FileSystem.new()
 
 var campaign_progress = {}
 

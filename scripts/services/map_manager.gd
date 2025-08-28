@@ -9,16 +9,16 @@ const SPECIAL_MAP_PATH := "res://assets/maps/special"
 const MAP_EXTENSION := ".tofmap.json"
 const ONLINE_MAP_EXTENSION := ".tofmap.online.json"
 
-const LIST_STOCK = "stock"
-const LIST_CUSTOM = "custom"
-const LIST_DOWNLOADED = "downloaded"
+const LIST_STOCK := "stock"
+const LIST_CUSTOM := "custom"
+const LIST_DOWNLOADED := "downloaded"
 
-var filesystem = preload("res://scripts/services/filesystem.gd").new()
+var filesystem := FileSystem.new()
 
-var maps := {}
-var skirmish := {}
-var special := {}
-var online := {}
+var maps: Variant = {}
+var skirmish: Variant = {}
+var special: Variant = {}
+var online: Variant = {}
 
 func _ready() -> void:
 	self._load_bundled_maps()
@@ -66,7 +66,7 @@ func _load_bundled_maps() -> void:
 	self._load_bundled_special_maps()
 
 func _load_bundled_skirmish_maps() -> void:
-	var loaded_maps = self._load_map_names_from_dir(self.BUNDLED_MAP_PATH)
+	var loaded_maps := self._load_map_names_from_dir(self.BUNDLED_MAP_PATH)
 	for map_name in loaded_maps:
 		self.skirmish[map_name] = {
 			"name" : map_name,
@@ -74,15 +74,15 @@ func _load_bundled_skirmish_maps() -> void:
 		}
 
 func _load_bundled_special_maps() -> void:
-	var loaded_maps = self._load_map_names_from_dir(self.SPECIAL_MAP_PATH)
+	var loaded_maps := self._load_map_names_from_dir(self.SPECIAL_MAP_PATH)
 	for map_name in loaded_maps:
 		self.special[map_name] = {
 			"name" : map_name,
 			"online_id" : null
 		}
 
-func _load_map_names_from_dir(dir_path) -> Array:
-	var names = []
+func _load_map_names_from_dir(dir_path) -> Array[String]:
+	var names: Array[String] = []
 
 	if self.filesystem.dir_exists(dir_path):
 		var file_list = self.filesystem.dir_list(dir_path, true)
@@ -93,8 +93,8 @@ func _load_map_names_from_dir(dir_path) -> Array:
 
 	return names
 
-func get_maps_page(list:String, page_number: int, page_size: int) -> Array:
-	var pages_count = self.get_pages_count(list, page_size)
+func get_maps_page(list:String, page_number: int, page_size: int) -> Array[String]:
+	var pages_count := self.get_pages_count(list, page_size)
 
 	if page_number >= pages_count:
 		return []
@@ -102,13 +102,13 @@ func get_maps_page(list:String, page_number: int, page_size: int) -> Array:
 	var index_start := page_number * page_size
 	var index_end := index_start + page_size
 
-	var map_key_list := []
+	var map_key_list: Array[String] = []
 	if list == self.LIST_STOCK:
-		map_key_list = self.skirmish.keys()
+		map_key_list.assign(self.skirmish.keys())
 	elif list == self.LIST_CUSTOM:
-		map_key_list = self.maps.keys()
+		map_key_list.assign(self.maps.keys())
 	elif list == self.LIST_DOWNLOADED:
-		map_key_list = self.online.keys()
+		map_key_list.assign(self.online.keys())
 
 	map_key_list.sort()
 
@@ -116,8 +116,8 @@ func get_maps_page(list:String, page_number: int, page_size: int) -> Array:
 	if index_end > maps_count:
 		index_end = maps_count
 
-	var index = index_start
-	var output := []
+	var index := index_start
+	var output: Array[String] = []
 
 	while index < index_end:
 		output.append(map_key_list[index])
@@ -146,7 +146,7 @@ func get_pages_count(list:String, page_size: int) -> int:
 func map_exists(map_name: String) -> bool:
 	if self.is_reserved_name(map_name):
 		return true
-	var filepath = self._get_user_map_path(map_name)
+	var filepath := self._get_user_map_path(map_name)
 	return self.filesystem.file_exists(filepath)
 
 func get_map_data(map_name: String) -> Dictionary:
@@ -154,11 +154,11 @@ func get_map_data(map_name: String) -> Dictionary:
 	return self.filesystem.read_json_from_file(filepath)
 
 func save_map_to_file(filename: String, content: Dictionary) -> void:
-	var filepath = self._get_user_map_path(filename)
+	var filepath := self._get_user_map_path(filename)
 	self.filesystem.write_data_as_json_to_file(filepath, content)
 
 func save_online_to_file(code: String, content: Dictionary) -> void:
-	var filepath = self._get_online_map_path(code)
+	var filepath := self._get_online_map_path(code)
 	self.filesystem.write_data_as_json_to_file(filepath, content)
 
 func get_map_path(map_name: String) -> String:

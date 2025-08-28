@@ -16,7 +16,7 @@ signal message_received(message_data: Dictionary)
 @onready var settings: Node = $"/root/Settings"
 @onready var socket: WebSocketPeer = WebSocketPeer.new()
 
-var players: Dictionary = {}
+var players: Dictionary[int, Dictionary] = {}
 var players_loaded: int = 0
 
 var player_limit: int = 0
@@ -203,7 +203,7 @@ func _join_session(session_code: String) -> void:
 
 
 func _on_player_connected(payload: Dictionary) -> void:
-	var new_player_id = int(payload["peer_id"])
+	var new_player_id := int(payload["peer_id"])
 	players[new_player_id] = payload["player_data"]
 	player_connected.emit(new_player_id, payload["player_data"])
 

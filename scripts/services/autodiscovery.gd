@@ -15,7 +15,7 @@ var scanned_servers := []
 var is_scanning := false
 var is_servering := false
 
-func scan_lan_servers():
+func scan_lan_servers() -> void:
 	self.scanned_servers = []
 
 	self.client = PacketPeerUDP.new()
@@ -26,18 +26,18 @@ func scan_lan_servers():
 
 	self.is_scanning = true
 
-func start_autodiscovery_server():
+func start_autodiscovery_server() -> void:
 	self.server = UDPServer.new()
 	self.server.listen(self.settings.get_option("discovery_port"),'0.0.0.0')
 	self.is_servering = true
-	
-func stop_autodiscovery_server():
+
+func stop_autodiscovery_server() -> void:
 	if self.server != null:
 		self.server.stop()
 	self.server = null
 	self.is_servering = false
 
-func _process(_delta):
+func _process(_delta) -> void:
 	if self.is_scanning:
 		if self.client.get_available_packet_count() > 0:
 			var data = self.client.get_packet().decode_var(0)
@@ -45,7 +45,7 @@ func _process(_delta):
 			data['server_ip'] = server_ip
 			self.scanned_servers.append(data)
 			scanned_server.emit()
-			
+
 	if self.is_servering:
 		self.server.poll()
 		if self.server.is_connection_available():
@@ -58,7 +58,7 @@ func _process(_delta):
 					"joinable": self.multiplayer_srv.players.size() < self.multiplayer_srv.player_limit + 1
 				})
 
-func abort_lan_scan():
+func abort_lan_scan() -> void:
 	self.is_scanning = false
 	if self.client != null:
 		self.client.close()

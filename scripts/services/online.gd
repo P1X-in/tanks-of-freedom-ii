@@ -10,7 +10,7 @@ const THUMBNAIL_V1_URL: String = "/browser/public/thumbs/"
 
 @onready var settings: Node = $"/root/Settings"
 
-var thumb_cache: Dictionary = {}
+var thumb_cache: Dictionary[String, ImageTexture] = {}
 var api_version: int = 2
 
 
@@ -85,7 +85,7 @@ func get_pages_count(page_size: int) -> int:
 	return pages_count
 
 
-func fetch_thumbnail(map_code: String) -> Dictionary:
+func fetch_thumbnail(map_code: String) -> Dictionary[String, Variant]:
 	if self.thumb_cache.has(map_code):
 		return {
 			'code' : map_code,
