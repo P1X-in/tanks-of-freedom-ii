@@ -230,7 +230,7 @@ text = "[b]### 1.0.8[/b]
 - Remapped Middle Mouse Button to move camera instead of end turn
 - Added patch notes in main menu
 - Added \"Reset\" button in multiplayer settings
-	- Use \"Reset\" if Online is not working and you played a pre-release version of the game
+    - Use \"Reset\" if Online is not working and you played a pre-release version of the game
 - Fixed a crash when any of the online domains was set to empty string
  
 [b]### 1.0.0[/b]
