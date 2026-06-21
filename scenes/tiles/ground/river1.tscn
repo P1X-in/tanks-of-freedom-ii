@@ -3,7 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cqs4g7ln35arb" path="res://assets/terrain/grasslands/river_1_tile.obj" id="2_woblx"]
 [ext_resource type="ArrayMesh" uid="uid://barsfaj5o0s3s" path="res://assets/terrain/reflections/river_1_reflection.obj" id="4"]
 [ext_resource type="Material" uid="uid://dsu36bregabs6" path="res://assets/materials/arne32.tres" id="4_y2vv0"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/reflective_tile.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://byvbd6eopx6ad" path="res://scenes/tiles/reflective_tile.tscn" id="5"]
 
 [node name="tile" instance=ExtResource("5")]
 

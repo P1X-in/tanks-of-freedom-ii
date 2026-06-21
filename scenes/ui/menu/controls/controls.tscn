@@ -180,10 +180,12 @@ offset_right = 400.0
 offset_bottom = 300.0
 
 [node name="game" parent="widgets" instance=ExtResource("3")]
+layout_mode = 0
 offset_top = 0.0
 offset_bottom = 550.0
 
 [node name="editor" parent="widgets" instance=ExtResource("4")]
+layout_mode = 0
 
 [node name="back_button" type="TextureButton" parent="widgets"]
 layout_mode = 0
@@ -211,7 +213,7 @@ vertical_alignment = 1
 [node name="animations" type="AnimationPlayer" parent="."]
 reset_on_save = false
 libraries = {
-"": SubResource("AnimationLibrary_3nwki")
+&"": SubResource("AnimationLibrary_3nwki")
 }
 speed_scale = 4.0
 

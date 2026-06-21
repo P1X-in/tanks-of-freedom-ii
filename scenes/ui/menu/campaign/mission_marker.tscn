@@ -90,6 +90,6 @@ texture = ExtResource("5_vgndo")
 
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_7mr6a")
+&"": SubResource("AnimationLibrary_7mr6a")
 }
 speed_scale = 4.0

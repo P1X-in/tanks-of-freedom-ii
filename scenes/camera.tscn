@@ -92,5 +92,5 @@ far = 300.0
 
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_2gb6w")
+&"": SubResource("AnimationLibrary_2gb6w")
 }

@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bewr0f1ty1b3v" path="res://assets/gui/menu/buttons/buttonSquareSmall_brown_hover.png" id="6_2mfvo"]
 [ext_resource type="Texture2D" uid="uid://by1obiwt54odo" path="res://assets/gui/menu/buttons/buttonSquare_brown_hover.png" id="6_6nmlc"]
 [ext_resource type="PackedScene" uid="uid://gxr1dxy4v75y" path="res://scenes/ui/icons/pen.tscn" id="7_ainhf"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_left.tscn" id="7_uy8un"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_right.tscn" id="8_2ew0g"]
+[ext_resource type="PackedScene" uid="uid://shs741dswr0v" path="res://scenes/ui/icons/arrow_left.tscn" id="7_uy8un"]
+[ext_resource type="PackedScene" uid="uid://b2gykaq7wpo1q" path="res://scenes/ui/icons/arrow_right.tscn" id="8_2ew0g"]
 
 [node name="Move" instance=ExtResource("1_287jo")]
 script = ExtResource("2_4uja3")

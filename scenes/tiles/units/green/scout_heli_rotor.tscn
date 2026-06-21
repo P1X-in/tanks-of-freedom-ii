@@ -74,11 +74,11 @@ mesh = ExtResource("1")
 surface_material_override/0 = ExtResource("2_tjkpp")
 
 [node name="animations" type="AnimationPlayer" parent="rotor"]
+libraries = {
+&"": SubResource("AnimationLibrary_10rwf")
+}
 autoplay = "rotation"
 speed_scale = 4.0
-libraries = {
-"": SubResource("AnimationLibrary_10rwf")
-}
 
 [node name="rotor2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.9, 0.8)
@@ -86,11 +86,11 @@ mesh = ExtResource("1")
 surface_material_override/0 = ExtResource("2_tjkpp")
 
 [node name="animations" type="AnimationPlayer" parent="rotor2"]
+libraries = {
+&"": SubResource("AnimationLibrary_betvq")
+}
 autoplay = "rotation"
 speed_scale = 4.0
-libraries = {
-"": SubResource("AnimationLibrary_betvq")
-}
 
 [node name="rotor3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -0.8)
@@ -98,8 +98,8 @@ mesh = ExtResource("1")
 surface_material_override/0 = ExtResource("2_tjkpp")
 
 [node name="animations" type="AnimationPlayer" parent="rotor3"]
+libraries = {
+&"": SubResource("AnimationLibrary_mf2fp")
+}
 autoplay = "rotation"
 speed_scale = 4.0
-libraries = {
-"": SubResource("AnimationLibrary_mf2fp")
-}

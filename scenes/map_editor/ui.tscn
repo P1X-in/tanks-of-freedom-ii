@@ -278,7 +278,7 @@ position = Vector2(0, -30)
 
 [node name="animations" type="AnimationPlayer" parent="tile"]
 libraries = {
-"": SubResource("AnimationLibrary_gsio6")
+&"": SubResource("AnimationLibrary_gsio6")
 }
 speed_scale = 4.0
 
@@ -358,6 +358,6 @@ scale = Vector2(0.5, 0.5)
 
 [node name="animations" type="AnimationPlayer" parent="minimap"]
 libraries = {
-"": SubResource("AnimationLibrary_46jqh")
+&"": SubResource("AnimationLibrary_46jqh")
 }
 speed_scale = 4.0

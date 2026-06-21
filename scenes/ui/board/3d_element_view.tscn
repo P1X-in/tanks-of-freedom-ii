@@ -96,9 +96,9 @@ projection = 0
 current = true
 
 [node name="animations" type="AnimationPlayer" parent="."]
-speed_scale = 4.0
 libraries = {
-"": SubResource("AnimationLibrary_hjv74")
+&"": SubResource("AnimationLibrary_hjv74")
 }
+speed_scale = 4.0
 
 [editable path="SubViewport/tile_cam"]

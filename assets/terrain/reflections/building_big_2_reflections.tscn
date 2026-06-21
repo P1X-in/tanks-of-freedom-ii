@@ -1,8 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bundmer6u7e0d"]
+[gd_scene load_steps=2 format=3 uid="uid://bundmer6u7e0d"]
 
-[ext_resource type="Material" uid="uid://bwgevluvlcqfg" path="res://assets/materials/arne32_reflective.tres" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://70b38j2vmubn" path="res://assets/terrain/reflections/building_big_2_reflections.obj" id="2"]
 
 [node name="building_big_2_reflections" type="MeshInstance3D"]
 mesh = ExtResource("2")
-material/0 = ExtResource("1")

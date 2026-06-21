@@ -49,7 +49,7 @@ surface_material_override/0 = ExtResource("2")
 
 [node name="animations" parent="." index="2"]
 libraries = {
-"": SubResource("AnimationLibrary_lo2uy")
+&"": SubResource("AnimationLibrary_lo2uy")
 }
 
 [node name="capture" parent="audio" index="0"]

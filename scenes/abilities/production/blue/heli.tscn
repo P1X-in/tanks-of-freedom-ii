@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://vv6m615idjns"]
 
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/unit.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://caegyk0a8xk2w" path="res://scenes/abilities/production/unit.tscn" id="1"]
 
 [node name="heli" instance=ExtResource("1")]
+template_name = "blue_heli"
 label = "TR_ATT_HELI"
 ap_cost = 70
-template_name = "blue_heli"

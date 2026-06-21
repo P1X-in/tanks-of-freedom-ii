@@ -5,3 +5,5 @@
 
 [node name="active" instance=ExtResource("2")]
 script = ExtResource("1")
+named_icon = ""
+marker_colour = "green"

@@ -304,26 +304,31 @@ offset_right = 810.0
 offset_bottom = 300.0
 
 [node name="settings_general" parent="widgets/boxes" instance=ExtResource("4")]
+layout_mode = 0
 offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="settings_video" parent="widgets/boxes" instance=ExtResource("6")]
 visible = false
+layout_mode = 0
 offset_right = -500.0
 offset_bottom = -300.0
 
 [node name="settings_audio" parent="widgets/boxes" instance=ExtResource("5")]
 visible = false
+layout_mode = 0
 offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="settings_gameplay" parent="widgets/boxes" instance=ExtResource("3")]
 visible = false
+layout_mode = 0
 offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="settings_multi" parent="widgets/boxes" instance=ExtResource("11_ettfb")]
 visible = false
+layout_mode = 0
 offset_right = 0.0
 offset_bottom = 0.0
 
@@ -381,7 +386,7 @@ autowrap_mode = 3
 
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_rhn4h")
+&"": SubResource("AnimationLibrary_rhn4h")
 }
 speed_scale = 4.0
 

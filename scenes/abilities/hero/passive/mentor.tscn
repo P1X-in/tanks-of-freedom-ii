@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cp10gpgbbaii2"]
 
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/passive.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bitouofekbv1n" path="res://scenes/abilities/hero/passive/passive.tscn" id="1"]
 [ext_resource type="Script" uid="uid://br3svw1yo0ojp" path="res://scenes/abilities/hero/passive/mentor.gd" id="2"]
 
 [node name="mentor" instance=ExtResource("1")]

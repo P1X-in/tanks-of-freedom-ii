@@ -418,6 +418,7 @@ texture = ExtResource("8")
 offset = Vector2(60, 53)
 
 [node name="zoom_in_button" type="TextureButton" parent="widgets"]
+layout_mode = 0
 offset_left = 1032.0
 offset_top = 580.0
 offset_right = 1068.0
@@ -440,6 +441,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="zoom_out_button" type="TextureButton" parent="widgets"]
+layout_mode = 0
 offset_left = 982.0
 offset_top = 580.0
 offset_right = 1018.0
@@ -463,7 +465,7 @@ vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_h4u4c")
+&"": SubResource("AnimationLibrary_h4u4c")
 }
 speed_scale = 4.0
 

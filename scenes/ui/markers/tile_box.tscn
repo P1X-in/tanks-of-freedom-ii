@@ -33,7 +33,7 @@ cast_shadow = 0
 mesh = ExtResource("2")
 
 [node name="animations" type="AnimationPlayer" parent="."]
-autoplay = "bob"
 libraries = {
-"": SubResource("AnimationLibrary_4helo")
+&"": SubResource("AnimationLibrary_4helo")
 }
+autoplay = "bob"

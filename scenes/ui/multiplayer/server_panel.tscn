@@ -24,6 +24,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_kehx0")
 patch_margin_left = 5
 patch_margin_top = 5
@@ -33,6 +35,7 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="name" type="Label" parent="."]
+layout_mode = 0
 offset_left = 50.0
 offset_top = 3.0
 offset_right = 700.0
@@ -43,6 +46,7 @@ text = "TR_UNASSIGNED"
 vertical_alignment = 1
 
 [node name="capacity" type="Label" parent="."]
+layout_mode = 0
 offset_left = 700.0
 offset_top = 3.0
 offset_right = 934.0
@@ -53,6 +57,7 @@ text = "0/0"
 vertical_alignment = 1
 
 [node name="join" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 800.0
 offset_top = 10.0
 offset_right = 990.0

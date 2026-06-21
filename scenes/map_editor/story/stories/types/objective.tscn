@@ -69,6 +69,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="text" type="TextEdit" parent="." index="6"]
+layout_mode = 0
 offset_top = 200.0
 offset_right = 540.0
 offset_bottom = 240.0

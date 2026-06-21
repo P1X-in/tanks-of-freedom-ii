@@ -516,6 +516,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="minimap" parent="widgets" instance=ExtResource("4")]
+layout_mode = 0
 offset_left = 925.0
 offset_top = 300.0
 offset_right = 965.0
@@ -541,7 +542,7 @@ vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_wxkik")
+&"": SubResource("AnimationLibrary_wxkik")
 }
 speed_scale = 4.0
 

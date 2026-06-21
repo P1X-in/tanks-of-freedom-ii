@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://cvv3sh0uq5ynp"]
 
-[ext_resource type="Shader" path="res://assets/water/water.gdshader" id="1"]
+[ext_resource type="Shader" uid="uid://b5un7vtg6um6i" path="res://assets/water/water.gdshader" id="1"]
 [ext_resource type="Texture2D" uid="uid://cvqpwe1833dj1" path="res://assets/water/water_diffuse3.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://bvktna7ciw7r6" path="res://assets/water/water_uv_offset.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://crhhoftimbiuf" path="res://assets/water/water_normal.png" id="4"]
@@ -11,10 +11,10 @@ shader = ExtResource("1")
 shader_parameter/amplitude = Vector2(0.2, 0.1)
 shader_parameter/frequency = Vector2(3, 2.5)
 shader_parameter/time_factor = Vector2(2, 1)
+shader_parameter/texturemap = ExtResource("2")
 shader_parameter/texture_scale = Vector2(70, 70)
+shader_parameter/uv_offset_texture = ExtResource("3")
 shader_parameter/uv_offset_scale = Vector2(0.2, 0.2)
 shader_parameter/uv_offset_time_scale = 0.01
 shader_parameter/uv_offset_amplitude = 0.05
-shader_parameter/texturemap = ExtResource("2")
-shader_parameter/uv_offset_texture = ExtResource("3")
 shader_parameter/normalmap = ExtResource("4")

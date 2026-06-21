@@ -3,6 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://ctxv8fgnc2oo8" path="res://scenes/abilities/production/heroes/hero.tscn" id="1"]
 
 [node name="noble" instance=ExtResource("1")]
+template_name = "hero_noble"
 label = "TR_NOBLE"
 ap_cost = 150
-template_name = "hero_noble"

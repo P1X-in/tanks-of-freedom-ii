@@ -52,7 +52,7 @@ visible = false
 
 [node name="animations" type="AnimationPlayer" parent="." index="2"]
 libraries = {
-"": SubResource("AnimationLibrary_jid1c")
+&"": SubResource("AnimationLibrary_jid1c")
 }
 
 [node name="audio" type="Node" parent="." index="3"]

@@ -208,6 +208,6 @@ vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_1puoi")
+&"": SubResource("AnimationLibrary_1puoi")
 }
 speed_scale = 4.0

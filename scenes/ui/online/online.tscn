@@ -506,7 +506,7 @@ vertical_alignment = 1
 
 [node name="animations" parent="." index="2"]
 libraries = {
-"": SubResource("AnimationLibrary_5hx6s")
+&"": SubResource("AnimationLibrary_5hx6s")
 }
 
 [connection signal="pressed" from="widgets/register/register_button" to="." method="_on_register_button_pressed"]

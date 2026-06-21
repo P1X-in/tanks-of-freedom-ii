@@ -150,6 +150,6 @@ offset_bottom = 350.0
 
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_e0gpw")
+&"": SubResource("AnimationLibrary_e0gpw")
 }
 speed_scale = 4.0
