@@ -39,7 +39,6 @@ offset_right = 600.0
 offset_bottom = 350.0
 
 [node name="tabs" type="Control" parent="widgets"]
-layout_mode = 3
 anchors_preset = 0
 offset_left = 25.0
 offset_top = 10.0

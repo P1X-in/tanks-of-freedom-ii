@@ -99,11 +99,11 @@ mesh = ExtResource("1")
 surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="rotor_pivot"]
+libraries = {
+&"": SubResource("AnimationLibrary_a0yuq")
+}
 autoplay = "rotate"
 speed_scale = 8.0
-libraries = {
-"": SubResource("AnimationLibrary_a0yuq")
-}
 
 [node name="rotor_pivot2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 1.3, -0.25)
@@ -114,11 +114,11 @@ mesh = ExtResource("1")
 surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="rotor_pivot2"]
+libraries = {
+&"": SubResource("AnimationLibrary_mtae5")
+}
 autoplay = "rotate"
 speed_scale = 8.0
-libraries = {
-"": SubResource("AnimationLibrary_mtae5")
-}
 
 [node name="h_rotor_pivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 1.1, -0.6)
@@ -128,11 +128,11 @@ mesh = ExtResource("2")
 surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="h_rotor_pivot"]
+libraries = {
+&"": SubResource("AnimationLibrary_wwj5f")
+}
 autoplay = "rotate"
 speed_scale = 8.0
-libraries = {
-"": SubResource("AnimationLibrary_wwj5f")
-}
 
 [node name="h_rotor_pivot2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 1.1, -0.6)
@@ -142,8 +142,8 @@ mesh = ExtResource("2")
 surface_material_override/0 = ExtResource("2_53vh3")
 
 [node name="animations" type="AnimationPlayer" parent="h_rotor_pivot2"]
+libraries = {
+&"": SubResource("AnimationLibrary_6ypjx")
+}
 autoplay = "rotate"
 speed_scale = 8.0
-libraries = {
-"": SubResource("AnimationLibrary_6ypjx")
-}

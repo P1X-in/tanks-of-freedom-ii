@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bp3tf1c3qc6sr" path="res://scenes/ui/board/start_turn.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://c1upgftggmnfv" path="res://assets/gui/menu/backgrounds/sub_panel3.png" id="2_kff67"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/nations/blue.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/nations/yellow.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/nations/green.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/nations/red.tscn" id="6"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/nations/black.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://coewlyl7ibtgj" path="res://scenes/ui/icons/nations/blue.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://daj5qjwcqs8ap" path="res://scenes/ui/icons/nations/yellow.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bt6sgkxnn8gs3" path="res://scenes/ui/icons/nations/green.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://bqkn4fhlxtaqe" path="res://scenes/ui/icons/nations/red.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://b8o8qylhjr3p7" path="res://scenes/ui/icons/nations/black.tscn" id="7"]
 [ext_resource type="FontFile" uid="uid://dkpcsi5rudp7j" path="res://assets/fonts/ttf/courier.ttf" id="8_a6ihg"]
 
 [sub_resource type="Animation" id="2"]
@@ -191,7 +191,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
-speed_scale = 4.0
 libraries = {
-"": SubResource("AnimationLibrary_1puoi")
+&"": SubResource("AnimationLibrary_1puoi")
 }
+speed_scale = 4.0

@@ -5,12 +5,11 @@
 
 [node name="repair_kit" instance=ExtResource("1")]
 script = ExtResource("2")
+heal = 5
+named_icon = "repair_kit"
 label = "TR_REPAIR_KIT"
 description = "TR_REPAIR_KIT_DESC"
 ap_cost = 15
 cooldown = 3
 ability_range = 1
 draw_range = 1
-named_icon = "repair_kit"
-marker_colour = "green"
-heal = 5

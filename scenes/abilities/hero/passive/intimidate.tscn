@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccjre2of34oek"]
 
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/passive.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bitouofekbv1n" path="res://scenes/abilities/hero/passive/passive.tscn" id="1"]
 [ext_resource type="Script" uid="uid://di7e8vhg4kau2" path="res://scenes/abilities/hero/passive/intimidate.gd" id="2"]
 
 [node name="intimidate" instance=ExtResource("1")]

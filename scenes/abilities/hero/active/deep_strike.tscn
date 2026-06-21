@@ -5,10 +5,10 @@
 
 [node name="deep_strike" instance=ExtResource("1")]
 script = ExtResource("2")
+unit_template = "blue_infantry"
+named_icon = "deep_strike"
+marker_colour = "blue"
 label = "TR_DEEP_STRIKE"
 description = "TR_DEEP_STRIKE_DESC"
 ability_range = 2
 draw_range = 2
-named_icon = "deep_strike"
-marker_colour = "blue"
-unit_template = "blue_infantry"

@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://pfrikdjfa7lc" path="res://assets/gui/menu/buttons/buttonSquare_brown.png" id="8_v0hes"]
 [ext_resource type="Texture2D" uid="uid://b0unbl4vx0tow" path="res://assets/gui/menu/buttons/buttonSquare_brown_pressed.png" id="9_v7dox"]
 [ext_resource type="Texture2D" uid="uid://by1obiwt54odo" path="res://assets/gui/menu/buttons/buttonSquare_brown_hover.png" id="10_1q034"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_left.tscn" id="11_2s5pg"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/arrow_right.tscn" id="12_c0okr"]
+[ext_resource type="PackedScene" uid="uid://shs741dswr0v" path="res://scenes/ui/icons/arrow_left.tscn" id="11_2s5pg"]
+[ext_resource type="PackedScene" uid="uid://b2gykaq7wpo1q" path="res://scenes/ui/icons/arrow_right.tscn" id="12_c0okr"]
 
 [node name="Despawn" instance=ExtResource("1_fbavv")]
 script = ExtResource("2_h2x7w")

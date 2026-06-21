@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://bbpe3xq6hh045"]
 
-[ext_resource type="PackedScene" path="res://scenes/abilities/unit/missile.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://c38hykksjarm1" path="res://scenes/abilities/unit/missile.tscn" id="1"]
 
 [node name="heavy_missile" instance=ExtResource("1")]
+damage = 11
+min_level = 1
+max_level = 3
+named_icon = "heavy_missile"
 label = "TR_HEAVY_MISS"
 description = "TR_HEAVY_MISS_DESC"
 ability_range = 4
 draw_range = 4
-named_icon = "heavy_missile"
-damage = 11
-min_level = 1
-max_level = 3

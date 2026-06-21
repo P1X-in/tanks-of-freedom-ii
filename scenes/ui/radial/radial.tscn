@@ -151,6 +151,6 @@ vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_blujx")
+&"": SubResource("AnimationLibrary_blujx")
 }
 speed_scale = 4.0

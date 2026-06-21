@@ -44,10 +44,8 @@ _data = {
 [node name="headquarters" instance=ExtResource("3")]
 script = ExtResource("7")
 side = "blue"
-require_crew = true
 ap_gain = 20
 capture_value = 1000
-uses_metallic_material = false
 
 [node name="mesh" parent="." index="0"]
 mesh = ExtResource("1")
@@ -64,8 +62,5 @@ index = 4
 
 [node name="animations" parent="." index="5"]
 libraries = {
-"": SubResource("AnimationLibrary_oe3u7")
+&"": SubResource("AnimationLibrary_oe3u7")
 }
-
-[node name="capture" parent="audio" index="0"]
-bus = &"Units"

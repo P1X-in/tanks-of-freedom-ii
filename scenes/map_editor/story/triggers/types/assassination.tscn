@@ -86,6 +86,7 @@ offset_bottom = 40.0
 alignment = 1
 
 [node name="unit_picker_button" type="TextureButton" parent="unit_type" index="1"]
+layout_mode = 0
 offset_left = 350.0
 offset_right = 386.0
 offset_bottom = 40.0

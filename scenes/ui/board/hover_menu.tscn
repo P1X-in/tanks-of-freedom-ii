@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://npd40qtkohuq" path="res://scenes/ui/icons/coin.tscn" id="4_5ny1k"]
 [ext_resource type="PackedScene" uid="uid://brl2hwxvkhpsm" path="res://scenes/ui/icons/hourglass.tscn" id="4_d3xti"]
 [ext_resource type="PackedScene" uid="uid://cpeera0162bio" path="res://scenes/ui/icons/star2.tscn" id="5_m6cda"]
-[ext_resource type="PackedScene" path="res://scenes/ui/icons/info.tscn" id="5_ocuec"]
+[ext_resource type="PackedScene" uid="uid://sm08pahx3wcw" path="res://scenes/ui/icons/info.tscn" id="5_ocuec"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t03pp"]
 radius = 50.0
@@ -135,7 +135,6 @@ shape = SubResource("CircleShape2D_t03pp")
 
 [node name="build_button" type="Control" parent="."]
 visible = false
-layout_mode = 3
 anchors_preset = 0
 offset_left = -120.0
 offset_bottom = 120.0
@@ -163,7 +162,6 @@ shape = SubResource("CircleShape2D_t03pp")
 
 [node name="stats_button" type="Control" parent="."]
 visible = false
-layout_mode = 3
 anchors_preset = 0
 offset_left = -120.0
 offset_bottom = 120.0
@@ -191,7 +189,6 @@ shape = SubResource("CircleShape2D_t03pp")
 
 [node name="skills_button" type="Control" parent="."]
 visible = false
-layout_mode = 3
 anchors_preset = 0
 offset_left = -240.0
 offset_right = -120.0
@@ -220,7 +217,7 @@ shape = SubResource("CircleShape2D_t03pp")
 
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_kefv0")
+&"": SubResource("AnimationLibrary_kefv0")
 }
 speed_scale = 4.0
 

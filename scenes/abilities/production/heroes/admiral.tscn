@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://d0ipywfm1yckp"]
 
-[ext_resource type="PackedScene" path="res://scenes/abilities/production/heroes/hero.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://ctxv8fgnc2oo8" path="res://scenes/abilities/production/heroes/hero.tscn" id="1"]
 
 [node name="admiral" instance=ExtResource("1")]
+template_name = "hero_admiral"
 label = "TR_ADMIRAL"
 ap_cost = 150
-template_name = "hero_admiral"

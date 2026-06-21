@@ -33,7 +33,7 @@ mesh = ExtResource("1")
 surface_material_override/0 = ExtResource("2_q4wl7")
 
 [node name="animations" type="AnimationPlayer" parent="."]
-autoplay = "rotate"
 libraries = {
-"": SubResource("AnimationLibrary_hhiam")
+&"": SubResource("AnimationLibrary_hhiam")
 }
+autoplay = "rotate"

@@ -17,6 +17,7 @@
 script = ExtResource("2_q5w7a")
 
 [node name="minimap" parent="widgets" index="0" instance=ExtResource("3_6gxa0")]
+layout_mode = 0
 offset_left = 925.0
 offset_top = 280.0
 offset_right = 965.0
@@ -57,6 +58,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="lobby_player_0" parent="widgets" index="1" instance=ExtResource("4_41r2m")]
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -69,6 +71,7 @@ grow_vertical = 1
 swap_target = NodePath(".")
 
 [node name="lobby_player_1" parent="widgets" index="2" instance=ExtResource("4_41r2m")]
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -83,6 +86,7 @@ index = 1
 swap_target = NodePath("../lobby_player_0")
 
 [node name="lobby_player_2" parent="widgets" index="3" instance=ExtResource("4_41r2m")]
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -97,6 +101,7 @@ index = 2
 swap_target = NodePath("../lobby_player_1")
 
 [node name="lobby_player_3" parent="widgets" index="4" instance=ExtResource("4_41r2m")]
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0

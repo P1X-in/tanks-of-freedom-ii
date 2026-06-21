@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bgkg2a4ewdhsx"]
 
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/passive.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bitouofekbv1n" path="res://scenes/abilities/hero/passive/passive.tscn" id="1"]
 [ext_resource type="Script" uid="uid://pi64cuyumb5q" path="res://scenes/abilities/hero/passive/high_morale.gd" id="2"]
 
 [node name="high_morale" instance=ExtResource("1")]

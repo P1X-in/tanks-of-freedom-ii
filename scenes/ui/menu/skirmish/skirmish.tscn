@@ -158,6 +158,7 @@ offset_right = 600.0
 offset_bottom = 350.0
 
 [node name="skirmish_player_0" parent="widgets" instance=ExtResource("4")]
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -170,6 +171,7 @@ grow_vertical = 1
 swap_target = NodePath(".")
 
 [node name="skirmish_player_1" parent="widgets" instance=ExtResource("4")]
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -184,6 +186,7 @@ index = 1
 swap_target = NodePath("../skirmish_player_0")
 
 [node name="skirmish_player_2" parent="widgets" instance=ExtResource("4")]
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -198,6 +201,7 @@ index = 2
 swap_target = NodePath("../skirmish_player_1")
 
 [node name="skirmish_player_3" parent="widgets" instance=ExtResource("4")]
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -212,6 +216,7 @@ index = 3
 swap_target = NodePath("../skirmish_player_2")
 
 [node name="minimap" parent="widgets" instance=ExtResource("1")]
+layout_mode = 0
 offset_left = 925.0
 offset_top = 280.0
 offset_right = 965.0
@@ -311,7 +316,7 @@ grow_vertical = 0
 
 [node name="animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_4l2fb")
+&"": SubResource("AnimationLibrary_4l2fb")
 }
 speed_scale = 4.0
 

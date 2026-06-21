@@ -27,6 +27,7 @@ text = "Trigger name"
 vertical_alignment = 1
 
 [node name="edit_button" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 350.0
 offset_right = 540.0
 offset_bottom = 40.0

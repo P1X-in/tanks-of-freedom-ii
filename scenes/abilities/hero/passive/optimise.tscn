@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dlvfn34858kpu"]
 
 [ext_resource type="Script" uid="uid://bk5j3cdw80hg7" path="res://scenes/abilities/hero/passive/optimise.gd" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/passive.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bitouofekbv1n" path="res://scenes/abilities/hero/passive/passive.tscn" id="2"]
 
 [node name="optimise" instance=ExtResource("2")]
 script = ExtResource("1")

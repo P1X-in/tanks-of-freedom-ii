@@ -32,8 +32,8 @@ mesh = ExtResource("1")
 surface_material_override/0 = ExtResource("2")
 
 [node name="animations" type="AnimationPlayer" parent="rotor"]
+libraries = {
+&"": SubResource("AnimationLibrary_ynfc8")
+}
 autoplay = "rotation"
 speed_scale = 2.0
-libraries = {
-"": SubResource("AnimationLibrary_ynfc8")
-}

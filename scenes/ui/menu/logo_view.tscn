@@ -73,7 +73,7 @@ size = Vector2i(600, 600)
 
 [node name="animations" parent="." index="3"]
 libraries = {
-"": SubResource("AnimationLibrary_eelbs")
+&"": SubResource("AnimationLibrary_eelbs")
 }
 
 [editable path="SubViewport/tile_cam"]

@@ -27,6 +27,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="less_turn_button" type="TextureButton" parent="turn_limit_label"]
+layout_mode = 0
 offset_left = 135.0
 offset_right = 171.0
 offset_bottom = 40.0
@@ -48,6 +49,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="turn_limit_value" type="Label" parent="turn_limit_label"]
+layout_mode = 0
 offset_left = 180.0
 offset_right = 240.0
 offset_bottom = 40.0
@@ -56,6 +58,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="more_turn_button" type="TextureButton" parent="turn_limit_label"]
+layout_mode = 0
 offset_left = 250.0
 offset_right = 286.0
 offset_bottom = 40.0
@@ -86,6 +89,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="less_time_button" type="TextureButton" parent="turn_time_label"]
+layout_mode = 0
 offset_left = 135.0
 offset_right = 171.0
 offset_bottom = 40.0
@@ -116,6 +120,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="more_time_button" type="TextureButton" parent="turn_time_label"]
+layout_mode = 0
 offset_left = 250.0
 offset_right = 286.0
 offset_bottom = 40.0

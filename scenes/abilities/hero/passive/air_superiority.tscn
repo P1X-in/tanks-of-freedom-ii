@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctsqdpqv5c6ti"]
 
 [ext_resource type="Script" uid="uid://cvxxfyoeldunj" path="res://scenes/abilities/hero/passive/air_superiority.gd" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/passive.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bitouofekbv1n" path="res://scenes/abilities/hero/passive/passive.tscn" id="2"]
 
 [node name="air_superiority" instance=ExtResource("2")]
 script = ExtResource("1")

@@ -155,26 +155,32 @@ offset_right = 600.0
 offset_bottom = 350.0
 
 [node name="campaign1" parent="widgets" instance=ExtResource("2")]
+layout_mode = 0
 
 [node name="campaign2" parent="widgets" instance=ExtResource("2")]
+layout_mode = 0
 offset_left = 620.0
 offset_right = 1160.0
 
 [node name="campaign3" parent="widgets" instance=ExtResource("2")]
+layout_mode = 0
 offset_top = 240.0
 offset_bottom = 420.0
 
 [node name="campaign4" parent="widgets" instance=ExtResource("2")]
+layout_mode = 0
 offset_left = 620.0
 offset_top = 240.0
 offset_right = 1160.0
 offset_bottom = 420.0
 
 [node name="campaign5" parent="widgets" instance=ExtResource("2")]
+layout_mode = 0
 offset_top = 440.0
 offset_bottom = 620.0
 
 [node name="campaign6" parent="widgets" instance=ExtResource("2")]
+layout_mode = 0
 offset_left = 620.0
 offset_top = 440.0
 offset_right = 1160.0
@@ -250,10 +256,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="animations" type="AnimationPlayer" parent="."]
-speed_scale = 4.0
 libraries = {
-"": SubResource("AnimationLibrary_40ebe")
+&"": SubResource("AnimationLibrary_40ebe")
 }
+speed_scale = 4.0
 
 [connection signal="pressed" from="widgets/back_button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="widgets/prev_button" to="." method="_on_prev_button_pressed"]

@@ -20,6 +20,7 @@ script = ExtResource("1_6jvbd")
 
 [node name="background" type="NinePatchRect" parent="."]
 custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
 texture = ExtResource("1_2cblg")

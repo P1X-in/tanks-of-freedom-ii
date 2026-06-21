@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://chxq1nfcmxmud"]
 
 [ext_resource type="Script" uid="uid://buvd0se23uxn6" path="res://scenes/abilities/hero/passive/efficient.gd" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/abilities/hero/passive/passive.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bitouofekbv1n" path="res://scenes/abilities/hero/passive/passive.tscn" id="2"]
 
 [node name="efficient" instance=ExtResource("2")]
 script = ExtResource("1")
