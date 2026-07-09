@@ -1,0 +1,326 @@
+keys,en
+TR_CAMPAIGN,Campanha
+TR_SKIRMISH,Batalha
+TR_EDITOR,Editor
+TR_SETTINGS,Configurações
+TR_CONTROLS,Controles
+TR_QUIT,Sair do Jogo
+TR_BACK,Voltar
+TR_NEXT,Próximo
+TR_PREV,Anterior
+TR_SELECT,Selecionar
+TR_START,Iniciar
+TR_LOCKED,Bloqueado
+TR_VIDEO,Vídeo
+TR_GRAPHICS,Gráficos
+TR_AUDIO,Áudio
+TR_GAMEPLAY,Jogabilidade
+TR_ON,Lig.
+TR_OFF,Desl.
+TR_MASTER,Volume Geral
+TR_MASTER_DESC,Volume geral do áudio
+TR_SFX,Efeitos Sonoros
+TR_SFX_DESC,"Volume dos efeitos sonoros. Cliques, explosões, etc."
+TR_MUSIC,Música
+TR_MUSIC_DESC,Volume da música de fundo
+TR_HQ_CAM,Mover a câmera para o QG
+TR_HQ_CAM_DESC,Automaticamente move a câmera para o QG atual do jogador no começo do seu turno.
+TR_CAM_SHAKE,Chacoalhar da câmera
+TR_CAM_SHAKE_DESC,Chacoalha a câmera durante explosões.
+TR_DEF_CAM_ST,Estilo padrão de câmera
+TR_DEF_CAM_ST_DESC,Estilo padrão da câmera quando o mapa é carregado
+TR_LANG,Idioma
+TR_LANG_DESC,Idioma da interface
+TR_MSAA,MSAA
+TR_MSAA_DESC,Intensidade do antisserilhado para bordas mais suaves.
+TR_FXAA,FXAA
+TR_FXAA_DESC,Método rápido para antisserilhado. Pode parecer borrado.
+TR_VSYNC,Sincronização Vertical
+TR_VSYNC_DESC,Sincronização Vertical. Evita o rasgo de tela.
+TR_FPS_L,Limite de QPS
+TR_FPS_L_DESC,Limite para a renderização de quadros por segundo
+TR_IPS_L,QPS de entrada
+TR_IPS_L_DESC,"Frequência de entrada. Valores maiores tornam os controles mais suaves, mas consome mais ciclos da CPU."
+TR_FULLSCREEN,Tela Cheia
+TR_FULLSCREEN_DESC,Faz o jogo executar em tela cheia. Só se aplica em dispositivos que permitem o modo em janela.
+TR_SHADOWS,Sombras
+TR_SHADOWS_DESC,Sombras globais.
+TR_DECO,Decorações
+TR_DECO_DESC,"Mostra elementos decorativos, como grama, flores, etc."
+TR_DECO_SHAD,Sombras Decorativas
+TR_DECO_SHAD_DESC,Habilita sombras em elementos decorativos. Depende da configuração de sombras globais.
+TR_GAME,Jogo
+TR_CAMERA,Câmera
+TR_CAM_SW,Trocar a câmera
+TR_ZOOM,Zoom
+TR_NAV,Navegar
+TR_MENU,Menu
+TR_END_TURN,Encerrar turno
+TR_UNIT_STATS,Inf. da unidade
+TR_UNDO,Desfazer
+TR_CHANGE_TILE,Mudar o quadrado
+TR_ROTATE,Rotacionar
+TR_CLEAR,Limpar
+TR_ALTERNATIVE,Alternar
+TR_BANS,Banimentos
+TR_AI_TOGGLE,IA da unidade
+TR_SAVE,Salvar
+TR_LOAD,Carregar
+TR_CANCEL,Cancelar
+TR_SAP_DAWN,Sapphire Dawn
+TR_RUBY_DUSK,Ruby Dusk
+TR_AMBER_NOON,Amber Noon
+TR_JADE_TWILIGHT,Jade Twilight
+TR_OBS_NIGHT,Obsidian Night
+TR_HUMAN,Humano
+TR_SWAP,Trocar
+TR_SAVE_LOAD,Salvar/Carregar jogo
+TR_MAIN_MENU,Menu principal
+TR_ENDING_TURN,Encerrando o turno
+TR_TURN,Turno
+TR_CONTINUE,Continuar
+TR_RESTART,Recomeçar
+TR_SAP_DAWN_WIN,Vitória da Sapphire Dawn!
+TR_RUBY_DUSK_WIN,Vitória da Ruby Dusk!
+TR_AMBER_NOON_WIN,Vitória da Amber Noon!
+TR_JADE_TWI_WIN,Vitória da Jade Twilight!
+TR_OBS_NIGHT_WIN,Vitória da Obsidian Night!
+TR_HP,PV
+TR_ARMOUR,Blindagem
+TR_AP,PA
+TR_MP,MP
+TR_ATTACK,Ataque
+TR_LEVEL,Nível
+TR_KILLS,Mortes
+TR_ATT_HELI,Helicóptero de Ataque
+TR_INFANTRY,Infantaria
+TR_M_INF,Infantaria Móvel
+TR_M_R_ART,Artilharia de Foguetes Móvel
+TR_ROCK_ART,Artilharia de Foguetes
+TR_SCOUT_HELI,Helicóptero de Reconhecimento
+TR_TANK,Tanque
+TR_TRUCK,Caminhão
+TR_CHANCELLOR,Chanceler
+TR_KING,Rei
+TR_LORD,Lorde
+TR_PRESIDENT,Presidente
+TR_ADMIRAL,Almirante
+TR_CAPTAIN,Capitão
+TR_COMMANDO,Comando
+TR_GENERAL,General
+TR_GENTLEMAN,Cavalheiro
+TR_NOBLE,Nobre
+TR_PRINCE,Príncipe
+TR_WARLORD,Senhor de Guerra
+TR_DEEP_STRIKE,Ataque Profundo
+TR_HARD_ARMOUR,Armadura Revestida
+TR_INFILTRATION,Infiltração
+TR_INSPIRE,Inspirar
+TR_PREC_STRIKE,Ataque de Precisão
+TR_PROMOTE,Promover
+TR_SUPPLY,Suprir
+TR_TARG_AUT,Autômato de mira
+TR_DROP_OFF,Desembarque
+TR_HEAVY_MISS,Míssil Pesado
+TR_HEAVY_WEAP,Armamento Pesado
+TR_LR_SHELL,Projétil de Longo Alcance
+TR_MEDKIT,Kit Médico
+TR_MISSILE,Míssil
+TR_PICK_UP,Embarque
+TR_RAPID_RESP,Resposta Rápida
+TR_REPAIR_KIT,Kit de Reparos
+TR_WIPE_EDITOR,Limpar editor
+TR_QUICKSAVE,Salvamento Rápido
+TR_SAVE_LOAD_MAP,Salvar/Carregar mapa
+TR_NEXT_MISS,Próxima Missão
+TR_FINISH,Finalizar
+TR_CLOSE,Fechar
+TR_RES_MISS,Reiniciar Missão
+TR_NOT_ENOUGH_AP,Sem PA suficiente
+TR_AP_SPENT,Ap gasto
+TR_NOT_AP_SP,Notificar PA vazio
+TR_NOT_AP_SP_DESC,Mostrar notificação quando o PA estiver completamente esgotado.
+TR_MISS_COMP,Missão completa
+TR_MISS_FAIL,Missão fracassada
+TR_REPAIR_KIT_DESC,Caixa de ferramentas que permite que os soldados consertem todo tipo de veículo. Restaura 5 de PV.
+TR_RAPID_RESP_DESC,"Restaura todo o MP da unidade, e permite mais um ataque."
+TR_PICK_UP_DESC,Transporta uma Infantaria à bordo.
+TR_MISSILE_DESC,Míssil guiado de longo alcance que pode atingir alvos terrestres e aéreos. Inflige 10 de dano.
+TR_MEDKIT_DESC,Pacote de suprimentos médicos para curar soldados. Restaura 5 de PV.
+TR_LR_SHELL_DESC,Projétil especial que pode atingir um alvo em até 2 tiles de distância.  Atira apenas em linha reta. Inflige 10 de dano.
+TR_HEAVY_WEAP_DESC,Projétil disparado a partir do ombro munido de uma ogiva explosiva. Inflige 8 de dano.
+TR_HEAVY_MISS_DESC,Míssil guiado de longo alcance que pode atingir alvos terrestres e aéreos. De maior alcance. Inflige 11 de dano.
+TR_DROP_OFF_DESC,Desembarca a unidade de infantaria que está à bordo.
+TR_PASS_TR_SPEC,Especialista treinado
+TR_PASS_TR_SPEC_DESC,Ganha maestria em armas especiais graças a anos de treinamento.  Todos os tempos de recarga são reduzidos por 1. O tempo de recarga não pode ser menor que 1.
+TR_PASS_RECRUIT,Recrutamento
+TR_PASS_RECRUIT_DESC,Um veterano de diversas campanhas. Aprendeu como trazer novos recrutas para o campo de batalho de maneira eficiente. Todas as unidades do tipo Infantaria custam 10PA a menos.
+TR_PASS_OPTIM,Otimizar
+TR_PASS_OPTIM_DESC,"Especialista em comunicação e logística. Graças à uma melhor otimização dos equipamentos, todas as Torres fornecem 5PA adicionais por turno."
+TR_PASS_MENTOR,Mentor
+TR_PASS_MENTOR_DESC,"Um grande líder, que passa tempo com seus soldados, para poder compartilhar suas experiências. Todas a unidades do tipo infantaria começam no nível 1."
+TR_PASS_INTIM,Intimidar
+TR_PASS_INTIM_DESC,"Uma personalidade forte e bruta, que influencia os soldados sob seu comando. Ao tomar uma construção, a Infantaria perde todo o PA para intimidar a equipe ao invés de serem consumidas."
+TR_PASS_HIGH_MOR,Moral alta
+TR_PASS_HIGH_MOR_DESC,"Um líder inspirador, um exemple para todos os soldados. Todas as unidades do tipo Infantaria tem suas armaduras e ataque aumentados por 1."
+TR_PASS_EFFIC,Eficiente
+TR_PASS_EFFIC_DESC,Anos de experiencia com engenharia permitem uma melhor gestão da fábrica. Todos os veículos da fábrica custam 10PA a menos para serem produzidos.
+TR_PASS_AIR_SUP,Superioridade aérea
+TR_PASS_AIR_SUP_DESC,Anos de experiência militar permitiram uma melhor gestão do espaço aéreo. Todas as aeronaves custam 10PA a menos para serem produzidas.
+TR_TARG_AUT_DESC,"Adereço temporário que ajuda com precisão de mira contra alvos rápidos.  Permite que as unidades adjacentes acertem alvos aéreos. Se a unidade já consegue acertar alvos aéreos, aumenta o dano em 1. Não afeta a Artilharia de Foguetes."
+TR_SUPPLY_DESC,Supre todas as unidades adjacentes com peças sobressalente e suprimentos médicos. Restaura 5 de PV.
+TR_PROMOTE_DESC,"Promove uma unidade, dando-a +1 de nível."
+TR_PREC_STRIKE_DESC,"Solicita uma ataque de precisão aéreo. Inflige 5 de dano ao tile alvo, e quadrados adjacentes. Pode acertar unidades aliadas."
+TR_INSPIRE_DESC,Inspira uma unidade até 2 quadrados de distância. Restaura todo o MP e permite que ela ataque e use sua habilidade novamente.
+TR_INFILTRATION_DESC,"Infiltra no território inimigo pulando instantaneamente em um quadrado, "
+TR_HARD_ARMOUR_DESC,Temporariamente reveste a armadura de unidades até 2 quadrados de distância por 1 ponto.
+TR_DEEP_STRIKE_DESC,"Chama um soldado paraquedista, até 2 quadrados de distância. Ganha uma unidade de Infantaria grátis."
+TR_TEAM,Time
+TR_NEW_SAVE,Criar novo save.
+TR_LOAD_GAME,Carregar jogo
+TR_AUTOSAVE,Salvamento Automático
+TR_INTRO,Introdução
+TR_INTRO_DESC,Mostra a introdução ao iniciar o jogo
+TR_ONLINE,Online
+TR_WELCOME_ONLINE,Bem-vindo ao ToF Online!
+TR_NEED_REGISTER,"Antes de poder utilizar as opções online, seu dispositivo precisa ser registrado no sistema online. O registro leva apenas alguns segundos e é completamente anônimo."
+TR_REGISTER,Registrar
+TR_REQUESTING_PLAYER_ID,Registrando o ID do Jogador Aguarde...
+TR_REQUESTING_PLAYER_FAIL,"Requisição do ID do Jogar falhou. Por favor, tente novamente mais tarde."
+TR_REQUESTING_PLAYER_SUCCESS,Requisição do ID do Jogador feita com sucesso. Bem-vindo ao ToF Online!
+TR_STOCK,Padrão
+TR_CUSTOM,Customizado
+TR_DOWNLOADED,Baixado
+TR_MATCHES,Partidas
+TR_MAPS,Mapas
+TR_UPLOAD_MAP,Enviar um mapa
+TR_DOWNLOAD_MAP,Baixar um mapa
+TR_SELECTED_MAP,Mapa selecionado
+TR_CONFIRM,Confirmar
+TR_CHANGE_MAP,Mudar mapa
+TR_RETRY,Tentar novamente
+TR_UPLOADING_WAIT,Enviando mapa! Aguarde...
+TR_UPLOADING_SUCCESS,Enviado com sucesso! Agora é possível compartilhar o código do mapa com seus amigos: 
+TR_UPLOADING_FAIL,"Envio falhou. Por favor, tente novamente mais tarde."
+TR_LATEST,Mais novos
+TR_TOP_DOWNLOADED,Mais baixados
+TR_DOWNLOAD,Baixar
+TR_FETCHING,Buscando...
+TR_DOWNLOADING_MAP,Baixando mapa! Aguarde...
+TR_DOWNLOADING_SUCCESS,O mapa foi baixado.
+TR_DOWNLOADING_FAIL,Não foi possível baixar o mapa. Verifique se o código está correto e tente novamente.
+TR_TOF1_IMPORT,Importar de Tof
+TR_GENERAL,Geral
+TR_CONTROLS_HELP,Ajuda com os controles
+TR_CONTROLS_HELP_DESC,Mostra uma lista dos controles na tela.
+TR_MULTIPLAYER,Multijogador
+TR_CREATE_GAME,Criar jogo
+TR_JOIN_GAME,Entrar no jogo
+TR_NICKNAME,Apelido
+TR_CONNECT,Conectar
+TR_IP_ADDRESS,Endereço de IP
+TR_CONNECTING,Conectando...
+TR_CONNECTION_ERROR,Erro de conexão
+TR_JOIN,Se juntar
+TR_LEAVE,Sair
+TR_UNASSIGNED,Não designado
+TR_WAITING_FOR_PLAYER_RECONNECTED,Aguardando o jogador desconectado
+TR_GAME_PORT,Porta do jogo
+TR_GAME_PORT_DESC,Porta utilizada para a conexão do multijogador
+TR_DISCOVERY_PORT,Porta de descoberta
+TR_DISCOVERY_PORT_DESC,Porta utilizada para descoberta do servidor
+TR_EDGE_PAN,Rolagem nas bordas
+TR_EDGE_PAN_DESC,Move a câmera quando o cursor está próximo da borda da tela
+TR_AI,IA
+TR_CONNECTING,Conectando... Aguarde...
+TR_JOIN_CODE,Código do jogo
+TR_ONLINE_DOMAIN,Domínio online
+TR_ONLINE_DOMAIN_DESC,Nome do servidor de domínio online ou endereço de IP
+TR_ONLINE_PORT,Porta online
+TR_ONLINE_PORT_DESC,Número da porta do servidor online.
+TR_RELAY_DOMAIN,Domínio de relay
+TR_RELAY_DOMAIN_DESC,Servidor de relay do multijogador online ou endereço de IP.
+TR_RELAY_PORT,Porta de relay
+TR_RELAY_PORT_DESC,Número da porta de relay para o servidor multijogador online.
+TR_END_TURN_SPEED,Velocidade de finalização do turno
+TR_END_TURN_SPEED_DESC,Quão rápido a barra de progresso do turno enche.
+TR_NO_MOVES_YOU_SURE,Você não fez nenhum movimento. Tem certeza?
+TR_NO,Não
+TR_YES,Sim
+TR_VERSION,Versão
+TR_SHOW_HEALTH,Mostrar barra de saúde
+TR_SHOW_HEALTH_DESC,Mostra a barra de saúde e nível das unidades
+TR_MAP_SETTINGS,Configurações do mapa
+TR_TRIGGERS,Gatilhos
+TR_STORIES,Histórias
+TR_INITIAL_SKIP_HQ_CAM,Rolagem inicial da câmera
+TR_INITIAL_CAM_POSITION,Posição inicial da câmera
+TR_TRACK,Trilha sonora
+TR_RANDOM,Aleatório
+TR_EDIT,Editar
+TR_ADD,Adicionar
+TR_DELETE,Deletar
+TR_CHANGE,Mudar
+TR_ONEOFF,Uma vez só
+TR_VIP,VIP
+TR_UNIT_TYPE,Tipo de unidade
+TR_PLAYER_ID,ID do Jogador
+TR_PLAYER_SIDE,Lado do jogador
+TR_AMOUNT,Quantidade
+TR_LIST,Lista
+TR_UNIT_TAG,Classificação da unidade
+TR_EXCLUDED_VIPS,VIPs excluídos
+TR_WATCHED_FIELDS,Campos observados
+TR_STEP_NO,Número de passos
+TR_DELAY,Atraso
+TR_MOVE,Movimentar
+TR_SET,Colocar
+TR_CAP,Limite
+TR_WHO,Quem
+TR_WHOM,Cujo(a)
+TR_DAMAGE,Dano
+TR_BUILDING,Construção
+TR_UNIT_NO,Número de unidades.
+TR_DISABLE,Desabilitar
+TR_POSITION,Posição
+TR_ZOOM,Zoom
+TR_CLEARED_FIELDS,Campos limpos
+TR_WINNER,Vencedor
+TR_SIDE,Lado
+TR_LEFT,Esquerdo
+TR_RIGHT,Direito
+TR_COLOUR,Cor
+TR_FONT_SIZE,Tamanho da fonte
+TR_SOUND,Som
+TR_PORTRAIT,Retrato
+TR_NAME,Nome
+TR_WHERE,Onde
+TR_SLOT,Slot
+TR_PAUSE,Pausar
+TR_ROTATION,Rotação
+TR_PATH,Caminho
+TR_TRIGGER,Gatilho
+TR_SMOKE,Fumaça
+TR_TILE_TYPE,Tipo de quadrado
+TR_TEMPLATE,Template
+TR_LENGTH,Tamanho
+TR_SUSPENDED,Suspenso
+TR_GROUP,Grupo
+TR_TURNS,Turnos
+TR_ACTION,Ação
+TR_COOLDOWN,Tempo de recarga
+TR_ABILITY,habilidade
+TR_EXPLOSION,Explosão
+TR_CREDITS,Créditos
+TR_ALLOW_LEVEL_UP,Permitir subir de nível
+TR_SCALE_UI,Escala da interface de usuário
+TR_SCALE_UI_DESC,Aumenta a escala da interface em telas de alta resolução
+TR_RESET,Resetar
+TR_PATCH_NOTES,Log de atualização
+TR_RENDER_SCALE,Escala de renderização
+TR_RENDER_SCALE_DESC,Escala de renderização dos elementos 3D. Valores mais baixos resultam em uma melhor performance
+TR_TURN_LIMIT,Lim. de turnos
+TR_TURN_TIME,Lim. de tempo
+TR_GAME_DRAW,Time out
+TR_TILT_SHIFT,Borrão de tilt-shift
+TR_TILT_SHIFT_DESC,Borrão na parte superior e inferior da tela para criar um efeito tilt-shift.
